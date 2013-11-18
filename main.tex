@@ -1,0 +1,72 @@
+\documentclass[]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath, amsfonts, amssymb, bbm}
+\usepackage{lipsum}
+ 
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator*{\Cov}{Cov}
+\DeclareMathOperator{\cov}{Cov} 
+ 
+\newcounter{observ}
+\newenvironment{observ}{\refstepcounter{observ}
+   \textit{\textbf{Observation \theobserv:}} \rmfamily}
+     
+\newenvironment{proof}{\textit{Proof:} \rmfamily}{\hfill$\square$}
+
+\newcommand{\ket}[1]{\ensuremath{\vert #1 \rangle}}
+\newcommand{\bra}[1]{\ensuremath{\langle #1 \vert}} 
+\newcommand{\braket}[2]{\ensuremath{\langle #1 \vert #2 \rangle}} 
+\newcommand{\braOket}[3]{\ensuremath{\langle #1 \vert #2 \vert #3 \rangle}}
+\newcommand{\ketbra}[2]{\ensuremath{\vert #1 \rangle \! \langle #2 \vert}}
+\newcommand{\meanO}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\ver}[2]{\ensuremath{\genfrac{}{}{0pt}{}{#1}{#2}}}
+\newcommand{\tr}[1]{\ensuremath{\Tr \lcua #1\rcua}}
+\newcommand{\trsub}[2]{\ensuremath{\Tr_{#1} \lcua #2 \rcua }}
+\newcommand{\bsym}[1]{\ensuremath{\boldsymbol{#1}}}
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\bse{\begin{subequations}} 
+\def\ese{\end{subequations}}
+\def\mtxid{\mathbbm{1}}
+\def\lpar{\left(} 
+\def\rpar{\right)}
+\def\lcua{\left[}
+\def\rcua{\right]}
+\def\lcor{\left\{}
+\def\rcor{\right\}}
+\def\lang{\left\langle}
+\def\rang{\right\rangle}
+\def\l{\left} 
+\def\r{\right}
+\def\nnnl{\nonumber\\}
+\def\nnnlq{\nonumber\\ && \quad}
+\def\nnnlqq{\nonumber\\ && \qquad}
+\def\nnnlqqq{\nonumber\\ && \quad\qquad}
+\def\ie{, \textit{i.e.}, }
+
+\begin{document}
+
+\title{Title of the PhD of Iagoba}
+\author{Iagoba Apellaniz}
+\date{\today}
+
+\maketitle
+
+\section{Introduction}
+
+\section{Accuracy Bounds for Magnetic Gradient Field Stimation}
+Differential magnetometry has developed recently with a great variety of
+theoretic proposals and experimental results.
+This is our reasson to research in the field of the Gradient Magnetometry
+field.
+
+\subsection{States insensitive to the homogeneous field as prove states}
+
+
+
+
+\end{document}
