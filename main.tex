@@ -1,13 +1,49 @@
-\documentclass[]{article}
+\documentclass[12pt, letterpaper, twoside]{article}
 
+\usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath, amsfonts, amssymb, bbm}
-\usepackage{lipsum}
- 
+%\usepackage{lipsum}
+\usepackage{fancyhdr}
+%\usepackage{layout}
+\usepackage{lettrine}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% FONT SELECTION  
+%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\usepackage[light,math]{iwona}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% PAGE LAYOUT
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Paper Width 614pt
+% Text fill symemetric 604pt
+% Paper Height 794pt
+
+\setlength{\voffset}{-0.5in}
+\setlength{\hoffset}{-1in}
+\setlength{\oddsidemargin}{65pt}
+\setlength{\evensidemargin}{45pt}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{20pt}
+\setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\textheight}{635pt}
+\setlength{\textwidth}{494pt}
+\setlength{\footskip}{50pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% MATH OPERATORS AND 
+% CUSTOM ENVIRONMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator*{\Cov}{Cov}
 \DeclareMathOperator{\cov}{Cov} 
- 
+  
 \newcounter{observ}
 \newenvironment{observ}{\refstepcounter{observ}
    \textit{\textbf{Observation \theobserv:}} \rmfamily}
@@ -48,24 +84,101 @@
 \def\nnnlqqq{\nonumber\\ && \quad\qquad}
 \def\ie{, \textit{i.e.}, }
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\title{Title of the PhD of Iagoba}
-\author{Iagoba Apellaniz}
-\date{\today}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markboth{}{\MakeUppercase{\emph{#1}}}}
+\renewcommand{\subsectionmark}[1]{\markboth{\emph{#1}}{}}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
 
-\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%
 
+\input{title.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% EDITION TIPS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+
+This document was generated with the 2013 distribution of \LaTeX. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% PROLOGE
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\fancyfoot[LE,RO]{\thepage}
+
+\vspace*{100pt}
+\section*{Prologue}
+\vspace{50pt}
+
+Here is the prologue.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENTS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+
+\vspace*{100pt}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% THESIS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\fancyfoot{}
+
+\input{title.tex}
+
+\cleardoublepage
+\vspace*{100pt}
+\begin{center}
+\emph{To my parents and my family}
+\end{center}
+
+\cleardoublepage
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyfoot[LE,RO]{\thepage}
+\fancyhead[LE]{\rightmark}
+\fancyhead[RO]{\leftmark} 
+ 
+\vspace*{100pt}
 \section{Introduction}
+\vspace{50pt}
 
-\section{Accuracy Bounds for Magnetic Gradient Field Stimation}
-Differential magnetometry has developed recently with a great variety of
-theoretic proposals and experimental results.
-This is our reasson to research in the field of the Gradient Magnetometry
-field.
+\lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} recent years many work and
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+
+\cleardoublepage
+\vspace*{100pt}
+\section{Accuracy Bounds for Gradient Estimation with Atom Ensembles}
+\vspace{50pt}
 
 \subsection{States insensitive to the homogeneous field as prove states}
 
+\subsubsection{Single-Cloud ensemble of Atoms}
+
+\subsubsection{Twin-Cloud ensemble}
+
+\subsection{Usefulness of states sensitive to the homogeneous field}
 
 
 

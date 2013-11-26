@@ -2,3 +2,6 @@ pdf*
 tmp*
 .pro*
 .tex*
+/PhD-Thesis-.synctex.gz
+.DS*
+._*
