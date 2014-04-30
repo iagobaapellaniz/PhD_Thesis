@@ -7,6 +7,10 @@
 \usepackage{fancyhdr}
 %\usepackage{layout}
 \usepackage{lettrine}
+\usepackage[explicit]{titlesec}
+\usepackage{hyperref}
+\usepackage{watermark}
+\usepackage{color}
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
 % FONT SELECTION  
@@ -14,6 +18,15 @@
 
 \usepackage[light,math]{iwona}
 \usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINE COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{grey}{rgb}{0.5,0.5,0.5}
+\definecolor{l-grey}{rgb}{0.8,0.8,0.8}
+\definecolor{withe}{rgb}{1,1,1}
+\definecolor{black}{rgb}{0,0,0}
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
 % PAGE LAYOUT
@@ -35,6 +48,23 @@
 \setlength{\textheight}{635pt}
 \setlength{\textwidth}{494pt}
 \setlength{\footskip}{50pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLES LAYOUT
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\section}[display]
+{\vspace*{150pt}
+\bf\Huge}
+{\begin{picture}(0,0)\put(-60,-30){\textcolor{grey}{\thesection}}\end{picture}}
+{0pt}
+{#1}
+[]
+
+% initial margin, ????, bottom margin final margin
+\titlespacing*{\section}{40pt}{10pt}{40pt}[40pt]
+\newcommand{\sectionbreak}{\cleardoublepage}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % MATH OPERATORS AND 
@@ -108,29 +138,33 @@
 
 \cleardoublepage
 
-This document was generated with the 2013 distribution of \LaTeX. 
+This document was generated with the 2013 distribution of \LaTeX.
+
+\vfill
+
+\includegraphics[height=20pt]{img/0-CreativeCommons-by-sa.png}
+
+2012-2014 Iagoba Apellaniz. This work is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License. To view a copy of this
+license, visit
+\href{http://creativecommons.org/licenses/by-sa/4.0/deed.en_US}
+{http://creativecommons.org/ licenses/by-sa/4.0/deed.en\_US}.
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % PROLOGE
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\cleardoublepage
+\section*{Prologue}
 \setcounter{page}{1}
 \pagenumbering{roman}
-
 \fancyfoot[LE,RO]{\thepage}
-
-\vspace*{100pt}
-\section*{Prologue}
-\vspace{50pt}
 
 Here is the prologue.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % TABLE OF CONTENTS
 %%%%%%%%%%%%%%%%%%%%%%%%
-
-\cleardoublepage
 
 \vspace*{100pt}
 \tableofcontents
@@ -143,10 +177,12 @@ Here is the prologue.
 \setcounter{page}{1}
 \pagenumbering{arabic}
 \fancyfoot{}
-
 \input{title.tex}
-
 \cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% DEDICATION PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace*{100pt}
 \begin{center}
 \emph{To my parents and my family}
@@ -154,32 +190,116 @@ Here is the prologue.
 
 \cleardoublepage
 
-\renewcommand{\headrulewidth}{1pt}
+%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADINGS AND PAGE NUM.
+%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\headrulewidth}{0.5pt}
 \fancyfoot[LE,RO]{\thepage}
 \fancyhead[LE]{\rightmark}
-\fancyhead[RO]{\leftmark} 
- 
-\vspace*{100pt}
+\fancyhead[RO]{\leftmark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% REDEFINE TITLE FORMAT
+%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}[display]
+{\vspace*{190pt}
+\bf\Huge}
+{\begin{picture}(0,0)\put(-64,-31){\textcolor{grey}{\thesection}}\end{picture}}
+{0pt}
+{\textcolor{withe}{#1}}
+[]
+\titlespacing*{\section}{100pt}{10pt}{40pt}[40pt]
+
+
 \section{Introduction}
-\vspace{50pt}
+\thiswatermark{\put(1,-297){\color{l-grey}\rule{84pt}{42pt}}
+\put(84,-297){\color{grey}\rule{410pt}{42pt}}}
 
 \lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} recent years many work and
 implementations of quantum metrology arise to the public domain.
 The interest of this field is increasing day by day.
 
-\cleardoublepage
-\vspace*{100pt}
-\section{Accuracy Bounds for Gradient Estimation with Atom Ensembles}
-\vspace{50pt}
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
 
-\subsection{States insensitive to the homogeneous field as prove states}
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
 
-\subsubsection{Single-Cloud ensemble of Atoms}
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
 
-\subsubsection{Twin-Cloud ensemble}
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
 
-\subsection{Usefulness of states sensitive to the homogeneous field}
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
 
 
+\section{Estimation processes}
+\thiswatermark{\put(1,-297){\color{l-grey}\rule{84pt}{42pt}}
+\put(84,-297){\color{grey}\rule{410pt}{42pt}}}
+
+\lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} almost any area of science
+and engineering the estimation process takes a fundamental role on 
+data analysis.
+So it is the importance that the estimation theory developed around has been 
+studied since long time ago, reaching to a high level of complexity and 
+to a rich functionality in terms of adaptability to a huge variety
+of situations. 
+In this chapter we will go trough the most important features of this
+theory until reach transcendental concepts for the understandability of this
+book. 
+
+% line height 30pt
+\section{Accuracy bound for gradient field estimation with atomic ensembles}
+\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
+
+
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day. 
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
+implementations of quantum metrology arise to the public domain.
+The interest of this field is increasing day by day.
 
 \end{document}

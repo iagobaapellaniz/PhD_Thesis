@@ -5,3 +5,8 @@ tmp*
 /PhD-Thesis-.synctex.gz
 .DS*
 ._*
+/main.aux
+/main.log
+/main.toc
+img*
+/PhD-Thesi.synctex.gz
