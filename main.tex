@@ -16,7 +16,7 @@
 % FONT SELECTION  
 %%%%%%%%%%%%%%%%%%%%%%%% 
 
-\usepackage[light,math]{iwona}
+\usepackage[light]{iwona}
 \usepackage[T1]{fontenc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -60,8 +60,6 @@
 {0pt}
 {#1}
 []
-
-% initial margin, ????, bottom margin final margin
 \titlespacing*{\section}{40pt}{10pt}{40pt}[40pt]
 \newcommand{\sectionbreak}{\cleardoublepage}
 
@@ -117,17 +115,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 % DOCUMENT
 %%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
+
 \pagestyle{fancy}
-\renewcommand{\sectionmark}[1]{\markboth{}{\MakeUppercase{\emph{#1}}}}
-\renewcommand{\subsectionmark}[1]{\markboth{\emph{#1}}{}}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
 \fancyfoot{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-% TITLE PAGE
+% TITLE PAGE 
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{title.tex}
@@ -169,16 +167,26 @@ Here is the prologue.
 \vspace*{100pt}
 \tableofcontents
 
+\section*{Tables, figures and abbreviations used in this book}
+\fancyfoot[LE,RO]{\thepage}
+
+[Insert in a table]
+
+SLD - Symmetric logarithmic derivative.
+
+qFI - Quantum Fisher information
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 % THESIS
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \cleardoublepage
-\setcounter{page}{1}
+
 \pagenumbering{arabic}
 \fancyfoot{}
 \input{title.tex}
 \cleardoublepage
+\setcounter{page}{1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % DEDICATION PAGE
@@ -193,10 +201,12 @@ Here is the prologue.
 %%%%%%%%%%%%%%%%%%%%%%%%
 % HEADINGS AND PAGE NUM.
 %%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\rightmark}{\bf \thesubsection}
 \renewcommand{\headrulewidth}{0.5pt}
 \fancyfoot[LE,RO]{\thepage}
-\fancyhead[LE]{\rightmark}
-\fancyhead[RO]{\leftmark}
+\fancyhead[LE]{Section: \rightmark}
+\fancyhead[RO]{by Iagoba Apellaniz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % REDEFINE TITLE FORMAT
@@ -215,91 +225,54 @@ Here is the prologue.
 \thiswatermark{\put(1,-297){\color{l-grey}\rule{84pt}{42pt}}
 \put(84,-297){\color{grey}\rule{410pt}{42pt}}}
 
-\lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} recent years many work and
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
 
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
+\lettrine[lines=2, findent=3pt,nindent=0pt]{S}{ample} text.
+\input{sample_text.tex}
 
 
-\section{Estimation processes}
-\thiswatermark{\put(1,-297){\color{l-grey}\rule{84pt}{42pt}}
-\put(84,-297){\color{grey}\rule{410pt}{42pt}}}
 
-\lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} almost any area of science
-and engineering the estimation process takes a fundamental role on 
-data analysis.
-So it is the importance that the estimation theory developed around has been 
-studied since long time ago, reaching to a high level of complexity and 
-to a rich functionality in terms of adaptability to a huge variety
-of situations. 
-In this chapter we will go trough the most important features of this
-theory until reach transcendental concepts for the understandability of this
-book. 
+\section{Background on Estimation and \, Quantum Information Theories}
+\thiswatermark{\put(1,-330){\color{l-grey}\rule{84pt}{75pt}}
+\put(84,-330){\color{grey}\rule{410pt}{75pt}}}
 
-% line height 30pt
+\lettrine[lines=2, findent=3pt,nindent=0pt]{S}{ample} text.
+\input{sample_text.tex} 
+
+\subsection{Classical estimation theory}
+\input{sample_text.tex}
+
+\section{Quantum metrology with Dicke like states}
+\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
+\input{sample_text.tex}
+
+\section[Bounding qFI with observables]
+{Bounding quantum Fisher \qquad\qquad\, Information with observables}
+\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
+\input{sample_text.tex}
+
 \section{Accuracy bound for gradient field estimation with atomic ensembles}
 \thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
 \put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
+\input{sample_text.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+% REDEFINE TITLE FORMAT
+%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}[display]
+{\vspace*{150pt}
+\bf\Huge}
+{\begin{picture}(0,0)\put(-60,-30){\textcolor{grey}{\thesection}}\end{picture}}
+{0pt}
+{#1}
+[]
+\titlespacing*{\section}{40pt}{10pt}{40pt}[40pt]
 
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day. 
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
+\section*{References}
+\input{sample_text.tex}
 
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
-implementations of quantum metrology arise to the public domain.
-The interest of this field is increasing day by day.
+\section*{Index}
+\input{sample_text.tex}
 
 \end{document}
