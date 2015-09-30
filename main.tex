@@ -12,6 +12,7 @@
 \usepackage{watermark}
 \usepackage{color}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%% 
 % FONT SELECTION  
 %%%%%%%%%%%%%%%%%%%%%%%% 
@@ -136,13 +137,13 @@
 
 \cleardoublepage
 
-This document was generated with the 2013 distribution of \LaTeX.
+This document was generated with the 2014 distribution of \LaTeX. 
 
 \vfill
 
 \includegraphics[height=20pt]{img/0-CreativeCommons-by-sa.png}
 
-2012-2014 Iagoba Apellaniz. This work is licensed under the Creative Commons
+2012-2015 Iagoba Apellaniz. This work is licensed under the Creative Commons
 Attribution-ShareAlike 4.0 International License. To view a copy of this
 license, visit
 \href{http://creativecommons.org/licenses/by-sa/4.0/deed.en_US}
@@ -205,8 +206,8 @@ qFI - Quantum Fisher information
 \renewcommand{\rightmark}{\bf \thesubsection}
 \renewcommand{\headrulewidth}{0.5pt}
 \fancyfoot[LE,RO]{\thepage}
-\fancyhead[LE]{Section: \rightmark}
-\fancyhead[RO]{by Iagoba Apellaniz}
+\fancyhead[LE]{Section: \rightmark} % TODO: Solve heading
+\fancyhead[RO]{\leftmark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % REDEFINE TITLE FORMAT
@@ -225,20 +226,32 @@ qFI - Quantum Fisher information
 \thiswatermark{\put(1,-297){\color{l-grey}\rule{84pt}{42pt}}
 \put(84,-297){\color{grey}\rule{410pt}{42pt}}}
 
-
-\lettrine[lines=2, findent=3pt,nindent=0pt]{S}{ample} text.
-\input{sample_text.tex}
+\input{01-introduction.tex}
 
 
-
-\section{Background on Estimation and \, Quantum Information Theories}
+\section{\foreignlanguage{nohyphenation}{Background on Estimation and Quantum Information Theories}}
 \thiswatermark{\put(1,-330){\color{l-grey}\rule{84pt}{75pt}}
 \put(84,-330){\color{grey}\rule{410pt}{75pt}}}
 
-\lettrine[lines=2, findent=3pt,nindent=0pt]{S}{ample} text.
+\lettrine[lines=2, findent=3pt,nindent=0pt]{T}{his} thesis is based on
+many previous works developed since long time ago.
+It is known that estimation processes are part of different
+aspects of the human been behaviour.
+From the estimation of the season on which one has 
+to plant some vegetables to grow until the estimation of which route is the
+shorter to reach somewhere. 
+All these processes usually involve a huge amount of data. 
+So it has been developed a strongly consolidated theory around that.
+
 \input{sample_text.tex} 
 
 \subsection{Classical estimation theory}
+\input{sample_text.tex}
+
+\subsection{Step in quantum estimation theory}
+\input{sample_text.tex}
+
+\subsection{Quantum Metrology}
 \input{sample_text.tex}
 
 \section{Quantum metrology with Dicke like states}
