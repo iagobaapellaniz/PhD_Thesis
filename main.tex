@@ -1,0 +1,291 @@
+\documentclass[12pt, letterpaper, twoside]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath, amsfonts, amssymb, bbm}
+%\usepackage{lipsum}
+\usepackage{fancyhdr}
+%\usepackage{layout}
+\usepackage{lettrine}
+\usepackage[explicit]{titlesec}
+\usepackage{hyperref}
+\usepackage{watermark}
+\usepackage{color}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% FONT SELECTION  
+%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\usepackage[light]{iwona}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINE COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{grey}{rgb}{0.5,0.5,0.5}
+\definecolor{l-grey}{rgb}{0.8,0.8,0.8}
+\definecolor{withe}{rgb}{1,1,1}
+\definecolor{black}{rgb}{0,0,0}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% PAGE LAYOUT
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Paper Width 614pt
+% Text fill symemetric 604pt
+% Paper Height 794pt
+
+\setlength{\voffset}{-0.5in}
+\setlength{\hoffset}{-1in}
+\setlength{\oddsidemargin}{65pt}
+\setlength{\evensidemargin}{45pt}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{20pt}
+\setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\textheight}{635pt}
+\setlength{\textwidth}{494pt}
+\setlength{\footskip}{50pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLES LAYOUT
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\section}[display]
+{\vspace*{150pt}
+\bf\Huge}
+{\begin{picture}(0,0)\put(-60,-30){\textcolor{grey}{\thesection}}\end{picture}}
+{0pt}
+{#1}
+[]
+\titlespacing*{\section}{40pt}{10pt}{40pt}[40pt]
+\newcommand{\sectionbreak}{\cleardoublepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% MATH OPERATORS AND 
+% CUSTOM ENVIRONMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator*{\Cov}{Cov}
+\DeclareMathOperator{\cov}{Cov} 
+  
+\newcounter{observ}
+\newenvironment{observ}{\refstepcounter{observ}
+   \textit{\textbf{Observation \theobserv:}} \rmfamily}
+     
+\newenvironment{proof}{\textit{Proof:} \rmfamily}{\hfill$\square$}
+
+\newcommand{\ket}[1]{\ensuremath{\vert #1 \rangle}}
+\newcommand{\bra}[1]{\ensuremath{\langle #1 \vert}} 
+\newcommand{\braket}[2]{\ensuremath{\langle #1 \vert #2 \rangle}} 
+\newcommand{\braOket}[3]{\ensuremath{\langle #1 \vert #2 \vert #3 \rangle}}
+\newcommand{\ketbra}[2]{\ensuremath{\vert #1 \rangle \! \langle #2 \vert}}
+\newcommand{\meanO}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\ver}[2]{\ensuremath{\genfrac{}{}{0pt}{}{#1}{#2}}}
+\newcommand{\tr}[1]{\ensuremath{\Tr \lcua #1\rcua}}
+\newcommand{\trsub}[2]{\ensuremath{\Tr_{#1} \lcua #2 \rcua }}
+\newcommand{\bsym}[1]{\ensuremath{\boldsymbol{#1}}}
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\bse{\begin{subequations}} 
+\def\ese{\end{subequations}}
+\def\mtxid{\mathbbm{1}}
+\def\lpar{\left(} 
+\def\rpar{\right)}
+\def\lcua{\left[}
+\def\rcua{\right]}
+\def\lcor{\left\{}
+\def\rcor{\right\}}
+\def\lang{\left\langle}
+\def\rang{\right\rangle}
+\def\l{\left} 
+\def\r{\right}
+\def\nnnl{\nonumber\\}
+\def\nnnlq{\nonumber\\ && \quad}
+\def\nnnlqq{\nonumber\\ && \qquad}
+\def\nnnlqqq{\nonumber\\ && \quad\qquad}
+\def\ie{, \textit{i.e.}, }
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE PAGE 
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{title.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% EDITION TIPS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+
+This document was generated with the 2014 distribution of \LaTeX. 
+
+\vfill
+
+\includegraphics[height=20pt]{img/0-CreativeCommons-by-sa.png}
+
+2012-2015 Iagoba Apellaniz. This work is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License. To view a copy of this
+license, visit
+\href{http://creativecommons.org/licenses/by-sa/4.0/deed.en_US}
+{http://creativecommons.org/ licenses/by-sa/4.0/deed.en\_US}.
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% PROLOGE
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Prologue}
+\setcounter{page}{1}
+\pagenumbering{roman}
+\fancyfoot[LE,RO]{\thepage}
+
+\input{prologe.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENTS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace*{100pt}
+\tableofcontents
+
+\section*{Tables, figures and abbreviations used in this book}
+\fancyfoot[LE,RO]{\thepage}
+
+[Insert in a table]
+
+SLD - Symmetric logarithmic derivative.
+
+qFI - Quantum Fisher information
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% THESIS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+
+\pagenumbering{arabic}
+\fancyfoot{}
+\input{title.tex}
+\cleardoublepage
+\setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% DEDICATION PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{100pt}
+\begin{center}
+\emph{To my parents and my family}
+\end{center}
+
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADINGS AND PAGE NUM.
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\rightmark}{\bf \thesubsection}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyfoot[LE,RO]{\thepage}
+\fancyhead[LE]{Section: \rightmark} % TODO: Solve heading
+\fancyhead[RO]{\leftmark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% REDEFINE TITLE FORMAT
+%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}[display]
+{\vspace*{190pt}
+\bf\Huge}
+{\begin{picture}(0,0)\put(-64,-31){\textcolor{grey}{\thesection}}\end{picture}}
+{0pt}
+{\textcolor{withe}{#1}}
+[]
+\titlespacing*{\section}{100pt}{10pt}{40pt}[40pt]
+
+
+\section{Introduction}
+\thiswatermark{\put(1,-297){\color{l-grey}\rule{84pt}{42pt}}
+\put(84,-297){\color{grey}\rule{410pt}{42pt}}}
+
+\input{01-introduction.tex}
+
+
+\section{\foreignlanguage{nohyphenation}{Background on Estimation and Quantum Information Theories}}
+\thiswatermark{\put(1,-330){\color{l-grey}\rule{84pt}{75pt}}
+\put(84,-330){\color{grey}\rule{410pt}{75pt}}}
+
+\lettrine[lines=2, findent=3pt,nindent=0pt]{T}{his} thesis is based on
+many previous works developed since long time ago.
+It is known that estimation processes are part of different
+aspects of the human been behaviour.
+From the estimation of the season on which one has 
+to plant some vegetables to grow until the estimation of which route is the
+shorter to reach somewhere. 
+All these processes usually involve a huge amount of data. 
+So it has been developed a strongly consolidated theory around that.
+
+\input{sample_text.tex} 
+
+\subsection{Classical estimation theory}
+\input{sample_text.tex}
+
+\subsection{Step in quantum estimation theory}
+\input{sample_text.tex}
+
+\subsection{Quantum Metrology}
+\input{sample_text.tex}
+
+\section{Quantum metrology with Dicke like states}
+\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
+\input{sample_text.tex}
+
+\section[Bounding qFI with observables]
+{Bounding quantum Fisher \qquad\qquad\, Information with observables}
+\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
+\input{sample_text.tex}
+
+\section{Accuracy bound for gradient field estimation with atomic ensembles}
+\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
+\input{sample_text.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% REDEFINE TITLE FORMAT
+%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}[display]
+{\vspace*{150pt}
+\bf\Huge}
+{\begin{picture}(0,0)\put(-60,-30){\textcolor{grey}{\thesection}}\end{picture}}
+{0pt}
+{#1}
+[]
+\titlespacing*{\section}{40pt}{10pt}{40pt}[40pt]
+
+\section*{References}
+\input{sample_text.tex}
+
+\section*{Index}
+\input{sample_text.tex}
+
+\end{document}
