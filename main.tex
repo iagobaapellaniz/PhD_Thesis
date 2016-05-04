@@ -13,11 +13,11 @@
 \usepackage{color}
 \usepackage[final]{pdfpages}
 
-%%%%%%%%%%%%%%%%%%%%%%%% 
-% FONT SELECTION  
-%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%
+% FONT SELECTION
+%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[light]{iwona}
+\usepackage[math,light]{iwona}
 \usepackage[T1]{fontenc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -29,7 +29,7 @@
 \definecolor{withe}{rgb}{1,1,1}
 \definecolor{black}{rgb}{0,0,0}
 
-%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%
 % PAGE LAYOUT
 %%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -66,25 +66,26 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-% MATH OPERATORS AND 
+% MATH OPERATORS AND
 % CUSTOM ENVIRONMENTS
 %%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator*{\Cov}{Cov}
-\DeclareMathOperator{\cov}{Cov} 
-  
+\DeclareMathOperator{\cov}{Cov}
+
 \newcounter{observ}
 \newenvironment{observ}{\refstepcounter{observ}
    \textit{\textbf{Observation \theobserv:}} \rmfamily}
-     
+
 \newenvironment{proof}{\textit{Proof:} \rmfamily}{\hfill$\square$}
 
 \newcommand{\ket}[1]{\ensuremath{\vert #1 \rangle}}
-\newcommand{\bra}[1]{\ensuremath{\langle #1 \vert}} 
-\newcommand{\braket}[2]{\ensuremath{\langle #1 \vert #2 \rangle}} 
+\newcommand{\bra}[1]{\ensuremath{\langle #1 \vert}}
+\newcommand{\braket}[2]{\ensuremath{\langle #1 \vert #2 \rangle}}
 \newcommand{\braOket}[3]{\ensuremath{\langle #1 \vert #2 \vert #3 \rangle}}
 \newcommand{\ketbra}[2]{\ensuremath{\vert #1 \rangle \! \langle #2 \vert}}
-\newcommand{\meanO}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\expect}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\varian}[1]{\ensuremath{(\Delta #1 )^2}}
 \newcommand{\ver}[2]{\ensuremath{\genfrac{}{}{0pt}{}{#1}{#2}}}
 \newcommand{\tr}[1]{\ensuremath{\Tr \lcua #1\rcua}}
 \newcommand{\trsub}[2]{\ensuremath{\Tr_{#1} \lcua #2 \rcua }}
@@ -94,10 +95,10 @@
 \def\ee{\end{equation}}
 \def\bea{\begin{eqnarray}}
 \def\eea{\end{eqnarray}}
-\def\bse{\begin{subequations}} 
+\def\bse{\begin{subequations}}
 \def\ese{\end{subequations}}
 \def\mtxid{\mathbbm{1}}
-\def\lpar{\left(} 
+\def\lpar{\left(}
 \def\rpar{\right)}
 \def\lcua{\left[}
 \def\rcua{\right]}
@@ -105,7 +106,7 @@
 \def\rcor{\right\}}
 \def\lang{\left\langle}
 \def\rang{\right\rangle}
-\def\l{\left} 
+\def\l{\left}
 \def\r{\right}
 \def\nnnl{\nonumber\\}
 \def\nnnlq{\nonumber\\ && \quad}
@@ -126,7 +127,7 @@
 \fancyfoot{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-% TITLE PAGE 
+% TITLE PAGE
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \includepdf[pages=-, offset=72 -36]{img/cover.pdf}
@@ -137,7 +138,7 @@
 
 \cleardoublepage
 
-This document was generated with the 2014 distribution of \LaTeX. 
+This document was generated with the 2014 distribution of \LaTeX.
 
 \vfill
 
@@ -163,16 +164,17 @@ license, visit
 
 \section*{Publications}
 {\setlength{\parindent}{0cm}
-Iagoba Apellaniz \textit{et al} 2015 \textit{New J. Phys.} \textbf{17} 083027
+Iagoba Apellaniz \textit{et al}, \textit{New J. Phys.} \textbf{17} 083027 (2015)
 
 Detecting metrologically useful entanglement in the vicinity of Dicke states
+\vspace{10pt}
+
+G\'eza T\'oth and Iagoba Apellaniz, \textit{J. Phys. A: Math. Theor.} \textbf{47} 424006 (2014)
+
+Quantum metrology from a quantum information science prespective
 
 \subsection*{Preprints}
 \subsection*{Out of the scope of this thesis}
-G\'eza T\'oth and Iagoba Apellaniz 2014 \textit{J. Phys. A: Math. Theor.} \textbf{47} 424006
-
-Quantum metrology from a quantum information science prespective
-\vspace{10pt}
 
 Giuseppe Vitagliano \textit{et al} 2014 \textit{Phys. Rev. A} \textbf{89} 032307
 
@@ -195,7 +197,7 @@ Spin squeezing and entanglement for an arbitrary spin
 
 SLD - Symmetric logarithmic derivative.
 
-qFI - Quantum Fisher information
+QFI - Quantum Fisher information
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % THESIS
@@ -214,15 +216,19 @@ qFI - Quantum Fisher information
 %%%%%%%%%%%%%%%%%%%%%%%%
 \vspace*{100pt}
 \begin{center}
-\emph{To my parents, my family and all the people I have had around those years}
+\emph{To my parents, my family}
+
+\emph{and to all the people}
+
+\emph{I have had around me those years.}
 \end{center}
 
 \cleardoublepage
 
 \section*{Acknowledgments}
 
-I want to thank the people that support me in this endevour especially my office and discussion mates and my director G\'eza T\'oth for without whom my work would not be even  started.
-I also want to thank more people especially those from the theoretical physics department of the University of the Basque Country and the unique very especial group for me from the Theoretical Quantum Optics group at the University of Siegen. 
+I want to thank the people that support me in this endeavor especially my office and discussion mates and my director G\'eza T\'oth for without whom my work would not be even  started.
+I also want to thank more people especially those from the theoretical physics department of the University of the Basque Country and the unique very especial group for me from the Theoretical Quantum Optics group at the University of Siegen.
 I would really like to mention the names of all of them but I think it would be quite heavy for the average reader of this thesis. Thank you guys!
 
 On the other hand I also felt very comfortable at my university, the University of the Basque Country, but I want to thank especially the people that make me grow in all ways as person.
@@ -268,19 +274,28 @@ On the other hand I also felt very comfortable at my university, the University 
 
 \section{Quantum metrology with Dicke like states}
 \thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
-\put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
-Hello thi is where sample text was.
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}}
+
+\input{03-vicinity.tex}
 
 \section[Bounding qFI with observables]
 {Bounding quantum Fisher \qquad\qquad\, Information with observables}
 \thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
-\put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
-Hello thi is where sample text was.
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}}
+
+\input{04-legendre.tex}
 
 \section{Accuracy bound for gradient field estimation with atomic ensembles}
 \thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
-\put(84,-327){\color{grey}\rule{410pt}{72pt}}} 
-Hello thi is where sample text was.
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}}
+
+\input{05-gradient.tex}
+
+\section{Conclusions}
+\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
+\put(84,-327){\color{grey}\rule{410pt}{72pt}}}
+
+\input{06-conclusions.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % REDEFINE TITLE FORMAT
@@ -295,9 +310,6 @@ Hello thi is where sample text was.
 \titlespacing*{\section}{40pt}{10pt}{40pt}[40pt]
 
 \section*{References}
-Hello thi is where sample text was.
 
-\section*{Index}
-Hello thi is where sample text was.
 
 \end{document}
