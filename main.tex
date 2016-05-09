@@ -3,6 +3,8 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath, amsfonts, amssymb, bbm}
+\numberwithin{equation}{section}
+
 %\usepackage{lipsum}
 \usepackage{fancyhdr}
 %\usepackage{layout}
@@ -12,6 +14,8 @@
 \usepackage{watermark}
 \usepackage{color}
 \usepackage[final]{pdfpages}
+
+\usepackage{subfig}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % FONT SELECTION
@@ -39,7 +43,7 @@
 
 \setlength{\voffset}{-0.5in}
 \setlength{\hoffset}{-1in}
-\setlength{\oddsidemargin}{65pt}
+\setlength{\oddsidemargin}{75pt}
 \setlength{\evensidemargin}{45pt}
 \setlength{\topmargin}{0in}
 \setlength{\headheight}{15pt}
@@ -49,6 +53,9 @@
 \setlength{\textheight}{635pt}
 \setlength{\textwidth}{494pt}
 \setlength{\footskip}{50pt}
+
+\renewcommand{\baselinestretch}{1.25}
+\setlength{\parskip}{5pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % TITLES LAYOUT
@@ -69,9 +76,8 @@
 % MATH OPERATORS AND
 % CUSTOM ENVIRONMENTS
 %%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareMathOperator{\Tr}{Tr}
-\DeclareMathOperator*{\Cov}{Cov}
-\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\cov}{cov}
 
 \newcounter{observ}
 \newenvironment{observ}{\refstepcounter{observ}
@@ -87,7 +93,6 @@
 \newcommand{\expect}[1]{\ensuremath{\langle #1 \rangle}}
 \newcommand{\varian}[1]{\ensuremath{(\Delta #1 )^2}}
 \newcommand{\ver}[2]{\ensuremath{\genfrac{}{}{0pt}{}{#1}{#2}}}
-\newcommand{\tr}[1]{\ensuremath{\Tr \lcua #1\rcua}}
 \newcommand{\trsub}[2]{\ensuremath{\Tr_{#1} \lcua #2 \rcua }}
 \newcommand{\bsym}[1]{\ensuremath{\boldsymbol{#1}}}
 
@@ -190,7 +195,7 @@ Spin squeezing and entanglement for an arbitrary spin
 %%%%%%%%%%%%%%%%%%%%%%%%
 % FIGURES TABLES, ETC
 %%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Tables, figures and abbreviations used in this book}
+\section*{Tables, figures and abbreviations}
 \fancyfoot[LE,RO]{\thepage}
 
 [Insert in a table]
@@ -249,49 +254,50 @@ On the other hand I also felt very comfortable at my university, the University 
 % REDEFINE TITLE FORMAT
 %%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}[display]
-{\vspace*{190pt}
+{\vspace*{178pt}
 \bf\Huge}
-{\begin{picture}(0,0)\put(-64,-31){\textcolor{grey}{\thesection}}\end{picture}}
+{\begin{picture}(0,0)\put(-64,-38){\textcolor{grey}{\thesection}}\end{picture}}
 {0pt}
-{\textcolor{withe}{#1}}
+{\textcolor{white}{#1}}
 []
-\titlespacing*{\section}{100pt}{10pt}{40pt}[40pt]
-
+\titlespacing*{\section}{100pt}{10pt}{60pt}[16pt]
 
 \section{Introduction}
-\thiswatermark{\put(1,-297){\color{l-grey}\rule{84pt}{42pt}}
-\put(84,-297){\color{grey}\rule{410pt}{42pt}}}
+\thiswatermark{\put(1,-303){\color{l-grey}\rule{84pt}{48pt}}
+\put(84,-303){\color{grey}\rule{410pt}{48pt}}}
 
 \input{01-introduction.tex}
 
+\section[Backgroud on Quantum Metrology]
+{Development of Quantum Metrology}
+\thiswatermark{\put(1,-303){\color{l-grey}\rule{84pt}{48pt}}
+\put(84,-303){\color{grey}\rule{410pt}{48pt}}}
 
-\section{Historical development of Quantum Metrology}
-\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
-\put(84,-327){\color{grey}\rule{410pt}{72pt}}}
+\input{02-background.tex}
 
-\input{02-history.tex}
-
-
-\section{Quantum metrology with Dicke like states}
-\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
-\put(84,-327){\color{grey}\rule{410pt}{72pt}}}
+\section[Quantum metrology with Dike like states]
+{Quantum metrology with states on the vicinity of Dicke states}
+\thiswatermark{\put(1,-347){\color{l-grey}\rule{84pt}{92pt}}
+\put(84,-347){\color{grey}\rule{410pt}{92pt}}}
 
 \input{03-vicinity.tex}
 
-\section[Bounding qFI with observables]
-{Bounding quantum Fisher \qquad\qquad\, Information with observables}
-\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
-\put(84,-327){\color{grey}\rule{410pt}{72pt}}}
+\section[Bounds on QFI with observables]
+{Bounding the QFI with few initial expectation values}
+\thiswatermark{\put(1,-343){\color{l-grey}\rule{84pt}{88pt}}
+\put(84,-343){\color{grey}\rule{410pt}{88pt}}}
 
 \input{04-legendre.tex}
 
-\section{Accuracy bound for gradient field estimation with atomic ensembles}
+\section[Metrology of the gradient magnetic field]
+{Accuracy bound for gradient field estimation with atomic ensembles}
 \thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
 \put(84,-327){\color{grey}\rule{410pt}{72pt}}}
 
 \input{05-gradient.tex}
 
-\section{Conclusions}
+\section[Conclusions]
+{Conclusions}
 \thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
 \put(84,-327){\color{grey}\rule{410pt}{72pt}}}
 
