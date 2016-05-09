@@ -22,8 +22,8 @@ end;
 function generateMap(ρ::Vector,j_z::Matrix,j_y::Matrix,points::Int)
     
     output = zeros(points, 2*points)
-    ϕ_vec = linspace(0,2*pi-(pi/points),2*points)
-    θ_vec = linspace(0,pi,points)
+    ϕ_vec = linspace(2*pi/(4*points),2*pi-2*pi/(4*points),2*points)
+    θ_vec = linspace(pi/(2*points),pi-pi/(2*points),points)
     
         for i in 1:points
             for j in 1:2*points
