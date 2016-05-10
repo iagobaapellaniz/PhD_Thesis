@@ -1,0 +1,2989 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF-8
+
+
+@Article{Acin2001,
+  Title                    = {Classification of Mixed Three-Qubit States},
+  Author                   = {Ac{\'{\i}}n, A. and Bru\ss{}, D. and Lewenstein, M. and Sanpera, A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2001},
+
+  Month                    = {Jul},
+  Pages                    = {040401},
+  Volume                   = {87},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.87.040401},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.87.040401},
+  Doi                      = {10.1103/PhysRevLett.87.040401},
+  Issuenorpint             = {4},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.87.040401}
+}
+
+@Article{Alipour2014,
+  Title                    = {Quantum Metrology in Open Systems: Dissipative Cram\'er-Rao Bound},
+  Author                   = {Alipour, S. and Mehboudi, M. and Rezakhani, A.\,T.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2014},
+
+  Month                    = {Mar},
+  Pages                    = {120405},
+  Volume                   = {112},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.112.120405},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.112.120405},
+  Doi                      = {10.1103/PhysRevLett.112.120405},
+  Issuenorpint             = {12},
+  Numpages                 = {6},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.112.120405}
+}
+
+@Article{Apellaniz2015a,
+  Title                    = {Optimal detection of metrologically useful entanglement},
+  Author                   = {Apellaniz, Iagoba and Kleinmann, Matthias and G{\"u}hne, Otfried and Toth, Geza},
+  Journal                  = {arXiv preprint arXiv:1511.05203},
+  Year                     = {2015},
+
+  __markedentry            = {[iapellaniz:]},
+  Owner                    = {iapellaniz},
+  Timestamp                = {2016.05.10}
+}
+
+@Article{Apellaniz2015,
+  Title                    = {Detecting metrologically useful entanglement in the vicinity of Dicke states},
+  Author                   = {Apellaniz, Iagoba and L{\"u}cke, Bernd and Peise, Jan and Klempt, Carsten and T{\'o}th, G{\'e}za},
+  Journal                  = {New Journal of Physics},
+  Year                     = {2015},
+  Number                   = {8},
+  Pages                    = {083027},
+  Volume                   = {17},
+  Owner                    = {iapellaniz},
+  Publisher                = {IOP Publishing},
+  Timestamp                = {2016.05.10}
+}
+
+@Book{Barlow1989,
+  Title                    = {Statistics: a guide to the use of statistical methods in the physical sciences},
+  Author                   = {Barlow, Roger J},
+  Publisher                = {John Wiley \& Sons},
+  Year                     = {1989},
+  Volume                   = {29},
+  Owner                    = {iapellaniz},
+  Timestamp                = {2016.05.10}
+}
+
+@Article{Behbood2013a,
+  Title                    = {Real-time vector field tracking with a cold-atom magnetometer},
+  Author                   = {Behbood, Naeimeh and Ciurana, F. Martin and Colangelo, Giorgio and Napolitano, Mario and Mitchell, Morgan W. and Sewell, Robert J},
+  Journal                  = {Appl. Phys. Lett.},
+  Year                     = {2013},
+  Pages                    = {173504},
+  Volume                   = {102},
+
+  Bdsk-url-1               = {http://scitation.aip.org/content/aip/journal/apl/102/17/10.1063/1.4803684},
+  Date-modified            = {2015-02-03 10:48:30 +0000},
+  Doi                      = {10.1063/1.4803684},
+  Publisher                = {AIP Publishing},
+  Read                     = {0},
+  Url                      = {http://scitation.aip.org/content/aip/journal/apl/102/17/10.1063/1.4803684}
+}
+
+@Article{Behbood2013,
+  Title                    = {{Feedback Cooling of an Atomic Spin Ensemble}},
+  Author                   = {{Behbood}, N. and {Colangelo}, G. and {Martin Ciurana}, F. and {Napolitano}, M. and {Sewell}, R.~J. and {Mitchell}, M.~W.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+
+  Month                    = sep,
+  Number                   = {10},
+  Pages                    = {103601},
+  Volume                   = {111},
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Archiveprefix            = {arXiv},
+  Bdsk-url-1               = {http://adsabs.harvard.edu/abs/2013PhRvL.111j3601B},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.111.103601},
+  Doi                      = {10.1103/PhysRevLett.111.103601},
+  Eid                      = {103601},
+  Eprintnoprint            = {1305.3290},
+  Keywords                 = {Effects of atomic coherence on propagation absorption and amplification of light, electromagnetically induced transparency and absorption, Atom cooling methods, Atom traps and guides},
+  Primaryclass             = {quant-ph},
+  Url                      = {http://adsabs.harvard.edu/abs/2013PhRvL.111j3601B}
+}
+
+@Article{Behbood2014,
+  Title                    = {Generation of Macroscopic Singlet States in a Cold Atomic Ensemble},
+  Author                   = {Behbood, N. and Martin Ciurana, F. and Colangelo, G. and Napolitano, M. and T\'oth, G\'eza and Sewell, R. J. and Mitchell, M. W.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2014},
+
+  Month                    = {Aug},
+  Pages                    = {093601},
+  Volume                   = {113},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.113.093601},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.113.093601},
+  Doi                      = {10.1103/PhysRevLett.113.093601},
+  Issue                    = {9},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.113.093601}
+}
+
+@Article{Benatti2013,
+  Title                    = {Sub\char21{}shot-noise sensitivities without entanglement},
+  Author                   = {Benatti, F. and Braun, D.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2013},
+
+  Month                    = {Jan},
+  Pages                    = {012340},
+  Volume                   = {87},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.87.012340},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.87.012340},
+  Doi                      = {10.1103/PhysRevA.87.012340},
+  Issuenoprint             = {1},
+  Numpages                 = {11},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.87.012340}
+}
+
+@Article{Benatti2011,
+  Title                    = {Entanglement and squeezing with identical particles: ultracold atom quantum metrology},
+  Author                   = {F Benatti and R Floreanini and U Marzolino},
+  Journal                  = {J. Phys. B},
+  Year                     = {2011},
+  Number                   = {9},
+  Pages                    = {091001},
+  Volume                   = {44},
+
+  Abstract                 = {In quantum metrological applications based on ultracold atom systems, entangled initial states are thought necessary to achieve sub-shot-noise accuracies. This conclusion, although strictly true for systems of distinguishable particles, does no longer hold for systems of identical particles. Indeed, while quantum non-locality is necessary, it can be encoded into the interferometric apparatus and not into the initial states. In particular, no preliminary spin-squeezing is necessary to reach quantum performances in metrological applications of ultracold atom physics.},
+  Bdsk-url-1               = {http://stacks.iop.org/0953-4075/44/i=9/a=091001},
+  Url                      = {http://stacks.iop.org/0953-4075/44/i=9/a=091001}
+}
+
+@Article{Benatti2010,
+  Title                    = {Sub-shot-noise quantum metrology with entangled identical particles},
+  Author                   = {F. Benatti and R. Floreanini and U. Marzolino},
+  Journal                  = {Ann. Phys.},
+  Year                     = {2010},
+  Number                   = {4},
+  Pages                    = {924--935},
+  Volume                   = {325},
+
+  Abstract                 = {The usual notion of separability has to be reconsidered when applied to states describing identical particles. A definition of separability not related to any a priori Hilbert space tensor product structure is needed: this can be given in terms of commuting subalgebras of observables. Accordingly, the results concerning the use of the quantum Fisher information in quantum metrology are generalized and physically reinterpreted. },
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0003491610000084},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.aop.2010.01.005},
+  Doi                      = {http://dx.doi.org/10.1016/j.aop.2010.01.005},
+  Issn_noprint             = {0003-4916},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0003491610000084}
+}
+
+@Article{Boixo2007,
+  Title                    = {Generalized Limits for Single-Parameter Quantum Estimation},
+  Author                   = {Boixo, Sergio and Flammia, Steven T. and Caves, Carlton M. and Geremia, JM},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2007},
+
+  Month                    = {Feb},
+  Pages                    = {090401},
+  Volume                   = {98},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.98.090401},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.98.090401},
+  Doi                      = {10.1103/PhysRevLett.98.090401},
+  Issuenorpint             = {9},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.98.090401}
+}
+
+@Article{Boixo2008,
+  Title                    = {Operational Interpretation for Global Multipartite Entanglement},
+  Author                   = {Boixo, S. and Monras, A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2008},
+
+  Month                    = {Mar},
+  Pages                    = {100503},
+  Volume                   = {100},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.100.100503},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.100.100503},
+  Doi                      = {10.1103/PhysRevLett.100.100503},
+  Issuenorpint             = {10},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.100.100503}
+}
+
+@Article{Bondurant1984,
+  Title                    = {Squeezed states in phase-sensing interferometers},
+  Author                   = {Bondurant, Roy S. and Shapiro, Jeffrey H.},
+  Journal                  = {Phys. Rev. D},
+  Year                     = {1984},
+
+  Month                    = {Dec},
+  Pages                    = {2548--2556},
+  Volume                   = {30},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevD.30.2548},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevD.30.2548},
+  Doi                      = {10.1103/PhysRevD.30.2548},
+  Issuenoprint             = {12},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevD.30.2548}
+}
+
+@Article{Bouwmeester1999,
+  Title                    = {Observation of Three-Photon {Greenberger}-{Horne}-{Zeilinger} Entanglement},
+  Author                   = {Bouwmeester, Dik and Pan, Jian-Wei and Daniell, Matthew and Weinfurter, Harald and Zeilinger, Anton},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1999},
+
+  Month                    = {Feb},
+  Pages                    = {1345},
+  Volume                   = {82},
+
+  Bdsk-url-1               = {http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.1345},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.82.1345},
+  Doi                      = {10.1103/PhysRevLett.82.1345},
+  Publisher                = {American Physical Society},
+  Url                      = {http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.1345}
+}
+
+@Article{Braun2011,
+  Title                    = {Heisenberg-limited sensitivity with decoherence-enhanced measurements},
+  Author                   = {Braun, Daniel and Martin, John},
+  Journal                  = {Nat. Commun.},
+  Year                     = {2011},
+
+  Month                    = {March},
+  Pages                    = {223},
+  Volume                   = {2},
+
+  Bdsk-url-1               = {http://www.nature.com/ncomms/journal/v2/n3/full/ncomms1220.html},
+  Date-modified            = {2015-02-03 10:52:08 +0000},
+  Doi                      = {10.1038/ncomms1220},
+  Publisher                = {Nature Publishing Group},
+  Url                      = {http://www.nature.com/ncomms/journal/v2/n3/full/ncomms1220.html}
+}
+
+@Article{Braunstein1992,
+  Title                    = {Quantum limits on precision measurements of phase},
+  Author                   = {Braunstein, Samuel L.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1992},
+
+  Month                    = {Dec},
+  Pages                    = {3598--3601},
+  Volume                   = {69},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.69.3598},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.69.3598},
+  Doi                      = {10.1103/PhysRevLett.69.3598},
+  Issuenoprint             = {25},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.69.3598}
+}
+
+@Article{Braunstein1994,
+  Title                    = {Statistical distance and the geometry of quantum states},
+  Author                   = {Braunstein, Samuel L. and Caves, Carlton M.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1994},
+
+  Month                    = {May},
+  Pages                    = {3439--3443},
+  Volume                   = {72},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.72.3439},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.72.3439},
+  Doi                      = {10.1103/PhysRevLett.72.3439},
+  Issuenorpint             = {22},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.72.3439}
+}
+
+@Article{Braunstein1996,
+  Title                    = {Generalized uncertainty relations: Theory, examples, and Lorentz invariance},
+  Author                   = {Braunstein, Samuel L and Caves, Carlton M and Milburn, Gerard J},
+  Journal                  = {Ann. Phys.},
+  Year                     = {1996},
+  Number                   = {1},
+  Pages                    = {135--173},
+  Volume                   = {247},
+
+  Publisher                = {Elsevier}
+}
+
+@Article{Cable2010,
+  Title                    = {Parameter Estimation with Entangled Photons Produced by Parametric Down-Conversion},
+  Author                   = {Cable, Hugo and Durkin, Gabriel A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2010},
+
+  Month                    = {Jul},
+  Pages                    = {013603},
+  Volume                   = {105},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.105.013603},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.105.013603},
+  Doi                      = {10.1103/PhysRevLett.105.013603},
+  Issuenorpint             = {1},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.105.013603}
+}
+
+@Article{Campo2013,
+  Title                    = {Quantum Speed Limits in Open System Dynamics},
+  Author                   = {del Campo, A. and Egusquiza, I. L. and Plenio, M. B. and Huelga, S. F.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+
+  Month                    = {Jan},
+  Pages                    = {050403},
+  Volume                   = {110},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.110.050403},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.110.050403},
+  Doi                      = {10.1103/PhysRevLett.110.050403},
+  Issuenorpint             = {5},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.110.050403}
+}
+
+@Article{Caves1981,
+  Title                    = {Quantum-mechanical noise in an interferometer},
+  Author                   = {Caves, Carlton M.},
+  Journal                  = {Phys. Rev. D},
+  Year                     = {1981},
+
+  Month                    = {Apr},
+  Pages                    = {1693--1708},
+  Volume                   = {23},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevD.23.1693},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevD.23.1693},
+  Doi                      = {10.1103/PhysRevD.23.1693},
+  Issuenoprint             = {8},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevD.23.1693}
+}
+
+@Article{Caves2010,
+  Title                    = {Quantum-circuit guide to optical and atomic interferometry},
+  Author                   = {Caves, Carlton M and Shaji, Anil},
+  Journal                  = {Opt. Commun.},
+  Year                     = {2010},
+  Number                   = {5},
+  Pages                    = {695--712},
+  Volume                   = {283},
+
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0030401809010578},
+  Publisher                = {Elsevier},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0030401809010578}
+}
+
+@Article{Chaves2013,
+  Title                    = {Noisy Metrology beyond the Standard Quantum Limit},
+  Author                   = {Chaves, R. and Brask, J. B. and Markiewicz, M. and Ko{\l}ody{\'n}ski, J. and Ac{\'{\i}}n, A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+
+  Month                    = {Sep},
+  Pages                    = {120401},
+  Volume                   = {111},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.111.120401},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.111.120401},
+  Doi                      = {10.1103/PhysRevLett.111.120401},
+  Issuenorpint             = {12},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.111.120401}
+}
+
+@Article{Chin2012,
+  Title                    = {Quantum Metrology in Non-Markovian Environments},
+  Author                   = {Chin, Alex W. and Huelga, Susana F. and Plenio, Martin B.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2012},
+
+  Month                    = {Dec},
+  Pages                    = {233601},
+  Volume                   = {109},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.109.233601},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.109.233601},
+  Doi                      = {10.1103/PhysRevLett.109.233601},
+  Issuenorpint             = {23},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.109.233601}
+}
+
+@Article{Chiuri2012,
+  Title                    = {Experimental Quantum Networking Protocols via Four-Qubit Hyperentangled Dicke States},
+  Author                   = {Chiuri, A. and Greganti, C. and Paternostro, M. and Vallone, G. and Mataloni, P.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2012},
+
+  Month                    = {Oct},
+  Pages                    = {173604},
+  Volume                   = {109},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.109.173604},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.109.173604},
+  Doi                      = {10.1103/PhysRevLett.109.173604},
+  Issuenorpint             = {17},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.109.173604}
+}
+
+@Article{Choi2008,
+  Title                    = {Bose-Einstein condensate as a nonlinear Ramsey interferometer operating beyond the Heisenberg limit},
+  Author                   = {Choi, S. and Sundaram, B.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2008},
+
+  Month                    = {May},
+  Pages                    = {053613},
+  Volume                   = {77},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.77.053613},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.77.053613},
+  Doi                      = {10.1103/PhysRevA.77.053613},
+  Issuenoprint             = {5},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.77.053613}
+}
+
+@Article{Cohen1998,
+  Title                    = {Unlocking Hidden Entanglement with Classical Information},
+  Author                   = {Cohen, Oliver},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1998},
+
+  Month                    = {Mar},
+  Pages                    = {2493--2496},
+  Volume                   = {80},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.80.2493},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.80.2493},
+  Doi                      = {10.1103/PhysRevLett.80.2493},
+  Issuenorpint             = {11},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.80.2493}
+}
+
+@Article{Crowley2014,
+  Title                    = {Tradeoff in simultaneous quantum-limited phase and loss estimation in interferometry},
+  Author                   = {Crowley, Philip J. D. and Datta, Animesh and Barbieri, Marco and Walmsley, Ian A.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2014},
+
+  Month                    = {February},
+  Pages                    = {023845},
+  Volume                   = {89},
+
+  Bdsk-url-1               = {http://arxiv.org/abs/1206.0043},
+  Date-modified            = {2015-02-03 11:06:15 +0000},
+  Doi                      = {10.1103/PhysRevA.89.023845},
+  Url                      = {http://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.023845}
+}
+
+@Article{Czekaj2014,
+  Title                    = {{Quantum metrology: Heisenberg limit with bound entanglement}},
+  Author                   = {{Czekaj}, L. and {Przysiezna}, A. and {Horodecki}, M. and {Horodecki}, P.},
+  Year                     = {2014},
+
+  Month                    = mar,
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Archiveprefix            = {arXiv},
+  Bdsk-url-1               = {http://adsabs.harvard.edu/abs/2014arXiv1403.5867C},
+  Eprint                   = {arXiv:1403.5867},
+  Journalnoprint           = {ArXiv e-prints},
+  Keywords                 = {Quantum Physics},
+  Primaryclass             = {quant-ph},
+  Url                      = {http://adsabs.harvard.edu/abs/2014arXiv1403.5867C}
+}
+
+@Article{Duer2014,
+  Title                    = {Improved Quantum Metrology Using Quantum Error Correction},
+  Author                   = {D\"ur, W. and Skotiniotis, M. and Fr\"owis, F. and Kraus, B.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2014},
+
+  Month                    = {Feb},
+  Pages                    = {080801},
+  Volume                   = {112},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.112.080801},
+  Doinoprint               = {10.1103/PhysRevLett.112.080801},
+  Issuenoprint             = {8},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.112.080801}
+}
+
+@Article{Demkowicz-Dobrzanski2013,
+  Title                    = {Fundamental quantum interferometry bound for the squeezed-light-enhanced gravitational wave detector GEO 600},
+  Author                   = {Demkowicz-Dobrza{\'n}ski, Rafa\l{} and Banaszek, Konrad and Schnabel, Roman},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2013},
+
+  Month                    = {Oct},
+  Pages                    = {041802},
+  Volume                   = {88},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.88.041802},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.88.041802},
+  Doi                      = {10.1103/PhysRevA.88.041802},
+  Issuenorpint             = {4},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.88.041802}
+}
+
+@Article{Demkowicz-Dobrzanski2012,
+  Title                    = {The elusive Heisenberg limit in quantum-enhanced metrology},
+  Author                   = {Demkowicz-Dobrza{\'n}ski, Rafa{\l} and Ko{\l}ody{\'n}ski, Jan and Gu{\c{t}}{\u{a}}, M{\u{a}}d{\u{a}}lin},
+  Journal                  = {Nat. Commun.},
+  Year                     = {2012},
+  Pages                    = {1063},
+  Volume                   = {3},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Demkowicz-Dobrzanski2014,
+  Title                    = {Quantum limits in optical interferometry},
+  Author                   = {{Demkowicz-Dobrzanski}, R. and {Jarzyna}, M. and {Kolodynski}, J.},
+  Year                     = {2014},
+
+  Month                    = may,
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Archiveprefixnoprint     = {arXiv},
+  Bdsk-url-1               = {http://adsabs.harvard.edu/abs/2014arXiv1405.7703D},
+  Eprint                   = {arXiv:1405.7703},
+  Journalnoprint           = {ArXiv e-prints},
+  Keywords                 = {Quantum Physics},
+  Primaryclass             = {quant-ph},
+  Url                      = {http://adsabs.harvard.edu/abs/2014arXiv1405.7703D}
+}
+
+@Article{Dicke1954,
+  Title                    = {Coherence in Spontaneous Radiation Processes},
+  Author                   = {Dicke, R. H.},
+  Journal                  = {Phys. Rev.},
+  Year                     = {1954},
+
+  Month                    = {Jan},
+  Pages                    = {99--110},
+  Volume                   = {93},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRev.93.99},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRev.93.99},
+  Doi                      = {10.1103/PhysRev.93.99},
+  Issuenoprint             = {1},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRev.93.99}
+}
+
+@InCollection{DiVincenzo1999,
+  Title                    = {Entanglement of Assistance},
+  Author                   = {DiVincenzo, DavidP. and Fuchs, ChristopherA. and Mabuchi, Hideo and Smolin, JohnA. and Thapliyal, Ashish and Uhlmann, Armin},
+  Booktitle                = {Quantum Computing and Quantum Communications},
+  Publisher                = {Springer Berlin Heidelberg},
+  Year                     = {1999},
+  Editor                   = {Williams, ColinP.},
+  Pages                    = {247-257},
+  Series                   = {Lecture Notes in Computer Science},
+  Volume                   = {1509},
+
+  Bdsk-url-1               = {http://dx.doi.org/10.1007/3-540-49208-9_21},
+  Doi                      = {10.1007/3-540-49208-9_21},
+  Isbnnoprint              = {978-3-540-65514-5},
+  Language                 = {English},
+  Url                      = {http://dx.doi.org/10.1007/3-540-49208-9_21}
+}
+
+@Article{Dorner2012,
+  Title                    = {Quantum frequency estimation with trapped ions and atoms},
+  Author                   = {Dorner, U},
+  Journal                  = {New J. Phys.},
+  Year                     = {2012},
+  Number                   = {4},
+  Pages                    = {043011},
+  Volume                   = {14},
+
+  Bdsk-url-1               = {http://dx.doi.org/10.1088/1367-2630/14/4/043011},
+  Doi                      = {10.1088/1367-2630/14/4/043011},
+  Publisher                = {IOP Publishing}
+}
+
+@Article{Dowling2008,
+  Title                    = {Quantum optical metrology-the lowdown on high-N00N states},
+  Author                   = {{Dowling}, J.},
+  Journal                  = {Cont. Phys.},
+  Year                     = {2008},
+
+  Month                    = mar,
+  Pages                    = {125-143},
+  Volume                   = {49},
+
+  Adsnotenoprint           = {Provided by the SAO/NASA Astrophysics Data System},
+  Archiveprefix            = {arXiv},
+  Bdsk-url-1               = {http://adsabs.harvard.edu/abs/2008ConPh..49..125D},
+  Bdsk-url-2               = {http://dx.doi.org/10.1080/00107510802091298},
+  Doi                      = {10.1080/00107510802091298},
+  Eprintnoprint            = {0904.0163},
+  Primaryclass             = {quant-ph},
+  Url                      = {http://adsabs.harvard.edu/abs/2008ConPh..49..125D}
+}
+
+@Article{Duan2011,
+  Title                    = {Entanglement Detection in the Vicinity of Arbitrary Dicke States},
+  Author                   = {Duan, L.-M.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2011},
+
+  Month                    = {Oct},
+  Pages                    = {180502},
+  Volume                   = {107},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.107.180502},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.107.180502},
+  Doi                      = {10.1103/PhysRevLett.107.180502},
+  Issue                    = {18},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.107.180502}
+}
+
+@Article{Dunningham2007,
+  Title                    = {Using quantum theory to improve measurement precision},
+  Author                   = {Dunningham, Jacob A.},
+  Journal                  = {Cont. Phys.},
+  Year                     = {2007},
+
+  Month                    = {January},
+  Number                   = {5},
+  Pages                    = {257--267},
+  Volume                   = {47},
+
+  Date-modified            = {2015-02-03 11:14:06 +0000},
+  Doi                      = {10.1080/00107510601009871},
+  Publisher                = {Taylor \& Francis},
+  Url                      = {http://www.tandfonline.com/doi/full/10.1080/00107510601009871#.VNCtEGTF-PQ}
+}
+
+@Article{Eibl2004,
+  Title                    = {Experimental Realization of a Three-Qubit Entangled W State},
+  Author                   = {Eibl, Manfred and Kiesel, Nikolai and Bourennane, Mohamed and Kurtsiefer, Christian and Weinfurter, Harald},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2004},
+
+  Month                    = {Feb},
+  Pages                    = {077901},
+  Volume                   = {92},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.92.077901},
+  Doinoprint               = {10.1103/PhysRevLett.92.077901},
+  Issuenoprint             = {7},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.92.077901}
+}
+
+@Article{Eisenberg2005,
+  Title                    = {Multiphoton Path Entanglement by Nonlocal Bunching},
+  Author                   = {Eisenberg, H. S. and Hodelin, J. F. and Khoury, G. and Bouwmeester, D.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2005},
+
+  Month                    = {Mar},
+  Pages                    = {090502},
+  Volume                   = {94},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.94.090502},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.94.090502},
+  Doi                      = {10.1103/PhysRevLett.94.090502},
+  Issuenorpint             = {9},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.94.090502}
+}
+
+@Article{Eisler2014,
+  Title                    = {Area-law violation for the mutual information in a nonequilibrium steady state},
+  Author                   = {Eisler, Viktor and Zimbor\'as, Zolt\'an},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2014},
+
+  Month                    = {Mar},
+  Pages                    = {032321},
+  Volume                   = {89},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.89.032321},
+  Doinoprint               = {10.1103/PhysRevA.89.032321},
+  Issuenorpint             = {3},
+  Numpages                 = {7},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.89.032321}
+}
+
+@Article{Escher2011,
+  Title                    = {General framework for estimating the ultimate precision limit in noisy quantum-enhanced metrology},
+  Author                   = {Escher, BM and de Matos Filho, RL and Davidovich, L},
+  Journal                  = {Nat. Phys.},
+  Year                     = {2011},
+  Number                   = {5},
+  Pages                    = {406--411},
+  Volume                   = {7},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Esteve2008,
+  Title                    = {Squeezing and entanglement in a Bose--Einstein condensate},
+  Author                   = {Esteve, J and Gross, C and Weller, A and Giovanazzi, S and Oberthaler, MK},
+  Journal                  = {Nature},
+  Year                     = {2008},
+  Number                   = {7217},
+  Pages                    = {1216--1219},
+  Volume                   = {455},
+
+  Bdsk-url-1               = {http://www.nature.com/nature/journal/v455/n7217/abs/nature07332.html},
+  Publisher                = {Nature Publishing Group},
+  Url                      = {http://www.nature.com/nature/journal/v455/n7217/abs/nature07332.html}
+}
+
+@Article{Fernholz2008,
+  Title                    = {Spin Squeezing of Atomic Ensembles via Nuclear-Electronic Spin Entanglement},
+  Author                   = {Fernholz, T. and Krauter, H. and Jensen, K. and Sherson, J. F. and S\o{}rensen, A. S. and Polzik, E. S.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2008},
+
+  Month                    = {Aug},
+  Pages                    = {073601},
+  Volume                   = {101},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.101.073601},
+  Doinoprint               = {10.1103/PhysRevLett.101.073601},
+  Issuenorpint             = {7},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.101.073601}
+}
+
+@Article{Froewis2014,
+  Title                    = {Tighter quantum uncertainty relations follow from a general probabilistic bound},
+  Author                   = {Fr{\"o}wis, Florian and Gisin, Nicolas},
+  Journal                  = {arXiv preprint arXiv:1409.4440},
+  Year                     = {2014}
+}
+
+@Article{Froewis2012b,
+  Title                    = {Kind of entanglement that speeds up quantum evolution},
+  Author                   = {Fr\"owis, F.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2012},
+
+  Month                    = {May},
+  Pages                    = {052127},
+  Volume                   = {85},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.85.052127},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.85.052127},
+  Doi                      = {10.1103/PhysRevA.85.052127},
+  Issuenoprint             = {5},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.85.052127}
+}
+
+@Article{Froewis2012,
+  Title                    = {Measures of macroscopicity for quantum spin systems},
+  Author                   = {Florian Fr\"owis and Wolfgang D\"ur},
+  Journal                  = {New J. Phys.},
+  Year                     = {2012},
+  Number                   = {9},
+  Pages                    = {093039},
+  Volume                   = {14},
+
+  Bdsk-url-1               = {http://stacks.iop.org/1367-2630/14/i=9/a=093039},
+  Url                      = {http://stacks.iop.org/1367-2630/14/i=9/a=093039}
+}
+
+@Article{Froewis2012a,
+  Title                    = {Are Cloned Quantum States Macroscopic?},
+  Author                   = {Fr\"owis, F. and D\"ur, W.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2012},
+
+  Month                    = {Oct},
+  Pages                    = {170401},
+  Volume                   = {109},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.109.170401},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.109.170401},
+  Doi                      = {10.1103/PhysRevLett.109.170401},
+  Issuenorpint             = {17},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.109.170401}
+}
+
+@Article{Froewis2011,
+  Title                    = {Stable Macroscopic Quantum Superpositions},
+  Author                   = {Fr\"owis, F. and D\"ur, W.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2011},
+
+  Month                    = {Mar},
+  Pages                    = {110402},
+  Volume                   = {106},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.106.110402},
+  Doinoprint               = {10.1103/PhysRevLett.106.110402},
+  Issuenoprint             = {11},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.106.110402}
+}
+
+@Article{Guehne2009,
+  Title                    = {Entanglement detection},
+  Author                   = {G{\"u}hne, Otfried and T{\'o}th, G{\'e}za},
+  Journal                  = {Phys. Rep.},
+  Year                     = {2009},
+  Number                   = {1},
+  Pages                    = {1--75},
+  Volume                   = {474},
+
+  Publisher                = {North-Holland}
+}
+
+@Article{Guehne2004,
+  Title                    = {Characterizing Entanglement via Uncertainty Relations},
+  Author                   = {G\"uhne, Otfried},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2004},
+
+  Month                    = {Mar},
+  Pages                    = {117903},
+  Volume                   = {92},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.92.117903},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.92.117903},
+  Doi                      = {10.1103/PhysRevLett.92.117903},
+  Issue                    = {11},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.92.117903}
+}
+
+@Article{Guehne2006,
+  Title                    = {Energy and multipartite entanglement in multidimensional and frustrated spin models},
+  Author                   = {G\"uhne, Otfried and T\'oth, G\'eza},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2006},
+
+  Month                    = {May},
+  Pages                    = {052319},
+  Volume                   = {73},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.73.052319},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.73.052319},
+  Doi                      = {10.1103/PhysRevA.73.052319},
+  Issuenorpint             = {5},
+  Numpages                 = {9},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.73.052319}
+}
+
+@Article{Guehne2005,
+  Title                    = {Multipartite entanglement in spin chains},
+  Author                   = {Otfried G\"uhne and G\'eza T\'oth and Hans J Briegel},
+  Journal                  = {New J. Phys.},
+  Year                     = {2005},
+  Number                   = {1},
+  Pages                    = {229},
+  Volume                   = {7},
+
+  Bdsk-url-1               = {http://stacks.iop.org/1367-2630/7/i=1/a=229},
+  Url                      = {http://stacks.iop.org/1367-2630/7/i=1/a=229}
+}
+
+@Article{Gao2010,
+  Title                    = {Experimental demonstration of a hyper-entangled ten-qubit Schr{\"o}dinger cat state},
+  Author                   = {Gao, Wei-Bo and Lu, Chao-Yang and Yao, Xing-Can and Xu, Ping and G{\"u}hne, Otfried and Goebel, Alexander and Chen, Yu-Ao and Peng, Cheng-Zhi and Chen, Zeng-Bing and Pan, Jian-Wei},
+  Journal                  = {Nat. Phys.},
+  Year                     = {2010},
+  Number                   = {5},
+  Pages                    = {331--335},
+  Volume                   = {6},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Garcia-Saez2009,
+  Title                    = {Local temperature in quantum thermal states},
+  Author                   = {Garc{\'{\i}}a-Saez, Artur and Ferraro, Alessandro and Ac{\'{\i}}n, Antonio},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2009},
+
+  Month                    = {May},
+  Pages                    = {052340},
+  Volume                   = {79},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.79.052340},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.79.052340},
+  Doi                      = {10.1103/PhysRevA.79.052340},
+  Issuenorpint             = {5},
+  Numpages                 = {9},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.79.052340}
+}
+
+@Article{Genoni2013,
+  Title                    = {Optimal estimation of joint parameters in phase space},
+  Author                   = {Genoni, M. G. and Paris, M. G. A. and Adesso, G. and Nha, H. and Knight, P. L. and Kim, M. S.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2013},
+
+  Month                    = {Jan},
+  Pages                    = {012107},
+  Volume                   = {87},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.87.012107},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.87.012107},
+  Doi                      = {10.1103/PhysRevA.87.012107},
+  Issuenoprint             = {1},
+  Numpages                 = {7},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.87.012107}
+}
+
+@Article{Giovannetti2011,
+  Title                    = {Advances in quantum metrology},
+  Author                   = {Giovannetti, Vittorio and Lloyd, Seth and Maccone, Lorenzo},
+  Journal                  = {Nature Photon.},
+  Year                     = {2011},
+  Number                   = {4},
+  Pages                    = {222--229},
+  Volume                   = {5},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Giovannetti2004,
+  Title                    = {Quantum-Enhanced Measurements: Beating the Standard Quantum Limit},
+  Author                   = {Giovannetti, Vittorio and Lloyd, Seth and Maccone, Lorenzo},
+  Journal                  = {Science},
+  Year                     = {2004},
+  Number                   = {5700},
+  Pages                    = {1330-1336},
+  Volume                   = {306},
+
+  Bdsk-url-1               = {http://www.sciencemag.org/content/306/5700/1330.abstract},
+  Bdsk-url-2               = {http://dx.doi.org/10.1126/science.1104149},
+  Doi                      = {10.1126/science.1104149},
+  Eprintnoprint            = {http://www.sciencemag.org/content/306/5700/1330.full.pdf},
+  Url                      = {http://www.sciencemag.org/content/306/5700/1330.abstract}
+}
+
+@Article{Greenberger1990,
+  Title                    = {Bell's theorem without inequalities},
+  Author                   = {D. M. Greenberger and M. A. Horne and A. Shimony and A. Zeilinger},
+  Journal                  = {Am. J. Phys.},
+  Year                     = {1990},
+  Pages                    = {1131},
+  Volume                   = {58},
+
+  Publisher                = {APS}
+}
+
+@Misc{Greenberger1989,
+  Title                    = {Going Beyond {Bell's} Theorem},
+
+  Author                   = {Daniel M. Greenberger and Michael A. Horne and Anton Zeilinger},
+  Note                     = {in: "Bell's Theorem, Quantum Theory, and Conceptions of the Universe", M. Kafatos (Ed.), Kluwer, Dordrecht, p. 69-72, see also arXiv:0712.0921v1},
+  Year                     = {1989}
+}
+
+@Article{Gross2012,
+  Title                    = {Spin squeezing, entanglement and quantum metrology with Bose--Einstein condensates},
+  Author                   = {Christian Gross},
+  Journal                  = {J. Phys. B: At. Mol. Opt. Phys.},
+  Year                     = {2012},
+  Number                   = {10},
+  Pages                    = {103001},
+  Volume                   = {45},
+
+  Bdsk-url-1               = {http://stacks.iop.org/0953-4075/45/i=10/a=103001},
+  Url                      = {http://stacks.iop.org/0953-4075/45/i=10/a=103001}
+}
+
+@Article{Gross2010,
+  Title                    = {Nonlinear atom interferometer surpasses classical precision limit},
+  Author                   = {Gross, Christian and Zibold, Tilman and Nicklas, Eike and Esteve, Jerome and Oberthaler, Markus K},
+  Journal                  = {Nature},
+  Year                     = {2010},
+  Number                   = {7292},
+  Pages                    = {1165--1169},
+  Volume                   = {464},
+
+  Bdsk-url-1               = {http://www.nature.com/nature/journal/v464/n7292/abs/nature08919.html},
+  Publisher                = {Nature Publishing Group},
+  Url                      = {http://www.nature.com/nature/journal/v464/n7292/abs/nature08919.html}
+}
+
+@Article{Haeffner2005,
+  Title                    = {Scalable multiparticle entanglement of trapped ions},
+  Author                   = {H{\"a}ffner, H and H{\"a}nsel, W and Roos, CF and Benhelm, J and Chwalla, M and K{\"o}rber, T and Rapol, UD and Riebe, M and Schmidt, PO and Becher, C and G\"uhne, O and D\"ur, W and Blatt, R},
+  Journal                  = {Nature},
+  Year                     = {2005},
+  Number                   = {7068},
+  Pages                    = {643--646},
+  Volume                   = {438},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Haine2014,
+  Title                    = {{Waste Not, Want Not: Heisenberg-Limited Metrology With Information Recycling}},
+  Author                   = {{Haine}, S.~A. and {Szigeti}, S.~S. and {Lang}, M.~D. and {Caves}, C.~M.},
+  Journal                  = {ArXiv e-prints},
+  Year                     = {2014},
+
+  Month                    = nov,
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Adsurl                   = {http://adsabs.harvard.edu/abs/2014arXiv1411.5111H},
+  Archiveprefix            = {arXiv},
+  Eprint                   = {1411.5111},
+  Keywords                 = {Quantum Physics, Condensed Matter - Quantum Gases, Physics - Optics},
+  Primaryclass             = {quant-ph}
+}
+
+@Article{Hald1999,
+  Title                    = {Spin Squeezed Atoms: A Macroscopic Entangled Ensemble Created by Light},
+  Author                   = {Hald, J. and S\o{}rensen, J. L. and Schori, C. and Polzik, E. S.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1999},
+
+  Month                    = {Aug},
+  Pages                    = {1319--1322},
+  Volume                   = {83},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.83.1319},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.83.1319},
+  Doi                      = {10.1103/PhysRevLett.83.1319},
+  Issuenorpint             = {7},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.83.1319}
+}
+
+@Article{Hall2000,
+  Title                    = {Quantum properties of classical Fisher information},
+  Author                   = {Hall, Michael J. W.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2000},
+
+  Month                    = {Jun},
+  Pages                    = {012107},
+  Volume                   = {62},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.62.012107},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.62.012107},
+  Doi                      = {10.1103/PhysRevA.62.012107},
+  Issuenoprint             = {1},
+  Numpages                 = {6},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.62.012107}
+}
+
+@Article{Hamley2012,
+  Title                    = {Spin-nematic squeezed vacuum in a quantum gas},
+  Author                   = {Hamley, CD and Gerving, CS and Hoang, TM and Bookjans, EM and Chapman, MS},
+  Journal                  = {Nat. Phys.},
+  Year                     = {2012},
+  Number                   = {4},
+  Pages                    = {305--308},
+  Volume                   = {8},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Hammerer2010,
+  Title                    = {Quantum interface between light and atomic ensembles},
+  Author                   = {Hammerer, Klemens and S\o{}rensen, Anders S. and Polzik, Eugene S.},
+  Journal                  = {Rev. Mod. Phys.},
+  Year                     = {2010},
+
+  Month                    = {Apr},
+  Pages                    = {1041--1093},
+  Volume                   = {82},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/RevModPhys.82.1041},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/RevModPhys.82.1041},
+  Doi                      = {10.1103/RevModPhys.82.1041},
+  Issuenorpint             = {2},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/RevModPhys.82.1041}
+}
+
+@Article{Hartmann2004,
+  Title                    = {Existence of Temperature on the Nanoscale},
+  Author                   = {Hartmann, Michael and Mahler, G\"unter and Hess, Ortwin},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2004},
+
+  Month                    = {Aug},
+  Pages                    = {080402},
+  Volume                   = {93},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.93.080402},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.93.080402},
+  Doi                      = {10.1103/PhysRevLett.93.080402},
+  Issuenorpint             = {8},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.93.080402}
+}
+
+@Article{He2011,
+  Title                    = {Planar quantum squeezing and atom interferometry},
+  Author                   = {He, Q. Y. and Peng, Shi-Guo and Drummond, P. D. and Reid, M. D.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2011},
+
+  Month                    = {Aug},
+  Pages                    = {022107},
+  Volume                   = {84},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.84.022107},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.84.022107},
+  Doi                      = {10.1103/PhysRevA.84.022107},
+  Issue                    = {2},
+  Numpages                 = {8},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.84.022107}
+}
+
+@Book{Helstrom1976,
+  Title                    = {Quantum Detection and Estimation Theory},
+  Author                   = {Helstrom, C.W.},
+  Publisher                = {Academic Press, New York},
+  Year                     = {1976},
+
+  Bdsk-url-1               = {http://books.google.es/books?id=fv9SAAAAMAAJ},
+  Isbnnoprint              = {9780123400505},
+  Lccn                     = {75026347},
+  Seriesnoprint            = {Mathematics in Science and Engineering: a series of monographs and textbooks},
+  Url                      = {http://books.google.es/books?id=fv9SAAAAMAAJ}
+}
+
+@Article{Hill1997,
+  Title                    = {Entanglement of a Pair of Quantum Bits},
+  Author                   = {Hill, Scott and Wootters, William K.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1997},
+
+  Month                    = {Jun},
+  Pages                    = {5022--5025},
+  Volume                   = {78},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.78.5022},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.78.5022},
+  Doi                      = {10.1103/PhysRevLett.78.5022},
+  Issuenorpint             = {26},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.78.5022}
+}
+
+@Book{Holevo1982,
+  Title                    = {Probabilistic and Statistical Aspects of Quantum Theory},
+  Author                   = {Holevo, A.S.},
+  Publisher                = {North-Holland, Amsterdam},
+  Year                     = {1982}
+}
+
+@Article{Holland1993,
+  Title                    = {Interferometric detection of optical phase shifts at the Heisenberg limit},
+  Author                   = {Holland, M. J. and Burnett, K.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1993},
+
+  Month                    = {Aug},
+  Pages                    = {1355--1358},
+  Volume                   = {71},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.71.1355},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.71.1355},
+  Doi                      = {10.1103/PhysRevLett.71.1355},
+  Issuenoprint             = {9},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.71.1355}
+}
+
+@Article{Horodecki2009,
+  Title                    = {Quantum entanglement},
+  Author                   = {Horodecki, Ryszard and Horodecki, Pawe\l{} and Horodecki, Micha\l{} and Horodecki, Karol},
+  Journal                  = {Rev. Mod. Phys.},
+  Year                     = {2009},
+
+  Month                    = {Jun},
+  Pages                    = {865--942},
+  Volume                   = {81},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/RevModPhys.81.865},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/RevModPhys.81.865},
+  Doi                      = {10.1103/RevModPhys.81.865},
+  Issuenorpint             = {2},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/RevModPhys.81.865}
+}
+
+@Article{Huelga1997,
+  Title                    = {Improvement of Frequency Standards with Quantum Entanglement},
+  Author                   = {Huelga, S. F. and Macchiavello, C. and Pellizzari, T. and Ekert, A. K. and Plenio, M. B. and Cirac, J. I.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1997},
+
+  Month                    = {Nov},
+  Pages                    = {3865--3868},
+  Volume                   = {79},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.79.3865},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.79.3865},
+  Doi                      = {10.1103/PhysRevLett.79.3865},
+  Issuenorpint             = {20},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.79.3865}
+}
+
+@Article{Humphreys2013,
+  Title                    = {Quantum Enhanced Multiple Phase Estimation},
+  Author                   = {Humphreys, Peter C. and Barbieri, Marco and Datta, Animesh and Walmsley, Ian A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+
+  Month                    = {Aug},
+  Pages                    = {070403},
+  Volume                   = {111},
+
+  Bdsk-url-1               = {http://dx.doi.org/10.1103/PhysRevLett.111.070403},
+  Doi                      = {10.1103/PhysRevLett.111.070403},
+  Issuenoprint             = {7},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Urlnprint                = {http://link.aps.org/doi/10.1103/PhysRevLett.111.070403}
+}
+
+@Article{Hyllus2010a,
+  Title                    = {Not all pure entangled states are useful for sub-shot-noise interferometry},
+  Author                   = {Hyllus, Philipp and G\"uhne, Otfried and Smerzi, Augusto},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2010},
+
+  Month                    = {Jul},
+  Pages                    = {012337},
+  Volume                   = {82},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.82.012337},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.82.012337},
+  Doi                      = {10.1103/PhysRevA.82.012337},
+  Issuenorpint             = {1},
+  Numpages                 = {12},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.82.012337}
+}
+
+@Article{Hyllus2012a,
+  Title                    = {Fisher information and multiparticle entanglement},
+  Author                   = {Hyllus, Philipp and Laskowski, Wies\l{}aw and Krischek, Roland and Schwemmer, Christian and Wieczorek, Witlef and Weinfurter, Harald and Pezz\'e, Luca and Smerzi, Augusto},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2012},
+
+  Month                    = {Feb},
+  Pages                    = {022321},
+  Volume                   = {85},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.85.022321},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.85.022321},
+  Doi                      = {10.1103/PhysRevA.85.022321},
+  Issuenorpint             = {2},
+  Numpages                 = {10},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.85.022321}
+}
+
+@Article{Hyllus2010,
+  Title                    = {Entanglement and Sensitivity in Precision Measurements with States of a Fluctuating Number of Particles},
+  Author                   = {Hyllus, P. and Pezz\'e, L. and Smerzi, A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2010},
+
+  Month                    = {Sep},
+  Pages                    = {120501},
+  Volume                   = {105},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.105.120501},
+  Doinoprint               = {10.1103/PhysRevLett.105.120501},
+  Issuenoprint             = {12},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.105.120501}
+}
+
+@Article{Hyllus2012,
+  Title                    = {Entanglement and extreme spin squeezing for a fluctuating number of indistinguishable particles},
+  Author                   = {Hyllus, Philipp and Pezz\'e, Luca and Smerzi, Augusto and T\'oth, G\'eza},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2012},
+
+  Month                    = {Jul},
+  Pages                    = {012337},
+  Volume                   = {86},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.86.012337},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.86.012337},
+  Doi                      = {10.1103/PhysRevA.86.012337},
+  Issuenorpint             = {1},
+  Numpages                 = {10},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.86.012337}
+}
+
+@Article{Jarzyna2013,
+  Title                    = {Matrix Product States for Quantum Metrology},
+  Author                   = {Jarzyna, Marcin and Demkowicz-Dobrza{\'n}ski, Rafa\l{}},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+
+  Month                    = {Jun},
+  Pages                    = {240405},
+  Volume                   = {110},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.110.240405},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.110.240405},
+  Doi                      = {10.1103/PhysRevLett.110.240405},
+  Issuenorpint             = {24},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.110.240405}
+}
+
+@Article{Jiahao2014,
+  Title                    = {Quantum Metrology with Cold Atoms},
+  Author                   = {Jiahao, Huang and Wu, Shuyuan and Zhong, Honghua and Lee,Chaohong},
+  Journal                  = {Annual Review of Cold Atoms and Molecules},
+  Year                     = {2014},
+  Pages                    = {365--415},
+  Volume                   = {2},
+
+  Bdsk-url-1               = {http://arxiv.org/abs/1308.6092},
+  Chapter                  = {7},
+  Eprint                   = {arXiv:1308.6092},
+  Url                      = {http://arxiv.org/abs/1308.6092}
+}
+
+@Article{Julsgaard2001,
+  Title                    = {Experimental long-lived entanglement of two macroscopic objects},
+  Author                   = {Julsgaard, Brian and Kozhekin, Alexander and Polzik, Eugene S},
+  Journal                  = {Nature},
+  Year                     = {2001},
+  Number                   = {6854},
+  Pages                    = {400--403},
+  Volume                   = {413},
+
+  Bdsk-url-1               = {http://www.nature.com/nature/journal/v413/n6854/abs/413400a0.html},
+  Publisher                = {Nature Publishing Group},
+  Url                      = {http://www.nature.com/nature/journal/v413/n6854/abs/413400a0.html}
+}
+
+@Article{Kessler2014,
+  Title                    = {Quantum Error Correction for Metrology},
+  Author                   = {Kessler, E.\,M. and Lovchinsky, I. and Sushkov, A.\,O. and Lukin, M.\,D.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2014},
+
+  Month                    = {Apr},
+  Pages                    = {150802},
+  Volume                   = {112},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.112.150802},
+  Doinoprint               = {10.1103/PhysRevLett.112.150802},
+  Issuenoprint             = {15},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.112.150802}
+}
+
+@Article{Kiesel2007,
+  Title                    = {Experimental Observation of Four-Photon Entangled Dicke State with High Fidelity},
+  Author                   = {Kiesel, N. and Schmid, C. and T\'oth, G. and Solano, E. and Weinfurter, H.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2007},
+
+  Month                    = {Feb},
+  Pages                    = {063604},
+  Volume                   = {98},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.98.063604},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.98.063604},
+  Doi                      = {10.1103/PhysRevLett.98.063604},
+  Issuenorpint             = {6},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.98.063604}
+}
+
+@Article{Killoran2014,
+  Title                    = {Extracting Entanglement from Identical Particles},
+  Author                   = {Killoran, N. and Cramer, M. and Plenio, M.\,B.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2014},
+
+  Month                    = {Apr},
+  Pages                    = {150501},
+  Volume                   = {112},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.112.150501},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.112.150501},
+  Doi                      = {10.1103/PhysRevLett.112.150501},
+  Issuenoprint             = {15},
+  Numpages                 = {6},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.112.150501}
+}
+
+@Article{Kitagawa1993,
+  Title                    = {Squeezed spin states},
+  Author                   = {Kitagawa, Masahiro and Ueda, Masahito},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {1993},
+
+  Month                    = {Jun},
+  Pages                    = {5138--5143},
+  Volume                   = {47},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.47.5138},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.47.5138},
+  Doi                      = {10.1103/PhysRevA.47.5138},
+  Issuenorpint             = {6},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.47.5138}
+}
+
+@Article{Knysh2011,
+  Title                    = {Scaling laws for precision in quantum interferometry and the bifurcation landscape of the optimal state},
+  Author                   = {Knysh, Sergey and Smelyanskiy, Vadim N. and Durkin, Gabriel A.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2011},
+
+  Month                    = {Feb},
+  Pages                    = {021804},
+  Volume                   = {83},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.83.021804},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.83.021804},
+  Doi                      = {10.1103/PhysRevA.83.021804},
+  Issuenoprint             = {2},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.83.021804}
+}
+
+@Article{Knysh2014,
+  Title                    = {True Limits to Precision via Unique Quantum Probe},
+  Author                   = {Knysh, Sergey I. and Chen, Edward H. and Durkin, Gabriel A.},
+  Year                     = {2014},
+
+  Bdsk-url-1               = {http://arxiv.org/abs/1402.0495},
+  Date-modified            = {2015-02-03 11:14:19 +0000},
+  Eprint                   = {arXiv:1402.0495},
+  Journalnoprint           = {arXiv preprint arXiv:1402.0495},
+  Url                      = {http://arxiv.org/abs/1402.0495}
+}
+
+@Article{Knysh2013,
+  Title                    = {Estimation of phase and diffusion: combining quantum statistics and classical noise},
+  Author                   = {Knysh, Sergey I and Durkin, Gabriel A},
+  Year                     = {2013},
+
+  Bdsk-url-1               = {http://arxiv.org/abs/1307.0470},
+  Eprint                   = {arXiv:1307.0470},
+  Journalnoprint           = {arXiv preprint arXiv:1307.0470},
+  Url                      = {http://arxiv.org/abs/1307.0470}
+}
+
+@Article{Kolodynski2013,
+  Title                    = {Efficient tools for quantum metrology with uncorrelated noise},
+  Author                   = {Jan Ko{\l}ody{\'n}ski and Rafa{\l} Demkowicz-Dobrza{\'n}ski},
+  Journal                  = {New J. Phys.},
+  Year                     = {2013},
+  Number                   = {7},
+  Pages                    = {073043},
+  Volume                   = {15},
+
+  Bdsk-url-1               = {http://stacks.iop.org/1367-2630/15/i=7/a=073043},
+  Url                      = {http://stacks.iop.org/1367-2630/15/i=7/a=073043}
+}
+
+@Article{Kolodyfmmodecutenlseniski2010,
+  Title                    = {Phase estimation without <i>a priori</i> phase knowledge in the presence of loss},
+  Author                   = {Ko\l{}ody\ifmmode \acute{n}\else \'{n}\fi{}ski, Jan and Demkowicz-Dobrza\ifmmode \acute{n}\else \'{n}\fi{}ski, Rafa\l{}},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2010},
+
+  Month                    = {Nov},
+  Pages                    = {053804},
+  Volume                   = {82},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.82.053804},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.82.053804},
+  Doi                      = {10.1103/PhysRevA.82.053804},
+  Issuenorpint             = {5},
+  Numpages                 = {6},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.82.053804}
+}
+
+@Article{Koschorreck2011,
+  Title                    = {High resolution magnetic vector-field imaging with cold atomic ensembles},
+  Author                   = {Koschorreck, M. and Napolitano, M. and Dubost, B. and Mitchell, M. W.},
+  Journal                  = {Appl. Phys. Lett.},
+  Year                     = {2011},
+  Pages                    = {074101},
+  Volume                   = {98},
+
+  Bdsk-url-1               = {http://scitation.aip.org/content/aip/journal/apl/98/7/10.1063/1.3555459},
+  Date-modified            = {2015-02-03 10:54:38 +0000},
+  Doi                      = {10.1063/1.3555459},
+  Publisher                = {AIP Publishing},
+  Url                      = {http://scitation.aip.org/content/aip/journal/apl/98/7/10.1063/1.3555459}
+}
+
+@Article{,
+  Title                    = {Useful Multiparticle Entanglement and Sub-Shot-Noise Sensitivity in Experimental Phase Estimation},
+  Author                   = {Krischek, Roland and Schwemmer, Christian and Wieczorek, Witlef and Weinfurter, Harald and Hyllus, Philipp and Pezz\'e, Luca and Smerzi, Augusto},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2011},
+
+  Month                    = {Aug},
+  Pages                    = {080504},
+  Volume                   = {107},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.107.080504},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.107.080504},
+  Doi                      = {10.1103/PhysRevLett.107.080504},
+  Issuenorpint             = {8},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.107.080504}
+}
+
+@Article{Kuzmich1998,
+  Title                    = {Atomic quantum non-demolition measurements and squeezing},
+  Author                   = {A. Kuzmich and N. P. Bigelow and L. Mandel},
+  Journal                  = {Europhys. Lett.},
+  Year                     = {1998},
+  Number                   = {5},
+  Pages                    = {481},
+  Volume                   = {42},
+
+  Abstract                 = {We show that the accuracy of atomic interferometry can be improved by using QND measurements of the atomic populations at the inputs to the interferometer. The accuracy of such a scheme surpasses the standard quantum limit of phase measurement δ ##IMG## [http://ej.iop.org/icons/Entities/phi.gif] {phi} SQL = 1/√ N and could reach the Heisenberg limit δ ##IMG## [http://ej.iop.org/icons/Entities/phi.gif] {phi} ~ 1/ N . We propose to perform QND measurements of atomic populations with an off-resonant laser field. The conditions necessary for this kind of QND measurement could be fulfilled in a variety of ways with current experimental techniques, including magneto-optical traps and atomic cells.},
+  Bdsk-url-1               = {http://stacks.iop.org/0295-5075/42/i=5/a=481},
+  Url                      = {http://stacks.iop.org/0295-5075/42/i=5/a=481}
+}
+
+@Article{Leka2013,
+  Title                    = {Some decompositions of matrix variances},
+  Author                   = {L{\'e}ka, Zolt{\'a}n and Petz, D{\'e}nes},
+  Journal                  = {Probab. Math. Statist.},
+  Year                     = {2013},
+  Pages                    = {191-199},
+  Volume                   = {33}
+}
+
+@Article{Luecke2011,
+  Title                    = {Twin matter waves for interferometry beyond the classical limit},
+  Author                   = {L{\"u}cke, Bernd and Scherer, Manuel and Kruse, Jens and Pezz\'e, Luca and Deuretzbacher, Frank and Hyllus, Phillip and Peise, Jan and Ertmer, Wolfgang and Arlt, Jan and Santos, Luis and Smerzi, Agosto and Klempt, Carsten},
+  Journal                  = {Science},
+  Year                     = {2011},
+
+  Month                    = {November},
+  Number                   = {6057},
+  Pages                    = {773--776},
+  Volume                   = {334},
+
+  Date-modified            = {2015-02-03 11:10:09 +0000},
+  Doi                      = {10.1126/science.1208798},
+  Publisher                = {American Association for the Advancement of Science},
+  Url                      = {http://www.sciencemag.org/content/334/6057/773.abstract}
+}
+
+@Article{Luecke2014,
+  Title                    = {Detecting Multiparticle Entanglement of Dicke States},
+  Author                   = {L\"ucke, Bernd and Peise, Jan and Vitagliano, Giuseppe and Arlt, Jan and Santos, Luis and T\'oth, G\'eza and Klempt, Carsten},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2014},
+
+  Month                    = {Apr},
+  Pages                    = {155304},
+  Volume                   = {112},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.112.155304},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.112.155304},
+  Doi                      = {10.1103/PhysRevLett.112.155304},
+  Issuenoprint             = {15},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.112.155304}
+}
+
+@Article{Laustsen2002,
+  Title                    = {{Local vs. Joint Measurements for the Entanglement of Assistance}},
+  Author                   = {{Laustsen}, T. and {Verstraete}, F. and {van Enk}, S.~J.},
+  Year                     = {2002},
+
+  Month                    = jun,
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Bdsk-url-1               = {http://adsabs.harvard.edu/abs/2002quant.ph..6192L},
+  Eprint                   = {arXiv:quant-ph/0206192},
+  Journalnoprint           = {eprint arXiv:quant-ph/0206192},
+  Keywords                 = {Quantum Physics},
+  Url                      = {http://adsabs.harvard.edu/abs/2002quant.ph..6192L}
+}
+
+@Article{Leibfried2004,
+  Title                    = {Toward Heisenberg-limited spectroscopy with multiparticle entangled states},
+  Author                   = {Leibfried, D and Barrett, MD and Schaetz, T and Britton, J and Chiaverini, J and Itano, WM and Jost, JD and Langer, C and Wineland, DJ},
+  Journal                  = {Science},
+  Year                     = {2004},
+  Number                   = {5676},
+  Pages                    = {1476--1478},
+  Volume                   = {304},
+
+  Bdsk-url-1               = {http://www.sciencemag.org/content/304/5676/1476.abstract},
+  Publisher                = {American Association for the Advancement of Science},
+  Url                      = {http://www.sciencemag.org/content/304/5676/1476.abstract}
+}
+
+@Article{Liu2013,
+  Title                    = {Phase-matching condition for enhancement of phase sensitivity in quantum metrology},
+  Author                   = {Liu, Jing and Jing, Xiaoxing and Wang, Xiaoguang},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2013},
+
+  Month                    = {Oct},
+  Pages                    = {042316},
+  Volume                   = {88},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.88.042316},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.88.042316},
+  Doi                      = {10.1103/PhysRevA.88.042316},
+  Issuenoprint             = {4},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.88.042316}
+}
+
+@Article{Liu2014,
+  Title                    = {{Quantum Fisher Information for Density Matrices with Arbitrary Ranks}},
+  Author                   = {{Liu}, J. and {Jing}, X.-X. and {Zhong}, W. and {Wang}, X.-G.},
+  Journal                  = {Commun. Theor. Phys.},
+  Year                     = {2014},
+
+  Month                    = jan,
+  Pages                    = {45-50},
+  Volume                   = {61},
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Archiveprefix            = {arXiv},
+  Bdsk-url-1               = {http://adsabs.harvard.edu/abs/2014CoTPh..61...45L},
+  Doinoprint               = {10.1088/0253-6102/61/1/08},
+  Eid                      = {45},
+  Eprintnoprint            = {1312.6910},
+  Primaryclass             = {quant-ph},
+  Url                      = {http://adsabs.harvard.edu/abs/2014CoTPh..61...45L}
+}
+
+@Article{Lu2007,
+  Title                    = {Experimental entanglement of six photons in graph states},
+  Author                   = {Lu, Chao-Yang and Zhou, Xiao-Qi and G{\"u}hne, Otfried and Gao, Wei-Bo and Zhang, Jin and Yuan, Zhen-Sheng and Goebel, Alexander and Yang, Tao and Pan, Jian-Wei},
+  Journal                  = {Nat. Phys.},
+  Year                     = {2007},
+  Number                   = {2},
+  Pages                    = {91--95},
+  Volume                   = {3},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Luis2004,
+  Title                    = {Nonlinear transformations and the Heisenberg limit},
+  Author                   = {Alfredo Luis},
+  Journal                  = {Physics Letters A},
+  Year                     = {2004},
+  Number                   = {1--2},
+  Pages                    = {8-13},
+  Volume                   = {329},
+
+  Abstract                 = {We show that nonlinear transformations provide better resolution than linear transformations for the detection of small signals. We show that the uncertainty decreases for increasing photon number faster than the rate established by the Heisenberg limit for phase shifts and displacements. },
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0375960104009090},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.physleta.2004.06.080},
+  Doi                      = {http://dx.doi.org/10.1016/j.physleta.2004.06.080},
+  Issnnoprint              = {0375-9601},
+  Keywords                 = {Precision measurements},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0375960104009090}
+}
+
+@Article{Ma2011,
+  Title                    = {{Quantum spin squeezing}},
+  Author                   = {{Ma}, J. and {Wang}, X. and {Sun}, C.~P. and {Nori}, F.},
+  Journal                  = {Phys. Rep.},
+  Year                     = {2011},
+
+  Month                    = dec,
+  Pages                    = {89-165},
+  Volume                   = {509},
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Archiveprefix            = {arXiv},
+  Bdsk-url-1               = {http://adsabs.harvard.edu/abs/2011PhR...509...89M},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.physrep.2011.08.003},
+  Doi                      = {10.1016/j.physrep.2011.08.003},
+  Eprintoprint             = {1011.2978},
+  Primaryclass             = {quant-ph},
+  Url                      = {http://adsabs.harvard.edu/abs/2011PhR...509...89M}
+}
+
+@Article{Marzolino2013,
+  Title                    = {Precision measurements of temperature and chemical potential of quantum gases},
+  Author                   = {Marzolino, Ugo and Braun, Daniel},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2013},
+
+  Month                    = {Dec},
+  Pages                    = {063609},
+  Volume                   = {88},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.88.063609},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.88.063609},
+  Doi                      = {10.1103/PhysRevA.88.063609},
+  Issuenoprint             = {6},
+  Numpages                 = {22},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.88.063609}
+}
+
+@Article{Matsumoto2002,
+  Title                    = {A new approach to the Cram{\'e}r-Rao-type bound of the pure-state model},
+  Author                   = {K Matsumoto},
+  Journal                  = {J. Phys. A: Math. Gen.},
+  Year                     = {2002},
+  Number                   = {13},
+  Pages                    = {3111},
+  Volume                   = {35},
+
+  Abstract                 = {This paper sheds light on non-commutativity in quantum theory as regards theoretical estimation. In it, we calculate the quantum Cramer-Rao-type bound for many cases, by use of a newly proposed powerful technique. We also discuss the use of collective measurement in statistical estimation.},
+  Bdsk-url-1               = {http://stacks.iop.org/0305-4470/35/i=13/a=307},
+  Url                      = {http://stacks.iop.org/0305-4470/35/i=13/a=307}
+}
+
+@Article{Matsuzaki2011,
+  Title                    = {Magnetic field sensing beyond the standard quantum limit under the effect of decoherence},
+  Author                   = {Matsuzaki, Yuichiro and Benjamin, Simon C. and Fitzsimons, Joseph},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2011},
+
+  Month                    = {Jul},
+  Pages                    = {012103},
+  Volume                   = {84},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.84.012103},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.84.012103},
+  Doi                      = {10.1103/PhysRevA.84.012103},
+  Issuenorpint             = {1},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.84.012103}
+}
+
+@Article{Mitchell2004,
+  Title                    = {Super-resolving phase measurements with a multiphoton entangled state},
+  Author                   = {Mitchell, Morgan W and Lundeen, Jeff S and Steinberg, Aephraem M},
+  Journal                  = {Nature},
+  Year                     = {2004},
+  Number                   = {6988},
+  Pages                    = {161--164},
+  Volume                   = {429},
+
+  Bdsk-url-1               = {http://www.nature.com/nature/journal/v429/n6988/abs/nature02493.html},
+  Publisher                = {Nature Publishing Group},
+  Url                      = {http://www.nature.com/nature/journal/v429/n6988/abs/nature02493.html}
+}
+
+@Article{Monras2011,
+  Title                    = {Measurement of damping and temperature: Precision bounds in Gaussian dissipative channels},
+  Author                   = {Monras, Alex and Illuminati, Fabrizio},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2011},
+
+  Month                    = {Jan},
+  Pages                    = {012315},
+  Volume                   = {83},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.83.012315},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.83.012315},
+  Doi                      = {10.1103/PhysRevA.83.012315},
+  Issuenorpint             = {1},
+  Numpages                 = {12},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.83.012315}
+}
+
+@Article{Monras2007,
+  Title                    = {Optimal Quantum Estimation of Loss in Bosonic Channels},
+  Author                   = {Monras, Alex and Paris, Matteo G. A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2007},
+
+  Month                    = {Apr},
+  Pages                    = {160401},
+  Volume                   = {98},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.98.160401},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.98.160401},
+  Doi                      = {10.1103/PhysRevLett.98.160401},
+  Issuenorpint             = {16},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.98.160401}
+}
+
+@Article{Monz2011,
+  Title                    = {14-Qubit Entanglement: Creation and Coherence},
+  Author                   = {Monz, Thomas and Schindler, Philipp and Barreiro, Julio T. and Chwalla, Michael and Nigg, Daniel and Coish, William A. and Harlander, Maximilian and H\"ansel, Wolfgang and Hennrich, Markus and Blatt, Rainer},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2011},
+
+  Month                    = {Mar},
+  Pages                    = {130506},
+  Volume                   = {106},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.106.130506},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.106.130506},
+  Doi                      = {10.1103/PhysRevLett.106.130506},
+  Issuenorpint             = {13},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.106.130506}
+}
+
+@Article{Muessel2014,
+  Title                    = {{Scalable Spin Squeezing for Quantum-Enhanced Magnetometry with Bose-Einstein Condensates}},
+  Author                   = {{Muessel}, W. and {Strobel}, H. and {Linnemann}, D. and {Hume}, D.~B. and {Oberthaler}, M.~K.},
+  Year                     = {2014},
+
+  Month                    = may,
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Archiveprefixnoprint     = {arXiv},
+  Bdsk-url-1               = {http://adsabs.harvard.edu/abs/2014arXiv1405.6022M},
+  Eprint                   = {arXiv:1405.6022},
+  Journalnoprint           = {ArXiv e-prints},
+  Keywords                 = {Quantum Physics, Condensed Matter - Quantum Gases},
+  Primaryclass             = {quant-ph},
+  Url                      = {http://adsabs.harvard.edu/abs/2014arXiv1405.6022M}
+}
+
+@Article{Muessel2014a,
+  Title                    = {Scalable Spin Squeezing for Quantum-Enhanced Magnetometry with Bose-Einstein Condensates},
+  Author                   = {Muessel, W. and Strobel, H. and Linnemann, D. and Hume, D. B. and Oberthaler, M. K.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2014},
+
+  Month                    = {Sep},
+  Pages                    = {103004},
+  Volume                   = {113},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.113.103004},
+  Doi_noprint              = {10.1103/PhysRevLett.113.103004},
+  Issue                    = {10},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.113.103004}
+}
+
+@Article{Nagata2007,
+  Title                    = {Beating the standard quantum limit with four-entangled photons},
+  Author                   = {Nagata, Tomohisa and Okamoto, Ryo and O'Brien, Jeremy L and Sasaki, Keiji and Takeuchi, Shigeki},
+  Journal                  = {Science},
+  Year                     = {2007},
+  Number                   = {5825},
+  Pages                    = {726--729},
+  Volume                   = {316},
+
+  Bdsk-url-1               = {http://www.sciencemag.org/content/316/5825/726.short},
+  Publisher                = {American Association for the Advancement of Science},
+  Url                      = {http://www.sciencemag.org/content/316/5825/726.short}
+}
+
+@Article{Napolitano2011,
+  Title                    = {Interaction-based quantum metrology showing scaling beyond the Heisenberg limit},
+  Author                   = {Napolitano, Mario and Koschorreck, Marco and Dubost, Brice and Behbood, Naeimeh and Sewell, Robert J and Mitchell, Morgan W. W.},
+  Journal                  = {Nature},
+  Year                     = {2011},
+
+  Month                    = {March},
+  Number                   = {7339},
+  Pages                    = {486--489},
+  Volume                   = {471},
+
+  Bdsk-url-1               = {http://www.nature.com/nature/journal/v471/n7339/abs/nature09778.html},
+  Date-modified            = {2015-02-03 10:57:36 +0000},
+  Doi                      = {10.1038/nature09778},
+  Publisher                = {Nature Publishing Group},
+  Url                      = {http://www.nature.com/nature/journal/v471/n7339/abs/nature09778.html}
+}
+
+@Article{Ockeloen2013,
+  Title                    = {Quantum Metrology with a Scanning Probe Atom Interferometer},
+  Author                   = {Ockeloen, Caspar F. and Schmied, Roman and Riedel, Max F. and Treutlein, Philipp},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+
+  Month                    = {Oct},
+  Pages                    = {143001},
+  Volume                   = {111},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.111.143001},
+  Doinoprint               = {10.1103/PhysRevLett.111.143001},
+  Issue                    = {14},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.111.143001}
+}
+
+@Article{Pan2000,
+  Title                    = {Experimental test of quantum nonlocality in three-photon {Greenberger}-{Horne}-{Zeilinger} entanglement},
+  Author                   = {Pan, Jian-Wei and Bouwmeester, Dik and Daniell, Matthew and Weinfurter, Harald and Zeilinger, Anton},
+  Journal                  = {Nature},
+  Year                     = {2000},
+
+  Month                    = {Feb},
+  Pages                    = {515},
+  Volume                   = {403},
+
+  Bdsk-url-1               = {http://www.nature.com/nature/journal/v403/n6769/abs/403515a0.html},
+  Url                      = {http://www.nature.com/nature/journal/v403/n6769/abs/403515a0.html}
+}
+
+@Article{Paris2009,
+  Title                    = {Quantum estimation for quantum technology},
+  Author                   = {Paris, Matteo G. A.},
+  Journal                  = {International Journal of Quantum Information},
+  Year                     = {2009},
+  Number                   = {supp01},
+  Pages                    = {125--137},
+  Volume                   = {7},
+  Owner                    = {iapellaniz},
+  Publisher                = {World Scientific},
+  Timestamp                = {2016.05.10}
+}
+
+@Article{Paris2009a,
+  Title                    = {QUANTUM ESTIMATION FOR QUANTUM TECHNOLOGY},
+  Author                   = {Matteo G. A. Paris},
+  Journal                  = {Int. J. Quant. Inf.},
+  Year                     = {2009},
+  Number                   = {supp01},
+  Pages                    = {125-137},
+  Volume                   = {07},
+
+  Bdsk-url-1               = {http://www.worldscientific.com/doi/abs/10.1142/S0219749909004839},
+  Bdsk-url-2               = {http://dx.doi.org/10.1142/S0219749909004839},
+  Doi                      = {10.1142/S0219749909004839},
+  Eprintnoprint            = {http://www.worldscientific.com/doi/pdf/10.1142/S0219749909004839},
+  Url                      = {http://www.worldscientific.com/doi/abs/10.1142/S0219749909004839}
+}
+
+@Article{Petz2002,
+  Title                    = {Covariance and Fisher information in quantum mechanics},
+  Author                   = {D\'enes Petz},
+  Journal                  = {J. Phys. A: Math. Gen.},
+  Year                     = {2002},
+  Number                   = {4},
+  Pages                    = {929},
+  Volume                   = {35},
+
+  Abstract                 = {Variance and Fisher information are ingredients of the Cram\'er-Rao inequality. We regard Fisher information as a Riemannian metric on a quantum statistical manifold and choose monotonicity under coarse graining as the fundamental property of variance and Fisher information. In this approach we show that there is a kind of dual one-to-one correspondence between the candidates of the two concepts. We emphasize that Fisher information is obtained from relative entropies as contrast functions on the state space and argue that the scalar curvature might be interpreted as an uncertainty density on a statistical manifold.},
+  Bdsk-url-1               = {http://stacks.iop.org/0305-4470/35/i=4/a=305},
+  Url                      = {http://stacks.iop.org/0305-4470/35/i=4/a=305}
+}
+
+@Book{Petz2008,
+  Title                    = {Quantum information theory and quantum statistics},
+  Author                   = {Petz, D{\'e}nes},
+  Publisher                = {Springer, Berlin, Heilderberg},
+  Year                     = {2008}
+}
+
+@Article{Petz2013,
+  Title                    = {A characterization theorem for matrix variances},
+  Author                   = {Petz, D{\'e}nes and Virosztek, D{\'a}niel},
+  Year                     = {2013},
+
+  Bdsk-url-1               = {http://arxiv.org/abs/1311.3908},
+  Eprint                   = {arXiv:1311.3908},
+  Journalnoprint           = {arXiv preprint arXiv:1311.3908},
+  Url                      = {http://arxiv.org/abs/1311.3908}
+}
+
+@Article{Pezze2013,
+  Title                    = {Ultrasensitive Two-Mode Interferometry with Single-Mode Number Squeezing},
+  Author                   = {Pezz\'e, Luca and Smerzi, Augusto},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+
+  Month                    = {Apr},
+  Pages                    = {163604},
+  Volume                   = {110},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.110.163604},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.110.163604},
+  Doi                      = {10.1103/PhysRevLett.110.163604},
+  Issuenoprint             = {16},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.110.163604}
+}
+
+@Article{Pezze2009,
+  Title                    = {Entanglement, Nonlinear Dynamics, and the Heisenberg Limit},
+  Author                   = {Pezz\'e, Luca and Smerzi, Augusto},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2009},
+
+  Month                    = {Mar},
+  Pages                    = {100401},
+  Volume                   = {102},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.102.100401},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.102.100401},
+  Doi                      = {10.1103/PhysRevLett.102.100401},
+  Issuenorpint             = {10},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.102.100401}
+}
+
+@Article{Pezze2014,
+  Title                    = {Quantum theory of phase estimation},
+  Author                   = {Pezze, Luca and Smerzi, Augusto},
+  Journal                  = {arXiv preprint arXiv:1411.5164},
+  Year                     = {2014}
+}
+
+@Article{Prevedel2009,
+  Title                    = {Experimental Realization of Dicke States of up to Six Qubits for Multiparty Quantum Networking},
+  Author                   = {Prevedel, R. and Cronenberg, G. and Tame, M. S. and Paternostro, M. and Walther, P. and Kim, M. S. and Zeilinger, A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2009},
+
+  Month                    = {Jul},
+  Pages                    = {020503},
+  Volume                   = {103},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.103.020503},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.103.020503},
+  Doi                      = {10.1103/PhysRevLett.103.020503},
+  Issuenorpint             = {2},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.103.020503}
+}
+
+@Article{Resch2007,
+  Title                    = {Time-Reversal and Super-Resolving Phase Measurements},
+  Author                   = {Resch, K. J. and Pregnell, K. L. and Prevedel, R. and Gilchrist, A. and Pryde, G. J. and O'Brien, J. L. and White, A. G.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2007},
+
+  Month                    = {May},
+  Pages                    = {223601},
+  Volume                   = {98},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.98.223601},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.98.223601},
+  Doi                      = {10.1103/PhysRevLett.98.223601},
+  Issuenorpint             = {22},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.98.223601}
+}
+
+@Article{Rey2007,
+  Title                    = {Quantum-limited measurements of atomic scattering properties},
+  Author                   = {Rey, A. M. and Jiang, L. and Lukin, M. D.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2007},
+
+  Month                    = {Nov},
+  Pages                    = {053617},
+  Volume                   = {76},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.76.053617},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.76.053617},
+  Doi                      = {10.1103/PhysRevA.76.053617},
+  Issuenoprint             = {5},
+  Numpages                 = {8},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.76.053617}
+}
+
+@Article{Riedel2010,
+  Title                    = {Atom-chip-based generation of entanglement for quantum metrology},
+  Author                   = {Riedel, Max F and B{\"o}hi, Pascal and Li, Yun and H{\"a}nsch, Theodor W and Sinatra, Alice and Treutlein, Philipp},
+  Journal                  = {Nature},
+  Year                     = {2010},
+  Number                   = {7292},
+  Pages                    = {1170--1173},
+  Volume                   = {464},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Book{Riley2006,
+  Title                    = {Mathematical methods for physics and engineering: a comprehensive guide},
+  Author                   = {Riley, Kenneth Franklin and Hobson, Michael Paul and Bence, Stephen John},
+  Publisher                = {Cambridge University Press},
+  Year                     = {2006},
+  Owner                    = {iapellaniz},
+  Timestamp                = {2016.05.10}
+}
+
+@Article{Robertson1929,
+  Title                    = {The Uncertainty Principle},
+  Author                   = {Robertson, H. P.},
+  Journal                  = {Phys. Rev.},
+  Year                     = {1929},
+
+  Month                    = {Jul},
+  Pages                    = {163--164},
+  Volume                   = {34},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRev.34.163},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRev.34.163},
+  Doi                      = {10.1103/PhysRev.34.163},
+  Issue                    = {1},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRev.34.163}
+}
+
+@Article{Roy2008,
+  Title                    = {Exponentially Enhanced Quantum Metrology},
+  Author                   = {Roy, S. M. and Braunstein, Samuel L.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2008},
+
+  Month                    = {Jun},
+  Pages                    = {220501},
+  Volume                   = {100},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.100.220501},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.100.220501},
+  Doi                      = {10.1103/PhysRevLett.100.220501},
+  Issuenoprint             = {22},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.100.220501}
+}
+
+@Article{Sorensen2001a,
+  Title                    = {Many-particle entanglement with Bose--Einstein condensates},
+  Author                   = {S{\o}rensen, A. and Duan, L.-M. and Cirac, J. I. and Zoller, P.},
+  Journal                  = {Nature},
+  Year                     = {2001},
+
+  Month                    = {January},
+  Number                   = {6816},
+  Pages                    = {63--66},
+  Volume                   = {409},
+
+  Bdsk-url-1               = {http://www.nature.com/nature/journal/v409/n6816/abs/409063a0.html},
+  Date-modified            = {2015-02-03 11:02:40 +0000},
+  Doi                      = {10.1038/35051038},
+  Publisher                = {Nature Publishing Group},
+  Url                      = {http://www.nature.com/nature/journal/v409/n6816/abs/409063a0.html}
+}
+
+@Article{Sorensen2001,
+  Title                    = {Entanglement and Extreme Spin Squeezing},
+  Author                   = {S\o{}rensen, Anders S. and M\o{}lmer, Klaus},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2001},
+
+  Month                    = {May},
+  Pages                    = {4431--4434},
+  Volume                   = {86},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.86.4431},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.86.4431},
+  Doi                      = {10.1103/PhysRevLett.86.4431},
+  Issuenorpint             = {20},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.86.4431}
+}
+
+@Article{Sackett2000,
+  Title                    = {Experimental entanglement of four particles},
+  Author                   = {Sackett, CA and Kielpinski, D and King, BE and Langer, C and Meyer, V and Myatt, CJ and Rowe, M and Turchette, QA and Itano, WM and Wineland, DJ and Monroe, C},
+  Journal                  = {Nature},
+  Year                     = {2000},
+  Number                   = {6775},
+  Pages                    = {256--259},
+  Volume                   = {404},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Sanders1995,
+  Title                    = {Optimal Quantum Measurements for Phase Estimation},
+  Author                   = {Sanders, B. C. and Milburn, G. J.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1995},
+
+  Month                    = {Oct},
+  Pages                    = {2944--2947},
+  Volume                   = {75},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.75.2944},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.75.2944},
+  Doi                      = {10.1103/PhysRevLett.75.2944},
+  Issuenoprint             = {16},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.75.2944}
+}
+
+@Article{Schaefer2014,
+  Title                    = {Experimental realization of quantum zeno dynamics},
+  Author                   = {Sch{\"a}fer, F and Herrera, I and Cherukattil, S and Lovecchio, C and Cataliotti, FS and Caruso, F and Smerzi, A},
+  Journal                  = {Nat. Commun.},
+  Year                     = {2014},
+  Pages                    = {3194},
+  Volume                   = {5},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Schindler2013,
+  Title                    = {{Quantum simulation of dynamical maps with trapped ions}},
+  Author                   = {Schindler, Philipp and M\"{u}ller, Markus and Nigg, Daniel and Barreiro, Julio T and Martinez, Esteban and Hennrich, Markus and Monz, Thomas and Diehl, S. and Zoller, Peter and Blatt, Rainer},
+  Journal                  = {Nat. Phys.},
+  Year                     = {2013},
+  Pages                    = {361--367},
+  Volume                   = {9},
+
+  Abstract                 = {Dynamical maps describe general transformations of the state of a physical system—their iteration interpreted as generating a discrete time evolution. Prime examples include classical nonlinear systems undergoing transitions to chaos. Quantum mechanical counterparts showintriguingphenomenasuch as dynamical localization on the single-particle level. Herewe extend the concept of dynamical maps to a many-particle context, where the time evolution involves both coherent and dissipative elements: we experimentally explore the stroboscopic dynamics of a complex many-body spin model with a universal trapped ion quantum simulator.We generate long-range phase coherence of spin by an iteration of purely dissipative quantummapsand demonstrate the characteristics of competition between combined coherent and dissipative non-equilibrium evolution—the hallmark of a previously unobserved dynamical phase transition.We assess the influence of experimental errors in the quantum simulation and tackle this problemby developing an efficient error detection and reduction toolbox based onquantumfeedback.},
+  Archiveprefix            = {arXiv},
+  Arxivid                  = {1212.2418},
+  Doi                      = {10.1038/nphys2630},
+  Eprint                   = {1212.2418},
+  File                     = {:Users/gezatoth2/Documents/Mendeley Desktop/Schindler et al.\_2013\_Quantum simulation of dynamical maps with trapped ions.pdf:pdf;:Users/gezatoth2/Documents/Mendeley Desktop/Schindler et al.\_2013\_Quantum simulation of dynamical maps with trapped ions(2).pdf:pdf},
+  ISSN                     = {1745-2473},
+  Keywords                 = {ion traps},
+  Mendeley-tags            = {ion traps},
+  Url                      = {http://dx.doi.org/10.1038/nphys2630$\backslash$nhttp://www.nature.com/doifinder/10.1038/nphys2630}
+}
+
+@Article{Schwemmer2013,
+  Title                    = {{Systematic errors in current quantum state tomography tools}},
+  Author                   = {{Schwemmer}, C. and {Knips}, L. and {Richart}, D. and {Moroder}, T. and {Kleinmann}, M. and {G{\"u}hne}, O. and {Weinfurter}, H.},
+  Journal                  = {ArXiv e-prints},
+  Year                     = {2013},
+
+  Month                    = oct,
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Adsurl                   = {http://adsabs.harvard.edu/abs/2013arXiv1310.8465S},
+  Archiveprefix            = {arXiv},
+  Eprint                   = {1310.8465},
+  Keywords                 = {Quantum Physics},
+  Primaryclass             = {quant-ph}
+}
+
+@Article{Schwemmer2014,
+  Title                    = {Experimental Comparison of Efficient Tomography Schemes for a Six-Qubit State},
+  Author                   = {Schwemmer, Christian and T\'oth, G\'eza and Niggebaum, Alexander and Moroder, Tobias and Gross, David and G\"uhne, Otfried and Weinfurter, Harald},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2014},
+
+  Month                    = {Jul},
+  Pages                    = {040503},
+  Volume                   = {113},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.113.040503},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.113.040503},
+  Doi                      = {10.1103/PhysRevLett.113.040503},
+  Issue                    = {4},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.113.040503}
+}
+
+@Article{Shimizu2005,
+  Title                    = {Detection of Macroscopic Entanglement by Correlation of Local Observables},
+  Author                   = {Shimizu, Akira and Morimae, Tomoyuki},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2005},
+
+  Month                    = {Aug},
+  Pages                    = {090401},
+  Volume                   = {95},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.95.090401},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.95.090401},
+  Doi                      = {10.1103/PhysRevLett.95.090401},
+  Issuenorpint             = {9},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.95.090401}
+}
+
+@Article{Smerzi2012,
+  Title                    = {Zeno Dynamics, Indistinguishability of State, and Entanglement},
+  Author                   = {Smerzi, Augusto},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2012},
+
+  Month                    = {Oct},
+  Pages                    = {150410},
+  Volume                   = {109},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.109.150410},
+  Doinoprint               = {10.1103/PhysRevLett.109.150410},
+  Issuenorpint             = {15},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.109.150410}
+}
+
+@Article{Strobel2014,
+  Title                    = {Fisher information and entanglement of non-Gaussian spin states},
+  Author                   = {Strobel, Helmut and Muessel, Wolfgang and Linnemann, Daniel and Zibold, Tilman and Hume, David B and Pezz{\'e}, Luca and Smerzi, Augusto and Oberthaler, Markus K},
+  Journal                  = {Science},
+  Year                     = {2014},
+  Number                   = {6195},
+  Pages                    = {424--427},
+  Volume                   = {345},
+
+  Publisher                = {American Association for the Advancement of Science}
+}
+
+@Article{Szigeti2014,
+  Title                    = {{Squeezed-light enhanced atom interferometry below the standard quantum limit}},
+  Author                   = {{Szigeti}, S.~S. and {Tonekaboni}, B. and {Lau}, W.~Y.~S. and {Hood}, S.~N. and {Haine}, S.~A.},
+  Journal                  = {ArXiv e-prints},
+  Year                     = {2014},
+
+  Month                    = jul,
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Adsurl                   = {http://adsabs.harvard.edu/abs/2014arXiv1408.0067S},
+  Archiveprefix            = {arXiv},
+  Eprint                   = {1408.0067},
+  Keywords                 = {Quantum Physics, Condensed Matter - Quantum Gases, Physics - Atomic Physics, Physics - Optics},
+  Primaryclass             = {quant-ph}
+}
+
+@Article{Toth2014c,
+  Title                    = {Quantum metrology from a quantum information science perspective},
+  Author                   = {T{\'o}th, G{\'e}za and Apellaniz, Iagoba},
+  Journal                  = {Journal of Physics A: Mathematical and Theoretical},
+  Year                     = {2014},
+  Number                   = {42},
+  Pages                    = {424006},
+  Volume                   = {47},
+  Owner                    = {iapellaniz},
+  Publisher                = {IOP Publishing},
+  Timestamp                = {2016.05.10}
+}
+
+@Article{Toth2007,
+  Title                    = {Detection of multipartite entanglement in the vicinity of symmetric Dicke states},
+  Author                   = {G\'{e}za T\'{o}th},
+  Journal                  = {J. Opt. Soc. Am. B},
+  Year                     = {2007},
+
+  Month                    = {Feb},
+  Number                   = {2},
+  Pages                    = {275--282},
+  Volume                   = {24},
+
+  Abstract                 = {I present methods for detecting entanglement around symmetric Dicke states. In particular, I consider N-qubit symmetric Dicke states with N/2 excitations. I show that for large N these states have the smallest overlap possible with states without genuine multipartite entanglement. Thus these states are particularly well suited for the experimental examination of multipartite entanglement. I present fidelity-based entanglement witness operators for detecting multipartite entanglement around these states. I then consider entanglement criteria, somewhat similar to the spin squeezing criterion, based on the moments or variances of the collective spin operators. Surprisingly, these criteria are based on an upper bound for variances for separable states. I present criteria detecting entanglement in general and criteria detecting only genuine multipartite entanglement. The collective operator measured for this criteria is an important physical quantity: Its expectation value essentially gives the intensity of the radiation when a coherent atomic cloud emits light.},
+  Bdsk-url-1               = {http://josab.osa.org/abstract.cfm?URI=josab-24-2-275},
+  Doinoprint               = {10.1364/JOSAB.24.000275},
+  Keywords                 = {Quantum optics; Multiphoton processes},
+  Publisher                = {OSA},
+  Url                      = {http://josab.osa.org/abstract.cfm?URI=josab-24-2-275}
+}
+
+@Article{Toh2009,
+  Title                    = {Practical methods for witnessing genuine multi-qubit entanglement in the vicinity of symmetric states},
+  Author                   = {G\'eza T\'oh and Witlef Wieczorek and Roland Krischek and Nikolai Kiesel and Patrick Michelberger and Harald Weinfurter},
+  Journal                  = {New Journal of Physics},
+  Year                     = {2009},
+  Number                   = {8},
+  Pages                    = {083002},
+  Volume                   = {11},
+
+  Abstract                 = {We present general numerical methods to construct witness operators for entanglement detection and estimation of the fidelity. Our methods are applied to detecting entanglement in the vicinity of a six-qubit Dicke state with three excitations and also to further entangled symmetric states. All our witnesses are designed to keep the measurement effort small. We also present general results on the efficient local decomposition of permutationally invariant operators, which makes it possible to measure projectors to symmetric states efficiently.},
+  Bdsk-url-1               = {http://stacks.iop.org/1367-2630/11/i=8/a=083002},
+  Url                      = {http://stacks.iop.org/1367-2630/11/i=8/a=083002}
+}
+
+@Article{Toth2012,
+  Title                    = {Multipartite entanglement and high-precision metrology},
+  Author                   = {T\'oth, G\'eza},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2012},
+
+  Month                    = {Feb},
+  Pages                    = {022322},
+  Volume                   = {85},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.85.022322},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.85.022322},
+  Doi                      = {10.1103/PhysRevA.85.022322},
+  Issuenorpint             = {2},
+  Numpages                 = {8},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.85.022322}
+}
+
+@Article{Toth2004,
+  Title                    = {Entanglement detection in optical lattices of bosonic atoms with collective measurements},
+  Author                   = {T\'oth, G\'eza},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2004},
+
+  Month                    = {May},
+  Pages                    = {052327},
+  Volume                   = {69},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.69.052327},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.69.052327},
+  Doi                      = {10.1103/PhysRevA.69.052327},
+  Issue                    = {5},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.69.052327}
+}
+
+@Article{Toth2014b,
+  Title                    = {Quantum metrology from a quantum information science perspective},
+  Author                   = {G\'eza T\'oth and Iagoba Apellaniz},
+  Journal                  = {J. Phys. A: Math. Theor.},
+  Year                     = {2014},
+  Number                   = {42},
+  Pages                    = {424006},
+  Volume                   = {47},
+
+  Abstract                 = {We summarize important recent advances in quantum metrology, in connection to experiments in cold gases, trapped cold atoms and photons. First we review simple metrological setups, such as quantum metrology with spin squeezed states, with Greenberger--Horne--Zeilinger states, Dicke states and singlet states. We calculate the highest precision achievable in these schemes. Then, we present the fundamental notions of quantum metrology, such as shot-noise scaling, Heisenberg scaling, the quantum Fisher information and the Cram{\'e}r--Rao bound. Using these, we demonstrate that entanglement is needed to surpass the shot-noise scaling in very general metrological tasks with a linear interferometer. We discuss some applications of the quantum Fisher information, such as how it can be used to obtain a criterion for a quantum state to be a macroscopic superposition. We show how it is related to the speed of a quantum evolution, and how it appears in the theory of the quantum Zeno effect. Finally, we explain how uncorrelated noise limits the highest achievable precision in very general metrological tasks. This article is part of a special issue of Journal of Physics A: Mathematical and Theoretical devoted to `50 years of Bell's theorem'.},
+  Bdsk-url-1               = {http://stacks.iop.org/1751-8121/47/i=42/a=424006},
+  Url                      = {http://stacks.iop.org/1751-8121/47/i=42/a=424006}
+}
+
+@Article{Toth2009,
+  Title                    = {Spin squeezing and entanglement},
+  Author                   = {T\'oth, G\'eza and Knapp, Christian and G\"uhne, Otfried and Briegel, Hans J.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2009},
+
+  Month                    = {Apr},
+  Pages                    = {042334},
+  Volume                   = {79},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.79.042334},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.79.042334},
+  Doi                      = {10.1103/PhysRevA.79.042334},
+  Issuenoprint             = {4},
+  Numpages                 = {13},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.79.042334}
+}
+
+@Article{Toth2010,
+  Title                    = {Generation of macroscopic singlet states in atomic ensembles},
+  Author                   = {G\'eza T\'oth and Morgan W Mitchell},
+  Journal                  = {New J. Phys.},
+  Year                     = {2010},
+  Number                   = {5},
+  Pages                    = {053007},
+  Volume                   = {12},
+
+  Bdsk-url-1               = {http://stacks.iop.org/1367-2630/12/i=5/a=053007},
+  Url                      = {http://stacks.iop.org/1367-2630/12/i=5/a=053007}
+}
+
+@Article{Toth2013,
+  Title                    = {Extremal properties of the variance and the quantum Fisher information},
+  Author                   = {T\'oth, G\'eza and Petz, D\'enes},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2013},
+
+  Month                    = {Mar},
+  Pages                    = {032324},
+  Volume                   = {87},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.87.032324},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.87.032324},
+  Doi                      = {10.1103/PhysRevA.87.032324},
+  Issuenorpint             = {3},
+  Numpages                 = {11},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.87.032324}
+}
+
+@Article{Taddei2013,
+  Title                    = {Quantum Speed Limit for Physical Processes},
+  Author                   = {Taddei, M. M. and Escher, B. M. and Davidovich, L. and de Matos Filho, R. L.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+
+  Month                    = {Jan},
+  Pages                    = {050402},
+  Volume                   = {110},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.110.050402},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.110.050402},
+  Doi                      = {10.1103/PhysRevLett.110.050402},
+  Issuenorpint             = {5},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.110.050402}
+}
+
+@Article{Toth2014a,
+  Title                    = {Quantum metrology from a quantum information science perspective},
+  Author                   = {Toth, Geza and Apellaniz, Iagoba},
+  Journal                  = {arXiv preprint arXiv:1405.4878},
+  Year                     = {2014}
+}
+
+@Article{Toth2014,
+  Title                    = {{Efficient evaluation of convex roof entanglement measures}},
+  Author                   = {{Toth}, G. and {Moroder}, T. and {G{\"u}hne}, O.},
+  Journal                  = {ArXiv e-prints},
+  Year                     = {2014},
+
+  Month                    = sep,
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Adsurl                   = {http://adsabs.harvard.edu/abs/2014arXiv1409.3806T},
+  Archiveprefix            = {arXiv},
+  Eprint                   = {1409.3806},
+  Keywords                 = {Quantum Physics},
+  Primaryclass             = {quant-ph}
+}
+
+@Article{Urizar-Lanz2013,
+  Title                    = {Macroscopic singlet states for gradient magnetometry},
+  Author                   = {Urizar-Lanz, I{\~n}igo and Hyllus, Philipp and Egusquiza, I{\~n}igo Luis and Mitchell, Morgan W. and T\'oth, G\'eza},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2013},
+
+  Month                    = {Jul},
+  Pages                    = {013626},
+  Volume                   = {88},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.88.013626},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.88.013626},
+  Doi                      = {10.1103/PhysRevA.88.013626},
+  Issuenorpint             = {1},
+  Numpages                 = {13},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.88.013626}
+}
+
+@Article{Vaneph2013,
+  Title                    = {Quantum estimation of a two-phase spin rotation},
+  Author                   = {Vaneph, Cyril and Tufarelli, Tommaso and Genoni, Marco G},
+  Journal                  = {Quantum Measurements and Quantum Metrology},
+  Year                     = {2013},
+  Pages                    = {12--20},
+  Volume                   = {1}
+}
+
+@Article{Vengalattore2007,
+  Title                    = {High-Resolution Magnetometry with a Spinor Bose-Einstein Condensate},
+  Author                   = {Vengalattore, M. and Higbie, J. M. and Leslie, S. R. and Guzman, J. and Sadler, L. E. and Stamper-Kurn, D. M.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2007},
+
+  Month                    = {May},
+  Pages                    = {200801},
+  Volume                   = {98},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.98.200801},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.98.200801},
+  Doi                      = {10.1103/PhysRevLett.98.200801},
+  Issuenorpint             = {20},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.98.200801}
+}
+
+@Article{Vidal2003,
+  Title                    = {Entanglement in Quantum Critical Phenomena},
+  Author                   = {Vidal, G. and Latorre, J. I. and Rico, E. and Kitaev, A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2003},
+
+  Month                    = {Jun},
+  Pages                    = {227902},
+  Volume                   = {90},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.90.227902},
+  Doinoprint               = {10.1103/PhysRevLett.90.227902},
+  Issuenorpint             = {22},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.90.227902}
+}
+
+@Article{Vidrighin2014,
+  Title                    = {Joint estimation of phase and phase diffusion for quantum metrology},
+  Author                   = {Vidrighin, Mihai D. and Donati, Gaia and Genoni, Marco G. and Jin, Xian-Min and Kolthammer, W. Steven and Kim, M. S. and Datta, Animesh and Barbieri, Marco and Walmsley, Ian A.},
+  Journal                  = {Nat. Commun.},
+  Year                     = {2014},
+
+  Month                    = {April},
+  Pages                    = {3532},
+  Volume                   = {5},
+
+  Date-modified            = {2015-02-03 11:00:24 +0000},
+  Doi                      = {10.1038/ncomms4532},
+  Publisher                = {Nature Publishing Group},
+  Url                      = {http://www.nature.com/ncomms/2014/140404/ncomms4532/abs/ncomms4532.html}
+}
+
+@Article{Vitagliano2014a,
+  Title                    = {Spin squeezing and entanglement for an arbitrary spin},
+  Author                   = {Vitagliano, Giuseppe and Apellaniz, Iagoba and Egusquiza, Inigo L. and T\'oth, G\'eza},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2014},
+
+  Month                    = {Mar},
+  Pages                    = {032307},
+  Volume                   = {89},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.89.032307},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.89.032307},
+  Doi                      = {10.1103/PhysRevA.89.032307},
+  Issue                    = {3},
+  Numpages                 = {16},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.89.032307}
+}
+
+@Article{Vitagliano2014,
+  Title                    = {Spin squeezing and entanglement for an arbitrary spin},
+  Author                   = {Vitagliano, Giuseppe and Apellaniz, Iagoba and Egusquiza, Iñigo L. and Tóth, Géza},
+  Journal                  = {Physical Review A},
+  Year                     = {2014},
+
+  Month                    = {Mar},
+  Number                   = {3},
+  Pages                    = {032307},
+  Volume                   = {89},
+
+  Doi                      = {10.1103/physreva.89.032307},
+  ISSN                     = {1094-1622},
+  Owner                    = {iapellaniz},
+  Publisher                = {American Physical Society (APS)},
+  Timestamp                = {2016.05.10},
+  Url                      = {http://dx.doi.org/10.1103/physreva.89.032307}
+}
+
+@Article{Vitagliano2011,
+  Title                    = {Spin Squeezing Inequalities for Arbitrary Spin},
+  Author                   = {Vitagliano, Giuseppe and Hyllus, Philipp and Egusquiza, Inigo L. and T\'oth, G\'eza},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2011},
+
+  Month                    = {Dec},
+  Pages                    = {240502},
+  Volume                   = {107},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.107.240502},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.107.240502},
+  Doi                      = {10.1103/PhysRevLett.107.240502},
+  Issuenorpint             = {24},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.107.240502}
+}
+
+@Article{Wasilewski2010,
+  Title                    = {Quantum Noise Limited and Entanglement-Assisted Magnetometry},
+  Author                   = {Wasilewski, W. and Jensen, K. and Krauter, H. and Renema, J. J. and Balabas, M. V. and Polzik, E. S.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2010},
+
+  Month                    = {Mar},
+  Pages                    = {133601},
+  Volume                   = {104},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.104.133601},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.104.133601},
+  Doi                      = {10.1103/PhysRevLett.104.133601},
+  Issuenorpint             = {13},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.104.133601}
+}
+
+@Article{Werner1989,
+  Title                    = {Quantum states with Einstein-Podolsky-Rosen correlations admitting a hidden-variable model},
+  Author                   = {Werner, Reinhard F.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {1989},
+
+  Month                    = {Oct},
+  Pages                    = {4277--4281},
+  Volume                   = {40},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.40.4277},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.40.4277},
+  Doi                      = {10.1103/PhysRevA.40.4277},
+  Issuenorpint             = {8},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.40.4277}
+}
+
+@Article{,
+  Title                    = {Experimental Entanglement of a Six-Photon Symmetric Dicke State},
+  Author                   = {Wieczorek, Witlef and Krischek, Roland and Kiesel, Nikolai and Michelberger, Patrick and T\'oth, G\'eza and Weinfurter, Harald},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2009},
+
+  Month                    = {Jul},
+  Pages                    = {020504},
+  Volume                   = {103},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.103.020504},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.103.020504},
+  Doi                      = {10.1103/PhysRevLett.103.020504},
+  Issuenorpint             = {2},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.103.020504}
+}
+
+@Article{Wigner1963,
+  Title                    = {INFORMATION CONTENTS OF DISTRIBUTIONS},
+  Author                   = {Wigner, E. P. and Yanase, Mutsuo M.},
+  Journal                  = {Proc. Natl. Acad. Sci. U.S.A.},
+  Year                     = {1963},
+  Number                   = {6},
+  Pages                    = {910-918},
+  Volume                   = {49},
+
+  Bdsk-url-1               = {http://www.pnas.org/content/49/6/910.short},
+  Eprintnoprint            = {http://www.pnas.org/content/49/6/910.full.pdf+html},
+  Url                      = {http://www.pnas.org/content/49/6/910.short}
+}
+
+@Article{Wildermuth2006,
+  Title                    = {Sensing electric and magnetic fields with Bose-Einstein condensates},
+  Author                   = {Wildermuth, S and Hofferberth, S and Lesanovsky, I and Groth, S and Kr{\"u}ger, P and Schmiedmayer, J and Bar-Joseph, I},
+  Journal                  = {Appl. Phys. Lett.},
+  Year                     = {2006},
+  Number                   = {26},
+  Pages                    = {264103},
+  Volume                   = {88},
+
+  Bdsk-url-1               = {http://scitation.aip.org/content/aip/journal/apl/88/26/10.1063/1.2216932},
+  Publisher                = {AIP Publishing},
+  Url                      = {http://scitation.aip.org/content/aip/journal/apl/88/26/10.1063/1.2216932}
+}
+
+@Article{Wineland1994,
+  Title                    = {Squeezed atomic states and projection noise in spectroscopy},
+  Author                   = {Wineland, D. J. and Bollinger, J. J. and Itano, W. M. and Heinzen, D. J.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {1994},
+
+  Month                    = {Jul},
+  Pages                    = {67--88},
+  Volume                   = {50},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.50.67},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.50.67},
+  Doi                      = {10.1103/PhysRevA.50.67},
+  Issuenorpint             = {1},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.50.67}
+}
+
+@Book{Wiseman2010,
+  Title                    = {Quantum measurement and control},
+  Author                   = {Wiseman, Howard M and Milburn, Gerard J},
+  Publisher                = {Univ. Press, Cambridge},
+  Year                     = {2010}
+}
+
+@Article{Wolf2008,
+  Title                    = {Area Laws in Quantum Systems: Mutual Information and Correlations},
+  Author                   = {Wolf, Michael M. and Verstraete, Frank and Hastings, Matthew B. and Cirac, J. Ignacio},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2008},
+
+  Month                    = {Feb},
+  Pages                    = {070502},
+  Volume                   = {100},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.100.070502},
+  Doinoprint               = {10.1103/PhysRevLett.100.070502},
+  Issuenorpint             = {7},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.100.070502}
+}
+
+@Article{Wootters1998,
+  Title                    = {Entanglement of Formation of an Arbitrary State of Two Qubits},
+  Author                   = {Wootters, William K.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1998},
+
+  Month                    = {Mar},
+  Pages                    = {2245--2248},
+  Volume                   = {80},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevLett.80.2245},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.80.2245},
+  Doi                      = {10.1103/PhysRevLett.80.2245},
+  Issuenorpint             = {10},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.80.2245}
+}
+
+@Article{Yu2013,
+  Title                    = {Quantum Fisher Information as the Convex Roof of Variance},
+  Author                   = {Yu, Sixia},
+  Year                     = {2013},
+
+  Bdsk-url-1               = {http://arxiv.org/abs/1302.5311},
+  Eprint                   = {arXiv:1302.5311},
+  Journalnoprint           = {arXiv preprint arXiv:1302.5311},
+  Url                      = {http://arxiv.org/abs/1302.5311}
+}
+
+@Article{Yurke1986,
+  Title                    = {SU(2) and SU(1,1) interferometers},
+  Author                   = {Yurke, Bernard and McCall, Samuel L. and Klauder, John R.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {1986},
+
+  Month                    = {Jun},
+  Pages                    = {4033--4054},
+  Volume                   = {33},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.33.4033},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.33.4033},
+  Doi                      = {10.1103/PhysRevA.33.4033},
+  Issuenorpint             = {6},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.33.4033}
+}
+
+@Article{Zhang2014,
+  Title                    = {Quantum metrology with Dicke squeezed states},
+  Author                   = {Z Zhang and L M Duan},
+  Journal                  = {New J. Phys.},
+  Year                     = {2014},
+  Number                   = {10},
+  Pages                    = {103037},
+  Volume                   = {16},
+
+  Abstract                 = {We introduce a new class of quantum many-particle entangled states, called the Dicke squeezed (or DS) states, which can be used to improve the precision in quantum metrology beyond the standard quantum limit. We show that the enhancement in measurement precision is characterized by a single experimentally detectable parameter, called the Dicke squeezing ##IMG## [http://ej.iop.org/images/1367-2630/16/10/103037/njp502275ieqn1.gif] {${{\xi }_{D}}$} , which also bounds the entanglement depth for this class of states. The measurement precision approaches the ultimate Heisenberg limit as ##IMG## [http://ej.iop.org/images/1367-2630/16/10/103037/njp502275ieqn2.gif] {${{\xi }_{D}}$} attains the minimum in an ideal Dicke state. Compared with other entangled states, we show that the DS states are more robust to decoherence and give better measurement precision under typical experimental noise.},
+  Bdsk-url-1               = {http://stacks.iop.org/1367-2630/16/i=10/a=103037},
+  Url                      = {http://stacks.iop.org/1367-2630/16/i=10/a=103037}
+}
+
+@Article{Zhao2003,
+  Title                    = {Experimental Violation of Local Realism by Four-Photon {Greenberger}-{Horne}-{Zeilinger} Entanglement},
+  Author                   = {Zhao, Zhi and Yang, Tao and Chen, Yu-Ao and Zhang, An-Ning and \ifmmode \dot{Z}\else \.{Z}\fi{}ukowski, Marek and Pan, Jian-Wei},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2003},
+
+  Month                    = {Oct},
+  Pages                    = {180401},
+  Volume                   = {91},
+
+  Bdsk-url-1               = {http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.180401},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevLett.91.180401},
+  Doi                      = {10.1103/PhysRevLett.91.180401},
+  Publisher                = {American Physical Society},
+  Url                      = {http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.180401}
+}
+
+@Article{Zwierz2014,
+  Title                    = {Precision bounds for noisy nonlinear quantum metrology},
+  Author                   = {Zwierz, Marcin and Wiseman, Howard M.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2014},
+
+  Month                    = {Feb},
+  Pages                    = {022107},
+  Volume                   = {89},
+
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.89.022107},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.89.022107},
+  Doi                      = {10.1103/PhysRevA.89.022107},
+  Issuenorpint             = {2},
+  Numpages                 = {8},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.89.022107}
+}
+

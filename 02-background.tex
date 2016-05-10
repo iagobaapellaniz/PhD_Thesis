@@ -1,4 +1,4 @@
-\vspace{15pt}
+\vspace{0pt}
 \lettrine[lines=2, findent=3pt,nindent=0pt]{M}{etrology}, as the science of measuring, has played an essential role for the development of the technology as we know it today.
 It studies several aspects of the estimation process, such as which strategy to follow in order to improve the precision of an estimation.
 One of the most important figure of merit in this context is the achievable precision for a given system, independently of the strategy.
@@ -73,8 +73,8 @@ Let us plot the distribution function on what is usually referred as \emph{histo
   \hfill
   \subfloat{
     \includegraphics[width=0.475\textwidth]{img/plots/BG_hist_bin_2.pdf}}
-  \caption{\baselineskip=14pt (a) Values of $p_i$ for different $i$-s. In this case each bar of the plot has the same width as 1, so it is drawn how many times each data value appears on the data sample.
-  The width of the bars is called \emph{bin}, and it can change so it column would represent a wider range of values. (b) Yo can see the same data represented in this case by a histogram with the bin size equal to 2. To produce this histogram we have summed 2 adjacent $p_i$ values starting from $p_1+p_2$, $p_3+p_4$ and so on.
+  \caption{\baselineskip=14pt (a) $p_i$ for different values of $i$. All bars have width as 1, so it is drawn how many times each data value appears on the data sample.
+  The width of the bars is called \emph{bin}, and it can change so the bars would represent a wider range of values. (b) Yo can see the same data represented in this case by a histogram with the bin size equal to 2. To produce this histogram we have summed 2 adjacent $p_i$ values starting from $p_1+p_2$, $p_3+p_4$ and so on.
   Those new bars we have chosen to represent a value in between, for instance $(3+4)/2=3.5$ and so on.}
 \end{figure}
 
@@ -87,11 +87,15 @@ This will depend on the physical property that our data sample represents but in
 Second, notice that the sum of all the repetitions, all the values of $p_i$, is exactly 18 the number of data samples in the set.
 So we have that $M = \sum_{i=0}^{\infty} p_i$.
 Now we can formulate the ensemble average as $\text{E}[X]=\sum_{i=0}^{\infty} p_i i / \sum_{j=0}^{\infty} p_j$. The variance and with this the standard deviation immediately follow this approach.
-It is convenient to notice that the total measurement outcomes has not a strong paper.
+It is convenient to notice that the total measurement outcomes has not contribute anything but to normalize the quantities.
 
 We can now without losing generality redefine the distribution function to be the number of repetitions corresponding to the variable divided by the total outcomes, in this case $M$.
 It would have the same properties of a probability distribution function (PDF).
-For instance, now we have that the sum of all $p$-s equal to one, $\sum_{i=0}^\infty p_i = 1$, and the average is directly obtained by computing  $\text{E}[X] = \sum_{i=0}^\infty p_i i$, which is by far the most convenient picture to use when representing data. The variance and other quantities also are simpler with this approach.
+For instance, now we have that the sum of all $p_i$-s equal to one, $\sum_{i=0}^\infty p_i = 1$, and the average is directly obtained by computing  $\text{E}[X] = \sum_{i=0}^\infty p_i i$.
+This is the approach we will follow to represent data samples.
+The variance and other quantities also are simpler in this way.
+
+\subsubsection{Probabilities and frecuentist vs. bayesian approach}
 
 The trivial values to compute from the data
 
