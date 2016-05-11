@@ -2,7 +2,7 @@
 
 \usepackage{geometry}
 \usepackage{graphicx}
-\usepackage{amsmath, amsfonts, amssymb, bbm}
+\usepackage{amsmath}
 \numberwithin{equation}{section}
 
 %\usepackage{lipsum}
@@ -61,14 +61,8 @@
 % TITLES LAYOUT
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\titleformat{\section}[display]
-{\vspace*{150pt}
-\bf\Huge}
-{\begin{picture}(0,0)\put(-60,-30){\textcolor{grey}{\thesection}}\end{picture}}
-{0pt}
-{#1}
-[]
-\titlespacing*{\section}{40pt}{10pt}{40pt}[40pt]
+\input{nonumberSection.tex}
+
 \newcommand{\sectionbreak}{\cleardoublepage}
 
 
@@ -79,11 +73,7 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\cov}{cov}
 
-\newcounter{observ}
-\newenvironment{observ}{\refstepcounter{observ}
-   \textit{\textbf{Observation \theobserv:}} \rmfamily}
-
-\newenvironment{proof}{\textit{Proof:} \rmfamily}{\hfill$\square$}
+\newcommand{\bs}[1]{\ensuremath{\boldsymbol{#1}}}
 
 \newcommand{\ket}[1]{\ensuremath{\vert #1 \rangle}}
 \newcommand{\bra}[1]{\ensuremath{\langle #1 \vert}}
@@ -253,68 +243,62 @@ On the other hand I also felt very comfortable at my university, the University 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % REDEFINE TITLE FORMAT
 %%%%%%%%%%%%%%%%%%%%%%%%
-\titleformat{\section}[display]
-{\vspace*{178pt}
-\bf\Huge}
-{\begin{picture}(0,0)\put(-64,-38){\textcolor{grey}{\thesection}}\end{picture}}
-{0pt}
-{\textcolor{white}{#1}}
-[]
-\titlespacing*{\section}{100pt}{10pt}{60pt}[16pt]
+\input{fancySection.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-\thiswatermark{\put(1,-303){\color{l-grey}\rule{84pt}{48pt}}
-\put(84,-303){\color{grey}\rule{410pt}{48pt}}}
+\input{singleLineWaterMark.tex}
 
 \input{01-introduction.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Backgroud on Quantum Metrology]
 {Development of Quantum Metrology}
-\thiswatermark{\put(1,-303){\color{l-grey}\rule{84pt}{48pt}}
-\put(84,-303){\color{grey}\rule{410pt}{48pt}}}
+\input{singleLineWaterMark.tex}
 
 \input{02-background.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Quantum metrology with Dike like states]
-{Quantum metrology with states on the vicinity of Dicke states}
-\thiswatermark{\put(1,-347){\color{l-grey}\rule{84pt}{92pt}}
-\put(84,-347){\color{grey}\rule{410pt}{92pt}}}
+{Metrology in the vicinity of Dicke states}
+\input{doubleLineWaterMark.tex}
 
 \input{03-vicinity.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Bounds on QFI with observables]
 {Bounding the QFI with few initial expectation values}
-\thiswatermark{\put(1,-343){\color{l-grey}\rule{84pt}{88pt}}
-\put(84,-343){\color{grey}\rule{410pt}{88pt}}}
+\input{doubleLineWaterMark.tex}
+
 
 \input{04-legendre.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Metrology of the gradient magnetic field]
 {Accuracy bound for gradient field estimation with atomic ensembles}
-\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
-\put(84,-327){\color{grey}\rule{410pt}{72pt}}}
+\input{doubleLineWaterMark.tex}
+
 
 \input{05-gradient.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Conclusions]
 {Conclusions}
-\thiswatermark{\put(1,-327){\color{l-grey}\rule{84pt}{72pt}}
-\put(84,-327){\color{grey}\rule{410pt}{72pt}}}
+\input{singleLineWaterMark.tex}
 
 \input{06-conclusions.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % REDEFINE TITLE FORMAT
 %%%%%%%%%%%%%%%%%%%%%%%%
-\titleformat{\section}[display]
-{\vspace*{150pt}
-\bf\Huge}
-{\begin{picture}(0,0)\put(-60,-30){\textcolor{grey}{\thesection}}\end{picture}}
-{0pt}
-{#1}
-[]
-\titlespacing*{\section}{40pt}{10pt}{40pt}[40pt]
+\input{normalSection.tex}
 
+\appendix
+
+\section{Miscellaneous mathematical tools}
+\input{ap-01.tex}
+
+\input{nonumberSection.tex}
 \bibliography{biblio.bib}{}
 \bibliographystyle{plain}
 

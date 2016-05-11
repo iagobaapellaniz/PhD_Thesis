@@ -73,7 +73,7 @@ Let us plot the distribution function on what is usually referred as \emph{histo
   \hfill
   \subfloat{
     \includegraphics[width=0.475\textwidth]{img/plots/BG_hist_bin_2.pdf}}
-  \caption{\baselineskip=14pt (a) $p_i$ for different values of $i$. All bars have width as 1, so it is drawn how many times each data value appears on the data sample.
+  \caption{(a) $p_i$ for different values of $i$. All bars have width as 1, so it is drawn how many times each data value appears on the data sample.
   The width of the bars is called \emph{bin}, and it can change so the bars would represent a wider range of values. (b) Yo can see the same data represented in this case by a histogram with the bin size equal to 2. To produce this histogram we have summed 2 adjacent $p_i$ values starting from $p_1+p_2$, $p_3+p_4$ and so on.
   Those new bars we have chosen to represent a value in between, for instance $(3+4)/2=3.5$ and so on.}
 \end{figure}
@@ -105,12 +105,15 @@ histogram
 
 estimator
 
+Explain how for bigger bin sizes, the error for higher statistical moments increases.
+
 MLH
 
 CLT
 
+\subsubsection{Estimators, Fisher information}
 
-
+Error propagation formula.
 
 \subsection{Quantum Mechanics}
 The ubiquitous probabilistic nature of quantum mechanics is reflected on each corner of the field.
@@ -130,12 +133,51 @@ Markov
 
 Limblad
 
-Measurements
+Measurements (POVM)
+
+Quantum Information
 
 \subsection{Quantum Metrology}
 
 Histograms of quantum states
 
-Merging the probabilistic features of quantum mechanics with the estimation theory is not tibial.
+Merging the probabilistic features of quantum mechanics with the estimation theory is not trivial.
 
 The figure of merit for this purpose is the so-called Quantum Fisher Information.
+
+The error propagation formula for an estimation of $\Theta$ based on the observable $O$.
+\be
+  (\Delta \Theta)^2 \geq \frac{\varian{O}}{|\partial_{\Theta}\expect{O}|^2}
+\ee
+
+\subsubsection{Quantum Magnetometry}
+One of the most basic tasks of Quantum Metrology is to address the precision of estimating the magnetic field strength, namely $B$, of an unknown external magnetic field.
+In this section we will assume that the magnetic field is homogeneous on the position space.
+To consider more advanced situations on which the magnetic field changes linearly with the position, see chapter [XXX].
+With the aim of estimating the strength of the magnetic field, a prove state is used in order to interact with it, coupling the magnetic moment of the state and the field itself.
+After some time, the state has evolved.
+Finally, measuring how the state has changed one would be able to infer on the strength of the magnetic field, basically proportional to the change on the state.
+
+In general, we will say that the magnetic moments of the states come exclusively from the spin angular momentum, neglecting any possible contribution from the orbital angular momentum.
+This way the physics is simpler.
+This is justified in the sense that most of the recent experiments on this context have been carried out with ion-traps, BECs or at most cold atomic ensembles, which have indeed a negligible orbital angular momentum.
+
+Beside this considerations, the interaction Hamiltonian can be written as,
+\be
+  H = - \bs{\mu} \cdot \bs{B}
+\ee
+up to some constant factor.
+Now in the simplest case we will choose the magnetic field to be pointing to some fixed direction, for instance, the $Oz$ direction.
+So the magnetic field vector can be written as ${B}=B\bs{k}$, where $\bs{k}$ is the unitary vector pointing to the $Oz$ direction.
+This way estimation problem is much more simple, since one has not to determine the direction of the magnetic field.
+
+Finally, if the magnetic moment of the system is proportional to the spin angular momentum, and interacts with the magnetic field as in the equation above, one can rewrite the interaction Hamiltonian above to be,
+\be
+  H = \gamma B J_z
+\ee
+where $\gamma = $ and we have used the fact that $\bs{J}\cdot\bs{k}=J_z$.
+The unitary operator leading the evolution of the system can be written as,
+\be
+  U = \exp(-i\Theta J_z),
+\ee
+where the magnetic field strength is encoded into the variable $\Theta$.
