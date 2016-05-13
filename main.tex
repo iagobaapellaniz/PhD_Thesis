@@ -3,7 +3,6 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\numberwithin{equation}{section}
 
 %\usepackage{lipsum}
 \usepackage{fancyhdr}
@@ -16,6 +15,17 @@
 \usepackage[final]{pdfpages}
 
 \usepackage{subfig}
+
+\usepackage{caption}
+\captionsetup{margin=10pt,font=small,labelfont=bf}
+
+\usepackage{enumitem}
+\setlist{nosep, label={\roman*)}, leftmargin=36pt, labelwidth=15pt, align=left, labelsep=3pt}
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % FONT SELECTION
@@ -61,9 +71,13 @@
 % TITLES LAYOUT
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{nonumberSection.tex}
+\input{snp/nonumberSection.tex}
 
 \newcommand{\sectionbreak}{\cleardoublepage}
+
+\newcommand{\ssssection}[1]{\begin{center}
+  \textit{#1}
+\end{center}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -78,7 +92,7 @@
 \newcommand{\ket}[1]{\ensuremath{\vert #1 \rangle}}
 \newcommand{\bra}[1]{\ensuremath{\langle #1 \vert}}
 \newcommand{\braket}[2]{\ensuremath{\langle #1 \vert #2 \rangle}}
-\newcommand{\braOket}[3]{\ensuremath{\langle #1 \vert #2 \vert #3 \rangle}}
+\newcommand{\braopket}[3]{\ensuremath{\langle #1 \vert #2 \vert #3 \rangle}}
 \newcommand{\ketbra}[2]{\ensuremath{\vert #1 \rangle \! \langle #2 \vert}}
 \newcommand{\expect}[1]{\ensuremath{\langle #1 \rangle}}
 \newcommand{\varian}[1]{\ensuremath{(\Delta #1 )^2}}
@@ -88,10 +102,6 @@
 
 \def\be{\begin{equation}}
 \def\ee{\end{equation}}
-\def\bea{\begin{eqnarray}}
-\def\eea{\end{eqnarray}}
-\def\bse{\begin{subequations}}
-\def\ese{\end{subequations}}
 \def\mtxid{\mathbbm{1}}
 \def\lpar{\left(}
 \def\rpar{\right)}
@@ -224,7 +234,9 @@ QFI - Quantum Fisher information
 
 I want to thank the people that support me in this endeavor especially my office and discussion mates and my director G\'eza T\'oth for without whom my work would not be even  started.
 I also want to thank more people especially those from the theoretical physics department of the University of the Basque Country and the unique very especial group for me from the Theoretical Quantum Optics group at the University of Siegen.
-I would really like to mention the names of all of them but I think it would be quite heavy for the average reader of this thesis. Thank you guys!
+I would really like to mention the names of all of them but I think it would be quite heavy for the average reader of this thesis.
+Thank you guys!
+Also I want to thank people from the group QSTAR at Florence, Italy.
 
 On the other hand I also felt very comfortable at my university, the University of the Basque Country, but I want to thank especially the people that make me grow in all ways as person.
 
@@ -295,8 +307,11 @@ On the other hand I also felt very comfortable at my university, the University 
 
 \appendix
 
+\section{Long calculus appearing through the sections}
+\input{ap-01-longcalc.tex}
+
 \section{Miscellaneous mathematical tools}
-\input{ap-01.tex}
+\input{ap-02-miscmath.tex}
 
 \input{snp/nonumberSection.tex}
 \bibliography{biblio.bib}{}

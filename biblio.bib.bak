@@ -506,7 +506,7 @@
 }
 
 @Article{Czekaj2014,
-  Title                    = {{Quantum metrology: Heisenberg limit with bound entanglement}},
+  Title                    = {Quantum metrology: Heisenberg limit with bound entanglement},
   Author                   = {{Czekaj}, L. and {Przysiezna}, A. and {Horodecki}, M. and {Horodecki}, P.},
   Year                     = {2014},
 
@@ -572,7 +572,7 @@
 
 @Article{Demkowicz-Dobrzanski2014,
   Title                    = {Quantum limits in optical interferometry},
-  Author                   = {{Demkowicz-Dobrzanski}, R. and {Jarzyna}, M. and {Kolodynski}, J.},
+  Author                   = {Demkowicz-Dobrzanski, R. and Jarzyna, M. and Kolodynski, J.},
   Year                     = {2014},
 
   Month                    = may,
@@ -1069,7 +1069,7 @@
 }
 
 @Article{Haine2014,
-  Title                    = {{Waste Not, Want Not: Heisenberg-Limited Metrology With Information Recycling}},
+  Title                    = {Waste Not, Want Not: Heisenberg-Limited Metrology With Information Recycling},
   Author                   = {{Haine}, S.~A. and {Szigeti}, S.~S. and {Lang}, M.~D. and {Caves}, C.~M.},
   Journal                  = {ArXiv e-prints},
   Year                     = {2014},

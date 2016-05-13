@@ -23,59 +23,82 @@ The statistics main characteristic is that makes the raw data under consideratio
 The data can be anything, from a set of different heights of a basketball team, to the outcomes of a coin toss or the ages of a hundred students or even the outcomes of a thousand times repeated measurement of the electric field at some spatial point.
 The aim of this section is to give the reader sufficient material to follow this thesis and make it comprehensible from the beginning.
 
-\subsubsection{Data sample, average, variance and central moments}
+\subsubsection{Data samples, average and variance}
 
 As we mentioned above, everything in statistics starts with a data set.
 A dataset is defined as a set of values, we will restrict ourselves to quantitative values, representing some physical quantity.
-So in our framework the set can be written as $X=\{x_i\}_{i=1}^M$, where all different $M$ values are collected.
-
-With this data at hand, we are able to compute the \emph{arithmetic average} of the set, namely $\text{E}[X] := \frac{1}{M}\sum_{i=1}^M x_i$.
-There are other types of averages such as the geometric mean, the root mean square or the harmonic mean, see reef. [XXX].
-For us will be enough with the arithmetic average.
-
-The second quantity one can compute is how spread the data is.
-Namely the \emph{variance}, which can be defined easily as $\text{V}[X] := \text{E}[(X- \text{E}[X])^2]$, where $X$ can be seen as a vector and when subtracting the scalar $\text{E}[X]$ and $X^2$ stands for the elements wise squared of $X$, namely $X^2 := \{x_i^2\}_{i=1}^M$.
-Similarly can be done for higher orders.
-The variance is also a well known quantity on many fields of science.
-It can also be written alternatively as $\text{V}[X] = \text{E}[X^2]- \text{E}[X]^2$.
-The definition of the \emph{standard deviation} follows directly from the variance, $\sigma_{X}=\sqrt{\text{V}[X]}$.
-Many quantities on statistics require operations like the one above.
-
-At this point, let us illustrate thees quantities with an example.
-It will also help us for introducing another concept.
-Let us have the outcomes of, let us say, measurements of the heights of 18 trees.
-Let us have those heights as integer values and in meters, see Tab. [XXX].
-Then, the average height of the set is simply $\text{E}[X] = \frac{1}{18}\sum_{i=1}^{18} x_i = 6\text{m}$. Now let us see what happens with the variance, $\text{V}[X]=\frac{1}{18}\sum_{i=1}^{18}x_i^2 - 6^2 = 5.5\bar{5}\text{m}^2$.
-Using now the standard deviation one can say about the original distribution that most values are around 6m with a deviation of 2.357m. Of course, some values are outside this range, but nevertheless the description is quite accurate, note that 12 values from 18 are inside the range $6\text{m}\pm2.357\text{m}$.
-
+So in our framework such a set can be written as $X=\{x_i\}_{i=1}^M$, where all $M$ values are collected.
+An illustrative example with 18 heights of different trees is sketched on the Table~\ref{tab:bg-18-trees}.
 \begin{table}
-\begin{center}
-\begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | }
-  \hline
-  Tree \# & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 &  11 &  12 &  13 &  14 &  15 &  16 &  17 &  18
-  \\ \hline
-  Heights (m) & 6 &  7 &  5 &  7 &  2 & 11 &  7 &  4 &  7 &  2 &  7 &  7 &  5 &  5 &  5 &  8 &  3 & 10 \\ \hline
-\end{tabular}
-\end{center}
-\caption{A set of values for the heights of 18 trees. All measurements were rounded to integers for simplicity.}
+  \begin{center}
+    \begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | }
+      \hline
+      Tree \# & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 &  11 &  12 &  13 &  14 &  15 &  16 &  17 &  18
+      \\ \hline
+      Heights (m) & 6 &  7 &  5 &  7 &  2 & 11 &  7 &  4 &  7 &  2 &  7 &  7 &  5 &  5 &  5 &  8 &  3 & 10 \\ \hline
+    \end{tabular}
+  \end{center}
+  \caption{A set of values for the heights of 18 trees. All measurements were rounded to integers for simplicity.}
+  \label{tab:bg-18-trees}
 \end{table}
 
-Can we simplify the way we represent the data?
-One may notice that the value 7m is repeated 6 times, as the value 5m is 4 times and so on.
-For that we will introduce the distribution function $p_i$, which in this case is for discrete values of the outcomes but which can be generalized for continuous variables.
-This function takes the value of how many times the outcome $i$ has appeared on the data sample.
-Let us plot the distribution function on what is usually referred as \emph{histogram}.
+This picture can be extend to more outcomes coming from a single \emph{event} or measure.
+For instance, a second value such as the width of the tree could be attached to each height on the previous example.
+This way we have opened our approach for higher dimensional data samples that can be described as a set of $M$ outcomes with more than a single value each, $(X,Y,\dots)=\{x_i,y_i,\dots\}_{i=1}^M$.
 
+\ssssection{Average}
+
+With this data at hand one of the first questions arises is whether the values of $X$ are around some mean value.
+If one tries to address this question one of the first approaches can be computed is the \emph{arithmetic average} of the set $X$, namely,
+\be
+  \text{E}[X] := \frac{1}{M}\sum_{i=1}^M x_i.
+\ee
+Apart from the arithmetic average there are other types of averages such as the geometric mean, the root mean square or the harmonic mean, etc.
+For more information see those some of those fascinating works about the statistics [XXX].
+For us and for the complete understanding of this thesis will be enough with the arithmetic average.
+
+Let us take the previous example of the trees and compute the average.
+In this case the data sample is constituted by positive integer values for simplicity.
+The average of the data sample is straight forward $\text{E}[X] = \frac{1}{18}\sum_{i=1}^{18} x_i = 6\text{m}$.
+
+For the extension to the case of higher dimensional data samples one can say that each kind of outcome the average can be computed in a seamless way, $\text{E}[Y]=\frac{1}{M}\sum_{i=1}^M y_i$ and so on.
+
+\ssssection{Variance}
+
+The second quantity one can compute is how spread the data is.
+This is usually done first subtracting the average to all values on the data sample, then squaring them, so the sign of the result is lost, and finally one averages over all the resulting set. This quantity is called the \emph{variance} of the sample and it is written as follows,
+\be
+  \text{V}[X] := \text{E}\left[(X- \text{E}[X])^2\right],
+\ee
+where $X$ can be seen as a vector and when subtracting the scalar $\text{E}[X]$ and $X^2$ stands for the elements wise squared of $X$, namely $X^2 := \{x_i^2\}_{i=1}^M$.
+The variance can also be written alternatively as $\text{V}[X] = \text{E}[X^2]- \text{E}[X]^2$.
+The definition of the \emph{standard deviation} follows directly from the variance, $\sigma_{X}=\sqrt{\text{V}[X]}$.
+Many quantities on statistics require operations like the one described right before.
+This can be generalised again for more than one kind of outcome as it was done with the average.
+
+Now let us see how result the variance for the example of the Table~\ref{tab:bg-18-trees}.
+In this case the variance would be the following, $\text{V}[X]=\frac{1}{18}\sum_{i=1}^{18}x_i^2 - 6^2\text{m}^2 = 5.5\bar{5}\text{m}^2$.
+
+To summarise and using the standard deviation, one can say now about the original distribution that most values are around 6m with a deviation of 2.357m.
+Of course, some values are outside this range, but nevertheless the description is quite accurate, note that 12 values from 18 are inside the range $6\text{m}\pm2.357\text{m}$.
+
+\ssssection{Histograms}
+
+At this point we introduce the \emph{histograms} and with that, first, the \emph{distribution function} of the data sample.
+Returning to the example of the Table~\ref{tab:bg-18-trees}, one may notice that the value 7m is repeated 6 times, as the value 5m is 4 times and so on.
+This is represented with the distribution function $p_i$, which in this case is for discrete values of the outcomes but which can be generalized for continuous variables as we will see later.
+This function takes the value of how many times the outcome $i$ has appeared on the data sample.
+Let us plot the distribution function, see Figure~\ref{fig:bg-histograms}.
 \begin{figure}
   \centering
   \subfloat{
     \includegraphics[width=0.4854015\textwidth]{img/plots/BG_hist_bin_1.pdf}}
-  \hfill
   \subfloat{
     \includegraphics[width=0.475\textwidth]{img/plots/BG_hist_bin_2.pdf}}
   \caption{(a) $p_i$ for different values of $i$. All bars have width as 1, so it is drawn how many times each data value appears on the data sample.
   The width of the bars is called \emph{bin}, and it can change so the bars would represent a wider range of values. (b) Yo can see the same data represented in this case by a histogram with the bin size equal to 2. To produce this histogram we have summed 2 adjacent $p_i$ values starting from $p_1+p_2$, $p_3+p_4$ and so on.
   Those new bars we have chosen to represent a value in between, for instance $(3+4)/2=3.5$ and so on.}
+  \label{fig:bg-histograms}
 \end{figure}
 
 Now some question arises immediately:
@@ -97,7 +120,11 @@ The variance and other quantities also are simpler in this way.
 
 \subsubsection{Probabilities and frecuentist vs. bayesian approach}
 
-The trivial values to compute from the data
+Let us talk now about probabilities.
+The notion of the probability comes, [XXX].
+In our contest we will define the probability in the following way.
+Imagine we have an unknown data sample, let say $X$, from which we randomly choose one of the data values.
+The probability to obtain a random variable $x$ is given by the parent distribution function divided by the population number $M$.
 
 We can estimate the average height of the trees of that forest.
 
@@ -115,15 +142,46 @@ CLT
 
 Error propagation formula.
 
-\subsection{Quantum Mechanics}
-The ubiquitous probabilistic nature of quantum mechanics is reflected on each corner of the field.
-This \emph{ambiguity} of a system been quantum is exploited by many recent technologies.
+\subsection{Quantum Mechanics from metrology perspective}
 
-The state
+The ubiquitous probabilistic nature of quantum mechanics forces all the community to know some basics on probability and statistics.
 
-product states
+\ssssection{The quantum state, multi-particle state, entanglement}
 
-Entanglement
+A \emph{system state} in Quantum Mechanics lives on a Hilbert space, $\mathcal{H}$.
+The system state, $\rho$, has the following properties:
+\begin{enumerate}
+  \item
+  It is Hermitian, so it is invariant under the complex transposition, $\rho=\rho^\dagger$.
+  \item Its trace is equal to one, $\tr(\rho)=1$.
+  \item It is positive semi-definite\ie all its eigenvalues are bigger or equal to zero, $\rho=\sum_{\lambda}p_\lambda \Pi_\lambda$\footnote{
+    $\rho=\sum_{\lambda}p_\lambda \Pi_{\lambda}$ is the eigen-representation of the state, where $\Pi_{\lambda}$ are the eigenstates defined on $\mathcal{H}$ too.
+    They are as many as the dimension, $d$, of the Hilbert space.
+    They are orthonormal under the product defined on such Hilbert space $\mathcal{H}$\ie $\tr(\Pi_{\lambda}\Pi_{\lambda'})=\delta_{\lambda,\lambda'}$.
+    Nevertheless, there is a extended discussion when Hilbert space is defined for continuous variables, see [XXX].
+  } where $p_\lambda\geq 0$ are the scalar eigenvalues.
+  It follows that $\sum_\lambda p_\lambda = 1$ must be true.
+  \item If all $p_\lambda$ are zero except one, then the state is called a pure state.
+  \item The convex mixture of 2 different quantum states is also a quantum state, $\rho = p\rho_\text{A} + (1-p) \rho_\text{B}$, so the quantum states form a convex set where at the boundary are the pure states.
+\end{enumerate}
+
+
+The composite system of $N$ different parties lives on $\mathcal{H} = \mathcal{H}^{(1)}\otimes\mathcal{H}^{(2)}\otimes\cdots\otimes\mathcal{H}^{(N)}$ or for short $\mathcal{H} = \bigotimes_{i=1}^N\mathcal{H}^{(i)}$, where $\otimes$ stands for a tensor product like construction.
+For instance, this composite Hilbert space could be used to represent a many-particle system, in this case $N$ particles.
+
+If a state can be described in the following way,
+\be
+  \rho = \sum_{i}p_i\rho_i^{(1)}\otimes\rho_i^{(2)}\otimes\cdots\otimes\rho_i^{(N)},
+\ee
+is said to be a \emph{separable} state.
+The separable states form a convex set
+If it cannot be written like this the state is \emph{entangled}.
+If such state is pure then it is called a \emph{product state}, and those states are on the boundary of the convex set of separable states. [SOMETHING IS WRONG HERE]
+
+
+Angular momentum operators.
+
+Entanglement cannot be described classically.
 
 Evolution
 
@@ -151,6 +209,8 @@ The error propagation formula for an estimation of $\Theta$ based on the observa
 \ee
 
 \subsubsection{Quantum Magnetometry}
+\label{sec:bg-quantum-metro}
+
 One of the most basic tasks of Quantum Metrology is to address the precision of estimating the magnetic field strength, namely $B$, of an unknown external magnetic field.
 In this section we will assume that the magnetic field is homogeneous on the position space.
 To consider more advanced situations on which the magnetic field changes linearly with the position, see chapter [XXX].
@@ -180,4 +240,5 @@ The unitary operator leading the evolution of the system can be written as,
 \be
   U = \exp(-i\Theta J_z),
 \ee
-where the magnetic field strength is encoded into the variable $\Theta$.
+where the magnetic field strength is encoded into the variable $\Theta=-\mu_\text{B} g_\text{s} t B/\hbar$.
+Here $\mu_\text{B}$ stand for the Magneton of Bhor and $g_\text{s}$ for the giro-magnetic constant for the spin angular momentum, and $t$ is the time spent on the evolution.
