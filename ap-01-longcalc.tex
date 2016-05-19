@@ -32,7 +32,31 @@ One may notice that with those relations is enough to see that we have six $\exp
 So each equation has at the end one $\expect{J_xJ_y^2J_x}$ plus or minus some expectation value of the product of three operators.
 
 If we sum all again, and we subtract $6\expect{J_xJ_y^2J_x}$ we will end with those three operator expectation values. They look like follows,
+\begin{multline}
+  \hspace{40pt}
+  i\expect{J_xJ_zJ_y}+2i\expect{J_xJ_yJ_z}+i\expect{J_yJ_xJ_z}-i\expect{J_xJ_yJ_z}-3i\expect{J_zJ_yJ_x} = \\
+  = i\expect{J_xJ_zJ_y}+i\expect{J_xJ_yJ_z}+i\expect{J_yJ_xJ_z}-3i\expect{J_zJ_yJ_x}.
+  \hspace{40pt}
+\end{multline}
+Again using the commutation relations we can further simplify this expression. Trying to get one $\expect{J_xJ_yJ_z}$ on each term, we obtain the following,
+\begin{subequations}
+\begin{align}
+  i\expect{J_xJ_zJ_y} & = \expect{J_x^2}+i\expect{J_xJ_yJ_z},
+  \label{eq:ap-last-terms-1} \\
+  i\expect{J_xJ_yJ_z} & = i\expect{J_xJ_yJ_z},
+  \label{eq:ap-last-term-2} \\
+  i\expect{J_yJ_xJ_z} & = \expect{J_z^2}+i\expect{J_xJ_yJ_z},
+  \label{eq:ap-simplification-3} \\
+\begin{split}
+  -3i\expect{J_zJ_yJ_x} & = -3\expect{J_x^2} - 3i \expect{J_yJ_zJ_x} \\
+  & = -3\expect{J_x^2} + 3 \expect{J_y^2} - 3i\expect{J_yJ_xJ_z} \\,
+  & = -3\expect{J_x^2} + 3 \expect{J_y^2} - 3\expect{J_z^2}
+   - 3i \expect{J_xJ_yJ_z}.
+  \label{eq:ap-simplification-4}
+\end{split}
+\end{align}
+\end{subequations}
+Now if we sum it all, note that the all 3 operators terms simplify, and if we take into account $6\expect{J_xJ_y^2J_x}$ the resulting expression is the following,
 \be
-  i\expect{J_xJ_zJ_y}+2i\expect{J_xJ_yJ_z}+i\expect{J_yJ_xJ_z}-3i\expect{J_zJ_yJ_x}-i\expect{J_xJ_yJ_z}.
+   3\expect{J_y^2} -2\expect{J_x^2}- 2 \expect{J_z^2} + 6\expect{J_xJ_y^2J_x}
 \ee
-Again using the commutation relations we can further simplify this expression.

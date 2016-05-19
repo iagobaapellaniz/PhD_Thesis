@@ -4,10 +4,11 @@ While the following results and the corresponding mathematics are obtained only 
 
 One of the figures of merit of this such unpolarized but still useful states is the so-called unpolarized Dicke state [XXX], which consists of, on its $Oz$-axis  representation, an equal number of qubits pointing up and pointing down while the whole state is symmetrised,
 \be
-  \ket{\text{D}_N^{N/2}} = \binom{N}{N/2}^{-\frac{1}{2}}
+  \ket{\text{D}_N^{0}} \equiv \ket{\text{D}_{N}}:= \binom{N}{N/2}^{-\frac{1}{2}}
   \sum_{k\in \sigma_{\text{s}}}
   P_k\left( \ket{1}^{\otimes N/2} \ket{0}^{\otimes N/2}
   \right).
+  \label{eq:vd-unpolarised-dicke}
 \ee
 Such state is known to be highly entangled [XXX].
 
@@ -26,7 +27,8 @@ On the other hand, we can use the error propagation formula Equation~(XX) to obt
 As one can see on the Figure~\ref{fig:vd-secuence-evo} a pure Dicke state is rotated along the $Oz$-axis.
 Say that in this case the initial state is an unpolarised Dicke state of aligned with the $Ox$-axis.
 \begin{figure}
-  \includegraphics[width=\textwidth]{img/plots/VD_evolution_of_dicke.pdf}
+  \centering
+  \includegraphics[scale=.65]{img/plots/VD_evolution_of_dicke.pdf}
   \caption{Secuence of the evolution of an unpolarized Dicke state of 16 qubits for $\Theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Hirusi distribution of the state, and below PDF of the $J_x$ POVM for each step of the secuence}
   \label{fig:vd-secuence-evo}
 \end{figure}
@@ -137,10 +139,94 @@ From the equations above directly follows expression for the precision of $\Thet
 \begin{split}
   \varian{\Theta} & = \frac{\varian{J_x^2}\text{c}_\Theta^4 + \varian{J_y^2} \text{s}_\Theta^4+ \big(\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}\big)\text{c}_\Theta^2\text{s}_\Theta^2}
   {4\expect{J_y^2-J_x^2}^2\text{c}_\Theta^2\text{s}_\Theta^2}\\
-  & = \frac{\varian{J_x^2}\text{t}_\Theta^{-2} + \varian{J_y^2} \text{t}_\Theta^2+ \big(\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}\big)}
+  & = \frac{\varian{J_x^2}\text{t}_\Theta^{-2} + \varian{J_y^2} \text{t}_\Theta^2+ \expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}}
   {4\expect{J_y^2-J_x^2}^2}.
 \end{split}
 \label{eq:vd-result-before-simp}
 \ee
 To this calculations further computations follows mainly regarding to the following expectation value $\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2}$.
-This calculus is left for the Appendix~{\ref{ap:loca-simplificatio}}.
+This calculus is left for the Appendix~{\ref{ap:loca-simplification}}.
+Finally, the expression Equation~{(\ref{eq:vd-result-before-simp})} leads to the following,
+\be
+  \varian{\Theta} = \frac{\varian{J_x^2}\text{t}_\Theta^{-2} + \varian{J_y^2} \text{t}_\Theta^2 + 3\expect{J_y^2} - 2 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
+  {4\expect{J_y^2-J_x^2}^2}
+  \label{eq:vd-precision-as-theta}
+\ee
+[IT IS SLIGHTLY DIFFERENT FROM THE PUBLICATION..., This difference would make invariant all the results except the plot SPSQ -> QFI vs BOUND, which in this case the bound gets improved!!]
+
+One can realize that the whole dependence on the phase shift is in the first two terms of the numerator.
+This way one can minimize the sum on the first two terms in order to find where the precision is best.
+So it follows that,
+\be
+  \tan^2(\Theta_{\text{opt}}) = \sqrt{\frac{\varian{J_x^2}}{\varian{J_y^2}}}
+\ee
+which inserted on the Equation~{(\ref{eq:vd-precision-as-theta})} gives us the optimal precision when the second moment $\expect{J_x^2}$ is measured based on the initial expectation values of the input state. The optimal precision is written in the following way,
+\be
+  \varian{\Theta} = \frac{\sqrt{\varian{J_x^2} \varian{J_y^2} } + 3\expect{J_y^2} - 2 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
+  {4\expect{J_y^2-J_x^2}^2}.
+  \label{eq:vd-precision}
+\ee.
+
+We conclude with this section checking our bound for the pure unpolarised Dicke state aligned with $Ox$, $\ket{\text{D}_N}_x$, whose precision bound is well known, Equation~{([XXX])}.
+With this aim we compute all the expectation values needed for the Equation~{(\ref{eq:vd-precision})} which almost all of them are trivial, $\expect{J_xJ_y^2J_x}=\expect{J_x^4}=\expect{J_x^2}=0$.
+The rest are obtained in the following way,
+\begin{align}
+  \expect{J_y^2} & = \expect{J_z^2} = \frac{N (N+2)}{8},
+  \label{eq:vd-2moment-pure-dicke}\\
+  \expect{J_y^4} & = \frac{N+2}{8}\left(\frac{3N(N+2)}{16}-\frac{1}{2}\right).
+  \label{eq:vd-4y-moment-pure-dicke}
+\end{align}
+The Equation~{(\ref{eq:vd-2moment-pure-dicke})} follows directly from the fact that the state is invariant under rotations on the $Ox$ axis, so they are its expectation values, because the sum of all the second moments must give the value of the total angular momentum, in this case the maximum which is $\expect{\bs{J}^2} = \frac{N (N+2)}{4}$, and because $\expect{J_x^2}=0$.
+The proof of the Equation~{(\ref{eq:vd-4y-moment-pure-dicke})} needs more algebra and has been left for the Appendix~{\ref{ap:}}.
+
+From the equations above, one lead to the following expression for the precision of the phase shift for a pure unpolarised Dicke state,
+\be
+  \varian{\Theta} = \frac{2}{N(N+2)},
+\ee
+which coincides exactly with the quantum Fisher information for the state.
+
+\subsection{Testing the formula against some known states}
+
+In this section we will compare our criteria based on few expectation values against the corresponding quantum Fisher information obtained for some known input states.
+Those input states will be first the family of states defined as the ground states of the following Hamiltonian, called the spin-squeezing Hamiltonian,
+\be
+  H_\lambda = J_x^2 - \lambda J_y.
+\ee
+For $\lambda$ equal to zero we have the unpolarized Dicke state, Equation~{(\ref{eq:vd-unpolarised-dicke})}, and for $\lambda$ large we recover the coherent totally polarized state pointing onto the $Oy$ direction.
+In the meantime the state is also a spin-squeezed state, therefore the name of the Hamiltonian.
+
+The second family of input states we are going use are the Gaussian mixture of Dicke states around the unpolarized Dicke state, which have the following form as function of $\beta$,
+\be
+  \rho_{\text{th}}(T) \propto \sum_{m=-N/2}^{N/2} e^{- \frac{m^2}{T}} \ket{\text{D}_N^m}_x\bra{\text{D}_N^m}_x.
+\ee
+
+\begin{figure}
+  \centering
+  \igwithlabel{(a)}{scale=.65}{img/plots/VD_against_spsq.pdf}
+  \igwithlabel{(b)}{scale=.65}{img/plots/VD_against_therm.pdf}
+  \caption{Comparison between our formula for the precision and the QFI for different states. (a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
+  \label{fig:bg-histograms}
+\end{figure}
+
+After showing how the optimal precision formula behaves compared with the quantum Fisher information for those two families of states, we also have to proof that they indeed fulfill the constraints on Equation~{(\ref{eq:vd-even-f-constraint})}.
+
+
+\subsection{Using our method with real experimental data}
+
+On reference [XXX], it is produced on the laboratory a state with the proper characteristics of an unpolarised Dicke state.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=.65]{img/plots/VD_precision_theta.pdf}
+  \caption{Comparison between our formula for the precision and the QFI for different states. (a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
+  \label{fig:bg-histograms}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \igwithlabel{(a)}{scale=.65}{img/plots/VD_exper_contour.pdf}
+  \igwithlabel{(b)}{scale=.65}{img/plots/VD_exper_slice.pdf}
+  \caption{Comparison between our formula for the precision and the QFI for different states. a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
+  \label{fig:bg-histograms}
+\end{figure}

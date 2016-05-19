@@ -89,12 +89,10 @@ Returning to the example of the Table~\ref{tab:bg-18-trees}, one may notice that
 This is represented with the distribution function $p_i$, which in this case is for discrete values of the outcomes but which can be generalized for continuous variables as we will see later.
 This function takes the value of how many times the outcome $i$ has appeared on the data sample.
 Let us plot the distribution function, see Figure~\ref{fig:bg-histograms}.
-\begin{figure}
+\begin{figure}[tp]
   \centering
-  \subfloat{
-    \includegraphics[width=0.4854015\textwidth]{img/plots/BG_hist_bin_1.pdf}}
-  \subfloat{
-    \includegraphics[width=0.475\textwidth]{img/plots/BG_hist_bin_2.pdf}}
+  \igwithlabel{(a)}{scale=.65}{img/plots/BG_hist_bin_1.pdf}
+  \igwithlabel{(b)}{scale=.65}{img/plots/BG_hist_bin_2.pdf}
   \caption{(a) $p_i$ for different values of $i$. All bars have width as 1, so it is drawn how many times each data value appears on the data sample.
   The width of the bars is called \emph{bin}, and it can change so the bars would represent a wider range of values. (b) Yo can see the same data represented in this case by a histogram with the bin size equal to 2. To produce this histogram we have summed 2 adjacent $p_i$ values starting from $p_1+p_2$, $p_3+p_4$ and so on.
   Those new bars we have chosen to represent a value in between, for instance $(3+4)/2=3.5$ and so on.}
@@ -160,23 +158,20 @@ The system state, $\rho$, has the following properties:
     They are orthonormal under the product defined on such Hilbert space $\mathcal{H}$\ie $\tr(\Pi_{\lambda}\Pi_{\lambda'})=\delta_{\lambda,\lambda'}$.
     Nevertheless, there is a extended discussion when Hilbert space is defined for continuous variables, see [XXX].
   } where $p_\lambda\geq 0$ are the scalar eigenvalues.
-  It follows that $\sum_\lambda p_\lambda = 1$ must be true.
-  \item If all $p_\lambda$ are zero except one, then the state is called a pure state.
-  \item The convex mixture of 2 different quantum states is also a quantum state, $\rho = p\rho_\text{A} + (1-p) \rho_\text{B}$, so the quantum states form a convex set where at the boundary are the pure states.
+  It follows that $\sum_\lambda p_\lambda = 1$.
+  \item If all $p_\lambda$ are zero except one, the state is a pure state, $\rho=\Pi_\lambda$.
+  \item It follows that the quantum states form a convex set where the extremal points are pure states.
 \end{enumerate}
 
 
 The composite system of $N$ different parties lives on $\mathcal{H} = \mathcal{H}^{(1)}\otimes\mathcal{H}^{(2)}\otimes\cdots\otimes\mathcal{H}^{(N)}$ or for short $\mathcal{H} = \bigotimes_{i=1}^N\mathcal{H}^{(i)}$, where $\otimes$ stands for a tensor product like construction.
 For instance, this composite Hilbert space could be used to represent a many-particle system, in this case $N$ particles.
-
-If a state can be described in the following way,
+A \emph{separable} state on this Hilbert space can be described in the following way,
 \be
   \rho = \sum_{i}p_i\rho_i^{(1)}\otimes\rho_i^{(2)}\otimes\cdots\otimes\rho_i^{(N)},
 \ee
-is said to be a \emph{separable} state.
-The separable states form a convex set
-If it cannot be written like this the state is \emph{entangled}.
-If such state is pure then it is called a \emph{product state}, and those states are on the boundary of the convex set of separable states. [SOMETHING IS WRONG HERE]
+where $p_i$ are convex weights that sum to one and are equal or bigger than zero.
+If not the state is said to be \emph{entangled}.
 
 
 Angular momentum operators.
@@ -231,12 +226,13 @@ Now in the simplest case we will choose the magnetic field to be pointing to som
 So the magnetic field vector can be written as ${B}=B\bs{k}$, where $\bs{k}$ is the unitary vector pointing to the $Oz$ direction.
 This way estimation problem is much more simple, since one has not to determine the direction of the magnetic field.
 
-Finally, if the magnetic moment of the system is proportional to the spin angular momentum, and interacts with the magnetic field as in the equation above, one can rewrite the interaction Hamiltonian above to be,
+The magnetic moment of the system is proportional to the spin angular momentum, $\bs{\mu}=-\mu_\text{B} g_{\text{s}}\hbar^{-1} \bs{J}$, where $\mu_{\text{B}}$ and $g_{\text{s}}$ are the Bohr magneton and anomalous gyromagnetic factor respectively.
+Finally, one can rewrite the interaction Hamiltonian as,
 \be
   H = \gamma B J_z
 \ee
-where $\gamma = $ and we have used the fact that $\bs{J}\cdot\bs{k}=J_z$.
-The unitary operator leading the evolution of the system can be written as,
+where $\gamma = \mu_\text{B} g_{\text{s}}\hbar^{-1}$ and we have used the fact that $\bs{J}\cdot\bs{k}=J_z$.
+Finally, the unitary operator leading the evolution of the system can be written as,
 \be
   U = \exp(-i\Theta J_z),
 \ee

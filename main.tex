@@ -14,7 +14,11 @@
 \usepackage{color}
 \usepackage[final]{pdfpages}
 
-\usepackage{subfig}
+\usepackage[demo,abs]{overpic}
+\newcommand{\igwithlabel}[3]{\begin{overpic}
+  [#2]{#3}
+  \put(5,10){\small #1}
+\end{overpic}}
 
 \usepackage{caption}
 \captionsetup{margin=10pt,font=small,labelfont=bf}
@@ -265,7 +269,7 @@ On the other hand I also felt very comfortable at my university, the University 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section[Backgroud on Quantum Metrology]
-{Development of Quantum Metrology}
+{Background on Quantum Metrology}
 \input{snp/singleLineWaterMark.tex}
 
 \input{02-background.tex}
