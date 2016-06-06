@@ -44,7 +44,7 @@ function plotLT_dickeEdge()
   plot([0,1],
       [1,1], color="0.7", linewidth=LWD, linestyle="dotted")
 
-  xlabel(L"\langle J_x^2 \rangle",fontsize=L_FSIZE)
+  xlabel(L"\langle J_x^2 \rangle/(N^2/4)",fontsize=L_FSIZE)
   ylabel(L"\mathcal{B}_{\mathcal{F}}/N",fontsize=L_FSIZE)
 
   plot(x,y, linewidth=LWD)
