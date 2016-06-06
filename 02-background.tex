@@ -16,7 +16,7 @@ On the other hand and with the aim of interpreting raw data, there are the stati
 
 
 
-\subsection{Background on statistics and theory of estimation}
+\subsection{Background on statistics and the theory of estimation}
 The main mathematical tools used by the metrology science belong to statistics.
 Moreover we are also interested on estimation theory.
 The statistics main characteristic is that makes the raw data under consideration comprehensible.
@@ -25,10 +25,10 @@ The aim of this section is to give the reader sufficient material to follow this
 
 \subsubsection{Data samples, average and variance}
 
-As we mentioned above, everything in statistics starts with a data set.
-A dataset is defined as a set of values, we will restrict ourselves to quantitative values, representing some physical quantity.
-So in our framework such a set can be written as $X=\{x_i\}_{i=1}^M$, where all $M$ values are collected.
-An illustrative example with 18 heights of different trees is sketched on the Table~\ref{tab:bg-18-trees}.
+As we mentioned above, everything in statistics starts with a data sample.
+A data sample is defined as a set of values, we will restrict ourselves to quantitative values for simplicity, representing some magnitude.
+So, in our framework such a set can be written as $X=\{x_i\}_{i=1}^M$, where all $M$ values are collected.
+An illustrative example with 18 heights of different trees is shown on the Table~\ref{tab:bg-18-trees}.
 \begin{table}
   \begin{center}
     \begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | }
@@ -41,6 +41,9 @@ An illustrative example with 18 heights of different trees is sketched on the Ta
   \caption{A set of values for the heights of 18 trees. All measurements were rounded to integers for simplicity.}
   \label{tab:bg-18-trees}
 \end{table}
+It is worth to notice that this data sample represents a continuous variable, the height of some trees, while we have grouped more than a single instances into integer values.
+If we would use more decimals to describe the data probably all values would have been different among each other. 
+This discussion is not so essential when discrete outcomes are analyzed
 
 This picture can be extend to more outcomes coming from a single \emph{event} or measure.
 For instance, a second value such as the width of the tree could be attached to each height on the previous example.
@@ -193,11 +196,12 @@ Quantum Information
 
 \subsection{Quantum Metrology}
 
-Histograms of quantum states
-
-Merging the probabilistic features of quantum mechanics with the estimation theory is not trivial.
-
-The figure of merit for this purpose is the so-called Quantum Fisher Information.
+The evolution of a quantum state can be used to infer on some hidden parameter.
+The estimation theory applied to the intrinsic statistical nature of a quantum states has lead to the the formulation of Quantum Metrology as an important subfield.
+Merging the probabilistic features of quantum mechanics and the estimation theory is not trivial.
+Nevertheless, starting from the pioneering works of Wotters, Braunstein and some other I probably forgot to mention [XXX] were the statistical distance of neighbor states is studied we have lead to amazing results which today drive many experiments and technology.
+From the works of Giovannetti et al and Paris on the middle of the last decade fundamental concepts arose, for example the figure of merit quantum Fisher information or the Heisenberg limit.
+In this section we will highlight the most important aspects of this field and with this we will conclude this introductory chapter.
 
 The error propagation formula for an estimation of $\Theta$ based on the observable $O$.
 \be
