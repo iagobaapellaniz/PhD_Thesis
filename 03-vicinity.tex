@@ -153,11 +153,13 @@ To this calculations further computations follows mainly regarding to the follow
 This calculus is left for the Appendix~{\ref{ap:loca-simplification}}.
 Finally, the expression Equation~{(\ref{eq:vd-result-before-simp})} leads to the following,
 \be
-  \varian{\Theta} = \frac{\varian{J_x^2}\text{t}_\Theta^{-2} + \varian{J_y^2} \text{t}_\Theta^2 + 3\expect{J_y^2} - 2 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
+  \varian{\Theta} = \frac{\varian{J_x^2}\text{t}_\Theta^{-2} + \varian{J_y^2} \text{t}_\Theta^2 + 4\expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
   {4\expect{J_y^2-J_x^2}^2}
   \label{eq:vd-precision-as-theta}
 \ee
-[IT IS SLIGHTLY DIFFERENT FROM THE PUBLICATION..., This difference would make invariant all the results except the plot SPSQ -> QFI vs BOUND, which in this case the bound gets improved!!]
+[WOW IN THE PAPER FINALLY IT IS CORRECT!!]
+
+We have verified the correctness of our analytical formula with a numeric simulation of the expectation value of Equation~[ERROR PROP. FORM.] and the equation above. The state used for that it is
 
 \subsubsection{The optimal precision}
 One can realize that the whole dependence on the phase shift is in the first two terms of the numerator.
@@ -168,7 +170,7 @@ So it follows that,
 \ee
 which inserted on the Equation~{(\ref{eq:vd-precision-as-theta})} gives us the optimal precision when the second moment $\expect{J_x^2}$ is measured based on the initial expectation values of the input state. The optimal precision is written in the following way,
 \be
-  \varian{\Theta}_{\text{opt}} = \frac{\sqrt{\varian{J_x^2} \varian{J_y^2} } + 3\expect{J_y^2} - 2 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
+  \varian{\Theta}_{\text{opt}} = \frac{\sqrt{\varian{J_x^2} \varian{J_y^2} } + 4 \expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
   {4\expect{J_y^2-J_x^2}^2}.
   \label{eq:vd-precision}
 \ee.
