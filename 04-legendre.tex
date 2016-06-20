@@ -14,6 +14,40 @@ The figure of merit of bounds from below for the quantum Fisher information base
 where the state is polarized along the $Ox$-axis and the variance of the $J_y$ operator is smaller than the standard.
 On the previous chapter we also have shown one of these bound specifically designed for unpolarized Dicke states.
 
+Homogeneous magnetometry, $\bs{B} = B\bs{k}$ where $B$ is constant in time.
+
+Section~[REF], see magnetometry, generator $J_z$.
+
+Quantum Fisher information $\mathcal{F}_{\text{Q}} [\rho, J_z]$.
+
+\subsection{Minimum of a convex funtion of the states based on the expectation values}
+
+Convex function of states, $g(\rho)$.
+
+Which is the lowest possible value of $g(\rho)$ for a state where some expectation values of $\{W_{i}\}_{i=0}^M$ operators, $w_i = \tr(\rho {W}_i)$ are known?
+
+Such bound is defined,
+\be
+  g(\rho) \geq \mathcal{B}_{g}(w_1,w_2,...)
+\ee
+
+For this purpose we use simplify our discourse to one observable or equivalently one parameter, $w = \tr(\rho W)$ and formally the bound is defined as follows,
+\be
+  g(\rho) \geq \big\{ \mathcal{B}_{g}(w) := \min_{\rho}  g(\rho) \;|\; w = \tr(\rho W)\big\}.
+\ee
+
+The bound from below of such a funtion $g(\rho)$ is convex too [NEED TO BE SHOWN?].
+
+Therefore, we use the Legendre transform to get rid out of the state and still keep all the necessary information to reconstruct the $\mathcal{B}_{g}$ bound.
+\be
+  \hat{g}(r) = \sup_{\rho}\{ r\expect{W}_{\rho}-g(\rho)\}
+\ee
+
+Now we have the Legendre transform, we recover the bound from below of $g(\rho)$ as
+\be
+  \mathcal{B}_g (w) = \sup_{r}\big\{rw-\sup_{\rho}\{r\expect{W}_{\rho}-g(\rho)\}\big\}
+\ee
+
 
 \be
   \mathcal{B}_{\mathcal{F}}(w_1,w_2,...)
