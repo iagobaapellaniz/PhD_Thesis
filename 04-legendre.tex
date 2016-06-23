@@ -40,15 +40,28 @@ The bound from below of such a funtion $g(\rho)$ is convex too [NEED TO BE SHOWN
 
 Therefore, we use the Legendre transform to get rid out of the state and still keep all the necessary information to reconstruct the $\mathcal{B}_{g}$ bound.
 \be
-  \hat{g}(r) = \sup_{\rho}\{ r\expect{W}_{\rho}-g(\rho)\}
+  \hat{g}(rW) = \sup_{\rho}\{ r\expect{W}_{\rho}-g(\rho)\}
 \ee
 
 Now we have the Legendre transform, we recover the bound from below of $g(\rho)$ as
 \be
   \mathcal{B}_g (w) = \sup_{r}\big\{rw-\sup_{\rho}\{r\expect{W}_{\rho}-g(\rho)\}\big\}
 \ee
+This equation has been applied on entanglement measures, when $g(\rho)$ is defined as using the convex roof construction.
+On that case when the function $g(\rho)$ is extended from the well defined region for pure states to the mixed states using the convex roof construction,
+\be
+  g(\rho) = \inf_{\{p_k,\ket{\phi_k}\}}\big\{\sum_{k}p_k g(\ket{\phi_k})\big\}
+\ee
+for any decomposition $\rho=\sum_k p_k \ketbra{\phi_k}{\phi_k}$, the Equation~[XX] can be further simplified.
+Let us focus on the inner maximization,
+\be
+\begin{split}
+  \hat{g}(rW) & = \sup_{\rho}\{r\expect{W}_\rho - g(\rho)\} \\
+  & =\sup_{\rho}\Big\{r\expect{W}_\rho - \inf_{\{p_k,\ket{\phi_k}\}}\big\{\sum_{k}p_k g(\ket{\phi_k})\big\} \Big\}
+\end{split}
+\ee
 
-
+This can be extended for several observables.
 \be
   \mathcal{B}_{\mathcal{F}}(w_1,w_2,...)
 \ee
