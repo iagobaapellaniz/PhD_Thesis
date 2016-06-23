@@ -42,11 +42,14 @@ Therefore, we use the Legendre transform to get rid out of the state and still k
 \be
   \hat{g}(rW) = \sup_{\rho}\{ r\expect{W}_{\rho}-g(\rho)\}
 \ee
+[FIGURE OF CONVEXITY]
 
 Now we have the Legendre transform, we recover the bound from below of $g(\rho)$ as
 \be
-  \mathcal{B}_g (w) = \sup_{r}\big\{rw-\sup_{\rho}\{r\expect{W}_{\rho}-g(\rho)\}\big\}
+  \mathcal{B}_g (w) = \sup_{r}\big\{rw-\sup_{\rho}\{r\expect{W}_{\rho}-g(\rho)\}\big\}.
 \ee
+To clarify, notice that the $\rho$ appearing on the inner maximization is in principle not related with the one appearing on $g(\rho)$.
+
 This equation has been applied on entanglement measures, when $g(\rho)$ is defined as using the convex roof construction.
 On that case when the function $g(\rho)$ is extended from the well defined region for pure states to the mixed states using the convex roof construction,
 \be
@@ -57,7 +60,19 @@ Let us focus on the inner maximization,
 \be
 \begin{split}
   \hat{g}(rW) & = \sup_{\rho}\{r\expect{W}_\rho - g(\rho)\} \\
-  & =\sup_{\rho}\Big\{r\expect{W}_\rho - \inf_{\{p_k,\ket{\phi_k}\}}\big\{\sum_{k}p_k g(\ket{\phi_k})\big\} \Big\}
+  &=\sup_{\rho}\Big\{r\expect{W}_\rho - \inf_{\{p_k,\ket{\phi_k}\}}\big\{\sum_{k} p_k g(\ket{\phi_k})\big\} \Big\} \\
+  &=\sup_{\{p_k, \ket{\phi_k}\}} \Big\{ \sum_k p_k r\expect{W}_{\ket{\phi_k}} - \inf_{\{p_k, \ket{\phi_k}\}} \big\{\sum_k p_k g(\ket{\phi_k}) \big\}  \Big\} \\
+  &=\sup_{\{p_k, \ket{\phi_k}\}} \Big\{ \sum_k p_k \big\{ r\expect{W}_{\ket{\phi_k}} - g(\ket{\phi_k}) \big\} \Big\} \\
+  &=\sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}} - g(\ket{\psi}) \big\}.
+\end{split}
+\ee
+So now we have restricted the maximization to only pure states.
+
+Further simplification can be achieved for quantum Fisher information,
+\be
+\begin{split}
+  \hat{\mathcal{F}}_{\text{Q}}(rW) &= \sup_{\ket{\psi}}\big\{r\expect{W}_{\ket{\psi}}-4\varian{J_z}_{\ket{\psi}}\big\} \\
+  &= \sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}}-4\expect{J_z^2}_{\ket{\psi}} + 4\expect{J_z}^2_{\ket{\psi}} \big\}
 \end{split}
 \ee
 
