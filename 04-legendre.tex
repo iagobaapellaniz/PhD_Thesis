@@ -22,7 +22,7 @@ Quantum Fisher information $\mathcal{F}_{\text{Q}} [\rho, J_z]$.
 
 \subsection{Minimum of a convex funtion of the states based on the expectation values}
 
-Convex function of states, $g(\rho)$.
+Convex function of state, $g(\rho)$.
 
 Which is the lowest possible value of $g(\rho)$ for a state where some expectation values of $\{W_{i}\}_{i=0}^M$ operators, $w_i = \tr(\rho {W}_i)$ are known?
 
@@ -68,13 +68,32 @@ Let us focus on the inner maximization,
 \ee
 So now we have restricted the maximization to only pure states.
 
-Further simplification can be achieved for quantum Fisher information,
+The quantum Fisher information is of this type.
+
+Even further simplification can be achieved for quantum Fisher information,
 \be
 \begin{split}
   \hat{\mathcal{F}}_{\text{Q}}(rW) &= \sup_{\ket{\psi}}\big\{r\expect{W}_{\ket{\psi}}-4\varian{J_z}_{\ket{\psi}}\big\} \\
-  &= \sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}}-4\expect{J_z^2}_{\ket{\psi}} + 4\expect{J_z}^2_{\ket{\psi}} \big\}
+  &= \sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}}-4\expect{J_z^2}_{\ket{\psi}} + 4\expect{J_z}^2_{\ket{\psi}} \big\} \\
+  &= \sup_{\ket{\psi}} \{\expect{rW-4J_z^2}_{\ket{\psi}} +
+  \expect{2J_z}^2_{\ket{\psi}}\},
 \end{split}
 \ee
+which is clearly a second order maximization over pure states.
+
+With that at hand we are able to prove the following observation: the Legendre transform of the highest lower bound of the quantum Fisher information when the expectation value of some operator $W$ is known, can be written as the maximization over some parameter $\mu$ of the highest eigenvalue of $rW-4(J_z-\mu)^2$.
+This can  be expressed as follows,
+\be
+  \hat{\mathcal{F}}_{\text{Q}}(rW) = \sup_\mu \{\lambda_{\max} (rW-4(J_z-\mu)^2)\}
+\ee
+
+With this a tight bound from below for the quantum Fisher information can be found when the expectation value of an observable, say $W$, is known as follows,
+\be
+  \mathcal{B}_{\mathcal{F}} = \sup_r \big\{ rw - \sup_{\ket{\psi}} \{\expect{rW-4J_z^2} + \expect{2J_z}^2\}\big\}.
+\ee
+One may notice that the inner maximization is a second order maximization.
+
+
 
 This can be extended for several observables.
 \be
