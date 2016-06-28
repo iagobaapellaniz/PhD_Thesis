@@ -78,11 +78,9 @@ end
 function plotVD_againstSPSQ()
 
     # Open data group of the plot
-    group = g_open(h5open("plotsData.h5"),"VicinityDicke/Comparison")
-
-    parameter = d_read(group,"spsq_parameter")
-    quantumFI = d_read(group,"spsq_qfi")
-    precision = d_read(group,"spsq_opt_prec")
+    parameter = h5read("plotsData.h5","VD/comparison/spsq_parameter")
+    quantumFI = h5read("plotsData.h5","VD/comparison/spsq_qfi")
+    precision = h5read("plotsData.h5","VD/comparison/spsq_opt_prec_old")
 
     fig = figure(figsize=(5,3.5))
     xl = xlabel(L"$\lambda$ [A.U.]", fontsize=L_FSIZE)
@@ -91,12 +89,11 @@ function plotVD_againstSPSQ()
 
     ax = axis(xmin=0, xmax=maximum(parameter), ymin=0, ymax=140)
 
-    plot(parameter,quantumFI,"--r", linewidth=LWD,label=L"\mathcal{F}\,[\rho_\lambda,J_z]")
+    plot(parameter,quantumFI,"--r", linewidth=LWD,label=L"\mathcal{F}\,[\rho_\lambda,J_z]/N")
     plot(parameter,precision,linewidth=LWD,label=L"(\Delta \Theta)^{-2}/N")
     legend(frameon=false)
 
     savefig("pdf/VD_against_spsq.pdf", bbox_inches="tight")
-
 end
 
 function plotVD_againstTherm()
@@ -114,7 +111,7 @@ function plotVD_againstTherm()
 
     ax = axis(xmin=0, xmax=maximum(parameter))
 
-    plot(parameter,quantumFI,"--r", linewidth=LWD,label=L"\mathcal{F}\,[\rho_T,J_z]")
+    plot(parameter,quantumFI,"--r", linewidth=LWD,label=L"\mathcal{F}\,[\rho_T,J_z]/N")
     plot(parameter,precision,linewidth=LWD,label=L"(\Delta \Theta)^{-2}/N")
     legend(frameon=false)
 
@@ -221,5 +218,71 @@ function plotVD_exper_slice()
     savefig("pdf/VD_exper_slice.pdf", bbox_inches="tight")
 
     close(dataFile)
-
 end
+
+plotVD_exper_slice()
+
+function plotVD_simulation()
+
+  theta = h5read("plotsData.h5", "VD/simulation/times")
+    ana_precision = h5read("plotsData.h5", "VD/simulation/ana_precision")
+    sim_precision = h5read("plotsData.h5", "VD/simulation/sim_precision")
+
+  fig, plt1 = subplots()
+    fig[:set_size_inches](5,3.5)
+    plt2 = fig[:add_axes]([0.56,0.72,0.28,0.12])
+    plt1[:set_xlabel](L"$\Theta$", fontsize=L_FSIZE)
+    plt1[:set_ylabel](L"$(\Delta Θ)^{-2}/N$", fontsize=L_FSIZE)
+    plt2[:set_title]("Square error", fontsize=10)
+
+  plt1[:bar](minimum(theta),1,maximum(theta),0, color="0.9",
+      edgecolor="0.7",linewidth=0)
+  plt1[:plot]([minimum(theta),maximum(theta)],
+      [1,1], color="0.7", linewidth=LWD, linestyle="dotted")
+
+  p1, = plt1[:plot](theta[1:end-1],ana_precision,linewidth=LWD)
+  p2, = plt2[:plot](theta[1:end-1],(ana_precision-sim_precision).^2, "r")
+
+  plt1[:set_xlim]([0,pi])
+    plt1[:set_xticks]([0,pi/4,pi/2,3*pi/4,pi])
+    plt1[:set_xticklabels](["0",L"$\pi$/4",L"$\pi$/2",L"3$\pi$/4",L"\pi"])
+    plt1[:set_ylim]([0,2])
+    # plt1[:spines]["top"][:set_visible](false)
+    plt1[:xaxis][:set_ticks_position]("bottom")
+    # plt2[:xaxis][:tick_top]()
+    plt2[:set_ylim]([0,0.0004])
+    plt2[:set_xlim]([0,pi])
+    plt2[:set_xticks]([0,pi/2,pi])
+    plt2[:set_xticklabels](["0",L"$\pi$/2",L"\pi"], fontsize=10)
+    plt2[:set_yticks]([0,2e-4,4e-4])
+    plt2[:set_yticklabels](["0e-4","2e-4","4e-4"], fontsize=10)
+  # SN thresold
+
+  savefig("pdf/VD_simulation.pdf", bbox_inches="tight")
+end
+
+plotVD_simulation()
+
+function plotVD_parity_simulation()
+
+  theta = h5read("plotsData.h5", "VD/parity_simulation/time")
+  second = h5read("plotsData.h5", "VD/parity_simulation/secondmoment")
+  fourth = h5read("plotsData.h5", "VD/parity_simulation/fourthmoment")
+
+  fig = figure(figsize=(5,3.5))
+  plt1 = plot(theta,second,linewidth=LWD, label=L"\langle J_x^2 \rangle")
+  plot(theta,fourth,linewidth=LWD, "r--", label=L"\langle J_x^4 \rangle")
+
+  ax = plt1[1][:axes]
+  ax[:set_xlim]([-pi,pi])
+  ax[:set_ylim]([0,80])
+  ax[:set_xlabel](L"$\Theta$", fontsize=L_FSIZE)
+
+  ax[:set_ylabel]("[A.U.]", fontsize=L_FSIZE)
+
+  legend()
+
+  savefig("pdf/VD_parity_simulation.pdf", bbox_inches="tight")
+end
+
+plotVD_parity_simulation()
