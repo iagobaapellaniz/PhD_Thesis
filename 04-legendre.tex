@@ -78,22 +78,23 @@ Even further simplification can be achieved for quantum Fisher information,
   &= \sup_{\ket{\psi}} \{\expect{rW-4J_z^2}_{\ket{\psi}} +
   \expect{2J_z}^2_{\ket{\psi}}\},
 \end{split}
+\label{eq:lt-legendre-of-qfi}
 \ee
 which is clearly a second order maximization over pure states.
 
 With that at hand we are able to prove the following observation: the Legendre transform of the highest lower bound of the quantum Fisher information when the expectation value of some operator $W$ is known, can be written as the maximization over some parameter $\mu$ of the highest eigenvalue of $rW-4(J_z-\mu)^2$.
 This can  be expressed as follows,
 \be
-  \hat{\mathcal{F}}_{\text{Q}}(rW) = \sup_\mu \{\lambda_{\max} (rW-4(J_z-\mu)^2)\}
+  \hat{\mathcal{F}}_{\text{Q}}(rW) = \sup_\mu \{\lambda_{\max} (rW-4(J_z-\mu)^2)\}.
 \ee
+
+Another way of getting the result of the maximization for the second order equation is parameterizing the eigenstate with the maximum eigenvalue of the operator $rW-4(J_z-\mu)^2$, so we get $\ket{\phi_{\max}(\mu)}$, and finally computing the expectation values of Equation~(\ref{eq:lt-legendre-of-qfi}) and maximizing it. 
 
 With this a tight bound from below for the quantum Fisher information can be found when the expectation value of an observable, say $W$, is known as follows,
 \be
   \mathcal{B}_{\mathcal{F}} = \sup_r \big\{ rw - \sup_{\ket{\psi}} \{\expect{rW-4J_z^2} + \expect{2J_z}^2\}\big\}.
 \ee
 One may notice that the inner maximization is a second order maximization.
-
-
 
 This can be extended for several observables.
 \be
