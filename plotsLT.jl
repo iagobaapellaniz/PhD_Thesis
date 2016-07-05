@@ -157,10 +157,44 @@ function plotLT_legendre()
   scatter([x_opt, x_opt], [y_opt, yy_opt], color="k")
 
   xlim([-0.5,3.5])
-  ylim([-3,4])
+  ylim([-3,5])
   xlabel(L"$x$", fontsize=L_FSIZE)
   ylabel(L"$y$", fontsize=L_FSIZE)
 
   savefig("pdf/LT_legendre.pdf", bbox_inches="tight")
 end
 plotLT_legendre();
+
+function plotLT_edgeDiff()
+  x4    = h5read("plotsData.h5", "/LT/edgeDifference/jz4")
+  x6    = h5read("plotsData.h5", "/LT/edgeDifference/jz6")
+  x10   = h5read("plotsData.h5", "/LT/edgeDifference/jz10")
+  x20   = h5read("plotsData.h5", "/LT/edgeDifference/jz20")
+  x1000 = h5read("plotsData.h5", "/LT/edgeDifference/jz1000")
+  y4    = h5read("plotsData.h5", "/LT/edgeDifference/diff4")
+  y6    = h5read("plotsData.h5", "/LT/edgeDifference/diff6")
+  y10   = h5read("plotsData.h5", "/LT/edgeDifference/diff10")
+  y20   = h5read("plotsData.h5", "/LT/edgeDifference/diff20")
+  y1000 = h5read("plotsData.h5", "/LT/edgeDifference/diff1000")
+
+  # For 5 plots choose 5 viridis colors
+  color_viridis_array = PyPlot.ColorMap("viridis")[:colors]
+  step= 50
+
+  fig = figure(figsize=(5,3.5))
+
+  xlim([0,1])
+  ylim([0,3])
+
+  xlabel(L"\langle J_y\rangle/(N/2)", fontsize=L_FSIZE)
+  ylabel(L"$\Delta_{\mathcal{B}}/\mathcal{B}_{\mathcal{F}}$ [%]", fontsize=L_FSIZE)
+
+  plot(x1000,100*y1000, linewidth=LWD, color=color_viridis_array[1+4*step,:])
+  plot(x20,100*y20, "--", linewidth=LWD, color=color_viridis_array[1+3*step,:])
+  plot(x10,100*y10, "-.", linewidth=LWD, color=color_viridis_array[1+2*step,:])
+  plot(x6,100*y6, ":", linewidth=LWD, color=color_viridis_array[1+step,:])
+  plot(x4,100*y4, "-",linewidth=LWD, color=color_viridis_array[1,:])
+
+  savefig("pdf/LT_edge_diff.pdf", bbox_inches="tight")
+end
+plotLT_edgeDiff();
