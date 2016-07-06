@@ -198,3 +198,43 @@ function plotLT_edgeDiff()
   savefig("pdf/LT_edge_diff.pdf", bbox_inches="tight")
 end
 plotLT_edgeDiff();
+
+function plotLT_spsq_scaling_1()
+
+  x = h5read("plotsData.h5", "LT/spinSqueezingScaling/n_1")
+  y = h5read("plotsData.h5", "LT/spinSqueezingScaling/qfi_norm_1")
+  y_value = h5readattr("plotsData.h5", "LT/spinSqueezingScaling/")["PS-Result"]
+
+  fig = figure(figsize=(5,3.5))
+
+  ax = axis(xmin=0, xmax=2400, ymin=6.604, ymax=6.619)
+
+  xlabel(L"N'",fontsize=L_FSIZE)
+  ylabel(L"\mathcal{B}_{\mathcal{F}}/N",fontsize=L_FSIZE)
+
+  plot([0,2500],[y_value,y_value],"r--", linewidth=LWD)
+  plot(x,y, linewidth=LWD, "-o")
+
+  savefig("pdf/LT_spsq_scaling_1.pdf", bbox_inches="tight")
+end
+plotLT_spsq_scaling_1()
+
+function plotLT_spsq_scaling_2()
+
+  x = h5read("plotsData.h5", "LT/spinSqueezingScaling/n_2")
+  y = h5read("plotsData.h5", "LT/spinSqueezingScaling/qfi_norm_2")
+  y_value = h5readattr("plotsData.h5", "LT/spinSqueezingScaling/")["PS-Result"]
+
+  fig = figure(figsize=(5,3.5))
+
+  ax = axis(xmin=0, xmax=650, ymin=6.4, ymax=9)
+
+  xlabel(L"N'",fontsize=L_FSIZE)
+  ylabel(L"\mathcal{B}_{\mathcal{F}}/N",fontsize=L_FSIZE)
+
+  plot([0,2500],[y_value,y_value],"r--", linewidth=LWD)
+  plot(x,y, linewidth=LWD, "-o")
+
+  savefig("pdf/LT_spsq_scaling_2.pdf", bbox_inches="tight")
+end
+plotLT_spsq_scaling_2()
