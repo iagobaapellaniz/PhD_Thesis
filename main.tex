@@ -3,6 +3,7 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{tabularx,booktabs}
 \usepackage{todonotes}
 
 %\usepackage{lipsum}
@@ -205,12 +206,24 @@ Spin squeezing and entanglement for an arbitrary spin
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Tables, figures and abbreviations}
 \fancyfoot[LE,RO]{\thepage}
+\subsection*{Abbreviations}
+\begin{tabular}{r c l}
+  SLD & - & Symmetric logarithmic derivative \\
+  QFI & - & Quantum Fisher information \\
+\end{tabular}
 
-[Insert in a table]
+\subsection*{Figures}
 
-SLD - Symmetric logarithmic derivative.
+\begin{tabularx}{\textwidth}{r c X r}
+  2.1 & - & Symmetric logarithmic derivative \dotfill & 24\\
+  2.2 & - & Quantum Fisher information \dotfill & 45\\
+\end{tabularx}
 
-QFI - Quantum Fisher information
+\subsection*{Tables}
+\begin{tabular}{r c l}
+  SLD & - & Symmetric logarithmic derivative \\
+  QFI & - & Quantum Fisher information \\
+\end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % THESIS
@@ -254,10 +267,9 @@ On the other hand I also felt very comfortable at my university, the University 
 % HEADINGS AND PAGE NUM.
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand{\rightmark}{\bf \thesubsection}
 \renewcommand{\headrulewidth}{0.5pt}
 \fancyfoot[LE,RO]{\thepage}
-\fancyhead[LE]{Section: \rightmark} % TODO: Solve heading
+\fancyhead[LE]{\rightmark}
 \fancyhead[RO]{\leftmark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
