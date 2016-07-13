@@ -68,19 +68,19 @@ Let us focus by now on the inner maximization,
   &=\sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}} - g(\ket{\psi}) \big\}.
 \end{split}
 \ee
-So now we have restricted the maximization to only pure states as it is shown on Reference~[\cite{}].
+So now we have restricted the maximization to only pure states as it is shown on Reference~\cite{XXX}.
 
 One the other hand, one can find different definitions of the QFI in the literature.
-Among those definitions there is one that defines the QFI as the convex roof of four times the variance of the generator of the unitary phase shift that suffers the state.
+Among those definitions, there is one that defines the QFI as the convex roof of four times the variance of the generator of the unitary phase shift that suffers the state \cite{XXX}.
 This can be written in the following way,
 \be
-  \qfi[\rho, G] = \inf
+  \qfi[\rho, G] = \inf_{\{p_k, \ket{\phi_k}\}}4\sum_k p_k (\Delta G)_{\ket{\phi_k}}^2
 \ee
 
 Even further simplification can be achieved for quantum Fisher information,
 \be
 \begin{split}
-  \hat{\mathcal{F}}_{\text{Q}}(rW) &= \sup_{\ket{\psi}}\big\{r\expect{W}_{\ket{\psi}}-4\varian{J_z}_{\ket{\psi}}\big\} \\
+  \hat{\qfi}(rW) &= \sup_{\ket{\psi}}\big\{r\expect{W}_{\ket{\psi}}-4\varian{J_z}_{\ket{\psi}}\big\} \\
   &= \sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}}-4\expect{J_z^2}_{\ket{\psi}} + 4\expect{J_z}^2_{\ket{\psi}} \big\} \\
   &= \sup_{\ket{\psi}} \{\expect{rW-4J_z^2}_{\ket{\psi}} +
   \expect{2J_z}^2_{\ket{\psi}}\},
@@ -89,17 +89,21 @@ Even further simplification can be achieved for quantum Fisher information,
 \ee
 which is clearly a second order maximization over pure states.
 
-With that at hand we are able to prove the following observation: the Legendre transform of the highest lower bound of the quantum Fisher information when the expectation value of some operator $W$ is known, can be written as the maximization over some parameter $\mu$ of the highest eigenvalue of $rW-4(J_z-\mu)^2$.
+With that at hand we are able to prove the following observation: the Legendre transform of the highest lower bound of the quantum Fisher information when the expectation value of some operator $W$ is known, can be written as the maximization over some parameter $\mu$ of the highest eigenvalue  $\lambda_{\max}(rW-4(J_z-\mu)^2)$.
 This can  be expressed as follows,
 \be
-  \hat{\mathcal{F}}_{\text{Q}}(rW) = \sup_\mu \{\lambda_{\max} (rW-4(J_z-\mu)^2)\}.
+  \hat{\qfi}(rW) = \sup_\mu \{\lambda_{\max} (rW-4(J_z-\mu)^2)\},
 \ee
+where at the maximum the derivative with respect to $\mu$ must be zero for this quadratic function on the state.
+Hence, the value of $\mu$ will coincide with the expectation value on the optimal state $\expect{J_z}_{\psi}$
+Therefore, the finding of the optimal parameter $\mu$ is delimited to the range defined by $[\expect{J_z}_{\min},\expect{J_z}_{\max}]$.
+For qubits this means that we have to perform a search for $\mu_{\text{opt}}$ in between $-N/2\leq \mu \leq N/2$.
 
 Another way of getting the result of the maximization for the second order equation is parameterizing the eigenstate with the maximum eigenvalue of the operator $rW-4(J_z-\mu)^2$, so we get $\ket{\phi_{\max}(\mu)}$, and finally computing the expectation values of Equation~(\ref{eq:lt-legendre-of-qfi}) and maximizing it.
 
 With this a tight bound from below for the quantum Fisher information can be found when the expectation value of an observable, say $W$, is known as follows,
 \be
-  \mathcal{B}_{\mathcal{F}} = \sup_r \big\{ rw - \sup_{\ket{\psi}} \{\expect{rW-4J_z^2} + \expect{2J_z}^2\}\big\}.
+  \mathcal{B}_{\mathcal{F}}(w) = \sup_r \big\{ rw - \sup_{\ket{\psi}} \{\expect{rW-4J_z^2} + \expect{2J_z}^2\}\big\}.
 \ee
 One may notice that the inner maximization is a second order maximization.
 
@@ -129,8 +133,8 @@ The contraction of two of those vectors must be seen as a scalar product\ie $\bs
   \centering
   \includegraphics[scale=.65]{img/plots/LT_edge_diff.pdf}
   \caption{Difference between the bound of Pezze-Smerzi and the optimal bound for the quantum Fisher information normalized by the value of the optimal bound itself for the bosonic ground states of $H=J_x^2-\lambda J_y$ for $\forall \lambda \in [0,\infty)$.
-  From dark to lighter colors (line, point, dash-point, dashed, pointed, line), results for different particle numbers, $N=4,6,10,20,1000$.
-  Heuristically, one can say that for large particle number the difference is biggest when the polarisation is around two thirds of the maximal polarisation and that this difference is about $2.6\%$.}
+  From dark to lighter colors (line, point, dash-point, dashed, pointed, line), results for different particle numbers, $N=4,6,10,20,1000$ respectively.
+  Heuristically speaking, one can say that for large particle number the difference is biggest when the polarisation is around two thirds of the maximal polarisation and that this difference is about $2.6\%$.}
   \label{fig:lt-edge-diff}
 \end{figure}
 
