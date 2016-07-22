@@ -45,8 +45,6 @@
   Author                   = {Apellaniz, Iagoba and Kleinmann, Matthias and G{\"u}hne, Otfried and Toth, Geza},
   Journal                  = {arXiv preprint arXiv:1511.05203},
   Year                     = {2015},
-
-  __markedentry            = {[iapellaniz:]},
   Owner                    = {iapellaniz},
   Timestamp                = {2016.05.10}
 }
@@ -59,6 +57,7 @@
   Number                   = {8},
   Pages                    = {083027},
   Volume                   = {17},
+
   Owner                    = {iapellaniz},
   Publisher                = {IOP Publishing},
   Timestamp                = {2016.05.10}
@@ -70,6 +69,7 @@
   Publisher                = {John Wiley \& Sons},
   Year                     = {1989},
   Volume                   = {29},
+
   Owner                    = {iapellaniz},
   Timestamp                = {2016.05.10}
 }
@@ -2017,6 +2017,7 @@
   Number                   = {supp01},
   Pages                    = {125--137},
   Volume                   = {7},
+
   Owner                    = {iapellaniz},
   Publisher                = {World Scientific},
   Timestamp                = {2016.05.10}
@@ -2189,6 +2190,7 @@
   Author                   = {Riley, Kenneth Franklin and Hobson, Michael Paul and Bence, Stephen John},
   Publisher                = {Cambridge University Press},
   Year                     = {2006},
+
   Owner                    = {iapellaniz},
   Timestamp                = {2016.05.10}
 }
@@ -2438,6 +2440,7 @@
   Number                   = {42},
   Pages                    = {424006},
   Volume                   = {47},
+
   Owner                    = {iapellaniz},
   Publisher                = {IOP Publishing},
   Timestamp                = {2016.05.10}
@@ -2702,25 +2705,6 @@
   Url                      = {http://www.nature.com/ncomms/2014/140404/ncomms4532/abs/ncomms4532.html}
 }
 
-@Article{Vitagliano2014a,
-  Title                    = {Spin squeezing and entanglement for an arbitrary spin},
-  Author                   = {Vitagliano, Giuseppe and Apellaniz, Iagoba and Egusquiza, Inigo L. and T\'oth, G\'eza},
-  Journal                  = {Phys. Rev. A},
-  Year                     = {2014},
-
-  Month                    = {Mar},
-  Pages                    = {032307},
-  Volume                   = {89},
-
-  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.89.032307},
-  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.89.032307},
-  Doi                      = {10.1103/PhysRevA.89.032307},
-  Issue                    = {3},
-  Numpages                 = {16},
-  Publisher                = {American Physical Society},
-  Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.89.032307}
-}
-
 @Article{Vitagliano2014,
   Title                    = {Spin squeezing and entanglement for an arbitrary spin},
   Author                   = {Vitagliano, Giuseppe and Apellaniz, Iagoba and Egusquiza, Iñigo L. and Tóth, Géza},
@@ -2732,11 +2716,15 @@
   Pages                    = {032307},
   Volume                   = {89},
 
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevA.89.032307},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevA.89.032307},
   Doi                      = {10.1103/physreva.89.032307},
   ISSN                     = {1094-1622},
+  Issue                    = {3},
+  Numpages                 = {16},
   Owner                    = {iapellaniz},
   Publisher                = {American Physical Society (APS)},
-  Timestamp                = {2016.05.10},
+  Timestamp                = {2016.05.12},
   Url                      = {http://dx.doi.org/10.1103/physreva.89.032307}
 }
 
@@ -2966,6 +2954,25 @@
   Doi                      = {10.1103/PhysRevLett.91.180401},
   Publisher                = {American Physical Society},
   Url                      = {http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.180401}
+}
+
+@Article{Zhou2010,
+  Title                    = {Precisely mapping the magnetic field gradient in vacuum with an atom interferometer},
+  Author                   = {Zhou, Min-Kang and Hu, Zhong-Kun and Duan, Xiao-Chun and Sun, Bu-Liang and Zhao, Jin-Bo and Luo, Jun},
+  Journal                  = {Physical Review A},
+  Year                     = {2010},
+
+  Month                    = {Dec},
+  Number                   = {6},
+  Volume                   = {82},
+
+  __markedentry            = {[iapellaniz:]},
+  Doi                      = {10.1103/physreva.82.061602},
+  ISSN                     = {1094-1622},
+  Owner                    = {iapellaniz},
+  Publisher                = {American Physical Society (APS)},
+  Timestamp                = {2016.07.22},
+  Url                      = {http://dx.doi.org/10.1103/PhysRevA.82.061602}
 }
 
 @Article{Zwierz2014,
