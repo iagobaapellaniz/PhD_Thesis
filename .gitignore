@@ -10,3 +10,5 @@
 *.fls
 *.bbl
 *.blg
+*.xml
+*.bcf

@@ -15,13 +15,16 @@
 %\usepackage{layout}
 \usepackage{lettrine}
 \usepackage[explicit]{titlesec}
-\usepackage{hyperref}
 \usepackage{watermark}
 \usepackage{color}
 \usepackage[final]{pdfpages}
 \usepackage{setspace}
 
 \usepackage{cite}
+
+\usepackage{doi}
+\usepackage{hyperref}
+
 
 \usepackage[demo,abs]{overpic}
 \newcommand{\igwithlabel}[3]{\begin{overpic}
@@ -286,7 +289,7 @@ On the other hand I also felt very comfortable at my university, the University 
 \input{02-background.tex}
 \input{03-vicinity.tex}
 \input{04-legendre.tex}
-\input{05-gradient.tex}
+\input{05-gradient.tex} 
 \input{06-conclusions.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -303,7 +306,8 @@ On the other hand I also felt very comfortable at my university, the University 
 \input{ap-02-miscmath.tex}
 
 \input{snp/nonumberSection.tex}
-\bibliography{biblio.bib}{}
-\bibliographystyle{unsrt}
+\bibliographystyle{abbrv}
+% or: plain,unsrt,alpha,abbrv,acm,apalike,...
+\bibliography{biblio}
 
 \end{document}
