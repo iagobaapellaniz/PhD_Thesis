@@ -4,6 +4,9 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+% For bold face mathcal
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+
 \usepackage{tabularx,booktabs}
 \usepackage{todonotes}
 
@@ -17,6 +20,8 @@
 \usepackage{color}
 \usepackage[final]{pdfpages}
 \usepackage{setspace}
+
+\usepackage{cite}
 
 \usepackage[demo,abs]{overpic}
 \newcommand{\igwithlabel}[3]{\begin{overpic}
@@ -277,47 +282,11 @@ On the other hand I also felt very comfortable at my university, the University 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \input{snp/fancySection.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
-\input{snp/singleLineWaterMark.tex}
-
 \input{01-introduction.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Backgroud on Quantum Metrology]
-{Background on Quantum Metrology}
-\input{snp/singleLineWaterMark.tex}
-
 \input{02-background.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Quantum metrology with Dike like states]
-{Metrology in the vicinity of Dicke states}
-\input{snp/doubleLineWaterMark.tex}
-
 \input{03-vicinity.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Witnessing metrologically useful entanglement]
-{Witnessing metrologically useful {\color{grey} X} entanglement}
-\input{snp/doubleLineWaterMark.tex}
-
-
 \input{04-legendre.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Metrology of the gradient magnetic field]
-{Accuracy bound for gradient field estimation with atomic ensembles}
-\input{snp/doubleLineWaterMark.tex}
-
-
 \input{05-gradient.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Conclusions]
-{Conclusions}
-\input{snp/singleLineWaterMark.tex}
-
 \input{06-conclusions.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -335,6 +304,6 @@ On the other hand I also felt very comfortable at my university, the University 
 
 \input{snp/nonumberSection.tex}
 \bibliography{biblio.bib}{}
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 
 \end{document}

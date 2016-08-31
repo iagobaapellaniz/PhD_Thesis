@@ -4,7 +4,7 @@
 
 @Article{Acin2001,
   Title                    = {Classification of Mixed Three-Qubit States},
-  Author                   = {Ac{\'{\i}}n, A. and Bru\ss{}, D. and Lewenstein, M. and Sanpera, A.},
+  Author                   = {Ac{\'i}n, A. and Bru\ss, D. and Lewenstein, M. and Sanpera, A.},
   Journal                  = {Phys. Rev. Lett.},
   Year                     = {2001},
 
@@ -45,6 +45,7 @@
   Author                   = {Apellaniz, Iagoba and Kleinmann, Matthias and G{\"u}hne, Otfried and Toth, Geza},
   Journal                  = {arXiv preprint arXiv:1511.05203},
   Year                     = {2015},
+
   Owner                    = {iapellaniz},
   Timestamp                = {2016.05.10}
 }
@@ -694,6 +695,19 @@
   Url                      = {http://www.tandfonline.com/doi/full/10.1080/00107510601009871#.VNCtEGTF-PQ}
 }
 
+@Article{Eckert2006,
+  Title                    = {Differential atom interferometry beyond the standard quantum limit},
+  Author                   = {Eckert, K and Hyllus, P and Bruss, D and Poulsen, Uffe Vestergaard and Lewenstein, M and Jentsch, C and M{\"u}ller, T and Rasel, EM and Ertmer, W},
+  Journal                  = {Physical Review A},
+  Year                     = {2006},
+  Number                   = {1},
+  Pages                    = {013814},
+  Volume                   = {73},
+  Owner                    = {iapellaniz},
+  Publisher                = {APS},
+  Timestamp                = {2016.07.22}
+}
+
 @Article{Eibl2004,
   Title                    = {Experimental Realization of a Three-Qubit Entangled W State},
   Author                   = {Eibl, Manfred and Kiesel, Nikolai and Bourennane, Mohamed and Kurtsiefer, Christian and Weinfurter, Harald},
@@ -1068,6 +1082,24 @@
   Publisher                = {Nature Publishing Group}
 }
 
+@Article{Haeffner2005a,
+  Title                    = {Scalable multiparticle entanglement of trapped ions},
+  Author                   = {Häffner, H. and Hänsel, W. and Roos, C. F. and Benhelm, J. and Chek-al-kar, D. and Chwalla, M. and Körber, T. and Rapol, U. D. and Riebe, M. and Schmidt, P. O. and et al.},
+  Journal                  = {Nature},
+  Year                     = {2005},
+
+  Month                    = {Dec},
+  Number                   = {7068},
+  Pages                    = {643–646},
+  Volume                   = {438},
+  Doi                      = {10.1038/nature04279},
+  ISSN                     = {1476-4679},
+  Owner                    = {iapellaniz},
+  Publisher                = {Nature Publishing Group},
+  Timestamp                = {2016.07.22},
+  Url                      = {http://dx.doi.org/10.1038/nature04279}
+}
+
 @Article{Haine2014,
   Title                    = {Waste Not, Want Not: Heisenberg-Limited Metrology With Information Recycling},
   Author                   = {{Haine}, S.~A. and {Szigeti}, S.~S. and {Lang}, M.~D. and {Caves}, C.~M.},
@@ -1132,6 +1164,24 @@
   Volume                   = {8},
 
   Publisher                = {Nature Publishing Group}
+}
+
+@Article{Hamley2012a,
+  Title                    = {Spin-nematic squeezed vacuum in a quantum gas},
+  Author                   = {Hamley, C. D. and Gerving, C. S. and Hoang, T. M. and Bookjans, E. M. and Chapman, M. S.},
+  Journal                  = {Nature Physics},
+  Year                     = {2012},
+
+  Month                    = {Feb},
+  Number                   = {4},
+  Pages                    = {305–308},
+  Volume                   = {8},
+  Doi                      = {10.1038/nphys2245},
+  ISSN                     = {1745-2481},
+  Owner                    = {iapellaniz},
+  Publisher                = {Nature Publishing Group},
+  Timestamp                = {2016.07.22},
+  Url                      = {http://dx.doi.org/10.1038/nphys2245}
 }
 
 @Article{Hammerer2010,
@@ -1464,6 +1514,25 @@
   Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.98.063604}
 }
 
+@Article{Kiesel2007a,
+  Title                    = {Experimental Observation of Four-Photon Entangled Dicke State with High Fidelity},
+  Author                   = {Kiesel, N. and Schmid, C. and Tóth, G. and Solano, E. and Weinfurter, H.},
+  Journal                  = {Physical Review Letters},
+  Year                     = {2007},
+
+  Month                    = {Feb},
+  Number                   = {6},
+  Volume                   = {98},
+
+  __markedentry            = {[iapellaniz:]},
+  Doi                      = {10.1103/physrevlett.98.063604},
+  ISSN                     = {1079-7114},
+  Owner                    = {iapellaniz},
+  Publisher                = {American Physical Society (APS)},
+  Timestamp                = {2016.07.22},
+  Url                      = {http://dx.doi.org/10.1103/PhysRevLett.98.063604}
+}
+
 @Article{Killoran2014,
   Title                    = {Extracting Entanglement from Identical Particles},
   Author                   = {Killoran, N. and Cramer, M. and Plenio, M.\,B.},
@@ -1747,6 +1816,26 @@
   Volume                   = {3},
 
   Publisher                = {Nature Publishing Group}
+}
+
+@Article{Lu2007a,
+  Title                    = {Experimental entanglement of six photons in graph states},
+  Author                   = {Lu, Chao-Yang and Zhou, Xiao-Qi and Gühne, Otfried and Gao, Wei-Bo and Zhang, Jin and Yuan, Zhen-Sheng and Goebel, Alexander and Yang, Tao and Pan, Jian-Wei},
+  Journal                  = {Nature Physics},
+  Year                     = {2007},
+
+  Month                    = {Jan},
+  Number                   = {2},
+  Pages                    = {91–95},
+  Volume                   = {3},
+
+  __markedentry            = {[iapellaniz:6]},
+  Doi                      = {10.1038/nphys507},
+  ISSN                     = {1745-2481},
+  Owner                    = {iapellaniz},
+  Publisher                = {Nature Publishing Group},
+  Timestamp                = {2016.07.22},
+  Url                      = {http://dx.doi.org/10.1038/nphys507}
 }
 
 @Article{Luis2004,
@@ -2876,6 +2965,19 @@
   Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.100.070502}
 }
 
+@Article{Wolfgramm2010,
+  Title                    = {Squeezed-light optical magnetometry},
+  Author                   = {Wolfgramm, Florian and Cere, Alessandro and Beduini, Federica A and Predojevi{\'c}, Ana and Koschorreck, Marco and Mitchell, Morgan W},
+  Journal                  = {Physical review letters},
+  Year                     = {2010},
+  Number                   = {5},
+  Pages                    = {053601},
+  Volume                   = {105},
+  Owner                    = {iapellaniz},
+  Publisher                = {APS},
+  Timestamp                = {2016.07.22}
+}
+
 @Article{Wootters1998,
   Title                    = {Entanglement of Formation of an Arbitrary State of Two Qubits},
   Author                   = {Wootters, William K.},
@@ -2925,6 +3027,23 @@
   Url                      = {http://link.aps.org/doi/10.1103/PhysRevA.33.4033}
 }
 
+@Article{Zhang2014a,
+  Title                    = {Fitting magnetic field gradient with Heisenberg-scaling accuracy},
+  Author                   = {Zhang, Yong-Liang and Wang, Huan and Jing, Li and Mu, Liang-Zhu and Fan, Heng},
+  Journal                  = {Scientific Reports},
+  Year                     = {2014},
+
+  Month                    = {Dec},
+  Pages                    = {7390},
+  Volume                   = {4},
+  Doi                      = {10.1038/srep07390},
+  ISSN                     = {2045-2322},
+  Owner                    = {iapellaniz},
+  Publisher                = {Nature Publishing Group},
+  Timestamp                = {2016.07.22},
+  Url                      = {http://dx.doi.org/10.1038/srep07390}
+}
+
 @Article{Zhang2014,
   Title                    = {Quantum metrology with Dicke squeezed states},
   Author                   = {Z Zhang and L M Duan},
@@ -2966,7 +3085,6 @@
   Number                   = {6},
   Volume                   = {82},
 
-  __markedentry            = {[iapellaniz:]},
   Doi                      = {10.1103/physreva.82.061602},
   ISSN                     = {1094-1622},
   Owner                    = {iapellaniz},
