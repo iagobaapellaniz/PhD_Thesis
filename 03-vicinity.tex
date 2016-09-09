@@ -6,7 +6,7 @@ Such states can be used as prove states to estimate the homogeneous magnetic fie
 It turns out that those unpolarised states are the only ones that can bite the Heisenberg limit, as it was shown on the Section~{[XXX]}.
 Hence, those states have attracted the interest of the community.
 
-One of the figures of merit of this such unpolarized, but still useful states is the so-called unpolarized Dicke state [XXX], which consists of, on its $Oz$-axis  representation, an equal number of qubits pointing up and pointing down while the whole state is at the same time symmetrised.
+One of the figures of merit of this such unpolarized, but still useful states is the so-called unpolarized Dicke state [XXX], which consists of, on its $z$-axis  representation, an equal number of qubits pointing up and pointing down while the whole state is at the same time symmetrised.
 It can be written as follows,
 \be
   \ket{\text{D}_N^{0}} \equiv \ket{\text{D}_{N}}:= \binom{N}{N/2}^{-\frac{1}{2}}
@@ -32,8 +32,8 @@ Thus, with this together with the fact that the state is unpolarised, it turns t
 Having unpolarised states for magnetometry has been shown useful in Section~XX.
 While the quantum Fisher information would give directly the performance one state would have, this is not feasible in general because a complete knowledge of the state is needed to compute such value.
 On the other hand, we can use the error propagation formula Equation~(XX) to obtain a bound on the precision.
-As one can see on the Figure~\ref{fig:vd-secuence-evo} a pure Dicke state is rotated along the $Oz$-axis.
-Say that in this case the initial state is an unpolarised Dicke state of aligned with the $Ox$-axis.
+As one can see on the Figure~\ref{fig:vd-secuence-evo} a pure Dicke state is rotated along the $z$-axis.
+Say that in this case the initial state is an unpolarised Dicke state of aligned with the $x$-axis.
 \begin{figure}
   \centering
   \includegraphics[scale=.65]{img/plots/VD_evolution_of_dicke.pdf}
@@ -196,7 +196,7 @@ which inserted on the Equation~{(\ref{eq:vd-precision-as-theta})} gives us the o
   \label{eq:vd-precision}
 \ee.
 
-We conclude with this section checking our bound for the pure unpolarised Dicke state aligned with $Ox$, $\ket{\text{D}_N}_x$, whose precision bound is well known, Equation~{([XXX])}.
+We conclude with this section checking our bound for the pure unpolarised Dicke state aligned with the $x$-axis, $\ket{\text{D}_N}_x$, whose precision bound is well known, Equation~{([XXX])}.
 With this aim we compute all the expectation values needed for the Equation~{(\ref{eq:vd-precision})} which almost all of them are trivial, $\expect{J_xJ_y^2J_x}=\expect{J_x^4}=\expect{J_x^2}=0$.
 The rest are obtained in the following way,
 \begin{align}
@@ -205,7 +205,7 @@ The rest are obtained in the following way,
   \expect{J_y^4} & = \frac{N+2}{8}\left(\frac{3N(N+2)}{16}-\frac{1}{2}\right).
   \label{eq:vd-4y-moment-pure-dicke}
 \end{align}
-The Equation~{(\ref{eq:vd-2moment-pure-dicke})} follows directly from the fact that the state is invariant under rotations on the $Ox$ axis, so they are its expectation values, because the sum of all the second moments must give the value of the total angular momentum, in this case the maximum which is $\expect{\bs{J}^2} = \frac{N (N+2)}{4}$, and because $\expect{J_x^2}=0$.
+The Equation~{(\ref{eq:vd-2moment-pure-dicke})} follows directly from the fact that the state is invariant under rotations on the $x$-axis, so they are its expectation values, because the sum of all the second moments must give the value of the total angular momentum, in this case the maximum which is $\expect{\bs{J}^2} = \frac{N (N+2)}{4}$, and because $\expect{J_x^2}=0$.
 The proof of the Equation~{(\ref{eq:vd-4y-moment-pure-dicke})} needs more algebra and has been left for the Appendix~{\ref{ap:}}.
 
 From the equations above, one lead to the following expression for the precision of the phase shift for a pure unpolarised Dicke state,
@@ -221,7 +221,7 @@ Those input states will be first the family of states defined as the ground stat
 \be
   H_\lambda = J_x^2 - \lambda J_y.
 \ee
-For $\lambda$ equal to zero we have the unpolarized Dicke state, Equation~{(\ref{eq:vd-unpolarised-dicke})}, and for $\lambda$ large we recover the coherent totally polarized state pointing onto the $Oy$ direction.
+For $\lambda$ equal to zero we have the unpolarized Dicke state, Equation~{(\ref{eq:vd-unpolarised-dicke})}, and for $\lambda$ large we recover the coherent totally polarized state pointing onto the $y$-direction.
 In the meantime the state is also a spin-squeezed state, therefore the name of the Hamiltonian.
 The ground state is defined such that
 \be
