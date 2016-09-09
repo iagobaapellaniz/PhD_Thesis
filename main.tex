@@ -20,7 +20,9 @@
 \usepackage[final]{pdfpages}
 \usepackage{setspace}
 
-\usepackage{cite}
+\usepackage[sort, numbers, compress]{natbib}
+\bibliographystyle{main} % custom style see README.md for more info
+\usepackage[nottoc]{tocbibind}
 
 \usepackage{doi}
 \usepackage{hyperref}
@@ -48,6 +50,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[math,light]{iwona}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -125,8 +128,6 @@
 \def\rcor{\right\}}
 \def\lang{\left\langle}
 \def\rang{\right\rangle}
-\def\l{\left}
-\def\r{\right}
 \def\nnnl{\nonumber\\}
 \def\nnnlq{\nonumber\\ && \quad}
 \def\nnnlqq{\nonumber\\ && \qquad}
@@ -219,7 +220,7 @@ Spin squeezing and entanglement for an arbitrary spin
   SLD & - & Symmetric logarithmic derivative \\
   QFI & - & Quantum Fisher information \\
 \end{tabular}
-
+ 
 \subsection*{Figures}
 
 \begin{tabularx}{\textwidth}{r c X r}
@@ -254,15 +255,22 @@ Spin squeezing and entanglement for an arbitrary spin
 
 \emph{and to all the people}
 
-\emph{I have had around me those years.}
+\emph{I have had around those years.}
 \end{center}
 
 \cleardoublepage
 
 \section*{Acknowledgments}
 
-I want to thank the people that support me in this endeavor especially my office and discussion mates and my director G\'eza T\'oth for without whom my work would not be even  started.
-I also want to thank more people especially those from the theoretical physics department of the University of the Basque Country and the unique very especial group for me from the Theoretical Quantum Optics group at the University of Siegen.
+I want to thank the people that has supported me in this endeavor.
+Especially, I want to acknowledge my office and discussion mates, Giuseppe Vitagliano and I\~nigo Urizar-Lanz as well as Phillip Hyllus, Matthias Kleinmann and Z\'oltan Z\'imboras.
+A special thank to my director G\'eza T\'oth for all the offered support, without whom my work at hand would not be possible.
+I also want to thank more people from the department I belong to at the University of the Basque Country, the Department of Theoretical Physics and the History of Science.
+I appreciate the effort done by people like I\~nigo L. Egusquiza in promoting the Ph.D. program of the Department of Theoretical Physics, which has successfully promote plenty of researchers now immersed in wonderful and leading edge research projects world wide.
+Also I want to acknowledge the Ph.D. students from different departments for the friendship atmosphere one can enjoy working there at this \emph{our} university.
+
+I have been visiting several research groups during those years and I don't forget them, they have accept me as one more between them.
+So I want to thank a very especial research group for me, the Theoretical Quantum Optics group at the University of Siegen.
 I would really like to mention the names of all of them but I think it would be quite heavy for the average reader of this thesis.
 Thank you guys!
 Also I want to thank people from the group QSTAR at Florence, Italy.
@@ -289,7 +297,7 @@ On the other hand I also felt very comfortable at my university, the University 
 \input{02-background.tex}
 \input{03-vicinity.tex}
 \input{04-legendre.tex}
-\input{05-gradient.tex} 
+\input{05-gradient.tex}
 \input{06-conclusions.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -306,8 +314,7 @@ On the other hand I also felt very comfortable at my university, the University 
 \input{ap-02-miscmath.tex}
 
 \input{snp/nonumberSection.tex}
-\bibliographystyle{abbrv}
-% or: plain,unsrt,alpha,abbrv,acm,apalike,...
+
 \bibliography{biblio}
 
 \end{document}
