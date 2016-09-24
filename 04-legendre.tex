@@ -30,7 +30,27 @@ Quantum Fisher information $\qfi [\rho, J_z]$.
 
 \subsection{Minimum of a convex function of the state given some expectation values}
 
-Convex function of state, $g(\rho)$.
+The problem of getting a lower bound for a convex function on the states having already some expectation values was studied by O. G\"uhne {\it et al.} and J. Eisert {\it et al.} in Ref. \citep{Guehne2007, Eisert2007}, mainly for entanglement measures. We first review the state-of-the-art solution for this problem.
+
+When a convex function $g(\rho)$ is given together with an expectation value of some operator $w=\tr(\rho W)$, a tight lower bound can be obtained as \citep{Rockafellar1996, Guehne2007, Eisert2007}
+\be
+  \begin{split}
+    g(\rho)\geq\mathcal{B}_g(w):=\,&\sup_r \{ rw - \hat{g}(rW)\}\\
+    =\,& \{\min_{\rho}g(\rho)|w = \tr(\rho W)\}
+  \end{split}
+\ee
+where $\hat{g}(rW)$ is the Legendre transform of $g(\rho)$ and the second inequality refers only to the tightness of our bound.
+The Legendre transform in this context is defined as
+\be
+  \label{eq:lt-for-convex-function}
+  \hat{g}(rW)=\sup_{\rho}\{\expect{rW}_\rho - g(\rho)\}.
+\ee
+This method has been used to compute entanglement measures, as we mentioned before.
+
+Following the theory one can find that in the case on which the convex function $g(\rho)$ is defined as convex roof over all possible decompositions of the state, the optimisation of Eq.~\ref{eq:lt-for-convex-function} can be reduce to an optimisation over pure states, thus simplifying the task.
+However, an optimization over pure states is only feasible for small systems when the problem must be solved numerically.
+Many entanglement measures extended from been defined for pure states to mixed state using this process \citep{}.
+
 
 Which is the lowest possible value of $g(\rho)$ for a state where some expectation values of $\{W_{i}\}_{i=1}^M$ operators, $w_i = \tr(\rho {W}_i)$ are known?
 
@@ -46,7 +66,7 @@ Later we will extend our results to the multi-parameter case.
 Notice that the tightest bound from below on of such a function $g(\rho)$ is convex too on the expectation values\ie $\mathcal{B}_g(w)$ is convex if $g(\rho)$ is convex.
 This is shown in the following way,
 
-Therefore, theory tells us that we can use the Legendre transform to get rid of the state preserving all the necessary information to reconstruct the $\mathcal{B}_{g}$ bound from the expectation values, this can be found on the work of Prof.~G\"uhne and Prof.~Werner Reference~\citep{XXX} and for a brief description of the properties of the Legendre transform see Appendix~\ref{ap:}.
+Therefore, theory tells us that we can use the Legendre transform to get rid of the state preserving all the necessary information to reconstruct the $\mathcal{B}_{g}$ bound from the expectation values, this can be found on the work of Prof.~G\"uhne and Prof.~Werner Reference~\citep{} and for a brief description of the properties of the Legendre transform see Appendix~\ref{ap:}.
 In this case the Legendre transform can be written in the following way,
 \be
   \hat{g}(rW) = \sup_{\rho}\{ r\expect{W}_{\rho}-g(\rho)\}.
@@ -76,10 +96,10 @@ Let us focus by now on the inner maximization,
   &=\sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}} - g(\ket{\psi}) \big\}.
 \end{split}
 \ee
-So now we have restricted the maximization to only pure states as it is shown on Reference~\citep{XXX}.
+So now we have restricted the maximization to only pure states as it is shown on Reference~\citep{}.
 
 One the other hand, one can find different definitions of the QFI in the literature.
-Among those definitions, there is one that defines the QFI as the convex roof of four times the variance of the generator of the unitary phase shift that suffers the state \citep{XXX}.
+Among those definitions, there is one that defines the QFI as the convex roof of four times the variance of the generator of the unitary phase shift that suffers the state \citep{}.
 This can be written in the following way,
 \be
   \qfi[\rho, G] = \inf_{\{p_k, \ket{\phi_k}\}}4\sum_k p_k (\Delta G)_{\ket{\phi_k}}^2

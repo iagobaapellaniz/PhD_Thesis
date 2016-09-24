@@ -45,7 +45,7 @@
 }
 
 @Article{Behbood2013,
-  author        = {Behbood, Naeimeh and Ciurana, F. Martin and Colangelo, Giorgio and Napolitano, Mario and Mitchell, Morgan W. and Sewell, Robert J},
+  author        = {Behbood, Naeimeh and Martin Ciurana, F. and Colangelo, Giorgio and Napolitano, Mario and Mitchell, Morgan W. and Sewell, Robert J},
   title         = {Real-time vector field tracking with a cold-atom magnetometer},
   journal       = {Applied Physics Letters},
   year          = {2013},
@@ -2758,20 +2758,19 @@
 }
 
 @Article{Yao2012,
-  author        = {Xing-Can Yao and Tian-Xiong Wang and Ping Xu and He Lu and Ge-Sheng Pan and Xiao-Hui Bao and Cheng-Zhi Peng and Chao-Yang Lu and Yu-Ao Chen and Jian-Wei Pan},
-  title         = {Observation of eight-photon entanglement},
-  journal       = {Nature Photonics},
-  year          = {2012},
-  volume        = {6},
-  number        = {4},
-  pages         = {225--228},
-  month         = {feb},
-  __markedentry = {[iapellaniz:6]},
-  doi           = {10.1038/nphoton.2011.354},
-  owner         = {iapellaniz},
-  publisher     = {Nature Publishing Group},
-  timestamp     = {2016.08.31},
-  url           = {http://dx.doi.org/10.1038/nphoton.2011.354},
+  author    = {Xing-Can Yao and Tian-Xiong Wang and Ping Xu and He Lu and Ge-Sheng Pan and Xiao-Hui Bao and Cheng-Zhi Peng and Chao-Yang Lu and Yu-Ao Chen and Jian-Wei Pan},
+  title     = {Observation of eight-photon entanglement},
+  journal   = {Nature Photonics},
+  year      = {2012},
+  volume    = {6},
+  number    = {4},
+  pages     = {225--228},
+  month     = {feb},
+  doi       = {10.1038/nphoton.2011.354},
+  owner     = {iapellaniz},
+  publisher = {Nature Publishing Group},
+  timestamp = {2016.08.31},
+  url       = {http://dx.doi.org/10.1038/nphoton.2011.354},
 }
 
 @Article{Toth2014,
@@ -2804,6 +2803,37 @@
   publisher = {American Physical Society ({APS})},
   timestamp = {2016.08.31},
   url       = {http://dx.doi.org/10.1103/PhysRevA.92.062303},
+}
+
+@Article{Guehne2007,
+  author        = {O. Gühne and M. Reimpell and R. F. Werner},
+  title         = {Estimating Entanglement Measures in Experiments},
+  journal       = {Phys. Rev. Lett.},
+  year          = {2007},
+  volume        = {98},
+  number        = {11},
+  month         = {mar},
+  __markedentry = {[iapellaniz:]},
+  doi           = {10.1103/physrevlett.98.110502},
+  owner         = {iapellaniz},
+  publisher     = {American Physical Society ({APS})},
+  timestamp     = {2016.09.23},
+  url           = {http://dx.doi.org/10.1103/PhysRevLett.98.110502},
+}
+
+@Book{Rockafellar1996,
+  title         = {Convex Analysis},
+  publisher     = {Princeton University Press},
+  year          = {1996},
+  author        = {R.T. Rockafellar},
+  __markedentry = {[iapellaniz:6]},
+  date          = {1996-12-23},
+  ean           = {9780691015866},
+  isbn          = {0691015864},
+  owner         = {iapellaniz},
+  pagetotal     = {472},
+  timestamp     = {2016.09.23},
+  url           = {http://www.ebook.de/de/product/3305525/r_t_rockafellar_convex_analysis.html},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
