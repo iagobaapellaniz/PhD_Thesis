@@ -28,12 +28,21 @@ Section~[REF], see magnetometry, generator $J_z$.
 
 Quantum Fisher information $\qfi [\rho, J_z]$.
 
-\subsection{Minimum of a convex function of the state given some expectation values}
+\subsection{Bound from below of a function convex over the states given some arbitrary expectation values}
 
-The problem of getting a lower bound for a convex function on the states having already some expectation values was studied by O. G\"uhne {\it et al.} and J. Eisert {\it et al.} in Ref. \citep{Guehne2007, Eisert2007}, mainly for entanglement measures. We first review the state-of-the-art solution for this problem.
+The problem of getting a lower bound for a convex function on the states having already some expectation values of some arbitrary observables was studied by O. G\"uhne {\it et al.} and J. Eisert {\it et al.} in Refs.~\citep{Guehne2007, Eisert2007} respectively, mainly from the perspective of entanglement measures.
+The illustrated techniques are based on the well known Legendre transform for differentiable functions, see Appedix~\ref{app:legendre-transform} for more details.
+We first review in this section the state-of-the-art solution for this problem.
+And later on, we extend it to the quantum Fisher information.
+For simplicity in the next subsection, Sec~\ref{}, we assume that a single expectation value is given.
+An extension to the case on which more expectation values are given will follow in the Subsection~\ref{}.
+Finally, we will summarize it with an explicit formula which will be used to compute the bounds.
+
+\subsubsection{Estimation of a general convex function based on the expectation value of an arbitrary observable}
 
 When a convex function $g(\rho)$ is given together with an expectation value of some operator $w=\tr(\rho W)$, a tight lower bound can be obtained as \citep{Rockafellar1996, Guehne2007, Eisert2007}
 \be
+  \label{eq:lt-lower-bound-single-parameter}
   \begin{split}
     g(\rho)\geq\mathcal{B}_g(w):=\,&\sup_r \{ rw - \hat{g}(rW)\}\\
     =\,& \{\min_{\rho}g(\rho)|w = \tr(\rho W)\}
@@ -42,23 +51,21 @@ When a convex function $g(\rho)$ is given together with an expectation value of 
 where $\hat{g}(rW)$ is the Legendre transform of $g(\rho)$ and the second inequality refers only to the tightness of our bound.
 The Legendre transform in this context is defined as
 \be
-  \label{eq:lt-for-convex-function}
+  \label{eq:lt-for-convex-function-single-parameter}
   \hat{g}(rW)=\sup_{\rho}\{\expect{rW}_\rho - g(\rho)\}.
 \ee
 This method has been used to compute entanglement measures, as we mentioned before.
 
-Following the theory one can find that in the case on which the convex function $g(\rho)$ is defined as convex roof over all possible decompositions of the state, the optimisation of Eq.~\ref{eq:lt-for-convex-function} can be reduce to an optimisation over pure states, thus simplifying the task.
-However, an optimization over pure states is only feasible for small systems when the problem must be solved numerically.
-Many entanglement measures extended from been defined for pure states to mixed state using this process \citep{}.
-
-
-Which is the lowest possible value of $g(\rho)$ for a state where some expectation values of $\{W_{i}\}_{i=1}^M$ operators, $w_i = \tr(\rho {W}_i)$ are known?
-
-Such bound is defined in a way to fulfill the following inequality,
+Following the theory one can find that in the case on which the convex function $g(\rho)$ is defined as convex roof over all possible convex decompositions of the state, the optimisation of Eq.~(\ref{eq:lt-for-convex-function-single-parameter}) can be reduced to an optimisation over pure states only, thus simplifying the process \cite{}.
+However, even an optimization over all pure states is feasible numerically only for small systems.
+We will show later on this section circumvent this issue in the case of the QFI.
+The convex construction has the following form
 \be
-  g(\rho) \geq \mathcal{B}_{g}(w_1,w_2,...) := \big\{\min_{\rho}g(\rho) \,|\,  \{w_i = \tr(\rho {W}_i)\}_{i=1}^M\big\}.
+  g(\rho) = \inf_{\{p_k,\psi_k\}} \sum_{k}p_k g(\ket{\psi_k}),
 \ee
-When computing this bound we will require to this to be as tight as possible.
+where the mixed state is decomposed into $\rho = \sum_k p_k \ketbra{\psi_k}{\psi_k}$.
+We notice in our approach that the QFI is the convex roof of $4\varian{J_z}$ as it was shown on Ref.~\citep{Toth2007}.
+Hence, we will be able to use this simplification to apply this method to obtain the lower bound on the QFI.
 
 For this purpose we simplify our discourse to one expectation value and therefore one observable, $w = \tr(\rho W)$.
 Later we will extend our results to the multi-parameter case.
@@ -134,6 +141,16 @@ With this a tight bound from below for the quantum Fisher information can be fou
   \mathcal{B}_{\mathcal{F}}(w) = \sup_r \big\{ rw - \sup_{\ket{\psi}} \{\expect{rW-4J_z^2} + \expect{2J_z}^2\}\big\}.
 \ee
 One may notice that the inner maximization is a second order maximization.
+
+\subsubsection{Measuring several observables}
+
+Which is the lowest possible value of $g(\rho)$ for a state where some expectation values of $\{W_{i}\}_{i=1}^M$ operators, $w_i = \tr(\rho {W}_i)$ are known?
+
+Such bound is defined in a way to fulfill the following inequality,
+\be
+  g(\rho) \geq \mathcal{B}_{g}(w_1,w_2,...) := \big\{\min_{\rho}g(\rho) \,|\,  \{w_i = \tr(\rho {W}_i)\}_{i=1}^M\big\}.
+\ee
+When computing this bound we will require to this to be as tight as possible.
 
 This can be extended for several observables as follows
 \be
