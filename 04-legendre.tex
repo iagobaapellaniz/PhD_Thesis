@@ -40,60 +40,24 @@ Finally, we will summarize it with an explicit formula which will be used to com
 
 \subsubsection{Estimation of a general convex function based on the expectation value of an arbitrary observable}
 
-When a convex function $g(\rho)$ is given together with an expectation value of some operator $w=\tr(\rho W)$, a tight lower bound can be obtained as \citep{Rockafellar1996, Guehne2007, Eisert2007}
+When a convex function $g(\rho)$ is given together with an expectation value of some operator $w=\tr(\rho W)$, a tight lower bound, $\mathcal{B}_g(w)$, can be obtained as \citep{Rockafellar1996, Guehne2007, Eisert2007}
 \be
   \label{eq:lt-lower-bound-single-parameter}
   \begin{split}
     g(\rho)\geq\mathcal{B}_g(w):=\,&\sup_r \{ rw - \hat{g}(rW)\}\\
-    =\,& \{\min_{\rho}g(\rho)|w = \tr(\rho W)\}
+    =\,& \{\inf_{\rho}g(\rho)\,|\,w = \tr(\rho W)\}
   \end{split}
 \ee
-where $\hat{g}(rW)$ is the Legendre transform of $g(\rho)$ and the second inequality refers only to the tightness of our bound.
+where $\hat{g}(rW)$ is the Legendre transform of $g(\rho)$ and the second equality expresses the tightness of the bound.
 The Legendre transform in this context is defined as
 \be
   \label{eq:lt-for-convex-function-single-parameter}
-  \hat{g}(rW)=\sup_{\rho}\{\expect{rW}_\rho - g(\rho)\}.
+  \hat{g}(rW)=\sup_{\rho}\{\expect{rW}_\rho - g(\rho)\},
 \ee
-This method has been used to compute entanglement measures, as we mentioned before.
+where the maximisation is over \emph{all} possible states.
+This method to obtain the lower bound has been used to compute entanglement measures, as we mentioned before [].
 
-Following the theory one can find that in the case on which the convex function $g(\rho)$ is defined as convex roof over all possible convex decompositions of the state, the optimisation of Eq.~(\ref{eq:lt-for-convex-function-single-parameter}) can be reduced to an optimisation over pure states only, thus simplifying the process \cite{}.
-However, even an optimization over all pure states is feasible numerically only for small systems.
-We will show later on this section circumvent this issue in the case of the QFI.
-The convex construction has the following form
-\be
-  g(\rho) = \inf_{\{p_k,\psi_k\}} \sum_{k}p_k g(\ket{\psi_k}),
-\ee
-where the mixed state is decomposed into $\rho = \sum_k p_k \ketbra{\psi_k}{\psi_k}$.
-We notice in our approach that the QFI is the convex roof of $4\varian{J_z}$ as it was shown on Ref.~\citep{Toth2007}.
-Hence, we will be able to use this simplification to apply this method to obtain the lower bound on the QFI.
-
-For this purpose we simplify our discourse to one expectation value and therefore one observable, $w = \tr(\rho W)$.
-Later we will extend our results to the multi-parameter case.
-
-Notice that the tightest bound from below on of such a function $g(\rho)$ is convex too on the expectation values\ie $\mathcal{B}_g(w)$ is convex if $g(\rho)$ is convex.
-This is shown in the following way,
-
-Therefore, theory tells us that we can use the Legendre transform to get rid of the state preserving all the necessary information to reconstruct the $\mathcal{B}_{g}$ bound from the expectation values, this can be found on the work of Prof.~G\"uhne and Prof.~Werner Reference~\citep{} and for a brief description of the properties of the Legendre transform see Appendix~\ref{ap:}.
-In this case the Legendre transform can be written in the following way,
-\be
-  \hat{g}(rW) = \sup_{\rho}\{ r\expect{W}_{\rho}-g(\rho)\}.
-\ee
-
-Now we have the Legendre transform, we recover the bound from below of $g(\rho)$ as
-\be
-  \label{eq:lt-generic-bound-for-convex-func}
-  \mathcal{B}_g (w) = \sup_{r}\big\{rw-\sup_{\rho}\{r\expect{W}_{\rho}-g(\rho)\}\big\}.
-\ee
-To clarify, notice that the $\rho$ appearing on the inner maximization is not related with the one appearing on $g(\rho)$ that is bounded by $\mathcal{B}_g$ but a variable state for the maximization.
-
-The Equation~(\ref{eq:lt-generic-bound-for-convex-func}) has been applied on entanglement measures, when $g(\rho)$ is defined using the convex roof construction\ie the function $g(\rho)$ is extended from the well defined region, namely the region of pure states, to the mixed states using the convex roof construction.
-For illustrative purposes the convex roof of a function defined for pure states is the following,
-\be
-  g(\rho) = \inf_{\{p_k,\ket{\phi_k}\}}\big\{\sum_{k}p_k g(\ket{\phi_k})\big\}
-\ee
-for any decomposition $\rho=\sum_k p_k \ketbra{\phi_k}{\phi_k}$
-In this case the Equation~(\ref{eq:lt-generic-bound-for-convex-func}) can be further simplified.
-Let us focus by now on the inner maximization,
+Following the theory one can find that in the case on which the convex function $g(\rho)$ is defined as convex roof over all possible convex decompositions of the state, the optimisation of Eq.~(\ref{eq:lt-for-convex-function-single-parameter}) can be reduced to an optimisation over pure states only, thus simplifying the process \cite{}
 \be
 \begin{split}
   \hat{g}(rW) & = \sup_{\rho}\{r\expect{W}_\rho - g(\rho)\} \\
@@ -103,61 +67,74 @@ Let us focus by now on the inner maximization,
   &=\sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}} - g(\ket{\psi}) \big\}.
 \end{split}
 \ee
-So now we have restricted the maximization to only pure states as it is shown on Reference~\citep{}.
-
-One the other hand, one can find different definitions of the QFI in the literature.
-Among those definitions, there is one that defines the QFI as the convex roof of four times the variance of the generator of the unitary phase shift that suffers the state \citep{}.
-This can be written in the following way,
+However, even an optimization over all pure states is feasible numerically only for small systems.
+We will show later on this section how to circumvent this issue in the case of the QFI.
+The convex roof construction has the following form
 \be
-  \qfi[\rho, G] = \inf_{\{p_k, \ket{\phi_k}\}}4\sum_k p_k (\Delta G)_{\ket{\phi_k}}^2
+  g(\rho) = \inf_{\{p_k,\psi_k\}} \sum_{k}p_k g(\ket{\psi_k}),
 \ee
-
-Even further simplification can be achieved for quantum Fisher information,
-\be
-\begin{split}
-  \hat{\qfi}(rW) &= \sup_{\ket{\psi}}\big\{r\expect{W}_{\ket{\psi}}-4\varian{J_z}_{\ket{\psi}}\big\} \\
-  &= \sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}}-4\expect{J_z^2}_{\ket{\psi}} + 4\expect{J_z}^2_{\ket{\psi}} \big\} \\
-  &= \sup_{\ket{\psi}} \{\expect{rW-4J_z^2}_{\ket{\psi}} +
-  \expect{2J_z}^2_{\ket{\psi}}\},
-\end{split}
-\label{eq:lt-legendre-of-qfi}
-\ee
-which is clearly a second order maximization over pure states.
-
-With that at hand we are able to prove the following observation: the Legendre transform of the highest lower bound of the quantum Fisher information when the expectation value of some operator $W$ is known, can be written as the maximization over some parameter $\mu$ of the highest eigenvalue  $\lambda_{\max}(rW-4(J_z-\mu)^2)$.
-This can  be expressed as follows,
-\be
-  \hat{\qfi}(rW) = \sup_\mu \{\lambda_{\max} (rW-4(J_z-\mu)^2)\},
-\ee
-where at the maximum the derivative with respect to $\mu$ must be zero for this quadratic function on the state.
-Hence, the value of $\mu$ will coincide with the expectation value on the optimal state $\expect{J_z}_{\psi}$
-Therefore, the finding of the optimal parameter $\mu$ is delimited to the range defined by $[\expect{J_z}_{\min},\expect{J_z}_{\max}]$.
-For qubits this means that we have to perform a search for $\mu_{\text{opt}}$ in between $-N/2\leq \mu \leq N/2$.
-
-Another way of getting the result of the maximization for the second order equation is parameterizing the eigenstate with the maximum eigenvalue of the operator $rW-4(J_z-\mu)^2$, so we get $\ket{\phi_{\max}(\mu)}$, and finally computing the expectation values of Equation~(\ref{eq:lt-legendre-of-qfi}) and maximizing it.
-
-With this a tight bound from below for the quantum Fisher information can be found when the expectation value of an observable, say $W$, is known as follows,
-\be
-  \mathcal{B}_{\mathcal{F}}(w) = \sup_r \big\{ rw - \sup_{\ket{\psi}} \{\expect{rW-4J_z^2} + \expect{2J_z}^2\}\big\}.
-\ee
-One may notice that the inner maximization is a second order maximization.
+where the mixed state is decomposed into $\rho = \sum_k p_k \ketbra{\psi_k}{\psi_k}$.
+Among other definitions of the QFI on the literature, there is one that defines it as the convex roof of $4\varian{J_z}$, the variance of the generator, as it has been shown on Ref.~\citep{Toth2007, }, we can compute the Legendre transform optimizing for pure states only.
+Hence, we will be able to use this simplification to apply this method to obtain the lower bound on the QFI.
+Notice that in this context the QFI is the convex roof of four times the variance of the generator, Eq.~\eqref{}.
 
 \subsubsection{Measuring several observables}
 
-Which is the lowest possible value of $g(\rho)$ for a state where some expectation values of $\{W_{i}\}_{i=1}^M$ operators, $w_i = \tr(\rho {W}_i)$ are known?
-
-Such bound is defined in a way to fulfill the following inequality,
+For some cases, it is interesting to characterise the quantum state not only with a single measurement but with several.
+For instance, we could want to use, as it is done with the spin-squeezed states the absolute polarisation and the variance of one of the orthogonal components of the angular momentum to detect entanglement and metrological usefulness \citep{}.
+So far, we studied the case on which a single measurement is used.
+Its extension to several expectation values is indeed straight-forward.
+We can generalize Eqs.~\eqref{eq:lt-lower-bound-single-parameter} and \eqref{eq:lt-for-convex-function-single-parameter} for several observables $\{W_i\}_{i=1}^M$ as follows \citep{Guehne2007}
 \be
-  g(\rho) \geq \mathcal{B}_{g}(w_1,w_2,...) := \big\{\min_{\rho}g(\rho) \,|\,  \{w_i = \tr(\rho {W}_i)\}_{i=1}^M\big\}.
+  \label{eq:lt-extension-bound-multiparameter}.
+  \mathcal{B}_g(w_1,w_2,\dots) := \sup_{\bs{r}}\big\{\bs{rw}-\sup_{\rho}\{\expect{\bs{rW}}-g(\rho)\}\big\},
 \ee
-When computing this bound we will require to this to be as tight as possible.
+where $\bs{ab} =\sum_{k=1}^M a_kb_k$, the usual notation for scalar products of two vectors.
 
-This can be extended for several observables as follows
+\subsubsection{Explicit form of the expression to be optimized}
+
+After we have shown how to find a lower bound for a general convex function of the state based on its expectation values and how to simplify that method for the case on which the function is defined as convex roof, now we are in a position to achieve the main goal of this chapter.
+First of all, we notice that for the quantum Fisher Information the inner maximization, the Legendre transform, is obtained optimizing a quadratic function on expectation values,
 \be
-  \mathcal{B}_{\mathcal{F}}(w_1,w_2,...) = \sup_{\bs{r}} \big\{ \bs{rw} - \sup_{\ket{\psi}} \{\expect{\bs{rW}-4J_z^2} + \expect{2J_z}^2\}\big\},
+\label{eq:lt-legendre-of-qfi}
+\begin{split}
+  \hat{\qfi}(rW) &= \sup_{\ket{\psi}}\big\{r\expect{W}_{\psi}-4\varian{J_z}_{\psi}\big\} \\
+  &= \sup_{\ket{\psi}} \big\{ r\expect{W}_{\psi}-4\expect{J_z^2}_{\psi} + 4\expect{J_z}^2_{\psi} \big\} \\
+  &= \sup_{\ket{\psi}} \big\{\expect{rW-4J_z^2}_{\psi} +
+  \expect{2J_z}^2_{\psi}\big\},
+\end{split}
 \ee
-where $\bs{r}=(r_1,\dots,r_m)$ is the vector form and the same applies to $\bs{w}$ and the operators set $\bs{W}$.
-The contraction of two of those vectors must be seen as a scalar product\ie $\bs{rW}=\sum r_iW_i$ where $W_i$ is the corresponding $i^{\text{th}}$ operator of $\bs{W}$.
+where we have used the fact that the QFI can be expressed as convex roof of $\varian{J_z}$ and we again fall into the problem of a single parameter for simplicity on the following derivations.
+Equation~\eqref{eq:lt-legendre-of-qfi} can be rewritten as an optimization linear in operator expectation values as
+\be
+  \hat{\mathcal{F}}_{\text{Q}}(rW) = \sup_{\ket{\psi},\mu}\big\{\expect{rW-4J_z^2}_{\psi}+8\mu\expect{J_z}_\psi - 4 \mu^2\big\},
+\ee
+which, making use of $\max\{\expect{A}\}=\lambda_{\max}[A]$ for any observable, can be reformulated as
+\be
+  \label{eq:lt-legendre-for-qfi-simplified}
+  \begin{split}
+    \hat{\mathcal{F}}_{\text{Q}}(rW) & = \sup_{\ket{\psi}}\big\{\lambda_{\max}[rW-4J_z^2+8\mu J_z - 4 \mu^2]\big\}\\
+    &=\sup_{\ket{\psi}}\big\{\lambda_{\max}[rW-4(J_z-\mu)^2]\big\}
+  \end{split}
+\ee
+where $\lambda_{\max}[A]$ stands for the maximum eigenvalue of the operator $A$.
+At the extremum, we make the following observation, the derivative with respect to $\mu$ must be zero, hence at the optimum $\mu=\expect{J_z}_{\text{opt}}$ which represents the expectation value $J_z$ should have considering the optimal state on Eq.~\eqref{eq:lt-legendre-of-qfi}.
+This also means that we have to test $\mu$ values in the interval $-N/2\leq\mu\leq N/2$ only for spin-half systems.
+
+The full optimization problem to be solved consists of Eqs.~\eqref{eq:lt-lower-bound-single-parameter} and~\eqref{eq:lt-legendre-for-qfi-simplified} substituting $g(\rho)$ by $\qfi[\rho,J_z]$,
+\be
+  \mathcal{B}_{\mathcal{F}} = \sup_r\big\{rw-\sup_{\mu}\{\lambda_{\max}[rW-4(J_z-\mu)^2]\}\big\}.
+\ee
+It is crucial that the optimization over $r$ is a concave function, since the theory tells us that $\hat{\mathcal{F}}_{\text{Q}}(rW)$ is a convex function \citep{}, even when the multi-parametric case is considered.
+Thus the optimum can be determined easily with simple methods, e.g., the gradient method, looking for the maximum in $r$.
+Based on Eq.~\eqref{eq:lt-lower-bound-single-parameter}, we can see that even if we do not find the global optimum in $r$, we obtain a valid lower bound.
+The extension of this bound to the multi-parametric case is done using the recipie given in Eq.~\eqref{eq:lt-extension-bound-multiparameter}.
+
+We stress again the generality of this findings beyond linear interferometers covered on the following sections.
+For nonlinear interferometers \citep{,,,,,}, the phase $\theta$ must be estimate in an unitary dynamics $U=\exp{-iG\theta}$, where $G$ is not a sum of single spin operators, hence, is different from the angular momentum components.
+
+Next, we will demonstrate the use of our approach for several experimentally relevant situations.
+In the many-particle case, often symmetric operators can be used to describe accurately the system, which makes possible to carry out calculations for thousand of particles, as will be presented later on this chapter.
 
 \begin{figure}
   \centering
