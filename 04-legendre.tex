@@ -60,11 +60,11 @@ This method to obtain the lower bound has been used to compute entanglement meas
 Following the theory one can find that in the case on which the convex function $g(\rho)$ is defined as convex roof over all possible convex decompositions of the state, the optimisation of Eq.~(\ref{eq:lt-for-convex-function-single-parameter}) can be reduced to an optimisation over pure states only, thus simplifying the process \cite{}
 \be
 \begin{split}
-  \hat{g}(rW) & = \sup_{\rho}\{r\expect{W}_\rho - g(\rho)\} \\
+  \hat{g}(rW) & = \sup_{\rho}\{\expect{rW}_\rho - g(\rho)\} \\
   &=\sup_{\rho}\Big\{r\expect{W}_\rho - \inf_{\{p_k,\ket{\phi_k}\}}\big\{\sum_{k} p_k g(\ket{\phi_k})\big\} \Big\} \\
-  &=\sup_{\{p_k, \ket{\phi_k}\}} \Big\{ \sum_k p_k r\expect{W}_{\ket{\phi_k}} - \inf_{\{p_k, \ket{\phi_k}\}} \big\{\sum_k p_k g(\ket{\phi_k}) \big\}  \Big\} \\
-  &=\sup_{\{p_k, \ket{\phi_k}\}} \Big\{ \sum_k p_k \big\{ r\expect{W}_{\ket{\phi_k}} - g(\ket{\phi_k}) \big\} \Big\} \\
-  &=\sup_{\ket{\psi}} \big\{ r\expect{W}_{\ket{\psi}} - g(\ket{\psi}) \big\}.
+  &=\sup_{\{p_k, \ket{\phi_k}\}} \Big\{ \sum_k p_k \expect{rW}_{\ket{\phi_k}} - \inf_{\{p_k, \ket{\phi_k}\}} \big\{\sum_k p_k g(\ket{\phi_k}) \big\}  \Big\} \\
+  &=\sup_{\{p_k, \ket{\phi_k}\}} \Big\{ \sum_k p_k \big\{ \expect{rW}_{\ket{\phi_k}} - g(\ket{\phi_k}) \big\} \Big\} \\
+  &=\sup_{\ket{\psi}} \big\{ \expect{rW}_{\ket{\psi}} - g(\ket{\psi}) \big\}.
 \end{split}
 \ee
 However, even an optimization over all pure states is feasible numerically only for small systems.
@@ -105,9 +105,9 @@ First of all, we notice that for the quantum Fisher Information the inner maximi
 \end{split}
 \ee
 where we have used the fact that the QFI can be expressed as convex roof of $\varian{J_z}$ and we again fall into the problem of a single parameter for simplicity on the following derivations.
-Equation~\eqref{eq:lt-legendre-of-qfi} can be rewritten as an optimization linear in operator expectation values as
+Equation~\eqref{eq:lt-legendre-of-qfi} can be rewritten as an optimization linear in operator expectation values and over a parameter $\mu$ as
 \be
-  \hat{\mathcal{F}}_{\text{Q}}(rW) = \sup_{\ket{\psi},\mu}\big\{\expect{rW-4J_z^2}_{\psi}+8\mu\expect{J_z}_\psi - 4 \mu^2\big\},
+  \hat{\mathcal{F}}_{\text{Q}}(rW) = \sup_{\ket{\psi},\mu}\big\{\expect{rW-4J_z^2}_{\psi}+8\mu\expect{J_z}_\psi - 4 \mu^2\mtxid\big\},
 \ee
 which, making use of $\max\{\expect{A}\}=\lambda_{\max}[A]$ for any observable, can be reformulated as
 \be
@@ -117,24 +117,97 @@ which, making use of $\max\{\expect{A}\}=\lambda_{\max}[A]$ for any observable, 
     &=\sup_{\ket{\psi}}\big\{\lambda_{\max}[rW-4(J_z-\mu)^2]\big\}
   \end{split}
 \ee
-where $\lambda_{\max}[A]$ stands for the maximum eigenvalue of the operator $A$.
+where we omitted in writing $\mtxid$ for clarity and $\lambda_{\max}[A]$ stands for the maximum eigenvalue of the operator $A$.
 At the extremum, we make the following observation, the derivative with respect to $\mu$ must be zero, hence at the optimum $\mu=\expect{J_z}_{\text{opt}}$ which represents the expectation value $J_z$ should have considering the optimal state on Eq.~\eqref{eq:lt-legendre-of-qfi}.
 This also means that we have to test $\mu$ values in the interval $-N/2\leq\mu\leq N/2$ only for spin-half systems.
 
 The full optimization problem to be solved consists of Eqs.~\eqref{eq:lt-lower-bound-single-parameter} and~\eqref{eq:lt-legendre-for-qfi-simplified} substituting $g(\rho)$ by $\qfi[\rho,J_z]$,
 \be
-  \mathcal{B}_{\mathcal{F}} = \sup_r\big\{rw-\sup_{\mu}\{\lambda_{\max}[rW-4(J_z-\mu)^2]\}\big\}.
+  \mathcal{B}_{\mathcal{F}}(w) = \sup_r\big\{rw-\sup_{\mu}\{\lambda_{\max}[rW-4(J_z-\mu)^2]\}\big\}.
 \ee
 It is crucial that the optimization over $r$ is a concave function, since the theory tells us that $\hat{\mathcal{F}}_{\text{Q}}(rW)$ is a convex function \citep{}, even when the multi-parametric case is considered.
 Thus the optimum can be determined easily with simple methods, e.g., the gradient method, looking for the maximum in $r$.
 Based on Eq.~\eqref{eq:lt-lower-bound-single-parameter}, we can see that even if we do not find the global optimum in $r$, we obtain a valid lower bound.
 The extension of this bound to the multi-parametric case is done using the recipie given in Eq.~\eqref{eq:lt-extension-bound-multiparameter}.
+On the other hand, the function to be optimized for $\mu$ does not have a single maximum in general.
+Moreover, not finding the optimal $\mu$ leads to an overestimating of the bound.
+Thus, a large care must be taken especilly when optimizing over $\mu$.
 
 We stress again the generality of this findings beyond linear interferometers covered on the following sections.
 For nonlinear interferometers \citep{,,,,,}, the phase $\theta$ must be estimate in an unitary dynamics $U=\exp{-iG\theta}$, where $G$ is not a sum of single spin operators, hence, is different from the angular momentum components.
 
 Next, we will demonstrate the use of our approach for several experimentally relevant situations.
 In the many-particle case, often symmetric operators can be used to describe accurately the system, which makes possible to carry out calculations for thousand of particles, as will be presented later on this chapter.
+
+\subsection{Examples}
+\label{sec:lt-examples}
+
+In this section, we show how to obtain lower bounds based of the fidelities with respect to the GHZ state and the unpolarized Dicke state as well as with different configurations of powers of collective angular momentum operators, e.g., the set $\{\expect{J_y}, \expect{J_x}, \expect{J_x^2}\}$.
+
+\subsubsection{Exploiting symeetries}
+
+When making calculations for quantum systems with an increasing number of qubits, we soon run into difficulties when computing the largest eigenvalue of Eq.~\eqref{eq:lt-legendre-for-qfi-simplified}.
+The reason is that for $N$ qubits, we need to handle $2^N \times 2^N$ size matrices, hence we are limited to systems of 10 to 15 qubits.
+
+We can obtain bounds for much larger particle numbers, if we restrict ourselves to the symmetric subspace \citep{}.
+This approach can give optimal bounds for many systems, such as Bose-Einstein condensates (BEC) of two-level atoms, which are in a symmetric multiparticle state.
+The bound computed for the syymmetric subspace might be not correct and generally overestimated for general cases.
+
+Finally, it is important to note that if the operators $W_k$ are permutationally invariant and the eigenstate with the maximal eigenvalue in Eq.~\eqref{eq:lt-legendre-for-qfi-simplified} is non-degenerate.
+And the resulting maximal eigenvalue is the same ...
+
+We follow presenting the proof of the recently mentioned observation for completeness.
+Let us denote the ground state of a permutationally invariant Hamiltonian by $\ket{\Psi}$
+This is at the same time the $T=0$ thermal ground state, hence it must be a permutationally invariant pure state.
+For such states $S_{kl}\ketbra{\Psi}{\Psi}S_{kl}=\ketbra{\Psi}{\Psi}$, where $S_{kl}$ is the swap operator exchanging qubits $k$ and $l$.
+Based on this, follows that $S_{kl}\ket{\Psi}=c_{kl}\ket{\Psi}$, and $c_{kl}\in {-1,+1}$.
+There are three possible cases to consider.
+\begin{enumerate}
+  \item All $c_{kl}=+1$.
+  In this case, for all permutation operator $\Pi_j$ we have
+  \be
+    \label{eq:lt-permutating-ground-state}
+    \Pi_j \ket{\Psi} = \ket{\Psi},
+  \ee
+  since any permutation operator $\Pi_j$ can be constructed as $\Pi_j=\prod_i S_{k_il_i}$.
+  Equation~\eqref{eq:lt-permutating-ground-state} means that the state $\ket{\Psi}$ is symmetric.
+  \item All $c_{kl}=-1$.
+  This means that the state is antisymmetris, however this state exists only for $N=2$ qubits.
+  \item Not all $c_{kl}$ are identical to each other.
+  In this case, there must be $k_+,l_+,k_-,k_-$ such that
+  \be
+    \label{eq:lt-different-index-pi}
+    \begin{split}
+      S_{k_+,l_+} \ket{\Psi} & = +\ket{\Psi},\\
+      S_{k_-,l_-} \ket{\Psi} & = -\ket{\Psi}.
+    \end{split}
+  \ee
+  Let us assume that $k_+,l_+,k_-,l_-$ are index different from each other.
+  In this case, $\ket{\Psi'}=S_{k_+,k_-}S_{l_+,l_-}\ket{\Psi}$ another ground state of the Hamiltonian $H$ such that
+  \be
+    \label{eq:lt-different-index-pi-2}
+    \begin{split}
+      S_{k_+,l_+} \ket{\Psi'} & = -\ket{\Psi'},\\
+      S_{k_-,l_-} \ket{\Psi'} & = +\ket{\Psi'}.
+    \end{split}
+  \ee
+  Comparing Eqs.~\eqref{eq:lt-different-index-pi} and \eqref{eq:lt-different-index-pi-2} we can conclude that $\ket{\Psi'}\neq\ket{\Psi}$, while due to the permutational invariance of $H$ we have that $\expect{H}_{\Psi'} = \expect{H}_{\Psi}$.
+  Thus, $\ket{\Psi}$ is not a non-degenerate ground state.
+  The proof works in an analogous way for the only nontrivial case $k_+=k_-$, when $S_{k_+,k_-}=\mtxid$.
+\end{enumerate}
+
+Hence, if $N>2$ then only i) is possible and $\ket{\Psi}$ must be symmetric.
+
+\subsubsection{Fidelity measurements}
+
+Let us consider the case when $W$ is a projector onto a pure quantum state.
+First, we consider GHZ states \citep, hence $W$ is the projector $\ketbra{\text{GHZ}}{\text{GHZ}}$ and $\expect{W}=F_{\text{GHZ}}$, the fidelity with respect to the GHZ state.
+Based on knowing $F_{\text{GHZ}}$, we would like to estimate $\qfi[\rho,J_z]$\footnote{Not a tight lower bounds on the quantum Fisher information based on the fidelity have been presented in \citep{}.}.
+
+Using Eqs.~, we will obtain an analytical tight lower bound on the QFI based on the fidelity $F_{\text{GHZ}}$. The calsulation that we have to carry out is computing the bound
+\be
+  \mathcal{B}_{\mathcal{F}}(F_{\text{GHZ}}) = \sup_r \big\{r F_{\text{GHZ}} - \sup_{\mu} \{\lambda_{\max}[r\ketbra{\text{GHZ}}{\text{GHZ}} - 4 (J_z - \mu)^2]\}\big\}
+\ee
 
 \begin{figure}
   \centering
