@@ -204,18 +204,71 @@ Let us consider the case when $W$ is a projector onto a pure quantum state.
 First, we consider GHZ states \citep, hence $W$ is the projector $\ketbra{\text{GHZ}}{\text{GHZ}}$ and $\expect{W}=F_{\text{GHZ}}$, the fidelity with respect to the GHZ state.
 Based on knowing $F_{\text{GHZ}}$, we would like to estimate $\qfi[\rho,J_z]$\footnote{Not a tight lower bounds on the quantum Fisher information based on the fidelity have been presented in \citep{}.}.
 
-Using Eqs.~, we will obtain an analytical tight lower bound on the QFI based on the fidelity $F_{\text{GHZ}}$. The calsulation that we have to carry out is computing the bound
+Using Eqs.~\eqref{} and \eqref{}, we will obtain an analytical tight lower bound on the QFI based on the fidelity $F_{\text{GHZ}}$. The calculation that we have to carry out is computing the bound
 \be
-  \mathcal{B}_{\mathcal{F}}(F_{\text{GHZ}}) = \sup_r \big\{r F_{\text{GHZ}} - \sup_{\mu} \{\lambda_{\max}[r\ketbra{\text{GHZ}}{\text{GHZ}} - 4 (J_z - \mu)^2]\}\big\}
+  \label{eq:lt-maximization-problem-fid-ghz}
+  \mathcal{B}_{\mathcal{F}}(F_{\text{GHZ}}) = \sup_r \big\{r F_{\text{GHZ}} - \sup_{\mu} \{\lambda_{\max}[r\ketbra{\text{GHZ}}{\text{GHZ}} - 4 (J_z - \mu)^2]\}\big\}.
+\ee
+We will make our calculations in the $J_z$ orthonormal basis, which is defined with the $2^N$ basis vectors $b_0= \ket{00\dots000}$, $b_1=\ket{00\dots001}$, \dots, $b_{(2^N-2)}=\ket{11\dots110}$, and $b_{(2^N-1)}=\ket{11\dots111}$.
+It is easy to see that the matrix in the argument of $\lambda_{\max}$ in the Eq.~\eqref{eq:lt-maximization-problem-fid-ghz} is almost diagonal in the $J_z$ basis.
+To be more specific, the only non-diagonal matrix block comes from $\ketbra{\text{GHZ}}{\text{GHZ}}$, which has non-trivial matrix elements only in the $\{b_0,b_{(2^N-1)}\}$ basis.
+Thus, we have to diagonalize the following matrix
+\be
+  \label{eq:lt-expression-to-diagonalize-ghz}
+  r\ketbra{\text{GHZ}}{\text{GHZ}} - 4 (J_z-\mu)^2 =
+  \begin{pmatrix}
+    \frac{r}{2}-4(\frac{N}{2}-\mu)^2 & \frac{r}{2}\\
+    \frac{r}{2} & \frac{r}{2}-4(\frac{N}{2}+\mu)^2
+  \end{pmatrix}
+  \oplus D,
+\ee
+where $D$ is already a $(2^N-2)\times(2^N-2)$ diagonal matrix with $D_k=-4( \expect{J_z}_{b_k}-\mu)^2$ negative eigenvalues for $k=1,2,\dots, (2^N-2)$.
+This means that the Eq.~\eqref{eq:lt-expression-to-diagonalize-ghz} can be diagonalized as $\text{diag}[\lambda_{+},\lambda_{-},D_1,D_2,\dots,D_{2^N-2}]$, where the two eigenvalues $\lambda_{\pm}$ are
+\be
+  \lambda_{\pm} = \frac{r}{2}-N^2-4 \mu^2\pm\sqrt{16\mu^2N^2+\frac{r^2}{4}}.
 \ee
 
+Next, we show a way that can simplify our calculations considerably.
+As indicated in Eq.~\eqref{eq:lt-maximization-problem-fid-ghz}, we have to look for the maximal eigenvalue and then optimize it over $\mu$.
+We exchange the order of the two steps, that is, we look for the maximum of each eigenvalue over $\mu$, and then find the maximal one.
+Clearly based on the fact that the eigenvalues of $D$ are negative an that we can find a $\mu$ such that $D_k$ equal zero but not positive.
+Due to this, the problem can be simplified to the following equation
+\be
+  \label{eq:lt-ghz-legendre-solution}
+  \begin{split}
+  \sup_{\mu}\{\lambda_{\max}[r\ketbra{\text{GHZ}}{\text{GHZ}}-4(J_z-\mu)^2]\}:= & \max[0,\sup_{\mu}(\lambda_{+})]\\
+  = & \lcor
+  \begin{aligned}
+    &0, && \text{if } r<0,\\
+    &\frac{r}{2}+\frac{r^2}{16N^2} && \text{if } 0\leq r\leq 4N^2,\\
+    &-N^2+r, && \text{if }r>4N^2,
+  \end{aligned}
+  \right.
+  \end{split}
+\ee
+where we did not have to have to look for the maximum of $\lambda_{-}$ over $\mu$ since clearly $\lambda_{+}\geq\lambda_{-}$.
+Finally, we have to substitute Eq.~\eqref{eq:lt-ghz-legendre-solution} into Eq.~\eqref{eq:lt-maximization-problem-fid-ghz}, and carry out the optimization over $r$, considering $F_{\text{GHZ}}\in[0,1]$.
+
+This way we arrive at the solution for the lower bound of the QFI base on the fidelity with respect to the GHZ state as
+\be
+  \mathcal{B}_{\mathcal{F}}(F_{\text{GHZ}}) = \lcor
+  \begin{aligned}
+    & N^2(1-F_{\text{GHZ}})^2, && \text{if } F_{\text{GHZ}} < 1/2, \\
+    & 0, && \text{if } F_{\text{GHZ}}\leq1/2.
+  \end{aligned}
+  \right.
+\ee
+This equation is plotted in Figure~\ref{fig:lt-plots-for-fidelities}}~(a).
 \begin{figure}
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/LT_fidGHZ.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/LT_fidDicke.pdf}
   \caption{(a) Analytical solution of the bound $\mathcal{B}_{\mathcal{F}}$ for different values of the fidelity with respect to the GHZ state. (b) Numerical results for the minimum quantum Fisher information as a function of the fidelity with respect of unpolarise Dicke states perpendicular to the magnetic field, $|\text{D}_N^0\rangle$. (blue-line) For systems with 4 particles and (red-dashed) for system with 8 particles. One may notice that when the fidelity is at its maximum the bound approaches to 0.5 as it is the quantum Fisher information for large particle number.}
-  \label{fig:vd-secuence-evo}
+  \label{fig:lt-plots-for-fidelities}
 \end{figure}
+Note that in the figure the plot is normalized by $N^2$ and that the resulting semi-parabola is independent of the number of particles.
+Moreover, the bound is zero for $F_{\text{GHZ}}\leq 1/2$.
+This is consistent with the fact that for the product states $\rho=\ket{111\dots11}$ or $\rho=\ket{000\dots00}$ we have $F_{\text{GHZ}}=1/2$, while $\mathcal{F}_{\text{Q}}[\rho,J_z]=0$.
 
 \begin{figure}
   \centering
