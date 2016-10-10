@@ -314,35 +314,52 @@ The optimization problem we have to solve is given as
 \be
   F_{\text{opt}} = \big\{ \max_{\Psi} |\braket{\Psi}{D_N}_x|^2 \,|\, \qfi[\ket{\Psi},J_z]=0\big\}.
 \ee
-Pure states $\ket{Psi}$ that are invariant under $U_{\theta}=\exp(-iJ_z\theta)$ for any $\theta$.
+Pure states $\ket{\Psi}$ that are invariant under $U_{\theta}=\exp(-iJ_z\theta)$ for any $\theta$.
 Such states are the eigenstates of $J_z$.
 In order to maximize the overlap with the Dicke state $\ket{D_N}_{x}$, we have to look for symmetric eigenstates of $J_z$.
 These are the symmetric Dicke states in the $z$-basis $\ket{D_{N,m}}_z$.
-Then using the formula
+Then, using the following identity
 \be
-  \sum_k \binom{N}{k}\binom{N}{q-k}(-1)^k = \lcor
+  \sum_{k=0}^q \binom{n}{k}\binom{n}{q-k}(-1)^k = \lcor
   \begin{aligned}
-    &\binom{N}{q/2}(-1)^{q/2},&& \text{for even }N \text{ and }q,\\
-    &0, && \text{for odd }N.
+    &\binom{n}{q/2}(-1)^{q/2},&& \text{for even }q,\\
+    &0, && \text{for odd }q.
   \end{aligned}
   \right.
 \ee
-[TD: check the above equation] one finds that the squared overlap is given by
+one finds that the squared overlap is given by
 \be
+  \label{eq:lt-dicke-overlap-with-tp}
   |\braopket{D_{N,m}}{_z}{D_N}_x|^2 = \lcor
   \begin{aligned}
-    &\frac{\binom{N/2}{m/2}^2\binom{N}{N/2}}{2^N\binom{N}{m}} ,&& \text{for even }N \text{ and }q,\\
-    &0, && \text{for odd }N,
+    &\frac{\binom{N/2}{m/2}^2\binom{N}{N/2}}{2^N\binom{N}{m}} ,&& \text{for even }m \text{ and }N,\\
+    &0, && \text{for odd }m,
   \end{aligned}
   \right.
 \ee
-which maximal is for even $N$ and $m$ when $m=N$ or $m=0$, thus the totally or anti-totally polarized states respectively.
+which maximal, in the case of even $N$, when $m=N$ or $m=0$, thus the totally or anti-totally polarized states respectively.
+We skip the case on which $N$ is odd.
+For detailed calculations of Eq.~\eqref{eq:lt-dicke-overlap-with-tp} see Appendix~\ref{}.
 
 Next, we will examine the behavior of our lower bound on $\qfi[\rho,J_z]$ based on the fidelity $F_{\text{Dicke}}$ for large $N$.
 In figure~\ref{} [TD: Ask Geza for the data], the calculations up to $N=500$ present a strong evidence that for fidelity values $F_{\text{Dicke}}=0.2,0.5,0.8$ the lower bound on QFI has a $\mathcal{O}(N^2)$ scaling for increasing $N$.
 If this is correct then reaching a fidelity larger than a certain monotonously decreasing bound for large $N$ would imply Heisenberg scaling for the bound on the quantum Fisher information.
 Note that it is difficult to present a similar numerical evidence for small values of $F_{\text{Dicke}}$ since in that case the bound for QFI is nonzero only for large $N$ due to Eq.~\eqref{eq:lt-fidelity-dicke-with-tp}.
 
+\subsubsection{Spin-squeezed states}
+
+In the case of spin squeezing, the quantum state has a large spin in the $y$-direction, while a decreased variance in the $x$-direction.
+By measuring $\expect{J_y}$ and $\varian{J_x}$ we can estimate the lower bound for the quantum Fisher Information by Eq.~\eqref{eq:lt-pezze-smerzi}.
+However, this formula does not necessarily give the best lower bound for all values of the collective observables.
+With our approach we can find the best bound.
+
+To give a concrete example, we choose $W_1=J_y$, $W_2=J_x^2$ and $W_3=J_x$ for the operators to be measured.
+We vary $w_1$ and $w_2$ in some interval.
+We also require that $w_3=0$, since we assume that the mean spin points into the $y$-direction\footnote{Due to symmetries of the problem, when minimizing $\qfi[\rho,J_z]$ with the constraints on $\expect{J_z}$ and $\expect{J_x^2}$, we do not have to add explicitly the constraint $\expect{J_x}=0$.
+Optimization with only the first two constraints will give the same bound (see Section~\ref{sec:}).}
+This is reasonable since in most spin-squeezing experiments we know the direction of the mean spin.
+
+Our result can be seen in Figure~\ref{fig:lt-spsq2d-4}.
 \begin{figure}
   \centering
   \includegraphics[scale=.65]{img/plots/LT_spsq2d_4.pdf}
@@ -350,6 +367,16 @@ Note that it is difficult to present a similar numerical evidence for small valu
   (hatched) The physically forbidden region is indicated. (M,T,S,D) Those points indicate where the mixed state (), the totally polarized state (), the single state and the unpolarized Dicke state would be located. (W) on this line sit any of the states which is a mixture between the completely mixed state of the symmetric subspace and the singlet state among others, for instance the completely mixed state of the whole Hilbert space. (dashed) It indicates the shot-noise threshold where below it non-classical sensitivities can be achieved.}
   \label{fig:lt-spsq2d-4}
 \end{figure}
+We chose $N=4$ particles since for small $N$ the main features of the plot are clearly visible.
+The hatched area correspond to non-physical conbination of expectation values.
+States at the boundary can be obtained as ground states of $H_{\text{bnd}}^{(\pm)}(\lambda)=\pm J_x^2 -\lambda J_y$, see Appendix~\ref{app:}.
+In Figure~\ref{fig:lt-spsq2d-4}, the state fully polarized in the $y$-direction, and initial state for spin-squeezing experiments, corresponds to point T.
+The unpolarized Dicke state along $x$-direction Eq.~\eqref{eq:lt-unpolarized-z-dicke} corresponds to point D.
+We add that outside the symmetric subspace, there are other states with $\expect{J_y}=\expect{J_x^2}=0$, which also corresponds to point D (in this case denoted by point S).
+For example, such a state is the multiparticle singlet corresponding to point S.
+However, usual spin-squeezing procedures remain in the symmetric subspace, thus we discuss only the Dicke state.
+Spin squeezing makes $\varian{J_x}$ decrease, while $\expect{J_y}$ aslo decreased somewhat.
+Hence, at least for small squeezing it corresponds moving down from point T to point D following the boundary, while the metrological usefulness is increasing.
 
 \begin{figure}
   \centering
