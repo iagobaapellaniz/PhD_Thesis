@@ -273,7 +273,7 @@ This is consistent with the fact that for the product states $\rho=\ket{111\dots
 Next, let us consider symmetric unpolarized Dicke state with even $N$ particles along the $x$-direction, which is given by
 \be
   \label{eq:lt-unpolarized-z-dicke}
-  \ket{D_{N,N/2}}_{x} =
+  \ket{\dicke{N,N/2}}_{x} =
   \begin{pmatrix}
     N\\
     N/2
@@ -282,7 +282,7 @@ Next, let us consider symmetric unpolarized Dicke state with even $N$ particles 
 where the summation is over all the different permutations, $\Pi_k$, of the product state having $N/2$ particles in $\ket{1}_{x}$ and the rest $N/2$ in the $\ket{0}_{x}$ state, single qubit $j_x^{(n)}$ basis states.
 
 This state is known to be highly entangled \citep{,} and allows for Heisenberg limited interferometry \citep{}.
-In the following we will omit the second subscript and we use the notation $\ket{D_N}_{x}\equiv \ket{D_{N,N/2}}_{x}$, where we even may skip the subscript $x$ since this Dicke state will be always in the center of our attention, the unpolarized Dicke state perpendicular to the magnetic field in this case along the $z$-direction.
+In the following we will omit the second subscript and we use the notation $\ket{\dicke{N}_{x}\equiv \ket{\dicke{N,N/2}}_{x}$, where we even may skip the subscript $x$ since this Dicke state will be always in the center of our attention, the unpolarized Dicke state perpendicular to the magnetic field in this case along the $z$-direction.
 The witness operator that can be used for noisy Dicke states is $W=\ketbra{D_N}{D_N}$, hence the expectation value of the witness is just the fidelity with respect to the Dicke state, i.e., $\expect{W}=F_{\text{Dicke}}$.
 In Figure~\ref{fig:lt-plots-for-fidelities}~(b), we plotted the results for symmetric Dicke states of various spin numbers.
 $F_{\text{Dicke}}=1$ corresponds to $\mathcal{F}_{\text{Q}}[\rho,J_z]=N(N+2)/2$.
@@ -316,8 +316,8 @@ The optimization problem we have to solve is given as
 \ee
 Pure states $\ket{\Psi}$ that are invariant under $U_{\theta}=\exp(-iJ_z\theta)$ for any $\theta$.
 Such states are the eigenstates of $J_z$.
-In order to maximize the overlap with the Dicke state $\ket{D_N}_{x}$, we have to look for symmetric eigenstates of $J_z$.
-These are the symmetric Dicke states in the $z$-basis $\ket{D_{N,m}}_z$.
+In order to maximize the overlap with the Dicke state $\ket{\dicke{N}_{x}$, we have to look for symmetric eigenstates of $J_z$.
+These are the symmetric Dicke states in the $z$-basis $\ket{\dicke{N,m}}_z$.
 Then, using the following identity
 \be
   \sum_{k=0}^q \binom{n}{k}\binom{n}{q-k}(-1)^k = \lcor
@@ -330,7 +330,7 @@ Then, using the following identity
 one finds that the squared overlap is given by
 \be
   \label{eq:lt-dicke-overlap-with-tp}
-  |\braopket{D_{N,m}}{_z}{D_N}_x|^2 = \lcor
+  |\braopket{\dicke{N,m}}{_z}{\dicke{N}}_x|^2 = \lcor
   \begin{aligned}
     &\frac{\binom{N/2}{m/2}^2\binom{N}{N/2}}{2^N\binom{N}{m}} ,&& \text{for even }m \text{ and }N,\\
     &0, && \text{for odd }m,
@@ -377,6 +377,23 @@ For example, such a state is the multiparticle singlet corresponding to point S.
 However, usual spin-squeezing procedures remain in the symmetric subspace, thus we discuss only the Dicke state.
 Spin squeezing makes $\varian{J_x}$ decrease, while $\expect{J_y}$ aslo decreased somewhat.
 Hence, at least for small squeezing it corresponds moving down from point T to point D following the boundary, while the metrological usefulness is increasing.
+Below the dashed line $\qfi[\rho,J_z]>N$, hence the state possesses metrologicaly useful entanglement \citep{}.
+The equal mixture of $\ket{000\dots00}_x$ and $\ket{111\dots11}_x$ corresponds to point M, with $\qfi[\rho,J_z] = N$.
+Finally, the completely mixed state rests on the line W.
+It cannot be used for metrology, hence $\qfi[\rho,J_z]=0$.
+
+We now compare the difference between our bound and L.~Pezze and A.~Smerzi bound Eq.~\eqref{eq:}.
+First, we consider the experimentally relevant region for which $\varian{J_x}\leq 1$.
+We find that for points away from the physical boundary at least by 0.001 on the vertical axis, the difference between the two bounds is smaller than $2\times10^{-6}$.
+For points at the boundary, the difference is somewhat larger, but still small, the relative difference is smaller than $2\%$ for 4 particles.
+[TD: Add part of the appendix]
+Hence, Eq.~\eqref{eq:} practically coincides with the optimal bound for $\varian{J_x}<1$.
+
+We now consider regions on Figure~\ref{fig:lt-spsq2d-4} for which $\varian{J_x}>1$.
+The difference between the two bound is now larger.
+It is larger at point M, for which the bound Eq.~\eqref{eq:} is zero.
+Hence for measurement values corresponding to points close to M, our method improve the formula Eq.~\eqref{eq:}.
+It is important from the point of view of applying our method to spin-squeezing experiments that the bound Eq.~\eqref{eq:} can be substantially improved for $\varian{J_x}<1$, if we assume bosonic symmetry for the system, or we measure an additional quantity, such as $\expect{J_x^4}$ as shown in Figure~\ref{fig:lt-} [TD: Ask Geza for data].
 
 \begin{figure}
   \centering
@@ -386,6 +403,9 @@ Hence, at least for small squeezing it corresponds moving down from point T to p
   Heuristically speaking, one can say that for large particle number the difference is biggest when the polarisation is around two thirds of the maximal polarisation and that this difference is about $2.6\%$.}
   \label{fig:lt-edge-diff}
 \end{figure}
+
+\subsubsection{Dicke states}
+In this section, we use our method to find lower bounds on the QFI for states characterized to be close to the Dicke state \eqref{eq:lt-unpolarized-z-dicke}.
 
 \begin{figure}
   \centering
