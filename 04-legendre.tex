@@ -161,7 +161,7 @@ Let us denote the ground state of a permutationally invariant Hamiltonian by $\k
 This is at the same time the $T=0$ thermal ground state, hence it must be a permutationally invariant pure state.
 For such states $S_{kl}\ketbra{\Psi}{\Psi}S_{kl}=\ketbra{\Psi}{\Psi}$, where $S_{kl}$ is the swap operator exchanging qubits $k$ and $l$.
 Based on this, follows that $S_{kl}\ket{\Psi}=c_{kl}\ket{\Psi}$, and $c_{kl}\in {-1,+1}$.
-There are three possible cases to consider.
+There are three possible cases to consider:
 \begin{enumerate}
   \item All $c_{kl}=+1$.
   In this case, for all permutation operator $\Pi_j$ we have
@@ -201,21 +201,21 @@ Hence, if $N>2$ then only i) is possible and $\ket{\Psi}$ must be symmetric.
 \subsubsection{Fidelity measurements}
 
 Let us consider the case when $W$ is a projector onto a pure quantum state.
-First, we consider GHZ states \citep, hence $W$ is the projector $\ketbra{\text{GHZ}}{\text{GHZ}}$ and $\expect{W}=F_{\text{GHZ}}$, the fidelity with respect to the GHZ state.
-Based on knowing $F_{\text{GHZ}}$, we would like to estimate $\qfi[\rho,J_z]$\footnote{Not a tight lower bounds on the quantum Fisher information based on the fidelity have been presented in \citep{}.}.
+First, we consider GHZ states \citep, hence $W$ is the projector $\ketbra{\ghz}{\ghz}$ and $\expect{W}=F_{\ghz}$, the fidelity with respect to the GHZ state.
+Based on knowing $F_{\ghz}$, we would like to estimate $\qfi[\rho,J_z]$\footnote{Not a tight lower bounds on the quantum Fisher information based on the fidelity have been presented in \citep{}.}.
 
-Using Eqs.~\eqref{} and \eqref{}, we will obtain an analytical tight lower bound on the QFI based on the fidelity $F_{\text{GHZ}}$. The calculation that we have to carry out is computing the bound
+Using Eqs.~\eqref{} and \eqref{}, we will obtain an analytical tight lower bound on the QFI based on the fidelity $F_{\ghz}$. The calculation that we have to carry out is computing the bound
 \be
   \label{eq:lt-maximization-problem-fid-ghz}
-  \mathcal{B}_{\mathcal{F}}(F_{\text{GHZ}}) = \sup_r \big\{r F_{\text{GHZ}} - \sup_{\mu} \{\lambda_{\max}[r\ketbra{\text{GHZ}}{\text{GHZ}} - 4 (J_z - \mu)^2]\}\big\}.
+  \mathcal{B}_{\mathcal{F}}(F_{\ghz}) = \sup_r \big\{r F_{\ghz} - \sup_{\mu} \{\lambda_{\max}[r\ketbra{\ghz}{\ghz} - 4 (J_z - \mu)^2]\}\big\}.
 \ee
 We will make our calculations in the $J_z$ orthonormal basis, which is defined with the $2^N$ basis vectors $b_0= \ket{00\dots000}$, $b_1=\ket{00\dots001}$, \dots, $b_{(2^N-2)}=\ket{11\dots110}$, and $b_{(2^N-1)}=\ket{11\dots111}$.
 It is easy to see that the matrix in the argument of $\lambda_{\max}$ in the Eq.~\eqref{eq:lt-maximization-problem-fid-ghz} is almost diagonal in the $J_z$ basis.
-To be more specific, the only non-diagonal matrix block comes from $\ketbra{\text{GHZ}}{\text{GHZ}}$, which has non-trivial matrix elements only in the $\{b_0,b_{(2^N-1)}\}$ basis.
+To be more specific, the only non-diagonal matrix block comes from $\ketbra{\ghz}{\ghz}$, which has non-trivial matrix elements only in the $\{b_0,b_{(2^N-1)}\}$ basis.
 Thus, we have to diagonalize the following matrix
 \be
   \label{eq:lt-expression-to-diagonalize-ghz}
-  r\ketbra{\text{GHZ}}{\text{GHZ}} - 4 (J_z-\mu)^2 =
+  r\ketbra{\ghz}{\ghz} - 4 (J_z-\mu)^2 =
   \begin{pmatrix}
     \frac{r}{2}-4(\frac{N}{2}-\mu)^2 & \frac{r}{2}\\
     \frac{r}{2} & \frac{r}{2}-4(\frac{N}{2}+\mu)^2
@@ -236,7 +236,7 @@ Due to this, the problem can be simplified to the following equation
 \be
   \label{eq:lt-ghz-legendre-solution}
   \begin{split}
-  \sup_{\mu}\{\lambda_{\max}[r\ketbra{\text{GHZ}}{\text{GHZ}}-4(J_z-\mu)^2]\}:= & \max[0,\sup_{\mu}(\lambda_{+})]\\
+  \sup_{\mu}\{\lambda_{\max}[r\ketbra{\ghz}{\ghz}-4(J_z-\mu)^2]\}:= & \max\{0,\sup_{\mu}(\lambda_{+})\}\\
   = & \lcor
   \begin{aligned}
     &0, && \text{if } r<0,\\
@@ -247,14 +247,14 @@ Due to this, the problem can be simplified to the following equation
   \end{split}
 \ee
 where we did not have to have to look for the maximum of $\lambda_{-}$ over $\mu$ since clearly $\lambda_{+}\geq\lambda_{-}$.
-Finally, we have to substitute Eq.~\eqref{eq:lt-ghz-legendre-solution} into Eq.~\eqref{eq:lt-maximization-problem-fid-ghz}, and carry out the optimization over $r$, considering $F_{\text{GHZ}}\in[0,1]$.
+Finally, we have to substitute Eq.~\eqref{eq:lt-ghz-legendre-solution} into Eq.~\eqref{eq:lt-maximization-problem-fid-ghz}, and carry out the optimization over $r$, considering $F_{\ghz}\in[0,1]$.
 
 This way we arrive at the solution for the lower bound of the QFI base on the fidelity with respect to the GHZ state as
 \be
-  \mathcal{B}_{\mathcal{F}}(F_{\text{GHZ}}) = \lcor
+  \mathcal{B}_{\mathcal{F}}(F_{\ghz}) = \lcor
   \begin{aligned}
-    & N^2(1-F_{\text{GHZ}})^2, && \text{if } F_{\text{GHZ}} < 1/2, \\
-    & 0, && \text{if } F_{\text{GHZ}}\leq1/2.
+    & N^2(1-F_{\ghz})^2, && \text{if } F_{\ghz} < 1/2, \\
+    & 0, && \text{if } F_{\ghz}\leq1/2.
   \end{aligned}
   \right.
 \ee
@@ -267,8 +267,8 @@ This equation is plotted in Figure~\ref{fig:lt-plots-for-fidelities}}~(a).
   \label{fig:lt-plots-for-fidelities}
 \end{figure}
 Note that in the figure the plot is normalized by $N^2$ and that the resulting semi-parabola is independent of the number of particles.
-Moreover, the bound is zero for $F_{\text{GHZ}}\leq 1/2$.
-This is consistent with the fact that for the product states $\rho=\ket{111\dots11}$ or $\rho=\ket{000\dots00}$ we have $F_{\text{GHZ}}=1/2$, while $\mathcal{F}_{\text{Q}}[\rho,J_z]=0$.
+Moreover, the bound is zero for $F_{\ghz}\leq 1/2$.
+This is consistent with the fact that for the product states $\rho=\ket{111\dots11}$ or $\rho=\ket{000\dots00}$ we have $F_{\ghz}=1/2$, while $\mathcal{F}_{\text{Q}}[\rho,J_z]=0$.
 
 Next, let us consider symmetric unpolarized Dicke state with even $N$ particles along the $x$-direction, which is given by
 \be
@@ -279,10 +279,10 @@ Next, let us consider symmetric unpolarized Dicke state with even $N$ particles 
     N/2
   \end{pmatrix}^{-\frac{1}{2}} \sum_k \Pi_k (\ket{1}_{x}^{\otimes N/2}\ket{0}_{x}^{\otimes N/2}),
 \ee
-where the summation is over all the different permutations, $\Pi_k$, of the product state having $N/2$ particles in $\ket{1}_{x}$ and the rest $N/2$ in the $\ket{0}_{x}$ state, single qubit $j_x^{(n)}$ basis states.
+where the summation is over all the different permutations, $\Pi_k$, of the product state having $N/2$ particles in $\ket{1}_{x}$ and the rest $N/2$ in the $\ket{0}_{x}$ state, the single qubit $j_x^{(n)}$ basis states.
 
 This state is known to be highly entangled \citep{,} and allows for Heisenberg limited interferometry \citep{}.
-In the following we will omit the second subscript and we use the notation $\ket{\dicke{N}_{x}\equiv \ket{\dicke{N,N/2}}_{x}$, where we even may skip the subscript $x$ since this Dicke state will be always in the center of our attention, the unpolarized Dicke state perpendicular to the magnetic field in this case along the $z$-direction.
+In the following we will omit the second subscript and we use the notation $\ket{\dicke{N}}_{x}\equiv \ket{\dicke{N,N/2}}_{x}$, where we even may skip the subscript $x$ since this Dicke state will be always in the center of our attention, the unpolarized Dicke state perpendicular to the magnetic field in this case along the $z$-direction.
 The witness operator that can be used for noisy Dicke states is $W=\ketbra{D_N}{D_N}$, hence the expectation value of the witness is just the fidelity with respect to the Dicke state, i.e., $\expect{W}=F_{\text{Dicke}}$.
 In Figure~\ref{fig:lt-plots-for-fidelities}~(b), we plotted the results for symmetric Dicke states of various spin numbers.
 $F_{\text{Dicke}}=1$ corresponds to $\mathcal{F}_{\text{Q}}[\rho,J_z]=N(N+2)/2$.
@@ -312,11 +312,11 @@ Hence, if we have a mixed state for which $\qfi[\rho,J_z]$ is zero, then it can 
 As a consequence, the extremal states of the set of states for which $\qfi[\rho,J_z]=0$ are pure states, and we can restrict our search for pure states.
 The optimization problem we have to solve is given as
 \be
-  F_{\text{opt}} = \big\{ \max_{\Psi} |\braket{\Psi}{D_N}_x|^2 \,|\, \qfi[\ket{\Psi},J_z]=0\big\}.
+  F_{\text{opt}} = \big\{ \max_{\Psi} |\braket{\Psi}{\dicke{N}}_x|^2 \,|\, \qfi[\ket{\Psi},J_z]=0\big\}.
 \ee
 Pure states $\ket{\Psi}$ that are invariant under $U_{\theta}=\exp(-iJ_z\theta)$ for any $\theta$.
 Such states are the eigenstates of $J_z$.
-In order to maximize the overlap with the Dicke state $\ket{\dicke{N}_{x}$, we have to look for symmetric eigenstates of $J_z$.
+In order to maximize the overlap with the Dicke state $\ket{\dicke{N}}_{x}$, we have to look for symmetric eigenstates of $J_z$.
 These are the symmetric Dicke states in the $z$-basis $\ket{\dicke{N,m}}_z$.
 Then, using the following identity
 \be
@@ -339,7 +339,7 @@ one finds that the squared overlap is given by
 \ee
 which maximal, in the case of even $N$, when $m=N$ or $m=0$, thus the totally or anti-totally polarized states respectively.
 We skip the case on which $N$ is odd.
-For detailed calculations of Eq.~\eqref{eq:lt-dicke-overlap-with-tp} see Appendix~\ref{}.
+For detailed calculations of Eq.~\eqref{eq:lt-dicke-overlap-with-tp} see Appendix~\ref{app:calculation-dicke-overlap}.
 
 Next, we will examine the behavior of our lower bound on $\qfi[\rho,J_z]$ based on the fidelity $F_{\text{Dicke}}$ for large $N$.
 In figure~\ref{} [TD: Ask Geza for the data], the calculations up to $N=500$ present a strong evidence that for fidelity values $F_{\text{Dicke}}=0.2,0.5,0.8$ the lower bound on QFI has a $\mathcal{O}(N^2)$ scaling for increasing $N$.
@@ -369,7 +369,7 @@ Our result can be seen in Figure~\ref{fig:lt-spsq2d-4}.
 \end{figure}
 We chose $N=4$ particles since for small $N$ the main features of the plot are clearly visible.
 The hatched area correspond to non-physical conbination of expectation values.
-States at the boundary can be obtained as ground states of $H_{\text{bnd}}^{(\pm)}(\lambda)=\pm J_x^2 -\lambda J_y$, see Appendix~\ref{app:}.
+States at the boundary can be obtained as ground states of $H_{\text{bnd}}^{(\pm)}(\lambda)=\pm J_x^2 -\lambda J_y$, see Appendix~\ref{app:spin-squeezing-hamiltonian}.
 In Figure~\ref{fig:lt-spsq2d-4}, the state fully polarized in the $y$-direction, and initial state for spin-squeezing experiments, corresponds to point T.
 The unpolarized Dicke state along $x$-direction Eq.~\eqref{eq:lt-unpolarized-z-dicke} corresponds to point D.
 We add that outside the symmetric subspace, there are other states with $\expect{J_y}=\expect{J_x^2}=0$, which also corresponds to point D (in this case denoted by point S).

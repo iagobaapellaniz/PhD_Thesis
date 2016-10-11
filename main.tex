@@ -131,7 +131,7 @@
 \newcommand{\ver}[2]{\ensuremath{\genfrac{}{}{0pt}{}{#1}{#2}}}
 \newcommand{\trsub}[2]{\ensuremath{\Tr_{#1} \lcua #2 \rcua }}
 \newcommand{\bs}[1]{\ensuremath{\boldsymbol{#1}}}
-\newcommand{\dicke}[1]{\textnormal{D}_{#1}}
+\newcommand{\dicke}[1]{\ensuremath{\textnormal{D}_{#1}}}
 
 \def\be{\begin{equation}}
 \def\ee{\end{equation}}
@@ -148,7 +148,8 @@
 \def\nnnlq{\nonumber\\ && \quad}
 \def\nnnlqq{\nonumber\\ && \qquad}
 \def\nnnlqqq{\nonumber\\ && \quad\qquad}
-\def\qfi{\mathcal{F}_{\text{Q}}}
+\def\qfi{\mathcal{F}_{\textnormal{Q}}}
+\def\ghz{\textnormal{GHZ}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % DOCUMENT
@@ -229,10 +230,10 @@ Spin squeezing and entanglement for an arbitrary spin
 %%%%%%%%%%%%%%%%%%%%%%%%
 % FIGURES TABLES, ETC
 %%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Tables, figures and abbreviations}
+\section*{Abbreviations, figures and tables}
 \fancyfoot[LE,RO]{\thepage}
 \subsection*{Abbreviations}
-\begin{tabular}{r c l}
+\begin{tabular}{l c l}
   SLD & - & Symmetric logarithmic derivative \\
   QFI & - & Quantum Fisher information \\
   BEC & - & Bose-Einstein condensate
