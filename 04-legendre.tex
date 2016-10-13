@@ -405,7 +405,34 @@ It is important from the point of view of applying our method to spin-squeezing 
 \end{figure}
 
 \subsubsection{Dicke states}
-In this section, we use our method to find lower bounds on the QFI for states characterized to be close to the Dicke state \eqref{eq:lt-unpolarized-z-dicke}.
+In this section, we use our method to find lower bounds on the QFI for states characterized to be close to the Dicke states \eqref{eq:lt-unpolarized-z-dicke}, based on collective measurements.
+We discuss what operators have to be measured to estimate the metrological usefulness of the state.
+In Section~\ref{sec:}, we will test our approach fo a realistic system with very many particles.
+
+In order to estimate the metrological usefulness of states created in such experiments, we choose to measure $W_1=J_x^2$, $W_2=J_y^2$ and $W_3=J_z^2$ since the expectation values of these operators uniquely define the ideal Dicke state, and they have been already used for entanglement detection \citep{Lucke2014}.
+In cold gas experiments of nowadays, the state created is invariant under transformations of the type $U_{x}(\phi)=\exp(-i J_x \phi)$ \citep{Apellaniz2015}.
+For such states $\expect{J_y^2}=\expect{J_z^2}$, which we also use as a constraint in our optimization.
+
+Let us demonstrate how our method works in an example for small systems.
+Figure~\ref{fig:lt-symmetric-dicke-6-bound}
+\begin{figure}
+  \centering
+  \includegraphics[scale=.65]{img/plots/LT_dicke_edge.pdf}
+  \caption{Optimal lower bound on the quantum Fisher Information for symmetric states with $\expect{J_y^2}=\expect{J_z^2}$. Even if it is metrologicaly useful for a wide range of $\expect{J_x^2}$, the numerics shows us a tiny region where the metrological gain is surpassing the shot-noise limit.}
+  \label{fig:lt-symmetric-dicke-6-bound}
+\end{figure}
+shows the result for 6 qubits for symmetric states for which
+\be
+  \expect{J_x^2+J_y^2+J_z^2} = \frac{N}{2}(\frac{N}{2}+1)=:\mathcal{J}_N.
+\ee
+It can be seen that the lower bound on quantum Fisher Information is the largest for $\expect{J_x^2}=0$.
+It reaches the value corresponding to the ideal Dicke state, $\qfi[\rho,J_z]/N=(N+2)/2=4$.
+It is remarcable that the state is also useful for metrology if $\expect{J_x^2}$ is very large.
+In this case $\expect{J_y^2}$ and $\expect{J_z^2}$ are smaller than $\expect{J_x^2}$.
+
+\subsection{Calculations for experimental data}
+
+In this section, we use
 
 \begin{figure}
   \centering
@@ -413,13 +440,6 @@ In this section, we use our method to find lower bounds on the QFI for states ch
   \igwithlabel{(b)}{scale=.65}{img/plots/LT_spsq_scaling_2.pdf}
   \caption{}
   \label{fig:lt-spsq-scaling}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[scale=.65]{img/plots/LT_dicke_edge.pdf}
-  \caption{The numerics shows us a tiny region the symmetric system surpassing the shot-noise threshold.}
-  \label{fig:vd-secuence-evo}
 \end{figure}
 
 \begin{figure}
