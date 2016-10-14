@@ -55,7 +55,7 @@ This picture can be extend to more outcomes coming from a single \emph{event} or
 For instance, a second value such as the width of the tree could be attached to each height on the previous example.
 This way we have opened our approach for higher dimensional data samples that can be described as a set of $M$ outcomes with more than a single value each, $(X,Y,\dots)=\{x_i,y_i,\dots\}_{i=1}^M$.
 
-\ssssection{Average}
+\subsubsubsection{Average}
 
 With this data at hand one of the first questions arises is whether the values of $X$ are around some mean value.
 If one tries to address this question one of the first approaches can be computed is the \emph{arithmetic average} of the set $X$, namely,
@@ -72,7 +72,7 @@ The average of the data sample is straight forward $\text{E}[X] = \frac{1}{18}\s
 
 For the extension to the case of higher dimensional data samples one can say that each kind of outcome the average can be computed in a seamless way, $\text{E}[Y]=\frac{1}{M}\sum_{i=1}^M y_i$ and so on.
 
-\ssssection{Variance}
+\subsubsubsection{Variance}
 
 The second quantity one can compute is how spread the data is.
 This is usually done first subtracting the average to all values on the data sample, then squaring them, so the sign of the result is lost, and finally one averages over all the resulting set. This quantity is called the \emph{variance} of the sample and it is written as follows,
@@ -91,7 +91,7 @@ In this case the variance would be the following, $\text{V}[X]=\frac{1}{18}\sum_
 To summarise and using the standard deviation, one can say now about the original distribution that most values are around 6m with a deviation of 2.357m.
 Of course, some values are outside this range, but nevertheless the description is quite accurate, note that 12 values from 18 are inside the range $6\text{m}\pm2.357\text{m}$.
 
-\ssssection{Histograms}
+\subsubsubsection{Histograms}
 
 At this point we introduce the \emph{histograms} and with that, first, the \emph{distribution function} of the data sample.
 Returning to the example of the Table~\ref{tab:bg-18-trees}, one may notice that the value 7m is repeated 6 times, as the value 5m is 4 times and so on.
@@ -153,7 +153,7 @@ Error propagation formula.
 
 The ubiquitous probabilistic nature of quantum mechanics forces all the community to know some basics on probability and statistics.
 
-\ssssection{The quantum state, multi-particle state, entanglement}
+\subsubsubsection{The quantum state, multi-particle state, entanglement}
 
 A \emph{system state} in Quantum Mechanics lives on a Hilbert space, $\mathcal{H}$.
 The system state, $\rho$, has the following properties:
@@ -249,3 +249,8 @@ Finally, the unitary operator leading the evolution of the system can be written
 \ee
 where the magnetic field strength is encoded into the variable $\Theta=-\mu_\text{B} g_\text{s} t B/\hbar$.
 Here $\mu_\text{B}$ stand for the Magneton of Bhor and $g_\text{s}$ for the giro-magnetic constant for the spin angular momentum, and $t$ is the time spent on the evolution.
+
+\be
+  \label{eq:bg-pezze-bound}
+  \qfi[\rho,J_z] \geq \frac{\expect{J_y}^2}{\varian{J_x}}
+\ee
