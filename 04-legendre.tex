@@ -40,11 +40,11 @@ Finally, we will summarize it with an explicit formula which will be used to com
 
 \subsubsection{Estimation of a general convex function based on the expectation value of an arbitrary observable}
 
-When a convex function $g(\rho)$ is given together with an expectation value of some operator $w=\tr(\rho W)$, a tight lower bound, $\mathcal{B}_g(w)$, can be obtained as \citep{Rockafellar1996, Guehne2007, Eisert2007}
+When a convex function $g(\rho)$ is given together with an expectation value of some operator $w=\tr(\rho W)$, a tight lower bound, $\bound{g}(w)$, can be obtained as \citep{Rockafellar1996, Guehne2007, Eisert2007}
 \be
   \label{eq:lt-lower-bound-single-parameter}
   \begin{split}
-    g(\rho)\geq\mathcal{B}_g(w):=\,&\sup_r \{ rw - \hat{g}(rW)\}\\
+    g(\rho)\geq\bound{g}(w):=\,&\sup_r \{ rw - \hat{g}(rW)\}\\
     =\,& \{\inf_{\rho}g(\rho)\,|\,w = \tr(\rho W)\}
   \end{split}
 \ee
@@ -87,7 +87,7 @@ Its extension to several expectation values is indeed straight-forward.
 We can generalize Eqs.~\eqref{eq:lt-lower-bound-single-parameter} and \eqref{eq:lt-for-convex-function-single-parameter} for several observables $\{W_i\}_{i=1}^M$ as follows \citep{Guehne2007}
 \be
   \label{eq:lt-extension-bound-multiparameter}
-  \mathcal{B}_g(w_1,w_2,\dots) := \sup_{\bs{r}}\big\{\bs{rw}-\sup_{\rho}\{\expect{\bs{rW}}-g(\rho)\}\big\},
+  \bound{g}(w_1,w_2,\dots) := \sup_{\bs{r}}\big\{\bs{rw}-\sup_{\rho}\{\expect{\bs{rW}}-g(\rho)\}\big\},
 \ee
 where $\bs{ab} =\sum_{k=1}^M a_kb_k$, the usual notation for scalar products of two vectors.
 
@@ -123,7 +123,7 @@ This also means that we have to test $\mu$ values in the interval $-N/2\leq\mu\l
 
 The full optimization problem to be solved consists of Eqs.~\eqref{eq:lt-lower-bound-single-parameter} and~\eqref{eq:lt-legendre-for-qfi-simplified} substituting $g(\rho)$ by $\qfi[\rho,J_z]$,
 \be
-  \mathcal{B}_{\mathcal{F}}(w) = \sup_r\big\{rw-\sup_{\mu}\{\lambda_{\max}[rW-4(J_z-\mu)^2]\}\big\}.
+  \bound{\mathcal{F}}(w) = \sup_r\big\{rw-\sup_{\mu}\{\lambda_{\max}[rW-4(J_z-\mu)^2]\}\big\}.
 \ee
 It is crucial that the optimization over $r$ is a concave function, since the theory tells us that $\hat{\mathcal{F}}_{\text{Q}}(rW)$ is a convex function \citep{}, even when the multi-parametric case is considered.
 Thus the optimum can be determined easily with simple methods, e.g., the gradient method, looking for the maximum in $r$.
@@ -207,7 +207,7 @@ Based on knowing $F_{\ghz}$, we would like to estimate $\qfi[\rho,J_z]$\footnote
 Using Eqs.~\eqref{} and \eqref{}, we will obtain an analytical tight lower bound on the QFI based on the fidelity $F_{\ghz}$. The calculation that we have to carry out is computing the bound
 \be
   \label{eq:lt-maximization-problem-fid-ghz}
-  \mathcal{B}_{\mathcal{F}}(F_{\ghz}) = \sup_r \big\{r F_{\ghz} - \sup_{\mu} \{\lambda_{\max}[r\ketbra{\ghz}{\ghz} - 4 (J_z - \mu)^2]\}\big\}.
+  \bound{\mathcal{F}}(F_{\ghz}) = \sup_r \big\{r F_{\ghz} - \sup_{\mu} \{\lambda_{\max}[r\ketbra{\ghz}{\ghz} - 4 (J_z - \mu)^2]\}\big\}.
 \ee
 We will make our calculations in the $J_z$ orthonormal basis, which is defined with the $2^N$ basis vectors $b_0= \ket{00\dots000}$, $b_1=\ket{00\dots001}$, \dots, $b_{(2^N-2)}=\ket{11\dots110}$, and $b_{(2^N-1)}=\ket{11\dots111}$.
 It is easy to see that the matrix in the argument of $\lambda_{\max}$ in the Eq.~\eqref{eq:lt-maximization-problem-fid-ghz} is almost diagonal in the $J_z$ basis.
@@ -251,7 +251,7 @@ Finally, we have to substitute Eq.~\eqref{eq:lt-ghz-legendre-solution} into Eq.~
 
 This way we arrive at the solution for the lower bound of the QFI base on the fidelity with respect to the GHZ state as
 \be
-  \mathcal{B}_{\mathcal{F}}(F_{\ghz}) = \lcor
+  \bound{\mathcal{F}}(F_{\ghz}) = \lcor
   \begin{aligned}
     & N^2(1-F_{\ghz})^2, && \text{if } F_{\ghz} < 1/2, \\
     & 0, && \text{if } F_{\ghz}\leq1/2.
@@ -263,7 +263,9 @@ This equation is plotted in Figure~\ref{fig:lt-plots-for-fidelities}}~(a).
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/LT_fidGHZ.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/LT_fidDicke.pdf}
-  \caption{(a) Analytical solution of the bound $\mathcal{B}_{\mathcal{F}}$ for different values of the fidelity with respect to the GHZ state. (b) Numerical results for the minimum quantum Fisher information as a function of the fidelity with respect of unpolarise Dicke states perpendicular to the magnetic field, $|\text{D}_N^0\rangle$. (blue-line) For systems with 4 particles and (red-dashed) for system with 8 particles. One may notice that when the fidelity is at its maximum the bound approaches to 0.5 as it is the quantum Fisher information for large particle number.}
+  \caption{(a) Analytical solution of the bound $\bound{\mathcal{F}}$ for different values of the fidelity with respect to the GHZ state.
+  (b) Numerical results for the minimum quantum Fisher information as a function of the fidelity with respect of unpolarise Dicke states perpendicular to the magnetic field, $|\text{D}_N^0\rangle$.
+  (blue-line) For systems with 4 particles and (red-dashed) for system with 8 particles. One may notice that when the fidelity is at its maximum the bound approaches to 0.5 as it is the quantum Fisher information for large particle number.}
   \label{fig:lt-plots-for-fidelities}
 \end{figure}
 Note that in the figure the plot is normalized by $N^2$ and that the resulting semi-parabola is independent of the number of particles.
@@ -293,7 +295,7 @@ For our case, the witness operator $W$ is permutationally invariant and it has a
 Hence, based on the arguments of the Section~\ref{sec:} the bound is valid even for general case, i.e., non-symmetric states.
 
 We now compute several quantities for the large $N$ case.
-We show that if the fidelity with respect to the Dicke state is larger than a bound then $\mathcal{B}_{\mathcal{F}}>0$.
+We show that if the fidelity with respect to the Dicke state is larger than a bound then $\bound{\mathcal{F}}>0$.
 Moreover, we have seen in Figure~\ref{fig:lt-plots-for-fidelities}~(b) that the lower bound on $\qfi[\rho,J_z]$ as a function of the fidelity $F_{\text{Dicke}}$ normalized by $N^2$ is not the same curve for all $N$.
 Next, we will demonstrate by numerical evidence that the lower bound normalized by $N^2$ collapses to a nontrivial curve for large $N$.
 
@@ -405,6 +407,7 @@ It is important from the point of view of applying our method to spin-squeezing 
 \end{figure}
 
 \subsubsection{Dicke states}
+\label{sec:lt-dicke-states}
 In this section, we use our method to find lower bounds on the QFI for states characterized to be close to the Dicke states \eqref{eq:lt-unpolarized-z-dicke}, based on collective measurements.
 We discuss what operators have to be measured to estimate the metrological usefulness of the state.
 In Section~\ref{sec:}, we will test our approach fo a realistic system with very many particles.
@@ -423,7 +426,8 @@ Figure~\ref{fig:lt-symmetric-dicke-6-bound}
 \end{figure}
 shows the result for 6 qubits for symmetric states for which
 \be
-  \expect{J_x^2+J_y^2+J_z^2} = \frac{N}{2}(\frac{N}{2}+1)=:\mathcal{J}_N.
+  \label{eq:lt-maximum-angular-momentum}
+  \expect{J_x^2+J_y^2+J_z^2} = \frac{N(N+2)}{4}=:\mathcal{J}_N.
 \ee
 It can be seen that the lower bound on quantum Fisher Information is the largest for $\expect{J_x^2}=0$.
 It reaches the value corresponding to the ideal Dicke state, $\qfi[\rho,J_z]/N=(N+2)/2=4$.
@@ -450,7 +454,7 @@ Our results are summarized in Table~\ref{tab:lt-results-for-fidelities}.
     \begin{tabular}{| l | l | l | l | l |}
       \hline
       Physical&Target &\multicolumn{1}{ l|}{\multirow{2}{*}{Fidelity}}
-      &\multicolumn{1}{ l|}{\multirow{2}{*}{$\mathcal{B}_{\mathcal{F}}/N$}}
+      &\multicolumn{1}{ l|}{\multirow{2}{*}{$\bound{\mathcal{F}}/N$}}
       &\multicolumn{1}{ l|}{\multirow{2}{*}{Ref.}} \\
       system & quantum state &  &  &  \\ \hline
       \multicolumn{1}{|l|}{\multirow{6}{*}{photons}}
@@ -516,25 +520,26 @@ For each $\alpha$ we use $\varian{J_x}$ will be given such that we get the exper
 Moreover, we assume $\expect{J_x}=0$, as the $y$-direction was the direction of the mean spin in the experiment.
 Based on Eq.~\eqref{eq:bg-pezze-bound}, the bound for the quantum Fisher information is obtained as
 \be
+  \label{eq:lt-bound-for-experiment}
   \frac{\qfi[\rho,J_z]}{N}\geq \frac{1}{\xi_{\textnormal{s}}^2}=6.605.
 \ee
 
 For our computations we need a tool to handle large systems.
 We will carry out the calculations for symmetric states.
-this way we obtain a lower bound on the QFI that we will denote by $\mathcal{B}_{\textnormal{sym}}$.
+this way we obtain a lower bound on the QFI that we will denote by $\bound{\textnormal{sym}}$.
 As already mentioned, we could obtain a bound for the QFI that is valid even for general case, not necessarily symmetric states if the matrix from which compute the maximum eigenvalue Eq.~\eqref{eq:lt-legendre-for-qfi-simplified} has a non-degenerated largest eigenvalue.
 This is not the case in general for the spin-squeezing problem.
-However, we still know that our bound obtained with our calculations on the symmetric subspace cannot be smaller than the optimal bound $\mathcal{B}_{\mathcal{F}}$, which must be bigger or equal to the Eq.~\eqref{eq:bg-pezze-bound} since it cannot be larger than the optimal bound for general states.
+However, we still know that our bound obtained with our calculations on the symmetric subspace cannot be smaller than the optimal bound $\bound{\mathcal{F}}$, which must be bigger or equal to the Eq.~\eqref{eq:bg-pezze-bound} since it cannot be larger than the optimal bound for general states.
 These relations can be summarized as
 \be
-  \mathcal{B}_{\textnormal{sym}}\geq \mathcal{B}_{\mathcal{F}}\geq\frac{\expect{J_y}^2}{\varian{J_x}},
+  \bound{\textnormal{sym}}\geq \bound{\mathcal{F}}\geq\frac{\expect{J_y}^2}{\varian{J_x}},
 \ee
 where on the right-hand side we just used the bound in Eq.~\eqref{eq:bg-pezze-bound}.
 
 Our calculations lead to
 \be
   \label{eq:lt-symmetric-optimal-pezze-inequality}
-  \frac{\mathcal{B}_{\textnormal{sym}}(\expect{J_y},\varian{J_x})}{N} = 6.605
+  \frac{\bound{\textnormal{sym}}(\expect{J_y},\varian{J_x})}{N} = 6.605
 \ee
 for a wide range of values of $\alpha$.
 That is, based on numerics, the left-hand side and the right-hand side of Eq.~\eqref{eq:lt-symmetric-optimal-pezze-inequality} seem to be equal.
@@ -558,16 +563,65 @@ We see that for the scaling we consider, for all $N'$ the bound in Eq.~\eqref{eq
 
 Let us first take $\alpha=0.85$, which is somewhat smaller than the experimental value, however, it helps us to see various characteristics of the method.
 At the end of the section we will also discuss the results for other values of $\alpha$.
-Based on these ideas, we compute the bound $\mathcal{B}_{\textnormal{sym}}$ for the quantum Fisher information for an increasing system size $N'$.
+Based on these ideas, we compute the bound $\bound{\textnormal{sym}}$ for the quantum Fisher information for an increasing system size $N'$.
 
 The results can be seen in Figure~\ref{fig:lt-bounds-on-symmetric-spin-squeezing}~(a).
 \begin{figure}
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/LT_spsq_scaling_1.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/LT_spsq_scaling_2.pdf}
-  \caption{[TD: Change vertical label to $\mathcal{B}_{\textnormal{sym}}$] (Color line) Lower bound on the QFI based on $\expect{J_y}$ and $\varian{J_x}$ obtainde for the symmetric subspace for different particle numbers $N'$.}
+  \caption{[TD: Change vertical label to $\bound{\textnormal{sym}}$] (Color line) Lower bound on the QFI based on $\expect{J_y}$ and $\varian{J_x}$ obtainde for the symmetric subspace for different particle numbers $N'$.}
   \label{fig:lt-bounds-on-symmetric-spin-squeezing}
 \end{figure}
+The bound obtained this way is close to the bound in Eq.~\eqref{eq:lt-bound-for-experiment} even for small $N'$.
+For larger particle number it is constant and coincides with the bound in Eq.~\eqref{eq:lt-bound-for-experiment}
+This also strongly supports the idea that we could used the result for small particle numbers to extrapolate the bound for $N$.
+Since for the experimental particle number we obtain that $\bound{\text{sym}}$ equals the bound in Eq.~\eqref{eq:lt-bound-for-experiment}, we find that all three lower bounds in Eq.~\eqref{eq:lt-symmetric-optimal-pezze-inequality} must be equal.
+Hence, Eq.~\eqref{eq:bg-pezze-bound} is optimal for the experimental system and $\alpha$ considered before in this section.
+BEsides, these results present also a strong argument for the correctness of our approach.
+
+We now give more details of the calculation. We were able to carry out the optimizations up to $N'=2300$ with a usual laptop computer using MATLAB programing language\footnote{For MATLAB R2015a, see \url{http://www.mathworks.com}.}.
+We started the calculation for each given particle number with the $r_k$ parameters obtained for the previous simulation with a smaller particle number.
+This allows for faster finding of the solution than if we would start the $r_k$ parameters arbitrarily.
+
+Let us consider a spin-squeezing state that is not fully polarized and $\alpha=0.5$.
+In Figure~\ref{fig:lt-bounds-on-symmetric-spin-squeezing}~(b), we can see that for small particle numbers we have a larger bound on $\qfi[\rho, J_z]$ than the one obtained from Eq~\eqref{eq:bg-pezze-bound}.
+Thus for the case on which the particle number would be smaller we could improve the bound Eq.~\eqref{eq:bg-pezze-bound} by assuming symmetry.
+On the other hand, for large particle number we recover the bound Eq.~\eqref{eq:bg-pezze-bound}.
+
+Finally, we add a note on the technical detail.
+We carried out our calculations with the constraints on $\varian{J_x}$ and $\expect{J_y}$, with the additional constraint $\expect{J_x}=0$.
+For the experimental particle numbers, one can show that our results are calid even if we constrained only $\varian{J_x}$ and $\expect{J_y}$, and did not use the $\expect{J_x}=0$ constraint.
+This way, in principle, we could only get a lower bound that is equal to the one we obtained before or lower.
+However, we obtained before a value identical to the analytical bound Eq.~\eqref{eq:bg-pezze-bound}.
+The optimal bound cannot be below the analytic bound, since then the analytic bound would overestimate the quantum Fisher information, and it would not be a valid bound.
+Hence, even an optimization without the $\expect{J_x}=0$ constraint could not obtain a smaller value than our results.
+
+\subsubsubsection{Experiment creating Dicke states}
+
+In this section, we present our calculations for an experiment aiming at creating Dicke states in cold gases \citep{Luecke2014}.
+The basic ideas are similar to the ones explained in Section~\ref{sec:lt-dicke-states} for small systems.
+The experimental data, as in previous Section~\ref{sec:vd-}, are $N=7900$, $\expect{J_y^2}=112\pm31$, $\expect{J_x^2}=\expect{J_z^2}=6\times10^6\pm0.6\times10^6$ \citep{Apellaniz2015}.
+Applying some simple transformations, we can make calculations for a very large numbers of particles, and obtain results even for general, non-symmetric systems.
+
+In the general, non-symmetric case, we can handle only small problems.
+Thus, we have to transform the collective quantities such that the corresponding quantum state, i.e., it has to fulfill
+\be
+  \expect{J_x^2}_{\text{sym}} + \expect{J_x^2}_{\text{sym}} + \expect{J_x^2}_{\text{sym}} = \mathcal{J}_N,
+\ee
+where $\mathcal{J}_{N}$ is defined on Eq.~\eqref{eq:lt-maximum-angular-momentum}.
+A mapping of this type can be realized equally scaling all second moments of the angular momentum projections as
+\be
+  \expect{J_l^2}_{\text{sym}, N} = \gamma \expect{J_l^2}_N,
+\ee
+where we now added the label $N$ to avoid confusions in upcoming equations, $l=x,y,z$ and where we used the coefficient $\gamma$ to be
+\be
+  \gamma = \frac{\mathcal{J}_N}{\expect{J_x^2}_N +\expect{J_y^2}_N +\expect{J_z^2}_N}.
+\ee
+Note that $\gamma=1$ if the original state is symmetric.
+
+Next, based on the ideas of this chapter, we calculate the lower bound on the quantum Fisher information for symmetric systems, which we denote it by $\bound{\text{sym},N}$.
+
 
 \begin{figure}
   \centering
