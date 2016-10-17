@@ -295,7 +295,7 @@ For our case, the witness operator $W$ is permutationally invariant and it has a
 Hence, based on the arguments of the Section~\ref{sec:} the bound is valid even for general case, i.e., non-symmetric states.
 
 We now compute several quantities for the large $N$ case.
-We show that if the fidelity with respect to the Dicke state is larger than a bound then $\bound{\mathcal{F}}>0$.
+We show that if the fidelity with respect to the Dicke state is larger than a bound then $\bound{\mathcal{F}}>0$, where we omit the arguments for brevity.
 Moreover, we have seen in Figure~\ref{fig:lt-plots-for-fidelities}~(b) that the lower bound on $\qfi[\rho,J_z]$ as a function of the fidelity $F_{\text{Dicke}}$ normalized by $N^2$ is not the same curve for all $N$.
 Next, we will demonstrate by numerical evidence that the lower bound normalized by $N^2$ collapses to a nontrivial curve for large $N$.
 
@@ -612,6 +612,7 @@ Thus, we have to transform the collective quantities such that the corresponding
 where $\mathcal{J}_{N}$ is defined on Eq.~\eqref{eq:lt-maximum-angular-momentum}.
 A mapping of this type can be realized equally scaling all second moments of the angular momentum projections as
 \be
+  \label{eq:lt-expectation-values-extended-to-symmetric}
   \expect{J_l^2}_{\text{sym}, N} = \gamma \expect{J_l^2}_N,
 \ee
 where we now added the label $N$ to avoid confusions in upcoming equations, $l=x,y,z$ and where we used the coefficient $\gamma$ to be
@@ -621,7 +622,29 @@ where we now added the label $N$ to avoid confusions in upcoming equations, $l=x
 Note that $\gamma=1$ if the original state is symmetric.
 
 Next, based on the ideas of this chapter, we calculate the lower bound on the quantum Fisher information for symmetric systems, which we denote it by $\bound{\text{sym},N}$.
-
+Then, to obtain the results for the original non-symmetric case, notice that the convex nature of the $\bound{N}$, which is the bound to be computed for the general case, implies
+\be
+  \bound{N}\leq \frac{1}{N}\bound{\text{sym,N}}.
+\ee
+This can be seen using an auxiliary state $\tilde{\rho}$ that mixes the symmetric state that in principle has the expectation values appearing on Eq.~\eqref{eq:lt-expectation-values-extended-to-symmetric} and the singlet state that has zero value for all those expectation values
+Hence, if we construct a mixture of this type as follows
+\be
+  \tilde{\rho}_N=(1-\gamma^{-1}) \rho_{\text{singlet},N}+\gamma^{-1}\rho_{\text{sym},N},
+\ee
+we have that $\tilde{\rho}$ has the same expectation values as the original non-symmetric case.
+This way, we can relate the bound for general systems to the quantum Fisher information for symmetric cases as
+\be
+  \bound{N}\leq \qfi[\tilde{\rho}_N,J_z]=\frac{1}{\gamma}\qfi[\rho_{\text{sym,N}},J_z].
+\ee
+Here, the inequality comes due to that our bound cannot be larger than the QFI of any state having the given set of expectation values.
+On the other hand, the equality holds due to the fact that both $\tilde{\rho}$ and $J_z$ can be written as block-diagonal matrix of blocks corresponding to different eigenvalues of $\bs{J}^2$.
+In particular, $\rho_{\text{singlet},N}$ has non-zero elements only in the blocks for which $\expect{\bs{J}^2}=0$, while $\rho_{\text{sym},N}$ has nonzero elements only in the blocks in which $\expect{\bs{J}^2}$ is maximal.
+Notice that $\bs{J}$ is a shorthand of $J_x^2+J_y^2+J_z^2$.
+Then we can use the general formula \citep{Toth2014}
+\be
+  \qfi[{\textstyle\bigoplus_k} p_k\rho_k, {\textstyle\bigoplus_k}A_k]= \sum_k p_k \qfi[\rho_k,A_k],
+\ee
+where $\rho_k$ are density matrices with unit trace, $\sum_k p_k=1$ and the $k$ index represent the block subspaces of the system and the operators $A_k$.
 
 \begin{figure}
   \centering
