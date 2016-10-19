@@ -617,15 +617,17 @@ A mapping of this type can be realized equally scaling all second moments of the
 \ee
 where we now added the label $N$ to avoid confusions in upcoming equations, $l=x,y,z$ and where we used the coefficient $\gamma$ to be
 \be
+  \label{eq:lt-value-of-gamma}
   \gamma = \frac{\mathcal{J}_N}{\expect{J_x^2}_N +\expect{J_y^2}_N +\expect{J_z^2}_N}.
 \ee
 Note that $\gamma=1$ if the original state is symmetric.
 
 Next, based on the ideas of this chapter, we calculate the lower bound on the quantum Fisher information for symmetric systems, which we denote it by $\bound{\text{sym},N}$.
-Then, to obtain the results for the original non-symmetric case, notice that the convex nature of the $\bound{N}$, which is the bound to be computed for the general case, implies
+Then, to obtain the results for the original non-symmetric case, notice the convex nature of the $\bound{N}$, which is the bound to be computed for the general case, implies
 \be
-  \bound{N}\leq \frac{1}{N}\bound{\text{sym,N}}.
+  \bound{N}\leq \frac{1}{N}\bound{\text{sym},N},
 \ee
+where $\bound{\text{sym},N}$ corresponds to the bound one would obtain on the symmetric subspace for expectation values given using the Eq.~\eqref{eq:lt-expectation-values-extended-to-symmetric}.
 This can be seen using an auxiliary state $\tilde{\rho}$ that mixes the symmetric state that in principle has the expectation values appearing on Eq.~\eqref{eq:lt-expectation-values-extended-to-symmetric} and the singlet state that has zero value for all those expectation values
 Hence, if we construct a mixture of this type as follows
 \be
@@ -634,21 +636,100 @@ Hence, if we construct a mixture of this type as follows
 we have that $\tilde{\rho}$ has the same expectation values as the original non-symmetric case.
 This way, we can relate the bound for general systems to the quantum Fisher information for symmetric cases as
 \be
+  \label{eq:lt-radial-linearity-dicke-bound}
   \bound{N}\leq \qfi[\tilde{\rho}_N,J_z]=\frac{1}{\gamma}\qfi[\rho_{\text{sym,N}},J_z].
 \ee
 Here, the inequality comes due to that our bound cannot be larger than the QFI of any state having the given set of expectation values.
 On the other hand, the equality holds due to the fact that both $\tilde{\rho}$ and $J_z$ can be written as block-diagonal matrix of blocks corresponding to different eigenvalues of $\bs{J}^2$.
 In particular, $\rho_{\text{singlet},N}$ has non-zero elements only in the blocks for which $\expect{\bs{J}^2}=0$, while $\rho_{\text{sym},N}$ has nonzero elements only in the blocks in which $\expect{\bs{J}^2}$ is maximal.
-Notice that $\bs{J}$ is a shorthand of $J_x^2+J_y^2+J_z^2$.
+Notice that $\bs{J}^2$ is a shorthand of $J_x^2+J_y^2+J_z^2$.
 Then we can use the general formula \citep{Toth2014}
 \be
   \qfi[{\textstyle\bigoplus_k} p_k\rho_k, {\textstyle\bigoplus_k}A_k]= \sum_k p_k \qfi[\rho_k,A_k],
 \ee
 where $\rho_k$ are density matrices with unit trace, $\sum_k p_k=1$ and the $k$ index represent the block subspaces of the system and the operators $A_k$.
 
+Extensive numerics for small systems show that the inequality in Eq.~\eqref{eq:lt-radial-linearity-dicke-bound} is very close to an equality within the numerical precision
+\be
+  \label{eq:lt-bound-extrapolation-from-symmetric-dicke}
+  \bound{N}\approx\frac{1}{\gamma}\bound{\text{sym},N}.
+\ee
+To obtain the lower bound $\bound{N}$ we also use an increasing system size $N'$ as we have done in at the beginning of this section.
+However, in this case we will not be able to do the calculation for the experimental particle number, and we will use extrapolation from the results obtained for smaller particle numbers.
+
+First, we transform the measured second moments to values corresponding to a symmetric system using Eqs.~\eqref{eq:lt-expectation-values-extended-to-symmetric} and \eqref{eq:lt-value-of-gamma}.
+For our case, $\gamma=1.301$.
+This way, we obtain
+\be
+  \begin{split}
+    \expect{J_y^2}_{\text{sym},N}&=145.69,\\
+    \expect{J_x^2}_{\text{sym},N}&=\expect{J_z^2}_{\text{sym},N}=7.8\times10^6.
+  \end{split}
+\ee
+
+Next, we will carry out calculations for symmetric systems.
+We will consider a smaller system $N'$ that keeps expectation values such that the corresponding quantum state must be symmetric.
+Hence, we will use the following relation to find the target expectation values for smaller systems
+\be
+  \begin{split}
+    \expect{J_y^2}_{\text{sym},N'}&=\expect{J_y^2}_{\text{sym},N},\\
+    \expect{J_x^2}_{\text{sym},N'}&=\expect{J_z^2}_{\text{sym},N'} =\frac{1}{2}(\mathcal{J}_{N'})-\expect{J_y^2}_{\text{sym},N'}),
+  \end{split}
+\ee
+where $\mathcal{J}_{N'}$ is defined in Eq.~\eqref{eq:lt-maximum-angular-momentum}.
+Note that with Eq.~\eqref{eq:lt-maximum-angular-momentum} holds for all $N'$, hence the state must be symmetric.
+Hence, the main characteristics of the scaling relation can be summarized as follows, $\expect{J_y^2}_{\text{sym},N'}$ remains equal for all $N'$ while $\expect{J_x^2}_{\text{sym},N'}$ and $\expect{J_z^2}_{\text{sym},N'}$ are chosen such that they are equal to each other and the state is symmetric.
+For large N, this implies a scaling of $\expect{J_y^2}_{\text{sym},N}$ constant and $\expect{J_x^2}_{\text{sym},N}=\expect{J_z^2}_{\text{sym},N}\sim N(N+2)/8$.
+
+Let us now turn to central quantities of our chapter, the lower bounds on the quantum Fisher information.
+A central point in our scheme is that due to the scaling properties of the system, we can obtain the value for the particle number $N$ from the values of a smaller particle number $N'$ as \citep{Zhang2014}
+\be
+  \label{eq:lt-asymptotic-limit-bound-dicke-symmetric}
+  \bound{\text{sym},N}\approx\frac{\mathcal{J}_{N}}{\mathcal{J}_{N'}} \bound{\text{sym},N'},
+\ee
+which we will verify numerically.
+Note that for large $N$, we have $\mathcal{J}_{N}/\mathcal{J}_{N'}\sim N^2/(N')^2$.
+
+As last step, we have to return from the symmetric system to our real system, not fully symmetric one.
+Based on Eq.~\eqref{eq:lt-asymptotic-limit-bound-dicke-symmetric} and assuming Eq.~\eqref{eq:lt-bound-extrapolation-from-symmetric-dicke}, a relation for the lower bound for the original problem can be obtained from the bound on the symmetric problem with $N'$ particles as
+\be
+  \label{eq:lt-definitive-formula-scaling-dicke}
+  \bound{N}\approx \frac{1}{\gamma}\frac{\mathcal{J}_{N}}{\mathcal{J}_{N'}} \bound{\text{sym},N'} =\frac{\expect{J_x^2}_N+\expect{J_y^2}_N+\expect{J_z^2}_N}{\mathcal{J}_N'}\bound{\text{sym},N'}.
+\ee
+In Figure~\ref{fig:assimpthotic-approach-to-the-bound-from-scaled-dicke},
 \begin{figure}
   \centering
   \includegraphics[scale=.65]{img/plots/LT_dicke_7900_asymp.pdf}
   \caption{Secuence of the evolution of an unpolarized Dicke state of 16 qubits for $\Theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Hirusi distribution of the state, and below PDF of the $J_x$ POVM for each step of the secuence}
-  \label{fig:vd-secuence-evo}
+  \label{fig:assimpthotic-approach-to-the-bound-from-scaled-dicke}
 \end{figure}
+we plotted the right-hand side of Eq.~\eqref{eq:lt-definitive-formula-scaling-dicke} as the function of $N'$ divided by $N$.
+We can see that $\bound{N'}/N$ is constant or slightly increasing for $N'>400$.
+This is a strong evidence that Eq.~\eqref{eq:lt-asymptotic-limit-bound-dicke-symmetric} is valid for relatively large particle numbers.
+With this, we arrive at the result for the experimental system
+\be
+  \label{eq:lt-result-experimental-dicke}
+  \frac{\bound{N}(\expect{J_y^2},\expect{J_x^2}=\expect{J_z^2})}{N}\approx 2.94.
+\ee
+The $\approx$ sign is used referring to the fact that we assume that the inequality in Eq.~\eqref{eq:lt-radial-linearity-dicke-bound} is close to be saturated and that we did sufficient numerics for an increasing system size $N'$ to have a good asymptotic approach to the real value Eq.~\eqref{eq:lt-asymptotic-limit-bound-dicke-symmetric}.
+
+It is instructive to compare the value of Eq.~\eqref{eq:lt-result-experimental-dicke} to the one obtained in Chapter~\ref{}, where the same system was characterized base on its metrological usefulness.
+Such result implies $\qfi[\rho,J_z]/N\geq3.3$ which is somewhat bigger than our recent result as we did not use the knowledge of the fourth moments, only the second moments.
+The closeness of the two results is a strong argument for the correctness of our calculations.
+
+\subsection{Scaling for $\qfi[\rho,J_z]$ with $N$}
+
+Recent important works examine the scaling of the quantum Fisher information with the particle number for metrology under the presence of decoherence \citep{Escher2011, Demkowicz2012}.
+They consider the QFI defined now for the non-unitary, noisy evolution.
+They find that for small $N$ it is close to the value obtainded by considering coherent dynamics.
+Hence, even the Heisenberg scaling, $\mathcal{O}(N^2)$, can be reached.
+However, if $N$ is sufficiently large, then, due to the decoherence during the parameter estimation, the QFI scales as $\mathcal{O}(N)$.
+
+We have to stress that the findings of \citep{Escher2011, Demkowicz2012} are not applicable to our case.
+Our methods estimates the quantum Fisher information assuming a perfect unitary dynamics.
+The quantum Fisher information can be smaller that what we expect ideally only due to the imperfect preparation of the state\footnote{This is also relevant for \citep{Augusiak2015}, where $\qfi=\mathcal{O}(N^2)$ is reached with weakly entangled states.}.
+We can even find simple conditions on the state preparation that lead to a Heisenberg scaling.
+Based on Eq.~\eqref{eq:lt-ghz-legendre-solution}, if we could realize quantum states $\rho_N$ such that $F_{\text{GHZ}}(\rho_N)\geq0.5+\epsilon$ for $N\rightarrow\infty$ for some $\epsilon>0$, then we would reach $\bound{\mathcal{F}}(F_{\text{GHZ}}) = \mathcal{O}(N^2)$.
+Strong numerical evidence suggest that a similar relation holds for fidelity $F_{\text{Dicke}}$ and $\bound{\mathcal{F}}(F_{\text{GHZ}})$, see Section~\ref{}.
+[TD: Decide if remove the following sentence. It is very strong]
+From another point of view, our method can estimate $\qfi[\rho,J_z]$ for large particle numbers, while a direct measurement of the metrological sensitivity considerably underestimates it.
