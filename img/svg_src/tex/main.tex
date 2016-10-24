@@ -1,0 +1,55 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GENERATE EQUATIONS TO INSERT INTO SVG
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only touch if you know what you are doing. To edit equations
+% go to generate.sh file and edit there.
+\documentclass{standalone}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+% For bold face mathcal
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+
+\usepackage[math,light]{iwona}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Math Operators
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\cov}{cov}
+
+\newcommand{\ket}[1]{\ensuremath{\vert #1 \rangle}}
+\newcommand{\bra}[1]{\ensuremath{\langle #1 \vert}}
+\newcommand{\braket}[2]{\ensuremath{\langle #1 \vert #2 \rangle}}
+\newcommand{\braopket}[3]{\ensuremath{\langle #1 \vert #2 \vert #3 \rangle}}
+\newcommand{\ketbra}[2]{\ensuremath{\vert #1 \rangle \! \langle #2 \vert}}
+\newcommand{\expect}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\varian}[1]{\ensuremath{(\Delta #1 )^2}}
+\newcommand{\ver}[2]{\ensuremath{\genfrac{}{}{0pt}{}{#1}{#2}}}
+\newcommand{\trsub}[2]{\ensuremath{\Tr_{#1} \lcua #2 \rcua }}
+\newcommand{\bs}[1]{\ensuremath{\boldsymbol{#1}}}
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\mtxid{\mathbb{I}}
+\def\lpar{\left(}
+\def\rpar{\right)}
+\def\lcua{\left[}
+\def\rcua{\right]}
+\def\lcor{\left\{}
+\def\rcor{\right\}}
+\def\lang{\left\langle}
+\def\rang{\right\rangle}
+\def\nnnl{\nonumber\\}
+\def\nnnlq{\nonumber\\ && \quad}
+\def\nnnlqq{\nonumber\\ && \qquad}
+\def\nnnlqqq{\nonumber\\ && \quad\qquad}
+\def\ie{, \textit{i.e.}, }
+\def\qfi{\mathcal{F}_{\text{Q}}}
+
+\begin{document}
+  $
+  \input{img/svg_src/tex/equations.tex}
+  $
+\end{document}
