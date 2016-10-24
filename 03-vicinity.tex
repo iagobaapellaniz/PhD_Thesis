@@ -11,9 +11,9 @@ Hence, those states have attracted the interest of the community.
 One of the figures of merit of this such unpolarized, but still useful states is the so-called unpolarized Dicke state [XXX], which consists of, on its $z$-axis  representation, an equal number of qubits pointing up and pointing down while the whole state is at the same time symmetrised.
 It can be written as follows,
 \be
-  \ket{\text{D}_N^{0}} \equiv \ket{\text{D}_{N}}:= \binom{N}{N/2}^{-\frac{1}{2}}
+  \ket{\text{D}_{N,N/2}} \equiv \ket{\text{D}_{N}}:= \binom{N}{N/2}^{-\frac{1}{2}}
   \sum_{k\in \sigma_\text{s}}
-  P_{k}\left( \ket{1}^{\otimes N/2} \ket{0}^{\otimes N/2}
+  \mathcal{P}_{k} \left( \ket{1}^{\otimes N/2} \ket{0}^{\otimes N/2}
   \right),
   \label{eq:vd-unpolarised-dicke}
 \ee
@@ -39,7 +39,7 @@ Say that in this case the initial state is an unpolarised Dicke state of aligned
 \begin{figure}
   \centering
   \includegraphics[scale=.65]{img/plots/VD_evolution_of_dicke.pdf}
-  \caption{Secuence of the evolution of an unpolarized Dicke state of 16 qubits for $\Theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Husimi quasi-probabilistic distribution of the state, and below PDF of the $J_x$ POVM for each step of the secuence}
+  \caption[Secuence of Dicke state evolution]{Secuence of the evolution of an unpolarized Dicke state of 16 qubits for $\Theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Husimi quasi-probabilistic distribution of the state, and below PDF of the $J_x$ POVM for each step of the secuence}
   \label{fig:vd-secuence-evo}
 \end{figure}
 
@@ -176,7 +176,7 @@ We can conclude saying that our formula exactly reproduces the evolution of the 
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/VD_simulation.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/VD_parity_simulation.pdf}
-  \caption{(a) Evolution of the precision for 6 qubits based on the simulation of the system and its expectation values.
+  \caption[(a) Evolution of $\Theta$. (b) Evolution of expectation values]{(a) Evolution of the precision for 6 qubits based on the simulation of the system and its expectation values.
   The agreement with the Equation~[REF] is shown on the inset plot where the square of the difference between two approaches, the analytical and the simulation, is plotted.
   The difference is more or less two orders of magnitude below the actual value for the relevant points, which mainly comes because of the error coming from computing the derivative which has to be done approximately between two neighbor points.
   (b) Verification of the parity with respect to $\Theta$ of the expectation values of the second and the fourth moment, so to fulfill the constraint Equation~[REF].}
@@ -242,7 +242,7 @@ The second family of input states we are going use are the Gaussian mixture of D
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/VD_against_spsq.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/VD_against_therm.pdf}
-  \caption{Comparison between our formula for the precision and the QFI for different states. (a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
+  \caption[Bound against known QFIs for different states.]{Comparison between our formula for the precision and the QFI for different states. (a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
   \label{fig:bg-histograms}
 \end{figure}
 
@@ -322,7 +322,7 @@ Next we plot the value for the precision substituting directly the measured data
 \begin{figure}
   \centering
   \includegraphics[scale=.65]{img/plots/VD_precision_theta.pdf}
-  \caption{The (solid) line shows how the precision of $\Theta$ varies through the evolution. Notice that for the initial moment the precision is zero and that it reaches a maximum at $\Theta \approx 0.0057$ highlighted with the vertical (dashed) line. The gray area represent the region where the precision is below the shot-noise limit.}
+  \caption[Evolution of the precision for $\Theta$.]{The (solid) line shows how the precision of $\Theta$ varies through the evolution. Notice that for the initial moment the precision is zero and that it reaches a maximum at $\Theta \approx 0.0057$ highlighted with the vertical (dashed) line. The gray area represent the region where the precision is below the shot-noise limit.}
   \label{fig:vd-precision-theta}
 \end{figure}
 
@@ -351,6 +351,6 @@ We have used this formula to compute the bound on the optimal precision with the
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/VD_exper_contour.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/VD_exper_slice.pdf}
-  \caption{Comparison between our formula for the precision and the QFI for different states. a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
+  \caption[(a) Region of precision and experimental data. (b) Constant $\expect{J_y^2}$ section.]{Comparison between our formula for the precision and the QFI for different states. a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
   \label{fig:vd-experimental}
 \end{figure}

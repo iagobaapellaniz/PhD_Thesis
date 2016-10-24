@@ -12,3 +12,5 @@
 *.xml
 *.bcf
 ppr/*
+.latex.json
+*.lof
