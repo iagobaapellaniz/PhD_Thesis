@@ -1,16 +1,6 @@
 In this appendix we will illustrate basic mathematical tools used all through the thesis.
 They are shown here because without been figures of merit of the conceptual parts involving this thesis, they are nowadays sufficiently important for any whose intention is t expertise on this field of Quantum Metrology and Quantum Information.
 
-\subsection{Husimi Q-representation and the Bloch sphere}
-
-To represent states of total angular momentum bigger than $\frac{1}{2}$ we use the Husimi quasi-probability on the $\bs{n}$ unitary vector space defined as $2+2$
-\be
-  Q(\alpha) = \braopket{}{\varrho}{\alpha}
-\ee
-where ...
-
-It is very common to express the particle density.
-
 \subsection{Discussion on angular momentum subspaces for different spins}
 \label{app:angular-subspaces}
 
@@ -79,6 +69,46 @@ Finally, we write those equivalences
 \be
   \lim_{\beta\rightarrow\infty}\frac{\exp(-\bs{J}^2\beta)}{\tr(\exp(-\bs{J}^2\beta))}\equiv \frac{1}{D_0}\sum_{D=1}^{D_0}\ketbra{0,0,D}{0,0,D} \equiv \sum_{k}\mathcal{P}_k(\ketbra{\Psi^-}{\Psi^-}^{\otimes{N/2}})
 \ee
+
+\subsection{Husimi Q-representation and the Bloch sphere}
+
+To represent states with angular momentum bigger than $J=\frac{1}{2}$ is convinient to use the so-called Husimi $Q$-representation \citep{} on the Bloch-sphere.
+In fact it is straightforward to represent in a 3D-sphere all the possible states as it is done for qubits.
+
+The Husimi $Q$-representation must be normalized to 1.
+Hence,
+\be
+  \label{eq:ap2-husimi-integral-to-one}
+  \int Q_\rho(\Omega)\,\text{d}\Omega = 1,
+\ee
+where $\Omega$ represents the solid angle of the sphere, i.e., the function is a function of $\varphi$ and $\theta$, the azimuth angle and the polar angle respectivelly, and $\text{d}\Omega= \sin(\theta)\text{d}\varphi\text{d}\theta$.
+We will use it to describe states belonging to the symmetric subspace or for states belonging to the maximum angular momentum.
+Therefore, the $Q_\rho(\Omega)$ function will be proportional to the fidelities of totally polarized states that point to different directions represented by $\Omega$.
+
+In the case of many qubits such totally polarized states can be written as
+\be
+  \ket{N/2,N/2}_{\Omega} \equiv \ket{\Omega} := \ket{1}_{\Omega}\otimes \ket{1}_{\Omega}\otimes \ket{1}_{\Omega}\otimes \dots\ket{1}_{\Omega},
+\ee
+where can be reformulated as the eigenstate with the maximum eigenvalue for $J_{\Omega}=\cos(\varphi)\sin(\theta) J_x + \sin(\varphi)\sin(\theta)\, J_y + \cos(\theta) J_z$ operator.
+An alternative way to obtain such totally polarized states $\ket{\Omega}$ is to rotate a totally polarized state along the $z$-direction by $\theta$ angle along the $y$-axis and then applying a rotation of $\varphi$ angle along the $z$-axis.
+Hence,
+\be
+  \begin{split}
+    \ket{\Omega} & = e^{-i\varphi J_z} e^{-i\theta J_y} \ket{11\dots 1}\\
+    J_{\Omega}\ket{\Omega} & = \frac{N}{2} \ket{\Omega}
+  \end{split}
+\ee
+We write the quasi-probability $Q(\Omega)$ proportional to the fidelity with respect to $\ket{\Omega}$ of the state
+\be
+  Q_\rho(\Omega)\propto \tr(\rho \ketbra{\Omega}{\Omega}).
+\ee
+The normalization constant comes from Eq.~\eqref{eq:ap2-husimi-integral-to-one}, where a prove state such as the totally mixed state on the symmetric subspace can be used for which $\tr(\frac{\mtxid}{N+1} \ketbra{\Omega}{\Omega})=\frac{1}{N+1}$.
+Integrating the Eq.~\eqref{eq:ap2-husimi-integral-to-one} we obtain the proportionality factor and it is shown in the following equation
+\be
+  Q_\rho(\Omega)=\frac{1}{4\pi(N+1)}\tr(\rho \ketbra{\Omega}{\Omega}),
+\ee
+which must be true for $N$ qubits in the symmetric subspace.
+Similar definitions could be acompleased for different subspaces or even for different spin number of the constituents.
 
 \subsection{Legendre transform}
 \label{app:legendre-transform}
