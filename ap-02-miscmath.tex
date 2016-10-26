@@ -1,26 +1,26 @@
 In this appendix we will illustrate basic mathematical tools used all through the thesis.
-They are shown here because without been figures of merit of the conceptual parts involving this thesis, they are nowadays sufficiently important for any whose intention is t expertise on this field of Quantum Metrology and Quantum Information.
+They are shown here because without been figures of merit of the conceptual parts involving this thesis, they are nowadays sufficiently important for any who need some support to understand the notation and basic tools properly.
 
 \subsection{Discussion on angular momentum subspaces for different spins}
 \label{app:angular-subspaces}
 
-Here we want to show how the whole Hilbert space of the spin angular-momentum of a multi-particle system is structured.
-When same kind of spin-$j$ particles, i.e., qubits or qudits on the Quantum Information framework, are the constituents of the system, several important properties and structures arise.
+Here we want to show how the whole Hilbert space of the spin angular-momentum of a multi-particle spin-$j$ systems are structured.
+When same kind of spin-$j$ particles, i.e., qubits or qudits on the Quantum Information language, are the constituents of a system, several important properties and structures arise.
 We will explain how these Hilbert spaces are added to form a larger Hilbert space while we describe the notation used in this thesis.
 
 First of all, we have the basic single particle $d$-level system or qudit.
 When $d$ equals two we have the well known 2-level system or qubit.
-The basis of such systems have $d$ eigenstates of the spin operator $j_z^{(n)}$, where $n$ stands for the particle label and the spin number $j$ is in each case $(d-1)/2$.
-Just to remind that $j$ integer stand for bosonic systems whereas $j$ half integers for fermionic systems.
+The basis of such systems have $d$ eigenstates of the spin operator $j_z^{(n)}$, where $n$ stands for the particle label and therefore for its own Hilbert space and the spin-number $j$ is in each case $(d-1)/2$.
+Just to remind that $j$ integer stands for bosonic particles whereas $j$ half integers for fermionic ones.
 So to say the eigenstates are characterized by
 \be
   j_z^{(n)}\ket{m} = m \ket{m}
 \ee
 for $m = -j,-j+1,\dots,+j-1,+j$.
-It is clear that in Quantum Information the two eigenstates $\ket{-1/2}$ and $\ket{+1/2}$ of 2-level systems, or qubits, are identified with $\ket{0}$ and $\ket{1}$ respectively, since the qubit case is the most studied case on which the dichotomized representation of classic \emph{bit}s, ones and zeros, is directly related with.
+In Quantum Information the two eigenstates $\ket{-1/2}$ and $\ket{+1/2}$ of 2-level systems, or qubits, are identified with $\ket{0}$ and $\ket{1}$ respectively, since the qubit case is the most studied case on which the dichotomized representation of classic \emph{bit}s, ones and zeros, is directly related with.
 
 When adding particles into a bigger system convenient representation is key to compute efficiently.
-A first approach is to add all eigenstates one after the other and permute the states from right to left,
+A first approach is to add all eigenstates one after the other and permute the states from right to left until complete the whole basis
 \be
   \begin{split}
     & \ket{-j,-j,\dots,-j,-j},\\
@@ -33,21 +33,22 @@ A first approach is to add all eigenstates one after the other and permute the s
   \end{split}
 \ee
 where we have used the notation $\ket{m_1,m_2,\dots,m_{N-1},m_N}\equiv \ket{m_1}\otimes\ket{m_2}\dots\otimes\ket{m_N}$.
-This basis is still an eigenbasis of $J_z = \sum_{n} j_z^{(n)}$, the total angular momentum $z$ component.
-On the other hand, it is not a eigenbasis of the total angular momentum $\bs{J}^2 = J_x^2+J_y^2+J_z^2$ neither they are permutationally invariant, i.e., (anti)symmetric, states.
-So a more convenient representation is explained here.
+This basis is still an eigenbasis of $J_z = \sum_{n} j_z^{(n)}$, the total angular momentum $z$-component.
+On the other hand, it is not a eigenbasis of the total angular momentum $\bs{J}^2 = J_x^2+J_y^2+J_z^2$ neither they are permutationally invariant, for instance, they are few symmetric states while there is not any anti-symmetric states.
+So a more convenient representation is explained here in this section.
 
 We will explain shortly how to construct a basis on which all states from the basis are eigenstates of the total angular momentum $\bs{J}^2$, see Ref.~\citep{}.
 For that, we have the $J_{\pm} := J_x \pm i J_y$ operators which increase or decrease eigenvalue of $J_z$ without changing the eigenvalue of $\bs{J}^2$.
 Therefore, if we start from $\ket{-j,-j,\dots,-j}$, which is an eigenstate of $\bs{j}^2$ with the maximal eigenvalue $Nj(Nj+1)$, and we apply $J_+$ subsequently we obtain all the states belonging to this subspace on which $\bs{J}^2$ is maximal \citep{}.
 We keep doing this until we have all the subspaces characterized.
-The eigenbasis can be characterized with three simple numbers $\ket{J,M,D}$, the total angular momentum number, the angular momentum projection quantum number into the $z$-direction, $M=-J,-J+1,\dots,+J-1,+J$, and the degeneracy number of the $J$ subspaces, $D=1,2,dots,D_J$.
+The eigenbasis can be characterized with three simple numbers $\ket{J,M,D}$, the total angular momentum number, the angular momentum projection quantum number into the $z$-direction, $M=-J,-J+1,\dots,+J-1,+J$, and the degeneracy number of the $J$ subspaces, $D=1,2,\dots,D_J$.
 
 We now show the definition of some of the most used states throughout this thesis.
 For the spin-$\frac{1}{2}$ particles, i.e., qubits, several states arose.
 We have all the symmetric states where $m$ particles are in the $\ket{1}$ state and the rest $N-m$ are in $\ket{0}$.
 Since the symmetric subspace is not degenerated in this case we omit the degeneracy number
 \be
+  \label{eq:ap-maximal-angular-momentum-expansion-qubits}
   \begin{split}
     \ket{J=N/2,M=N/2} & \equiv \ket{1,1,1,\dots,1,1}, \\
     \ket{N/2,N/2-1} & \equiv N^{-1/2}\sum_k \mathcal{P}_k(\ket{1}\otimes \ket{0}^{\otimes{N-1}}), \\
@@ -59,7 +60,13 @@ Since the symmetric subspace is not degenerated in this case we omit the degener
 \ee
 where the sums appearing are over all possible different permutations of the state $\mathcal{P}_k$.
 Notice the similarity with respect to the Dicke states Eq.~\eqref{}.
-Later on we will show the connection with the Dicke states.
+The two mode Dicke state, a symmetric state when the particles can take two diferent values for the state, is directly mapped to the case on which $N$ qubits are together and the bosonic symmetry is imposed.
+Therefore, the following equivalence holds
+\be
+  \ket{\dicke{N, \tilde{m}}} \equiv \ket{J=N/2, M=N/2-\tilde{m}},
+\ee
+compare Eq.~\eqref{} and the general expression of Eq.~\eqref{eq:ap-maximal-angular-momentum-expansion-qubits}.
+
 
 For now, we present another well known state, the permutationally invariant singlet for spin-$\frac{1}{2}$ qubits.
 This state has been recently found to be unique and therefore it has been able to rewrite it in several ways \citep{}.
@@ -67,8 +74,11 @@ The first most trivial definition is that it is permutational invariant ground s
 An the last definition comes from mixing all the possible permutations of the product of pairwise singlets, $\ket{\Psi^-}:=\frac{1}{\sqrt{2}}(\ket{1}\otimes\ket{0}-\ket{0}\otimes\ket{1})$.
 Finally, we write those equivalences
 \be
-  \lim_{\beta\rightarrow\infty}\frac{\exp(-\bs{J}^2\beta)}{\tr(\exp(-\bs{J}^2\beta))}\equiv \frac{1}{D_0}\sum_{D=1}^{D_0}\ketbra{0,0,D}{0,0,D} \equiv \sum_{k}\mathcal{P}_k(\ketbra{\Psi^-}{\Psi^-}^{\otimes{N/2}})
+  \lim_{\beta\rightarrow\infty}\frac{\exp(-\bs{J}^2\beta)}{\tr(\exp(-\bs{J}^2\beta))}
+  \equiv \frac{1}{D_0}\sum_{D=1}^{D_0}\ketbra{0,0,D}{0,0,D}
+  \equiv \lpar\frac{N!}{2^{N/2}(N/2)!}\rpar^{-\frac{1}{2}} \sum_{k\in \sigma_{\text{s}}}\mathcal{P}_k(\ketbra{\Psi^-}{\Psi^-}^{\otimes{N/2}}),
 \ee
+where $\beta$ is the inverse of the Boltzman constant $k_\text{B}$ times the temperature $T$, and $\sigma_{\text{s}}$ is the set of all possible unique permutations, in this case $\frac{N!}{2^{N/2}(N/2)!}$.
 
 \subsection{Husimi Q-representation and the Bloch sphere}
 
