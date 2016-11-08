@@ -5,155 +5,187 @@
 \quotes{Roger J. Barlow}{In the real world, doing real experiments, statistics began to matter}
 
 \vspace{0pt}
-\lettrine[lines=2, findent=3pt,nindent=0pt]{M}{etrology}, as the science of measuring, has played an essential role for the development of the technology as we know it today.
-It studies several aspects of the estimation process, such as which strategy to follow in order to improve the precision of an estimation.
-One of the most important figure of merit in this context is the achievable precision for a given system, independently of the strategy.
-We will show how to characterize it in the subsequents sections.
-And we will show as well different strategies to achieve the desired results.
-The metrology science also covers from the design aspects of a precise measuring device, until the most basic concepts of nature which lead in ultimate instance to the better understanding of the whole process.
+\lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} this chapter we will study the basics of Quantum Metrology, which stands for the science of enhanced metrology by quantum phenomena.
+On the other hand, metrology, as the science of measuring, has played an essential role for the development of the technology as we know it today.
+It studies several aspects of the estimation process, such as which strategy to follow in order to improve the precision of an estimation or which is the bound for the precision.
+Metrology also covers all intermediate process fo the estimation, from the design aspects of a precise measuring device, to the most basic concepts of estimation, which lead at the end to a better understanding of it as a whole.
 
-In this sense, with the discovery of the Quantum Physics and the development of Quantum Mechanics, new doors for advances in metrology were open on the earlies decades of the 19th century.
-Later on, the Quantum Theory lead to the so-called field of Quantum Information which merges the notions of the theory of information and computer science, among others subfields, with the quantum mechanics.
-The role of the so-named entanglement, an exclusive feature of Quantum Mechanics, is essential in this context.
-Its complete understanding has integrated efforts of many researches world wide.
+In this sense, with the discovery of the Quantum Physics and the development of Quantum Mechanics, new doors for advances in metrology were open in the early decades of the 20th century.
+First, Quantum Theory embrased the so-called field of Quantum Information, which merges the notions of the theory of information and computer science, among others subfields, with the quantum mechanics.
+This new field of Quantum Information is in the basis of Quantum Metrology.
+Moreover, those emerging fields rapidly became into very interesting interdisciplinary playgrounds of science attracting the interest of many scientists as well as resources for their researches.
+Just to menetion that the role of the so-called entanglement, an exclusive feature of Quantum Mechanics which cannot be completelly described using classical probabilistic theories, is essential in this context.
+With the aim of completelly understand this concepts, many scientists world wide have integrated their efforts.
 Said this, the entanglement also is in the center of theoretical concepts in Quantum Metrology.
+In the Quantum Metrology framework, we will focus on the achievable precision of the systems.
+We will show as well different strategies to achieve the desired results.
 
-On the other hand and with the aim of interpreting raw data, there are the statistics, without which many descriptions of the actual and past physical findings would lack of the rigorous interpretation needed for the complexity of data samples.
-
-
+On the other hand, a very important field of science must be highlighted by its own meriths.
+We are mentioning the statistics, without which many descriptions of the actual and past physical findings would lack of the rigorous interpretation needed for the complexity of data samples.
+It basically helps to analyse raw data to find special properties out of it.
 
 \subsection{Background on statistics and the theory of estimation}
-The main mathematical tools used by the metrology science belong to statistics.
-Moreover we are also interested on estimation theory.
-The statistics main characteristic is that makes the raw data under consideration comprehensible from the human perspective.
-The data can be anything, from a set of different heights of a basketball team, to the outcomes of a coin toss or the ages of a hundred students or even the outcomes of a thousand times repeated measurement of the electric field at some spatial point.
-The aim of this section is to give the reader sufficient material to follow this thesis and make it comprehensible from the beginning.
 
-\subsubsection{Data samples, average and variance}
+In this section, we will enumerate the basic concepts of statistics as well as the estimation process.
+As we said, the main mathematical tools used by the metrology science belong to statistics.
+Moreover, we are expecially interested in estimation theory.
+The statistics main characteristic is that it makes the raw data under consideration comprehensible from the human perspective.
+The data can be anything, from a set of different heights of a basketball team, to the outcomes of a coin toss, or the wavelength of photons coming out of some sample.
+The aim of this section is to give the reader sufficient material to follow this thesis and make it comprehensible from the beginning\footnote{
+For a more detailed material, check statistics book as weel as mathematics book for scientist and engeneers \citep{Riley1998, BarlowXXXX}}.
 
-As we mentioned above, everything in statistics starts with a data sample.
-A data sample is defined as a set of values, we will restrict ourselves to quantitative values for simplicity, representing some magnitude.
-So, in our framework such a set can be written as $X=\{x_i\}_{i=1}^M$, where all $M$ values are collected.
-An illustrative example with 18 heights of different trees is shown on the Table~\ref{tab:bg-18-trees}.
-\begin{table}
-  \begin{center}
-    \begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | }
-      \hline
-      Tree \# & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 &  11 &  12 &  13 &  14 &  15 &  16 &  17 &  18
-      \\ \hline
-      Heights (m) & 6 &  7 &  5 &  7 &  2 & 11 &  7 &  4 &  7 &  2 &  7 &  7 &  5 &  5 &  5 &  8 &  3 & 10 \\ \hline
-    \end{tabular}
-  \end{center}
-  \caption[Sample data of heights for trees]{A set of values for the heights of 18 trees. All measurements were rounded to integers for simplicity.}
-  \label{tab:bg-18-trees}
-\end{table}
-It is worth to notice that this data sample represents a continuous variable, the height of some trees, while we have grouped more than a single instances into integer values.
-If we would use more decimals to describe the data probably all values would have been different among each other.
-This discussion is not so essential when discrete outcomes are analyzed
+\subsubsection{Probability, data samples, average and variance}
 
-This picture can be extend to more outcomes coming from a single \emph{event} or measure.
-For instance, a second value such as the width of the tree could be attached to each height on the previous example.
-This way we have opened our approach for higher dimensional data samples that can be described as a set of $M$ outcomes with more than a single value each, $(X,Y,\dots)=\{x_i,y_i,\dots\}_{i=1}^M$.
+The probability indicates the relative chance of an event to happen.
+For instance, if there is a box with ten red balls and five blue balls, considering that the balls of the same color are indistinguishable and that we extract one randomly, we have $\frac{5}{10+5}=\frac{1}{3}$ of probability to obtain a blue ball and $\frac{2}{3}$ to obtain a red ball.
+The reader may notice many properties a probability should have, such as that the probability of any event to happen is always one or that a probability is always given by a number in between zero and one.
+For more details, there are many interesting textbooks or chapters of some textbook about Probability Theory one could follow if interested.
+The following References~\citep{Riley1998, BarlowXXXX} are some of those books.
 
-\subsubsubsection{Average}
+When someone has a data sample at hand, it might come from diverse sources and might be represented using multiple forms such as numbers or words (for instace, a table of names of people), the first thing one tries to accomplish is to analyse the data to extract the relevant properties from it.
+A data sample always come from a population sample, i.e., the data sample might not be complete (one could lose some in the process) neither exact (a measuring device always have an error when estimating a magnitude).
+Hence, the data sample comes attached with a probability for each data element.
+In the subsecuent paragraphs, we will describe this relation and we will enumenrate the most useful properties and formulas for the comprehensions of this thesis.
 
-With this data at hand one of the first questions arises is whether the values of $X$ are around some mean value.
-If one tries to address this question one of the first approaches can be computed is the \emph{arithmetic average} of the set $X$, namely,
+First of all, we will explain our notation which follows the one used on Reference~\citep{Riley1998}.
+A probability function gives the probability of an event $x$ to happen when measuring some random variable $X$, and it is denoted by $\prob(X=x)$.
+Second, the $N$ elements of a data sample are considered to come from $N$ random variables with the corresponding $N$ values due to the random nature of the measuring, $\{X_i=x_i\}_{i=1}^N$.
+The joint probability of those random variables is in general not separable.
+This is due to the fact that the outcomes could depend on the rest of the outcomes or some other more complex relation that makes the most general case to be non-separable from the probabilistic point of view.
+Therefore we define this PDF as an $N$ variable function
 \be
-  \text{E}[X] := \frac{1}{M}\sum_{i=1}^M x_i.
+  \prob(\bs{X}=\bs{x}) \equiv \prob(X_1=x_1,X_2=x_2,\dots,X_N=x_N).
 \ee
-Apart from the arithmetic average there are other types of averages such as the geometric mean, the root mean square or the harmonic mean, etc.
-For more information see those some of those fascinating works about the statistics [XXX].
-For us and for the complete understanding of this thesis will be enough with the arithmetic average.
-
-Let us take the previous example of the trees and compute the average.
-In this case the data sample is constituted by positive integer values for simplicity.
-The average of the data sample is straight forward $\text{E}[X] = \frac{1}{18}\sum_{i=1}^{18} x_i = 6\text{m}$.
-
-For the extension to the case of higher dimensional data samples one can say that each kind of outcome the average can be computed in a seamless way, $\text{E}[Y]=\frac{1}{M}\sum_{i=1}^M y_i$ and so on.
-
-\subsubsubsection{Variance}
-
-The second quantity one can compute is how spread the data is.
-This is usually done first subtracting the average to all values on the data sample, then squaring them, so the sign of the result is lost, and finally one averages over all the resulting set. This quantity is called the \emph{variance} of the sample and it is written as follows,
+If separable this is written by
 \be
-  \text{V}[X] := \text{E}\left[(X- \text{E}[X])^2\right],
+  \prob(\bs{X}=\bs{x}) = \prod_{i=1}^N\prob(X_i=x_i)
 \ee
-where $X$ can be seen as a vector and when subtracting the scalar $\text{E}[X]$ and $X^2$ stands for the elements wise squared of $X$, namely $X^2 := \{x_i^2\}_{i=1}^M$.
-The variance can also be written alternatively as $\text{V}[X] = \text{E}[X^2]- \text{E}[X]^2$.
-The definition of the \emph{standard deviation} follows directly from the variance, $\sigma_{X}=\sqrt{\text{V}[X]}$.
-Many quantities on statistics require operations like the one described right before.
-This can be generalised again for more than one kind of outcome as it was done with the average.
+and it is the case for many relevan cases.
 
-Now let us see how result the variance for the example of the Table~\ref{tab:bg-18-trees}.
-In this case the variance would be the following, $\text{V}[X]=\frac{1}{18}\sum_{i=1}^{18}x_i^2 - 6^2\text{m}^2 = 5.5\bar{5}\text{m}^2$.
+When some property of the system is defined as a function of random variables, the result is also a random variable with another transformed PDF.
+For example, we measure the position of a body at some moment.
+If the system was at rest on the origin at initial time and the acceleration is known to be constant, then from the position one can infeer on the value of the acceleration by using $A=2X/t^2$, where $X$ denotes the position at intant $t$ and $A$ the acceleration.
+If $X$ is a random variable, which is the general case when measuring the position of a body, then the probability is computed in this case by
+\be
+  \prob(A=a) = \frac{\text{d}x}{\text{d}a}\prob(X=x)=\frac{2}{t^2}\prob(X=x).
+\ee
+In general for the multiple random variable case transformations, we must require that
+\be
+  |\prob(\bs{X}=\bs{x})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N|=|\prob(\bs{Y}=\bs{y})\,\text{d}y_1\text{d}y_2\dots\text{d}y_N|.
+\ee
+This leads to some interesting formulas we will discuss later.
 
-To summarise and using the standard deviation, one can say now about the original distribution that most values are around 6m with a deviation of 2.357m.
-Of course, some values are outside this range, but nevertheless the description is quite accurate, note that 12 values from 18 are inside the range $6\text{m}\pm2.357\text{m}$.
+We now stick to the simplest case on which the data is a collection of values of the same random variable describing the same physical one-dimensional data population.
+Some definitions reasonable to mention in this thesis arise for those kind of data samples: the average, variance, moments and central moments.
+The arithmetic average (there are other types of average one can find in the textbooks) is computed by
+\be
+  \overline{x}=\frac{1}{N}\sum x_i.
+\ee
+The variance is related with the spread of the data and computed by
+\be
+  \sigma^2=\frac{1}{N}\sum (x_i-\overline{x})^2,
+\ee
+where $\sigma$ is the standard deviation.
+Different moments are computed by $\overline{x^r}=\frac{1}{N}\sum x_i^r$ while central moments are of the form of $n_r=\frac{1}{N}\sum (x_i-\overline{x})^r$.
+Notice that the variance is the second central moment of the data sample.
+For completeness, when each element of the data consists of more than a number, e.g., $(x_i,y_i,z_i)$, the covariance between two data kinds, in the following case $X$ and $Y$, is obtained by
+\be
+  V_{X,Y} = \frac{1}{N}\sum_{i=1}^N (x_i-\overline{x})(y_i-\overline{y}).
+\ee
 
-\subsubsubsection{Histograms}
+Those functions also apply to the probability distribution functions.
+While these last ones may be unkown functions for us, as soon as we collect all the possible data or we are in the large number regime the variances of the data sample and of the data population, the means, the covariances and so on so forth, they must coincide.
+We will try to keep this distinghusion as clear as possible.
+In general the mean values of any function over data sample values $g(x)$ are denoted with a bar over a lowercase variable, e.g., $\overline{x^r}$ for the $r$-th moment, while the mean values of any function applied to the data population $g(X)$ is written following some textbooks by $\text{E}[g(X)]$.
+One clearlly may distinguish two cases here: one for continuous functions where the expectation values or the means are computed integrating over all the posible values, and the other case on which $\prob(\bs{X}=\bs{x})$ can take only discrete values.
+For completeness here are the two definitions
+\be
+  \text{E}[g(\bs{X})] = \lcor
+  \begin{split}
+    &\int g(\bs{x}) \prob(\bs{X}=\bs{x})\,\text{d}^N \bs{x},\\
+    &\sum_{i,j,\dots} g(\bs{x}) \prob(\bs{X}=\bs{x}).
+  \end{split}
+  \right.
+\ee
+One more deffinition needs our attention and it is the variance any function $g(X)$ denoted by $\text{V}[g(X)] \equiv \text{E}[g(X)^2] - E[g(X)]^2$.
 
-At this point we introduce the \emph{histograms} and with that, first, the \emph{distribution function} of the data sample.
-Returning to the example of the Table~\ref{tab:bg-18-trees}, one may notice that the value 7m is repeated 6 times, as the value 5m is 4 times and so on.
-This is represented with the distribution function $p_i$, which in this case is for discrete values of the outcomes but which can be generalized for continuous variables as we will see later.
-This function takes the value of how many times the outcome $i$ has appeared on the data sample.
-Let us plot the distribution function, see Figure~\ref{fig:bg-histograms}.
-\begin{figure}[tp]
-  \centering
-  \igwithlabel{(a)}{scale=.65}{img/plots/BG_hist_bin_1.pdf}
-  \igwithlabel{(b)}{scale=.65}{img/plots/BG_hist_bin_2.pdf}
-  \caption[(a) Histogram with small bin. (b) Histogram with bigger bin]{(a) $p_i$ for different values of $i$. All bars have width as 1, so it is drawn how many times each data value appears on the data sample.
-  The width of the bars is called \emph{bin}, and it can change so the bars would represent a wider range of values. (b) Yo can see the same data represented in this case by a histogram with the bin size equal to 2. To produce this histogram we have summed 2 adjacent $p_i$ values starting from $p_1+p_2$, $p_3+p_4$ and so on.
-  Those new bars we have chosen to represent a value in between, for instance $(3+4)/2=3.5$ and so on.}
-  \label{fig:bg-histograms}
-\end{figure}
+\subsubsection{Frecuentist vs. bayesian approach}
 
-Now some question arises immediately:
-How this is fully connected with the previous picture?
-How can one compute the average and other interesting quantities?
-The answer is simple but it has to be considered carefully.
-First of all, notice that $p_i$ is defined for all the natural numbers including zero, see that in the example of the trees $p_9$ equals zero, so it can be extended for other heights too setting them to zero.
-This will depend on the physical property that our data sample represents but in this case it is the height of some trees, so the values cannot be negative.
-Second, notice that the sum of all the repetitions, all the values of $p_i$, is exactly 18 the number of data samples in the set.
-So we have that $M = \sum_{i=0}^{\infty} p_i$.
-Now we can formulate the ensemble average as $\text{E}[X]=\sum_{i=0}^{\infty} p_i i / \sum_{j=0}^{\infty} p_j$. The variance and with this the standard deviation immediately follow this approach.
-It is convenient to notice that the total measurement outcomes has not contribute anything but to normalize the quantities.
+\subsubsection{Estimators and Fisher information}
 
-We can now without losing generality redefine the distribution function to be the number of repetitions corresponding to the variable divided by the total outcomes, in this case $M$.
-It would have the same properties of a probability distribution function (PDF).
-For instance, now we have that the sum of all $p_i$-s equal to one, $\sum_{i=0}^\infty p_i = 1$, and the average is directly obtained by computing  $\text{E}[X] = \sum_{i=0}^\infty p_i i$.
-This is the approach we will follow to represent data samples.
-The variance and other quantities also are simpler in this way.
+Let us supose that the data sample has encoded some wanted parameters $\bs{a}\equiv(a_1,a_2,\dots)$.
+The underlying probability, in general also unknown, may be conditioned by the real values of the wanted parameters $\bs{a}$.
+The probability of the data sample is therefore writen as
+\be
+  \prob(\bs{X}=\bs{x}|\bs{a}),
+\ee
+where "$|\bs{a}$" indicates its dependency on these parameters.
+At this point, notice that an estimate of the the wanted parameter based on the data sample has the form of a function the random variables.
+Therefore as mentioned before, an estimator of $a$, which is how is called this quantity and is denoted by $\hat{a}$, is another random variable with a PDF of the form of
+\be
+  \prob(\hat{a}|\bs{a})\,\text{d}\hat{a} = \prob(\bs{X}=\bs{x}|\bs{a})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N.
+\ee
+For short, we omit on writing $\bs{X}$ from now on, thus the conditional joint pobrability of $N$ random variables is written as $\prob(\bs{x}|\bs{a})$.
 
-\subsubsection{Probabilities and frecuentist vs. bayesian approach}
+As we said, an estimator is defined to be a function of the data sample.
+For example, one of such estimators is the estimator of the mean value of the data population, in general unknown.
+The mean value of the data population, which in general we do not have acces to, is denoted usually by $\mu$.
+Notice that $\mu$ is in general different from the mean value of the data sample $\overline{x}$.
+A valid estimator for the population mean value would be the arithmetic mean of the data sample, i.e., $\hat{\mu}=\overline{x}$.
 
-Let us talk now about probabilities.
-The notion of the probability comes, [XXX].
-In our contest we will define the probability in the following way.
-Imagine we have an unknown data sample, let say $X$, from which we randomly choose one of the data values.
-The probability to obtain a random variable $x$ is given by the parent distribution function divided by the population number $M$.
+An important notion of an estimator is its \emph{efficiency}, i.e., whether it has smaller variance than another.
+The more efficient estimator the smaller variance it has.
+Remember than an estimator is a random variable so it must have a variance that comes from the data population, i.e., from $\prob(\hat{a}|\bs{a})$ in this case.
 
-We can estimate the average height of the trees of that forest.
+For an estimator of any kind there is a theoretical lower bound for its variance.
+For the proof of the previous observation, which we compute for continuous random variables without lossing of generality, we start with the normalisation of the PDF
+\be
+  \int \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = 1.
+\ee
+Next, we compute the partial derivate over $a$ such that
+\be
+  \int \partial_a\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = \int \partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x} = 0,
+\ee
+where for simplification, we ommit the arguments of the joint probability on the second equality.
+From Eq.~\eqref{}, it turns out that the Eq.~\eqref{} is the expectation value of $\partial_a(\ln\prob)$.
+Finally if we have an unbiashed estimator, for which the true value $a$ coincides with the expectation value of the estimator $\text{E}[\hat{a}]$, its partial differenciation over $a$ must be equal to one,
+\begin{align}
+  \partial_a\text{E}[\hat{a}] &= \partial_a a = 1, \\
+  \begin{split}
+    1 &= \partial_a \int \hat{a} \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \\
+      &=  \int \hat{a} \partial_a\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} =  \int \hat{a} \partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x},
+  \end{split}
+\end{align}
+where we apply the definition of the expectation value of the estimator $\hat{a}$ for continuous variables and we apply as well similar identities as in Eq.~\eqref{}.
 
-histogram
+At this point we invoke the Schwarz inequallity for two real multidimensional functions $g(\bs{x})$ and $h(\bs{x})$ such that $(\int g h \,\text{d}^N\bs{x})^2\leq (\int g^2 \,\text{d}^N\bs{x}) (\int h^2 \,\text{d}^N\bs{x})$.
+With this we can follow the following receipe to obtain a lower bound for the variance of a general estimator.
+First the deffinition of the variance looks like
+\be
+  V[\hat{a}] = E[(\hat{a}-a)^2] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x}.
+\ee
+Second, from Eqs.~\eqref{,} holds that
+\be
+  \int (\hat{a}-a)\partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = 1
+\ee
+because $a$ is not a function of $\bs{x}$.
+Hence, using the Schwarz inequality we can write
+\be
+  \text{V}[\hat{a}] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \geq \frac{1}{\int \lcua\partial_a\big(\ln \prob (\bs{x}|\bs{a}) \big)\rcua^2 \prob (\bs{x}|\bs{a})\,\text{d}^N\bs{x}},
+\ee
+which is also known as the Cramer-Rao bound or the Fisher inequality.
 
-estimator
+With this review on the interesting features of "classical" metrology, we conclude this section.
+In the next section, we recall some properties of the Quantum Mechanics and we subsecuentelly follow with the basis of Quantum Metrology. 
 
-Explain how for bigger bin sizes, the error for higher statistical moments increases.
 
-MLH
 
-CLT
-
-\subsubsection{Estimators, Fisher information}
-
-Error propagation formula.
 
 \subsection{Quantum Mechanics from metrology perspective}
 
 The ubiquitous probabilistic nature of quantum mechanics forces all the community to know some basics on probability and statistics.
 
-\subsubsubsection{The quantum state, multi-particle state, entanglement}
+\subsubsection{The quantum state, multi-particle state, entanglement}
 
 A \emph{system state} in Quantum Mechanics lives on a Hilbert space, $\mathcal{H}$.
 The system state, $\rho$, has the following properties:
