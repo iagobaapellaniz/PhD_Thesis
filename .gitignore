@@ -16,3 +16,5 @@ ppr/*
 *.lof
 *.lot
 *equations.pdf
+*equations.tex
+*generate.sh

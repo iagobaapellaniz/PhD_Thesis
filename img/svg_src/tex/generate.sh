@@ -7,7 +7,7 @@ jobname=equations
 # String for the equation. Change it as you want
 texstr="
   \displaystyle
-  \text{Hello this is the second equation } E=mc^2
+  \rho \Lambda_\theta:\rho \rho_\theta \expect{M}
 "
 
 # Patch to solve relative path problems
