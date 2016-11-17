@@ -171,6 +171,7 @@ Second, from Eqs.~\eqref{,} holds that
 because $a$ is not a function of $\bs{x}$.
 Hence, using the Schwartz inequality we can write
 \be
+  \label{eq:bg-classical-cr-bound-and-fi}
   \text{V}[\hat{a}] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \geq \frac{1}{\int \lcua\partial_a\big(\ln \prob (\bs{x}|\bs{a}) \big)\rcua^2 \prob (\bs{x}|\bs{a})\,\text{d}^N\bs{x}},
 \ee
 which is also known as the Cram\'er-Rao bound or the Fisher inequality.
@@ -200,6 +201,7 @@ The system state, $\rho$, has the following properties:
   From (ii), it follows that $\sum_\lambda p_\lambda = 1$.
   \item If all $p_\lambda$ are zero except one, the state is called a pure state and is equivalent to the projector of such eigenstate $\rho=\Pi_\lambda\equiv\ketbra{\lambda}{\lambda}$, where $\ket{\lambda}$ denotes a pure \emph{vector} state.
   \item It follows that the quantum states form a convex set where the extreme points are pure states.
+  \item An expectation value of an observable $\mathcal{O}$ is linear on the state and it is computed as $\expect{\mathcal{O}}=\tr(\mathcal{O}\rho)$.
 \end{enumerate}
 
 The composite system of $N$ different parties live in the Hilbert space $\mathcal{H} = \mathcal{H}^{(1)}\otimes\mathcal{H}^{(2)}\otimes\cdots\otimes\mathcal{H}^{(N)}$ or for short $\mathcal{H} = \bigotimes_{i=1}^N\mathcal{H}^{(i)}$, where $\otimes$ stands for tensor product.
@@ -222,7 +224,13 @@ We call a state $k$-producible, if it \emph{can} be written as a mixture of the 
 \ee
 where superscript indexes between parenthesis go from 1 to $N$ and denote to which parties belong the state, and where each index appears once in each sum element.
 If a state cannot be written as $k$-producible, then it must be $(k+1)$-entangled.
-This defines the entanglement depth.
+This defines the entanglement depth, see Figure~\ref{fig:bg-separability-k-producibility-circle}.
+\begin{figure}
+  \centering
+  \includegraphics[scale=1.4]{img/BG_separability_k_producibility_circle.pdf}
+  \caption[Diagram for $k$-producibility sets]{$k$-producible states contain $k-1$-producible states. Based on the Eq.~\eqref{} one can argue that a state that cannot be written as $k$-producible must be $k+1$-entangled or must have $k+1$ entanglement depth. A separable state can always be written as 1-producible wich is its original definition.}
+  \label{fig:bg-separability-k-producibility-circle}
+\end{figure}
 Later on those concepts will arise on the metrology framework \citep{,}.
 
 Besides those concepts, we present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
@@ -273,7 +281,7 @@ We summarize important recent advances in Quantum Metrology
 Simple metrological setups allow for encoding some wanted parameter into the state of the system, thus from the readout of the final state one can infer on it.
 The estimation theory applied to the intrinsic probabilistic nature of quantum states has lead to the the formulation of Quantum Metrology.
 Merging the probabilistic features of quantum mechanics and the estimation theory is not trivial.
-Nevertheless, starting from the pioneering works of Wotters, Braunstein and others back in 19XX \citep{}, until the works of Giovannetti et al, Paris and others roughly 20 years later \citep{}, the field of Quantum Metrology has been stabilized with solid foundations.
+Nevertheless, starting from the pioneering works of Wotters, Braunstein and others back in 19XX \citep{Wotters, Braunstein}, until the works of Giovannetti et al, Paris and others roughly 20 years later \citep{Giovannetti, Paris2009}, the field of Quantum Metrology has been stabilized with solid foundations.
 Later, advanced works in Quantum Metrology appeared \citep{} together with experimental realizations \citep{} which raised the interest in this topic.
 In this section, we will highlight the most important aspects of this field and with this we will conclude this introductory chapter.
 
@@ -307,7 +315,7 @@ On the other hand, quantum entanglement makes it possible to reach
   \varian{\theta}\sim \frac{1}{N^2}
 \ee
 which is called the \emph{Heisenberg scaling} (HS).
-Notethat if the Hamiltonian of the dynamics has interaction terms, then these bounds can be surpassed \citep{Luis2004, Napolitano2011, Boixo2007, Braun2011, Roy2008, Choi2008, Rey2007}.
+Note that if the Hamiltonian of the dynamics has interaction terms, then these bounds can be surpassed \citep{Luis2004, Napolitano2011, Boixo2007, Braun2011, Roy2008, Choi2008, Rey2007}.
 
 It is time to mention that the above calculations have been carried out for an ideal situation.
 When an uncorrelated noise is present in the system, it turns out that for large enough particle number the scaling becomes a SNS \citep{}.
@@ -315,7 +323,7 @@ The possible survival of a better scaling under correlated noise, under particul
 All these are strongly connected to the question of whether strong multipartite entanglement can survive in a noisy environment.
 
 Finally, note that often, instead of $\varian{\theta}$ one calculates its inverse, which is large for high precision.
-It scales as $\sim N$ for SNS and as $\sim N^2$ for the HS.
+It scales as $\varinv{\theta}\sim N$ for SNS and as $\varinv{\theta}\sim N^2$ for the HS.
 
 \subsubsection{Quantum Magnetometry}
 \label{sec:bg-quantum-metro}
@@ -354,8 +362,7 @@ Finally, the unitary operator leading the evolution of the system can be written
 where the magnetic field strength is encoded into the phase-shift $\theta=-\mu_\text{B} g_\text{s} t B/\hbar$.
 Here $\mu_\text{B}$ stand for the Magneton of Bhor and $g_\text{s}$ for the giro-magnetic constant for the spin angular momentum, and $t$ is the time spent on the evolution.
 
-We center our attention into multi-partite systems of spin-$\frac{1}{2}$ particles, widely known in the field as qubits.
-For large particle ensembles, typically only collective quantities can be measured in order to characterize the state and read the outgoing system.
+We have to mention as well that for large particle ensembles, typically only collective quantities can be measured in order to characterize the state and read the outgoing system.
 Such collective quantities are in this case the angular momentum components defined in Eq.~\eqref{} and their combinations.
 More concretelly, we can measure the expectation values of any
 \be
@@ -363,14 +370,17 @@ More concretelly, we can measure the expectation values of any
 \ee
 where $\bs{n}=(n_x,n_y,n_z)$ is a unit vector describing the direction of the component.
 
+\subsubsection[Metrology with almost polarized states]{Metrology with almost polarized states, including spin-squeezed states}
+
+Let us present one of the basic approaches to metrological precision of a quantum setup.
 In order to estimate the phase-shift $\theta$ we measure the expectation value of a Hermitian operator, which we will denote here by $M$ in the following.
 If the evolution time is a constant then estimating $\theta$ is equivalent to estimating the magnetic field strength $B$ in Eq.~\eqref{eq:bg-hamiltonian-homogeneous-field}.
-The precision ef the estimation can be characterized with the error propagation formula as
+The precision of the estimation can be characterized with the error propagation formula as
 \be
   \label{eq:bg-error-propagation-formula}
   \varian{\theta} = \frac{\varian{M}}{|\partial_\theta\expect{M}|^2},
 \ee
-where $\expect{M}$ is the expectation value of the operator $M$, and we used the assumption that the PDF describing the state in order to infer into the expectation value of $M$ from the data sample, is enough to transform $\prob(M=m|\theta)$ into a PDF as a function of the estimator $\prob(\hat{\theta}|\theta)$, see the Section~\ref{}.
+where $\expect{M}$ is the expectation value of the operator $M$, and we used the assumption that $\expect{M}$ is a random variable and that it has a PDF that can relate $\prob(\expect{M}|\theta)$ with a PDF as a function of the estimator $\prob(\hat{\theta}|\theta)$, see the Section~\ref{} and for a recent review discussing this approach in detail, see Ref.~\citep{MR38}.
 Thus, the precision of the estimate depends on how sensitive $\expect{M}$ is to the change of $\theta$, and also on how large the variance of $M$ is.
 Based on the formula Eq.~\eqref{eq:bg-error-propagation-formula}, one can see that the larger the slope $|\partial_\theta \expect{M}|$, the higher the precision.
 On the other hand, the larger the variance $\varian{M}$, the lower the precision.
@@ -380,18 +390,119 @@ Figure~\ref{} helps to interpret the quantities appearing in Eq.~\eqref{eq:bg-er
   \includegraphics[scale=1.4]{img/BG_expect_m_evo.pdf}
   \caption[Graphical explanation of the error-propagation formula]{(Blue solid) Functional relation between the expectation value $\expect{M}$ and the estimator of the wanted parameter $\hat\theta$.
   (Green dashed) One to one correspondence when the estimator $\hat{\theta}$ is based on $\expect{M}$. (Red dotted) Obtaining the error of the estimate is based on Eq.~\eqref{eq:bg-error-propagation-formula}.
-  The slope of the curve at that point, denoted with $\tan\alpha$, directly relates the uncertainty on the measured quantity $\expect{M}$ and the error on the estimation $\sigma_\theta$.}
+  The slope of the curve at that point, denoted with $\tan\alpha$, directly relates the uncertainty $\sigma_M$ on the measured quantity $\expect{M}$ and the error on the estimation $\sigma_\theta$.}
   \label{fig:bg-expect-m-evo}
 \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[scale=1.4]{img/BG_separability_k_producibility_circle.pdf}
-  \caption[Diagram for $k$-producibility sets]{}
-  \label{fig:bg-separability-k-producibility-circle}
-\end{figure}
+At this point, we use the formula Eq.~\eqref{eq:bg-hamiltonian-homogeneous-field} to compute and this way highlight special signatures of interesting systems and their metrological behavior.
+We center our attention into multi-partite systems of spin-$\frac{1}{2}$ particles, widely known in the field as qubits, for homogeneous magnetometry in order to simplify the discussion.
+For this, let us start with an almost polarized state.
+The spin vector of the ensemble, originally pointing into the $y$-direction, will be rotated.
+The rotation after the evolution is used to estimate the strength of the magnetic field.
+A way to measure the rotation suffered by the system is to measure the expectation value $\expect{J_x}$, which is zero at the beginning.
+
+For small angles of $\theta$ and using the Eq.~\eqref{eq:bg-error-propagation-formula} after substituting $M$ by $J_x$, we arrive to
+\be
+  \label{eq:bg-error-propagation-measuring-jx}
+  \varinv{\theta} = \frac{|\partial_\theta \expect{J_x}|^2}{\varian{J_x}},
+\ee
+for state almost polarized along the $y$-axis.
+Next, we have to compute these values for small angles of $\theta$.
+
+To compute them we use the Heisenberg picture of the operator $J_x$, that after applying the unitary operator Eq.~\eqref{eq:bg-unitary-homogeneous-field}, is written as
+\be
+  J_x(\theta) = U^{i\theta J_z} J_x U^{-i\theta J_z} = \coss{\theta}J_x -  \sins{\theta} J_y,
+\ee
+where we also introduced a notation for trigonometric functions since they will appear many times in this work, $\coss{x} \rightarrow \cos(x)$, $ \sins{x}\rightarrow\sin(x)$ and $\tans{x}\rightarrow\tan(x)$.
+Thus, the square of $J_x$ is simply
+\be
+  J_x^2(\theta) = \coss{\theta}^2J_x^2 -2 \coss{\theta}\sins{\theta}\{J_x,J_y\}+  \sins{\theta}^2 J_y^2,
+\ee
+where $\{A,B\}=AB+BA$ is the anti-commutator, since the operators may not commute in general and in this particular case it is not an exception.
+Finally we compute the derivative with respect to $\theta$ of $\expect{J_x}$ as
+\be
+  \partial_{\theta}\expect{J_x}(\theta)=\partial_{\theta}\coss{\theta}\expect{J_x} - \partial_{\theta}\sins{\theta}\expect{J_y} = -\sins{\theta}\expect{J_x}-\coss{\theta}\expect{J_y},
+\ee
+where we used the linearity of the trace to compute the expectation value and the linearity of the derivative.
+
+Hence, assuming we are in the small angle limit to compute the Eq.~\eqref{eq:bg-error-propagation-measuring-jx} we may take the terms proportional to $\sin(\theta)$ as zero.
+Therefore, when we measure $\expect{J_x}$ to estimate the angle $\theta$, the precision of the estimation is given by
+\be
+  \label{eq:bg-error-propagation-measuring-jx-computed}
+  \varinv{\theta} = \frac{|\coss{\theta}\expect{J_y}|^2}{\coss{\theta}^2\expect{J_x^2} - (\coss{\theta}\expect{J_x})^2} = \frac{\expect{J_y}^2}{\varian{J_x}}.
+\ee
+
+For the totally polarized state along the $y$-axis, the initial expectation values $\expect{J_x}$, $\expect{J_x^2}$ and $\expect{J_y}$ needed to compute the precision are
+\be
+  \begin{split}
+    \expect{J_x}_{\text{tp}}  & = 0,\\
+    \expect{J_x^2}_{\text{tp}}  & = \tfrac{N}{4},\\
+    \expect{J_y}_{\text{tp}}  & = \tfrac{N}{2}.
+  \end{split}
+\ee
+Thus, we obtain a precision that scales linearly with $N$,
+\be
+  \varinv{\theta}_{\text{tp}} = \frac{N^2/4}{N/4} = N.
+\ee
+Notice that the totally polarized state is a separable pure state with all particles pointing into the $y$-direction.
+We obtained the shot-noise scaling, even with very simple, qualitative arguments
+
+A way of improving the precision is considering that the variances of the angular momentum components are bounded by the Heisenberg uncertainty relation \citep{MR41}
+\be
+  \varian{J_x}\varian{J_z} \geq \frac{1}{4}|\expect{J_y}|.
+\ee
+Due to decreasing $\varian{J_x}$, our state fulfills
+\be
+  \varian{J_x}<\frac{1}{2}|\expect{J_y}|,
+\ee
+where the main spin point along the $y$-axis and for totally polarized states $\varian{J_x}=\frac{1}{2}|\expect{J_y}|$.
+Such states are called \emph{spin-squeezed} states \citep{MR41, MR42, MR43, MR44} and they can in principal bite the SNS.
+
+Next, we can ask, what the best possible phase estimation precision is for the metrological task considered in this section.
+For that, we have to use the following inequality based on general principles of angular momentum theory
+\be
+  \label{eq:bg-total-angular-momentum-saturability}
+  \expect{J_x^2+J_y^2+J_z^2} \leq \frac{N(N+2)}{4}.
+\ee
+Note that Eq.~\eqref{eq:bg-total-angular-momentum-saturability} is saturated only by symmetric multiparticle states, see Appendix~\ref{}.
+Together with the identity connecting the second moments, variances and expectation values
+\be
+  \varian{J_l} + \expect{J_l}^2 = \expect{J_l^2},
+\ee
+Eq.~\eqref{eq:bg-total-angular-momentum-saturability} leads to a bound on the uncertainty in the anti-squeezed direction, in this case $z$-direction, for the variance
+\be
+  \varian{J_z} \leq \frac{N(N+2)}{4} - \expect{J_y}^2 = \frac{N}{2} + \frac{N^2}{4}\lpar 1 - \frac{\expect{J_y}^2}{J_{\max}^2}\rpar,
+\ee
+where $J_{\max}$ is the maximum value a angular momentum component can take, i.e., $N/2$.
+This leads to a bound in the precision when measuring $\expect{J_x}$ as
+\be
+  \varinv{\theta} = \frac{\expect{J_y}^2}{\varian{J_x}}\leq 4\varian{J_z}\leq 2N + N^2\lpar 1 - \frac{\expect{J_y}^2}{j_{\max}}\rpar,
+\ee
+which indicates that the precision is limited for almost completely polarized states to the shot-noise scaling.
+The bound above is not optimal, as for the fully polarized state we would expect $N$ and we obtain $2N$.
+
+\subsubsection{The quantum Fisher information}
+
+Let us now change our discourse drastically.
+In this section, we review the theoretical background of the Fisher information, the Cram\'er-Rao bound and we introduce the quantum Fisher information.
+
+First of all, we have already shown the Fisher information and the Cram\'er-Rao bound in the Section~\ref{}.
+The formula Eq.~\eqref{eq:bg-classical-cr-bound-and-fi} tells us that if we measure an operator, say $M$, and we know its probability distribution function $\prob(\expect{M}|\theta)$, we can bound the achievable precision.
+In quantum mechanics the PDF of a state $\rho_\theta$ when measuring the operator $M$ is given by
+\be
+  \prob(m|\theta) = \tr({\Pi_{m}\rho_\theta}),
+\ee
+where $\Pi_{m}$ are the projector operators or the eigenstates on which $M$ is expanded, $M = \sum m \Pi_m$.
+Following arguments found on Refs.~\citep{Paris2009, }, one can reach to an universal bound valid for any kind of measurements.
+This bound is called the quantum Cram\'er-Rao bound and in one site is the achievable precision and in the other site is the quantum Fisher information (QFI),
+\be
+  \varinv{\theta} \leq \qfi[\rho,J_z].
+\ee
+
 
 \be
   \label{eq:bg-pezze-bound}
   \qfi[\rho,J_z] \geq \frac{\expect{J_y}^2}{\varian{J_x}}
 \ee
+
+The QFI

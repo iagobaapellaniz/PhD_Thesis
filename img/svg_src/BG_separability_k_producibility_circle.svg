@@ -49,15 +49,27 @@
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="true"
      inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:zoom="2.2663124"
-     inkscape:cx="154.88289"
+     inkscape:zoom="4.8889528"
+     inkscape:cx="87.660935"
      inkscape:cy="37.952541"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="0"
-     inkscape:current-layer="surface53196" />
+     inkscape:current-layer="surface659" />
   <defs
      id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4366">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4368" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop4370" />
+    </linearGradient>
     <clipPath
        id="clip1">
       <path
@@ -627,30 +639,53 @@
          d="m 182,0 47,0 0,9.335938 -47,0 z m 0,0"
          inkscape:connector-curvature="0" />
     </clipPath>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4366"
+       id="radialGradient4372"
+       cx="124.60938"
+       cy="64.021484"
+       fx="124.60938"
+       fy="64.021484"
+       r="124.60859"
+       gradientTransform="matrix(1,0,0,0.51377439,0,31.128885)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      id="surface659"
      transform="translate(-48.516454,-21.656717)">
+    <ellipse
+       style="opacity:1;fill:#89d5ff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ellipse8447"
+       cx="119.32462"
+       cy="58.020317"
+       rx="70.161827"
+       ry="35.717255" />
+    <ellipse
+       ry="29.495022"
+       rx="55.676498"
+       cy="55.36628"
+       cx="112.98833"
+       id="ellipse8445"
+       style="opacity:1;fill:#9ddcff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.80292481;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       style="opacity:1;fill:#c5ecff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.79469603;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8440"
+       cx="109.22475"
+       cy="53.566299"
+       rx="44.82206"
+       ry="22.895077" />
+    <ellipse
+       style="opacity:1;fill:#edf9ff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8438"
+       cx="104.72481"
+       cy="51.066319"
+       rx="32.808662"
+       ry="14.481629" />
     <g
-       clip-path="url(#clip1)"
-       id="g132"
-       transform="matrix(0.56799403,0,0,0.56799403,48.516454,21.656717)"
-       style="clip-rule:nonzero"
-       mask="none">
-      <use
-         xlink:href="#surface668"
-         mask="none"
-         id="use134"
-         x="0"
-         y="0"
-         width="100%"
-         height="100%"
-         clip-path="none"
-         style="opacity:0.6" />
-      <g
-         style="filter:url(#alpha)"
-         id="g24" />
-    </g>
+       id="g24"
+       style="clip-rule:nonzero;filter:url(#alpha)"
+       transform="matrix(0.56799403,0,0,0.56799403,48.516454,21.656717)" />
     <use
        xlink:href="#surface669"
        transform="matrix(0.56799403,0,0,0.56799403,144.50734,25.632688)"
@@ -661,7 +696,7 @@
        width="100%"
        height="100%"
        clip-path="none"
-       style="opacity:0.6" />
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1.40846551;stroke-miterlimit:4;stroke-dasharray:none" />
     <g
        id="surface53196"
        transform="translate(56.753401,-29.118634)">
