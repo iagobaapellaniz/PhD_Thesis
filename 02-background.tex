@@ -110,6 +110,7 @@ In general, the mean values of any function $g(x)$ over the data sample are deno
 One clearly may distinguish two cases for the later definition. While the data sample is always constituted by discrete data elements, the data population can be described by a PDF for discrete values or continuous ones.
 For completeness here are the two definitions for the mean value of a function of the random variables
 \be
+  \label{eq:bg-expectation-value-of-any}
   \text{E}[g(\bs{X})] = \lcor
   \begin{split}
     &\int g(\bs{x}) \prob(\bs{X}=\bs{x})\,\text{d}^N \bs{x},\\
@@ -130,51 +131,54 @@ The probability of the data sample is therefore written as
   \prob(\bs{X}=\bs{x}|\bs{a}),
 \ee
 where "$|\bs{a}$" indicates its dependency on these parameters.
-At this point, notice that an estimate of the the wanted parameter based on the data sample has the form of a function the random variables.
-Therefore as mentioned before, an estimator of $a$, which is how is called this quantity and is denoted by $\hat{a}$, is another random variable with a PDF of the form of
+At this point, notice that an estimate of the the wanted parameter based on the data sample must have associated a PDF.
+Hence as mentioned before, an estimator of $a$, one of the unknown parameters, is denoted by $\hat{a}$ and the PDF associated to it is
 \be
-  \prob(\hat{a}|\bs{a})\,\text{d}\hat{a} = \prob(\bs{X}=\bs{x}|\bs{a})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N.
+  \prob(\hat{a}|\bs{a})\,\text{d}\hat{a} = \prob(\bs{x}|\bs{a})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N.
 \ee
-For short, we omit on writing $\bs{X}$ from now on, thus the conditional joint probability of $N$ random variables is written as $\prob(\bs{x}|\bs{a})$.
+For short, we have omitted on writing $\bs{X}$, thus the conditional joint probability of $N$ random variables is written simply as $\prob(\bs{x}|\bs{a})$.
 
 As we said, an estimator is defined to be a function of the data sample.
 For example, one of such estimators is the estimator of the mean value of the data population, in general unknown.
 The mean value of the data population, which in general we do not have access to, is denoted usually by $\mu$.
 Notice that $\mu$ is in general different from the mean value of the data sample $\overline{x}$.
-A valid estimator for the population mean value would be the arithmetic mean of the data sample, i.e., $\hat{\mu}=\overline{x}$.
+A valid estimator for the population mean value would be the mean itself of the data sample, i.e., $\hat{\mu}=\overline{x}$.
 
-An important notion of an estimator is its \emph{efficiency}, i.e., whether it has smaller variance than another.
-The more efficient estimator the smaller variance it has.
+An important notion of an estimator is its \emph{efficiency}, i.e., whether it has smaller variance than another another estimator.
+The more efficient estimator the smaller variance of it.
 Remember than an estimator is a random variable so it must have a variance that comes from the data population, i.e., from $\prob(\hat{a}|\bs{a})$ in this case.
 
-For an estimator of any kind there is a theoretical lower bound for its variance.
-For the proof of the previous observation, which we compute for continuous random variables without losing of generality, we start with the normalization of the PDF
+Focusing into what it is more interesting for the comprehension of this thesis, an estimator of any kind has a theoretical lower bound for its variance.
+For the proof of the previous statement, which we will compute for continuous random variables without losing of generality, we start with the normalization formula of a given PDF
 \be
   \int \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = 1.
 \ee
-Next, we compute the partial derivative over $a$ such that
+Next, we compute the partial derivative over $a$, one of any of the unknown parameters, such that
 \be
+  \label{eq:bg-expectation-value-of-logarithm}
   \int \partial_a\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = \int \partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x} = 0,
 \ee
-where for simplification, we omit the arguments of the joint probability on the second equality.
-From Eq.~\eqref{}, it turns out that the Eq.~\eqref{} is the expectation value of $\partial_a(\ln\prob)$.
-Finally if we have an unbiased estimator, for which the true value $a$ coincides with the expectation value of the estimator $\text{E}[\hat{a}]$, its partial differentiation over $a$ must be equal to one,
+where for the second equality we used the identity for logarithmic derivatives.
+From Eq.~\eqref{eq:bg-expectation-value-of-any}, it turns out that the Eq.~\eqref{eq:bg-expectation-value-of-logarithm} is the expectation value of $\partial_a(\ln\prob)$.
+Finally if we have an unbiased estimator, for which the true value $a$ coincides with the expectation value over the data population of the estimator $\text{E}[\hat{a}]$, its partial differentiation over $a$ must be equal to one,
 \begin{align}
   \partial_a\text{E}[\hat{a}] &= \partial_a a = 1, \\
+  \label{eq:bg-expectation-of-estimator-derivated}
   \begin{split}
     1 &= \partial_a \int \hat{a} \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \\
       &=  \int \hat{a} \partial_a\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} =  \int \hat{a} \partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x},
   \end{split}
 \end{align}
-where we apply the definition of the expectation value of the estimator $\hat{a}$ for continuous variables and we apply as well similar identities as in Eq.~\eqref{}.
+where we apply the definition of the expectation value of the estimator $\hat{a}$ for continuous variables, we noticed in the third equality that the estimator is not a function of $a$ and finally we apply similar identities as in Eq.~\eqref{eq:bg-expectation-value-of-logarithm}.
 
-At this point we invoke the Schwartz inequality for two real multidimensional functions $g(\bs{x})$ and $h(\bs{x})$ such that $(\int g h \,\text{d}^N\bs{x})^2\leq (\int g^2 \,\text{d}^N\bs{x}) (\int h^2 \,\text{d}^N\bs{x})$.
-With this we can follow the following recipe to obtain a lower bound for the variance of a general estimator.
-First the definition of the variance looks like
+At this point, we invoke the Schwartz inequality for two real multidimensional functions $g(\bs{x})$ and $h(\bs{x})$ such that $(\int g h \,\text{d}^N\bs{x})^2\leq (\int g^2 \,\text{d}^N\bs{x}) (\int h^2 \,\text{d}^N\bs{x})$.
+With this, we can follow step by step the following recipe to obtain a lower bound for the variance of a general estimator.
+First the definition of the variance over the data population looks like
 \be
-  V[\hat{a}] = E[(\hat{a}-a)^2] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x}.
+  V[\hat{a}] = E[(\hat{a}-a)^2] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x},
 \ee
-Second, from Eqs.~\eqref{,} holds that
+remember that the estimator is assumed to be unbiased.
+Second, subtracting $a$ times Eq.~\eqref{eq:bg-expectation-value-of-logarithm} to Eq.~\eqref{eq:bg-expectation-of-estimator-derivated} the following holds,
 \be
   \int (\hat{a}-a)\partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = 1
 \ee
@@ -185,10 +189,10 @@ Hence, using the Schwartz inequality we can write
   \text{V}[\hat{a}] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \geq \frac{1}{\int \lcua\partial_a\big(\ln \prob (\bs{x}|\bs{a}) \big)\rcua^2 \prob (\bs{x}|\bs{a})\,\text{d}^N\bs{x}},
 \ee
 which is also known as the Cram\'er-Rao bound or the Fisher inequality.
-The denominator on the right hand-side is called generally the Fisher information (FI).
+The denominator on the right hand-side is called generally the Fisher information (FI) or simply information.
 
-With this review of the most interesting features of "classical" metrology, from the point of view of this thesis, we conclude this section.
-In the next section, we will record some properties of the Quantum Mechanics and then we will follow with another s with the basis of Quantum Metrology.
+With this review of the most interesting properties of "classical" metrology, from the point of view of this thesis, we conclude this section.
+In the next section, we will record some properties of the quantum mechanics and then we will follow with another section which presents the basis of quantum metrology.
 
 \subsection{Quantum Mechanics from metrology perspective}
 \label{sec:bg-quantum-mechanics-for-metrology}
