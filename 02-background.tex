@@ -5,33 +5,38 @@
 \quotes{Roger J. Barlow}{In the real world, doing real experiments, statistics began to matter}
 
 \vspace{0pt}
-\lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} this chapter we will study the basics of Quantum Metrology, which stands for the science of enhanced metrology by quantum phenomena.
-On the other hand, metrology, as the science of measuring, has played an essential role for the development of the technology as we know it today.
-It studies several aspects of the estimation process, such as which strategy to follow in order to improve the precision of an estimation or which is the bound for the precision.
-Metrology also covers all intermediate process for the estimation, from the design aspects of a precise measuring device, to the most basic concepts of estimation, which lead at the end to a better understanding of it as a whole.
+\lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} this chapter we will study the basics of quantum metrology, which stands for the study of metrology enhanced by quantum phenomena.
+First of all, metrology, as the science of measuring, has played an essential role for the development of science and technology.
+Metrology studies several aspects of the estimation process, for example, which strategy to follow in order to improve the precision or which is the bound for it.
+Metrology also covers all intermediate processes, from the design aspects of a precise measuring device, to the most basic mathematical concepts that arise from the formulation of the different problems, which lead at the end to a more complete picture of what metrology is.
 
-In this sense, with the discovery of the Quantum Physics and the development of Quantum Mechanics, new doors for advances in metrology were open in the early decades of the 20th century.
-First, Quantum Theory embraced the so-called field of Quantum Information, which merges the notions of the theory of information and computer science, among others sub-fields, with the quantum mechanics.
-This new field of Quantum Information is in the basis of Quantum Metrology.
-Moreover, those emerging fields rapidly became into very interesting interdisciplinary playgrounds of science attracting the interest of many scientists as well as resources for their researches.
-Just to mention that the role of the so-called entanglement, an exclusive feature of Quantum Mechanics which cannot be completely described using classical probabilistic theories, is essential in this context.
-With the aim of completely understand this concepts, many scientists world wide have integrated their efforts.
-Said this, the entanglement also is in the center of theoretical concepts in Quantum Metrology.
-In the Quantum Metrology framework, we will focus on the achievable precision of the systems.
-We will show as well different strategies to achieve the desired results.
+As a brief story of quantum metrology, let us say that with the discovery of quantum theory and the subsequent development of quantum mechanics, new opportunities emerged for advances in metrology in the early decades of the twentieth century.
+Later in the last decades of the twentieth century, together with the arrival of concepts like \emph{qubit} and \emph{quantum cryptography}, quantum theory embraced the so-called quantum information theory, which merges the notions of theory of information and computer science with quantum mechanics.
+Pushed by the developments of quantum technologies, quantum information attracted much attention from the scientific community.
+Moreover, those emerging fields rapidly became into very interesting interdisciplinary playgrounds of science with many scientists as well as resources involved.
+
+At this point, we want to mention that the role of the so-called entanglement, an exclusive feature of quantum mechanics which cannot be described using classical probabilistic theories, is essential in this context.
+Said this, the entanglement also is at the center of the theory of quantum metrology.
+Throughout the text we will focus mainly on the achievable precision for different systems and schemes.
 
 On the other hand, a very important field of science must be highlighted by its own merits.
-We are mentioning the statistics, without which many descriptions of the actual and past physical findings would lack of the rigorous interpretation needed for the complexity of data samples.
-It basically helps to analyse raw data to find special properties out of it.
+We are talking about statistics, without which many descriptions of the actual and past physical findings would lack of the rigorous interpretation needed.
+It basically helps to analyze raw data to make it readable from the human perspective.
+
+This chapter is organized as follows.
+In Section~\ref{sec:bg-statistics-and-stimation}, we introduce the basic concepts of statistics and estimation theories at the same time we go deeper in the concepts will arise on this thesis.
+In Section~\ref{sec:bg-quantum-mechanics-for-metrology}, we present the necessary tools of quantum mechanics used through the text.
+Finally in Section~\ref{sec:bg-quantum-magnetometry}, we arrive at the main set of tools used in the quantum metrology framework and by extension in the present work.
 
 \subsection{Background on statistics and the theory of estimation}
+\label{sec:bg-statistics-and-stimation}
 
 In this section, we will enumerate the basic concepts of statistics as well as the estimation process.
-As we said, the main mathematical tools used by the metrology science belong to statistics.
+As we said, the main mathematical tools used by metrology science belong to statistics.
 Moreover, we are especially interested in estimation theory.
 The statistics main characteristic is that it makes the raw data under consideration comprehensible from the human perspective.
-The data can be anything, from a set of different heights of a basketball team, to the outcomes of a coin toss, or the wavelength of photons coming out of some sample.
-The aim of this section is to give the reader sufficient material to follow this thesis and make it comprehensible from the beginning\footnote{
+The data can be anything, from a set of different heights of a, let us say, basketball team, to the outcomes of a coin toss, or even the wavelength of photons coming out of some radioactive sample.
+The aim of this section is to give the reader sufficient material to follow this thesis and make it comprehensible since the beginning\footnote{
 For a more detailed material, check statistics book as well as mathematics book for scientist and engineers \citep{Riley1998, BarlowXXXX}}.
 
 \subsubsection{Probability, data samples, average and variance}
@@ -39,43 +44,47 @@ For a more detailed material, check statistics book as well as mathematics book 
 The probability indicates the relative chance of an event to happen.
 For instance, if there is a box with ten red balls and five blue balls, considering that the balls of the same color are indistinguishable and that we extract one randomly, we have $\frac{5}{10+5}=\frac{1}{3}$ of probability to obtain a blue ball and $\frac{2}{3}$ to obtain a red ball.
 The reader may notice many properties a probability should have, such as that the probability of any event to happen is always one or that a probability is always given by a number in between zero and one.
-For more details, there are many interesting textbooks or chapters of some textbook about Probability Theory one could follow if interested.
+For more details, there are many interesting textbooks or chapters of some textbook about Probability Theory which one could follow if interested.
 The following References~\citep{Riley1998, BarlowXXXX} are some of those books.
 
-When someone has a data sample at hand, it might come from diverse sources and might be represented using multiple forms such as numbers or words (for instance, a table of names of people), the first thing one tries to accomplish is to analyze the data to extract the relevant properties from it.
-A data sample always come from a population sample, i.e., the data sample might not be complete (one could lose some in the process) neither exact (a measuring device always have an error when estimating a magnitude).
+When someone has some data sample at hand, it might come from diverse sources and might be represented using multiple forms such as numbers or words (for instance, a table of names of people).
+The first thing one tries to accomplish is to analyze the data to extract the relevant properties from it.
+A data sample always come from a population sample, i.e., the data sample might not be complete (one could lose some in the process, or the population might be huge in comparison with what one can handle), or might carry some error (a measuring device always has an error when estimating a continuous magnitude, e.g., the height of people), or both at the same time.
 Hence, the data sample comes attached with a probability for each data element.
-In the subsequent paragraphs, we will describe this relation and we will enumerate the most useful properties and formulas for the comprehensions of this thesis.
+In the subsequent paragraphs, we will describe these relations between the data samples and probabilities and we will enumerate the most useful properties and formulas.
 
-First of all, we will explain our notation which follows the one used on Reference~\citep{Riley1998}.
+First of all, we will explain our notation which follows mainly the one used in Reference~\citep{Riley1998}.
 A probability function gives the probability of an event $x$ to happen when measuring some random variable $X$, and it is denoted by $\prob(X=x)$.
-Second, the $N$ elements of a data sample are considered to come from $N$ random variables with the corresponding $N$ values due to the random nature of the measuring, $\{X_i=x_i\}_{i=1}^N$.
-The joint probability of those random variables is in general not separable.
-This is due to the fact that the outcomes could depend on the rest of the outcomes or some other more complex relation that makes the most general case to be non-separable from the probabilistic point of view.
-Therefore we define this PDF as an $N$ variable function
+Second, due to the random nature of the measurements, the $N$ elements of a data sample are considered outputs of $N$ different random variables with their corresponding $N$ values $\{X_i=x_i\}_{i=1}^N$, or $\bs{X}=\bs{x}$ for short.
+The joint probability of those random variables is in general non-separable.
+This is due to the fact that the data sample elements could depend on the rest of outcomes or some other more complex relation that makes the most general case to be non-separable from the probabilistic point of view.
+Therefore we define the probability distribution function (PDF) as an $N$ variable function
 \be
   \prob(\bs{X}=\bs{x}) \equiv \prob(X_1=x_1,X_2=x_2,\dots,X_N=x_N).
 \ee
-If separable this is written by
+In the case of separable probabilities, this is written as
 \be
+  \label{eq:bg-separable-likelyhood}
   \prob(\bs{X}=\bs{x}) = \prod_{i=1}^N\prob(X_i=x_i)
 \ee
-and it is the case for many relevan cases.
+which is the case in many relevant situations.
 
-When some property of the system is defined as a function of random variables, the result is also a random variable with another transformed PDF.
+When some indirect property of the system is defined as a function that depends on the measured random variables, the result is also a new random variable with another assigned PDF.
 For example, we measure the position of a body at some moment.
-If the system was at rest on the origin at initial time and the acceleration is known to be constant, then from the position one can infer on the value of the acceleration by using $A=2X/t^2$, where $X$ denotes the position at instant $t$ and $A$ the acceleration.
-If $X$ is a random variable, which is the general case when measuring the position of a body, then the probability is computed in this case by
+If the system was at rest on the origin when $t=0$ and assuming that the acceleration is constant, then from the measured final position one could infer on the value of the acceleration by using $A=2X/t^2$, where $X$ denotes the final position at instant $t$ and $A$ the acceleration.
+If $X$ is a random variable, which is the general case when measuring the position of some physical system, then the probability assigned for $A$ is computed by
 \be
-  \prob(A=a) = \frac{\text{d}x}{\text{d}a}\prob(X=x)=\frac{2}{t^2}\prob(X=x).
+  \prob(A=a) = \left.\frac{\text{d}X}{\text{d}A}\right|_{A=a}\prob(X=x)=\frac{2}{t^2}\prob(X=x).
 \ee
-In general for the multiple random variable case transformations, we must require that
+In general, for the multiple random variable, we must require the following identity
 \be
-  |\prob(\bs{X}=\bs{x})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N|=|\prob(\bs{Y}=\bs{y})\,\text{d}y_1\text{d}y_2\dots\text{d}y_N|.
+  |\prob(\bs{X}=\bs{x})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N|=|\prob(\bs{Y}=\bs{y})\,\text{d}y_1\text{d}y_2\dots\text{d}y_N|,
 \ee
+for any set of random variables.
 This leads to some interesting formulas we will discuss later.
 
 We now stick to the simplest case on which the data is a collection of values of the same random variable describing the same physical one-dimensional data population.
+Moreover, if the probabilities are independent to each other, the PDF takes the form of Eq.~\eqref{eq:bg-separable-likelyhood}.
 Some definitions reasonable to mention in this thesis arise for those kind of data samples: the average, variance, moments and central moments.
 The arithmetic average (there are other types of average one can find in the textbooks) is computed by
 \be
@@ -86,19 +95,20 @@ The variance is related with the spread of the data and computed by
   \sigma^2=\frac{1}{N}\sum (x_i-\overline{x})^2,
 \ee
 where $\sigma$ is the standard deviation.
-Different moments are computed by $\overline{x^r}=\frac{1}{N}\sum x_i^r$ while central moments are of the form of $n_r=\frac{1}{N}\sum (x_i-\overline{x})^r$.
-Notice that the variance is the second central moment of the data sample.
-For completeness, when each element of the data consists of more than a number, e.g., $(x_i,y_i,z_i)$, the co-variance between two data kinds, in the following case $X$ and $Y$, is obtained by
+Different moments are computed by $\overline{x^r}=\frac{1}{N}\sum x_i^r$ while central moments, i.e., statistical moments that are invariant under the translation of the system, are of the form of $c_r=\frac{1}{N}\sum (x_i-\overline{x})^r$.
+Notice that the variance is the second central moment of the data samples.
+For completeness, when each element of the data consists of more than a single number, e.g., $(x_i,y_i)$ where $x_i$ could be the velocity and $y_i$ the acceleration in a experiment to estimate the friction caused by a fluid, the co-variance between two data kinds is obtained by
 \be
   V_{X,Y} = \frac{1}{N}\sum_{i=1}^N (x_i-\overline{x})(y_i-\overline{y}).
 \ee
+Notice that we grouped by pairs the elements of the data sample while kept distinctions between both kinds $X$ and $Y$.
 
 Those functions also apply to the probability distribution functions.
 While these last ones may be unknown functions for us, as soon as we collect all the possible data or we are in the large number regime the variances of the data sample and of the data population, the means, the co-variances and so on so forth, they must coincide.
-We will try to keep this distinction as clear as possible.
-In general the mean values of any function over data sample values $g(x)$ are denoted with a bar over a lowercase variable, e.g., $\overline{x^r}$ for the $r$-th moment, while the mean values of any function applied to the data population $g(X)$ is written following some textbooks by $\text{E}[g(X)]$.
-One clearly may distinguish two cases here: one for continuous functions where the expectation values or the means are computed integrating over all the possible values, and the other case on which $\prob(\bs{X}=\bs{x})$ can take only discrete values.
-For completeness here are the two definitions
+We will try to keep this distinction between data sample and data population as clear as possible.
+In general, the mean values of any function $g(x)$ over the data sample are denoted with a bar over a lowercase variable, e.g., $\overline{x^r}$ for the $r$-th moment over the data sample, while the mean values of any function applied to the data population $g(X)$ is denoted following some textbooks by $\text{E}[g(X)]$.
+One clearly may distinguish two cases for the later definition. While the data sample is always constituted by discrete data elements, the data population can be described by a PDF for discrete values or continuous ones.
+For completeness here are the two definitions for the mean value of a function of the random variables
 \be
   \text{E}[g(\bs{X})] = \lcor
   \begin{split}
@@ -107,7 +117,7 @@ For completeness here are the two definitions
   \end{split}
   \right.
 \ee
-One more definition needs our attention and it is the variance any function $g(X)$ denoted by $\text{V}[g(X)] \equiv \text{E}[g(X)^2] - E[g(X)]^2$.
+At this point, one more straight forward definition needs our attention, the variance of a function $g(X)$ over the data population is denoted by $\text{V}[g(X)] \equiv \text{E}[g(X)^2] - \text{E}[g(X)]^2$.
 
 \subsubsection{Frecuentist vs. bayesian approach}
 
@@ -181,6 +191,7 @@ With this review of the most interesting features of "classical" metrology, from
 In the next section, we will record some properties of the Quantum Mechanics and then we will follow with another s with the basis of Quantum Metrology.
 
 \subsection{Quantum Mechanics from metrology perspective}
+\label{sec:bg-quantum-mechanics-for-metrology}
 
 The ubiquitous probabilistic nature of Quantum Mechanics forces us to use probabilities on a regular basis.
 Moreover, if one works on fields connected with experiments or some short of physical realizations this probabilistic nature of Quantum Mechanics is enhanced.
@@ -276,6 +287,7 @@ Measurements:
 Quantum Information:
 
 \subsection{Quantum Metrology}
+\label{sec:bg-quantum-magnetometry}
 
 We summarize important recent advances in Quantum Metrology
 Simple metrological setups allow for encoding some wanted parameter into the state of the system, thus from the readout of the final state one can infer on it.
@@ -326,7 +338,7 @@ Finally, note that often, instead of $\varian{\theta}$ one calculates its invers
 It scales as $\varinv{\theta}\sim N$ for SNS and as $\varinv{\theta}\sim N^2$ for the HS.
 
 \subsubsection{Quantum Magnetometry}
-\label{sec:bg-quantum-metro}
+\label{sec:bg-quantum-magnetometry}
 
 Without loss of generality, we present in this section the characterization of the precision of one of the simplest metrological task, namely the estimation of a homogeneous magnetic field based in the interaction between the system and the field.
 In this section, we will mostly study the interaction of a system with a homogeneous field in the $z$-direction.
@@ -598,3 +610,30 @@ These are also bounds for the sensitivity of the phase estimation, since due to 
 \be
   \varinv{\theta} \leq \qfi[\rho, J_z].
 \ee
+
+Entanglement has been recognized as an advantage for several metrological tasks (see, e.g., Refs. \citep{MR82, 119}).
+For a general relationship for linear interferometers, we ca take advantage of the properties of the quantum Fisher information discussed above.
+Since for pure states the quantum Fisher information equals four times the variance, for pure product states we can have at most
+\be
+  \qfi[\rho,J_z] = 4\varian{J_z} = 4 \sum_{n=1}^N \varian{j_z^(n)} \leq N.
+\ee
+For the second equality, we used the fact that for a product state the variance of a collective observable is the sum of the single-particle variances.
+Due to the convexity of the QFI, this upper bound is still valid for all separable states of the form Eq.~\eqref{eq:bg-separable-state-definition} and we obtain \citep{MR120}
+\be
+  \label{eq:bg-shot-noise-limit}
+  \qfi[\rho, J_z] \leq N,
+\ee
+a bound for not entangled states.
+All states violating Eq.~\eqref{eq:bg-shot-noise-limit} are entangled.
+The entangled states make it possible to surpass this bound, the shot-noise limit (SNL), and some might be more useful than separable states for the metrological tasks at hand.
+
+The maximum achievable precision for general states, called the Heisenberg limit (HS), can be obtained evaluating the Eqs.~\eqref{eq:bg-qfi-definition-eigen-decomposition} or \eqref{eq:bg-qfi-definition-convex-roof} for pure states only.
+Therefore, similarly we have
+\be
+  \label{eq:bg-heisenberg-limit}
+  \qfi[\rho, J_z] = 4 \varian{J_z}\leq N^2,
+\ee
+which is a valid bound still for mixed states.
+Note that such bound has the Heisenberg scaling Eq.~\eqref{eq:bg-heisenberg-scaling}.
+Note that our derivation is very simple, and does not require any information about what operator we measure to estimate $\theta$.
+Equation~\eqref{eq:bg-shot-noise-limit} has been used already to detect entanglement based on the metrological performance of the quantum states in Refs.~\citep{MR72, MR10}.

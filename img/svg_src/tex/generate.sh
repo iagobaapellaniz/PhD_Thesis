@@ -7,7 +7,7 @@ jobname=equations
 # String for the equation. Change it as you want
 texstr="
   \displaystyle
-  \rho \Lambda_\theta:\rho \rho_\theta \expect{M}
+  H = \Delta \sigma_z +\omega a^{\dagger}a + g \sigma_z (a^{\dagger} + a)
 "
 
 # Patch to solve relative path problems
