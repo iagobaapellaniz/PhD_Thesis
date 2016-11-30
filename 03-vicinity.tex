@@ -39,7 +39,7 @@ While the quantum Fisher information would give directly the performance one sta
 On the other hand, we can use the error propagation formula Equation~(XX) to obtain a bound on the precision.
 As one can see on the Figure~\ref{fig:vd-secuence-evo} a pure Dicke state is rotated along the $z$-axis.
 Say that in this case the initial state is an unpolarised Dicke state of aligned with the $x$-axis.
-\begin{figure}
+\begin{figure}[htp]
   \centering
   \includegraphics[scale=.65]{img/plots/VD_evolution_of_dicke.pdf}
   \caption[Secuence of Dicke state evolution]{Secuence of the evolution of an unpolarized Dicke state of 16 qubits for $\Theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Husimi quasi-probabilistic distribution of the state, and below PDF of the $J_x$ POVM for each step of the secuence}
@@ -175,7 +175,7 @@ We choose so high density of points on the range in order to compute a more accu
 Finally, we have also checked that the constraints assumed at the beginning of this section are fulfilled.
 For that aim, the range of the evolution time has been $\Theta \in [-\pi,\pi]$ and we have computed the expectation values for five hundreds of equidistant points, see Figure~[REF]~(b).
 We can conclude saying that our formula exactly reproduces the evolution of the error propagation formula, Equation~[REF].
-\begin{figure}
+\begin{figure}[htp]
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/VD_simulation.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/VD_parity_simulation.pdf}
@@ -241,7 +241,7 @@ The second family of input states we are going use are the Gaussian mixture of D
   \rho_{(T)} \propto \sum_{m=-N/2}^{N/2} e^{- \frac{m^2}{T}} \ket{\text{D}_N^m}_x\bra{\text{D}_N^m}_x.
 \ee
 
-\begin{figure}
+\begin{figure}[htp]
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/VD_against_spsq.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/VD_against_therm.pdf}
@@ -322,7 +322,7 @@ with boot straping methods.
 The direct substitution would yield to a 3.3 gain over the shot-noise limit.
 
 Next we plot the value for the precision substituting directly the measured data into Equation~{(XXX)}, see Figure~\ref{fig:vd-precision-theta}.
-\begin{figure}
+\begin{figure}[htp]
   \centering
   \includegraphics[scale=.65]{img/plots/VD_precision_theta.pdf}
   \caption[Evolution of the precision for $\Theta$.]{The (solid) line shows how the precision of $\Theta$ varies through the evolution. Notice that for the initial moment the precision is zero and that it reaches a maximum at $\Theta \approx 0.0057$ highlighted with the vertical (dashed) line. The gray area represent the region where the precision is below the shot-noise limit.}
@@ -350,7 +350,7 @@ From these considerations we are able to write a second bound with fewer expecta
 \ee
 We have used this formula to compute the bound on the optimal precision with the measured data shown on Equation~{(XXX)}, $(\Delta \Theta)^{-2}_{\text{opt}} \geq 2.9N$, see Figure~{\ref{fig:vd-experimental}}.
 
-\begin{figure}
+\begin{figure}[htp]
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/VD_exper_contour.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/VD_exper_slice.pdf}

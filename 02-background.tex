@@ -25,7 +25,7 @@ It basically helps to analyze raw data to make it readable from the human perspe
 
 This chapter is organized as follows.
 In Section~\ref{sec:bg-statistics-and-stimation}, we introduce the basic concepts of statistics and estimation theories at the same time we go deeper in the concepts will arise on this thesis.
-In Section~\ref{sec:bg-quantum-mechanics-for-metrology}, we present the necessary tools of quantum mechanics used through the text.
+In Section~\ref{sec:bg-quantum-mechanics-for-metrology}, we present the necessary tools of quantum mechanics used throughout the text.
 Finally in Section~\ref{sec:bg-quantum-magnetometry}, we arrive at the main set of tools used in the quantum metrology framework and by extension in the present work.
 
 \subsection{Background on statistics and the theory of estimation}
@@ -197,26 +197,27 @@ In the next section, we will record some properties of the quantum mechanics and
 \subsection{Quantum Mechanics from metrology perspective}
 \label{sec:bg-quantum-mechanics-for-metrology}
 
-The ubiquitous probabilistic nature of Quantum Mechanics forces us to use probabilities on a regular basis.
-Moreover, if one works on fields connected with experiments or some short of physical realizations this probabilistic nature of Quantum Mechanics is enhanced.
-On the other hand, exotic features such as entanglement arise from Quantum Mechanics, which give us unique opportunities to exploit them as resources.
-The present section is intended to describe these quantum phenomena in more or less detail.
+The ubiquitous probabilistic nature of quantum mechanics makes us to work with probabilities on a regular basis.
+Moreover, if one studies fields connected with experiments or some short of physical realizations, this probabilistic nature of quantum mechanics becomes more visible.
+On the other hand, exotic features such as entanglement arise from Quantum Mechanics, which is directly connected with the probabilistic notions explained before.
+The present section is intended to describe quantum systems from the point of view of metrology.
 
 \subsubsection{The quantum state, multiparticle state, entanglement}
 
 A formal mathematical description of the quantum state is given next.
-This also allows us to introduce some notation used through the thesis.
+This also allows us to introduce some notation used throughout the thesis.
 A \emph{state} in Quantum Mechanics lives on a Hilbert space, $\mathcal{H}$.
-The system state, $\rho$, has the following properties:
+The state, $\rho$, has the following properties:
 \begin{enumerate}
   \item
   It is Hermitian, so it is invariant under the complex transposition, $\rho=\rho^\dagger$ and all its eigenvalues are real.
   \item Its trace is equal to one, $\tr(\rho)=1$.
-  \item It is positive semi-definite, i.e, all its eigenvalues are bigger or equal to zero, $\rho=\sum_{\lambda}p_\lambda \Pi_\lambda$ where $p_\lambda\geq 0$ and $\Pi_\lambda\equiv\ketbra{\lambda}{\lambda}$ is the projector of the eigenstate $\ket{\lambda}$.
+  \item It is positive semi-definite, i.e, all its eigenvalues are bigger or equal to zero, $\rho=\sum_{\lambda}p_\lambda \Pi_\lambda$ where $p_\lambda\geq 0$ and $\Pi_\lambda\equiv\ketbra{\lambda}{\lambda}$ is the projector of the eigenstate $\ket{\lambda}$, a vector state satisfying the following eigenvalue equation $\rho\ket{\lambda}=p_{lambda}\ket{\lambda}$.
   From (ii), it follows that $\sum_\lambda p_\lambda = 1$.
-  \item If all $p_\lambda$ are zero except one, the state is called a pure state and is equivalent to the projector of such eigenstate $\rho=\Pi_\lambda\equiv\ketbra{\lambda}{\lambda}$, where $\ket{\lambda}$ denotes a pure \emph{vector} state.
-  \item It follows that the quantum states form a convex set where the extreme points are pure states.
-  \item An expectation value of an observable $\mathcal{O}$ is linear on the state and it is computed as $\expect{\mathcal{O}}=\tr(\mathcal{O}\rho)$.
+  \item If all $p_\lambda$ are zero except one, the state is called a pure state and is equivalent to the projector of such eigenstate $\rho=\Pi_\lambda=\ketbra{\lambda}{\lambda}$.
+  \item Using the properties (iii) and (iV), it follows that the quantum states form a convex set where the extreme must be pure states.
+  \item An expectation value of an observable $\mathcal{O}$ is computed as $\expect{\mathcal{O}}=\tr(\mathcal{O}\rho)$.
+  To make a connection with the previous section, the state represents the so-called data population, hence using the notation in Sec.~\ref{sec:bg-statistics-and-stimation} $\expect{\mathcal{O}}\equiv\text{E}[\mathcal{O}]$.
 \end{enumerate}
 
 The composite system of $N$ different parties live in the Hilbert space $\mathcal{H} = \mathcal{H}^{(1)}\otimes\mathcal{H}^{(2)}\otimes\cdots\otimes\mathcal{H}^{(N)}$ or for short $\mathcal{H} = \bigotimes_{i=1}^N\mathcal{H}^{(i)}$, where $\otimes$ stands for tensor product.
@@ -227,26 +228,28 @@ A \emph{separable} state in this Hilbert space can be described by
   \rho_{\text{sep}} = \sum_{i}p_i\rho_i^{(1)}\otimes\rho_i^{(2)}\otimes\cdots\otimes\rho_i^{(N)},
 \ee
 where $p_i$ are convex weights that sum to one and are equal or bigger than zero.
-If not the state is said to be \emph{entangled}.
+If this is not the case, the state is said to be \emph{entangled}.
 We mention it as a formal description of the entanglement \citep{}.
 One may notice at this moment, that relaxing the requirements of Eq.~\eqref{eq:bg-separable-state-definition}, one can lead to different classifications of the states.
-Concepts like genuine multipartite entanglement, $k$-producible states, or entanglement depth, among others, arose from weakelly constrain the Eq.~\eqref{eq:bg-separable-state-definition} \citep{}.
+Concepts like genuine multipartite entanglement, $k$-producible states, or entanglement depth, among others, arose from weaker constraints than Eq.~\eqref{eq:bg-separable-state-definition} \citep{GuehneXXXX}.
 
 It is important to remark one of such classifications in order to characterize the different levels or multipartite entanglement followed in this work.
 We call a state $k$-producible, if it \emph{can} be written as a mixture of the tensor product of different multiparticle states with at most $k$ particles,
 \be
   \rho_{k\text{-pro}} = \sum_i p_i\rho^{(\alpha,\dots,\beta)}_i \otimes \rho^{(\gamma,\dots,\delta)}_i\otimes \dots,
 \ee
-where superscript indexes between parenthesis go from 1 to $N$ and denote to which parties belong the state, and where each index appears once in each sum element.
+where superscript indexes between parenthesis go from 1 to $N$ and denote to which parties belong to the state, and where each index appears once in each sum element.
 If a state cannot be written as $k$-producible, then it must be $(k+1)$-entangled.
 This defines the entanglement depth, see Figure~\ref{fig:bg-separability-k-producibility-circle}.
-\begin{figure}
+\begin{figure}[htp]
   \centering
-  \includegraphics[scale=1.4]{img/BG_separability_k_producibility_circle.pdf}
+  \includegraphics[scale=1.2]{img/BG_separability_k_producibility_circle.pdf}
   \caption[Diagram for $k$-producibility sets]{$k$-producible states contain $k-1$-producible states. Based on the Eq.~\eqref{} one can argue that a state that cannot be written as $k$-producible must be $k+1$-entangled or must have $k+1$ entanglement depth. A separable state can always be written as 1-producible wich is its original definition.}
   \label{fig:bg-separability-k-producibility-circle}
 \end{figure}
 Later on those concepts will arise on the metrology framework \citep{,}.
+
+\subsubsection{Angular momentum operators for multipartite systems}
 
 Besides those concepts, we present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
 Again those definitions allow us to introduce notation used on this book.
@@ -278,17 +281,29 @@ where we separated the sum into two pieces, the first corresponds to the sum of 
 Many more combinations of these single-party operators may arise on different contexts.
 In the Appendix~\ref{}, we discuss in more detail the different structures that arise from adding the angular momentum operators, e.g., the symmetric subspace or the fixed total angular momentum subspace.
 
-Evolution:
+\subsubsection{Dynamics of quantum systems, measurements and quantum information}
 
-- Markov
+The quantum state represents an instance of a physical system.
+Hence as physical systems evolve the quantum state must too.
+The most basic evolution of the state is represented by unitary evolution operators denoted by $U$ and those are the only ones appearing throughout the thesis.
+On the other hand, there are other types of dynamics involving particle loses, entropy changes on the system and open-quantum-systems in general.
+These transformations are govern by master-equations of the type of the Linblad equation and similar.
 
-- Limblad
-
-Measurements:
-
-- POVMs
-
-Quantum Information:
+For the comprehension of this thesis it is enough to discuss the unitary evolution operators.
+We also restrict ourselves to the case in which the evolution is constant in time.
+The unitary evolution operators is defined as
+\be
+  U = \exp(-i \alpha G)=\sum_{n=0}^{\infty} \frac{(-i \alpha G)^n}{n!}
+\ee
+where $G$ represents a Hermitian operator and $\alpha$ the amount of change.
+When a constant Hamiltonian $H$ acts on an initial state $\rho$, the state evolves in time as
+\be
+  \rho(t) = U\rho U^{\dagger} = e^{-i\frac{tH}{\hbar}} \rho e^{+i\frac{tH}{\hbar}}.
+\ee
+Notice that all information we can extract from the system comes in the form of expectation values of different operators at different times, $\expect{\mathcal{O}}(t) = \tr(\mathcal{O}\rho(t))$.
+When the state evolves in time but the operators are constant the picture of the system is called the Schrodinger-picture.
+Using the cyclic property of the trace, $\tr(ABC) = \tr(CBA)$, the Heisenberg-picture, a dual interpretation of the same physical system on which the state remains the same while the operators evolve in time, emerges.
+It is well known that the operators in this picture evolve inversely as $\mathcal{O}(t) = U^{\dagger} \mathcal{O} U$, where $\mathcal{O}$ is the initial operator.
 
 \subsection{Quantum Metrology}
 \label{sec:bg-quantum-magnetometry}
@@ -306,9 +321,9 @@ First, a state is prepared followed by the evolution in which the unknown parame
 Finally, the outgoing state is characterized by some measurement $M$ which allows to infer in the value of the parameter $\theta$.
 The details of the evolution, the initial state and the post-characterization using $M$ or a set of different measurements, is crucial for succeed.
 Figure~\ref{} illustrates the main steps of Quantum Metrology.
-\begin{figure}
+\begin{figure}[htp]
   \centering
-  \includegraphics[scale=1.4]{img/BG_preparation_encoding_estimation.pdf}
+  \includegraphics[scale=1.2]{img/BG_preparation_encoding_estimation.pdf}
   \caption[Quantum Metrology estimation process]{Sequence of the different steps for the basics of the estimation process on Quantum Metrology. First, an input state $\rho$ enters the region on which the unknown parameter $\theta$ is imprinted on it, for the most general case, represented with $\Lambda_{\Theta}$. Last, the state that has encoded the parameter $\theta$ on it is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
   \label{fig:bg-preparation-encoding-estimation}
 \end{figure}
@@ -401,9 +416,9 @@ Thus, the precision of the estimate depends on how sensitive $\expect{M}$ is to 
 Based on the formula Eq.~\eqref{eq:bg-error-propagation-formula}, one can see that the larger the slope $|\partial_\theta \expect{M}|$, the higher the precision.
 On the other hand, the larger the variance $\varian{M}$, the lower the precision.
 Figure~\ref{} helps to interpret the quantities appearing in Eq.~\eqref{eq:bg-error-propagation-formula}.
-\begin{figure}
+\begin{figure}[htp]
   \centering
-  \includegraphics[scale=1.4]{img/BG_expect_m_evo.pdf}
+  \includegraphics[scale=1.2]{img/BG_expect_m_evo.pdf}
   \caption[Graphical explanation of the error-propagation formula]{(Blue solid) Functional relation between the expectation value $\expect{M}$ and the estimator of the wanted parameter $\hat\theta$.
   (Green dashed) One to one correspondence when the estimator $\hat{\theta}$ is based on $\expect{M}$. (Red dotted) Obtaining the error of the estimate is based on Eq.~\eqref{eq:bg-error-propagation-formula}.
   The slope of the curve at that point, denoted with $\tan\alpha$, directly relates the uncertainty $\sigma_M$ on the measured quantity $\expect{M}$ and the error on the estimation $\sigma_\theta$.}
