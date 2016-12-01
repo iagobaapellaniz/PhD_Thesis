@@ -254,33 +254,38 @@ Later on, these concepts of entanglement and entanglement depth will arise natur
 
 Besides those concepts, we present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
 Again these definitions allow us to introduce much of the notation used on this book.
-For a single party with discrete $d$ levels and therefore $s=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
+For a single party with discrete $d$ levels, and therefore the spin-number $s=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
 \be
   j_l^{(n)}\ket{m}_l^{(n)} = m \ket{m}_l^{(n)}
 \ee
-for $m=-s,\dots,+s$,  where $l=x,y,z$ and where it is usual to omit the subscript and superscript, $l$ and $(n)$ respectively, for simplicity.
-The square of the total angular momentum, $\bs{j}^2=j_x^2+j_y^2+j_z^2$, for a single party is simply
-\be
-  (\bs{j}^2)^{(n)}\rho^{(n)}=s(s+1)\rho^{(n)},
-\ee
-where $\rho^{(n)}$ is an arbitrary pure or mixed state defined on the $\mathcal{H}^{(n)}$ Hilbert space.
+for $m=-s,\dots,+s$, where $l=x,y,z$.
+It is usual to omit the subscript of $\ket{m}_l^{(n)}$ when $l=z$ because it is the preferred direction for many authors and the superscript ($n$) can be also omitted when the single-particle states are given in an ordered form to build a multiparticle state, i.e., $\ket{\psi} = \ket{m_1}\ket{m_2}\dots\ket{m_n}$ where we also omitted on writing the tensor product operator $\otimes$ in between single-particle states.
+In many cases it is also usual to merge all into a single, but at the same time with many quantum numbers, state $\ket{\psi}=\ket{m_1 m_2 \dots m_N}$.
+Many more details about the notation is normally used in many-body quantum mechanics can be found on different textbooks \citep{}.
 
-The collective angular momentum projection operators are defined as the sum of their respective single-party spin operators such that they are extended to the rest of the Hilbert spaces by tensor products of the identity operators defined for the rest of subspaces,
+The square of the total angular momentum, $\bs{j}^2=j_x^2+j_y^2+j_z^2$, for a single party $(n)$ acts on any state simply as
 \be
-  J_l = \sum_{i=1}^N \mtxid^{(1,\dots, i-1)} \otimes j_l^{(i)} \otimes \mtxid^{(i+1,\dots,N)} \equiv \sum_{i=1}^1 j_l^{(i)},
+  (\bs{j}^2)^{(n)}\rho=s_n(s_n+1)\rho,
 \ee
-where $\mtxid$ stand for the identity operator and the last formula is the most used since it is easy to notice that the single subspace operator must extended in each case.
-The square of the angular momentum projections of a many-particle system is not equal to the sum of the square angular momentum projection of each of the parties and it is obtained by
+where state must be defined in a Hilbert space containing $\mathcal{H}^{(n)}$, the Hilbert space of $n^{\text{th}}$ particle and where $s_n$ is the spin number of such a particle.
+
+The collective angular momentum projection operators $J_l$ are defined as the sum of their respective single-party spin operators $j_l^{(n)}$ such that they are extended to the remaining of the Hilbert spaces by tensor products of the identity operators defined for the rest of subspaces,
+\be
+  J_l = \sum_{i=1}^N \mtxid^{(1,\dots, i-1)} \otimes j_l^{(i)} \otimes \mtxid^{(i+1,\dots,N)} \equiv \sum_{i=1}^N j_l^{(i)},
+\ee
+where $\mtxid$ stand for the identity operator and the last formula is the most used since it is easy to notice that the single-party operator must extended in order to sum the correctly.
+On the other hand, notice that the square of the different projections of total angular momentum are not equal to the sum of the square angular momentum projections of each of the parties.
+Thus it is obtained by
 \be
   J_l^2 = \sum_{i,j}^N j_l^{(i)} j_l^{(j)} = \sum_{i=1}^N (j_l^2)^{(i)}+\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)}.
 \ee
-Therefore, the total square angular momentum is neither the sum of all single-party square angular momentum and is computed by
+Therefore, neither the total square angular momentum is the sum of all single-party square angular momentum but
 \be
-  J_l^2 = \sum_{i,j}^N j_l^{(i)} j_l^{(j)} = \sum_{i=1}^N (j_l^2)^{(i)}+\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)},
+  \bs{J}^2 = \sum_{i}^N \bs{j}^{(i)} + \sum_{l=x,y,z}\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)},
 \ee
-where we separated the sum into two pieces, the first corresponds to the sum of all single party angular momentum projections squared and the second corresponds to the product of angular momentum projection operators of two distinct subsystems.
+where we separated the sum into two pieces, the first corresponds to the sum of all single party angular momentum projections squared and the second corresponds to the product of angular momentum projection operators of two distinct subsystems summed for all $l=x,y,z$.
 Many more combinations of these single-party operators may arise on different contexts.
-In the Appendix~\ref{}, we discuss in more detail the different structures that arise from adding the angular momentum operators, e.g., the symmetric subspace or the fixed total angular momentum subspace.
+In the Appendix~\ref{app:mima-angular-subspaces}, we discuss in more detail the different structures that arise from adding the angular momentum operators, e.g., the symmetric subspace, the fixed total angular momentum subspace or the singlet subspace.
 
 \subsubsection{Dynamics of quantum systems}
 
