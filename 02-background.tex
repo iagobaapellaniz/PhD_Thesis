@@ -220,25 +220,26 @@ The state, $\rho$, has the following properties:
   To make a connection with the previous section, the state represents the so-called data population, hence using the notation in Sec.~\ref{sec:bg-statistics-and-stimation} $\expect{\mathcal{O}}\equiv\text{E}[\mathcal{O}]$.
 \end{enumerate}
 
-The composite system of $N$ different parties live in the Hilbert space $\mathcal{H} = \mathcal{H}^{(1)}\otimes\mathcal{H}^{(2)}\otimes\cdots\otimes\mathcal{H}^{(N)}$ or for short $\mathcal{H} = \bigotimes_{i=1}^N\mathcal{H}^{(i)}$, where $\otimes$ stands for tensor product.
+The composite system of $N$ different parties live in the Hilbert space $\mathcal{H} = \mathcal{H}^{(1)}\otimes\mathcal{H}^{(2)}\otimes\cdots\otimes\mathcal{H}^{(N)}$ or $\mathcal{H} = \bigotimes_{i=1}^N\mathcal{H}^{(i)}$ for short, where $\otimes$ stands for tensor product.
 For instance, this composite Hilbert space could be used to represent a many-particle system, in this case $N$ particles.
-A \emph{separable} state in this Hilbert space can be described by
+A \emph{separable} state in this Hilbert space can be written by
 \be
   \label{eq:bg-separable-state-definition}
   \rho_{\text{sep}} = \sum_{i}p_i\rho_i^{(1)}\otimes\rho_i^{(2)}\otimes\cdots\otimes\rho_i^{(N)},
 \ee
 where $p_i$ are convex weights that sum to one and are equal or bigger than zero.
-If this is not the case, the state is said to be \emph{entangled}.
-We mention it as a formal description of the entanglement \citep{}.
+If a state cannot be written like Eq.~\eqref{eq:bg-separable-state-definition}, the state is said to be \emph{entangled}.
+We mention it as a formal description of the entanglement \citep{Guehne2009}.
 One may notice at this moment, that relaxing the requirements of Eq.~\eqref{eq:bg-separable-state-definition}, one can lead to different classifications of the states.
-Concepts like genuine multipartite entanglement, $k$-producible states, or entanglement depth, among others, arose from weaker constraints than Eq.~\eqref{eq:bg-separable-state-definition} \citep{GuehneXXXX}.
+Concepts like genuine multipartite entanglement, $k$-producible states, or entanglement depth, among others, arose from weaker constraints than Eq.~\eqref{eq:bg-separable-state-definition} \citep{Guehne2009}.
 
 It is important to remark one of such classifications in order to characterize the different levels or multipartite entanglement followed in this work.
-We call a state $k$-producible, if it \emph{can} be written as a mixture of the tensor product of different multiparticle states with at most $k$ particles,
+We call a state $k$-producible, if it \emph{can} be written as a mixture of the tensor product of different multipartite states with at most $k$ parties in each,
 \be
   \rho_{k\text{-pro}} = \sum_i p_i\rho^{(\alpha,\dots,\beta)}_i \otimes \rho^{(\gamma,\dots,\delta)}_i\otimes \dots,
 \ee
 where superscript indexes between parenthesis go from 1 to $N$ and denote to which parties belong to the state, and where each index appears once in each sum element.
+For instance a separable state like Eq.~\eqref{eq:bg-separable-state-definition} is 1-producible as well as $N$-producible.
 If a state cannot be written as $k$-producible, then it must be $(k+1)$-entangled.
 This defines the entanglement depth, see Figure~\ref{fig:bg-separability-k-producibility-circle}.
 \begin{figure}[htp]
@@ -247,12 +248,12 @@ This defines the entanglement depth, see Figure~\ref{fig:bg-separability-k-produ
   \caption[Diagram for $k$-producibility sets]{$k$-producible states contain $k-1$-producible states. Based on the Eq.~\eqref{} one can argue that a state that cannot be written as $k$-producible must be $k+1$-entangled or must have $k+1$ entanglement depth. A separable state can always be written as 1-producible wich is its original definition.}
   \label{fig:bg-separability-k-producibility-circle}
 \end{figure}
-Later on those concepts will arise on the metrology framework \citep{,}.
+Later on, these concepts of entanglement and entanglement depth will arise naturally on the metrological framework \citep{Toth2014}.
 
 \subsubsection{Angular momentum operators for multipartite systems}
 
 Besides those concepts, we present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
-Again those definitions allow us to introduce notation used on this book.
+Again these definitions allow us to introduce much of the notation used on this book.
 For a single party with discrete $d$ levels and therefore $s=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
 \be
   j_l^{(n)}\ket{m}_l^{(n)} = m \ket{m}_l^{(n)}
@@ -281,13 +282,13 @@ where we separated the sum into two pieces, the first corresponds to the sum of 
 Many more combinations of these single-party operators may arise on different contexts.
 In the Appendix~\ref{}, we discuss in more detail the different structures that arise from adding the angular momentum operators, e.g., the symmetric subspace or the fixed total angular momentum subspace.
 
-\subsubsection{Dynamics of quantum systems, measurements and quantum information}
+\subsubsection{Dynamics of quantum systems}
 
 The quantum state represents an instance of a physical system.
 Hence as physical systems evolve the quantum state must too.
 The most basic evolution of the state is represented by unitary evolution operators denoted by $U$ and those are the only ones appearing throughout the thesis.
 On the other hand, there are other types of dynamics involving particle loses, entropy changes on the system and open-quantum-systems in general.
-These transformations are govern by master-equations of the type of the Linblad equation and similar.
+These transformations are govern by master-equations of the type of the Linblad equation \citep{}.
 
 For the comprehension of this thesis it is enough to discuss the unitary evolution operators.
 We also restrict ourselves to the case in which the evolution is constant in time.
@@ -295,7 +296,7 @@ The unitary evolution operators is defined as
 \be
   U = \exp(-i \alpha G)=\sum_{n=0}^{\infty} \frac{(-i \alpha G)^n}{n!}
 \ee
-where $G$ represents a Hermitian operator and $\alpha$ the amount of change.
+where we use the matrix exponentiation in the last equality, $G$ represents a Hermitian operator usually called generator and $\alpha$ is the amount of change.
 When a constant Hamiltonian $H$ acts on an initial state $\rho$, the state evolves in time as
 \be
   \rho(t) = U\rho U^{\dagger} = e^{-i\frac{tH}{\hbar}} \rho e^{+i\frac{tH}{\hbar}}.
@@ -308,19 +309,19 @@ It is well known that the operators in this picture evolve inversely as $\mathca
 \subsection{Quantum Metrology}
 \label{sec:bg-quantum-magnetometry}
 
-We summarize important recent advances in Quantum Metrology
-Simple metrological setups allow for encoding some wanted parameter into the state of the system, thus from the readout of the final state one can infer on it.
-The estimation theory applied to the intrinsic probabilistic nature of quantum states has lead to the the formulation of Quantum Metrology.
+We summarize important recent advances in quantum metrology.
+Simple metrological setups allow for encoding some wanted parameter into the state of the system, thus from the readout of the final state one could infer it.
+The estimation theory applied to the intrinsic probabilistic nature of quantum states has lead to the the formulation of quantum metrology.
 Merging the probabilistic features of quantum mechanics and the estimation theory is not trivial.
-Nevertheless, starting from the pioneering works of Wotters, Braunstein and others back in 19XX \citep{Wotters, Braunstein}, until the works of Giovannetti et al, Paris and others roughly 20 years later \citep{Giovannetti, Paris2009}, the field of Quantum Metrology has been stabilized with solid foundations.
-Later, advanced works in Quantum Metrology appeared \citep{} together with experimental realizations \citep{} which raised the interest in this topic.
-In this section, we will highlight the most important aspects of this field and with this we will conclude this introductory chapter.
+Nevertheless, with the initial pioneering works of W. K. Wotters, and S. L. Braunstein and C. M. Caves, in 1981 and 1994 respectively \citep{Wotters1981, Braunstein1994}, until the works of V. Giovannetti et al, and M. G. Paris, roughly two decades later \citep{Giovannetti2004, Paris2009}, the field of quantum metrology was stabilized with solid foundations.
+Later, advanced works in quantum metrology appeared \citep{} together with experimental realizations \citep{} which raised the interest in this topic.
+In this section, we will highlight the most important aspects of this field and with this we will conclude this chapter for presenting the background theory on which sits the work developed by the authors.
 
-The most basic scheme for a the metrological setup in this context is the following.
-First, a state is prepared followed by the evolution in which the unknown parameter $\theta$ is imprinted into the state.
-Finally, the outgoing state is characterized by some measurement $M$ which allows to infer in the value of the parameter $\theta$.
+The most basic scheme for a metrological setup in the present context is the following.
+First, a state $\rho$ is prepared followed by a general evolution represented by a mapping $\Lambda_{\theta}$ in which the unknown parameter $\theta$ is imprinted into the state.
+Finally, the outgoing state is characterized by some measured quantity $\expect{M}$, which allows to infer in the value of the parameter $\theta$.
 The details of the evolution, the initial state and the post-characterization using $M$ or a set of different measurements, is crucial for succeed.
-Figure~\ref{} illustrates the main steps of Quantum Metrology.
+Figure~\ref{fig:bg-preparation-encoding-estimation} illustrates the main steps of quantum metrology.
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=1.2]{img/BG_preparation_encoding_estimation.pdf}
