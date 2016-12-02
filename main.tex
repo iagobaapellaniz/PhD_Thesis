@@ -149,6 +149,7 @@
 \newcommand{\coss}[1]{\ensuremath{\text{c}_{ #1 }}}
 \newcommand{\sins}[1]{\ensuremath{\text{s}_{ #1 }}}
 \newcommand{\tans}[1]{\ensuremath{\text{t}_{ #1 }}}
+\newcommanf{\abbrln}[2]{#1 & - & #2 \\}
 
 
 \def\be{\begin{equation}}
@@ -268,16 +269,16 @@ Giuseppe Vitagliano, Iagoba Apellaniz, Matthias Kleinmann, Bernd L\"ucke, Carste
 \subsection*{Abbreviations}
 \hspace{7pt}
 \begin{tabular}{l c l}
-  BEC & - & Bose-Einstein condensate \\
-  CLT & - & Central limit theorem \\
-  HL  & - & Heisenberg limit \\
-  HS  & - & Heisenberg scaling \\
-  PDF & - & Pobability distribution function \\
-  QFI & - & Quantum Fisher information \\
-  SNS & - & Shot-noise scaling \\
-  SNL & - & Shot-noise limit \\
-  SLD & - & Symmetric logarithmic derivative \\
-  SQL & - & Standard quantum limit \\
+  \abbrln{BEC}{Bose-Einstein condensate}
+  \abbrln{FI}{Fisher information}
+  \abbrln{GHZ}{Greenberger-Horne-Zeilinger}
+  \abbrln{HS}{Heisenberg scaling}
+  \abbrln{HL}{Heisenberg limit}
+  \abbrln{PDF}{Pobability distribution function}
+  \abbrln{PI}{Permutationally invariant}
+  \abbrln{QFI}{Quantum Fisher information}
+  \abbrln{SNS}{Shot-noise scaling}
+  \abbrln{SNL}{Shot-noise limit}
 \end{tabular}
 
 \makeatletter
@@ -377,8 +378,8 @@ On the other hand I also felt very comfortable at my university, the University 
 \section{Miscellaneous mathematical tools}
 \input{ap-02-miscmath.tex}
 
+\cleardoublepage
 \input{snp/nonumberSection.tex}
-
 \bibliography{biblio}
 
 \end{document}
