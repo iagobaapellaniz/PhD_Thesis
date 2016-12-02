@@ -180,14 +180,14 @@ The expression for quantum Fisher information that we use along this paper will 
 For two arbitrary operators $A$ and $B$, it is written as follows
 \be
   \label{eq:FAB}
-  \qfi[\rho,A,B]:=2\sum_{k, k'}
+  \qfif{\rho,A,B}:=2\sum_{k, k'}
   \frac{(\lambda_k-\lambda_{k'})^2}{\lambda_k+\lambda_{k'}}
   {A}_{k,k'}{B}_{k',k},
 \ee
 where the subscript for $A$ and $B$ stand for the matrix element on the eigenbasis of the initial state $\rho = \sum_k\lambda_k\ket{k}\bra{k}$.
 If the two operators are the same, the usual form of the QFI on the literature can be recovered with only two arguments \citep{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008},
 \be
-  \qfi[\rho,A,A]:=\qfi[\rho,A]=2\sum_{k, k'}
+  \qfif{\rho,A,A}:=\qfif{\rho,A}=2\sum_{k, k'}
   \frac{(\lambda_k-\lambda_{k'})^2}{\lambda_k+\lambda_{k'}}
   |{A}_{k,k'}|^2.
 \ee
@@ -195,15 +195,15 @@ We mention that in our case the operators $A$ and $B$ will commute on all cases 
 We also make use of the fact that the QFI as written as in Eq.~(\ref{eq:FAB}) is linear on the second and last arguments,
 \be
   \label{eq:qfi-linear-in-arguments}
-  \qfi[\rho, A, \textstyle{\sum}_i b_i] = \sum_i \qfi[\rho,A,b_i]
+  \qfif{\rho, A, \textstyle{\sum}_i b_i} = \sum_i \qfif{\rho,A,b_i}
 \ee
-together with $\qfi[\rho, A, B] = \qfi[\rho, B,A]$ so the statement holds.
+together with $\qfif{\rho, A, B} = \qfif{\rho, B,A}$ so the statement holds.
 
 Some more useful properties of the Eq.~(\ref{eq:FAB}).
 It can be rewritten as follows,
 \be
   \label{eq:QFI for two operators rewrited}
-  \qfi[\rho, A, B] = 4 \expect{AB}
+  \qfif{\rho, A, B} = 4 \expect{AB}
   - 8\sum_{k,k'}
   \tfrac{\lambda_k\lambda_{k'}}{\lambda_k+\lambda_{k'}}
   {A}_{k,k'}{B}_{k',k}.
@@ -212,14 +212,14 @@ This form leads to simple arguments on our derivations on following sections.
 For pure states it simplifies to,
 \be
   \label{eq:QFI_pure}
-  \qfi[\ket{\psi},A,B]=4\left(\expect{AB}_{\psi}-\expect{A}_{\psi}\expect{B}_{\psi}\right).
+  \qfif{\ket{\psi},A,B}=4\left(\expect{AB}_{\psi}-\expect{A}_{\psi}\expect{B}_{\psi}\right).
 \ee
-Notice that we recover $\qfi[\rho,A]=4(\Delta A)^2$ as can be found in the literature for single parameter estimation with pure states \citep{Paris2009,Toth2013}.
+Notice that we recover $\qfif{\rho,A}=4(\Delta A)^2$ as can be found in the literature for single parameter estimation with pure states \citep{Paris2009,Toth2013}.
 Another important feature of the qFI in Eq.~(\ref{eq:FAB}) is that it is convex on the space of the states.
 This property takes the following form,
 \be
-  \qfi[q\rho_1{+}(1{-}p)\rho_2]\leq
-  p\qfi[\rho_1]{+}(1{-}p)\qfi[\rho_2],
+  \qfif{q\rho_1{+}(1{-}p)\rho_2}\leq
+  p\qfif{\rho_1}{+}(1{-}p)\qfif{\rho_2},
 \ee
 where we omit in writing the arguments for the operators of the qFI for simplicity.
 
@@ -237,7 +237,7 @@ For the unitary dynamics we consider, the QFI for single-parameter dependence ca
 $\rho=\sum_{k} \lambda_k \ket{k}\bra{k}$, in the following way  \citep{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008},
 \be
   \label{eq:general one parameter quantum fisher information}
-  \qfi[\rho,H_1]=2\sum_{k, k'}
+  \qfif{\rho,H_1}=2\sum_{k, k'}
   \frac{(\lambda_k-\lambda_{k'})^2}{\lambda_k+\lambda_{k'}}
   |({H_1})_{k,k'}|^2.
   \ee
@@ -245,10 +245,10 @@ $\rho=\sum_{k} \lambda_k \ket{k}\bra{k}$, in the following way  \citep{Paris2009
   bound for the precision
   \be
   \label{eq:one parameter precision bound}
-  (\Delta b_1)^{-2}|_{\max} = \qfi[\rho,H_1].
+  (\Delta b_1)^{-2}|_{\max} = \qfif{\rho,H_1}.
 \ee
 Note that it is always possible to find a measurement that saturates the above precision bound.
-Here, $\qfi[\rho,H_1]$ denotes the QFI that depends, in the case of unitary transformation of the form Eq.~\eqref{eq:unitary evolution with time and gamma encoded in b_0 and b_1}, on the state $\rho$ and on the generator of the evolution, $H_1$.
+Here, $\qfif{\rho,H_1}$ denotes the QFI that depends, in the case of unitary transformation of the form Eq.~\eqref{eq:unitary evolution with time and gamma encoded in b_0 and b_1}, on the state $\rho$ and on the generator of the evolution, $H_1$.
 
 For the particular case on which the states has the form of Eqs.~(\ref{eq:separated state
 internal and external}) and (\ref{eq:cold atomic ensemble state}) the Equation~(\ref{eq:general one parameter quantum fisher information}) can be simplified in the following way, see that we have to compute the matrix elements of $H_1$ but it is already diagonal on the spatial subspace.
@@ -285,7 +285,7 @@ which for states insensitive to the homogeneous field, $[\rho, H_0]=0$, makes th
 With this, for states of the form Equations~(\ref{eq:separated-internal-and-external},\ref{eq:cold atomic ensemble state}) the following bound for the precision of the estimation of the gradient parameter $b_1$ holds,
 \be
   \label{eq:bound-for-insensitive-and-thermal-state}
-  (\Delta b_1)^{-2}|_{\max} = \sum_{n,m}^N \int d^N\bs{x}P_N(\bs{x})x_n x_m \qfi[\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}],
+  (\Delta b_1)^{-2}|_{\max} = \sum_{n,m}^N \int d^N\bs{x}P_N(\bs{x})x_n x_m \qfif{\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}},
 \ee
 where the integral results onto a two-point correlation function of the spatial state.
 
@@ -313,7 +313,7 @@ we have a matrix inequality \citep{Paris2009}.
 % where the covariance matrix elements are defined as
 % $\textbf{\cov}_{ij}[b_0,b_1]=\expect{b_ib_j}-\expect{b_i}\expect{b_j}.$
 We have the QFI matrix $\bs{\mathcal{F}}_{\text{Q}}$ on one hand, which depends on $\rho$ and the two generators $H_0$ and $H_1$, and the covariance matrix from we are only interested on the variance of the gradient parameter, $(\Delta b_1)^2$ \citep{Paris2009}.
-Just to record, $H_0$ and $H_1$ are Hermitian operators and commute with each other and thus the QFI matrix elements are computed as $\mathbfcal{F}_{ij}\equiv \qfi[\rho, H_i, H_j],$ following the definition \eqref{eq:FAB}.
+Just to record, $H_0$ and $H_1$ are Hermitian operators and commute with each other and thus the QFI matrix elements are computed as $\mathbfcal{F}_{ij}\equiv \qfif{\rho, H_i, H_j},$ following the definition \eqref{eq:FAB}.
 
 In the two-parameter estimation problem, ${\mathbfcal{F}}$ is a $2 \times 2$ matrix and the precision bound for the estimation of the gradient is the following,
 \be
@@ -329,7 +329,7 @@ In order to be able to saturate the bound the measurements for estimating the tw
 To compute the bound (\ref{eq:bound-for-insensitive-and-thermal-state}) we need to consider the matrix elements of QFI one by one.
 First of all, we compute $\mathbfcal{F}_{11}$ that without assuming anything else has the same form as Equation~(\ref{eq:bound-for-insensitive-and-thermal-state})
 \be
-  \mathbfcal{F}_{11}=\sum_{n,m}^N \int d^N\bs{x}P_N(\bs{x})x_n x_m \qfi[\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}].
+  \mathbfcal{F}_{11}=\sum_{n,m}^N \int d^N\bs{x}P_N(\bs{x})x_n x_m \qfif{\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}}.
 \ee
 Second, the most trivial matrix element is $\mathbfcal{F}_{00}$ which is a function of the internal state $\rho_{\rm s}$.
 To compute it one must notice that
@@ -343,7 +343,7 @@ To compute it one must notice that
 \ee
 And with this it is straightforward to obtain
 \be
-  \mathbfcal{F}_{00} = \qfi[\rho_{\rm s}, J_z].
+  \mathbfcal{F}_{00} = \qfif{\rho_{\rm s}, J_z}.
 \ee
 Note that this is not a function of the whole state but only of the internal $\rho_{\rm s}$ state.
 Finally, we compute both $\mathbfcal{F}_{01}$ and $\mathbfcal{F}_{10}$.
@@ -351,19 +351,19 @@ To compute this, one may notice first that both matrix elements are equal, $\mat
 Therefore we have to compute only one of them.
 The computation follows,
 \be
-  \mathbfcal{F}_{01} = \sum_{n=1}^N \int d^N\bs{x}P_N(\bs{x})x_n\qfi[\rho_{\rm s}, j_z^{(n)},J_z].
+  \mathbfcal{F}_{01} = \sum_{n=1}^N \int d^N\bs{x}P_N(\bs{x})x_n\qfif{\rho_{\rm s}, j_z^{(n)},J_z}.
 \ee
 With those results the Equation~(\ref{eq:bound-for-sensitive-and-thermal-state}) follows.
 For further details see Appendix~\ref{ap:long-calc}.
 
 For the last part of the proof, we need to show that his bound is invariant under translations as it is the Equation~(\ref{eq:bound-for-insensitive-and-thermal-state}).
-With this aim, using the linearity of the last two arguments of $\qfi[\rho, A, B]$, Eq.~(\ref{eq:qfi-linear-in-arguments}), the fact that $H_0$ remains unchanged on the Heisenberg picture and using the shifted $H_1$ operator, Eq.~(\ref{eq:shifted h1 generator}), we have that
+With this aim, using the linearity of the last two arguments of $\qfif{\rho, A, B}$, Eq.~(\ref{eq:qfi-linear-in-arguments}), the fact that $H_0$ remains unchanged on the Heisenberg picture and using the shifted $H_1$ operator, Eq.~(\ref{eq:shifted h1 generator}), we have that
 \begin{align}
-  \mathbfcal{F}_{00}(d)&=\qfi[\rho, H_0(d)] = \qfi[\rho, H_0],\\
-  \mathbfcal{F}_{01}(d)&=\qfi[\rho, H_0(d), H_1(d)]\nonumber\\
-        &= \qfi[\rho, H_0,H_1-dH_0] = \mathbfcal{F}_{01}-d\mathbfcal{F}_{00},\\
-  \mathbfcal{F}_{11}(d)&=\qfi[\rho, H_1(d), H_1(d)]\nonumber\\
-        &=\qfi[\rho, H_1-dH_0,H_1-dH_0]\nonumber\\
+  \mathbfcal{F}_{00}(d)&=\qfif{\rho, H_0(d)} = \qfif{\rho, H_0},\\
+  \mathbfcal{F}_{01}(d)&=\qfif{\rho, H_0(d), H_1(d)}\nonumber\\
+        &= \qfif{\rho, H_0,H_1-dH_0} = \mathbfcal{F}_{01}-d\mathbfcal{F}_{00},\\
+  \mathbfcal{F}_{11}(d)&=\qfif{\rho, H_1(d), H_1(d)}\nonumber\\
+        &=\qfif{\rho, H_1-dH_0,H_1-dH_0}\nonumber\\
         &=\mathbfcal{F}_{11}-2d\mathbfcal{F}_{01}+d^2\mathbfcal{F}_{00}.
 \end{align}
 Simple algebra shows that the bound for a displaced system is the same bound as is it would not be displaced,
@@ -381,8 +381,8 @@ For states of the form Equations~(\ref{eq:separated-internal-and-external},~\ref
 \be
 \label{eq:bound-for-sensitive-and-thermal-state}
 \begin{split}
-  (\Delta b_1)^{-2}\leq& \sum_{n,m}^N \int d^N\bs{x}P_n(\bs{x})x_nx_m \qfi[\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}]\\
-  &- \frac{\left(\sum_{n=1}^N\int d^N\bs{x}P_n(\bs{x})x_n \qfi[\rho_{\rm s}, j_z^{(n)},J_z]\right)^2}{\qfi[\rho_{\rm s}, J_z]}.
+  (\Delta b_1)^{-2}\leq& \sum_{n,m}^N \int d^N\bs{x}P_n(\bs{x})x_nx_m \qfif{\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}}\\
+  &- \frac{\left(\sum_{n=1}^N\int d^N\bs{x}P_n(\bs{x})x_n \qfif{\rho_{\rm s}, j_z^{(n)},J_z}\right)^2}{\qfif{\rho_{\rm s}, J_z}}.
 \end{split}
 \ee
 Despite it seems to be complicated, this equation is easily computed for the most common cases such as trapped-ions, cold atomic ensembles the like.
@@ -436,13 +436,13 @@ We are going to compute  the precision bound when the internal state is a produc
 \be
 \label{eq:result-for-chain-without-sigma}
 \begin{split}
-  (\Delta b_1)^{-2}\leq \,&\sum_{n,m}^Nnma^2\qfi[\ket{j}_y^{\otimes N}, j_z^{(n)},j_z^{(m)}]\\
-  &-\frac{\left(\sum_{n=1}^N a n \qfi[\ket{j}_y^{\otimes N}, j_z^{(n)},J_z]\right)^2}{\qfi[\ket{j}_y^{\otimes N}, J_z,J_z]}\\
+  (\Delta b_1)^{-2}\leq \,&\sum_{n,m}^Nnma^2\qfif{\ket{j}_y^{\otimes N}, j_z^{(n)},j_z^{(m)}}\\
+  &-\frac{\left(\sum_{n=1}^N a n \qfif{\ket{j}_y^{\otimes N}, j_z^{(n)},J_z}\right)^2}{\qfif{\ket{j}_y^{\otimes N}, J_z,J_z}}\\
   =\,& a^2 \left\{ \sum_{n=1}^N 2jn^2 - \frac{(\sum_{n=1}^N 2jn)^2}{2jN}\right\}\\
   =\,& 2a^2j N \frac{N^2 -1}{12},
 \end{split}
 \ee
-where we have used the $\qfi[\ket{\psi},A,B]=4(\expect{AB}-\expect{A}{}\expect{B}{})$ identity to compute the calculations.
+where we have used the $\qfif{\ket{\psi},A,B}=4(\expect{AB}-\expect{A}{}\expect{B}{})$ identity to compute the calculations.
 
 Despite that Equation~(\ref{eq:result-for-chain-without-sigma}) is a third order function of the particle number $N$ and that it seems to overcome the ultimate limit HL, on should notice that the length of the chain increases as we introduce more particles into the system.
 To solve this one can normalize the distance between the atoms or simply use some measure of spatial width of the complete system.
@@ -484,7 +484,7 @@ With this we are able to compute the single-point and two-point correlation func
 The state $\ket{\psi}$ is insensitive to the homogeneous field so we have that
 \be
 \begin{split}
-  (\Delta b_1)^{-2}|_{\max} &= \sum_{n,m}^N (-1)^{n+m} a^2 \qfi[\ket{\psi}, j_z^{(n)}, j_z^{(m)}]\\
+  (\Delta b_1)^{-2}|_{\max} &= \sum_{n,m}^N (-1)^{n+m} a^2 \qfif{\ket{\psi}, j_z^{(n)}, j_z^{(m)}}\\
   &= a^2\sum_{n,m}^N (-1)^{n+m} 4 (-1)^{n+m} j^2\\
   &= 4 a^2 j^2 N^2,
 \end{split}
@@ -509,7 +509,7 @@ From here it is easy to show that the state maximising such variance is the foll
   \ket{\psi} = \frac{1}{\sqrt{2}}(\ket{0\cdots 0}_{\text{od}}\otimes\ket{1\cdots 1}_{\text{ev}}+\ket{1\cdots 1}_{\text{od}}\otimes\ket{0\cdots 0}_{\text{ev}}),
 \ee
 which is equivalent to the state in Equation~(\ref{eq:best-state}).
-This proofs that we have use the right state, and with this we can compute the QFI as in the literature as $\qfi[\ket{\psi}, H_1] = 4(\Delta H_1)^2 = 4a^2j^2N^2$.
+This proofs that we have use the right state, and with this we can compute the QFI as in the literature as $\qfif{\ket{\psi}, H_1} = 4(\Delta H_1)^2 = 4a^2j^2N^2$.
 With this we finally conclude the proof.
 
 The maximally entangled internal state that maximized the QFI too is
@@ -608,23 +608,23 @@ An interesting property of the covariance of this type is that it is a value bou
 So it cannot contribute for a better scaling on the precision than since it scales as much as $\sigma^2$ with the particle number.
 Notice that the lower bound scales worse.
 
-First of all we show an important property of states insensitive to the homogeneous field and we do so using the fact that the QFI for the homogeneous field generator, i.e, $J_z$, on those states is zero, $\qfi[\rho,J_z]=0$.
+First of all we show an important property of states insensitive to the homogeneous field and we do so using the fact that the QFI for the homogeneous field generator, i.e, $J_z$, on those states is zero, $\qfif{\rho,J_z}=0$.
 The identity follows,
 \be
 \begin{split}
   \label{eq:qfi-identity-insensitive}
-  \qfi[\rho, J_z] & = 0\\
-  \sum_{n,m}^N \qfi[\rho,j_z^{(n)},j_z^{(m)}] & = 0\\
-  \sum_{n=1}^N \qfi[\rho, j_z^{(n)}] & = -\sum_{n\neq m}^N \qfi[\rho,j_z^{(n)},j_z^{(m)}]
+  \qfif{\rho, J_z} & = 0\\
+  \sum_{n,m}^N \qfif{\rho,j_z^{(n)},j_z^{(m)}} & = 0\\
+  \sum_{n=1}^N \qfif{\rho, j_z^{(n)}} & = -\sum_{n\neq m}^N \qfif{\rho,j_z^{(n)},j_z^{(m)}}
 \end{split}
 \ee
-where we use the linearity on the second and third arguments of $\qfi[\rho, \cdot, \cdot]$ to jump to the second line and subsequently the last line follows.
+where we use the linearity on the second and third arguments of $\qfif{\rho, \cdot, \cdot}$ to jump to the second line and subsequently the last line follows.
 
 From the definition of the QFI for states insensitive to the homogeneous field, Eq.~(\ref{eq:bound-for-insensitive-and-thermal-state}), we compute the bound for single ensembles in the following way,
 \be
 \begin{split}
-  (\Delta b_1)^{-2}|_{\max} &= \sum_{n,m}^N \int d^N\bs{x}P_N(\bs{x})x_n x_m \qfi[\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}]\\
-  &=\sum_{n=1}^N \sigma^2 \qfi[\rho,j_z^{(n)}] + \sum_{n\neq m}^N \eta \qfi[\rho,j_z^{(n)},j_z^{(m)}].
+  (\Delta b_1)^{-2}|_{\max} &= \sum_{n,m}^N \int d^N\bs{x}P_N(\bs{x})x_n x_m \qfif{\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}}\\
+  &=\sum_{n=1}^N \sigma^2 \qfif{\rho,j_z^{(n)}} + \sum_{n\neq m}^N \eta \qfif{\rho,j_z^{(n)},j_z^{(m)}}.
 \end{split}
 \ee
 Together with Equation~(\ref{eq:qfi-identity-insensitive}) the Observation~\ref{obs:bound-insensitive-single-ensemble} follows.
@@ -647,12 +647,12 @@ First of all, notice that the second term appearing on Equation~(\ref{eq:bound-f
 So, we only have to compute the first term of the Equation~(\ref{eq:bound-for-sensitive-and-thermal-state}),
 \be
 \begin{split}
-  (\Delta b_1)^{-2}\leq& \sum_{n,m}^N \int d^N\bs{x}P_n(\bs{x})x_nx_m \qfi[\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}]\\
-  =& \sum_{n=1}^N \sigma^2 \qfi[\rho,j_z^{(n)}] + \sum_{n\neq m}^N \eta \qfi[\rho,j_z^{(n)},j_z^{(m)}]\\
-  =&(\sigma^2- \eta)\sum_{n=1}^N  \qfi[\rho,j_z^{(n)}] + \eta\sum_{n, m}^N  \qfi[\rho,j_z^{(n)},j_z^{(m)}],
+  (\Delta b_1)^{-2}\leq& \sum_{n,m}^N \int d^N\bs{x}P_n(\bs{x})x_nx_m \qfif{\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}}\\
+  =& \sum_{n=1}^N \sigma^2 \qfif{\rho,j_z^{(n)}} + \sum_{n\neq m}^N \eta \qfif{\rho,j_z^{(n)},j_z^{(m)}}\\
+  =&(\sigma^2- \eta)\sum_{n=1}^N  \qfif{\rho,j_z^{(n)}} + \eta\sum_{n, m}^N  \qfif{\rho,j_z^{(n)},j_z^{(m)}},
 \end{split}
 \ee
-where we add to the last term $\eta\sum_{n=1}^N \qfi[\rho,j_z^{(n)}]$ and subtract it from the first term.
+where we add to the last term $\eta\sum_{n=1}^N \qfif{\rho,j_z^{(n)}}$ and subtract it from the first term.
 From this, using the fact that the QFI is linear on the second and third arguments again, the proof holds.
 % First, we have that for states that are sensitive to homogeneous fields,
 % we have to compute the QFI matrix elements,
@@ -670,13 +670,13 @@ From this, using the fact that the QFI is linear on the second and third argumen
 % \bea
 % \label{eq:precision bound for SH PI as fisher of H1 H1}
 % &&{\hskip-0.5cm}(\Delta b_1)^{-2}\leq F_{11}=\nonumber\\
-% &&=\sum_{n,m}^{N}\qfi[\rho_{\rm s},j_z^{(n)},j_z^{(m)}]
+% &&=\sum_{n,m}^{N}\qfif{\rho_{\rm s},j_z^{(n)},j_z^{(m)}}
 % \int d^N\bs{x}\, P_N(\bs{x})x_nx_m.
 % \eea
 % Note that the precision bound unveiled above is the same as in the case of the
 % precision bound for states that are insensitive to homogeneous given in
 % Eq.~\eqref{eq:one parameter precision bound}, but in this case
-% $\qfi[\rho_{\rm s},J_z]$ is different from zero.
+% $\qfif{\rho_{\rm s},J_z}$ is different from zero.
 %
 % Next, we will express the right-hand side of
 % Eq.~\eqref{eq:precision bound for SH PI as fisher of H1 H1}
@@ -696,16 +696,16 @@ From this, using the fact that the QFI is linear on the second and third argumen
 % F_{11}
 % =\sigma^2
 % \sum_{n=1}^N
-% \qfi[\rho_{\rm s},j_z^{(n)}]
+% \qfif{\rho_{\rm s},j_z^{(n)}}
 % + \eta
 % \sum_{n \neq m}^N
-% \qfi[\rho_{\rm s},j_z^{(n)},j_z^{(m)}].
+% \qfif{\rho_{\rm s},j_z^{(n)},j_z^{(m)}}.
 % %=N (\sigma^2-\eta)\qfi[\rho_{\rm
-% %s},j_z^{(1)},j_z^{(1)}]+\eta \qfi[\rho_{\rm s},J_z,J_z].
+% %s},j_z^{(1)},j_z^{(1)}]+\eta \qfif{\rho_{\rm s},J_z,J_z}.
 % \ee
 % After using the facts that the following identity holds for any state,
-% $\qfi[\rho_{\rm s}, J_z]=N\qfi[\rho_{\rm
-% s},j_z^{(1)}]+N(N-1)\qfi[\rho_{\rm s},j_z^{(1)},j_z^{(2)}]$,
+% $\qfif{\rho_{\rm s}, J_z}=N\qfi[\rho_{\rm
+% s},j_z^{(1)}]+N(N-1)\qfif{\rho_{\rm s},j_z^{(1)},j_z^{(2)}}$,
 % and that the spin-state is PI we obtain the proof of the observation.
 
 For states sensitive to homogeneous fields,
@@ -713,7 +713,7 @@ the precision of estimating the gradient is bounded from above as
 \be
 \label{eq:precision bound for single-cloud systems SH}
 (\Delta b_1)^{-2}\leq (\sigma^2-\eta) \sum_{n=1}^N \qfi[\rho_{\rm
-s},j_z^{(n)}]+\eta \qfi[\rho_{\rm s},J_z].
+s},j_z^{(n)}]+\eta \qfif{\rho_{\rm s},J_z}.
 \ee
 The second term on the right-hand side of
 Eq.~(\ref{eq:precision bound for single-cloud systems SH})
@@ -744,7 +744,7 @@ Note that even if the first term cannot overcome the SL, in the second term the 
 % but without overcoming the shot-noise limit.
 % On the other hand, for states sensitive to homogeneous fields, we have that
 % the greatest bound is reached when the QFI for the homogeneous parameter,
-% $\qfi[\rho_{\rm s},J_z,J_z]$, is maximized and when the covariance is
+% $\qfif{\rho_{\rm s},J_z,J_z}$, is maximized and when the covariance is
 % maximized too.
 % In this case the precision bound can describe a Heisenberg limit like scaling.
 % Nevertheless, one should look for compatible measurements of the homogeneous
@@ -835,7 +835,7 @@ following for the second term on Eq.~(\ref{eq:QFI for two operators rewrited}),
 It follows that the QFI for any singlet is indeed simply
 \be
 \label{eq:qfi to trace in the case of singlet}
-\qfi[\rho_{\rm s}, j_z^{(n)}]
+\qfif{\rho_{\rm s}, j_z^{(n)}}
 =4\tr({\rho_{\rm s} (j_z^{(n)})^2}).
 \ee
 
@@ -858,7 +858,7 @@ Hence, the expectation value of $(j_z^{(n)})^2$ on the singlet is
 \ee
 for all the singlets.
 Inserting this into Eq.~\eqref{eq:qfi to trace in the case of singlet}, we
-obtain $\qfi[\rho_{\rm s}, j_z^{(n)}]=\tfrac{4j(j+1)}{3}$; and by
+obtain $\qfif{\rho_{\rm s}, j_z^{(n)}}=\tfrac{4j(j+1)}{3}$; and by
 Eq.~\eqref{eq:precision bound for single-cloud systems IH}
 the statement is proved.
 
@@ -905,7 +905,7 @@ For the gradient measurement as for the measurement of the homogeneous field, th
 Here we chose as before the totally polarized state along the $y$-axis which is written as $\ket{j}_y^{\otimes N}$.
 Notice that this state is a state sensitive to the homogeneous field, hence, we must use the Equation~(\ref{eq:precision bound for single-cloud systems SH}) to compute the bound.
 
-For the pure product states we have that $\qfi[\ket{\psi}, A] = 4(\Delta A)^2$.
+For the pure product states we have that $\qfif{\ket{\psi}, A} = 4(\Delta A)^2$.
 Together with,
 $(\Delta j_z^{(n)})^2=j/2$ and $(\Delta J_z)^2=Nj/2$, when the polarisation is
 perpendicular to the $z$-direction, the precision will be computed straightforward from Equation~(\ref{eq:precision bound for single-cloud systems SH}).
@@ -936,10 +936,10 @@ It will turn out that for $j>\frac{1}{2},$ it is possible
 to achieve a precision higher than with the fully polarised state.
 We use the Equation~(\ref{eq:system-at-origin-single-ensemble}) and substituting it onto the the low-level definitions of the precision bounds for the gradient magnetometry, Eqs.~(\ref{eq:bound-for-insensitive-and-thermal-state}, \ref{eq:bound-for-sensitive-and-thermal-state}).
 We see that if the state is sensitive to the homogeneous field only affects on the implications of the bound, one can be saturated for sure and on the other case it depends on the measurements compatibility as we discussed before.
-What we have is that the bound is the same $\qfi[\rho, H_1]$ for both cases.
+What we have is that the bound is the same $\qfif{\rho, H_1}$ for both cases.
 Thus, it is easy to argue that the precision bound is a convex function on the states, even when the external state $\rho_{\rm x}$ is fixed.
-Therefore, the separable inner state that maximizes the precision must be a pure product state that maximises all possible $\qfi[\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}]$.%, see Fig.~\ref{fig:convexity in separable states of qfi}.
-For pure product states we have first that $\qfi[\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}]$ is four times the correlation between the single particle spin operators, which using the well known properties of the pure product states is  zero when $n \neq m$.
+Therefore, the separable inner state that maximizes the precision must be a pure product state that maximises all possible $\qfif{\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}}$.%, see Fig.~\ref{fig:convexity in separable states of qfi}.
+For pure product states we have first that $\qfif{\rho_{\rm s}, j_z^{(n)}, j_z^{(m)}}$ is four times the correlation between the single particle spin operators, which using the well known properties of the pure product states is  zero when $n \neq m$.
 Finally, we have to maximise each $4(\Delta j_z^{(n)})^2$.
 
 % \begin{figure}[htp]
@@ -1022,7 +1022,7 @@ In the large $N$ limit, this gives
 \lim_{N \to \infty} \expect{(j_z^{(n)})^2}=\tfrac{j}{2}.
 \ee
 From Eq.~\eqref{eq:precision bound for single-cloud
-systems IH} we can conclude that $\qfi[\rho_{\rm s},j_z^{(1)}]=2j$,
+systems IH} we can conclude that $\qfif{\rho_{\rm s},j_z^{(1)}}=2j$,
 hence the proof for homogeneous insensitive $\ket{Nj,0}$ holds.
 
 Now we have only to apply a mapping between the $x$- and $z$-axis to obtain the respective second moments for $\ket{Nj,0}_{x}$.
