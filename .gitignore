@@ -18,3 +18,5 @@ ppr/*
 *equations.pdf
 *equations.tex
 *generate.sh
+*.bib.bak
+*.bib.sav
