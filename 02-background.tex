@@ -5,49 +5,46 @@
 \quotes{Roger J. Barlow}{In the real world, doing real experiments, statistics began to matter}
 
 \vspace{0pt}
-\lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} this chapter we will study the basics of quantum metrology, which stands for the study of metrology enhanced by quantum phenomena.
-First of all, metrology, as the science of measuring, has played an essential role for the development of science and technology.
-Metrology studies several aspects of the estimation process, for example, which strategy to follow in order to improve the precision or which is the bound for it.
+\lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} this chapter, we will study the basics of quantum metrology, which stands for the study of metrology enhanced by quantum phenomena.
+First of all, metrology, as the science of measuring, has played an essential role in the development of science and technology.
+Metrology studies several aspects of the estimation process, for example, which strategy to follow in order to improve the precision of the estimation.
 Metrology also covers all intermediate processes, from the design aspects of a precise measuring device, to the most basic mathematical concepts that arise from the formulation of the different problems, which lead at the end to a more complete picture of what metrology is.
 
-As a brief story of quantum metrology, let us say that with the discovery of quantum theory and the subsequent development of quantum mechanics, new opportunities emerged for advances in metrology in the early decades of the twentieth century.
+Historically, with the discovery of quantum theory and the subsequent development of quantum mechanics, new opportunities emerged for advances in metrology in the early decades of the twentieth century.
 Later in the last decades of the twentieth century, together with the arrival of concepts like \emph{qubit} and \emph{quantum cryptography}, quantum theory embraced the so-called quantum information theory, which merges the notions of theory of information and computer science with quantum mechanics.
 Pushed by the developments of quantum technologies, quantum information attracted much attention from the scientific community.
 Moreover, those emerging fields rapidly became into very interesting interdisciplinary playgrounds of science with many scientists as well as resources involved.
 
-At this point, we want to mention that the role of the so-called entanglement, an exclusive feature of quantum mechanics which cannot be described using classical probabilistic theories, is essential in this context.
-Said this, the entanglement also is at the center of the theory of quantum metrology.
-Throughout the text we will focus mainly on the achievable precision for different systems and schemes.
+At this point, we want to mention that the role of entanglement, an exclusive feature of quantum mechanics which cannot be described using classical probabilistic theories, is essential in this context.
+Said this, entanglement is also at the center of the theory of quantum metrology.
+Throughout the thesis we will focus mainly on the achievable precision for different systems and schemes.
 
-On the other hand, a very important field of science must be highlighted by its own merits.
-We are talking about statistics, without which many descriptions of the actual and past physical findings would lack of the rigorous interpretation needed.
+On the other hand, another very important field of science must be mentioned.
+We are talking about statistics, without which many descriptions of the actual and past physical findings would lack the rigorous interpretation needed.
 It basically helps to analyze raw data to make it readable from the human perspective.
 
 This chapter is organized as follows.
-In Section~\ref{sec:bg-statistics-and-stimation}, we introduce the basic concepts of statistics and estimation theories at the same time we go deeper in the concepts will arise on this thesis.
+In Section~\ref{sec:bg-statistics-and-stimation}, we introduce the basic concepts of statistics and estimation theory at the same time we go deeper in the concepts invoked in this thesis.
 In Section~\ref{sec:bg-quantum-mechanics-for-metrology}, we present the necessary tools of quantum mechanics used throughout the text.
-Finally in Section~\ref{sec:bg-quantum-magnetometry}, we arrive at the main set of tools used in the quantum metrology framework and by extension in the present work.
+Finally in Section~\ref{sec:bg-quantum-metrology}, we arrive at the main set of tools used in the quantum metrology framework and by extension in the present work.
 
 \subsection{Background on statistics and the theory of estimation}
 \label{sec:bg-statistics-and-stimation}
 
 In this section, we will enumerate the basic concepts of statistics as well as the estimation process.
-As we said, the main mathematical tools used by metrology science belong to statistics.
-Moreover, we are especially interested in estimation theory.
-The statistics main characteristic is that it makes the raw data under consideration comprehensible from the human perspective.
-The data can be anything, from a set of different heights of a, let us say, basketball team, to the outcomes of a coin toss, or even the wavelength of photons coming out of some radioactive sample.
+As we said, the main mathematical tools used by metrology belong to statistics.
+Moreover, we are especially interested in estimation theory which shows how to properly estimate some quantity based on some data sample.
+The data can be from a set of different heights of a, let us say, basketball team, to the outcomes of a coin toss, or even the wavelength of photons coming out of some radioactive sample.
 The aim of this section is to give the reader sufficient material to follow this thesis and make it comprehensible since the beginning\footnote{
-For a more detailed material, check statistics book as well as mathematics book for scientist and engineers \citep{Riley2006, Barlow1989}}.
+For a more detailed material, see Refs.~\citep{Riley2006, Barlow1989}}.
 
 \subsubsection{Probability, data samples, average and variance}
 
 The probability indicates the relative chance of an event to happen.
 For instance, if there is a box with ten red balls and five blue balls, considering that the balls of the same color are indistinguishable and that we extract one randomly, we have $\frac{5}{10+5}=\frac{1}{3}$ of probability to obtain a blue ball and $\frac{2}{3}$ to obtain a red ball.
-The reader may notice many properties a probability should have, such as that the probability of any event to happen is always one or that a probability is always given by a number in between zero and one.
-For more details, there are many interesting textbooks or chapters of some textbook about Probability Theory which one could follow if interested.
-The following References~\citep{Riley2006, Barlow1989} are some of those books.
+The reader may notice many properties a probability should have, such as that the probability of any event to happen is always given by a number in between zero and one.
 
-When someone has some data sample at hand, it might come from diverse sources and might be represented using multiple forms such as numbers or words (for instance, a table of names of people).
+When someone has a data sample at hand, it might come from diverse sources and might be represented using multiple forms such as numbers or words (for instance, a table of names of people).
 The first thing one tries to accomplish is to analyze the data to extract the relevant properties from it.
 A data sample always come from a population sample, i.e., the data sample might not be complete (one could lose some in the process, or the population might be huge in comparison with what one can handle), or might carry some error (a measuring device always has an error when estimating a continuous magnitude, e.g., the height of people), or both at the same time.
 Hence, the data sample comes attached with a probability for each data element.
@@ -56,8 +53,8 @@ In the subsequent paragraphs, we will describe these relations between the data 
 First of all, we will explain our notation which follows mainly the one used in Reference~\citep{Riley2006}.
 A probability function gives the probability of an event $x$ to happen when measuring some random variable $X$, and it is denoted by $\prob(X=x)$.
 Second, due to the random nature of the measurements, the $N$ elements of a data sample are considered outputs of $N$ different random variables with their corresponding $N$ values $\{X_i=x_i\}_{i=1}^N$, or $\bs{X}=\bs{x}$ for short.
-The joint probability of those random variables is in general non-separable.
-This is due to the fact that the data sample elements could depend on the rest of outcomes or some other more complex relation that makes the most general case to be non-separable from the probabilistic point of view.
+The joint probability of those random variables is in general not separable.
+This is due to the fact that the data sample elements could depend on the rest of outcomes or some other more complex relation that makes the most general case to be not separable from the probabilistic point of view.
 Therefore we define the probability distribution function (PDF) as an $N$ variable function
 \be
   \prob(\bs{X}=\bs{x}) \equiv \prob(X_1=x_1,X_2=x_2,\dots,X_N=x_N).
@@ -71,7 +68,7 @@ which is the case in many relevant situations.
 
 When some indirect property of the system is defined as a function that depends on the measured random variables, the result is also a new random variable with another assigned PDF.
 For example, we measure the position of a body at some moment.
-If the system was at rest on the origin when $t=0$ and assuming that the acceleration is constant, then from the measured final position one could infer on the value of the acceleration by using $A=2X/t^2$, where $X$ denotes the final position at instant $t$ and $A$ the acceleration.
+If the system was at rest at the origin when $t=0$ and assuming that the acceleration is constant, then from the measured final position one could infer the value of the acceleration by using $A=2X/t^2$, where $X$ denotes the final position at instant $t$ and $A$ the acceleration.
 If $X$ is a random variable, which is the general case when measuring the position of some physical system, then the probability assigned for $A$ is computed by
 \be
   \prob(A=a) = \left.\frac{\text{d}X}{\text{d}A}\right|_{A=a}\prob(X=x)=\frac{2}{t^2}\prob(X=x).
@@ -83,32 +80,33 @@ In general, for the multiple random variable, we must require the following iden
 for any set of random variables.
 This leads to some interesting formulas we will discuss later.
 
-We now stick to the simplest case on which the data is a collection of values of the same random variable describing the same physical one-dimensional data population.
-Moreover, if the probabilities are independent to each other, the PDF takes the form of Eq.~\eqref{eq:bg-separable-likelyhood}.
+We now stick to the simplest case in which the data is a collection of values of the same random variable describing the same physical one-dimensional data population.
+Moreover, if the probabilities are independent from each other, the PDF takes the form of Eq.~\eqref{eq:bg-separable-likelyhood}.
 Some definitions reasonable to mention in this thesis arise for those kind of data samples: the average, variance, moments and central moments.
 The arithmetic average (there are other types of average one can find in the textbooks) is computed by
 \be
   \overline{x}=\frac{1}{N}\sum x_i.
 \ee
-The variance is related with the spread of the data and computed by
+The variance is related to the spread of the data and computed by
 \be
   \sigma^2=\frac{1}{N}\sum (x_i-\overline{x})^2,
 \ee
 where $\sigma$ is the standard deviation.
 Different moments are computed by $\overline{x^r}=\frac{1}{N}\sum x_i^r$ while central moments, i.e., statistical moments that are invariant under the translation of the system, are of the form of $c_r=\frac{1}{N}\sum (x_i-\overline{x})^r$.
-Notice that the variance is the second central moment of the data samples.
+Note that the variance is the second central moment of the data samples.
 For completeness, when each element of the data consists of more than a single number, e.g., $(x_i,y_i)$ where $x_i$ could be the velocity and $y_i$ the acceleration in a experiment to estimate the friction caused by a fluid, the co-variance between two data kinds is obtained by
 \be
   V_{X,Y} = \frac{1}{N}\sum_{i=1}^N (x_i-\overline{x})(y_i-\overline{y}).
 \ee
-Notice that we grouped by pairs the elements of the data sample while kept distinctions between both kinds $X$ and $Y$.
+Note that we grouped the elements of the data sample into pairs while kept distinctions between both kinds $X$ and $Y$.
 
-Those functions also apply to the probability distribution functions.
-While these last ones may be unknown functions for us, as soon as we collect all the possible data or we are in the large number regime the variances of the data sample and of the data population, the means, the co-variances and so on so forth, they must coincide.
 We will try to keep this distinction between data sample and data population as clear as possible.
-In general, the mean values of any function $g(x)$ over the data sample are denoted with a bar over a lowercase variable, e.g., $\overline{x^r}$ for the $r$-th moment over the data sample, while the mean values of any function applied to the data population $g(X)$ is denoted following some textbooks by $\text{E}[g(X)]$.
-One clearly may distinguish two cases for the later definition. While the data sample is always constituted by discrete data elements, the data population can be described by a PDF for discrete values or continuous ones.
-For completeness here are the two definitions for the mean value of a function of the random variables
+The data population is represented in most cases by the probability distribution function.
+In general, the mean values of any function $g(x)$ over the data sample are denoted with a bar over a lowercase variable, e.g., $\overline{x^r}$ for the $r$-th moment over the data sample or $\overline{g(x)}$ for the average of $g(x)$ itself.
+On the other hand, the mean values of any function applied to the data population $g(X)$ is denoted following some textbooks by $\text{E}[g(X)]$, e.g., the $r$-th moment over the data population is $\text{E}[X^r]$.
+One clearly may distinguish two cases when we talk about data populations.
+While the data sample is always consist of discrete data elements, the data population can be represented by a PDF for discrete values or it can be represented by a PDF for values that can take any real number.
+For completeness, here are expressed the two definitions for the mean value over the data population, i.e., represented by a PDF, of a function $g(\bs{X})$ by
 \be
   \label{eq:bg-expectation-value-of-any}
   \text{E}[g(\bs{X})] = \lcor
@@ -125,31 +123,32 @@ At this point, one more straight forward definition needs our attention, the var
 \subsubsection{Estimators and Fisher information}
 \label{sec:bg-estimators}
 
-Let us suppose that the data sample has encoded some wanted parameters $\bs{a}\equiv(a_1,a_2,\dots)$.
-The underlying probability, in general also unknown, may be conditioned by the real values of the wanted parameters $\bs{a}$.
+Let us suppose that the data sample has encoded some desired parameters $\bs{a}\equiv(a_1,a_2,\dots)$.
+The underlying probability, in general also unknown, may be conditioned by the real values of the parameters $\bs{a}$.
 The probability of the data sample is therefore written as
 \be
   \prob(\bs{X}=\bs{x}|\bs{a}),
 \ee
 where "$|\bs{a}$" indicates its dependency on these parameters.
-At this point, notice that an estimate of the the wanted parameter based on the data sample must have associated a PDF.
-Hence as mentioned before, an estimator of $a$, one of the unknown parameters, is denoted by $\hat{a}$ and the PDF associated to it is
+At this point, note that an estimate of one of the desired parameters must be based on the data sample elements.
+A function of this type is called the \emph{estimator} and it is connected with the PDF of the data population.
+Hence as mentioned before, an estimator of $a$, one of the unknown parameters, is denoted by $\hat{a}$ and the PDF associated to it is computed from the PDF of the data population as
 \be
   \prob(\hat{a}|\bs{a})\,\text{d}\hat{a} = \prob(\bs{x}|\bs{a})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N.
 \ee
-For short, we have omitted on writing $\bs{X}$, thus the conditional joint probability of $N$ random variables is written simply as $\prob(\bs{x}|\bs{a})$.
+For short, we have omitted writing "$\bs{X}=$", thus the conditional joint probability of $N$ random variables $\bs{X}$ is written simply as $\prob(\bs{x}|\bs{a})$.
 
 As we said, an estimator is defined to be a function of the data sample.
-For example, one of such estimators is the estimator of the mean value of the data population, in general unknown.
+For example, one of such estimators is the estimator of the mean value of the population, in general unknown.
 The mean value of the data population, which in general we do not have access to, is denoted usually by $\mu$.
-Notice that $\mu$ is in general different from the mean value of the data sample $\overline{x}$.
-A valid estimator for the population mean value would be the mean itself of the data sample, i.e., $\hat{\mu}=\overline{x}$.
+Note that $\mu$ is in general different from the mean value of the data sample $\overline{x}$.
+A valid estimator for the mean value $\mu$ would be the mean itself of the data sample, i.e., $\hat{\mu}=\overline{x}$.
 
-An important notion of an estimator is its \emph{efficiency}, i.e., whether it has smaller variance than another another estimator.
-The more efficient estimator the smaller variance of it.
-Remember than an estimator is a random variable so it must have a variance that comes from the data population, i.e., from $\prob(\hat{a}|\bs{a})$ in this case.
+An important notion of an estimator is its \emph{efficiency}.
+The smaller the variance of the estimator the more efficient it is.
+Remember than an estimator is considered a random variable so it must have a variance when our knowledge about the population is incomplete, i.e., when we estimate it from the data sample.
 
-Focusing into what it is more interesting for the comprehension of this thesis, an estimator of any kind has a theoretical lower bound for its variance.
+Focusing into what it is more interesting for of this thesis, an estimator of any kind has a theoretical lower bound for its variance.
 For the proof of the previous statement, which we will compute for continuous random variables without losing of generality, we start with the normalization formula of a given PDF
 \be
   \int \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = 1.
@@ -161,16 +160,17 @@ Next, we compute the partial derivative over $a$, one of any of the unknown para
 \ee
 where for the second equality we used the identity for logarithmic derivatives.
 From Eq.~\eqref{eq:bg-expectation-value-of-any}, it turns out that the Eq.~\eqref{eq:bg-expectation-value-of-logarithm} is the expectation value of $\partial_a(\ln\prob)$.
-Finally if we have an unbiased estimator, for which the true value $a$ coincides with the expectation value over the data population of the estimator $\text{E}[\hat{a}]$, its partial differentiation over $a$ must be equal to one,
-\begin{align}
-  \partial_a\text{E}[\hat{a}] &= \partial_a a = 1, \\
+Finally, if we have an \emph{unbiased} estimator, i.e., an estimator for which the expectation value $\text{E}[\hat{a}]$ coincides with true value $a$ of the unknown parameter, the partial differentiation of $\text{E}[\hat{a}]$ over $a$ must be equal to one.
+Therefore, we apply similar identities as in Eq.~\eqref{eq:bg-expectation-value-of-logarithm} to arrive at
+\be
   \label{eq:bg-expectation-of-estimator-derivated}
   \begin{split}
-    1 &= \partial_a \int \hat{a} \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \\
-      &=  \int \hat{a} \partial_a\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} =  \int \hat{a} \partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x},
+    \partial_a\text{E}[\hat{a}] &= \partial_a a
+    = \partial_a \int \hat{a} \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \\
+    &=  \int \hat{a} \partial_a\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} =  \int \hat{a} \partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x} = 1,
   \end{split}
-\end{align}
-where we apply the definition of the expectation value of the estimator $\hat{a}$ for continuous variables, we noticed in the third equality that the estimator is not a function of $a$ and finally we apply similar identities as in Eq.~\eqref{eq:bg-expectation-value-of-logarithm}.
+\ee
+where we have used the definition of the expectation value for continuous variables Eq.~\eqref{eq:bg-expectation-value-of-any} and we use the fact that the estimator is not a function of the parameter $a$.
 
 At this point, we invoke the Schwartz inequality for two real multidimensional functions $g(\bs{x})$ and $h(\bs{x})$ such that $(\int g h \,\text{d}^N\bs{x})^2\leq (\int g^2 \,\text{d}^N\bs{x}) (\int h^2 \,\text{d}^N\bs{x})$.
 With this, we can follow step by step the following recipe to obtain a lower bound for the variance of a general estimator.
@@ -193,13 +193,13 @@ which is also known as the Cram\'er-Rao bound or the Fisher inequality.
 The denominator on the right hand-side is called generally the Fisher information (FI) or simply information.
 
 With this review of the most interesting properties of "classical" metrology, from the point of view of this thesis, we conclude this section.
-In the next section, we will record some properties of the quantum mechanics and then we will follow with another section which presents the basis of quantum metrology.
+In the next section, we will discuss some properties of the quantum mechanics and then we will follow with another section which presents the basis of quantum metrology.
 
 \subsection{Quantum Mechanics from metrology perspective}
 \label{sec:bg-quantum-mechanics-for-metrology}
 
 The ubiquitous probabilistic nature of quantum mechanics makes us to work with probabilities on a regular basis.
-Moreover, if one studies fields connected with experiments or some short of physical realizations, this probabilistic nature of quantum mechanics becomes more visible.
+Moreover, if one studies fields connected to experiments or some short of physical realizations, this probabilistic nature of quantum mechanics becomes even more visible.
 On the other hand, exotic features such as entanglement arise from Quantum Mechanics, which is directly connected with the probabilistic notions explained before.
 The present section is intended to describe quantum systems from the point of view of metrology.
 
@@ -223,18 +223,18 @@ The state, $\rho$, has the following properties:
 
 The composite system of $N$ different parties live in the Hilbert space $\mathcal{H} = \mathcal{H}^{(1)}\otimes\mathcal{H}^{(2)}\otimes\cdots\otimes\mathcal{H}^{(N)}$ or $\mathcal{H} = \bigotimes_{i=1}^N\mathcal{H}^{(i)}$ for short, where $\otimes$ stands for tensor product.
 For instance, this composite Hilbert space could be used to represent a many-particle system, in this case $N$ particles.
-A \emph{separable} state in this Hilbert space can be written by
+A \emph{separable} state in this Hilbert space can be written as
 \be
   \label{eq:bg-separable-state-definition}
   \rho_{\text{sep}} = \sum_{i}p_i\rho_i^{(1)}\otimes\rho_i^{(2)}\otimes\cdots\otimes\rho_i^{(N)},
 \ee
-where $p_i$ are convex weights that sum to one and are equal or bigger than zero.
+where $p_i$ are convex weights that add up to one and are equal to or bigger than zero.
 If a state cannot be written like Eq.~\eqref{eq:bg-separable-state-definition}, the state is said to be \emph{entangled}.
 We mention it as a formal description of the entanglement \citep{Guehne2009, Luis2004}.
-One may notice at this moment, that relaxing the requirements of Eq.~\eqref{eq:bg-separable-state-definition}, one can lead to different classifications of the states.
+One may note at this moment, that relaxing the requirements of Eq.~\eqref{eq:bg-separable-state-definition}, one can lead to different classifications of the states.
 Concepts like genuine multipartite entanglement, $k$-producible states, or entanglement depth, among others, arose from weaker constraints than Eq.~\eqref{eq:bg-separable-state-definition} \citep{Guehne2009, Luis2004}.
 
-It is important to remark one of such classifications in order to characterize the different levels or multipartite entanglement followed in this work.
+It is important to describe one of such classifications in order to characterize the different levels or multipartite entanglement followed in this work.
 We call a state $k$-producible, if it \emph{can} be written as a mixture of the tensor product of different multipartite states with at most $k$ parties in each,
 \be
   \label{eq:bg-k-producible-estate}
@@ -256,92 +256,90 @@ Later on, these concepts of entanglement and entanglement depth will arise natur
 
 Besides those concepts, we present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
 Again these definitions allow us to introduce much of the notation used on this book.
-For a single party with discrete $d$ levels, and therefore the spin-number $s=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
+For a single party with discrete $d$ levels, and therefore with a spin $j=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
 \be
   j_l^{(n)}\ket{m}_l^{(n)} = m \ket{m}_l^{(n)}
 \ee
-for $m=-s,\dots,+s$, where $l=x,y,z$.
-It is usual to omit the subscript of $\ket{m}_l^{(n)}$ when $l=z$ because it is the preferred direction for many authors and the superscript ($n$) can be also omitted when the single-particle states are given in an ordered form to build a multiparticle state, i.e., $\ket{\psi} = \ket{m_1}\ket{m_2}\dots\ket{m_n}$ where we also omitted on writing the tensor product operator $\otimes$ in between single-particle states.
-In many cases it is also usual to merge all into a single, but at the same time with many quantum numbers, state $\ket{\psi}=\ket{m_1 m_2 \dots m_N}$ for simplicity\footnote{
-This notation is normally used in many-body quantum mechanics, see diffetent textbooks Refs.~\citep{Cohen-Tannoudji1977, Sakurai2014}.}.
+for $m=-j,\dots,+j$, where $l=x,y,z$.
+It is usual to omit the subscript of $\ket{m}_l^{(n)}$ when $l=z$ because it is the preferred direction for many authors and the superscript ($n$) can also be omitted when the single-particle states are given in an ordered form to build a multiparticle state, i.e., $\ket{\psi} = \ket{m_1}\ket{m_2}\dots\ket{m_n}$ where we also omitted writing the tensor product operator $\otimes$ in between single-particle states.
+In many cases, it is also usual to merge all into a single ket state $\ket{\psi}=\ket{m_1 m_2 \dots m_N}$ for simplicity\footnote{
+This notation is normally used in many-body quantum mechanics, see Refs.~\citep{Cohen-Tannoudji1977, Sakurai2014}.}.
 
 The square of the total angular momentum, $\bs{j}^2=j_x^2+j_y^2+j_z^2$, for a single party $(n)$ acts on any state simply as
 \be
-  (\bs{j}^2)^{(n)}\rho=s_n(s_n+1)\rho,
+  (\bs{j}^2)^{(n)}\rho=j_n(j_n+1)\rho,
 \ee
-where state must be defined in a Hilbert space containing $\mathcal{H}^{(n)}$, the Hilbert space of $n^{\text{th}}$ particle and where $s_n$ is the spin number of such a particle.
+where state must be defined in a Hilbert space containing $\mathcal{H}^{(n)}$, the Hilbert space of $n^{\text{th}}$ particle and where $j_n$ is the spin number of such a particle.
+Note that in order to distinguish the spin number $j_n$ and the operators $j_l^{(n)}$ we may use the fact that the operators are attached to a Hilbert space with a superscript or even we can use a "hatted" notation to denote which of them is an operator like $\hat{j_l}$ and which is not.
 
 The collective angular momentum projection operators $J_l$ are defined as the sum of their respective single-party spin operators $j_l^{(n)}$ such that they are extended to the remaining of the Hilbert spaces by tensor products of the identity operators defined for the rest of subspaces,
 \be
   \label{eq:bg-total-angular-momentum-progection-operators}
   J_l = \sum_{i=1}^N \mtxid^{(1,\dots, i-1)} \otimes j_l^{(i)} \otimes \mtxid^{(i+1,\dots,N)} \equiv \sum_{i=1}^N j_l^{(i)},
 \ee
-where $\mtxid$ stand for the identity operator and the last formula is the most used since it is easy to notice that the single-party operator must extended in order to sum the correctly.
-On the other hand, notice that the square of the different projections of total angular momentum are not equal to the sum of the square angular momentum projections of each of the parties.
-Thus it is obtained by
+where $\mtxid$ stand for the identity operator and the last formula is the most used since it is easy to note that the single-party operator must be extended in order to sum the correctly.
+On the other hand, note that the squares of the different projections of total angular momentum are not equal to the sum of the square angular momentum projections of each of the parties.
+Thus we obtain that
 \be
   J_l^2 = \sum_{i,j}^N j_l^{(i)} j_l^{(j)} = \sum_{i=1}^N (j_l^2)^{(i)}+\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)}.
 \ee
-Therefore, neither the total square angular momentum is the sum of all single-party square angular momentum but
+Therefore, neither square of the total angular momentum is the sum of the square of all single-party angular momenta but
 \be
   \bs{J}^2 = \sum_{i}^N \bs{j}^{(i)} + \sum_{l=x,y,z}\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)},
 \ee
-where we separated the sum into two pieces, the first corresponds to the sum of all single party angular momentum projections squared and the second corresponds to the product of angular momentum projection operators of two distinct subsystems summed for all $l=x,y,z$.
-Many more combinations of these single-party operators may arise on different contexts.
+where we separated the sum into two parts, the first one corresponds to the sum of all single party angular momentum projections squared and the second corresponds to the product of angular momentum projection operators of two distinct subsystems summed for all $l=x,y,z$.
+Many more combinations of these single-party operators may arise in different contexts.
 In the Appendix~\ref{app:mima-angular-subspaces}, we discuss in more detail the different structures that arise from adding the angular momentum operators, e.g., the symmetric subspace, the fixed total angular momentum subspace or the singlet subspace.
 
 \subsubsection{Dynamics of quantum systems}
 
-The quantum state represents an instance of a physical system.
-Hence as physical systems evolve the quantum state must too.
 The most basic evolution of the state is represented by unitary evolution operators denoted by $U$ and those are the only ones appearing throughout the thesis.
-On the other hand, there are other types of dynamics involving particle loses, entropy changes on the system and open quantum systems in general.
-These transformations are govern by master-equations of the type of the Lindblad equation \citep{Lindblad1976, Nielsen2000, Breuer2002}.
+On the other hand, there are other types of dynamics involving particle loss, entropy changes in the system and open quantum systems in general.
+These transformations are governed by master-equations such as the Lindblad equation \citep{Lindblad1976, Nielsen2000, Breuer2002}.
 
-For the comprehension of this thesis it is enough to discuss the unitary evolution operators.
+For the understanding of this thesis it is enough to present the unitary evolution operators.
 We also restrict ourselves to the case in which the evolution is constant in time, so are in general the Hamiltonians of the metrological setups.
 The unitary evolution operators is defined as
 \be
-  U = \exp(-i \alpha G)=\sum_{n=0}^{\infty} \frac{(-i \alpha G)^n}{n!}
+  U = \exp(-i \alpha G)=\sum_{n=0}^{\infty} \frac{(-i \alpha G)^n}{n!},
 \ee
 where we use the matrix exponentiation in the last equality, $G$ represents a Hermitian operator usually called generator and $\alpha$ is the amount of change.
 When a constant Hamiltonian $H$ acts on an initial state $\rho$, the state evolves in time as
 \be
   \rho(t) = U\rho U^{\dagger} = e^{-i\frac{tH}{\hbar}} \rho e^{+i\frac{tH}{\hbar}}.
 \ee
-Notice that all information we can extract from the system comes in the form of expectation values of different operators at different times, $\expect{\mathcal{O}}(t) = \tr(\mathcal{O}\rho(t))$.
+Note that all information we can extract from the system comes in the form of expectation values of different operators at different times, $\expect{\mathcal{O}}(t) = \tr(\mathcal{O}\rho(t))$.
 When the state evolves in time but the operators are constant the picture of the system is called the Schrodinger-picture.
-Using the cyclic property of the trace, $\tr(ABC) = \tr(CBA)$, the Heisenberg-picture, a dual interpretation of the same physical system on which the state remains the same while the operators evolve in time, emerges.
-It is well known that the operators in this picture evolve inversely as $\mathcal{O}(t) = U^{\dagger} \mathcal{O} U$, where $\mathcal{O}$ is the initial operator.
-One can check different textbooks of quantum mechanics, just to mention some see Ref.~\citep{Cohen-Tannoudji1977, Sakurai2014}.
+Using the cyclic property of the trace, $\tr(ABC) = \tr(CBA)$, the Heisenberg-picture, a dual interpretation of the same physical system in which the state remains the same while the operators evolve in time, emerges.
+It is well known that the operators in this picture evolve as $\mathcal{O}(t) = U^{\dagger} \mathcal{O} U$, where $\mathcal{O}$ is the initial operator.
+One can check different textbooks of quantum mechanics, just to mention some see Refs.~\citep{Cohen-Tannoudji1977, Sakurai2014}.
 
 \subsection{Quantum Metrology}
-\label{sec:bg-quantum-magnetometry}
+\label{sec:bg-quantum-metrology}
 
 We summarize important recent advances in quantum metrology.
-Simple metrological setups allow for encoding some wanted parameter into the state of the system, thus from the readout of the final state one could infer it.
-The estimation theory applied to the intrinsic probabilistic nature of quantum states has lead to the the formulation of quantum metrology.
+Simple metrological setups allow for encoding some desired parameter into the state of the system, thus from the readout of the final state one could infer it.
+The basic ideas of quantum metrology emerge when one applies the notions of estimation theory to the intrinsic probabilistic nature of quantum mechanics.
 Merging the probabilistic features of quantum mechanics and the estimation theory is not trivial.
-Nevertheless, with the initial pioneering works of W. K. Wootters, and S. L. Braunstein and C. M. Caves, in 1981 and 1992-1994 respectively \citep{Wootters1981, Braunstein1992, Braunstein1994}, until the works of V. Giovannetti et al, and M. G. Paris, roughly two decades later \citep{Giovannetti2004, Paris2009}, the field of quantum metrology was stabilized with solid foundations.
+Nevertheless, with the initial pioneering works of W. K. Wootters, and S. L. Braunstein and C. M. Caves, in 1981 and 1992-1994 respectively \citep{Wootters1981, Braunstein1992, Braunstein1994}, until the works of V. Giovannetti et al, and M. G. Paris, roughly two decades later \citep{Giovannetti2004, Paris2009}, the foundations of quantum metrology were stabilized.
 % TD: important citations needed here!!
 Later, advanced works in quantum metrology appeared \citep{XXX} together with experimental realizations \citep{Behbood2013, Koschorreck2011, Luecke2011} which raised the interest in this topic.
-In this section, we will highlight the most important aspects of this field and with this we will conclude this chapter for presenting the background theory on which sits the work developed by the authors.
+In this section, we will highlight the most important aspects of this field and with this we will conclude this chapter for presenting the background theory in which stands the work developed by the authors.
 
 The most basic scheme for a metrological setup in the present context is the following.
 First, a state $\rho$ is prepared followed by a general evolution represented by a mapping $\Lambda_{\theta}$ in which the unknown parameter $\theta$ is imprinted into the state.
-Finally, the outgoing state is characterized by some measured quantity $\expect{M}$, which allows to infer in the value of the parameter $\theta$.
-The details of the evolution, the initial state and the post-characterization using $M$ or a set of different measurements, is crucial for succeed.
+Finally, the outgoing state is characterized by some measured quantity $\expect{M}$, which allows to infer the value of the parameter $\theta$.
 Figure~\ref{fig:bg-preparation-encoding-estimation} illustrates the main steps of quantum metrology.
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=1.2]{img/BG_preparation_encoding_estimation.pdf}
-  \caption[Quantum Metrology estimation process]{Sequence of the different steps for the basics of the estimation process on Quantum Metrology. First, an input state $\rho$ enters the region on which the unknown parameter $\theta$ is imprinted on it, for the most general case, represented with $\Lambda_{\Theta}$. Last, the state that has encoded the parameter $\theta$ on it is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
+  \caption[Quantum Metrology estimation process]{Sequence of the different steps for the basics of the estimation process in Quantum Metrology. First, an input state $\rho$ enters the region in which the unknown parameter $\theta$ is imprinted in it, for the most general case, represented with $\Lambda_{\Theta}$. The state with the encoded parameter $\theta$ is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
   \label{fig:bg-preparation-encoding-estimation}
 \end{figure}
 
 In the many-particle case, most of the metrology experiments have been done in systems with simple Hamiltonians that do not contain interaction terms.
 Such Hamiltonians cannot create entanglement between the particles.
-A typical situation, is that we rotate our many particle state by some angle and we want to estimate the rotation angle $\theta$.
+A typical situation is that we rotate our many particle state by some angle and we want to estimate the rotation angle $\theta$.
 It has been shown that particles exhibiting quantum correlations, or more precisely, quantum entanglement \citep{Guehne2009, Luis2004}, provide a higher precision than an ensemble with non-entangled particles.
 The most important question is how the achievable precision of the angle estimation $\varian{\theta}$ scales with the number of particles.
 Very general derivations lead to, at best,
@@ -350,7 +348,7 @@ Very general derivations lead to, at best,
   \varian{\theta}\sim \frac{1}{N}
 \ee
 for non-entangled particles.
-The equation above takes the name \emph{shot-noise} or standard scaling (SNS), the term originating from the shot-noise in electronic circuits, which is due to the discrete nature of the electric charge.
+The equation above is called \emph{shot-noise} or standard scaling (SNS), the term originating from the shot-noise in electronic circuits, which is due to the discrete nature of the electric charge.
 On the other hand, quantum entanglement makes it possible to reach
 \be
   \label{eq:bg-heisenberg-scaling}
@@ -370,52 +368,53 @@ It scales as $\varinv{\theta}\sim N$ for SNS and as $\varinv{\theta}\sim N^2$ fo
 \subsubsection{Quantum Magnetometry}
 \label{sec:bg-quantum-magnetometry}
 
-Without loss of generality, we present in this section the characterization of the precision of one of the simplest metrological task, namely the estimation of a homogeneous magnetic field based in the interaction between the system and the field.
+Without loss of generality, we present in this section the characterization of the precision of one of the simplest metrological tasks, namely the estimation of a homogeneous magnetic field based on the interaction between the system and the field.
 In this section, we will mostly study the interaction of a system with a homogeneous field in the $z$-direction.
-In the Chapter~\ref{sec:gm}, we will show a different situation on which the magnetic field changes linearly with the position of the system.
-With the aim of estimating the strength of the magnetic field, a prove state is used in order to interact with it, coupling the magnetic moment of the state and the external magnetic field.
+In the Chapter~\ref{sec:gm}, we will show a different situation in which the magnetic field changes linearly with the position of the system.
+With the aim of estimating the strength of the magnetic field, a state is used in order to interact with it, coupling the magnetic moment of the state and the external magnetic field.
 Finally, measuring how the state has changed one could in principle infer on the strength of the magnetic field.
 
 In general, we will say that the magnetic moments of the states come exclusively from the spin angular momentum, neglecting any possible contribution from the orbital angular momentum.
 This way the physics is simpler.
-This is justified in the sense that most of the recent experiments on this context have been carried out with ion-traps, Bose-Einstein condensates (BEC) or at most cold atomic ensembles, which have indeed a negligible orbital angular momentum.
+This is justified in the sense that most of the recent experiments in this context have been carried out with ion-traps, Bose-Einstein condensates (BEC) or at most cold atomic ensembles, which have indeed a negligible orbital angular momentum.
 
-Beside this considerations, the interaction Hamiltonian can be written as,
+Beside this considerations, the interaction Hamiltonian can be written as
 \be
   H = - \bs{\mu} \cdot \bs{B}
 \ee
 up to some constant factor.
 Now in the simplest case we will choose the magnetic field to be pointing to some fixed direction, for instance, the $z$-direction.
 So the magnetic field vector can be written as ${B}=B\bs{k}$, where $\bs{k}$ is the unitary vector pointing to the $z$-direction.
-This way estimation problem is much more simple, since one has not to determine the direction of the magnetic field.
+This way the estimation problem is much simpler, since one does not need to determine the direction of the magnetic field.
 
 The magnetic moment of the system is proportional to the spin angular momentum, $\bs{\mu}=-\mu_\text{B} g_{\text{s}}\hbar^{-1} \bs{J}$, where $\mu_{\text{B}}$ and $g_{\text{s}}$ are the Bohr magneton and anomalous gyromagnetic factor respectively.
-Finally, one can rewrite the interaction Hamiltonian as,
+Finally, one can rewrite the interaction Hamiltonian as
 \be
   \label{eq:bg-hamiltonian-homogeneous-field}
-  H = \gamma B J_z
+  H = \gamma B J_z,
 \ee
 where $\gamma = \mu_\text{B} g_{\text{s}}\hbar^{-1}$ and we have used the fact that $\bs{J}\cdot\bs{k}=J_z$.
-Finally, the unitary operator leading the evolution of the system can be written as,
+Finally, the unitary operator leading the evolution of the system can be written as
 \be
   \label{eq:bg-unitary-homogeneous-field}
   U = \exp(-i\theta J_z),
 \ee
 where the magnetic field strength is encoded into the phase-shift $\theta=-\mu_\text{B} g_\text{s} t B/\hbar$.
-Here $\mu_\text{B}$ stand for the Magneton of Bhor and $g_\text{s}$ for the giro-magnetic constant for the spin angular momentum, and $t$ is the time spent on the evolution.
+Here $\mu_\text{B}$ stands for the Bohr magneton and $g_\text{s}$ for the giro-magnetic constant for the spin angular momentum, and $t$ is the evolution time.
 
-We have to mention as well that for large particle ensembles, typically only collective quantities can be measured in order to characterize the state and read the outgoing system.
+We have to mention as well that for large particle ensembles, typically only collective quantities can be measured in order to characterize the state on different phases of the metrological sequence, see Figure~\ref{fig:bg-preparation-encoding-estimation}.
 Such collective quantities are in this case the angular momentum components defined in Eq.~\eqref{eq:bg-total-angular-momentum-progection-operators} and their combinations.
-More concretelly, we can measure the expectation values of any direction
+More concretely, we can measure the expectation values of any direction
 \be
+  \label{eq:bg-total-angular-momentum-projector-arbitrary-direction}
   J_{\bs{n}}:=\sum_{l=x,y,z} n_l J_l,
 \ee
 where $\bs{n}=(n_x,n_y,n_z)$ is a unit vector describing the direction of the component.
 
 \subsubsection[Metrology with almost polarized states]{Metrology with almost polarized states, including spin-squeezed states}
 
-Let us present one of the basic approaches to metrological precision of a quantum setup.
-In order to estimate the phase-shift $\theta$ we measure the expectation value of a Hermitian operator, which we will denote here by $M$ in the following.
+Let us present one of the basic approaches to calculate the metrological precision of a quantum setup.
+In order to estimate the phase-shift $\theta$ we measure the expectation value of a Hermitian operator, which we will denote by $M$ in the following.
 If the evolution time is a constant then estimating $\theta$ is equivalent to estimating the magnetic field strength $B$ in Eq.~\eqref{eq:bg-hamiltonian-homogeneous-field}.
 The precision of the estimation can be characterized with the error propagation formula as
 \be
@@ -436,19 +435,18 @@ Figure~\ref{fig:bg-expect-m-evo} helps to interpret the quantities appearing in 
   \label{fig:bg-expect-m-evo}
 \end{figure}
 
-At this point, we use the formula Eq.~\eqref{eq:bg-hamiltonian-homogeneous-field} to compute and this way highlight special signatures of interesting systems and their metrological behavior.
-We center our attention into multi-partite systems of spin-$\frac{1}{2}$ particles, widely known in the field as qubits, for homogeneous magnetometry in order to simplify the discussion.
+We focus on multi-partite systems of spin-$\frac{1}{2}$ particles, widely known in the field as qubits, for homogeneous magnetometry in order to simplify the discussion.
 For this, let us start with an almost polarized state.
 The spin vector of the ensemble, originally pointing into the $y$-direction, will be rotated.
 The rotation after the evolution is used to estimate the strength of the magnetic field.
 A way to measure the rotation suffered by the system is to measure the expectation value $\expect{J_x}$, which is zero at the beginning.
 
-For small angles of $\theta$ and using the Eq.~\eqref{eq:bg-error-propagation-formula} after substituting $M$ by $J_x$, we arrive to
+For small angles of $\theta$ and using the Eq.~\eqref{eq:bg-error-propagation-formula} after substituting $M$ by $J_x$, we arrive at
 \be
   \label{eq:bg-error-propagation-measuring-jx}
   \varinv{\theta} = \frac{|\partial_\theta \expect{J_x}|^2}{\varian{J_x}},
 \ee
-for state almost polarized along the $y$-axis.
+for a state almost completely polarized along the $y$-axis.
 Next, we have to compute these values for small angles of $\theta$.
 
 To compute them we use the Heisenberg picture of the operator $J_x$, that after applying the unitary operator Eq.~\eqref{eq:bg-unitary-homogeneous-field}, is written as
@@ -467,14 +465,14 @@ Finally we compute the derivative with respect to $\theta$ of $\expect{J_x}$ as
 \ee
 where we used the linearity of the trace to compute the expectation value and the linearity of the derivative.
 
-Hence, assuming we are in the small angle limit to compute the Eq.~\eqref{eq:bg-error-propagation-measuring-jx} we may take the terms proportional to $\sin(\theta)$ as zero.
+Hence, assuming that we are in the small angle limit to compute the Eq.~\eqref{eq:bg-error-propagation-measuring-jx}, we may take the terms proportional to $\sin(\theta)$ as zero.
 Therefore, when we measure $\expect{J_x}$ to estimate the angle $\theta$, the precision of the estimation is given by
 \be
   \label{eq:bg-error-propagation-measuring-jx-computed}
   \varinv{\theta} = \frac{|\coss{\theta}\expect{J_y}|^2}{\coss{\theta}^2\expect{J_x^2} - (\coss{\theta}\expect{J_x})^2} = \frac{\expect{J_y}^2}{\varian{J_x}}.
 \ee
 
-For the totally polarized state along the $y$-axis, the initial expectation values $\expect{J_x}$, $\expect{J_x^2}$ and $\expect{J_y}$ needed to compute the precision are
+For the state totally polarized along the $y$-axis, the initial expectation values $\expect{J_x}$, $\expect{J_x^2}$ and $\expect{J_y}$ needed to compute the precision are
 \be
   \begin{split}
     \expect{J_x}_{\text{tp}}  & = 0,\\
@@ -486,7 +484,7 @@ Thus, we obtain a precision that scales linearly with $N$,
 \be
   \varinv{\theta}_{\text{tp}} = \frac{N^2/4}{N/4} = N.
 \ee
-Notice that the totally polarized state is a separable pure state with all particles pointing into the $y$-direction.
+Note that the totally polarized state is a separable pure state with all particles pointing into the $y$-direction.
 We obtained the shot-noise scaling, even with very simple, qualitative arguments
 
 A way of improving the precision is considering that the variances of the angular momentum components are bounded by the Heisenberg uncertainty relation \citep{Kitagawa1993}
@@ -497,8 +495,8 @@ Due to decreasing $\varian{J_x}$, our state fulfills
 \be
   \varian{J_x}<\frac{1}{2}|\expect{J_y}|,
 \ee
-where the main spin point along the $y$-axis and for totally polarized states $\varian{J_x}=\frac{1}{2}|\expect{J_y}|$.
-Such states are called \emph{spin-squeezed} states \citep{Kitagawa1993, Wineland1994, Sorensen2001, Ma2011} and they can in principal bite the SNS.
+where the main spin points along the $y$-axis and for totally polarized states $\varian{J_x}=\frac{1}{2}|\expect{J_y}|$ hold.
+Such states are called \emph{spin-squeezed} states \citep{Kitagawa1993, Wineland1994, Sorensen2001, Ma2011} and they can in principal overcome the SNS.
 
 Next, we can ask, what the best possible phase estimation precision is for the metrological task considered in this section.
 For that, we have to use the following inequality based on general principles of angular momentum theory
@@ -506,7 +504,7 @@ For that, we have to use the following inequality based on general principles of
   \label{eq:bg-total-angular-momentum-saturability}
   \expect{J_x^2+J_y^2+J_z^2} \leq \frac{N(N+2)}{4}.
 \ee
-Note that Eq.~\eqref{eq:bg-total-angular-momentum-saturability} is saturated only by symmetric multiparticle states, see Appendix~\ref{}.
+Note that Eq.~\eqref{eq:bg-total-angular-momentum-saturability} is saturated only by symmetric multiparticle states, see Appendix~\ref{app:mima-angular-subspaces}.
 Together with the identity connecting the second moments, variances and expectation values
 \be
   \varian{J_l} + \expect{J_l}^2 = \expect{J_l^2},
@@ -525,8 +523,7 @@ The bound above is not optimal, as for the fully polarized state we would expect
 
 \subsubsection{The quantum Fisher information}
 
-Let us now change our discourse drastically.
-In this section, we review the theoretical background of the Fisher information, the Cram\'er-Rao bound and we introduce the quantum Fisher information (QFI).
+In this section, we review the theoretical background of the Fisher information, the Cram\'er-Rao bound and we introduce the quantum Fisher information.
 
 First of all, we have already shown the Fisher information and the Cram\'er-Rao bound in the Section~\ref{sec:bg-estimators}.
 The formula Eq.~\eqref{eq:bg-classical-cr-bound-and-fi} tells us that if we measure an operator, say $M$, and we know its probability distribution function $\prob(\expect{M}|\theta)$, we can bound the achievable precision.
@@ -535,8 +532,8 @@ In quantum mechanics the PDF of a state $\rho_\theta$ when measuring the operato
   \prob(m|\theta) = \tr({\Pi_{m}\rho_\theta}),
 \ee
 where $\Pi_{m}$ are the projector operators or the eigenstates on which $M$ is expanded, $M = \sum m \Pi_m$.
-Following arguments found on Refs.~\citep{Giovannetti2004, Paris2009}, one can reach to an universal bound valid for any kind of measurements.
-This bound is called the quantum Cram\'er-Rao bound and in one site is the achievable precision and in the other site is the quantum Fisher information,
+Following arguments found on Refs.~\citep{Giovannetti2004, Paris2009}, one can arrive at a universal bound valid for any kind of measurements.
+This bound is called the quantum Cram\'er-Rao bound given as
 \be
   \label{eq:bg-quantum-cr-bound}
   \varinv{\theta} \leq \qfif{\rho,J_z},
@@ -545,16 +542,17 @@ where $\qfif{\rho, J_Z}$ denotes the quantum Fisher information for the initial 
 In principle, it might be difficult to find the operator that leads to the best estimation precision just by trying several operators.
 Fortunately, the Eq.~\eqref{eq:bg-quantum-cr-bound} gives us that upper bound that is valid for any choice on the measurement \citep{Helstrom1976, Holevo1982}.
 
-As a direct consequence, based on Eq.~\eqref{eq:bg-error-propagation-formula} for any given $M$ we have that
+As a direct consequence, based on Eq.~\eqref{eq:bg-error-propagation-formula} for any given $M$, we have that
 \be
   \qfif{\rho,J_z} \geq \frac{|\partial_{\theta}\expect{M}|^2}{\varian{M}}
 \ee
-is a upper bound for concrete bounds based on the measurement scheme.
-For example, when the rotation of the system is measured by measuring $\expect{J_x}$ the quantum Fisher information is bounded from below by \citep{Pezze2002}
+is an upper bound for concrete bounds based on the measurement scheme.
+For example, when the rotation of the system is estimated by measuring $\expect{J_x}$ the quantum Fisher information is bounded from below by \citep{Pezze2009}
 \be
   \label{eq:bg-pezze-bound}
-  \qfif{\rho,J_z} \geq \frac{\expect{J_y}^2}{\varian{J_x}}.
+  \qfif{\rho,J_z} \geq \frac{\expect{J_y}^2}{\varian{J_x}},
 \ee
+as it is directly infer from Eq.~\eqref{eq:bg-error-propagation-measuring-jx-computed}.
 
 The quantum Fisher information can be computed by closed formulas such as
 \begin{align}
@@ -564,12 +562,12 @@ The quantum Fisher information can be computed by closed formulas such as
   \qfif{\rho,J_z} &= \inf_{p_k,\psi_{k}} 4 \sum_{k}p_k \varian{J_z}_{\psi_k},
 \end{align}
 for the case of unitary evolution Eq.~\eqref{eq:bg-unitary-homogeneous-field}.
-The first is based on the eigen-decomposition of the state whereas the second is the convex-roof of $4\varian{J_z}$ \citep{Paris2009, Toth2013, Yu2013}.
-Both formulas yield to the same expression for pure states in an easy way
+The first one is based on the eigen-decomposition of the state whereas the second is the convex-roof of $4\varian{J_z}$ \citep{Paris2009, Toth2013, Yu2013}.
+Both formulas yield to the same expression for pure states
 \be
   \qfif{\ket{\psi}, J_z} = 4\varian{J_z},
 \ee
-since the convex-roof over a pure state is computed on the state itself, and using first the identity $(a-b)^2 = (a+b)^2 - 4 ab$ and second that $p_\lambda = \delta_{\lambda,1}$ (we choose the pure state to be $\ket{1}$ without losing of generality) in Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition} we arrive at the result
+since the convex-roof over a pure state is computed on the state itself, and using first the identity $(a-b)^2 = (a+b)^2 - 4 ab$ and second that $p_\lambda = \delta_{\lambda,1}$ (we choose the pure state to be $\ket{1}$ without loss of generality) in Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition} we arrive at the result
 \be
   \begin{split}
     \qfif{\ket{\psi},J_z} &= 2\sum_{\lambda, \nu} \lpar p_\lambda + p_\nu - \frac{4p_\lambda p_\nu}{p_\lambda+p_\nu} \rpar|\braopket{\lambda}{J_z}{\nu}|^2\\
@@ -581,7 +579,7 @@ Some interesting properties of the quantum Fisher information emerge from these 
 \begin{enumerate}
   \item The QFI is convex on states, as it is directly shown in Eq.~\eqref{eq:bg-qfi-definition-convex-roof} while it can be proven if one starts from Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition},
   \be
-    \qfif{p\rho_1+(1-p)\rho_2, J_z}\leq p\qfif{\rho_1, J_z}+(1-p)\qfif{\rho_2, J_z}
+    \qfif{p\rho_1+(1-p)\rho_2, J_z}\leq p\qfif{\rho_1, J_z}+(1-p)\qfif{\rho_2, J_z}.
   \ee
   \item Recently, it has been shown due to Eq.~\eqref{eq:bg-qfi-definition-convex-roof}, that the quantum Fisher information is the largest convex function that fulfills (i) \citep{Toth2013, Yu2013}.
   \item For pure states $\qfif{\ket{\psi}, J_z} = 4\varian{J_z}$, as it has been already mentioned.
@@ -603,7 +601,7 @@ From Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}, we can obtain directl
   \be
     \qfif{\rho, A} = \qfif{\rho, A+D},
   \ee
-  where $D$ is an arbitrary matrix that is diagonal on the eigenbasis of the state, i.e., $[\rho,D]=0$.
+  where $D$ is an arbitrary matrix that is diagonal in the eigenbasis of the state, i.e., $[\rho,D]=0$.
   \item The following identity holds for all unitary dynamics $U$ as it could be expected from the Schrodinger vs Heisenberg pictures,
   \be
     \qfif{U\rho U^\dagger, A} = \qfif{\rho, U^\dagger A U}.
@@ -623,7 +621,7 @@ From Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}, we can obtain directl
     \qfif{\bigoplus_{k}p_k \rho_k,\bigoplus_{k} A_k} = \sum_{k}p_k\qfif{\rho_k,A_k},
   \ee
   where $\sum_k p_k = 1$.
-  The above equation is relevant, for instance, for experiments where the particle number variance is not zero, and the $\rho_k$ corresponds to density matrices with a fixed particle number \citep{Hyllus2010, Hyllu2012}.
+  The above equation is relevant, for instance, for experiments where the particle number variance is not zero, and the $\rho_k$ corresponds to density matrices with a fixed particle number \citep{Hyllus2010, Hyllus2012}.
 \end{enumerate}
 
 \subsubsubsection{Entanglement and the quantum Fisher information}
@@ -635,12 +633,8 @@ Moreover, not only entanglement but multipartite entanglement is necessary for a
 All these statements will be derived in a very general framework, based on the quantum Fisher information.
 We will also briefly discuss the question whether inter-particle entanglement is an appropriate notion for our systems.
 
-Let us first examine the upper bounds on the QFI for general quantum states.
-These are also bounds for the sensitivity of the phase estimation, since due to the Cram\'er-Rao bound Eq.~\eqref{eq:bg-quantum-cr-bound} we have
-\be
-  \varinv{\theta} \leq \qfif{\rho, J_z}.
-\ee
-
+Let us first examine the upper bounds on the QFI for general quantum states and for separable states.
+Due to the Cram\'er-Rao bound Eq.~\eqref{eq:bg-quantum-cr-bound}, these are also bounds for the sensitivity of the phase estimation.
 Entanglement has been recognized as an advantage for several metrological tasks (see, e.g., Refs. \citep{Sorensen2001, Boixo2008}).
 For a general relationship for linear interferometers, we ca take advantage of the properties of the quantum Fisher information discussed above.
 Since for pure states the quantum Fisher information equals four times the variance, for pure product states we can have at most
@@ -664,7 +658,7 @@ Therefore, similarly we have
   \qfif{\rho, J_z} = 4 \varian{J_z}\leq N^2,
 \ee
 which is a valid bound still for mixed states.
-Note that such bound has the Heisenberg scaling Eq.~\eqref{eq:bg-heisenberg-scaling}.
+Note that such a bound has the Heisenberg scaling Eq.~\eqref{eq:bg-heisenberg-scaling}.
 Note that our derivation is very simple, and does not require any information about what operator we measure to estimate $\theta$.
 Equation~\eqref{eq:bg-shot-noise-limit} has been used already to detect entanglement based on the metrological performance of the quantum states in Refs.~\citep{Krischek2011, Luecke2011}.
 
@@ -693,12 +687,13 @@ It is instructive to write the equation above for the case $N$ divisible by $k$ 
 \ee
 Thus, the bounds reachable by $k$-producible states are distributed linearly in $k$.
 
-It is also instructive to define a QFI averaged on all possible directions.
+It is also instructive to define a QFI averaged over all possible directions.
 Simple calculations show that
 \be
   \label{eq:bg-average-qfi}
-  \underset{\bs{n}}{\text{avg}}\,\qfif{\rho, J_{\bs{n}}} \equiv \int_{|\bs{n}|=1}\qfif{\rho,J_{\bs{n}}}\,\text{d}\bs{n} = \frac{1}{3}\sum_{l=x,y,z} \qfif{\rho,J_l}.
+  \underset{\bs{n}}{\text{avg}}\,\qfif{\rho, J_{\bs{n}}} \equiv  \int_{\bs{n}=(\coss{\varphi}\sins{\vartheta},\sins{\varphi}\sins{\vartheta},\coss{\vartheta})} \qfif{\rho,J_{\bs{n}}}\sin(\vartheta)\,\text{d}\varphi\text{d}{}\vartheta = \frac{1}{3}\sum_{l=x,y,z} \qfif{\rho,J_l},
 \ee
+where we used the spherical coordinates for the definition of the averaged QFI and the Eq.~\eqref{eq:bg-total-angular-momentum-projector-arbitrary-direction} for $J_{\bs{n}}$.
 Therefore, bounds similar to Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:bg-heisenberg-limit} for separable and general states can be obtained for the average quantum Fisher information,
 \begin{align}
   \underset{\bs{n}}{\text{avg}}\,\qfif{\rho, J_{\bs{n}}} &\leq \frac{2}{3}N, \\
@@ -708,5 +703,5 @@ Similar to Eq.~\eqref{eq:bg-entanglement-criterion-qfi} an entanglement criterio
 
 Finally, we also mention that bound entangled states can also be detected with the entanglement criteria based on the quantum Fisher information.
 Bound entanglement is a weak type of entanglement, which is not distillable with local operations and classical communication \citep{Horodecki2009, Guehne2009}.
-Reference~\citep{Hyllus2012} presented states that were detected as bound entangled based on the criterion tor the average QFI Eq.~\eqref{eq:bg-average-qfi}.
-Reference~\citep{Czekaj2014} presented states that violate the criterion based on a bound for the quantum Fisher information similar to Eq.~\eqref{eq:bg-entanglement-criterion-qfi}.
+Reference~\citep{Hyllus2012} presented states that were detected as bound entangled based on the criterion for the average QFI Eq.~\eqref{eq:bg-average-qfi}.
+Reference~\citep{Czekaj2015} presented states that violate the criterion based on a bound for the quantum Fisher information similar to Eq.~\eqref{eq:bg-entanglement-criterion-qfi}.

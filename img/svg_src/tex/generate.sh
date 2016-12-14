@@ -7,7 +7,7 @@ jobname=equations
 # String for the equation. Change it as you want
 texstr="
   \displaystyle
-  H = \Delta \sigma_z +\omega a^{\dagger}a + g \sigma_z (a^{\dagger} + a)
+  Bxyz \rho_{\text{i}}\rho_{\text{f}}
 "
 
 # Patch to solve relative path problems
