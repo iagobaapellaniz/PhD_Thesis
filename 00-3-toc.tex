@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENTS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace*{100pt}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% FIGURES TABLES, ETC
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Abbreviations, figures and tables}
+\fancyfoot[LE,RO]{\thepage}
+\subsection*{Abbreviations}
+\hspace{7pt}
+\begin{tabular}{l c l}
+  \abbrln{BEC}{Bose-Einstein condensate}
+  \abbrln{FI}{Fisher information}
+  \abbrln{GHZ}{Greenberger-Horne-Zeilinger}
+  \abbrln{HS}{Heisenberg scaling}
+  \abbrln{HL}{Heisenberg limit}
+  \abbrln{PDF}{Pobability distribution function}
+  \abbrln{PI}{Permutationally invariant}
+  \abbrln{POVM}{Positive-operator valued measure}
+  \abbrln{QFI}{Quantum Fisher information}
+  \abbrln{SNS}{Shot-noise scaling}
+  \abbrln{SNL}{Shot-noise limit}
+\end{tabular}
+
+\makeatletter
+\newcommand\listoffigurename{Figures}
+\newcommand\listoftablename{Tables}
+\renewcommand\listoffigures{
+  \subsection*{\listoffigurename}
+  \@starttoc{lof}
+}
+\renewcommand\listoftables{
+  \subsection*{\listoftablename}
+  \@starttoc{lot}
+}
+\makeatother
+\listoffigures
+\listoftables

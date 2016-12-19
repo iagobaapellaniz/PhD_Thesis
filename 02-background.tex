@@ -1,5 +1,5 @@
-\section[Backgroud on Quantum Metrology]
-{Background on Quantum Metrology}
+\section[Backgroud on quantum metrology]
+{Background on quantum metrology}
 \input{snp/singleLineWaterMark.tex}
 
 \quotes{Roger J. Barlow}{In the real world, doing real experiments, statistics began to matter}
@@ -195,19 +195,20 @@ The denominator on the right hand-side is called generally the Fisher informatio
 With this review of the most interesting properties of "classical" metrology, from the point of view of this thesis, we conclude this section.
 In the next section, we will discuss some properties of the quantum mechanics and then we will follow with another section which presents the basis of quantum metrology.
 
-\subsection{Quantum Mechanics from metrology perspective}
+\subsection{Quantum mechanics from metrology perspective}
 \label{sec:bg-quantum-mechanics-for-metrology}
 
 The ubiquitous probabilistic nature of quantum mechanics makes us to work with probabilities on a regular basis.
 Moreover, if one studies fields connected to experiments or some short of physical realizations, this probabilistic nature of quantum mechanics becomes even more visible.
-On the other hand, exotic features such as entanglement arise from Quantum Mechanics, which is directly connected with the probabilistic notions explained before.
+On the other hand, exotic features such as entanglement arise from quantum mechanics, which is directly connected with the probabilistic notions explained before.
 The present section is intended to describe quantum systems from the point of view of metrology.
 
 \subsubsection{The quantum state, multiparticle state, entanglement}
+\label{sec:bg-the-quantu-state}
 
 A formal mathematical description of the quantum state is given next.
 This also allows us to introduce some notation used throughout the thesis.
-A \emph{state} in Quantum Mechanics lives on a Hilbert space, $\mathcal{H}$.
+A \emph{state} in quantum mechanics lives on a Hilbert space, $\mathcal{H}$.
 The state, $\rho$, has the following properties:
 \begin{enumerate}
   \item
@@ -253,6 +254,7 @@ This defines the entanglement depth, see Figure~\ref{fig:bg-separability-k-produ
 Later on, these concepts of entanglement and entanglement depth will arise naturally on the metrological framework \citep{Toth2014}.
 
 \subsubsection{Angular momentum operators for multipartite systems}
+\label{sec:bg-angular-momentum-operators}
 
 Besides those concepts, we present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
 Again these definitions allow us to introduce much of the notation used on this book.
@@ -289,7 +291,7 @@ Therefore, neither square of the total angular momentum is the sum of the square
 \ee
 where we separated the sum into two parts, the first one corresponds to the sum of all single party angular momentum projections squared and the second corresponds to the product of angular momentum projection operators of two distinct subsystems summed for all $l=x,y,z$.
 Many more combinations of these single-party operators may arise in different contexts.
-In the Appendix~\ref{app:mima-angular-subspaces}, we discuss in more detail the different structures that arise from adding the angular momentum operators, e.g., the symmetric subspace, the fixed total angular momentum subspace or the singlet subspace.
+In the Appendix~\ref{app:angular-subspaces}, we discuss in more detail the different structures that arise from adding the angular momentum operators, e.g., the symmetric subspace or the singlet subspace.
 
 \subsubsection{Dynamics of quantum systems}
 
@@ -314,7 +316,7 @@ Using the cyclic property of the trace, $\tr(ABC) = \tr(CBA)$, the Heisenberg-pi
 It is well known that the operators in this picture evolve as $\mathcal{O}(t) = U^{\dagger} \mathcal{O} U$, where $\mathcal{O}$ is the initial operator.
 One can check different textbooks of quantum mechanics, just to mention some see Refs.~\citep{Cohen-Tannoudji1977, Sakurai2014}.
 
-\subsection{Quantum Metrology}
+\subsection{Quantum metrology}
 \label{sec:bg-quantum-metrology}
 
 We summarize important recent advances in quantum metrology.
@@ -333,7 +335,7 @@ Figure~\ref{fig:bg-preparation-encoding-estimation} illustrates the main steps o
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=1.2]{img/BG_preparation_encoding_estimation.pdf}
-  \caption[Quantum Metrology estimation process]{Sequence of the different steps for the basics of the estimation process in Quantum Metrology. First, an input state $\rho$ enters the region in which the unknown parameter $\theta$ is imprinted in it, for the most general case, represented with $\Lambda_{\Theta}$. The state with the encoded parameter $\theta$ is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
+  \caption[The estimation process in quantum metrology]{Sequence of the different steps for the basics of the estimation process in quantum metrology. First, an input state $\rho$ enters the region in which the unknown parameter $\theta$ is imprinted in it, for the most general case, represented with $\Lambda_{\Theta}$. The state with the encoded parameter $\theta$ is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
   \label{fig:bg-preparation-encoding-estimation}
 \end{figure}
 
@@ -365,7 +367,7 @@ All these are strongly connected to the question of whether strong multipartite 
 Finally, note that often, instead of $\varian{\theta}$ one calculates its inverse, which is large for high precision.
 It scales as $\varinv{\theta}\sim N$ for SNS and as $\varinv{\theta}\sim N^2$ for the HS.
 
-\subsubsection{Quantum Magnetometry}
+\subsubsection{Quantum magnetometry}
 \label{sec:bg-quantum-magnetometry}
 
 Without loss of generality, we present in this section the characterization of the precision of one of the simplest metrological tasks, namely the estimation of a homogeneous magnetic field based on the interaction between the system and the field.
@@ -504,7 +506,7 @@ For that, we have to use the following inequality based on general principles of
   \label{eq:bg-total-angular-momentum-saturability}
   \expect{J_x^2+J_y^2+J_z^2} \leq \frac{N(N+2)}{4}.
 \ee
-Note that Eq.~\eqref{eq:bg-total-angular-momentum-saturability} is saturated only by symmetric multiparticle states, see Appendix~\ref{app:mima-angular-subspaces}.
+Note that Eq.~\eqref{eq:bg-total-angular-momentum-saturability} is saturated only by symmetric multiparticle states, see Appendix~\ref{app:angular-subspaces}.
 Together with the identity connecting the second moments, variances and expectation values
 \be
   \varian{J_l} + \expect{J_l}^2 = \expect{J_l^2},

@@ -215,88 +215,12 @@ license, visit
 \clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-% PROLOGE
+% PROLOGE, PUBLICATIONS,
+% CONTENTS, ABBREBIATIONS
 %%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Prologue}
-\setcounter{page}{1}
-\pagenumbering{roman}
-\fancyfoot[LE,RO]{\thepage}
-
-\input{00-prologe.tex}
-
-\section*{Publications}
-{\setlength{\parindent}{0cm}
-G\'eza T\'oth and Iagoba Apellaniz.
-\textit{Quantum metrology from a quantum information science prespective.}
-Journal of Physics A: Mathematical and Theoretical, \textbf{47} 424006, 2014.
-\vspace{6pt}
-
-Iagoba Apellaniz, Bernd L\"ucke, Jan Peise, Carsten Klempt and G\'eza T\'oth.
-\textit{Detecting metrologically useful entanglement in the vicinity of Dicke states.}
-New Journal of Physics, \textbf{17} 083027, 2015.
-\vspace{6pt}
-
-{\large\bf Preprints}
-
-Iagoba Apellaniz, Matthias Kleinmann, Otfried G\"uhne and G\'eza T\'oth.
-\textit{Optimal detection of metrologically useful entanglement.}
-arXiv:1511.05203.
-\vspace{6pt}
-
-{\large\bf Out of the scope of this thesis}
-
-Giuseppe Vitagliano, Iagoba Apellaniz, I\~nigo Luis Egusquiza and G\'eza T\'oth.
-\textit{Spin squeezing and entanglement for arbitrary spin.}
-Physical Review A, \textbf{89} 032307, 2014.
-\vspace{6pt}
-
-Giuseppe Vitagliano, Iagoba Apellaniz, Matthias Kleinmann, Bernd L\"ucke, Carsten Klempt and G\'eza T\'oth.
-\textit{Entanglement and extreme spin squeezing of unpolarized states} arXiv:1605.07202.
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-% TABLE OF CONTENTS
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace*{100pt}
-\tableofcontents
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-% FIGURES TABLES, ETC
-%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Abbreviations, figures and tables}
-\fancyfoot[LE,RO]{\thepage}
-\subsection*{Abbreviations}
-\hspace{7pt}
-\begin{tabular}{l c l}
-  \abbrln{BEC}{Bose-Einstein condensate}
-  \abbrln{FI}{Fisher information}
-  \abbrln{GHZ}{Greenberger-Horne-Zeilinger}
-  \abbrln{HS}{Heisenberg scaling}
-  \abbrln{HL}{Heisenberg limit}
-  \abbrln{PDF}{Pobability distribution function}
-  \abbrln{PI}{Permutationally invariant}
-  \abbrln{POVM}{Positive-operator valued measure}
-  \abbrln{QFI}{Quantum Fisher information}
-  \abbrln{SNS}{Shot-noise scaling}
-  \abbrln{SNL}{Shot-noise limit}
-\end{tabular}
-
-\makeatletter
-\newcommand\listoffigurename{Figures}
-\newcommand\listoftablename{Tables}
-\renewcommand\listoffigures{
-  \subsection*{\listoffigurename}
-  \@starttoc{lof}
-}
-\renewcommand\listoftables{
-  \subsection*{\listoftablename}
-  \@starttoc{lot}
-}
-\makeatother
-\listoffigures
-\listoftables
+\input{00-1-prologe.tex}
+\input{00-2-publications.tex}
+\input{00-3-toc.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % THESIS
@@ -369,19 +293,13 @@ On the other hand I also felt very comfortable at my university, the University 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % REDEFINE TITLE FORMAT
 %%%%%%%%%%%%%%%%%%%%%%%%
-\input{snp/normalSection.tex}
-
+\input{snp/nonumberSection.tex}
+\fancyhead[RO]{APPENDICES}
 \appendix
-
-\subsection{Long calculus appearing through the chapters}
-\label{app:longcacl}
-\input{ap-01-longcalc.tex}
-
-\subection{Miscellaneous mathematical tools}
-\input{ap-02-miscmath.tex}
+\input{appendix.tex}
 
 \cleardoublepage
-\input{snp/nonumberSection.tex}
+\fancyhead[RO]{\leftmark}
 \bibliography{biblio}
 
 \end{document}
