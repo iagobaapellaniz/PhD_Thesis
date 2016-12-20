@@ -335,7 +335,7 @@ Figure~\ref{fig:bg-preparation-encoding-estimation} illustrates the main steps o
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=1.2]{img/BG_preparation_encoding_estimation.pdf}
-  \caption[The estimation process in quantum metrology]{Sequence of the different steps for the basics of the estimation process in quantum metrology. First, an input state $\rho$ enters the region in which the unknown parameter $\theta$ is imprinted in it, for the most general case, represented with $\Lambda_{\Theta}$. The state with the encoded parameter $\theta$ is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
+  \caption[The estimation process in quantum metrology]{Sequence of the different steps for the basics of the estimation process in quantum metrology. First, an input state $\rho$ enters the region in which the unknown parameter $\theta$ is imprinted in it, for the most general case, represented with $\Lambda_{\theta}$. The state with the encoded parameter $\theta$ is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
   \label{fig:bg-preparation-encoding-estimation}
 \end{figure}
 
@@ -518,6 +518,7 @@ Eq.~\eqref{eq:bg-total-angular-momentum-saturability} leads to a bound on the un
 where $J_{\max}$ is the maximum value a angular momentum component can take, i.e., $N/2$.
 This leads to a bound in the precision when measuring $\expect{J_x}$ as
 \be
+  \label{eq:bg-unpolarize-states-are-better}
   \varinv{\theta} = \frac{\expect{J_y}^2}{\varian{J_x}}\leq 4\varian{J_z}\leq 2N + N^2\lpar 1 - \frac{\expect{J_y}^2}{j_{\max}}\rpar,
 \ee
 which indicates that the precision is limited for almost completely polarized states to the shot-noise scaling.
@@ -563,7 +564,7 @@ The quantum Fisher information can be computed by closed formulas such as
   \label{eq:bg-qfi-definition-convex-roof}
   \qfif{\rho,J_z} &= \inf_{p_k,\psi_{k}} 4 \sum_{k}p_k \varian{J_z}_{\psi_k},
 \end{align}
-for the case of unitary evolution Eq.~\eqref{eq:bg-unitary-homogeneous-field}.
+for the case of unitary evolution Eq.~\eqref{eq:bg-unitary-homogeneous-field} and where the state can be decomposed in its eigenbasis as $\rho=\sum_{\lambda}p_\lambda\ket{\lambda}$ in the first case, or where it is any arbitrary convex decomposition like $\rho=\sum_k p_k \ketbra{\psi_k}{\psi_k}$, used the later in the second case.
 The first one is based on the eigen-decomposition of the state whereas the second is the convex-roof of $4\varian{J_z}$ \citep{Paris2009, Toth2013, Yu2013}.
 Both formulas yield to the same expression for pure states
 \be

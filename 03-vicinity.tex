@@ -1,5 +1,5 @@
 \section{Metrology in the vicinity of Dicke states}
-\label{vd}
+\label{sec:vd}
 \input{snp/doubleLineWaterMark.tex}
 
 \quotes{Robert H. Dicke}{An experimentalist should not be unduely inhibited by theoretical untidyness}
@@ -7,82 +7,109 @@
 \lettrine[lines=2, findent=3pt,nindent=0pt]{I}{n} this chapter we will present recent results regarding the metrological usefulness of a family of unpolarized states.
 Such states can be used as prove states to estimate the homogeneous magnetic field strength, see Section~\ref{sec:bg-quantum-magnetometry} for references about magnetometry.
 It turns out that the unpolarized states are the most adequate states to bite the Heisenberg limit, as it was shown on the Section~\ref{sec:bg-quantum-metrology}.
-Prime examples of such states are GHZ states \citep{Greenberger1990}, which have already been realized experimentally many times \citep{Bowmeester1999, Pan2000, Zhao2003, Lu2007, Gao2010, Sackett2000, Monz2011, Leibfried2012}.
 Hence, these states have attracted the interest of the community.
 
-One of the figures of merit of this such unpolarized, but still useful states is the so-called unpolarized Dicke state \citep{}, which consists of, on its $z$-axis  representation, an equal number of qubits pointing up and pointing down while the whole state is at the symmetric subspace.
+One of the figures of merit of this such unpolarized, but still useful, states is the so-called unpolarized Dicke state \citep{Dicke1954}, which consists of, on its $z$-axis  representation, an equal number of qubits pointing up and pointing down while the whole state is in the symmetric subspace.
 It can be written as follows,
 \be
-  \ket{\text{D}_{N,N/2}} \equiv \ket{\text{D}_{N}}:= \binom{N}{N/2}^{-\frac{1}{2}}
+  \ket{\dicke{N,\frac{N}{2}}} \equiv \ket{\dicke{N}}:= \binom{N}{N/2}^{-\frac{1}{2}}
   \sum_{k\in \sigma_\text{s}}
   \mathcal{P}_{k} \left( \ket{1}^{\otimes N/2} \ket{0}^{\otimes N/2}
   \right),
   \label{eq:vd-unpolarised-dicke}
 \ee
-where $k$ are elements of the set of all possible unique permutations of $N$ elements of 2 kinds, $\sigma_\text{s}$.
+where $k$ are elements of the set of all possible unique permutations of $N$ elements of 2 kinds, $\sigma_\text{s}$, see Appendix~{\ref{app:angular-subspaces}} for more information about this notation.
 Such state is known to be highly entangled \citep{} and to reach Heisenberg scaling when used for magnetometry.
-For these and other reasons unpolarised Dicke states have been created in photonic systems \citep{}, in cold-gases \citep{} and recently in trapped ions \citep{}.
 
 One of the most particular features this state has is that since it is a eigenstate of the collective operator $J_z$ with corresponding eigenvalue equal to zero.
-At the same time, it lives on the subspace where the collective total spin is maximum, i.e, $\expect{\bs{J}^2}=N(N+2)/4$.
+At the same time, it lives in the subspace where the collective total spin is maximum, i.e, $\expect{\bs{J}^2}=N(N+2)/4$.
 With this together with the fact that the state is unpolarized, it turns that it must have a very large uncertainty for the collective spin operators perpendicular to $J_z$, namely $J_x$ and $J_y$.
 
-Those properties attracted our attention to those states since the quantum Fisher information, used to characterize the metrological usefulness, is the convex-roof of $4\varian{J_{\bs{n}}}$, where $\bs{n}$ is the unitary vector pointing in the direction of the magnetic field.
+For metrology, we chose the $z$-axis to be parallel to the magnetic field.
+Hence, the Dicke state should not be an eigenstate of $J_z$, it would not evolve in time making it useless for metrology, but an eigenstate of a perpendicular projection of the angular momentum operator such as $J_x$.
+In this scheme, the state is rotated around the $z$-direction and the rotation angle must be estimated based on collective measurements.
+For this case, a criterion to detect the metrological usefulness of some of these states has been derived for symmetric systems \citep{VD51}.
 
-In this chapter, we characterize the metrological usefulness of noisy unpolarized Dicke states with only few collective measurements of the total spin of the ensemble, without the need for the direct measurement of the sensitivity.
-We also apply our method to recent experimental results with Dicke states.
+In this chapter, we present a condition for metrological usefulness for the case when the second moment of a total angular momentum component is measured to obtain an estimate for the rotation angle.
+Our method is expected to simplify the experimental determination of metrological sensitivity since it is much easier to measure the collective operators of the state than carrying out the metrological procedure and measure directly the sensitivity.
+We also test our approach using the experimental results of Refs.~\citep{VD48,VD50}, which realize parameter estimation with a Dicke state.
+Thus, our work is expected to be useful for similar experiments in the future.
 
-\subsection{Unpolarized states for magnetometry}
+The chapter is organized as follows.
+In Section~\ref{sec:vd-unpolarized-states-magnetometry}, we review some important concepts behind theory of metrology with unpolarized states.
+In Section~\ref{sec:vd-evolution-of-the-expectation-values}, we present our criterion.
+In Section~\ref{sec:vd-comparison-with-qfi}, we compare our result to sensitivity bounds obtained from the quantum Fisher information.
+In Section~\ref{sec:vd-testing-with-experimental-data}, we show how to apply our criterion to experimental results.
 
-Having unpolarized states for magnetometry has been shown useful in Section~\ref{}.
-While the quantum Fisher information would give directly the performance one state would have, this is not feasible in general because a complete knowledge of the state is needed to compute such value.
-On the other hand, we can use the error propagation formula Equation~(XX) to obtain a bound on the precision.
-As one can see on the Figure~\ref{fig:vd-secuence-evo} a pure Dicke state is rotated along the $z$-axis.
-Say that in this case the initial state is an unpolarized Dicke state of aligned with the $x$-axis.
+\subsection{Unpolarized Dicke states for magnetometry}
+\label{sec:vd-unpolarized-states-magnetometry}
+
+The use of unpolarized states for magnetometry has been shown useful in Eq.~\eqref{eq:bg-unpolarize-states-are-better}.
+While the quantum Fisher information would give us directly the performance one state would have, this is not feasible in general because a complete knowledge of the state is needed to compute such value, see Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}.
+On the other hand, we can use the error propagation formula Eq.~\eqref{eq:bg-error-propagation-formula} to obtain a bound on the achievable precision which at the same time bounds the QFI.
+
+As one can see in Figure~\ref{fig:vd-secuence-evo}, a pure Dicke state of 16 qubits, initially an eigenstate of the $J_x$ operator, is rotated along the $z$-axis.
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=.65]{img/plots/VD_evolution_of_dicke.pdf}
-  \caption[Sequence of Dicke state evolution]{Sequence of the evolution of an unpolarized Dicke state of 16 qubits for $\Theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Husimi quasi-probabilistic distribution of the state, and below PDF of the $J_x$ positive-operator valued measure (POVM) for each step of the sequence}
+  \caption[Sequence of Dicke state evolution]{Sequence of the evolution of an unpolarized Dicke state of 16 qubits for $\theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Husimi quasi-probabilistic distribution of the state, and below PDF of the $J_x$ positive-operator valued measure (POVM) for each step of the sequence}
   \label{fig:vd-secuence-evo}
 \end{figure}
-
-The state initially is an eigenstate of the $J_x^k$ operators for $\forall k \in [1,\infty]$.
-Another feature of the sequence is that $\expect{J_l}=0$ for $\forall l\in x,y,z$.
+The state is unpolarized so the expectation value of any component of the total angular momentum remains zero since the rotation of the system does not change that.
 It turns out that measuring the evolution of the second statistical moment of $J_x$ is one of the ways to go.
-It will start having value equal to zero for the pure unpolarized Dicke state, and rapidly will increase its value as it can be seen on the Figure~\ref{fig:vd-secuence-evo}.
-Another heuristic observation is that for $\Theta=\pi/2$ the value of $\expect{J_x^2}$ will be at its maximum been it proportional to $\expect{\bs{J}^2}$ so to $N^2$.
+The expectation value $\expect{J_x^2}$ will start having value equal to zero for a pure unpolarized Dicke state, and rapidly, it will increase its value as it can be seen in the Figure~\ref{fig:vd-secuence-evo}.
+Another heuristic observation is that for $\theta=\pi/2$ the value of $\expect{J_x^2}$ will be at its maximum proportional to $\expect{\bs{J}^2}$ or equivalently to $\mathcal{J}_{N/2}$, see Eq.~\eqref{eq:app-maximum-total-angular-momentum}.
 Hence, the change on the second moment over the phase shift must be in this case proportional to $N^2$.
-From this and for those states, we lead to the conclusion that one only needs to measure the second moment of the collective spin $J_x$ to observe precisions that scale with the Heisenberg limit.
-In the following equation we show the error propagation formula that will give us the obtained precision,
+We lead to the conclusion that one only needs to measure the second moment of the collective spin $J_x$ to achieve Heisenberg scaling for the estimation.
+
+In certain situations, it is better to use Eq.~\eqref{eq:bg-error-propagation-formula} rather than Eq.~\eqref{eq:bg-cramer-rao-bound} for calculating the achievable precision, since it gives the precision for a particular operator to be measured in an experimental setup.
+This is reasonable, since in a typical experiment, only a restricted set of operators can be measured.
+In this work, we will consider many-particle systems in which the particles cannot be accessed individually, and only collective quantities can be measured.
+As we said, measuring the second moment of $J_x$ is a valid choice to estimate the rotation angle.
+In the following equation, we show the error propagation formula when measuring the second moment of the $J_x$ total angular momentum component,
 \be
-  \varian{\Theta} = \frac{\varian{J_x^2}}{|\partial_{\Theta} \expect{J_x}|^2}.
+  \varinv{\theta} = \frac{|\partial_{\theta} \expect{J_x}|^2}{\varian{J_x^2}}.
   \label{eq:vd-error-propagation}
 \ee
 
-\subsection{Evolution of the expectation values}
-With the aim of computing the precision, Equation~{(\ref{eq:vd-error-propagation})}, we will compute the dependence on $\Theta$ of the expectation value of the operator $J_x$ and higher order moments.
-For that first of all we will move onto the Heisenberg picture where the operators evolve in time while the state remains the same.
-The operator $J_x$ can be written a a function of $\Theta$ the following way,
+As a consequence of Eq.~\eqref{}, if
 \be
-  J_x(\Theta) = e^{i \Theta J_z} J_x(0) e^{-i \Theta J_z} = J_x(0) \text{c}_\Theta - J_y(0) \text{s}_{\Theta},
+  \frac{|\partial_{\theta} \expect{J_x}|^2}{\varian{J_x^2}}\geq N
 \ee
-where $J_l(0)$ for $\forall l$ are the collective angular momentum operators at time equal zero, which we will write them simply $J_l$ from now on, and $\text{c}_\Theta$ and $\text{s}_\Theta$ are the trigonometric functions introduced on the first chapter.
+holds, then the system is entangled.
+Hence again, entanglement is required for a large metrological precision.
+Based on Eq.~\eqref{}, we can find entanglement depth of the systems as follows.
+Similarly to the previous paragraph, if for a quantum state
+\be
+  \frac{|\partial_{\theta} \expect{J_x}|^2}{\varian{J_x^2}}\geq kN
+\ee
+holds, then it is at least $(k+1)$-entangled.
+
+\subsection{Evolution of the expectation values}
+\label{sec:vd-evolution-of-the-expectation-values}
+With the aim of computing the precision, Equation~{(\ref{eq:vd-error-propagation})}, we will compute the dependence on $\theta$ of the expectation value of the operator $J_x$ and higher order moments.
+For that, first of all, we will move to the Heisenberg picture where the operators evolve in time while the state remains the same.
+The operator $J_x$ can be written as a function of $\theta$ the following way,
+\be
+  J_x(\theta) = e^{i \theta J_z} J_x(0) e^{-i \theta J_z} = J_x(0) \text{c}_\theta - J_y(0) \text{s}_{\theta},
+\ee
+where $J_l(0)$ for $\forall l$ are the collective angular momentum operators at time equal zero, which we will write them simply $J_l$ from now on, and $\text{c}_\theta$ and $\text{s}_\theta$ are the trigonometric functions introduced on the first chapter.
 
 We need to compute the second and the fourth moments of $J_x$ as it is required by the Equation~{(\ref{eq:vd-error-propagation})}.
 But before any calculation we will make a simplifying assumption which turn to be well supported on the most common situations.
-The assumption is that both expectation values are even functions on $\Theta$,
+The assumption is that both expectation values are even functions on $\theta$,
 \be
   \begin{split}
-    \expect{J_x^2(\Theta)} &=\expect{J_x^2(-\Theta)}, \\
-    \expect{J_x^4(\Theta)} &=\expect{J_x^4(-\Theta)}.
+    \expect{J_x^2(\theta)} &=\expect{J_x^2(-\theta)}, \\
+    \expect{J_x^4(\theta)} &=\expect{J_x^4(-\theta)}.
   \end{split}
   \label{eq:vd-even-f-constraint}
 \ee
 
 The square of $J_x$ in the Heisenberg picture is written as follows,
 \be
-  J_x^2(\Theta)= J_x^2 \text{c}_\Theta^2 + J_y^2 \text{s}_\Theta^2
-  - (J_xJ_y + J_yJ_x) \text{c}_\Theta\text{s}_\Theta.
+  J_x^2(\theta)= J_x^2 \text{c}_\theta^2 + J_y^2 \text{s}_\theta^2
+  - (J_xJ_y + J_yJ_x) \text{c}_\theta\text{s}_\theta.
 \ee
 From the equation above and to fulfill the first constraint on the Equation~{(\ref{eq:vd-even-f-constraint})} it turns out that the expectation value over our yet to be shown initial state of the operator $(J_xJ_y + J_yJ_x)$ must vanish.
 Hence it is equivalent to the first assumption of the Equation~{(\ref{eq:vd-even-f-constraint})} write that
@@ -97,12 +124,12 @@ We will see that as we said before this is easily guarantied for most important 
 As we have done recently with the square of $J_x$ now we will do it for $J_x^4$.
 This way one will be able to distinguish which other combination of operators must vanish in order to have Equation~{(\ref{eq:vd-even-f-constraint})} guarantied. The fourth power of $J_x$ can be written as follows in the Heisenberg picture,
 \begin{multline}
-  J_x^4(\Theta)= J_x^4 \text{c}_\Theta^4 + J_y^4 \text{s}_\Theta^4
-  + (J_x^2J_y^2 + J_xJ_yJ_xJ_y + J_xJ_y^2J_x + J_yJ_xJ_yJ_x + J_yJ_x^2J_y + J_y^2J_x^2) \text{c}_\Theta^2\text{s}_\Theta^2 \\
-  -(J_x^3J_y+J_x^2J_yJ_x+J_xJ_yJ_x^2+J_yJ_x^3)\text{c}_\Theta^3\text{s}_\Theta
-  -(J_xJ_y^3+J_yJ_xJ_y^2+J_y^2J_xJ_y+J_y^3J_x)\text{c}_\Theta\text{s}_\Theta^3.
+  J_x^4(\theta)= J_x^4 \text{c}_\theta^4 + J_y^4 \text{s}_\theta^4
+  + (J_x^2J_y^2 + J_xJ_yJ_xJ_y + J_xJ_y^2J_x + J_yJ_xJ_yJ_x + J_yJ_x^2J_y + J_y^2J_x^2) \text{c}_\theta^2\text{s}_\theta^2 \\
+  -(J_x^3J_y+J_x^2J_yJ_x+J_xJ_yJ_x^2+J_yJ_x^3)\text{c}_\theta^3\text{s}_\theta
+  -(J_xJ_y^3+J_yJ_xJ_y^2+J_y^2J_xJ_y+J_y^3J_x)\text{c}_\theta\text{s}_\theta^3.
 \end{multline}
-And again assuming that its expectation value must be an even function on $\Theta$ it turns out that the second line must be equal to zero when the expectation value is considered.
+And again assuming that its expectation value must be an even function on $\theta$ it turns out that the second line must be equal to zero when the expectation value is considered.
 So $(J_x^3J_y+J_x^2J_yJ_x+J_xJ_yJ_x^2+J_yJ_x^3)$ and $(J_xJ_y^3+J_yJ_xJ_y^2+J_y^2J_xJ_y+J_y^3J_x)$ must vanish again over any candidate state to be used as prove state.
 Hence, the second constraint of the Equation~{(\ref{eq:vd-even-f-constraint})} can be rewritten as follows,
 \be
@@ -114,27 +141,27 @@ Hence, the second constraint of the Equation~{(\ref{eq:vd-even-f-constraint})} c
 
 Finally, we can write how the evolution of second and fourth moments of the $J_x$ operator must look like,
 \begin{align}
-  \expect{J_x^2(\Theta)}=\; &\expect{J_x^2} \text{c}_\Theta^2 + \expect{J_y^2} \text{s}_\Theta^2
+  \expect{J_x^2(\theta)}=\; &\expect{J_x^2} \text{c}_\theta^2 + \expect{J_y^2} \text{s}_\theta^2
   \label{eq:vd-evo-2nd-moment}\\
   \begin{split}
-    \expect{J_x^4(\Theta)}=\; &
-    \expect{J_x^4}\text{c}_\Theta^4 + \expect{J_y^4} \text{s}_\Theta^4 \\
-    & + \expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} \text{c}_\Theta^2\text{s}_\Theta^2.
+    \expect{J_x^4(\theta)}=\; &
+    \expect{J_x^4}\text{c}_\theta^4 + \expect{J_y^4} \text{s}_\theta^4 \\
+    & + \expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} \text{c}_\theta^2\text{s}_\theta^2.
   \end{split}
 \end{align}
 From here we are able to write the evolution of the variance of the second moment when Equation~{(\ref{eq:vd-even-f-constraint})} must be obeyed.
 We obtain
 \be
   \begin{split}
-    \varian{J_x^2(\Theta)} &= \expect{J_x^4(\Theta)} -\expect{J_x^2(\Theta)}^2 \\
-    &= \expect{J_x^4}\text{c}_\Theta^4 + \expect{J_y^4} \text{s}_\Theta^4
-    + \expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} \text{c}_\Theta^2\text{s}_\Theta^2
-    - \big(\expect{J_x^2} \text{c}_\Theta^2 + \expect{J_y^2} \text{s}_\Theta^2\big)^2\\
-    &= \big(\expect{J_x^4}-\expect{J_x^2}^2\big)\text{c}_\Theta^4
-    + \big(\expect{J_y^4}-  \expect{J_y^2}^2\big)\text{s}_\Theta^4
+    \varian{J_x^2(\theta)} &= \expect{J_x^4(\theta)} -\expect{J_x^2(\theta)}^2 \\
+    &= \expect{J_x^4}\text{c}_\theta^4 + \expect{J_y^4} \text{s}_\theta^4
+    + \expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} \text{c}_\theta^2\text{s}_\theta^2
+    - \big(\expect{J_x^2} \text{c}_\theta^2 + \expect{J_y^2} \text{s}_\theta^2\big)^2\\
+    &= \big(\expect{J_x^4}-\expect{J_x^2}^2\big)\text{c}_\theta^4
+    + \big(\expect{J_y^4}-  \expect{J_y^2}^2\big)\text{s}_\theta^4
     + \big(\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}\big)
-    \text{c}_\Theta^2\text{s}_\Theta^2\\
-    &=\varian{J_x^2}\text{c}_\Theta^4 + \varian{J_y^2} \text{s}_\Theta^4+ \big(\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}\big)\text{c}_\Theta^2\text{s}_\Theta^2.
+    \text{c}_\theta^2\text{s}_\theta^2\\
+    &=\varian{J_x^2}\text{c}_\theta^4 + \varian{J_y^2} \text{s}_\theta^4+ \big(\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}\big)\text{c}_\theta^2\text{s}_\theta^2.
   \end{split}
 \ee
 
@@ -142,17 +169,17 @@ The remaining constituent of the Equation~{(\ref{eq:vd-error-propagation})} on w
 Using Equation~{(\ref{eq:vd-evo-2nd-moment}) for the expression of the evolution of the second moment, the denominator of Equation~{(\ref{eq:vd-error-propagation})} follows
 \be
   \begin{split}
-    |\partial_\Theta \expect{J_x^2(\Theta)}|^2 & = |-2\expect{J_x^2}\text{c}_\Theta\text{s}_\Theta+2\expect{J_y^2}\text{c}_\Theta\text{s}_\Theta|^2\\
-    & = 4\expect{J_y^2-J_x^2}^2\text{c}_\Theta^2\text{s}_\Theta^2.
+    |\partial_\theta \expect{J_x^2(\theta)}|^2 & = |-2\expect{J_x^2}\text{c}_\theta\text{s}_\theta+2\expect{J_y^2}\text{c}_\theta\text{s}_\theta|^2\\
+    & = 4\expect{J_y^2-J_x^2}^2\text{c}_\theta^2\text{s}_\theta^2.
   \end{split}
 \ee
 
-From the equations above directly follows expression for the precision of $\Theta$,
+From the equations above directly follows expression for the precision of $\theta$,
 \be
 \begin{split}
-  \varian{\Theta} & = \frac{\varian{J_x^2}\text{c}_\Theta^4 + \varian{J_y^2} \text{s}_\Theta^4+ \big(\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}\big)\text{c}_\Theta^2\text{s}_\Theta^2}
-  {4\expect{J_y^2-J_x^2}^2\text{c}_\Theta^2\text{s}_\Theta^2}\\
-  & = \frac{\varian{J_x^2}\text{t}_\Theta^{-2} + \varian{J_y^2} \text{t}_\Theta^2+ \expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}}
+  \varian{\theta} & = \frac{\varian{J_x^2}\text{c}_\theta^4 + \varian{J_y^2} \text{s}_\theta^4+ \big(\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}\big)\text{c}_\theta^2\text{s}_\theta^2}
+  {4\expect{J_y^2-J_x^2}^2\text{c}_\theta^2\text{s}_\theta^2}\\
+  & = \frac{\varian{J_x^2}\text{t}_\theta^{-2} + \varian{J_y^2} \text{t}_\theta^2+ \expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} - 2 \expect{J_x^2}\expect{J_y^2}}
   {4\expect{J_y^2-J_x^2}^2}.
 \end{split}
 \label{eq:vd-result-before-simp}
@@ -161,7 +188,7 @@ To this calculations further computations follows mainly regarding to the follow
 This calculus is left for the Appendix~{\ref{app:simplification-of-4th-moments}}.
 Finally, the expression Equation~{(\ref{eq:vd-result-before-simp})} leads to the following,
 \be
-  \varian{\Theta} = \frac{\varian{J_x^2}\text{t}_\Theta^{-2} + \varian{J_y^2} \text{t}_\Theta^2 + 4\expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
+  \varian{\theta} = \frac{\varian{J_x^2}\text{t}_\theta^{-2} + \varian{J_y^2} \text{t}_\theta^2 + 4\expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
   {4\expect{J_y^2-J_x^2}^2}
   \label{eq:vd-precision-as-theta}
 \ee
@@ -170,19 +197,19 @@ Finally, the expression Equation~{(\ref{eq:vd-result-before-simp})} leads to the
 We have verified the correctness of our analytical formula with a direct numeric simulation of the Equation~[ERROR PROP. FORM.] and the equation above.
 For that we, have used the ground-state of $H=J_x^2+J_y$ for 6 qubits, $|\text{GS}\rangle$.
 This state in principle does not have extra symmetries where further simplifications would take part on the final expression of the formula, so is more adequate for testing.
-We have computed the evolution of the expectation values of the second and the fourth moments of the operator $J_x$ in the range of half a cycle, i.e, $\Theta \in [0,\pi]$, for thousand of equidistant points.
-We choose so high density of points on the range in order to compute a more accurate derivative of the expectation value $\partial_{\Theta} \langle J_x^2\rangle$ appearing on the Equation~[EPF], see Figure~[REF]~(a).
+We have computed the evolution of the expectation values of the second and the fourth moments of the operator $J_x$ in the range of half a cycle, i.e, $\theta \in [0,\pi]$, for thousand of equidistant points.
+We choose so high density of points on the range in order to compute a more accurate derivative of the expectation value $\partial_{\theta} \langle J_x^2\rangle$ appearing on the Equation~[EPF], see Figure~[REF]~(a).
 Finally, we have also checked that the constraints assumed at the beginning of this section are fulfilled.
-For that aim, the range of the evolution time has been $\Theta \in [-\pi,\pi]$ and we have computed the expectation values for five hundreds of equidistant points, see Figure~[REF]~(b).
+For that aim, the range of the evolution time has been $\theta \in [-\pi,\pi]$ and we have computed the expectation values for five hundreds of equidistant points, see Figure~[REF]~(b).
 We can conclude saying that our formula exactly reproduces the evolution of the error propagation formula, Equation~[REF].
 \begin{figure}[htp]
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/VD_simulation.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/VD_parity_simulation.pdf}
-  \caption[(a) Evolution of $\Theta$. (b) Evolution of expectation values]{(a) Evolution of the precision for 6 qubits based on the simulation of the system and its expectation values.
+  \caption[(a) Evolution of $\theta$. (b) Evolution of expectation values]{(a) Evolution of the precision for 6 qubits based on the simulation of the system and its expectation values.
   The agreement with the Equation~[REF] is shown on the inset plot where the square of the difference between two approaches, the analytical and the simulation, is plotted.
   The difference is more or less two orders of magnitude below the actual value for the relevant points, which mainly comes because of the error coming from computing the derivative which has to be done approximately between two neighbor points.
-  (b) Verification of the parity with respect to $\Theta$ of the expectation values of the second and the fourth moment, so to fulfill the constraint Equation~[REF].}
+  (b) Verification of the parity with respect to $\theta$ of the expectation values of the second and the fourth moment, so to fulfill the constraint Equation~[REF].}
   \label{fig:bg-histograms}
 \end{figure}
 
@@ -192,11 +219,11 @@ One can realize that the whole dependence on the phase shift is in the first two
 This way one can minimize the sum on the first two terms in order to find where the precision is best.
 So it follows that,
 \be
-  \tan^2(\Theta_{\text{opt}}) = \sqrt{\frac{\varian{J_x^2}}{\varian{J_y^2}}}
+  \tan^2(\theta_{\text{opt}}) = \sqrt{\frac{\varian{J_x^2}}{\varian{J_y^2}}}
 \ee
 which inserted on the Equation~{(\ref{eq:vd-precision-as-theta})} gives us the optimal precision when the second moment $\expect{J_x^2}$ is measured based on the initial expectation values of the input state. The optimal precision is written in the following way,
 \be
-  \varian{\Theta}_{\text{opt}} = \frac{\sqrt{\varian{J_x^2} \varian{J_y^2} } + 4 \expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
+  \varian{\theta}_{\text{opt}} = \frac{\sqrt{\varian{J_x^2} \varian{J_y^2} } + 4 \expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
   {4\expect{J_y^2-J_x^2}^2}.
   \label{eq:vd-precision}
 \ee.
@@ -215,11 +242,12 @@ The proof of the Equation~{(\ref{eq:vd-4y-moment-pure-dicke})} needs more algebr
 
 From the equations above, one lead to the following expression for the precision of the phase shift for a pure unpolarised Dicke state,
 \be
-  \varian{\Theta} = \frac{2}{N(N+2)},
+  \varian{\theta} = \frac{2}{N(N+2)},
 \ee
 which coincides exactly with the inverse quantum Fisher information for such state.
 
 \subsection{Testing the formula against some known states}
+\label{sec:vd-comparison-with-qfi}
 
 In this section we will compare our criteria based on few expectation values against the corresponding quantum Fisher information obtained for some known input states.
 Those input states will be first the family of states defined as the ground states of the following Hamiltonian, called the spin-squeezing Hamiltonian,
@@ -260,18 +288,19 @@ On the other hand for the thermal state, $\rho_T$, we have that it is invariant 
 for arbitrary $\forall \alpha$.
 
 \be
-  \tr(e^{i\Theta J_z}J_y^m e^{-i\Theta J_z}\rho_T) = \tr(e^{i\Theta J_z}J_y^m e^{-i\Theta J_z} e^{-i \alpha J_x} \rho_T e^{i \alpha J_x})
+  \tr(e^{i\theta J_z}J_y^m e^{-i\theta J_z}\rho_T) = \tr(e^{i\theta J_z}J_y^m e^{-i\theta J_z} e^{-i \alpha J_x} \rho_T e^{i \alpha J_x})
 \ee
 
 If we choose $\alpha = \pi$ then we rotate all the orthogonal angular momentum operators such that $J_y \rightarrow - J_x$ and $J_z \rightarrow -J_z$.
-Therefore, $e^{i \pi J_x}e^{i\Theta J_z}J_y^m e^{-i\Theta J_z} e^{-i \pi J_x}=e^{-i\Theta J_z}(-J_y)^m e^{i\Theta J_z}$.
+Therefore, $e^{i \pi J_x}e^{i\theta J_z}J_y^m e^{-i\theta J_z} e^{-i \pi J_x}=e^{-i\theta J_z}(-J_y)^m e^{i\theta J_z}$.
 Hence, for even $m$ and particularly for $m=2,4$ we have that,
 \be
-  \tr(e^{i\Theta J_z}J_y^m e^{-i\Theta J_z}\rho_T) = \tr(e^{-i\Theta J_z}J_y^m e^{i\Theta J_z}\rho_T ),
+  \tr(e^{i\theta J_z}J_y^m e^{-i\theta J_z}\rho_T) = \tr(e^{-i\theta J_z}J_y^m e^{i\theta J_z}\rho_T ),
 \ee
 so the Equation~{(XXX)} is granted.
 
 \subsection{Using our method with real experimental data}
+\label{sec:vd-testing-with-experimental-data}
 
 On reference [XXX], it is produced on the laboratory a state with the proper characteristics of an unpolarised Dicke state, small variance on one of the directions and very large one on the perpendicular directions to this.
 It is also invariant under rotations around $x$-axis.
@@ -280,7 +309,7 @@ Effectively, the state has the following form,
   \rho = \frac{1}{2\pi}\int e^{-i\alpha J_x} \rho_0 e^{i\alpha J_x},
 \ee
 where $\rho_0$is what we would obtain if we would have access to the phase reference.
-Hence we have that at $\Theta=0$ all the statistical moments $\expect{J_z^m}=\expect{J_y^m}$ are equal.
+Hence we have that at $\theta=0$ all the statistical moments $\expect{J_z^m}=\expect{J_y^m}$ are equal.
 
 Simplification of our precision formula on Equation~{(XXX)}.
 First, we simplify the expectation value $\expect{J_xJ_z^2J_x}$ in the following way,
@@ -295,7 +324,7 @@ Notice that obtaining $\expect{J_xJ_z^2J_x}$ is hard experimentally.
 This simplification can only make our estimation of the precision worse while for symmetric states the equality holds.
 The bound from below for the precision can be writtes as,
 \be
-  \varian{\Theta}_{\text{opt}} \leq \frac{\sqrt{\varian{J_x^2} \varian{J_y^2} } + \expect{J_y^2} + \frac{3N(N+2)-8}{4} \expect{J_x^2} - 2\expect{J_x^2}\expect{J_y^2} - 3\expect{J_x^4}}
+  \varian{\theta}_{\text{opt}} \leq \frac{\sqrt{\varian{J_x^2} \varian{J_y^2} } + \expect{J_y^2} + \frac{3N(N+2)-8}{4} \expect{J_x^2} - 2\expect{J_x^2}\expect{J_y^2} - 3\expect{J_x^4}}
   {4\expect{J_y^2-J_x^2}^2},
 \ee
 where some terms were reordered and further simplified.
@@ -316,7 +345,7 @@ The measured data for such system is
 \ee
 Hence we obtain the maximum precision,
 \be
-  \frac{(\Delta \Theta)^{-2}_{\text{opt}}}{N} \geq 3.7 \pm 1.5
+  \frac{(\Delta \theta)^{-2}_{\text{opt}}}{N} \geq 3.7 \pm 1.5
 \ee
 with boot straping methods.
 The direct substitution would yield to a 3.3 gain over the shot-noise limit.
@@ -325,7 +354,7 @@ Next we plot the value for the precision substituting directly the measured data
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=.65]{img/plots/VD_precision_theta.pdf}
-  \caption[Evolution of the precision for $\Theta$.]{The (solid) line shows how the precision of $\Theta$ varies through the evolution. Notice that for the initial moment the precision is zero and that it reaches a maximum at $\Theta \approx 0.0057$ highlighted with the vertical (dashed) line. The gray area represent the region where the precision is below the shot-noise limit.}
+  \caption[Evolution of the precision for $\theta$.]{The (solid) line shows how the precision of $\theta$ varies through the evolution. Notice that for the initial moment the precision is zero and that it reaches a maximum at $\theta \approx 0.0057$ highlighted with the vertical (dashed) line. The gray area represent the region where the precision is below the shot-noise limit.}
   \label{fig:vd-precision-theta}
 \end{figure}
 
@@ -345,10 +374,10 @@ So in this case we use $\beta=3$ assuming that the distribution function has Gau
 
 From these considerations we are able to write a second bound with fewer expectation values for the optimal precision such that,
 \be
-  \varian{\Theta}_{\text{opt}} \leq \frac{\expect{J_y^2} + \frac{3N(N+2)-8}{4} \expect{J_x^2} + \Big(\sqrt{\frac{N^2}{2\expect{J_y^2}}-2} - 2 \Big) \expect{J_y^2}\expect{J_x^2} - 9\expect{J_x^2}^2}
+  \varian{\theta}_{\text{opt}} \leq \frac{\expect{J_y^2} + \frac{3N(N+2)-8}{4} \expect{J_x^2} + \Big(\sqrt{\frac{N^2}{2\expect{J_y^2}}-2} - 2 \Big) \expect{J_y^2}\expect{J_x^2} - 9\expect{J_x^2}^2}
   {4\expect{J_y^2-J_x^2}^2}.
 \ee
-We have used this formula to compute the bound on the optimal precision with the measured data shown on Equation~{(XXX)}, $(\Delta \Theta)^{-2}_{\text{opt}} \geq 2.9N$, see Figure~{\ref{fig:vd-experimental}}.
+We have used this formula to compute the bound on the optimal precision with the measured data shown on Equation~{(XXX)}, $(\Delta \theta)^{-2}_{\text{opt}} \geq 2.9N$, see Figure~{\ref{fig:vd-experimental}}.
 
 \begin{figure}[htp]
   \centering
