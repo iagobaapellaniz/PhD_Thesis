@@ -7,7 +7,7 @@ jobname=equations
 # String for the equation. Change it as you want
 texstr="
   \displaystyle
-  Bxyz \rho_{\text{i}}\rho_{\text{f}}
+  \theta
 "
 
 # Patch to solve relative path problems
