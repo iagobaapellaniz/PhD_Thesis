@@ -568,6 +568,7 @@ for the case of unitary evolution Eq.~\eqref{eq:bg-unitary-homogeneous-field} an
 The first one is based on the eigen-decomposition of the state whereas the second is the convex-roof of $4\varian{J_z}$ \citep{Paris2009, Toth2013, Yu2013}.
 Both formulas yield to the same expression for pure states
 \be
+  \label{eq:bg-qfi-for-pure-states}
   \qfif{\ket{\psi}, J_z} = 4\varian{J_z},
 \ee
 since the convex-roof over a pure state is computed on the state itself, and using first the identity $(a-b)^2 = (a+b)^2 - 4 ab$ and second that $p_\lambda = \delta_{\lambda,1}$ (we choose the pure state to be $\ket{1}$ without loss of generality) in Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition} we arrive at the result
@@ -681,12 +682,16 @@ which is one or less for separable states and where it can take at most the valu
 
 On the other hand, for $k$-producible states the QFI is bounded from above, similarly as we did in Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:bg-heisenberg-limit}, by \citep{Hyllus2012, Toth2012}
 \be
-  \qfif{\rho, J_z}\leq sk^2 + (N-sk)^2
+  \begin{split}
+    \chi &\stackrel{\phantom{k\ll N}}{\leq} \frac{sk^2 + (N-sk)^2}{N},\\
+    &\stackrel{k\ll N}{\lesssim} k,
+  \end{split}
+  \label{eq:bg-entanglement-depth-for-qfi}
 \ee
-where $s$ is the integer part of $\frac{N}{k}$.
-It is instructive to write the equation above for the case $N$ divisible by $k$ as
+where $s$ is the integer part of $\frac{N}{k}$ and we write the case on which $k\ll N$.
+It is instructive to write the equation above for the case in which $N$ is exactly divisible by $k$ as
 \be
-  \qfif{\rho, J_z}\leq{Nk}.
+  \chi\leq{k}.
 \ee
 Thus, the bounds reachable by $k$-producible states are distributed linearly in $k$.
 

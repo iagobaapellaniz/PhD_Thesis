@@ -18,7 +18,8 @@ It can be written as follows,
   \right),
   \label{eq:vd-unpolarised-dicke}
 \ee
-where $k$ are elements of the set of all possible unique permutations of $N$ elements of 2 kinds, $\sigma_\text{s}$, see Appendix~{\ref{app:angular-subspaces}} for more information about this notation.
+where $k$ are elements of the set of all possible unique permutations of $N$ elements of 2 kinds, $\sigma_\text{s}$, see Appendix~
+ef{app:angular-subspaces} for more information about this notation.
 Such state is known to be highly entangled \citep{} and to reach Heisenberg scaling when used for magnetometry.
 
 One of the most particular features this state has is that since it is a eigenstate of the collective operator $J_z$ with corresponding eigenvalue equal to zero.
@@ -87,7 +88,7 @@ holds, then it is at least $(k+1)$-entangled.
 
 \subsection{Evolution of the expectation values}
 \label{sec:vd-evolution-of-the-expectation-values}
-With the aim of computing the precision, Eq.~{(\ref{eq:vd-error-propagation})}, we will compute the dependence on $\theta$ of the expectation value of the operator $J_x$ and higher order moments.
+With the aim of computing the precision, Eq.~\eqref{eq:vd-error-propagation}, we will compute the dependence on $\theta$ of the expectation value of the operator $J_x$ and higher order moments.
 For that, first of all, we will move to the Heisenberg picture where the operators evolve in time while the state remains the same.
 The operator $J_x$ can be written as a function of $\theta$ in the following way,
 \be
@@ -95,7 +96,7 @@ The operator $J_x$ can be written as a function of $\theta$ in the following way
 \ee
 where $J_l(0)$ for $\forall l$ are the collective angular momentum operators at time equal zero, which we will write them simply $J_l$ from now on, and $\text{c}_\theta$ and $\text{s}_\theta$ are the trigonometric functions introduced on the first chapter.
 
-We need to compute the second and the fourth moments of $J_x$ as it is required by the Eq.~{(\ref{eq:vd-error-propagation})}.
+We need to compute the second and the fourth moments of $J_x$ as it is required by the Eq.~\eqref{eq:vd-error-propagation}.
 But before any calculation we will make a simplifying assumption which turn to be true for the most common situations.
 The assumption is that both expectation values are even functions on $\theta$, so
 \be
@@ -115,18 +116,18 @@ The square of $J_x$ in the Heisenberg picture is written as follows,
   J_x^2(\theta)= J_x^2 \text{c}_\theta^2 + J_y^2 \text{s}_\theta^2
   - (J_xJ_y + J_yJ_x) \text{c}_\theta\text{s}_\theta.
 \ee
-From the equation above and to fulfill the first constraint on the Eq.~{(\ref{eq:vd-even-f-constraint})} it turns out that the expectation value of the operator $(J_xJ_y + J_yJ_x)$ must vanish.
-Hence, due to Eq.~{(\ref{eq:vd-even-f-constraint})} we can write that
+From the equation above and to fulfill the first constraint on the Eq.~\eqref{eq:vd-even-f-constraint} it turns out that the expectation value of the operator $(J_xJ_y + J_yJ_x)$ must vanish.
+Hence, due to Eq.~\eqref{eq:vd-even-f-constraint} we can write that
 \be
   \expect{\{J_x,J_y\}} = 0
   \label{eq:vd-init-2nd-constraint}
 \ee
 where $\{\, ,\,\}$ stands for the anticommutator.
-Apart for been simpler to compute the Eq.~{(\ref{eq:vd-init-2nd-constraint})} is based also on initial expectation values of the state.
+Apart for been simpler to compute the Eq.~\eqref{eq:vd-init-2nd-constraint} is based also on initial expectation values of the state.
 We will see that as we said before this is easily guarantied for most important cases.
 
 As we have done with the expectation value of the square of $J_x$, now we  do the same for $J_x^4$.
-This way one will be able to distinguish which other expectation value of combination of operators must vanish in order to have Eq.~{(\ref{eq:vd-even-f-constraint})} guarantied.
+This way one will be able to distinguish which other expectation value of combination of operators must vanish in order to have Eq.~\eqref{eq:vd-even-f-constraint} guarantied.
 The fourth power of $J_x$ can be written as follows in the Heisenberg picture,
 \begin{multline}
   J_x^4(\theta)= J_x^4 \text{c}_\theta^4 + J_y^4 \text{s}_\theta^4
@@ -136,7 +137,7 @@ The fourth power of $J_x$ can be written as follows in the Heisenberg picture,
 \end{multline}
 And again assuming that its expectation value must be an even function on $\theta$ it turns out that the expectation value of the second line must be equal to zero.
 So, the expectation value of $(J_x^3J_y+J_x^2J_yJ_x+J_xJ_yJ_x^2+J_yJ_x^3)$ and $(J_xJ_y^3+J_yJ_xJ_y^2+J_y^2J_xJ_y+J_y^3J_x)$ must vanish.
-Hence, the second constraint of the Eq.~{(\ref{eq:vd-even-f-constraint})} can be fulfilled if
+Hence, the second constraint of the Eq.~\eqref{eq:vd-even-f-constraint} can be fulfilled if
 \be
   \begin{split}
     \expect{\big\{J_x^2 , \{ J_x,J_y\}\big\}}=0,\\
@@ -154,7 +155,7 @@ Finally, we can write the simplified evolution of second and fourth moments of t
     & + \expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2} \text{c}_\theta^2\text{s}_\theta^2.
   \end{split}
 \end{align}
-From here we are able to write the evolution of the variance of the second moment when Eq.~{(\ref{eq:vd-even-f-constraint})} must be obeyed.
+From here we are able to write the evolution of the variance of the second moment when Eq.~\eqref{eq:vd-even-f-constraint} must be obeyed.
 We obtain
 \be
   \begin{split}
@@ -170,8 +171,8 @@ We obtain
   \end{split}
 \ee
 
-The remaining constituent of the Eq.~{(\ref{eq:vd-error-propagation})} on which we will base our result for the precision, is the modulus square of the derivative of the second moment of the $J_x$ operator.
-Using Eq.~{(\ref{eq:vd-evo-2nd-moment}) for the expression of the evolution of the second moment, the numerator of Eq.~{(\ref{eq:vd-error-propagation})} follows
+The remaining constituent of the Eq.~\eqref{eq:vd-error-propagation} on which we will base our result for the precision, is the modulus square of the derivative of the second moment of the $J_x$ operator.
+Using Eq.~\eqref{eq:vd-evo-2nd-moment} for the expression of the evolution of the second moment, the numerator of Eq.~\eqref{eq:vd-error-propagation} follows
 \be
   \begin{split}
     |\partial_\theta \expect{J_x^2(\theta)}|^2 & = |-2\expect{J_x^2}\text{c}_\theta\text{s}_\theta+2\expect{J_y^2}\text{c}_\theta\text{s}_\theta|^2\\
@@ -190,8 +191,9 @@ From the equations above directly follows expression for the precision of $\thet
 \label{eq:vd-result-before-simp}
 \ee
 To this calculations further computations follows mainly regarding to the following expectation value $\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2}$.
-This calculus is left for the Appendix~{\ref{app:simplification-of-4th-moments}}.
-Finally, the expression Eq.~{(\ref{eq:vd-result-before-simp})} can be written as
+This calculus is left for the Appendix~
+ef{app:simplification-of-4th-moments}.
+Finally, the expression Eq.~\eqref{eq:vd-result-before-simp} can be written as
 \be
   \varian{\theta} = \frac{\varian{J_x^2}\text{t}_\theta^{-2} + \varian{J_y^2} \text{t}_\theta^2 + 4\expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
   {4\expect{J_y^2-J_x^2}^2}
@@ -221,85 +223,119 @@ One can realize that the whole dependence on the phase shift is in the first two
 This way one can minimize the sum on the first two terms in order to find where the precision is best.
 So it follows that,
 \be
+  \label{eq:vd-optimal-phase}
   \tan^2(\theta_{\text{opt}}) = \sqrt{\frac{\varian{J_x^2}}{\varian{J_y^2}}}
 \ee
-which inserted on the Eq.~{(\ref{eq:vd-precision-as-theta})} gives us the optimal precision when the second moment $\expect{J_x^2}$ is measured based on the initial expectation values of the input state. The optimal precision is written in the following way,
+which inserted on the Eq.~\eqref{eq:vd-precision-as-theta} gives us the optimal precision when the second moment $\expect{J_x^2}$ is measured based on the initial expectation values of the input state. The optimal precision is written in the following way,
 \be
   \varian{\theta}_{\text{opt}} = \frac{\sqrt{\varian{J_x^2} \varian{J_y^2} } + 4 \expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}
   {4\expect{J_y^2-J_x^2}^2}.
   \label{eq:vd-precision}
 \ee.
 
-We conclude with this section checking our bound for the pure unpolarised Dicke state aligned with the $x$-axis, $\ket{\text{D}_N}_x$, whose precision bound is well known, Eq.~{([XXX])}.
-With this aim we compute all the expectation values needed for the Eq.~{(\ref{eq:vd-precision})} which almost all of them are trivial, $\expect{J_xJ_y^2J_x}=\expect{J_x^4}=\expect{J_x^2}=0$.
-The rest are obtained in the following way,
-\begin{align}
-  \expect{J_y^2} & = \expect{J_z^2} = \frac{N (N+2)}{8},
-  \label{eq:vd-2moment-pure-dicke}\\
-  \expect{J_y^4} & = \frac{N+2}{8}\left(\frac{3N(N+2)}{16}-\frac{1}{2}\right).
-  \label{eq:vd-4y-moment-pure-dicke}
-\end{align}
-The Eq.~{(\ref{eq:vd-2moment-pure-dicke})} follows directly from the fact that the state is invariant under rotations on the $x$-axis, so they are its expectation values, because the sum of all the second moments must give the value of the total angular momentum, in this case the maximum which is $\expect{\bs{J}^2} = \frac{N (N+2)}{4}$, and because $\expect{J_x^2}=0$.
-The proof of the Eq.~{(\ref{eq:vd-4y-moment-pure-dicke})} needs more algebra and has been left for the Appendix~{\ref{ap:}}.
-
-From the equations above, one lead to the following expression for the precision of the phase shift for a pure unpolarised Dicke state,
+We conclude with this section checking our bound for pure unpolarized Dicke state aligned with the $x$-axis, $\ket{\dicke{N}}_x$, whose precision bound is well known using the QFI for pure states Eq.~\eqref{eq:bg-qfi-for-pure-states},
 \be
-  \varian{\theta} = \frac{2}{N(N+2)},
+  \qfif{\ket{\dicke{N}}_x, J_z} = 4\varian{J_z}_{\ket{\dicke{N}}_x}=\frac{N(N+2)}{2}.
 \ee
-which coincides exactly with the inverse quantum Fisher information for such state.
+With this aim we compute all the expectation values needed for the Eq.~\eqref{eq:vd-precision} which almost all of them are trivial, $\expect{J_xJ_y^2J_x}=\expect{J_x^4}=\expect{J_x^2}=0$ since the state is an eigenstate of $J_x$ with an eigenvalue zero.
+The last expectation value is obtained as
+\be
+  \expect{J_y^2} = \expect{J_z^2} = \frac{N (N+2)}{8}.
+  \label{eq:vd-2moment-pure-dicke}
+\ee
+Note that for the Eq.~\eqref{eq:vd-2moment-pure-dicke} we use that the state is invariant under rotations over the $x$-axis, that the sum of all the second moments must give $\expect{\bs{J}^2} = \frac{N (N+2)}{4}$, and that $\expect{J_x^2}=0$.
+Hence, the Eq.~\eqref{eq:vd-2moment-pure-dicke} holds.
+
+From the equation above and using the expression for the optimal precision Eq.~\eqref{eq:vd-precision}, one leads to the following formula for the precision of the phase shift for a pure unpolarized Dicke state,
+\be
+  \varian{\theta}_{\text{opt}} = \frac{2}{N(N+2)},
+\ee
+which coincides exactly with the inverse quantum Fisher information for such state \citep{VD48}.
+Hence for the ideal Dicke state, the Cramér-Rao bound Eq.~\eqref{eq:bg-quantum-cr-bound} is saturated, which means that estimating the phase shift $\theta$ using the measurement of $\expect{J_x^2}$ is optimal.
+Based on Eq.~\eqref{eq:vd-optimal-phase}, we add that the optimal angle for the ideal Dicke state is $\theta_{\text{opt}}=0$.
 
 \subsection{Testing the formula against some known states}
 \label{sec:vd-comparison-with-qfi}
 
-In this section we will compare our criteria based on few expectation values against the corresponding quantum Fisher information obtained for some known input states.
-Those input states will be first the family of states defined as the ground states of the following Hamiltonian, called the spin-squeezing Hamiltonian,
-\be
-  H_\lambda = J_x^2 - \lambda J_y.
-\ee
-For $\lambda$ equal to zero we have the unpolarized Dicke state, Eq.~{(\ref{eq:vd-unpolarised-dicke})}, and for $\lambda$ large we recover the coherent totally polarized state pointing onto the $y$-direction.
-In the meantime the state is also a spin-squeezed state, therefore the name of the Hamiltonian.
-The ground state is defined such that
-\be
-  \lambda_{\min} = \tr(H_\lambda \rho_\lambda),
-\ee
-where $\lambda_{\min}$ is the lowest eigenvalue of $H_\lambda$.
-The state $\rho_\lambda$ is invariant under permutations of the particles and it is also pure.
-Moreover the state $\rho_\lambda$ is symmetric.
+In this section, we will compare our criteria based on few expectation values against the corresponding quantum Fisher information obtained for some known states.
+We find that our formula gives a good lower bound on the quantum Fisher information, which is the best achievable precision when any measurement is allowed.
+However note that the Cramér-Rao bound might be impractical.
 
-The second family of input states we are going use are the Gaussian mixture of Dicke states around the unpolarized Dicke state, which have the following form as function of $\beta$,
+Let us consider first the spin squeezing states.
+Those states will be defined as the ground states $\ket{\text{GS}}_\lambda$ of the following Hamiltonian, called the spin-squeezing Hamiltonian
 \be
-  \rho_{(T)} \propto \sum_{m=-N/2}^{N/2} e^{- \frac{m^2}{T}} \ket{\text{D}_N^m}_x\bra{\text{D}_N^m}_x.
+  H_\lambda = J_x^2 - \lambda J_y,
+  \label{eq:vd-ss-hamiltonian}
 \ee
-
+see Appendix~\ref{app:spin-squeezing-hamiltonian}.
+For $\lambda>0$, the ground state is unique, and it is in the symmetric subspace.
+Hence, we can restrict to this subspace for our computations thus we can model larger systems.
+For $\lambda\rightarrow\infty$, the ground state is the completely polarized state.
+And for $\lambda\rightarrow 0^{+}$, it is the Dicke state Eq.~\eqref{eq:vd-unpolarised-dicke}.
+Note that for $\lambda=0$ the eigenvalue is degenerated, so there are more than one ground states, thus we must use the limit from the positive axis to meet the Dicke state.
+Figure~\ref{fig:vd-comparing-the-bounds}~(a) shows the sensitivity we obtained together with the QFI for the same states.
+Our bound is close to the QFI when the state is well polarized.
+It also coincides with the bound in the $\lambda\rightarrow 0^{+}$ limit, when the ground state is close to the unpolarized Dicke state.
 \begin{figure}[htp]
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/VD_against_spsq.pdf}
   \igwithlabel{(b)}{scale=.65}{img/plots/VD_against_therm.pdf}
   \caption[Bound against known QFIs for different states.]{Comparison between our formula for the precision and the QFI for different states. (a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
-  \label{fig:bg-histograms}
+  \label{fig:vd-comparing-the-bounds}
 \end{figure}
 
-After showing how the optimal precision formula behaves compared with the quantum Fisher information for those two families of states, we also have to proof that they indeed fulfill the constraints on Eq.~{(\ref{eq:vd-even-f-constraint})}.
-
-For the spin-squeezed state , $\rho_\lambda$, we have that it is invariant under
-
-On the other hand for the thermal state, $\rho_T$, we have that it is invariant under rotations around the $x$-axis
+The second family of states we use to test our formula are the Gaussian mixture of Dicke states around the unpolarized Dicke state,
+which have the following form as function of $T$ as
 \be
-  \rho_T = e^{-i \alpha J_x} \rho_T e^{i \alpha J_x},
+  \rho_{T} \propto \sum_{m=0}^{N} e^{- \frac{(m+N/2)^2}{T}} \ket{\dicke{N,m}}_x\bra{\dicke{N,m}}_x
 \ee
-for arbitrary $\forall \alpha$.
+for even $N$, where $\ket{\dicke{N,m}}$ is defined in Eq.~\eqref{eq:app-definition-of-dicke-states}.
+It can be used to model a noisy or thermal unpolarized Dicke state.
+For $T=0$, we obtain the pure unpolarized Dicke state.
+For $T>0$, other symmetric Dicke states in the vicinity of the unpolarized one are also populated.
+The result can be seen in Figure~\ref{fig:vd-comparing-the-bounds}-(b).
+Again, our bound seems to be quite close to the corresponding QFI.
 
-\be
-  \tr(e^{i\theta J_z}J_y^m e^{-i\theta J_z}\rho_T) = \tr(e^{i\theta J_z}J_y^m e^{-i\theta J_z} e^{-i \alpha J_x} \rho_T e^{i \alpha J_x})
-\ee
+Note also that in Figure~\ref{fig:vd-comparing-the-bounds}, based on Eq.~\eqref{eq:bg-entanglement-depth-for-qfi}, if the bound turns to be greater than $k$ integer, then a metrologically useful $(k+1)$-particle entanglement is detected in the system.
+Note that this is true whenever $k$ is a divisor of $N$, or $k\ll N$.
 
-If we choose $\alpha = \pi$ then we rotate all the orthogonal angular momentum operators such that $J_y \rightarrow - J_x$ and $J_z \rightarrow -J_z$.
-Therefore, $e^{i \pi J_x}e^{i\theta J_z}J_y^m e^{-i\theta J_z} e^{-i \pi J_x}=e^{-i\theta J_z}(-J_y)^m e^{i\theta J_z}$.
-Hence, for even $m$ and particularly for $m=2,4$ we have that,
+Although showing how the optimal precision formula behaves compared with the quantum Fisher information for those two families of states, we also have to proof that they indeed they fulfill the constraints appearing in Eq.~\eqref{eq:vd-even-f-constraint}.
+
+To proof that first of all, we compute the Eq.~\eqref{eq:vd-even-f-constraint} for the spin-squeezed states $\ket{\text{GS}}_{\lambda}$.
+For that it is enough to know that since those states are non-degenerated eigenvalue must preserve the symmetries of the Hamiltonian.
+In this case, the Hamiltonian Eq.~\eqref{eq:vd-ss-hamiltonian} is invariant under $x\leftrightarrow -x$ and $z\leftrightarrow -z$, thus it must be invariant under $n\pi$ angle rotations under the $y$-axis for $n$ integer, for more references about symmetries in quantum mechanics one can check References \cite{Sakurai2014, Cohen-Tannoudji1977}.
+Hence, we can write for the evolution of the expectation value of any power of the $J_x$ that
 \be
-  \tr(e^{i\theta J_z}J_y^m e^{-i\theta J_z}\rho_T) = \tr(e^{-i\theta J_z}J_y^m e^{i\theta J_z}\rho_T ),
+  \tr(e^{+i\theta J_z}J_x^m e^{-i\theta J_z} \rho_{\lambda}) = \tr(e^{+i\theta J_z}J_x^m e^{-i\theta J_z} e^{-in\pi J_y}\rho_{\lambda}e^{+in\pi J_y}),
 \ee
-so the Eq.~{(XXX)} is granted.
+where $\rho_{\lambda}=\ketbra{\text{GS}}{\text{GS}}_{\lambda}$.
+If the equation above holds, then for the case $n=1$, we can use the cyclic property of the trace to arrive at
+\be
+\begin{split}
+  \tr(e^{+i\pi J_y}e^{+i\theta J_z}J_x^m e^{-i\theta J_z} e^{-i\pi J_y}\rho_{\lambda}) & =
+  \tr(e^{+i \theta (-1)J_z}(-1)^m J_x^m e^{-i\theta (-1) J_z}\rho_{\lambda})\\
+  & = \tr(e^{-i \theta J_z}(-1)^m J_x^m e^{+i\theta J_z}\rho_{\lambda}),
+\end{split}
+\ee
+or equivalently
+\be
+  \expect{J_x^m(\theta)}_{\rho_\lambda}=\expect{(-1)^m J_x^m(-\theta)}_{\rho_\lambda},
+\ee
+which implies that for even $m$, and specially for $m=2,4$, the expectation values are an even function of $\theta$, and that for odd $m$ the expectation values are odd functions of $\theta$, which proofs the Eq.~\eqref{eq:vd-even-f-constraint} for the present case.
+
+On the other hand for the thermal state $\rho_T$, we have that their constituents are eigenstates of $J_x$ thus invariant under rotations around the $x$-axis.
+Which still holds for the entire state, since it is a statistical mixture of states invariant under rotations around the $x$-axis.
+Moreover, it is also invariant for the case on which the state is rotated around the $x$-axis by $\pi$ angle.
+Hence, we have for the evolved expectation values of $J_x^m$ that
+\be
+  \tr(e^{+i\theta J_z}J_x^m e^{-i\theta J_z}\rho_T) = \tr(e^{+i\theta J_z}J_x^m e^{-i\theta J_z} e^{-i \pi J_x} \rho_T e^{+i \pi J_x})
+\ee
+for any $m$.
+Finally, using again the cyclic properties of the trace, we flip the signs of the of angular momentum components orthogonal to $J_x$, so in this case $J_y \rightarrow - J_x$ and $J_z \rightarrow -J_z$, and we arrive at
+\be
+  \tr(e^{+i \pi J_x} e^{+i\theta J_z}J_x^m e^{-i\theta J_z} e^{-i \pi J_x} \rho_T) =  \tr(e^{-i\theta J_z}J_x^m e^{+i\theta J_z} \rho_T).
+\ee
+We conclude that for this case all the statistical moments of the $J_x$ operator are even functions of $\theta$ for the thermal state, i.e., $\expect{J_x^m(\theta)}_{\rho_{T}}=\expect{J_x^m(-\theta)}_{\rho_{T}}$, which proofs that the Eq.~\eqref{eq:vd-even-f-constraint} holds for this case too.
 
 \subsection{Using our method with real experimental data}
 \label{sec:vd-testing-with-experimental-data}
@@ -379,7 +415,8 @@ From these considerations we are able to write a second bound with fewer expecta
   \varian{\theta}_{\text{opt}} \leq \frac{\expect{J_y^2} + \frac{3N(N+2)-8}{4} \expect{J_x^2} + \Big(\sqrt{\frac{N^2}{2\expect{J_y^2}}-2} - 2 \Big) \expect{J_y^2}\expect{J_x^2} - 9\expect{J_x^2}^2}
   {4\expect{J_y^2-J_x^2}^2}.
 \ee
-We have used this formula to compute the bound on the optimal precision with the measured data shown on Eq.~{(XXX)}, $(\Delta \theta)^{-2}_{\text{opt}} \geq 2.9N$, see Figure~{\ref{fig:vd-experimental}}.
+We have used this formula to compute the bound on the optimal precision with the measured data shown on Eq.~{(XXX)}, $(\Delta \theta)^{-2}_{\text{opt}} \geq 2.9N$, see Figure~
+ef{fig:vd-experimental}.
 
 \begin{figure}[htp]
   \centering

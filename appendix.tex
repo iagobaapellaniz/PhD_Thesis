@@ -74,6 +74,7 @@ Note that the Dicke states, called like this after R. H. Dicke use them to expla
 Therefore apart from Eq.~\eqref{eq:ap-maximal-angular-momentum-expansion-qubits}, we use the following notation for these states
 \be
   \ket{\dicke{N, n}} \equiv \ket{J=N/2, M=N/2-n},
+  \label{eq:app-definition-of-dicke-states}
 \ee
 where where $n$ gives the number of particles that are in $\ket{-1/2}$ or .
 One particularly interesting case of these states is the unpolarized Dicke state
@@ -98,18 +99,39 @@ All these alternative constructions are collected in the following equation resp
 \ee
 where $\beta$ is the inverse of the Boltzman constant $k_\text{B}$ times the temperature $T$, and $\sigma_{\text{s}}$ is the set of all possible unique permutations, in this case $\frac{N!}{2^{N/2}(N/2)!}$.
 
-\subsection[Simplification of the Eq.~{(\ref{eq:vd-result-before-simp})}]
+\subsection {Proof of Equation~\eqref{eq:vd-4y-moment-pure-dicke}}
+\label{app:proof-of-4th-y-moment-pure-dicke}
+
+To compute the Eq.~\eqref{eq:vd-4y-moment-pure-dicke}, we start by the expectation value of $\bs{J}^4$ for the pure Dicke state $\ket{\dicke{N}}$.
+In one hand we have that it is simply equal to square $\expect{\bs{J}^2}$
+\be
+  \expect{\bs{J}^4} = \lpar\frac{N(N+2)}{4}\rpar^2.
+\ee
+On the other hand this must be equal to
+\be
+  \expect{(J_y^2+J_z^2+J_x^2)\bs{J}^2} = \expect{J_y^4} + \expect{J_z^4} + \expect{\{J_y^2,J_z^2\}},
+\ee
+where we omitted the terms that contain $J_x^2$ since we obtain zero from them.
+Next, due to the rotational symmetry along the $x$-axis, we can swap the index $y$ and $z$ inside each expectation value to obtain
+\be
+  \expect{J_y^4}+\expect{J_y^2 J_z^2}=\frac{1}{2}\lpar\frac{N(N+2)}{4}\rpar^2.
+\ee
+
+Now we focus on computing $\expect{J_y^2J_z^2}$.
+
+
+\subsection[Simplification of the Equation~\eqref{eq:vd-result-before-simp}]
 {Simplification of $\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2}$}
 \label{app:simplification-of-4th-moments}
 
-The expectation value appearing on Eq.~{(\ref{eq:vd-result-before-simp})} which we want to simplify has 6 different terms, all with two $J_x$ and another two $J_y$,
+The expectation value appearing on Eq.~\eqref{eq:vd-result-before-simp} which we want to simplify has 6 different terms, all with two $J_x$ and another two $J_y$,
 \be
   \expect{J_x^2J_y^2} + \expect{J_xJ_yJ_xJ_y} + \expect{J_xJ_y^2J_x}
   + \expect{J_yJ_x^2J_y} + \expect{J_yJ_xJ_yJ_x} + \expect{J_y^2J_x^2}.
 \ee
 From all those terms the third is somehow referent, since the pure unpolarized Dicke state used as reference is align with the $x$-axis, so $J_x\ket{\dicke{N,N/2}}_x=0$.
 
-We use the commutation relations of the angular momentum operators $[J_k,J_l]=\epsilon_{klm} iJ_m$ to rearrange all operators,
+We use the commutation relations of the angular momentum operators $[J_k,J_l]=\epsilon_{klm} iJ_m$, where $\epsilon_{klm}$ is the Levi-Civita symbol, to rearrange all operators,
 \begin{subequations}
 \begin{align}
   \expect{J_x^2J_y^2} & = i\expect{J_xJ_zJ_y}+\expect{J_xJ_yJ_xJ_y},
@@ -126,7 +148,7 @@ We use the commutation relations of the angular momentum operators $[J_k,J_l]=\e
   \label{eq:ap-simplification-6}
 \end{align}
 \end{subequations}
-One may notice that with those relations is enough to see that we have six $\expect{J_xJ_y^2J_x}$, for instance, Equation~{(\ref{eq:ap-simplification-1})} is $i\expect{J_xJ_zJ_y}$ plus Equation~{(\ref{eq:ap-simplification-2})} which at the same time is $i\expect{J_xJ_yJ_z}$ plus Equation~{(\ref{eq:ap-simplification-3})}.
+One may notice that with those relations is enough to see that we have six $\expect{J_xJ_y^2J_x}$, for instance, Equation~\eqref{eq:ap-simplification-1} is $i\expect{J_xJ_zJ_y}$ plus Equation~\eqref{eq:ap-simplification-2} which at the same time is $i\expect{J_xJ_yJ_z}$ plus Equation~\eqref{eq:ap-simplification-3}.
 So each equation has at the end one $\expect{J_xJ_y^2J_x}$ plus or minus some expectation value of the product of three operators.
 
 For the three terms operators and again using the commutation relations we can further simplify this expression. Trying to get one $\expect{J_xJ_yJ_z}$ on each term, we obtain the following,
