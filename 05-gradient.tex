@@ -8,9 +8,9 @@
 \lettrine[lines=2, findent=3pt, nindent=0pt]{I}{n} this chapter, one of the most fundamental two-parameter estimation tasks in magnetometry is considered, namely gradient magnetometry.
 We will add the gradient of the magnetic field as the second parameter beside the constant (homogeneous) part of the field.
 While most works in magnetometry with a single ensemble focus only on the determination of the strength and direction of magnetic field, certain measurement schemes for the gradient have already been proposed and tested experimentally [XXX].
-Some schemes use an imaging of the ensemble with a high spatial resolution, however, they do not count as single-ensemble methods in the sense we use this expression in our paper, since in this case not only collective observables are measured  \citep{Vengalattore2007,Zhou2010,Koschorreck2011}.
-There is a method based on collective measurements of the spin length of a fully polarised ensemble \citep{Behbood2013}.
-Finally, there is a scheme where they use as a prove state a many-body singlet states, which is described in Reference~\citep{Urizar-Lanz2013}.
+Some schemes use an imaging of the ensemble with a high spatial resolution, however, they do not count as single-ensemble methods in the sense we use this expression in our paper, since in this case not only collective observables are measured  \cite{Vengalattore2007,Zhou2010,Koschorreck2011}.
+There is a method based on collective measurements of the spin length of a fully polarised ensemble \cite{Behbood2013}.
+Finally, there is a scheme where they use as a prove state a many-body singlet states, which is described in Ref.~\cite{Urizar-Lanz2013}.
 This section provides precision bounds for that scheme, while expanding the quantum states considered to other interesting quantum states, including those that are not invariant under homogeneous fields.
 
 The atoms will be distributed along the $x$-axis, so $y=z=0$, and in principle they will be able to feel differences on the magnetic field at different points of the axis.
@@ -33,23 +33,23 @@ However, in the case of a linear arranged particle ensemble only the derivative 
 %The states of the ensembles are assumed to be permutationally invariant,
 %since the particles cannot be addressed individually.% anyway.
 
-We will determine the precision bounds for estimation of the magnetic field gradient $B_1$ based on the quantum Fisher information \citep{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008}.
+We will determine the precision bounds for estimation of the magnetic field gradient $B_1$ based on the quantum Fisher information \cite{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008}.
 We will show that for states insensitive to the homogeneous magnetic field, one can reduce the problem to a one-parameter estimation scenario.
 Such states can arise in a single-ensemble scheme, however, it will be shown that for single-ensembles insensitive to the homogeneous field the Heisenberg limit cannot be reached.
 Nevertheless, single-ensemble measurements have certain advantages since the spatial resolution can be higher and the experimental requirements are smaller since only a single ensemble must be prepared.
 
 On the other hand, for states sensitive to the homogeneous field, the classical limit can be overcome only if the particle positions are highly correlated with each other.
-Our calculations are generally valid for any measurement, thus they are relevant to many recent experiments \citep{Wasilewski2010,Eckert2006,Wildermuth2006, Wolfgramm2010,Koschorreck2011,Vengalattore2007,Zhou2010,Behbood2013}.
-We note that in the case of the singlet, our precision bounds are saturated by the metrological scheme presented in Reference~\citep{Urizar-Lanz2013}.
+Our calculations are generally valid for any measurement, thus they are relevant to many recent experiments \cite{Wasilewski2010,Eckert2006,Wildermuth2006, Wolfgramm2010,Koschorreck2011,Vengalattore2007,Zhou2010,Behbood2013}.
+We note that in the case of the singlet, our precision bounds are saturated by the metrological scheme presented in Ref.~\cite{Urizar-Lanz2013}.
 
-We can also connect our results to entanglement theory \citep{Werner1989,Horodecki2009,Guehne2009}.
+We can also connect our results to entanglement theory \cite{Werner1989,Horodecki2009,Guehne2009}.
 We find that the shot-noise scaling cannot be surpassed with separable states, while the Heisenberg scaling can be reached with entangled states.
 However, the shot-noise scaling can be surpassed only if the particle positions are correlated, which is the case if the particles attract each other.
 Moreover, the case of two atomic ensembles, if the spin states of the ensembles are uncorrelated, can also be mapped to our model.
 This evidently shows how shot-noise scaling can be surpassed with the two-ensemble scenario.
 
 Next, we will present characteristics of our setup.
-For simplicity, as well as following  recent experiments (e.g., Ref.~\citep{Koschorreck2011}), we will consider an ensemble of spin-$j$ particles placed in a one-dimensional setup, $x$ being the spatial coordinate.
+For simplicity, as well as following  recent experiments (e.g., Ref.~\cite{Koschorreck2011}), we will consider an ensemble of spin-$j$ particles placed in a one-dimensional setup, $x$ being the spatial coordinate.
 Furthermore, we assume that we have that we have particles that behave classically with respect to their spatial state.
 That is, they cannot be in a superposition of being in two different positions.
 On the other hand, they have internal degrees of freedom, their spin, that is quantum. This is a very good description to many of the cold gas experiments.
@@ -154,7 +154,7 @@ act on the same single atomic ensemble.
 On the other hand, in schemes in which the gradient is calculated
 based on measurements in two separate atomic ensembles or
 different atoms in a chain, the measuring operators can always commute
-with each other \citep{Wasilewski2010,Eckert2006,Zhang2014}.
+with each other \cite{Wasilewski2010,Eckert2006,Zhang2014}.
 
 The paper is organized as follows. In Sec.~\ref{sec:cramer-rao bounds}, the
 basic concepts used in the paper are presented.
@@ -185,7 +185,7 @@ For two arbitrary operators $A$ and $B$, it is written as follows
   {A}_{k,k'}{B}_{k',k},
 \ee
 where the subscript for $A$ and $B$ stand for the matrix element on the eigenbasis of the initial state $\rho = \sum_k\lambda_k\ket{k}\bra{k}$.
-If the two operators are the same, the usual form of the QFI on the literature can be recovered with only two arguments \citep{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008},
+If the two operators are the same, the usual form of the QFI on the literature can be recovered with only two arguments \cite{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008},
 \be
   \qfif{\rho,A,A}:=\qfif{\rho,A}=2\sum_{k, k'}
   \frac{(\lambda_k-\lambda_{k'})^2}{\lambda_k+\lambda_{k'}}
@@ -214,7 +214,7 @@ For pure states it simplifies to,
   \label{eq:QFI_pure}
   \qfif{\ket{\psi},A,B}=4\left(\expect{AB}_{\psi}-\expect{A}_{\psi}\expect{B}_{\psi}\right).
 \ee
-Notice that we recover $\qfif{\rho,A}=4(\Delta A)^2$ as can be found in the literature for single parameter estimation with pure states \citep{Paris2009,Toth2013}.
+Notice that we recover $\qfif{\rho,A}=4(\Delta A)^2$ as can be found in the literature for single parameter estimation with pure states \cite{Paris2009,Toth2013}.
 Another important feature of the qFI in Eq.~(\ref{eq:FAB}) is that it is convex on the space of the states.
 This property takes the following form,
 \be
@@ -234,7 +234,7 @@ Let us consider quantum states that are  insensitive to the homogeneous field.
 For these states,  $[\rho, H_0]=0$ and hence the evolved state is a function of a single unknown parameter, $b_1$.
 
 For the unitary dynamics we consider, the QFI for single-parameter dependence can be expressed in terms of the eigendecomposition of the density matrix,
-$\rho=\sum_{k} \lambda_k \ket{k}\bra{k}$, in the following way  \citep{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008},
+$\rho=\sum_{k} \lambda_k \ket{k}\bra{k}$, in the following way  \cite{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008},
 \be
   \label{eq:general one parameter quantum fisher information}
   \qfif{\rho,H_1}=2\sum_{k, k'}
@@ -303,7 +303,7 @@ The homogeneous field will rotate all the spins in the same way,
 while the field gradient rotates the spins
 differently depending on the position of the particles.
 Now, instead to the Cram\'er-Rao bound  \eqref{eq:one parameter precision bound},
-we have a matrix inequality \citep{Paris2009}.
+we have a matrix inequality \cite{Paris2009}.
 %The Cram\'er-Rao bound turns into a matrix inequality of a similar form as Eq.
 %\eqref{eq:one parameter precision bound}, namely
 % \be
@@ -312,7 +312,7 @@ we have a matrix inequality \citep{Paris2009}.
 % \ee
 % where the covariance matrix elements are defined as
 % $\textbf{\cov}_{ij}[b_0,b_1]=\expect{b_ib_j}-\expect{b_i}\expect{b_j}.$
-We have the QFI matrix $\bs{\mathcal{F}}_{\text{Q}}$ on one hand, which depends on $\rho$ and the two generators $H_0$ and $H_1$, and the covariance matrix from we are only interested on the variance of the gradient parameter, $(\Delta b_1)^2$ \citep{Paris2009}.
+We have the QFI matrix $\bs{\mathcal{F}}_{\text{Q}}$ on one hand, which depends on $\rho$ and the two generators $H_0$ and $H_1$, and the covariance matrix from we are only interested on the variance of the gradient parameter, $(\Delta b_1)^2$ \cite{Paris2009}.
 Just to record, $H_0$ and $H_1$ are Hermitian operators and commute with each other and thus the QFI matrix elements are computed as $\mathbfcal{F}_{ij}\equiv \qfif{\rho, H_i, H_j},$ following the definition \eqref{eq:FAB}.
 
 In the two-parameter estimation problem, ${\mathbfcal{F}}$ is a $2 \times 2$ matrix and the precision bound for the estimation of the gradient is the following,
@@ -323,7 +323,7 @@ In the two-parameter estimation problem, ${\mathbfcal{F}}$ is a $2 \times 2$ mat
 where $\mathbfcal{F}_{ij}$ denotes the QFI matrix elements.
 One must estimate both parameters in most cases since the precision of one depends on the other.
 The bound is interpreted slightly different from the one-parameter Cram\'er-Rao bound.
-In order to be able to saturate the bound the measurements for estimating the two parameters must compatible \citep{Paris2009}.
+In order to be able to saturate the bound the measurements for estimating the two parameters must compatible \cite{Paris2009}.
 
 
 To compute the bound (\ref{eq:bound-for-insensitive-and-thermal-state}) we need to consider the matrix elements of QFI one by one.
@@ -547,8 +547,8 @@ The setup is depicted
 in Fig.~\ref{fig:single cloud particle density under the magnetic gradient field}.
 In the last part of this section, we calculate precision bounds for the
 gradient estimation for some important multi-particle quantum states,
-for instance, Dicke states \citep{} or
-GHZ states \citep{Greenberger1990}.
+for instance, Dicke states \cite{} or
+GHZ states \cite{Greenberger1990}.
 %In this section, we will consider Permutationally Invariant states for the
 %single-cloud case.
 Note that all these states are permutationally invariant, since we
@@ -787,7 +787,7 @@ precision bound. There are many different singlet states for an ensemble of $N$
 spin-$j$ particles, and still a great amount of them are PI.
 Surprisingly the precision bound we compute is the same
 for any PI singlet. Atomic ensembles in a singlet state have been experimentally
-created with cold gases \citep{Toth2010,Behbood2014}.
+created with cold gases \cite{Toth2010,Behbood2014}.
 
 In an $N$-particle system, there are several singlets pairwise orthogonal to each other. The number of such singlets, $D_0$, depends on the particle spin $j$ and the number of particles $N$.
 
@@ -879,8 +879,8 @@ This implies that there is an optimal operator that saturates the precision
 bound given by Eq.~\eqref{eq:sing_QFI}.
 However, it is usually very hard to find
 this optimal measurement,
-although a formal procedure for this exists \citep{Paris2009}.
-In Ref. \citep{Urizar-Lanz2013}, a particular set-up for determining the magnetic gradient
+although a formal procedure for this exists \cite{Paris2009}.
+In Ref. \cite{Urizar-Lanz2013}, a particular set-up for determining the magnetic gradient
 with PI singlet states was suggested by the measurement
 of the $J_x^2$ collective operator.
  For this scenario the precision is given by
@@ -900,7 +900,7 @@ in the short-time limit, an optimal precision for gradient metrology.
 %%%%%%%%%%%%%%%%%%%%%%%
 
 The totally polarised state can easily be prepared experimentally.
-It has already been used for gradient magnetometry with a single atomic ensemble \citep{Koschorreck2011,Vengalattore2007}.
+It has already been used for gradient magnetometry with a single atomic ensemble \cite{Koschorreck2011,Vengalattore2007}.
 For the gradient measurement as for the measurement of the homogeneous field, the polarisation must be perpendicular to the field we want to measure in order to take advantage of the interaction between the particles and the field.
 Here we chose as before the totally polarized state along the $y$-axis which is written as $\ket{j}_y^{\otimes N}$.
 Notice that this state is a state sensitive to the homogeneous field, hence, we must use the Equation~(\ref{eq:precision bound for single-cloud systems SH}) to compute the bound.
@@ -913,7 +913,7 @@ perpendicular to the $z$-direction, the precision will be computed straightforwa
 Before to do so, let us comment on the heuristics description of the evolution of the system.
 The homogeneous field rotates all spins by the same angle, while the gradient rotates the spin at different position by a different angle.
 Due to that, the homogeneous field rotates the collective spin, but does not change its absolute value.
-On the other hand, the field gradient decreases the absolute value of the spin, which has been used in Ref.~\citep{Behbood2013} for gradient magnetometry, see Fig.~\ref{fig:ionchain-evolution}.
+On the other hand, the field gradient decreases the absolute value of the spin, which has been used in Ref.~\cite{Behbood2013} for gradient magnetometry, see Fig.~\ref{fig:ionchain-evolution}.
 
 Therefore, the Cram\'er-Rao bound fixes the highest value for the precision
 of the totaly polarised state as follows,
@@ -985,11 +985,11 @@ Nevertheless, when the singlet state is used effect of the homogeneous magnetic 
 
 Unpolarised Dicke states play an important role in quantum opticsand quantum information science.
 The Dicke state $\ket{Nj,0}_l$ with a maximal $\langle J_x^2+J_y^2+J_z^2 \rangle$ and $\langle J_l\rangle=0$ for any $l\in x,y,z$ is particularly interesting due to its entanglement properties and its metrological usefulness.
-This state has been created in photonic experiments \citep{Kiesel2007,Wieczorek2009,Chiuri2012} and in cold atoms \citep{Luecke2011,Hamley2012}, while a Dicke state with $\langle J_z\rangle>0$ has been created with cold trapped ions \citep{haeffner2005}.
+This state has been created in photonic experiments \cite{Kiesel2007,Wieczorek2009,Chiuri2012} and in cold atoms \cite{Luecke2011,Hamley2012}, while a Dicke state with $\langle J_z\rangle>0$ has been created with cold trapped ions \cite{haeffner2005}.
 
 The Dicke state $\ket{Nj, 0}$ is an eigenstate of $J_z$ so insensitive to homogeneous magnetic field pointing into the $z$-direction, thus the precision can be saturate by some measurement.
 Whereas, The Dicke state $\ket{Nj, 0}_x$ is sensitive to the homogeneous field.
-Moreover it is very useful for homogeneous magnetometry as it has been shown in Reference~[XXX].
+Moreover it is very useful for homogeneous magnetometry as it has been shown in Ref.~[XXX].
 Here we consider large particle numbers, to make the results simpler.
 
 Since both Dicke states are pure, we have that
@@ -1010,7 +1010,7 @@ From the global second moments we can write for the single particle the followin
 \end{align}
 for all $\forall n\neq m$ due to the PI nature of the state.
 Together with $\expect{(j_z^{(n)})^2+2(j_{\perp z}^{(n)})^2} = j(j+1)$ due to the rotational symmetry along the $z$-axis, we have three independent equations relating all the four moments.
-In Reference~\citep{Urizar-Lanz2013}, a mapping between the Dicke states of spin-$j$ ensembles and of spin-$\frac{1}{2}$ ensembles was provided, by which the expectation value
+In Ref.~\cite{Urizar-Lanz2013}, a mapping between the Dicke states of spin-$j$ ensembles and of spin-$\frac{1}{2}$ ensembles was provided, by which the expectation value
 \be
   \expect{(j_z^{(n)})^2}= \tfrac{(N-1)j^2}{2jN - 1}
 \ee
@@ -1096,8 +1096,8 @@ the right-hand side.
 \subsubsubsection{The GHZ state}
 %%%%%%%%%%%%%%%%%%%%%%%
 
-The GHZ states are also highly entangled states that play an important role in quantum physics \citep{Greenberger1990}.
-They have been created experimentally in photonic systems \citep{Pan2000,Yao2012,Lu2007} and trapped ions \citep{Sackett2000,Monz2011}.
+The GHZ states are also highly entangled states that play an important role in quantum physics \cite{Greenberger1990}.
+They have been created experimentally in photonic systems \cite{Pan2000,Yao2012,Lu2007} and trapped ions \cite{Sackett2000,Monz2011}.
 
 The GHZ state is defined for qubits in the following way
 \be

@@ -36,7 +36,7 @@ As we said, the main mathematical tools used by metrology belong to statistics.
 Moreover, we are especially interested in estimation theory which shows how to properly estimate some quantity based on some data sample.
 The data can be from a set of different heights of a, let us say, basketball team, to the outcomes of a coin toss, or even the wavelength of photons coming out of some radioactive sample.
 The aim of this section is to give the reader sufficient material to follow this thesis and make it comprehensible since the beginning\footnote{
-For a more detailed material, see Refs.~\citep{Riley2006, Barlow1989}}.
+For a more detailed material, see Refs.~\cite{Riley2006, Barlow1989}}.
 
 \subsubsection{Probability, data samples, average and variance}
 
@@ -50,7 +50,7 @@ A data sample always come from a population sample, i.e., the data sample might 
 Hence, the data sample comes attached with a probability for each data element.
 In the subsequent paragraphs, we will describe these relations between the data samples and probabilities and we will enumerate the most useful properties and formulas.
 
-First of all, we will explain our notation which follows mainly the one used in Reference~\citep{Riley2006}.
+First of all, we will explain our notation which follows mainly the one used in Ref.~\cite{Riley2006}.
 A probability function gives the probability of an event $x$ to happen when measuring some random variable $X$, and it is denoted by $\prob(X=x)$.
 Second, due to the random nature of the measurements, the $N$ elements of a data sample are considered outputs of $N$ different random variables with their corresponding $N$ values $\{X_i=x_i\}_{i=1}^N$, or $\bs{X}=\bs{x}$ for short.
 The joint probability of those random variables is in general not separable.
@@ -231,9 +231,9 @@ A \emph{separable} state in this Hilbert space can be written as
 \ee
 where $p_i$ are convex weights that add up to one and are equal to or bigger than zero.
 If a state cannot be written like Eq.~\eqref{eq:bg-separable-state-definition}, the state is said to be \emph{entangled}.
-We mention it as a formal description of the entanglement \citep{Guehne2009, Luis2004}.
+We mention it as a formal description of the entanglement \cite{Guehne2009, Luis2004}.
 One may note at this moment, that relaxing the requirements of Eq.~\eqref{eq:bg-separable-state-definition}, one can lead to different classifications of the states.
-Concepts like genuine multipartite entanglement, $k$-producible states, or entanglement depth, among others, arose from weaker constraints than Eq.~\eqref{eq:bg-separable-state-definition} \citep{Guehne2009, Luis2004}.
+Concepts like genuine multipartite entanglement, $k$-producible states, or entanglement depth, among others, arose from weaker constraints than Eq.~\eqref{eq:bg-separable-state-definition} \cite{Guehne2009, Luis2004}.
 
 It is important to describe one of such classifications in order to characterize the different levels or multipartite entanglement followed in this work.
 We call a state $k$-producible, if it \emph{can} be written as a mixture of the tensor product of different multipartite states with at most $k$ parties in each,
@@ -251,7 +251,7 @@ This defines the entanglement depth, see Figure~\ref{fig:bg-separability-k-produ
   \caption[Diagram for $k$-producibility sets]{$k$-producible set of states contains $k-1$-producible states. Based on the Eq.~\eqref{eq:bg-k-producible-estate}, one can argue that a state that cannot be written as $k$-producible must be $k+1$-entangled or equivalently has $k+1$ entanglement depth. A separable state can always be written as 1-producible which on the other hand is its original definition.}
   \label{fig:bg-separability-k-producibility-circle}
 \end{figure}
-Later on, these concepts of entanglement and entanglement depth will arise naturally on the metrological framework \citep{Toth2014}.
+Later on, these concepts of entanglement and entanglement depth will arise naturally on the metrological framework \cite{Toth2014}.
 
 \subsubsection{Angular momentum operators for multipartite systems}
 \label{sec:bg-angular-momentum-operators}
@@ -265,7 +265,7 @@ For a single party with discrete $d$ levels, and therefore with a spin $j=(d-1)/
 for $m=-j,\dots,+j$, where $l=x,y,z$.
 It is usual to omit the subscript of $\ket{m}_l^{(n)}$ when $l=z$ because it is the preferred direction for many authors and the superscript ($n$) can also be omitted when the single-particle states are given in an ordered form to build a multiparticle state, i.e., $\ket{\psi} = \ket{m_1}\ket{m_2}\dots\ket{m_n}$ where we also omitted writing the tensor product operator $\otimes$ in between single-particle states.
 In many cases, it is also usual to merge all into a single ket state $\ket{\psi}=\ket{m_1 m_2 \dots m_N}$ for simplicity\footnote{
-This notation is normally used in many-body quantum mechanics, see Refs.~\citep{Cohen-Tannoudji1977, Sakurai2014}.}.
+This notation is normally used in many-body quantum mechanics, see Refs.~\cite{Cohen-Tannoudji1977, Sakurai2014}.}.
 
 The square of the total angular momentum, $\bs{j}^2=j_x^2+j_y^2+j_z^2$, for a single party $(n)$ acts on any state simply as
 \be
@@ -297,7 +297,7 @@ In the Appendix~\ref{app:angular-subspaces}, we discuss in more detail the diffe
 
 The most basic evolution of the state is represented by unitary evolution operators denoted by $U$ and those are the only ones appearing throughout the thesis.
 On the other hand, there are other types of dynamics involving particle loss, entropy changes in the system and open quantum systems in general.
-These transformations are governed by master-equations such as the Lindblad equation \citep{Lindblad1976, Nielsen2000, Breuer2002}.
+These transformations are governed by master-equations such as the Lindblad equation \cite{Lindblad1976, Nielsen2000, Breuer2002}.
 
 For the understanding of this thesis it is enough to present the unitary evolution operators.
 We also restrict ourselves to the case in which the evolution is constant in time, so are in general the Hamiltonians of the metrological setups.
@@ -314,7 +314,7 @@ Note that all information we can extract from the system comes in the form of ex
 When the state evolves in time but the operators are constant the picture of the system is called the Schrodinger-picture.
 Using the cyclic property of the trace, $\tr(ABC) = \tr(CBA)$, the Heisenberg-picture, a dual interpretation of the same physical system in which the state remains the same while the operators evolve in time, emerges.
 It is well known that the operators in this picture evolve as $\mathcal{O}(t) = U^{\dagger} \mathcal{O} U$, where $\mathcal{O}$ is the initial operator.
-One can check different textbooks of quantum mechanics, just to mention some see Refs.~\citep{Cohen-Tannoudji1977, Sakurai2014}.
+One can check different textbooks of quantum mechanics, just to mention some see Refs.~\cite{Cohen-Tannoudji1977, Sakurai2014}.
 
 \subsection{Quantum metrology}
 \label{sec:bg-quantum-metrology}
@@ -323,9 +323,9 @@ We summarize important recent advances in quantum metrology.
 Simple metrological setups allow for encoding some desired parameter into the state of the system, thus from the readout of the final state one could infer it.
 The basic ideas of quantum metrology emerge when one applies the notions of estimation theory to the intrinsic probabilistic nature of quantum mechanics.
 Merging the probabilistic features of quantum mechanics and the estimation theory is not trivial.
-Nevertheless, with the initial pioneering works of W. K. Wootters, and S. L. Braunstein and C. M. Caves, in 1981 and 1992-1994 respectively \citep{Wootters1981, Braunstein1992, Braunstein1994}, until the works of V. Giovannetti et al, and M. G. Paris, roughly two decades later \citep{Giovannetti2004, Paris2009}, the foundations of quantum metrology were stabilized.
+Nevertheless, with the initial pioneering works of W. K. Wootters, and S. L. Braunstein and C. M. Caves, in 1981 and 1992-1994 respectively \cite{Wootters1981, Braunstein1992, Braunstein1994}, until the works of V. Giovannetti et al, and M. G. Paris, roughly two decades later \cite{Giovannetti2004, Paris2009}, the foundations of quantum metrology were stabilized.
 % TD: important citations needed here!!
-Later, advanced works in quantum metrology appeared \citep{XXX} together with experimental realizations \citep{Behbood2013, Koschorreck2011, Luecke2011} which raised the interest in this topic.
+Later, advanced works in quantum metrology appeared \cite{XXX} together with experimental realizations \cite{Behbood2013, Koschorreck2011, Luecke2011} which raised the interest in this topic.
 In this section, we will highlight the most important aspects of this field and with this we will conclude this chapter for presenting the background theory in which stands the work developed by the authors.
 
 The most basic scheme for a metrological setup in the present context is the following.
@@ -342,7 +342,7 @@ Figure~\ref{fig:bg-preparation-encoding-estimation} illustrates the main steps o
 In the many-particle case, most of the metrology experiments have been done in systems with simple Hamiltonians that do not contain interaction terms.
 Such Hamiltonians cannot create entanglement between the particles.
 A typical situation is that we rotate our many particle state by some angle and we want to estimate the rotation angle $\theta$.
-It has been shown that particles exhibiting quantum correlations, or more precisely, quantum entanglement \citep{Guehne2009, Luis2004}, provide a higher precision than an ensemble with non-entangled particles.
+It has been shown that particles exhibiting quantum correlations, or more precisely, quantum entanglement \cite{Guehne2009, Luis2004}, provide a higher precision than an ensemble with non-entangled particles.
 The most important question is how the achievable precision of the angle estimation $\varian{\theta}$ scales with the number of particles.
 Very general derivations lead to, at best,
 \be
@@ -357,10 +357,10 @@ On the other hand, quantum entanglement makes it possible to reach
   \varian{\theta}\sim \frac{1}{N^2}
 \ee
 which is called the \emph{Heisenberg} scaling (HS).
-Note that if the Hamiltonian of the dynamics has interaction terms, then these bounds can be surpassed \citep{Luis2004, Napolitano2011, Boixo2007, Braun2011, Roy2008, Choi2008, Rey2007}.
+Note that if the Hamiltonian of the dynamics has interaction terms, then these bounds can be surpassed \cite{Luis2004, Napolitano2011, Boixo2007, Braun2011, Roy2008, Choi2008, Rey2007}.
 
 It is time to mention that the above calculations have been carried out for an ideal situation.
-When an uncorrelated noise is present in the system, it turns out that for large enough particle number the scaling becomes a SNS \citep{Demkowicz-Dobrzanski2012}.
+When an uncorrelated noise is present in the system, it turns out that for large enough particle number the scaling becomes a SNS \cite{Demkowicz-Dobrzanski2012}.
 The possible survival of a better scaling under correlated noise, under particular circumstances, or depending on some interpretation of the metrological task, is at the center of attention currently.
 All these are strongly connected to the question of whether strong multipartite entanglement can survive in a noisy environment.
 
@@ -423,7 +423,7 @@ The precision of the estimation can be characterized with the error propagation 
   \label{eq:bg-error-propagation-formula}
   \varian{\theta} = \frac{\varian{M}}{|\partial_\theta\expect{M}|^2},
 \ee
-where $\expect{M}$ is the expectation value of the operator $M$, and we used the assumption that $\expect{M}$ is a random variable and that it has a PDF that can relate $\prob(\expect{M}|\theta)$ with a PDF as a function of the estimator $\prob(\hat{\theta}|\theta)$, see the Section~\ref{sec:bg-estimators}, and for a recent review discussing this approach in detail, see Ref.~\citep{Kolodynski2010}.
+where $\expect{M}$ is the expectation value of the operator $M$, and we used the assumption that $\expect{M}$ is a random variable and that it has a PDF that can relate $\prob(\expect{M}|\theta)$ with a PDF as a function of the estimator $\prob(\hat{\theta}|\theta)$, see the Section~\ref{sec:bg-estimators}, and for a recent review discussing this approach in detail, see Ref.~\cite{Kolodynski2010}.
 Thus, the precision of the estimate depends on how sensitive $\expect{M}$ is to the change of $\theta$, and also on how large the variance of $M$ is.
 Based on the formula Eq.~\eqref{eq:bg-error-propagation-formula}, one can see that the larger the slope $|\partial_\theta \expect{M}|$, the higher the precision.
 On the other hand, the larger the variance $\varian{M}$, the lower the precision.
@@ -489,7 +489,7 @@ Thus, we obtain a precision that scales linearly with $N$,
 Note that the totally polarized state is a separable pure state with all particles pointing into the $y$-direction.
 We obtained the shot-noise scaling, even with very simple, qualitative arguments
 
-A way of improving the precision is considering that the variances of the angular momentum components are bounded by the Heisenberg uncertainty relation \citep{Kitagawa1993}
+A way of improving the precision is considering that the variances of the angular momentum components are bounded by the Heisenberg uncertainty relation \cite{Kitagawa1993}
 \be
   \varian{J_x}\varian{J_z} \geq \frac{1}{4}|\expect{J_y}|.
 \ee
@@ -498,7 +498,7 @@ Due to decreasing $\varian{J_x}$, our state fulfills
   \varian{J_x}<\frac{1}{2}|\expect{J_y}|,
 \ee
 where the main spin points along the $y$-axis and for totally polarized states $\varian{J_x}=\frac{1}{2}|\expect{J_y}|$ hold.
-Such states are called \emph{spin-squeezed} states \citep{Kitagawa1993, Wineland1994, Sorensen2001, Ma2011} and they can in principal overcome the SNS.
+Such states are called \emph{spin-squeezed} states \cite{Kitagawa1993, Wineland1994, Sorensen2001, Ma2011} and they can in principal overcome the SNS.
 
 Next, we can ask, what the best possible phase estimation precision is for the metrological task considered in this section.
 For that, we have to use the following inequality based on general principles of angular momentum theory
@@ -535,7 +535,7 @@ In quantum mechanics the PDF of a state $\rho_\theta$ when measuring the operato
   \prob(m|\theta) = \tr({\Pi_{m}\rho_\theta}),
 \ee
 where $\Pi_{m}$ are the projector operators or the eigenstates on which $M$ is expanded, $M = \sum m \Pi_m$.
-Following arguments found on Refs.~\citep{Giovannetti2004, Paris2009}, one can arrive at a universal bound valid for any kind of measurements.
+Following arguments found on Refs.~\cite{Giovannetti2004, Paris2009}, one can arrive at a universal bound valid for any kind of measurements.
 This bound is called the quantum Cram\'er-Rao bound given as
 \be
   \label{eq:bg-quantum-cr-bound}
@@ -543,14 +543,14 @@ This bound is called the quantum Cram\'er-Rao bound given as
 \ee
 where $\qfif{\rho, J_Z}$ denotes the quantum Fisher information for the initial state $\rho$ and the unitary evolution generated by $J_z$.
 In principle, it might be difficult to find the operator that leads to the best estimation precision just by trying several operators.
-Fortunately, the Eq.~\eqref{eq:bg-quantum-cr-bound} gives us that upper bound that is valid for any choice on the measurement \citep{Helstrom1976, Holevo1982}.
+Fortunately, the Eq.~\eqref{eq:bg-quantum-cr-bound} gives us that upper bound that is valid for any choice on the measurement \cite{Helstrom1976, Holevo1982}.
 
 As a direct consequence, based on Eq.~\eqref{eq:bg-error-propagation-formula} for any given $M$, we have that
 \be
   \qfif{\rho,J_z} \geq \frac{|\partial_{\theta}\expect{M}|^2}{\varian{M}}
 \ee
 is an upper bound for concrete bounds based on the measurement scheme.
-For example, when the rotation of the system is estimated by measuring $\expect{J_x}$ the quantum Fisher information is bounded from below by \citep{Pezze2009}
+For example, when the rotation of the system is estimated by measuring $\expect{J_x}$ the quantum Fisher information is bounded from below by \cite{Pezze2009}
 \be
   \label{eq:bg-pezze-bound}
   \qfif{\rho,J_z} \geq \frac{\expect{J_y}^2}{\varian{J_x}},
@@ -565,7 +565,7 @@ The quantum Fisher information can be computed by closed formulas such as
   \qfif{\rho,J_z} &= \inf_{p_k,\psi_{k}} 4 \sum_{k}p_k \varian{J_z}_{\psi_k},
 \end{align}
 for the case of unitary evolution Eq.~\eqref{eq:bg-unitary-homogeneous-field} and where the state can be decomposed in its eigenbasis as $\rho=\sum_{\lambda}p_\lambda\ket{\lambda}$ in the first case, or where it is any arbitrary convex decomposition like $\rho=\sum_k p_k \ketbra{\psi_k}{\psi_k}$, used the later in the second case.
-The first one is based on the eigen-decomposition of the state whereas the second is the convex-roof of $4\varian{J_z}$ \citep{Paris2009, Toth2013, Yu2013}.
+The first one is based on the eigen-decomposition of the state whereas the second is the convex-roof of $4\varian{J_z}$ \cite{Paris2009, Toth2013, Yu2013}.
 Both formulas yield to the same expression for pure states
 \be
   \label{eq:bg-qfi-for-pure-states}
@@ -585,11 +585,11 @@ Some interesting properties of the quantum Fisher information emerge from these 
   \be
     \qfif{p\rho_1+(1-p)\rho_2, J_z}\leq p\qfif{\rho_1, J_z}+(1-p)\qfif{\rho_2, J_z}.
   \ee
-  \item Recently, it has been shown due to Eq.~\eqref{eq:bg-qfi-definition-convex-roof}, that the quantum Fisher information is the largest convex function that fulfills (i) \citep{Toth2013, Yu2013}.
+  \item Recently, it has been shown due to Eq.~\eqref{eq:bg-qfi-definition-convex-roof}, that the quantum Fisher information is the largest convex function that fulfills (i) \cite{Toth2013, Yu2013}.
   \item For pure states $\qfif{\ket{\psi}, J_z} = 4\varian{J_z}$, as it has been already mentioned.
   \item For all states, the QFI is smaller or equal to four times the variance in all cases,\be \qfif{\rho,J_z} \leq 4\varian{J_z}_\rho.\ee.
 \end{enumerate}
-The main relation between the quantum Fisher information and the variance, which analogously to Eq.~\eqref{eq:bg-qfi-definition-convex-roof} can be proven that it is the concave-roof of the variance \citep{Toth2013}, can be summarized as follows.
+The main relation between the quantum Fisher information and the variance, which analogously to Eq.~\eqref{eq:bg-qfi-definition-convex-roof} can be proven that it is the concave-roof of the variance \cite{Toth2013}, can be summarized as follows.
 For any decomposition $\{p_k, \ket{\Psi_k}\}$ of a state $\rho$ we have
 \be
   \frac{1}{4}\qfif{\rho,J_z}\leq \sum_{k}p_k \varian{J_z}_{\Psi_k}\leq \varian{J_z}_{\Psi_k},
@@ -620,12 +620,12 @@ From Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}, we can obtain directl
     \qfif{\rho^{\otimes N},\textstyle\sum_{n=1}^{N}A^{(n)}}=N\qfif{\rho, A},
   \ee
   for all $A^{(n)}= A$.
-  \item The quantum Fisher information is additive under a direct sum too \citep{Liu2014}
+  \item The quantum Fisher information is additive under a direct sum too \cite{Liu2014}
   \be
     \qfif{\bigoplus_{k}p_k \rho_k,\bigoplus_{k} A_k} = \sum_{k}p_k\qfif{\rho_k,A_k},
   \ee
   where $\sum_k p_k = 1$.
-  The above equation is relevant, for instance, for experiments where the particle number variance is not zero, and the $\rho_k$ corresponds to density matrices with a fixed particle number \citep{Hyllus2010, Hyllus2012}.
+  The above equation is relevant, for instance, for experiments where the particle number variance is not zero, and the $\rho_k$ corresponds to density matrices with a fixed particle number \cite{Hyllus2010, Hyllus2012}.
 \end{enumerate}
 
 \subsubsubsection{Entanglement and the quantum Fisher information}
@@ -639,14 +639,14 @@ We will also briefly discuss the question whether inter-particle entanglement is
 
 Let us first examine the upper bounds on the QFI for general quantum states and for separable states.
 Due to the Cram\'er-Rao bound Eq.~\eqref{eq:bg-quantum-cr-bound}, these are also bounds for the sensitivity of the phase estimation.
-Entanglement has been recognized as an advantage for several metrological tasks (see, e.g., Refs. \citep{Sorensen2001, Boixo2008}).
+Entanglement has been recognized as an advantage for several metrological tasks (see, e.g., Refs. \cite{Sorensen2001, Boixo2008}).
 For a general relationship for linear interferometers, we ca take advantage of the properties of the quantum Fisher information discussed above.
 Since for pure states the quantum Fisher information equals four times the variance, for pure product states we can have at most
 \be
   \qfif{\rho,J_z} = 4\varian{J_z} = 4 \sum_{n=1}^N \varian{j_z^{(n)}} \leq N.
 \ee
 For the second equality, we used the fact that for a product state the variance of a collective observable is the sum of the single-particle variances.
-Due to the convexity of the QFI, this upper bound is still valid for all separable states of the form Eq.~\eqref{eq:bg-separable-state-definition} and we obtain \citep{Pezze2009}
+Due to the convexity of the QFI, this upper bound is still valid for all separable states of the form Eq.~\eqref{eq:bg-separable-state-definition} and we obtain \cite{Pezze2009}
 \be
   \label{eq:bg-shot-noise-limit}
   \qfif{\rho, J_z} \leq N,
@@ -664,23 +664,23 @@ Therefore, similarly we have
 which is a valid bound still for mixed states.
 Note that such a bound has the Heisenberg scaling Eq.~\eqref{eq:bg-heisenberg-scaling}.
 Note that our derivation is very simple, and does not require any information about what operator we measure to estimate $\theta$.
-Equation~\eqref{eq:bg-shot-noise-limit} has been used already to detect entanglement based on the metrological performance of the quantum states in Refs.~\citep{Krischek2011, Luecke2011}.
+Equation~\eqref{eq:bg-shot-noise-limit} has been used already to detect entanglement based on the metrological performance of the quantum states in Refs.~\cite{Krischek2011, Luecke2011}.
 
 At this point one might ask if all entangled states can provide a sensitivity larger than the SNL.
 This would show that entanglement is equivalent to metrological usefulness.
 Concerning linear interferometers, it has been proven that not all entangled states violate the SNL Eq.~\eqref{eq:bg-shot-noise-limit}., even allowing local unitary transformations.
-Thus not all entangled states are useful for phase estimation \citep{Hyllus2010}.
+Thus not all entangled states are useful for phase estimation \cite{Hyllus2010}.
 It has been shown that there are even highly entangled pure states that are not useful.
 Hence, the presence of entanglement seems to be rather a necessary but not sufficient condition.
 
 The quantum Fisher information can be used to define a entanglement parameter that characterizes the metrological usefulness as
 \be
-  \label{eq:bg-entanglement-criterion-qfi}
   \chi = \frac{\qfif{\rho, J_z}}{N},
+  \label{eq:bg-entanglement-criterion-qfi}
 \ee
 which is one or less for separable states and where it can take at most the value of $N$ as is deduced from Eq.~\eqref{eq:bg-heisenberg-limit}.
 
-On the other hand, for $k$-producible states the QFI is bounded from above, similarly as we did in Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:bg-heisenberg-limit}, by \citep{Hyllus2012, Toth2012}
+On the other hand, for $k$-producible states the QFI is bounded from above, similarly as we did in Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:bg-heisenberg-limit}, by \cite{Hyllus2012, Toth2012}
 \be
   \begin{split}
     \chi &\stackrel{\phantom{k\ll N}}{\leq} \frac{sk^2 + (N-sk)^2}{N},\\
@@ -710,6 +710,6 @@ Therefore, bounds similar to Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:b
 Similar to Eq.~\eqref{eq:bg-entanglement-criterion-qfi} an entanglement criterion can be constructed for the averaged QFI.
 
 Finally, we also mention that bound entangled states can also be detected with the entanglement criteria based on the quantum Fisher information.
-Bound entanglement is a weak type of entanglement, which is not distillable with local operations and classical communication \citep{Horodecki2009, Guehne2009}.
-Reference~\citep{Hyllus2012} presented states that were detected as bound entangled based on the criterion for the average QFI Eq.~\eqref{eq:bg-average-qfi}.
-Reference~\citep{Czekaj2015} presented states that violate the criterion based on a bound for the quantum Fisher information similar to Eq.~\eqref{eq:bg-entanglement-criterion-qfi}.
+Bound entanglement is a weak type of entanglement, which is not distillable with local operations and classical communication \cite{Horodecki2009, Guehne2009}.
+Ref.~\cite{Hyllus2012} presented states that were detected as bound entangled based on the criterion for the average QFI Eq.~\eqref{eq:bg-average-qfi}.
+Ref.~\cite{Czekaj2015} presented states that violate the criterion based on a bound for the quantum Fisher information similar to Eq.~\eqref{eq:bg-entanglement-criterion-qfi}.

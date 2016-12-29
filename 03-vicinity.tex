@@ -9,7 +9,7 @@ Such states can be used as prove states to estimate the homogeneous magnetic fie
 It turns out that the unpolarized states are the most adequate states to bite the Heisenberg limit, as it was shown on the Section~\ref{sec:bg-quantum-metrology}.
 Hence, these states have attracted the interest of the community.
 
-One of the figures of merit of this such unpolarized, but still useful, states is the so-called unpolarized Dicke state \citep{Dicke1954}, which consists of, on its $z$-axis  representation, an equal number of qubits pointing up and pointing down while the whole state is in the symmetric subspace.
+One of the figures of merit of this such unpolarized, but still useful, states is the so-called unpolarized Dicke state \cite{Dicke1954}, which consists of, on its $z$-axis  representation, an equal number of qubits pointing up and pointing down while the whole state is in the symmetric subspace.
 It can be written as follows,
 \be
   \ket{\dicke{N,\frac{N}{2}}} \equiv \ket{\dicke{N}}:= \binom{N}{N/2}^{-\frac{1}{2}}
@@ -20,7 +20,7 @@ It can be written as follows,
 \ee
 where $k$ are elements of the set of all possible unique permutations of $N$ elements of 2 kinds, $\sigma_\text{s}$, see Appendix~
 ef{app:angular-subspaces} for more information about this notation.
-Such state is known to be highly entangled \citep{} and to reach Heisenberg scaling when used for magnetometry.
+Such state is known to be highly entangled \cite{} and to reach Heisenberg scaling when used for magnetometry.
 
 One of the most particular features this state has is that since it is a eigenstate of the collective operator $J_z$ with corresponding eigenvalue equal to zero.
 At the same time, it lives in the subspace where the collective total spin is maximum, i.e, $\expect{\bs{J}^2}=N(N+2)/4$.
@@ -29,11 +29,11 @@ With this together with the fact that the state is unpolarized, it turns that it
 For metrology, we chose the $z$-axis to be parallel to the magnetic field.
 Hence, the Dicke state should not be an eigenstate of $J_z$, it would not evolve in time making it useless for metrology, but an eigenstate of a perpendicular projection of the angular momentum operator such as $J_x$.
 In this scheme, the state is rotated around the $z$-direction and the rotation angle must be estimated based on collective measurements.
-For this case, a criterion to detect the metrological usefulness of some of these states has been derived for symmetric systems \citep{VD51}.
+For this case, a criterion to detect the metrological usefulness of some of these states has been derived for symmetric systems \cite{VD51}.
 
 In this chapter, we present a condition for metrological usefulness for the case when the second moment of a total angular momentum component is measured to obtain an estimate for the rotation angle.
 Our method is expected to simplify the experimental determination of metrological sensitivity since it is much easier to measure the collective operators of the state than carrying out the metrological procedure and measure directly the sensitivity.
-We also test our approach using the experimental results of Refs.~\citep{VD48,VD50}, which realize parameter estimation with a Dicke state.
+We also test our approach using the experimental results of Refs.~\cite{VD48,VD50}, which realize parameter estimation with a Dicke state.
 Thus, our work is expected to be useful for similar experiments in the future.
 
 The chapter is organized as follows.
@@ -250,7 +250,7 @@ From the equation above and using the expression for the optimal precision Eq.~\
 \be
   \varian{\theta}_{\text{opt}} = \frac{2}{N(N+2)},
 \ee
-which coincides exactly with the inverse quantum Fisher information for such state \citep{VD48}.
+which coincides exactly with the inverse quantum Fisher information for such state \cite{VD48}.
 Hence for the ideal Dicke state, the Cramér-Rao bound Eq.~\eqref{eq:bg-quantum-cr-bound} is saturated, which means that estimating the phase shift $\theta$ using the measurement of $\expect{J_x^2}$ is optimal.
 Based on Eq.~\eqref{eq:vd-optimal-phase}, we add that the optimal angle for the ideal Dicke state is $\theta_{\text{opt}}=0$.
 
@@ -303,7 +303,7 @@ Although showing how the optimal precision formula behaves compared with the qua
 
 To proof that first of all, we compute the Eq.~\eqref{eq:vd-even-f-constraint} for the spin-squeezed states $\ket{\text{GS}}_{\lambda}$.
 For that it is enough to know that since those states are non-degenerated eigenvalue must preserve the symmetries of the Hamiltonian.
-In this case, the Hamiltonian Eq.~\eqref{eq:vd-ss-hamiltonian} is invariant under $x\leftrightarrow -x$ and $z\leftrightarrow -z$, thus it must be invariant under $n\pi$ angle rotations under the $y$-axis for $n$ integer, for more references about symmetries in quantum mechanics one can check References \cite{Sakurai2014, Cohen-Tannoudji1977}.
+In this case, the Hamiltonian Eq.~\eqref{eq:vd-ss-hamiltonian} is invariant under $x\leftrightarrow -x$ and $z\leftrightarrow -z$, thus it must be invariant under $n\pi$ angle rotations under the $y$-axis for $n$ integer, for more references about symmetries in quantum mechanics one can check Ref.s \cite{Sakurai2014, Cohen-Tannoudji1977}.
 Hence, we can write for the evolution of the expectation value of any power of the $J_x$ that
 \be
   \tr(e^{+i\theta J_z}J_x^m e^{-i\theta J_z} \rho_{\lambda}) = \tr(e^{+i\theta J_z}J_x^m e^{-i\theta J_z} e^{-in\pi J_y}\rho_{\lambda}e^{+in\pi J_y}),
@@ -340,36 +340,67 @@ We conclude that for this case all the statistical moments of the $J_x$ operator
 \subsection{Using our method with real experimental data}
 \label{sec:vd-testing-with-experimental-data}
 
-On reference [XXX], it is produced on the laboratory a state with the proper characteristics of an unpolarised Dicke state, small variance on one of the directions and very large one on the perpendicular directions to this.
-It is also invariant under rotations around $x$-axis.
-Effectively, the state has the following form,
+In reference \cite{VD65}, it is produced in the laboratory a state with the proper characteristics of an unpolarized Dicke state, small variance in one direction, say $x$, and a very large variance in the perpendicular directions to the $x$-axis.
+In the experiment with $N$ qubits, it is possible to determine the operator $J_x$ as the population invalance of the two levels as
 \be
-  \rho = \frac{1}{2\pi}\int e^{-i\alpha J_x} \rho_0 e^{i\alpha J_x},
+  J_z = \frac{1}{2}(N_{+}-N_{-}),
 \ee
-where $\rho_0$is what we would obtain if we would have access to the phase reference.
-Hence we have that at $\theta=0$ all the statistical moments $\expect{J_z^m}=\expect{J_y^m}$ are equal.
+where $N_m$ is the number of particles in the state $\ket{m}$, in this case either $\ket{+}$ or $\ket{-}$.
+Hence, measuring the population invalance and collecting the statistics of the measurements, the expectation values of all moments of $J_x$ can be obtained.
+In practice, it is possible to measure the lower order moments like $\expect{J_x^2}$ and $\expect{J_x^4}$, while higher order moments need too many repetitions of the experiment to collect enough statistics and achieve a significant result.
 
-Simplification of our precision formula on Eq.~{(XXX)}.
-First, we simplify the expectation value $\expect{J_xJ_z^2J_x}$ in the following way,
+The other two global operators $J_y$ and $J_z$ are obtained by rotating the system using a $\frac{\pi}{2}$ microwave coupling pulse before the measurement of the population invalance.
+Whether $J_y$ or $J_z$ is obtained depends on the relation between the microwave phase and the phase of the initial BEC.
+The condensate phase represents the only possible phase reference in analogy to the local oscillator in optics.
+Intrinsically, it has no relation to the microwave phase, such that it homogeneously average over all possible phase relations.
+From another point of view, one can also say that the fluctuation of the magnetic field result in a random rotation of the spin around the $z$-axis.
+Hence, what is obtained in this case is
+\be
+  J_\alpha = \sin(\alpha) J_y + \cos(\alpha) J_z,
+\ee
+where $\alpha$ is an angle, and we need to consider the average over all possible angles.
+Effectively, the state has the following form
+\be
+  \rho = \frac{1}{2\pi}\int e^{-i\alpha J_x} \rho_0 e^{i\alpha J_x}\, \text{d}\alpha,
+  \label{eq:vd-rotational-invariant-state}
+\ee
+where $\rho_0$ is what we would obtain if we would have access to the phase reference.
+Note that the integration over the rotation angle $\alpha$ does not create entanglement.
+If the state $\rho$ is entangled then $\rho_0$ has to be also entangled.
+
+Let us see the consequences of our state having the form  Eq.~\eqref{eq:vd-rotational-invariant-state}.
+For the density matrix $\rho$, since it is invariant under rotations around the $x$-axis, we have
+\be
+  \expect{J_\alpha^m}=\expect{J_y^m}=\expect{J_z^m}
+\ee
+for all $m$.
+Hence the expectation values of $\expect{J_y^m}$ and $\expect{J_z^m}$ can be obtained from the statistics of measuring $J_\alpha$.
+Moreover, for states of the form Eq.~\eqref{eq:vd-rotational-invariant-state} the unitary dynamics will fulfill the condition Eq.~\eqref{eq:vd-even-f-constraint}.
+
+There is a single remaining term in the expression for the achievable precision Eq.~\eqref{eq:vd-precision}, the expectation value for $\expect{J_xJ_y^2J_x}$, which can be bounded as
 \be
 \begin{split}
   \expect{J_xJ_y^2J_x} &= \frac{\expect{J_x (J_y^2 + J_z^2)J_x}}{2}
   =\frac{\expect{J_x (J_x^2 + J_y^2 + J_z^2 )J_x} - \expect{J_x^4}}{2} \\
-  & \leq \frac{N(N+2)}{8} \expect{J_x^2} - \frac{\expect{J_x^4}}{2}.
+  & \leq \frac{N(N+2)}{8} \expect{J_x^2} - \frac{\expect{J_x^4}}{2},
 \end{split}
+\label{eq:vd-simplification-of-last-4th-moment}
 \ee
-Notice that obtaining $\expect{J_xJ_z^2J_x}$ is hard experimentally.
-This simplification can only make our estimation of the precision worse while for symmetric states the equality holds.
-The bound from below for the precision can be writtes as,
+where the last inequality is due to that for all states $\expect{\bs{J}^2}\leq \mathcal{J}_N/2$, see Eq.~\eqref{eq:app-maximum-total-angular-momentum}, while symmetric states saturate the inequality in Eq.~\eqref{eq:vd-simplification-of-last-4th-moment}.
+Note that obtaining $\expect{J_xJ_z^2J_x}$ can be hard experimentally.
+In any case, this simplification can only make our estimation of the precision worse while for symmetric states the equality holds.
+Hence, the lower bound for the achievable precision can be written as
 \be
   \varian{\theta}_{\text{opt}} \leq \frac{\sqrt{\varian{J_x^2} \varian{J_y^2} } + \expect{J_y^2} + \frac{3N(N+2)-8}{4} \expect{J_x^2} - 2\expect{J_x^2}\expect{J_y^2} - 3\expect{J_x^4}}
   {4\expect{J_y^2-J_x^2}^2},
 \ee
 where some terms were reordered and further simplified.
 
-It is worth to study this case and apply our methods such that we can extract conclusions about the metrological usefulness of the state.
-The system in consideration is a $N=7900$ particles system.
-The measured data for such system is
+It is worth to study the case appearing in Ref.~\cite{VD50} and apply our methods such that we extract conclusions about the metrological usefulness of the state.
+The system under consideration has around $N=7900$.
+Note that using only the expectation value of the particle number cannot lift any lower bound of the precision.
+For a discussion about entanglement criteria in systems with particle number fluctuations see Ref.~\cite{Hyllus2012a}.
+The measured data for the system yields
 \be
 \begin{aligned}
   \expect{J_x^2} & = 112 \pm 31, \\
@@ -380,44 +411,57 @@ The measured data for such system is
   \expect{J_y^2} & = 6 \times 10^6 \pm 0.6 \times 10^6, \\
   \expect{J_y^4} & = 6.2 \times 10^{13} \pm 0.8 \times 10^{13}.
 \end{aligned}
+\label{eq:vd-experimental-values}
 \ee
-Hence we obtain the maximum precision,
+Hence, we obtain the maximum precision as
 \be
-  \frac{(\Delta \theta)^{-2}_{\text{opt}}}{N} \geq 3.7 \pm 1.5
+  \frac{(\Delta \theta)^{-2}_{\text{opt}}}{N} \geq 3.7 \pm 1.5.
+  \label{eq:vd-precision-for-experiment}
 \ee
-with boot straping methods.
-The direct substitution would yield to a 3.3 gain over the shot-noise limit.
+The statistical uncertainties of Eqs.~\eqref{eq:vd-experimental-values} and \eqref{eq:vd-precision-for-experiment} have been obtained through bootstraping methods, while the direct substitutions of expectation values would yield to 3.3 of gain over the shot-noise limit $\varinv{\theta}=N$.
+Based on Eq.~\eqref{eq:bg-entanglement-criterion-qfi}, this proves the presence of metrologically useful entanglement \cite{VD11}.
+Based on Eq.~\eqref{eq:bg-entanglement-depth-for-qfi}, it even demonstrated that the quantum state had metrologically useful 4-particle entanglement.
+Assuming an error of a standard deviation, Eq.~\eqref{eq:vd-precision-for-experiment} still proves 3-particle entanglement.
 
-Next we plot the value for the precision substituting directly the measured data into Eq.~{(XXX)}, see Figure~\ref{fig:vd-precision-theta}.
+Next we plot the value for the precision substituting directly the experimental data into Eq.~\eqref{eq:vd-precision-as-theta}, see Figure~\ref{fig:vd-precision-theta-experiment}.
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=.65]{img/plots/VD_precision_theta.pdf}
-  \caption[Evolution of the precision for $\theta$.]{The (solid) line shows how the precision of $\theta$ varies through the evolution. Notice that for the initial moment the precision is zero and that it reaches a maximum at $\theta \approx 0.0057$ highlighted with the vertical (dashed) line. The gray area represent the region where the precision is below the shot-noise limit.}
-  \label{fig:vd-precision-theta}
+  \caption[Evolution of the precision for $\theta$.]{(solid) The precision as a function of the parameter $\theta$ given by Eq.~\eqref{eq:vd-precision-as-theta} varies through the evolution.
+  Note that for the initial moment the precision is zero.
+  (dashed) We highlight where the precision reaches its maximum at $\theta \approx 0.0057$.
+  (gray-area) It represent the region where the precision is below the shot-noise limit.}
+  \label{fig:vd-precision-theta-experiment}
 \end{figure}
+Since we cannot obtain the expectation value $\expect{J_xJ_y^2J_x}$ we approximate it with the right-hand side of Eq.~\eqref{eq:vd-simplification-of-last-4th-moment}.
+With that we underestimate $\varinv{\theta}$.
 
-Further simplification of our method can be achieved for states of the kind of the one studied on this section.
-Based on $\expect{AB}\leq\lambda_{\max}(A)\expect{B}$ for two commuting positive-semidefinite observables,
+Thus, we could detect metrological usefulness by measuring the second and fourth moments of the collective angular momentum components.
+For future applications of our scheme, it is important to reduce further the number of quantities we need to obtain a lower bound for the precision.
+In practice, one can easily avoid the need for determining $\expect{J_y^4}$.
+Note that if we measure $J_y$ then the distribution of the values obtained is strongly non-Gaussian.
+The values $\pm N/2$ appear most frequently, and the value 0 appears least frequently \cite{VD48}.
+Based on $\expect{AB}\leq\lambda_{\max}(A)\expect{B}$, where $\lambda_{\max}(A)$ is the largest eigenvalue of $A$, for two commuting positive-semidefinite observables,
 \be
   \expect{J_y^4}\leq\frac{N^2}{4}\expect{J_x^2}.
 \ee
+Since even for a noisy Dicke state $\expect{J_y^2}$ is very large, the above equation is a very good upper bound.
+Substituting it into the Eq.~\eqref{eq:vd-precision}, we will underestimate $\varinv{\theta}$.
 
-We can also approximate $\expect{J_x^4}$ with $\expect{J_x^2}$ in the sense that it is small and that mainly its value comes from technical noise,
+It is also possible to approximate $\expect{J_x^4}$ with $\expect{J_x^2}$ in the sense that it is small and that mainly its value comes from technical noise,
 \be
   \expect{J_x^4} \approx \beta \expect{J_x^2}^2.
 \ee
-This approximation even if it is not a strict bound on the precision can be very useful in order to characterize the metrological usefulness of our input state based only on second statistical moments of only two angular momentum operators, namely $\expect{J_z^2}$ and $\expect{J_x^2}$.
-Those two expectation values are related with the width of our state and also with how thin we can do it in one of the directions, for metrological purposes, perpendicular to the magnetic field.
-So in this case we use $\beta=3$ assuming that the distribution function has Gaussian shape.
+This approximation, even if it is not a strict bound on the precision, can be very useful in order to characterize the metrological usefulness of the state based only on second statistical moments of only two angular momentum components, namely $\expect{J_y^2}$ and $\expect{J_x^2}$.
+Those two expectation values are related with how  thin is the state in one direction and how wide in the perpendicular ones.
+So in this case we use $\beta=3$ assuming that the distribution function has a Gaussian shape.
 
-From these considerations we are able to write a second bound with fewer expectation values for the optimal precision such that,
+From these considerations we are able to write a second bound with fewer expectation values for the optimal precision such that
 \be
   \varian{\theta}_{\text{opt}} \leq \frac{\expect{J_y^2} + \frac{3N(N+2)-8}{4} \expect{J_x^2} + \Big(\sqrt{\frac{N^2}{2\expect{J_y^2}}-2} - 2 \Big) \expect{J_y^2}\expect{J_x^2} - 9\expect{J_x^2}^2}
   {4\expect{J_y^2-J_x^2}^2}.
 \ee
-We have used this formula to compute the bound on the optimal precision with the measured data shown on Eq.~{(XXX)}, $(\Delta \theta)^{-2}_{\text{opt}} \geq 2.9N$, see Figure~
-ef{fig:vd-experimental}.
-
+We have used this formula to compute the bound on the optimal precision with the measured data shown on Eq.~\eqref{eq:vd-experimental-values}, $(\Delta \theta)^{-2}_{\text{opt}} \geq 2.9N$, see Figure~\ref{fig:vd-experimental}.
 \begin{figure}[htp]
   \centering
   \igwithlabel{(a)}{scale=.65}{img/plots/VD_exper_contour.pdf}
@@ -425,3 +469,4 @@ ef{fig:vd-experimental}.
   \caption[(a) Region of precision and experimental data. (b) Constant $\expect{J_y^2}$ section.]{Comparison between our formula for the precision and the QFI for different states. a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
   \label{fig:vd-experimental}
 \end{figure}
+It turns out that even this way, 3-particle metrologically useful entanglement is detected.
