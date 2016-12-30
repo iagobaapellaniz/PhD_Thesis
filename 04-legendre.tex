@@ -18,7 +18,7 @@ This is in contrast to other approaches one can find in the literature, an it is
 
 The figure of merit of bounds from below for the quantum Fisher information based on expectation values of the initial state is the following,
 \be
-  \qfi [\rho,J_z] \geq \frac{\expect{J_x}^2}{\varian{J_y}}.
+  \qfi [\rho,J_z] \geqslant \frac{\expect{J_x}^2}{\varian{J_y}}.
 \ee
 where the state is polarized along the $x$-axis and the variance of the $J_y$ operator is smaller than the standard.
 On the previous chapter we also have shown one of these bound specifically designed for unpolarized Dicke states.
@@ -45,7 +45,7 @@ When a convex function $g(\rho)$ is given together with an expectation value of 
 \be
   \label{eq:lt-lower-bound-single-parameter}
   \begin{split}
-    g(\rho)\geq\bound{g}(w):=\,&\sup_r \{ rw - \hat{g}(rW)\}\\
+    g(\rho)\geqslant\bound{g}(w):=\,&\sup_r \{ rw - \hat{g}(rW)\}\\
     =\,& \{\inf_{\rho}g(\rho)\,|\,w = \tr(\rho W)\}
   \end{split}
 \ee
@@ -120,7 +120,7 @@ which, making use of $\max\{\expect{A}\}=\lambda_{\max}[A]$ for any observable, 
 \ee
 where we omitted in writing $\mtxid$ for clarity and $\lambda_{\max}[A]$ stands for the maximum eigenvalue of the operator $A$.
 At the extremum, we make the following observation, the derivative with respect to $\mu$ must be zero, hence at the optimum $\mu=\expect{J_z}_{\text{opt}}$ which represents the expectation value $J_z$ should have considering the optimal state on Eq.~\eqref{eq:lt-legendre-of-qfi}.
-This also means that we have to test $\mu$ values in the interval $-N/2\leq\mu\leq N/2$ only for spin-half systems.
+This also means that we have to test $\mu$ values in the interval $-N/2\leqslant\mu\leqslant N/2$ only for spin-half systems.
 
 The full optimization problem to be solved consists of Eqs.~\eqref{eq:lt-lower-bound-single-parameter} and~\eqref{eq:lt-legendre-for-qfi-simplified} substituting $g(\rho)$ by $\qfif{\rho,J_z}$,
 \be
@@ -242,13 +242,13 @@ Due to this, the problem can be simplified to the following equation
   = & \lcor
   \begin{aligned}
     &0, && \text{if } r<0,\\
-    &\frac{r}{2}+\frac{r^2}{16N^2} && \text{if } 0\leq r\leq 4N^2,\\
+    &\frac{r}{2}+\frac{r^2}{16N^2} && \text{if } 0\leqslant r\leqslant 4N^2,\\
     &-N^2+r, && \text{if }r>4N^2,
   \end{aligned}
   \right.
   \end{split}
 \ee
-where we did not have to have to look for the maximum of $\lambda_{-}$ over $\mu$ since clearly $\lambda_{+}\geq\lambda_{-}$.
+where we did not have to have to look for the maximum of $\lambda_{-}$ over $\mu$ since clearly $\lambda_{+}\geqslant\lambda_{-}$.
 Finally, we have to substitute Eq.~\eqref{eq:lt-ghz-legendre-solution} into Eq.~\eqref{eq:lt-maximization-problem-fid-ghz}, and carry out the optimization over $r$, considering $F_{\ghz}\in[0,1]$.
 
 This way we arrive at the solution for the lower bound of the QFI base on the fidelity with respect to the GHZ state as
@@ -256,7 +256,7 @@ This way we arrive at the solution for the lower bound of the QFI base on the fi
   \bound{\mathcal{F}}(F_{\ghz}) = \lcor
   \begin{aligned}
     & N^2(1-F_{\ghz})^2, && \text{if } F_{\ghz} < 1/2, \\
-    & 0, && \text{if } F_{\ghz}\leq1/2.
+    & 0, && \text{if } F_{\ghz}\leqslant1/2.
   \end{aligned}
   \right.
 \ee
@@ -271,7 +271,7 @@ This equation is plotted in Figure~\ref{fig:lt-plots-for-fidelities}.a.
   \label{fig:lt-plots-for-fidelities}
 \end{figure}
 Note that in the figure the plot is normalized by $N^2$ and that the resulting semi-parabola is independent of the number of particles.
-Moreover, the bound is zero for $F_{\ghz}\leq 1/2$.
+Moreover, the bound is zero for $F_{\ghz}\leqslant 1/2$.
 This is consistent with the fact that for the product states $\rho=\ket{111\dots11}$ or $\rho=\ket{000\dots00}$ we have $F_{\ghz}=1/2$, while $\mathcal{F}_{\text{Q}}[\rho,J_z]=0$.
 
 Next, let us consider symmetric unpolarized Dicke state with even $N$ particles along the $x$-direction, which is given by
@@ -388,7 +388,7 @@ Finally, the completely mixed state rests on the line W.
 It cannot be used for metrology, hence $\qfif{\rho,J_z}=0$.
 
 We now compare the difference between our bound and L.~Pezze and A.~Smerzi bound Eq.~\eqref{eq:bg-pezze-bound}.
-First, we consider the experimentally relevant region for which $\varian{J_x}\leq 1$.
+First, we consider the experimentally relevant region for which $\varian{J_x}\leqslant 1$.
 We find that for points away from the physical boundary at least by 0.001 on the vertical axis, the difference between the two bounds is smaller than $2\times10^{-6}$.
 For points at the boundary, the difference is somewhat larger, but still small, the relative difference is smaller than $2\%$ for 4 particles.
 [TD: Add part of the appendix]
@@ -524,7 +524,7 @@ Moreover, we assume $\expect{J_x}=0$, as the $y$-direction was the direction of 
 Based on Eq.~\eqref{eq:bg-pezze-bound}, the bound for the quantum Fisher information is obtained as
 \be
   \label{eq:lt-bound-for-experiment}
-  \frac{\qfif{\rho,J_z}}{N}\geq \frac{1}{\xi_{\textnormal{s}}^2}=6.605.
+  \frac{\qfif{\rho,J_z}}{N}\geqslant \frac{1}{\xi_{\textnormal{s}}^2}=6.605.
 \ee
 
 For our computations we need a tool to handle large systems.
@@ -535,7 +535,7 @@ This is not the case in general for the spin-squeezing problem.
 However, we still know that our bound obtained with our calculations on the symmetric subspace cannot be smaller than the optimal bound $\bound{\mathcal{F}}$, which must be bigger or equal to the Eq.~\eqref{eq:bg-pezze-bound} since it cannot be larger than the optimal bound for general states.
 These relations can be summarized as
 \be
-  \bound{\textnormal{sym}}\geq \bound{\mathcal{F}}\geq\frac{\expect{J_y}^2}{\varian{J_x}},
+  \bound{\textnormal{sym}}\geqslant \bound{\mathcal{F}}\geqslant\frac{\expect{J_y}^2}{\varian{J_x}},
 \ee
 where on the right-hand side we just used the bound in Eq.~\eqref{eq:bg-pezze-bound}.
 
@@ -561,7 +561,7 @@ The basic idea is that we transform the collective quantities from $N$ to a smal
 \end{align}
 We see that for the scaling we consider, for all $N'$ the bound in Eq.~\eqref{eq:bg-pezze-bound} is valid, i.e., is obtained as
 \be
-  \frac{\qfif{\rho_{N'},J_z}}{N'}\geq \frac{1}{\xi_{\textnormal{s}}^2}=6.605.
+  \frac{\qfif{\rho_{N'},J_z}}{N'}\geqslant \frac{1}{\xi_{\textnormal{s}}^2}=6.605.
 \ee
 
 Let us first take $\alpha=0.85$, which is somewhat smaller than the experimental value, however, it helps us to see various characteristics of the method.
@@ -629,7 +629,7 @@ Note that $\gamma=1$ if the original state is symmetric.
 Next, based on the ideas of this chapter, we calculate the lower bound on the quantum Fisher information for symmetric systems, which we denote it by $\bound{\text{sym},N}$.
 Then, to obtain the results for the original non-symmetric case, notice the convex nature of the $\bound{N}$, which is the bound to be computed for the general case, implies
 \be
-  \bound{N}\leq \frac{1}{N}\bound{\text{sym},N},
+  \bound{N}\leqslant \frac{1}{N}\bound{\text{sym},N},
 \ee
 where $\bound{\text{sym},N}$ corresponds to the bound one would obtain on the symmetric subspace for expectation values given using the Eq.~\eqref{eq:lt-expectation-values-extended-to-symmetric}.
 This can be seen using an auxiliary state $\tilde{\rho}$ that mixes the symmetric state that in principle has the expectation values appearing on Eq.~\eqref{eq:lt-expectation-values-extended-to-symmetric} and the singlet state that has zero value for all those expectation values
@@ -641,7 +641,7 @@ we have that $\tilde{\rho}$ has the same expectation values as the original non-
 This way, we can relate the bound for general systems to the quantum Fisher information for symmetric cases as
 \be
   \label{eq:lt-radial-linearity-dicke-bound}
-  \bound{N}\leq \qfif{\tilde{\rho}_N,J_z}=\frac{1}{\gamma}\qfif{\rho_{\text{sym,N}},J_z}.
+  \bound{N}\leqslant \qfif{\tilde{\rho}_N,J_z}=\frac{1}{\gamma}\qfif{\rho_{\text{sym,N}},J_z}.
 \ee
 Here, the inequality comes due to that our bound cannot be larger than the QFI of any state having the given set of expectation values.
 On the other hand, the equality holds due to the fact that both $\tilde{\rho}$ and $J_z$ can be written as block-diagonal matrix of blocks corresponding to different eigenvalues of $\bs{J}^2$.
@@ -718,7 +718,7 @@ With this, we arrive at the result for the experimental system
 The $\approx$ sign is used referring to the fact that we assume that the inequality in Eq.~\eqref{eq:lt-radial-linearity-dicke-bound} is close to be saturated and that we did sufficient numerics for an increasing system size $N'$ to have a good asymptotic approach to the real value Eq.~\eqref{eq:lt-asymptotic-limit-bound-dicke-symmetric}.
 
 It is instructive to compare the value of Eq.~\eqref{eq:lt-result-experimental-dicke} to the one obtained in Chapter~\ref{}, where the same system was characterized base on its metrological usefulness.
-Such result implies $\qfif{\rho,J_z}/N\geq3.3$ which is somewhat bigger than our recent result as we did not use the knowledge of the fourth moments, only the second moments.
+Such result implies $\qfif{\rho,J_z}/N\geqslant3.3$ which is somewhat bigger than our recent result as we did not use the knowledge of the fourth moments, only the second moments.
 The closeness of the two results is a strong argument for the correctness of our calculations.
 
 \subsection{Scaling for $\qfif{\rho,J_z}$ with $N$}
@@ -734,7 +734,7 @@ Our methods estimates the quantum Fisher information assuming a perfect unitary 
 The quantum Fisher information can be smaller that what we expect ideally only due to the imperfect preparation of the state\footnote{
 This is also relevant for \cite{Augusiak2015}, where $\qfi=\mathcal{O}(N^2)$ is reached with weakly entangled states.}.
 We can even find simple conditions on the state preparation that lead to a Heisenberg scaling.
-Based on Eq.~\eqref{eq:lt-ghz-legendre-solution}, if we could realize quantum states $\rho_N$ such that $F_{\text{GHZ}}(\rho_N)\geq0.5+\epsilon$ for $N\rightarrow\infty$ for some $\epsilon>0$, then we would reach $\bound{\mathcal{F}}(F_{\text{GHZ}}) = \mathcal{O}(N^2)$.
+Based on Eq.~\eqref{eq:lt-ghz-legendre-solution}, if we could realize quantum states $\rho_N$ such that $F_{\text{GHZ}}(\rho_N)\geqslant0.5+\epsilon$ for $N\rightarrow\infty$ for some $\epsilon>0$, then we would reach $\bound{\mathcal{F}}(F_{\text{GHZ}}) = \mathcal{O}(N^2)$.
 Strong numerical evidence suggest that a similar relation holds for fidelity $F_{\text{Dicke}}$ and $\bound{\mathcal{F}}(F_{\text{GHZ}})$, see Section~\ref{}.
 [TD: Decide if remove the following sentence. It is very strong]
 From another point of view, our method can estimate $\qfif{\rho,J_z}$ for large particle numbers, while a direct measurement of the metrological sensitivity considerably underestimates it.
