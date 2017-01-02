@@ -1,5 +1,7 @@
 workspace()
-using HDF5, PyPlot
+
+using PyPlot
+using HDF5
 
 L_FSIZE = 18
 T_FSIZE = 14

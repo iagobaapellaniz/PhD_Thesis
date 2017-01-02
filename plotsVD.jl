@@ -54,8 +54,8 @@ function plotVD_precisionOnTheta()
     precision_max = a_read(group,"precision_max")
 
     fig = figure(figsize=(5,3.5))
-    xl = xlabel(L"$\Theta$ [A.U.]", fontsize=L_FSIZE)
-    yl = ylabel(L"$(\Delta \Theta)^{-2}/N$", fontsize=L_FSIZE)
+    xl = xlabel(L"$\theta$", fontsize=L_FSIZE)
+    yl = ylabel(L"$(\Delta \theta)^{-2}/N$", fontsize=L_FSIZE)
     xticks(rotation=45)
 
     ax = axis(xmin=minimum(theta), xmax=maximum(theta))
@@ -72,7 +72,6 @@ function plotVD_precisionOnTheta()
 
 
     savefig("pdf/VD_precision_theta.pdf", bbox_inches="tight")
-
 end
 
 function plotVD_againstSPSQ()

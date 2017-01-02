@@ -17,17 +17,36 @@ function plotLT_spsq2d()
   xlabel(L"\langle J_y \rangle",fontsize=L_FSIZE)
   ylabel(L"(\Delta J_x)^2",fontsize=L_FSIZE)
 
+
   im = imshow(precision, cmap=CMAP_R ,aspect=1/2*4/5, extent=[0,2,0,4])
   sql_line = plot(x_sql, y_sql, "k--", LineWidth = LWD)
   boundary_line = plot(x_bound, y_bound, "k", LineWidth =1.25)
+  bar(0,4,2,0, hatch="//", fill=false, zorder=0)
+
+  c1 = matplotlib[:patches][:Ellipse]((0,0.05),0.05,0.1,color="black")
+  c2 = matplotlib[:patches][:Ellipse]((0,3),0.05,0.1,color="black")
+  bar(0,2.95,0.025,0.05, color="black")
+  c3 = matplotlib[:patches][:Ellipse]((2,1),0.1,0.2,color="black")
+  c4 = matplotlib[:patches][:Ellipse]((0,4),0.1,0.2,color="black")
+
+  im[:axes][:add_artist](c1)
+  im[:axes][:add_artist](c2)
+  im[:axes][:add_artist](c3)
+  im[:axes][:add_artist](c4)
+
+  text(0.05,3.7,"M")
+  text(0.05,2,"W")
+  text(0.05,0.1,"S,D")
+  text(1.85,1.1,"T")
 
   cb = colorbar(im, ticks=Array(linspace(0,1,4)))
   cb[:ax][:set_yticklabels](vcat(map(string, Array(0:3))))
   cb[:set_label](L"\mathcal{B}_{\mathcal{F}}/N", fontsize=L_FSIZE)
 
   savefig("pdf/LT_spsq2d_4.pdf", bbox_inches="tight")
-
 end
+
+plotLT_spsq2d()
 
 function plotLT_dickeEdge()
 
@@ -163,7 +182,6 @@ function plotLT_legendre()
 
   savefig("pdf/LT_legendre.pdf", bbox_inches="tight")
 end
-plotLT_legendre();
 
 function plotLT_edgeDiff()
   x4    = h5read("plotsData.h5", "/LT/edgeDifference/jz4")
@@ -197,7 +215,6 @@ function plotLT_edgeDiff()
 
   savefig("pdf/LT_edge_diff.pdf", bbox_inches="tight")
 end
-plotLT_edgeDiff();
 
 function plotLT_spsq_scaling_1()
 
@@ -217,7 +234,6 @@ function plotLT_spsq_scaling_1()
 
   savefig("pdf/LT_spsq_scaling_1.pdf", bbox_inches="tight")
 end
-plotLT_spsq_scaling_1()
 
 function plotLT_spsq_scaling_2()
 
@@ -237,4 +253,3 @@ function plotLT_spsq_scaling_2()
 
   savefig("pdf/LT_spsq_scaling_2.pdf", bbox_inches="tight")
 end
-plotLT_spsq_scaling_2()
