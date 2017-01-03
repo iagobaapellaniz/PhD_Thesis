@@ -74,48 +74,40 @@ function plotVD_precisionOnTheta()
     savefig("pdf/VD_precision_theta.pdf", bbox_inches="tight")
 end
 
-function plotVD_againstSPSQ()
-
+function plotVD_againstSPSQ(ipath::String, opath::String)
     # Open data group of the plot
-    parameter = h5read("plotsData.h5","VD/comparison/spsq_parameter")
-    quantumFI = h5read("plotsData.h5","VD/comparison/spsq_qfi")
-    precision = h5read("plotsData.h5","VD/comparison/spsq_opt_prec_old")
+    parameter = h5read(ipath,"VD/comparison/spsq_parameter")
+    quantumFI = h5read(ipath,"VD/comparison/spsq_qfi")
+    precision = h5read(ipath,"VD/comparison/spsq_opt_prec_old")
 
     fig = figure(figsize=(5,3.5))
-    xl = xlabel(L"$\lambda$ [A.U.]", fontsize=L_FSIZE)
-    yl = ylabel(L"(\Delta \Theta)^{-2}/N", fontsize=L_FSIZE)
+    xl = xlabel(L"$\lambda$", fontsize=L_FSIZE)
+    yl = ylabel(L"(\Delta \theta)^{-2}/N", fontsize=L_FSIZE)
     xticks([0,0.1,0.2,0.3,0.4])
 
     ax = axis(xmin=0, xmax=maximum(parameter), ymin=0, ymax=140)
 
-    plot(parameter,quantumFI,"--r", linewidth=LWD,label=L"\mathcal{F}\,[\rho_\lambda,J_z]/N")
-    plot(parameter,precision,linewidth=LWD,label=L"(\Delta \Theta)^{-2}/N")
+    plot(parameter,quantumFI,"--r", linewidth=LWD,label=L"\mathcal{F}_{Q}\,[\rho_\lambda,J_z]/N")
+    plot(parameter,precision,linewidth=LWD,label=L"(\Delta \theta)^{-2}/N")
     legend(frameon=false)
 
-    savefig("pdf/VD_against_spsq.pdf", bbox_inches="tight")
+    savefig(opath, bbox_inches="tight")
 end
 
-function plotVD_againstTherm()
-
+function plotVD_againstTherm(ipath::String, opath::String)
     # Open data group of the plot
-    group = g_open(h5open("plotsData.h5"),"VicinityDicke/Comparison")
-
+    group = g_open(h5open(ipath),"VD/comparison")
     parameter = d_read(group,"therm_parameter")
     quantumFI = d_read(group,"therm_qfi")
     precision = d_read(group,"therm_opt_prec")
-
     fig = figure(figsize=(5,3.5))
-    xl = xlabel(L"$T$ [A.U.]", fontsize=L_FSIZE)
-    yl = ylabel(L"(\Delta \Theta)^{-2}/N", fontsize=L_FSIZE)
-
+    xl = xlabel(L"$T$", fontsize=L_FSIZE)
+    yl = ylabel(L"(\Delta \theta)^{-2}/N", fontsize=L_FSIZE)
     ax = axis(xmin=0, xmax=maximum(parameter))
-
-    plot(parameter,quantumFI,"--r", linewidth=LWD,label=L"\mathcal{F}\,[\rho_T,J_z]/N")
-    plot(parameter,precision,linewidth=LWD,label=L"(\Delta \Theta)^{-2}/N")
+    plot(parameter,quantumFI,"--r", linewidth=LWD,label=L"\mathcal{F}_{Q}\,[\rho_T,J_z]/N")
+    plot(parameter,precision,linewidth=LWD,label=L"(\Delta \theta)^{-2}/N")
     legend(frameon=false)
-
-    savefig("pdf/VD_against_therm.pdf", bbox_inches="tight")
-
+    savefig(opath, bbox_inches="tight")
 end
 
 function plotVD_exper_area()
