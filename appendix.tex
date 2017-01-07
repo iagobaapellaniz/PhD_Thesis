@@ -262,3 +262,141 @@ If one applies again the transformation the resulting function is again the orig
 
 \subsection{Binomial identities}
 \label{app:binomial-identities}
+
+\subsection{Calculation of the QFI matrix elements}
+\label{app:matrix-elements-of-QFI}
+
+Starting first for states insensitive to the homogeneous fields and later on for states sensitive to it, we must compute the matrix elements of the quantum Fisher information defined for the generators $H_0$ and $H_1$.
+We use the functional defined in Eq.~\eqref{eq:gm-FAB} to compute the matrix elements.
+We also use thermal states with respect to the spatial degrees of freedom Eq.~\eqref{eq:gm-eigendecomposition-of-state}, since it is one of the most common situations in the experiments.
+
+First of all, we compute the $\mathbfcal{F}_{11}\equiv\qfif{\rho, H_1, H_1}\equiv\qfif{\rho,H_1}$, since it is valid for states that are insensitive to the homogeneous field as well as for states that are sensitive to it.
+We have the following for the QFI
+\be
+\begin{split}
+  \qfif{\rho,H_1} &= 2\iint \sum_{\lambda,\nu}\frac{1}{\delta(\bs{0})}
+  \frac{(\prob(\bs{x})p_\lambda - \prob(\bs{y})p_\nu)^2}
+  {\prob(\bs{x})p_\lambda + \prob(\bs{y})p_\nu}
+  |(H_1)_{\bs{x},\lambda;\bs{y},\nu}|^2
+  \,\text{d}^N\bs{x} \text{d}^N\bs{y}\\
+  &= 2\iint \sum_{\lambda,\nu}\frac{1}{\delta(\bs{0})}
+  \frac{(\prob(\bs{x})p_\lambda - \prob(\bs{y})p_\nu)^2}
+  {\prob(\bs{x})p_\lambda + \prob(\bs{y})p_\nu}
+  (\delta(\bs{x}-\bs{y}))^2\sum_{n,m}^N x_n x_m
+  \braopket{\lambda}{j_z^{(n)}}{\nu}\braopket{\nu}{j_z^{(m)}}{\lambda}
+  \,\text{d}^N\bs{x} \text{d}^N\bs{y}
+\end{split}
+\ee
+Using the definition of the Dirac delta inside one of the integrals we have that
+\be
+\begin{split}
+  \qfif{\rho,H_1} &= 2\int \sum_{\lambda,\nu}\frac{\prob(\bs{x})}{\delta(\bs{0})}
+  \frac{(p_\lambda - p_\nu)^2}
+  {p_\lambda + p_\nu}
+  \delta(\bs{x}-\bs{x})\sum_{n,m}^N x_n x_m
+  \braopket{\lambda}{j_z^{(n)}}{\nu}\braopket{\nu}{j_z^{(m)}}{\lambda}
+  \,\text{d}^N\bs{x}\\
+  &= 2\int \prob(\bs{x}) \sum_{\lambda,\nu}
+  \frac{(p_\lambda - p_\nu)^2}{p_\lambda + p_\nu}
+  \sum_{n,m}^N x_n x_m
+  \braopket{\lambda}{j_z^{(n)}}{\nu}\braopket{\nu}{j_z^{(m)}}{\lambda}
+  \,\text{d}^N\bs{x}\\
+  &= \sum_{n,m}^N \int x_n x_m \prob(\bs{x}) \,\text{d}^N\bs{x}\,
+  \qfif{\rho_{\text{s}},j_z^{(n)},j_z^{(m)}},
+\end{split}
+\label{eq:app-computing-f11}
+\ee
+where we used the Eq.~\eqref{eq:gm-simplify-h1-matrix-els} for the simplification of the matrix elements of $H_1$, where in the third line we used on of the Dirac deltas to eliminate $\bs{y}$ from the equation, and where in the fourth line we toke the $2$ factor in front, the sum over $\lambda$ and $\nu$ and the matrix elements of $j_z^{(n)}$ and $j_z^{(m)}$ and we reconstructed $\qfif{\rho_{\text{s}},j_z^{(n)},j_z^{(m)}}$ using its definition Eq.~\eqref{eq:gm-FAB}.
+We finally reordered all the terms in order to group what it has to be integrated together between "$\int$" and "$\text{d}^N\bs{x}$", which in this case represents a two-point correlation function of $x_n$ and $x_m$ over the PDF $\prob(\bs{x})$.
+
+We now similarly do for $\mathbfcal{F}_{01}$ and $\mathbfcal{F}_{00}$.
+We use again a state of the form Eq.~\eqref{eq:gm-eigendecomposition-of-state} to compute these matrix elements of the QFI.
+We also use the simplified expression for the matrix elements of $H_0$ for this case Eq.~\eqref{eq:gm-simplify-h0-matrix-els}.
+For $\mathbfcal{F}_{01}$, the computation looks like
+\be
+\begin{split}
+  \mathbfcal{F}_{01} &= 2\iint \sum_{\lambda,\nu}\frac{1}{\delta(\bs{0})}
+  \frac{(\prob(\bs{x})p_\lambda - \prob(\bs{y})p_\nu)^2}
+  {\prob(\bs{x})p_\lambda + \prob(\bs{y})p_\nu}
+  (H_0)_{\bs{x},\lambda;\bs{y},\nu}(H_1)_{\bs{y},\nu;\bs{x},\lambda}
+  \,\text{d}^N\bs{x} \text{d}^N\bs{y}\\
+  &= 2\iint \sum_{\lambda,\nu}\frac{1}{\delta(\bs{0})}
+  \frac{(\prob(\bs{x})p_\lambda - \prob(\bs{y})p_\nu)^2}
+  {\prob(\bs{x})p_\lambda + \prob(\bs{y})p_\nu}
+  (\delta(\bs{x}-\bs{y}))^2\sum_{n,m}^N x_m
+  \braopket{\lambda}{j_z^{(n)}}{\nu}\braopket{\nu}{j_z^{(m)}}{\lambda}
+  \,\text{d}^N\bs{x} \text{d}^N\bs{y}.
+\end{split}
+\ee
+Using the definition of the Dirac delta inside one of the integrals we have that
+\be
+\begin{split}
+  \mathbfcal{F}_{01} &= 2\int \sum_{\lambda,\nu}\frac{\prob(\bs{x})}{\delta(\bs{0})}
+  \frac{(p_\lambda - p_\nu)^2}
+  {p_\lambda + p_\nu}
+  \delta(\bs{x}-\bs{x})\sum_{n,m}^N x_m
+  \braopket{\lambda}{j_z^{(n)}}{\nu}\braopket{\nu}{j_z^{(m)}}{\lambda}
+  \,\text{d}^N\bs{x}\\
+  &= 2\int \prob(\bs{x}) \sum_{\lambda,\nu}
+  \frac{(p_\lambda - p_\nu)^2}{p_\lambda + p_\nu}
+  \sum_{n,m}^N x_m
+  \braopket{\lambda}{j_z^{(n)}}{\nu}\braopket{\nu}{j_z^{(m)}}{\lambda}
+  \,\text{d}^N\bs{x}.
+\end{split}
+\ee
+Which follows from the definition of Eq.~\eqref{eq:gm-FAB}
+\be
+\begin{split}
+  \mathbfcal{F}_{01} &= \sum_{n,m}^N \int x_m \prob(\bs{x}) \,\text{d}^N\bs{x}\,
+  \qfif{\rho_{\text{s}},j_z^{(n)},j_z^{(m)}}\\
+  &= \sum_{n=1}^N \int x_n \prob(\bs{x}) \,\text{d}^N\bs{x}\,
+  \qfif{\rho_{\text{s}},j_z^{(n)},J_z},
+\end{split}
+\label{eq:app-computing-f01}
+\ee
+where we used the same arguments as when computing Eq.~\eqref{eq:app-computing-f11}, and we use the linearity on the second and third arguments of the functional Eq.~\eqref{eq:gm-FAB} in the last line to remove the one of the summation indexes.
+Note that the main difference with respect to $\mathbfcal{F}_{11}$ is that in this case the integral represents a single-point average instead of a two-point correlation function.
+Finally, for the matrix element $\mathbfcal{F}_{00}$ we have that
+\be
+\begin{split}
+  \mathbfcal{F}_{00} &= 2\iint \sum_{\lambda,\nu}\frac{1}{\delta(\bs{0})}
+  \frac{(\prob(\bs{x})p_\lambda - \prob(\bs{y})p_\nu)^2}
+  {\prob(\bs{x})p_\lambda + \prob(\bs{y})p_\nu}
+  |(H_0)_{\bs{x},\lambda;\bs{y},\nu}|^2
+  \,\text{d}^N\bs{x} \text{d}^N\bs{y}\\
+  &= 2\iint \sum_{\lambda,\nu}\frac{1}{\delta(\bs{0})}
+  \frac{(\prob(\bs{x})p_\lambda - \prob(\bs{y})p_\nu)^2}
+  {\prob(\bs{x})p_\lambda + \prob(\bs{y})p_\nu}
+  (\delta(\bs{x}-\bs{y}))^2\sum_{n,m}^N
+  \braopket{\lambda}{j_z^{(n)}}{\nu}\braopket{\nu}{j_z^{(m)}}{\lambda}
+  \,\text{d}^N\bs{x} \text{d}^N\bs{y}.
+\end{split}
+\ee
+We use now the definition of the Dirac delta such that
+\be
+\begin{split}
+  \mathbfcal{F}_{00} &= 2\int \sum_{\lambda,\nu}\frac{\prob(\bs{x})}{\delta(\bs{0})}
+  \frac{(p_\lambda - p_\nu)^2}
+  {p_\lambda + p_\nu}
+  \delta(\bs{x}-\bs{x})\sum_{n,m}^N
+  \braopket{\lambda}{j_z^{(n)}}{\nu}\braopket{\nu}{j_z^{(m)}}{\lambda}
+  \,\text{d}^N\bs{x}\\
+  &= 2\int \prob(\bs{x}) \sum_{\lambda,\nu}
+  \frac{(p_\lambda - p_\nu)^2}{p_\lambda + p_\nu}
+  \sum_{n,m}^N
+  \braopket{\lambda}{j_z^{(n)}}{\nu}\braopket{\nu}{j_z^{(m)}}{\lambda}
+  \,\text{d}^N\bs{x}.
+\end{split}
+\ee
+We apply the definition of Eq.~\eqref{eq:gm-FAB} and we reorder terms as
+\be
+\begin{split}
+  \mathbfcal{F}_{00} &= \sum_{n,m}^N \int \prob(\bs{x}) \,\text{d}^N\bs{x}\,
+  \qfif{\rho_{\text{s}},j_z^{(n)},j_z^{(m)}}\\
+  &= \sum_{n,m}^N \qfif{\rho_{\text{s}},j_z^{(n)},j_z^{(m)}}\\
+  &= \qfif{\rho_{\text{s}},J_z,J_z} = \qfif{\rho_{\text{s}},J_z},
+\end{split}
+\label{eq:app-computing-f00}
+\ee
+where we simplify the integral using the normalization of the PDF that corresponds to $1$.
+Note that we obtain the QFI for the homogeneous field as expected.

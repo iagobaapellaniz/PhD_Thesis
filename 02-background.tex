@@ -578,6 +578,7 @@ since the convex-roof over a pure state is computed on the state itself, and usi
     &=4\tr(J_z\rho) - 8 \sum_{\lambda,\nu}\frac{p_\lambda p_\nu}{p_\lambda+p_\nu} |\braopket{\lambda}{J_z}{\nu}|^2\\
     &= 4\varian{J_z}.
   \end{split}
+  \label{eq:bg-rewrite-qfi}
 \ee
 Some interesting properties of the quantum Fisher information emerge from these expressions:
 \begin{enumerate}
@@ -701,7 +702,7 @@ Simple calculations show that
   \label{eq:bg-average-qfi}
   \underset{\bs{n}}{\text{avg}}\,\qfif{\rho, J_{\bs{n}}} \equiv  \int_{\bs{n}=(\coss{\varphi}\sins{\vartheta},\sins{\varphi}\sins{\vartheta},\coss{\vartheta})} \qfif{\rho,J_{\bs{n}}}\sin(\vartheta)\,\text{d}\varphi\text{d}{}\vartheta = \frac{1}{3}\sum_{l=x,y,z} \qfif{\rho,J_l},
 \ee
-where we used the spherical coordinates for the definition of the averaged QFI and the Eq.~\eqref{eq:bg-total-angular-momentum-projector-arbitrary-direction} for $J_{\bs{n}}$.
+where we used the spherical coordinates, where $\varphi$ and $\vartheta$ are the azimuthal and polar angles respectively, for the definition of the averaged QFI and the Eq.~\eqref{eq:bg-total-angular-momentum-projector-arbitrary-direction} for $J_{\bs{n}}$.
 Therefore, bounds similar to Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:bg-heisenberg-limit} for separable and general states can be obtained for the average quantum Fisher information,
 \begin{align}
   \underset{\bs{n}}{\text{avg}}\,\qfif{\rho, J_{\bs{n}}} &\leqslant \frac{2}{3}N, \\

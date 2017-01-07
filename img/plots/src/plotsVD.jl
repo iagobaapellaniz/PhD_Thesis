@@ -1,24 +1,16 @@
-function plotVD_evolution_example()
-
-    filenames = h5read("plotsData.h5","VicinityDicke/EvolutionExample/bloch_filename_array")
-    states = h5read("plotsData.h5","VicinityDicke/EvolutionExample/dicke_x_N16_state_array")
-
+function plotVD_evolution_example(ipath::String, opath::String)
+    filenames = h5read(ipath,"VD/EvolutionExample/bloch_filename_array")
+    states = h5read(ipath,"VD/EvolutionExample/dicke_x_N16_state_array")
     (fig, axarr) = subplots(2, 5)
-
     fig[:set_size_inches](11,4)
-
     for i in 1:2
         for j in 1:5
             if i == 1
-
                 axarr[i,j][:imshow](imread(filenames[j]),interpolation="bilinear")
                 axarr[i,j][:set_axis_off]()
-
                 axarr[i,j][:get_xaxis]()[:set_visible](false)
                 axarr[i,j][:get_yaxis]()[:set_visible](false)
-
             else
-
                 axarr[i,j][:bar](Array(-8:8)-0.5, real(map(abs2, states[:,j])),
                     width=1, facecolor= BAR_BLUE, edgecolor = BG_GREY)
                 axarr[i,j][:set_ylim]([0.,1.1])
@@ -32,46 +24,34 @@ function plotVD_evolution_example()
                 axarr[i,j][:set_axis_bgcolor](BG_GREY)
                 axarr[i,j][:set_axisbelow](true)
                 axarr[i,j][:grid]()
-
             end
         end
     end
-
     fig[:subplots_adjust](wspace=0.02, hspace=0)
-
-    savefig("pdf/VD_evolution_of_dicke.pdf", bbox_inches="tight")
+    savefig(opath, bbox_inches="tight")
 end
 
-function plotVD_precisionOnTheta()
-
+function plotVD_precisionOnTheta(ipath::String, opath::String)
     # Open data group of the plot
-    group = g_open(h5open("plotsData.h5"),"VicinityDicke/PrecisionOverTheta")
-
+    group = g_open(h5open(ipath),"VD/PrecisionOverTheta")
     theta = d_read(group,"theta")
     precision = d_read(group, "precision")
-
     theta_max = a_read(group,"theta_max")
     precision_max = a_read(group,"precision_max")
-
     fig = figure(figsize=(5,3.5))
     xl = xlabel(L"$\theta$", fontsize=L_FSIZE)
     yl = ylabel(L"$(\Delta \theta)^{-2}/N$", fontsize=L_FSIZE)
     xticks(rotation=45)
-
     ax = axis(xmin=minimum(theta), xmax=maximum(theta))
-
     # SN thresold
     bar(minimum(theta),1,maximum(theta),0, color="0.9",
         edgecolor="0.7",linewidth=0)
     plot([minimum(theta),maximum(theta)],
         [1,1], color="0.7", linewidth=LWD, linestyle="dotted")
-
     plot([theta_max,theta_max],[0,precision_max],
         "--r", linewidth=LWD)
     plt = plot(theta,precision,linewidth=LWD)
-
-
-    savefig("pdf/VD_precision_theta.pdf", bbox_inches="tight")
+    savefig(opath, bbox_inches="tight")
 end
 
 function plotVD_againstSPSQ(ipath::String, opath::String)
