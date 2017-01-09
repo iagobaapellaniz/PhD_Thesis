@@ -485,26 +485,46 @@ in terms of $\sigma_{\text{ch}}$, the spin-number of each particle $j$ and the p
 
 \subsubsection{Differential magnetometry with two ensembles}
 
-We continue this illustrative example with the state-of-the-art double-well spatial state.
-We also will use an internal state that with the maximal QFI so the reader gets familiar with our approach and sees how the best state to measure the gradient parameter looks like on our framework.
+We now turn our attention to a state which is constituted by two distinguishable ensembles of atoms.
+Two ensembles of spin-$j$ atoms spatially separated from each other have been realized in cold gases (e.g., Ref.~\cite{Julsgaard2001}), and can be used for differential interferometry \cite{Eckert2006, Landini2014}.
+We will also use an internal state such the maximal QFI is achieved so the reader gets familiar with our approach and sees how the best state to measure the gradient parameter looks like in our framework.
 
-The spatial part is described by the following PDF where half of the particles are in one-well and the rest in the other, placed both positions at a distance of $a$ from the origin,
+The spatial part is described by the following probability density function, where for an even number of particles half of the particles are at one position and the rest at another, both places at a distance of $a$ from the origin
 \be
-  \label{eq:gm-double-well-spatial-pdf}
-  \prob(\bs{x})=\prod_{n=1}^N \delta(x_n + (-1)^n a),
+  \prob(\bs{x})=\prod_{n=1}^{N/2} \delta(x_n+ a)\prod_{n=N/2+1}^{N} \delta(x_n-a).
+  \label{eq:double-well-spatial-pdf}
 \ee
-where the "odd" particles go to the "right" and the "even" particles to the "left".
-With this we are able to compute the single-point and two-point correlation functions as,
+This could be realized in a double-well trap, where the width of the wells is negligible compared to the distance of the wells.
+To distinguish the two wells we will use the labels "L" and "R" for the left and right wells respectively.
+With this we are able to compute the single-point and two-point correlation functions as
 \begin{align}
-  \int d^N\bs{x}\prob(\bs{x})x_n &= (-1)^{n+1}a,\\
-  \label{eq:gm-two-point-function-double-well}
-  \int d^N\bs{x}\prob(\bs{x})x_nx_m &= (-1)^{n+m}a^2.
+  \label{eq:single-point-function-double-well}
+  \int  x_n\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor\ver{-a \quad \text{if} \quad n\leq N/2,}{+a \quad \text{if} \quad n>N/2,}\right. \\
+  \label{eq:two-point-function-double-well}
+  \int x_n x_m\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor\ver{-a^2 \quad \text{if} \quad (n,m)= \text{(L,L) or (R,R),}}{+a^2 \quad \text{if} \quad (n,m)= \text{(L,R) or (L,R).}} \right.
 \end{align}
 
-The state $\ket{\psi}$ is insensitive to the homogeneous field so we have that
+For pure states insensitive to the homogeneous magnetic field we have that the QFI is computed directly as four times the variance of the gradient Hamiltonian, $\qfif{\rho, H_1, H_1}=4\varian{H_1}$.
+So, we just choose a state that having the spatial part defined by Eq.~\eqref{eq:double-well-spatial-pdf} and it is written as
+\be
+  \label{eq:best-state}
+  \ket{\Psi} = \frac{1}{\sqrt{2}}(\ket{{+j}\cdots {+j}}^{(\text{L})}\ket{{-j}\cdots{-j}}^{(\text{R})}+\ket{{-j}\cdots {-j}}^{(\text{L})}\ket{{+j}\cdots{+j}}^{(\text{R})}),
+\ee
+where it can be seen as the superposition of the state fewest energy and the state with the greatest energy under the Hamiltonian $H_1$, see Figure~\ref{fig:gm-double-well}.
+\begin{figure}[htp]
+  \begin{center}
+    \includegraphics[scale=1.2]{img/GM_double_well.pdf}
+    \caption[Best state in two-ensemble configuration]{(blue-circles)}
+    \label{fig:gm-double-well}
+  \end{center}
+\end{figure}
+
+
+The state $\ket{\Psi}$ is indeed insensitive to the homogeneous field since both constituents are eigenstates of $H_0$ with the same eigenvalue.
+So we have that
 \be
 \begin{split}
-  (\Delta b_1)^{-2}|_{\max} &= \sum_{n,m}^N (-1)^{n+m} a^2 \qfif{\ket{\psi}, j_z^{(n)}, j_z^{(m)}}\\
+  \varinv{b_1}|_{\max} &= \sum_{n,m}^N (-1)^{n+m} a^2 \qfif{\ket{\psi}, j_z^{(n)}, j_z^{(m)}}\\
   &= a^2\sum_{n,m}^N (-1)^{n+m} 4 (-1)^{n+m} j^2\\
   &= 4 a^2 j^2 N^2,
 \end{split}
@@ -526,7 +546,7 @@ In this case, taking into account the particle locations and that we have zero m
 where we write the effective Hamiltonian that the particles feel and "od" and "ev" stand for odd and even particle index respectively.
 From here it is easy to show that the state maximising such variance is the following,
 \be
-  \ket{\psi} = \frac{1}{\sqrt{2}}(\ket{0\cdots 0}_{\text{od}}\otimes\ket{1\cdots 1}_{\text{ev}}+\ket{1\cdots 1}_{\text{od}}\otimes\ket{0\cdots 0}_{\text{ev}}),
+  ,
 \ee
 which is equivalent to the state in Equation~(\ref{eq:gm-best-state}).
 This proofs that we have use the right state, and with this we can compute the QFI as in the literature as $\qfif{\ket{\psi}, H_1} = 4(\Delta H_1)^2 = 4a^2j^2N^2$.

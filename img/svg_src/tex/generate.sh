@@ -7,7 +7,7 @@ jobname=equations
 # String for the equation. Change it as you want
 texstr="
   \displaystyle
-  \theta
+  (\text{L}) (\text{R})
 "
 
 # Patch to solve relative path problems
