@@ -134,12 +134,13 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\cov}{cov}
 
-\newcommand{\ket}[1]{\ensuremath{\vert #1 \rangle}}
-\newcommand{\bra}[1]{\ensuremath{\langle #1 \vert}}
-\newcommand{\braket}[2]{\ensuremath{\langle #1 \vert #2 \rangle}}
-\newcommand{\braopket}[3]{\ensuremath{\langle #1 \vert#2\vert #3 \rangle}}
-\newcommand{\ketbra}[2]{\ensuremath{\vert #1 \rangle \! \langle #2 \vert}}
-\newcommand{\expect}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\ket}[1]{\ensuremath{\vert{#1}\rangle}}
+\newcommand{\bra}[1]{\ensuremath{\langle{#1}\vert}}
+\newcommand{\braket}[2]{\ensuremath{\langle{#1}\vert{#2}\rangle}}
+\newcommand{\braopket}[3]{\ensuremath{\langle{#1}\vert{#2}\vert{#3}\rangle}}
+\newcommand{\ketbra}[2]{\ensuremath{\vert{#1}\rangle{\!}\langle{#2}\vert}}
+\newcommand{\ketopbra}[3]{\ensuremath{\vert{#1}\rangle{#2}\langle{#3}\vert}}
+\newcommand{\expect}[1]{\ensuremath{\langle{#1}\rangle}}
 \newcommand{\varian}[1]{\ensuremath{(\Delta #1 )^2}}
 \newcommand{\varinv}[1]{\ensuremath{(\Delta #1 )^{-2}}}
 \newcommand{\ver}[2]{\ensuremath{\genfrac{}{}{0pt}{}{#1}{#2}}}
@@ -172,6 +173,7 @@
 \def\qfi{\mathcal{F}_{\textnormal{Q}}}
 \def\ghz{\textnormal{GHZ}}
 \def\prob{\text{Pr}}
+\def\defeq{:=}
 
 % UNITS
 %%%%%%%%

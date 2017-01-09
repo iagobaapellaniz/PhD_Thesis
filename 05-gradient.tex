@@ -40,9 +40,8 @@ However, in the case of a linear arranged particle ensemble only the derivative 
 We will determine the precision bounds for the estimation of the magnetic field gradient $B_1$ based on the quantum Fisher information \cite{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008}.
 In this context the Heisenberg and shot-noise scaling are defined as usual.
 The achievable precision in terms of the number of particles scale as $\varinv{\theta}\sim N$ and $\varinv{\theta}\sim N^2$ for SNS and HS respectively.
-This approach was not taken in Ref.~\cite{}, for instance, where with a separable state $N^2$ could be achieved or where with the optimal state a $N^4$ scaling could be achieved.
-In that case this was due to fact that adding more particles to the system the effective length of it increases, and it becomes more sensitive to the gradient field merely because the system reaches further away as it increases in size.
-We will show that with spin chains or two ensembles at different positions the Heisenberg scaling is possible.
+Sometimes, one must take care of adding more particles to the system, which may increase the effective length of it, and it becomes more sensitive to the gradient field merely because the system reaches further away.
+We will show that with spin chains or two ensembles at different positions the Heisenberg scaling is possible, even after the normalization of the effective size of the system.
 Concerning the case of a single ensemble, we will show the following.
 Since in such systems the atoms cannot be be individually addressed, we will assume that the quantum state is permutationally invariant.
 We will show that for states insensitive to the homogeneous magnetic field, one can reduce the problem to a one-parameter estimation scenario.
@@ -171,6 +170,7 @@ In Section~\ref{sec:gm-single-cloud}, we restrict our calculations to single PI 
 In this section, we show how the Cram\'er-Rao bound and the QFI help us to obtain the precision bound that is valid for any measurement scenario.
 We will discuss gradient magnetometry using quantum states that are insensitive to homogeneous fields, which is a single-parameter estimation task.
 Then, we discuss the case of quantum states sensitive to homogeneous fields, which is a two-parameter estimation problem.
+Note that we require the state to be sensitive to the gradient parameter, which is a reasonable requirement when we are trying to characterize the precision bounds for the gradient estimation.
 We show that the precision bound obtained does not change under spatial translation, which is one of the main tools to derive our bounds.
 For the two-parameter estimation task, we will introduce the two-parameter Cram\'er-Rao bound and the corresponding two-parameter QFI matrix, and we adapt those expressions to our problem.
 
@@ -287,7 +287,7 @@ Hence, the new unitary evolution operator to represent the translated system, in
 which is equivalent to Eq.~\eqref{eq:gm-whole-unitary-b_i-encoded} for states insensitive to the homogeneous fields, since $[\rho, H_0]=0$.
 
 We leave some computations for the Appendix~\ref{app:matrix-elements-of-QFI}.
-Note that for the simplification of the QFI, we use the Dirac delta appearing in Eq.~\eqref{eq:gm-simplify-h1-matrix-els}, and the state defined by Eq.~\eqref{eq:gm-eigendecomposition-of-state}.
+Note that for the simplification for the QFI, we use the Dirac delta appearing in Eq.~\eqref{eq:gm-simplify-h1-matrix-els}, and the state defined by Eq.~\eqref{eq:gm-eigendecomposition-of-state}.
 The following bound in the precision of the estimation of the gradient parameter $b_1$ holds for states insensitive to the homogeneous magnetic fields
 \be
   \label{eq:gm-bound-for-insensitive-and-thermal-state}
@@ -303,11 +303,11 @@ Two-parameter dependence}
 
 In order to obtain the precision bound for states sensitive to the
 homogeneous field, one has to consider the effect on the state of a second
-unknown parameter, in this case $b_0$.
+unknown parameter, in this case $b_0$, which represents the homogeneous magnetic field.
 The homogeneous field will rotate all the spins in the same way,
 while the field gradient rotates the spins
 differently depending on the position of the particles.
-Now, instead to the Cram\'er-Rao bound  \eqref{eq:gm-one parameter precision bound},
+Now, instead to the Cram\'er-Rao bound Eq.~\eqref{eq:gm-one parameter precision bound},
 we have a matrix inequality \cite{Paris2009}.
 %The Cram\'er-Rao bound turns into a matrix inequality of a similar form as Eq.
 %\eqref{eq:gm-one parameter precision bound}, namely
@@ -317,21 +317,23 @@ we have a matrix inequality \cite{Paris2009}.
 % \ee
 % where the covariance matrix elements are defined as
 % $\textbf{\cov}_{ij}[b_0,b_1]=\expect{b_ib_j}-\expect{b_i}\expect{b_j}.$
-We have the QFI matrix $\mathbfcal{F}$ on one hand, which depends on $\rho$ and the two generators $H_0$ and $H_1$, and the covariance matrix from we are only interested on the variance of the gradient parameter, $(\Delta b_1)^2$ \cite{Paris2009}.
-Just to record, $H_0$ and $H_1$ are Hermitian operators and commute with each other and thus the QFI matrix elements are computed as $\mathbfcal{F}_{ij}\equiv \qfif{\rho, H_i, H_j},$ following the definition \eqref{eq:gm-FAB}.
+For the matrix inequality, we have the inverse of QFI matrix $\mathbfcal{F}$ on one hand, which depends on $\rho$ and the two generators $H_0$ and $H_1$, and the covariance matrix on the other hand.
+In this section, we are only interested on the variance of the gradient parameter, $\varian{b_1}$.
+Since we have to compute the inverse of the QFI matrix and then look at the element corresponding to the $\varian{b_1}$, the determinant of $\mathbfcal{F}$ cannot be zero.
+$H_0$ and $H_1$ are Hermitian operators and commute with each other.
+For unitary dynamics of the type Eq.~\eqref{eq:gm-whole-unitary-b_i-encoded}, the QFI matrix elements are computed as $\mathbfcal{F}_{ij}\equiv \qfif{\rho, H_i, H_j},$ following the definition of Eq.~\eqref{eq:gm-FAB}.
 
-In the two-parameter estimation problem, ${\mathbfcal{F}}$ is a $2 \times 2$ matrix and the precision bound for the estimation of the gradient is the following,
+In the two-parameter estimation problem, $\mathbfcal{F}$ is a $2 \times 2$ matrix and the precision bound for the estimation of the gradient is
 \be
-\label{eq:gm-precision bound for b1 in terms of QFI matrix elements}
-(\Delta b_1)^{-2}\leqslant \mathbfcal{F}_{11}-\frac{\mathbfcal{F}_{01}\mathbfcal{F}_{10}}{\mathbfcal{F}_{00}},
+\label{eq:gm-bound-for-b1-with-qfi-els}
+  \varinv{b_1}\leqslant \mathbfcal{F}_{11}-\frac{\mathbfcal{F}_{01}\mathbfcal{F}_{10}}{\mathbfcal{F}_{00}},
 \ee
-where $\mathbfcal{F}_{ij}$ denotes the QFI matrix elements.
-One must estimate both parameters in most cases since the precision of one depends on the other.
-The bound is interpreted slightly different from the one-parameter Cram\'er-Rao bound.
-In order to be able to saturate the bound, the measurements for optimally estimating the two-parameters must be compatible \cite{Paris2009, Rafal2016}.
+where the inequality is saturated only if there exists a set of compatible measurements to determine both parameters $b_0$ and $b_1$, which is not true in general and must be studied for each particular case \cite{Paris2009, Ragy2016}.
+We distinguish this case from the Eq.~\eqref{eq:gm-one parameter precision bound}, in which the bound is surely saturated by some measurement, using an inequality "$\leqslant$" instead of "$|_{\max}=$".
 
-To compute the bound Eq.~\eqref{eq:gm-bound-for-insensitive-and-thermal-state}, we will need to simplify the matrix elements in the eigenbasis of the state Eq.~\eqref{eq:gm-eigendecomposition-of-state} of $H_0$ and $H_1$, where the last was already computed in Eq.~\eqref{eq:gm-simplify-h1-matrix-els}.
-Hence, we simplify $(H_0)_{\bs{x},\lambda;\bs{y},\nu}$ in a similar way as we did for Eq.~\eqref{eq:gm-simplify-h1-matrix-els}
+To compute the bound Eq.~\eqref{eq:gm-bound-for-b1-with-qfi-els}, we will need to simplify the matrix elements of $H_0$ and $H_1$ written in the eigenbasis of the state Eq.~\eqref{eq:gm-eigendecomposition-of-state}, see Eq.~\eqref{eq:gm-FAB}.
+Note that the matrix elements for $H_1$ were already computed in Eq.~\eqref{eq:gm-simplify-h1-matrix-els}.
+Hence, we now calculate $(H_0)_{\bs{x},\lambda;\bs{y},\nu}$ in a similar way as we did for Eq.~\eqref{eq:gm-simplify-h1-matrix-els}
 \be
 \begin{split}
   (H_0)_{\bs{x},\lambda,\bs{y},\nu}
@@ -342,10 +344,10 @@ Hence, we simplify $(H_0)_{\bs{x},\lambda;\bs{y},\nu}$ in a similar way as we di
 \label{eq:gm-simplify-h0-matrix-els}
 \ee
 With this we are now in a position to compute the missing matrix elements of $\mathbfcal{F}$.
-One can find most of the simplifications of the matrix elements of $\mathbfcal{F}$ in the Appendix~\ref{app:matrix-elements-of-QFI}.
+One can find most of the computations of the matrix elements of $\mathbfcal{F}$ in the Appendix~\ref{app:matrix-elements-of-QFI}.
 First of all, we compute $\mathbfcal{F}_{11}=\qfif{\rho, H_1, H_1}$ which turns to be equal to Eq.~\eqref{eq:gm-bound-for-insensitive-and-thermal-state} for obvious reasons,
 \be
-  \mathbfcal{F}_{11}=\sum_{n,m}^N \int d^N\bs{x}\prob(\bs{x})x_n x_m \qfif{\rho_{\text{s}}, j_z^{(n)}, j_z^{(m)}}.
+  \mathbfcal{F}_{11}=\sum_{n,m}^N \int x_n x_m \prob(\bs{x}) \,\text{d}^N\bs{x}\, \qfif{\rho_{\text{s}}, j_z^{(n)}, j_z^{(m)}}.
 \ee
 Second, the most trivial matrix element is $\mathbfcal{F}_{00}$ which turns to depend only on the internal state $\rho_{\text{s}}$,
 \be
@@ -355,21 +357,24 @@ Finally, we compute both $\mathbfcal{F}_{01}$ and $\mathbfcal{F}_{10}$.
 To compute this, note that both matrix elements are equal $\mathbfcal{F}_{01}=\mathbfcal{F}_{01}$, due to the properties of Eq.~\eqref{eq:gm-FAB} for commuting $H_0$ and $H_1$.
 Therefore, we have to compute only one of them
 \be
-  \mathbfcal{F}_{01} = \sum_{n,m}^N \int \prob(\bs{x}) x_m \,\text{d}^N\bs{x}\,
-  \qfif{\rho_{\text{s}},j_z^{(n)},j_z^{(m)}}.
+  \mathbfcal{F}_{01} = \sum_{n=1}^N \int x_n \prob(\bs{x})  \,\text{d}^N\bs{x}\,
+  \qfif{\rho_{\text{s}},j_z^{(n)},J_z}.
 \ee
 
 With those results the bound for the precision for states sensitive to the homogeneous field which have the for of Eq.~\eqref{eq:gm-eigendecomposition-of-state} is
 \be
 \label{eq:gm-bound-for-sensitive-and-thermal-state}
 \begin{split}
-  \varinv{b_1}\leqslant& \sum_{n,m}^N \int d^N\bs{x}\prob(\bs{x})x_nx_m \qfif{\rho_{\text{s}}, j_z^{(n)}, j_z^{(m)}}\\
-  &- \frac{\left(\sum_{n=1}^N\int d^N\bs{x}\prob(\bs{x})x_n \qfif{\rho_{\text{s}}, j_z^{(n)},J_z}\right)^2}{\qfif{\rho_{\text{s}}, J_z}}.
+  \varinv{b_1}\leqslant&
+  \sum_{n,m}^N \int x_n x_m \prob(\bs{x}) \,\text{d}^N\bs{x}\,
+  \qfif{\rho_{\text{s}}, j_z^{(n)}, j_z^{(m)}}
+  - \frac{\left(\sum_{n=1}^N\int x_n \prob(\bs{x}) \,\text{d}^N\bs{x}\, \qfif{\rho_{\text{s}}, j_z^{(n)},J_z}\right)^2}{\qfif{\rho_{\text{s}}, J_z}}.
 \end{split}
 \ee
 
-We also whow that show that his bound is invariant under translations as it is the Equation~(\ref{eq:gm-bound-for-insensitive-and-thermal-state}).
-With this aim, using the linearity of the last two arguments of $\qfif{\rho, A, B}$, Eq.~(\ref{eq:gm-qfi-linear-in-arguments}), the fact that $H_0$ remains unchanged on the Heisenberg picture and using the shifted $H_1$ operator, Eq.~(\ref{eq:gm-shifted h1 generator}), we have that
+We show now that this bound is invariant under displacements of the system as it is the Eq.~(\ref{eq:gm-bound-for-insensitive-and-thermal-state}).
+To compute this, we use the linearity of the last two arguments of $\qfif{\rho, A, B}$, Eq.~(\ref{eq:gm-qfi-linear-in-arguments}), the fact that $H_0$ remains unchanged on the Heisenberg picture, and we also use  the shifted $H_1$ operator, Eq.~(\ref{eq:gm-shifted h1 generator}).
+Hence, the translated QFI matrix elements are written as
 \begin{align}
   \mathbfcal{F}_{00}(d)&=\qfif{\rho, H_0(d)} = \qfif{\rho, H_0},\\
   \mathbfcal{F}_{01}(d)&=\qfif{\rho, H_0(d), H_1(d)}\nonumber\\
@@ -381,94 +386,104 @@ With this aim, using the linearity of the last two arguments of $\qfif{\rho, A, 
 Simple algebra shows that the bound for a displaced system is the same bound as is it would not be displaced,
 \be
 \begin{split}
-  (\Delta b_1)^{-2}\leqslant\,&\mathbfcal{F}_{11}(d)-\frac{(\mathbfcal{F}_{01}(d))^2}{\mathbfcal{F}_{00}}\\
+  \varinv{b_1}_d\leqslant\,&\mathbfcal{F}_{11}(d)-\frac{(\mathbfcal{F}_{01}(d))^2}{\mathbfcal{F}_{00}(d)}\\
   =\,& \mathbfcal{F}_{11}-2d\mathbfcal{F}_{01}+d^2\mathbfcal{F}_{00}\\
   &-\frac{\mathbfcal{F}_{01}^2-2d \mathbfcal{F}_{01}\mathbfcal{F}_{00}+d^2\mathbfcal{F}_{00}^2}{\mathbfcal{F}_{00}}\\
   =\,& \mathbfcal{F}_{11}-\frac{\mathbfcal{F}_{01}^2}{\mathbfcal{F}_{00}}.
 \end{split}
 \ee
+Note that this is equal to the Eq.~\eqref{eq:gm-bound-for-b1-with-qfi-els}.
 
-For states of the form Equations~(\ref{eq:gm-separated-internal-and-external},~\ref{eq:gm-thermal-state}), the expression to compute the precision precision bound takes the following form,
-
-Despite it seems to be complicated, this equation is easily computed for the most common cases such as trapped-ions, cold atomic ensembles the like.
-This bound as well as Equation~(\ref{eq:gm-bound-for-insensitive-and-thermal-state}) is invariant under spatial translations of the system.
-
-This observations make the computation of the next sections easier since the now we can place the system arbitrarily wherever we choose.
-It also allows us to place the origin of our coordinate system where the magnetic field is null.
-So, the linear magnetic field can be written as $\bs{B}(x)= xB_1\bs{k}$ where $\bs{k}$ is the unitary vector pointing on the $z$-direction perpendicular to $x$- and $y$-axis, making the estimation of the homogenous field irrelevant to compute the precision of the gradient parameter $b_1$.
-Despite the redundant arguments used before, the discourse we have had on the preceding section has a vital importance to understand properly the gradient metrology on this context.
+This observations make the computations to compute the precision bounds in the next sections easier, since the now we can place the system arbitrarily wherever we choose.
+It also allows us, for example, to place the origin of our coordinate system as well as the system itself where the magnetic field is null.
+So, we can write the linear magnetic field simply as $\bs{B}(x)= xB_1\bs{k}$ where $\bs{k}$ is the unitary vector pointing on the $z$-direction perpendicular to $x$- and $y$-axis.
+The discourse we have had on the preceding section has a vital importance to understand properly the our results.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Ion chains and two separated ensembles for magnetometry}
+\subsection{Chain of distinguishable atoms and two separated ensembles for magnetometry}
 \label{sec:gm-io-chain-and-two-ensembles}
 %%%%%%%%%%%%%%%%%%%%%%%
 
-Despite the powerfulness of our tools it is always nice to start with simple but concise examples to see how the results developed on the previous chapter behave.
-For this goal we choose two state-of-the-art systems for the external states which a priori we know that behave well under the gradient interferometry.
+Despite the generality of the tools we developed in Section~\ref{sec:gm-cramer-rao-bounds}, it is always useful to start with simple but concise examples.
+For this, we choose two state-of-the-art systems for the external state $\rho_{\text{x}}$ which we know that behave well for estimating the gradient parameter.
+We will study the chain of atoms, where the atoms are placed one-by-one in a $1$-dimensional grid of constant separation of $a$, and the two-ensembles of atoms, where half of the atoms are in $x=-a$ and the rest in $x=+a$.
 
-\begin{figure}[htp]
-\begin{center}
-\igwithlabel{(a)}{scale=1.2}{img/GM_evolution_chain_initial.pdf}
-\igwithlabel{(b)}{scale=1.2}{img/GM_evolution_chain_final.pdf}
-\caption[1-D chain of atoms polarized along $y$-axis under a gradient magnetic field]{(blue-circles) A system of $N$-atoms of spin-$j$ trapped
-(a) The ensemble is initially totally polarised along a
-perpendicular direction of the magnetic field $B_z$ and the direction of the chain.
-The internal state can be written as $\ket{j}_{y}^{\otimes N}$, the number represents $m_y$ the eigenvalue of the one particle operator $j_y^{(n)}$.
-(b) One can see how the gradient field affects with a varying field strength the different spins when they are placed in different positions. }
-\label{fig:ionchain-evolution}
-\end{center}
-\end{figure}
+\subsubsection{Chain of distinguishable atoms}
 
-The first spatial state will be given by $N$ distinguishable ions all placed to a constant distance from the neighbor constituents on a single dimensional configuration, i.e, an ion-chain [Sanah's paper], see Figure~\ref{fig:ionchain-evolution}.
-We have that for that matter the PDF describing the system is
+As we have said, the first spatial state will be given by $N$ particles all placed equidistantly from each other on a one-dimensional spin chain, i.e., a chain of atoms in a $1$-dimensional lattice
+\cite{Altenburg2016},
+see Figure~\ref{fig:ionchain-evolution}.
+We have that for that matter the probability density function describing the system is
 \be
   \prob(\bs{x})=\prod_{n=1}^N \delta(x_n-na).
 \ee
+\begin{figure}[htp]
+  \begin{center}
+    \igwithlabel{(a)}{scale=1.2}{img/GM_evolution_chain_initial.pdf}
+    \igwithlabel{(b)}{scale=1.2}{img/GM_evolution_chain_final.pdf}
+    \caption[1-D chain of atoms polarized along $y$-axis under a gradient magnetic field]{(blue-circles) A system of $N$-atoms of spin-$j$ trapped
+    (a) The ensemble is initially totally polarised along a
+    perpendicular direction of the magnetic field $B_z$ and the direction of the chain.
+    The internal state can be written as $\ket{+j}_{y}^{\otimes N}$, the number represents $m_y$ the eigenvalue of the one particle operator $j_y^{(n)}$.
+    (b) One can see how the gradient field affects with a varying field strength the different spins when they are placed in different positions. }
+    \label{fig:ionchain-evolution}
+  \end{center}
+\end{figure}
 
 With this at hand we compute the single point averages and the two point averages corresponding to the ion-chain.
-For the single point average we have that
+For the single-point average, one of the integrals appearing in Eq.~\eqref{eq:gm-bound-for-sensitive-and-thermal-state}, we have that
 \be
-  \int d^N\bs{x}\prob(\bs{x}) x_n = na,
+  \int  x_n\prob(\bs{x})\,\text{d}^N\bs{x} = na,
 \ee
-and for the two point average we have the following,
+and for the two-point correlation, which appears in Eqs.~\eqref{eq:gm-bound-for-insensitive-and-thermal-state} and \eqref{eq:gm-bound-for-sensitive-and-thermal-state}, we have the following for the case of the chain of atoms,
 \be
-  \int d^N\bs{x}\prob(\bs{x}) x_nx_m = nma^2.
+  \int x_n x_m\prob(\bs{x})\,\text{d}^N\bs{x} = nma^2.
 \ee
 
-
-We are going to compute  the precision bound when the internal state is a product state of all particles pointing onto $y$-direction, $\ket{j}_y^{\otimes N}$, which is a state sensitive to the homogeneous field, so we have
+On the other hand, we use first a totally polarized state in the $y$-direction for the internal degrees of freedom, $\rho_{\text{s}}=(\ketopbra{+j}{_y}{+j}_y)^{\otimes N}$ appeared in Eq.~\eqref{eq:bg-totally-polarized}.
+This state is a state sensitive to the homogeneous field, so using that the state is pure and separable
 \be
-\label{eq:gm-result-for-chain-without-sigma}
+  \qfif{\ket{+j}_y^{\otimes}, j_z^{(n)},j_z^{(m)}}=4(\expect{j_z^{(n)},j_z^{(m)}}-\expect{j_z^{(n)}}\expect{j_z^{(m)}})=2j\delta_{n,m}.
+\ee
+Since this function is linear in the second and third arguments, $\qfif{\ket{+j}_y^{\otimes}, j_z^{(n)},J_z}=2j$ and $\qfif{\ket{+j}_y^{\otimes}, J_z}=2jN$.
+With this, we can now write the precision bound for a chain of atoms when the internal state is totally polarized along the $y$-axis as
+\be
 \begin{split}
-  (\Delta b_1)^{-2}\leqslant \,&\sum_{n,m}^Nnma^2\qfif{\ket{j}_y^{\otimes N}, j_z^{(n)},j_z^{(m)}}\\
-  &-\frac{\left(\sum_{n=1}^N a n \qfif{\ket{j}_y^{\otimes N}, j_z^{(n)},J_z}\right)^2}{\qfif{\ket{j}_y^{\otimes N}, J_z,J_z}}\\
-  =\,& a^2 \left\{ \sum_{n=1}^N 2jn^2 - \frac{(\sum_{n=1}^N 2jn)^2}{2jN}\right\}\\
-  =\,& 2a^2j N \frac{N^2 -1}{12},
+  \varinv{b_1}_{\text{ch,tp}} & \leqslant a^2 \left\{ \sum_{n=1}^N n^2 2j - \frac{(\sum_{n=1}^N n2j)^2}{N2j}\right\}\\
+  &=a^2\frac{N^2 -1}{12} 2jN .
 \end{split}
+\label{eq:gm-result-for-chain-without-sigma}
 \ee
-where we have used the $\qfif{\ket{\psi},A,B}=4(\expect{AB}-\expect{A}{}\expect{B}{})$ identity to compute the calculations.
 
-Despite that Equation~(\ref{eq:gm-result-for-chain-without-sigma}) is a third order function of the particle number $N$ and that it seems to overcome the ultimate limit HL, on should notice that the length of the chain increases as we introduce more particles into the system.
-To solve this one can normalize the distance between the atoms or simply use some measure of spatial width of the complete system.
-In our case we decide to use on all results the standard deviation of the averaged particle position as the length measure.
-It is computed as follows,
+Despite that Equation~(\ref{eq:gm-result-for-chain-without-sigma}) is a third order function of the particle number $N$ and that it seems to overcome the ultimate scaling HS, on should notice that the length of the chain increases as we introduce more particles into the system.
+As we discussed before, one must normalize the effective size of the system to avoid false positives.
+
+In our case we decide to use on all cases the standard deviation of the averaged particle position as the standard length measure of the system.
+We also include in our next definitions the averaged correlation of two different particle positions, since it will appear in the following sections and for completeness.
+They are computed as follows respectively,
 \begin{align}
-  \label{eq:gm-mean}
-  \mu &= \int d^N\bs{x}\prob(\bs{x}) \frac{\sum_{n=1}^N x_n}{N} \\
-  \label{eq:gm-variance}
-  \sigma^2 &= \int d^N\bs{x}\prob(\bs{x}) \frac{\sum_{n=1}^N x_n^2}{N} - \mu^2\\
-  \label{eq:gm-variance-chain}
-  \sigma_{\text{ch}}^2 &= a^2\frac{N^2-1}{12}.
+  \mu &= \int \frac{\sum_{n=1}^N x_n}{N} \prob(\bs{x}) \, \text{d}^N\bs{x},
+  \label{eq:gm-mean} \\
+  \sigma^2 &= \int \frac{\sum_{n=1}^N x_n^2}{N} \prob(\bs{x}) \, \text{d}^N\bs{x}  - \mu^2,
+  \label{eq:gm-variance} \\
+  \eta & =  \int \frac{\sum_{n\neq m} x_n x_m}{N(N-1)}\prob(\bs{x}) \, \text{d}^N\bs{x} - \mu^2.
+  \label{eq:gm-correlation}
 \end{align}
-It turns out that this exactly coincides with a factor we have on Equation~(\ref{eq:gm-result-for-chain-without-sigma}).
-Substituting this onto the result the proof concludes.
-
-For ion-chains where their constituents are separated by a constant distance and where the spin-state $\rho_{\text{s}}$ is the totally polarised state along a perpendicular direction of both the field and the chain direction, in this case $y$-direction, the precision bound is given by the following formula,
+So, the system effective width for the chain of atoms, computed by the variance Eq.~\eqref{eq:gm-variance}, is given as
 \be
-  (\Delta b_1)^{-2}\leqslant 2\sigma_{\text{ch}}^2jN,
+  \sigma_{\text{ch}}^2 = a^2\frac{N^2-1}{12}.
+  \label{eq:gm-variance-chain}
 \ee
-where $\sigma_{\text{ch}}$ denotes the standard deviation of whole position spots on which the particles rest, $j$ is the spin-number of each particle and $N$ is the particle-number.
+It turns out that this exactly coincides with one of the factors we have in Eq.~(\ref{eq:gm-result-for-chain-without-sigma}).
+Substituting this into the Eq.~\eqref{eq:gm-result-for-chain-without-sigma} we have that,
+for ion-chains where their constituents are separated by a constant distance and where the spin-state $\rho_{\text{s}}$ is the totally polarized state along the $y$-direction, the precision bound is given by
+\be
+  \varinv{b_1}_{\text{ch,tp}} \leqslant \sigma_{\text{ch}}^2 2jN,
+\ee
+in terms of $\sigma_{\text{ch}}$, the spin-number of each particle $j$ and the particle number $N$.
+
+\subsubsection{Differential magnetometry with two ensembles}
 
 We continue this illustrative example with the state-of-the-art double-well spatial state.
 We also will use an internal state that with the maximal QFI so the reader gets familiar with our approach and sees how the best state to measure the gradient parameter looks like on our framework.
@@ -668,7 +683,7 @@ From this, using the fact that the QFI is linear on the second and third argumen
 %then
 % This assumption, based on Eq.~\eqref{eq:gm-qfi matrix element 01 point like atoms}
 % implies $F_{01} =0.$ Hence, the precision bound for
-% $b_1$, Eq.~\eqref{eq:gm-precision bound for b1 in terms of QFI matrix elements}, is
+% $b_1$, Eq.~\eqref{eq:gm-bound-for-b1-with-qfi-els}, is
 % written in the following way
 % \bea
 % \label{eq:gm-precision bound for SH PI as fisher of H1 H1}

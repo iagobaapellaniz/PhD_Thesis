@@ -323,9 +323,10 @@ We summarize important recent advances in quantum metrology.
 Simple metrological setups allow for encoding some desired parameter into the state of the system, thus from the readout of the final state one could infer it.
 The basic ideas of quantum metrology emerge when one applies the notions of estimation theory to the intrinsic probabilistic nature of quantum mechanics.
 Merging the probabilistic features of quantum mechanics and the estimation theory is not trivial.
-Nevertheless, with the initial pioneering works of W. K. Wootters, and S. L. Braunstein and C. M. Caves, in 1981 and 1992-1994 respectively \cite{Wootters1981, Braunstein1992, Braunstein1994}, until the works of V. Giovannetti et al, and M. G. Paris, roughly two decades later \cite{Giovannetti2004, Paris2009}, the foundations of quantum metrology were stabilized.
+Nevertheless, with the initial pioneering works of C. W. Helstrom, W. K. Wootters, and S. L. Braunstein and C. M. Caves, in 1969, 1981 and 1992-1994 respectively \cite{Helstrom1969, Wootters1981, Braunstein1992, Braunstein1994}, until the works of V. Giovannetti et al, and M. G. Paris, roughly two decades later \cite{Giovannetti2004, Paris2009}, the foundations of quantum metrology were stabilized.
 % TD: important citations needed here!!
-Later, advanced works in quantum metrology appeared \cite{XXX} together with experimental realizations \cite{Behbood2013, Koschorreck2011, Luecke2011} which raised the interest in this topic.
+Later, advanced works in quantum metrology appeared \cite{Hyllus2010, Hyllus2012, Hyllus2010a, Kolodynski2010, Kolodynski2013}
+together with experimental realizations \cite{Behbood2013, Koschorreck2011, Luecke2011} which raised the interest in this topic.
 In this section, we will highlight the most important aspects of this field and with this we will conclude this chapter for presenting the background theory in which stands the work developed by the authors.
 
 The most basic scheme for a metrological setup in the present context is the following.
@@ -439,7 +440,13 @@ Figure~\ref{fig:bg-expect-m-evo} helps to interpret the quantities appearing in 
 
 We focus on multi-partite systems of spin-$\frac{1}{2}$ particles, widely known in the field as qubits, for homogeneous magnetometry in order to simplify the discussion.
 For this, let us start with an almost polarized state.
-The spin vector of the ensemble, originally pointing into the $y$-direction, will be rotated.
+We present the state totally polarized along the $l$-direction as
+\be
+  \ket{+j}_l^{\otimes N}\equiv \ket{+j}_l^{(1)}\ket{+j}_l^{(2)}\cdots\ket{+j}_l^{(N)},
+  \label{eq:bg-totally-polarized}
+\ee
+since it plays a very important role in quantum metrology when $l=y$. It is almost all the times one of the states that reaches the shot-noise scaling Eq.~\eqref{eq:bg-shot-noise-scaling} and saturates the shot-noise limit, which will appear later in this section.
+In this case, the spin-vector of the ensemble, originally pointing into the $y$-direction, will be rotated.
 The rotation after the evolution is used to estimate the strength of the magnetic field.
 A way to measure the rotation suffered by the system is to measure the expectation value $\expect{J_x}$, which is zero at the beginning.
 
@@ -486,7 +493,7 @@ Thus, we obtain a precision that scales linearly with $N$,
 \be
   \varinv{\theta}_{\text{tp}} = \frac{N^2/4}{N/4} = N.
 \ee
-Note that the totally polarized state is a separable pure state with all particles pointing into the $y$-direction.
+Note that the totally polarized state Eq.~\eqref{eq:bg-totally-polarized} is a separable pure state with all particles pointing into the $y$-direction.
 We obtained the shot-noise scaling, even with very simple, qualitative arguments
 
 A way of improving the precision is considering that the variances of the angular momentum components are bounded by the Heisenberg uncertainty relation \cite{Kitagawa1993}
