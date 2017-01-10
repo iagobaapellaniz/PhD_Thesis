@@ -84,21 +84,21 @@ and that the spatial part can be characterized as an incoherent mixture of point
   \label{eq:gm-pre-thermal-state}
 \ee
 where $\ket{\varphi_{\bs{x}}}$ is a pure state of each particle been placed at $\bs{x}=(x_1,x_2,\dots,x_N)$, respectively.
-Each part acts on different Hilbert spaces denoted by $\mathcal{H}^{(\text{x})}$ and $\mathcal{H}^{(\text{s})}$, respectively.
-Note that we skip to write the superscript $(\text{x})$ denoting the Hilbert space at which $\ket{\varphi_{\bs{x}}}$ belongs for simplicity.
+Each part of the state acts on different Hilbert spaces denoted by $\mathcal{H}^{(\text{x})}$ and $\mathcal{H}^{(\text{s})}$, respectively.
+Note that we skip to write the superscript $(\text{x})$, denoting the Hilbert space at which $\ket{\varphi_{\bs{x}}}$ belongs, for simplicity.
 
-In order to write the operators, including the state $\rho^{(\text{x})}$, acting on the Hilbert space $\mathcal{H}^{(\text{x})}$, we will invoke the completeness relation found on the literature \citep{} for the spatial continuous Hilbert space
+In order to write the operators, including the state $\rho^{(\text{x})}$, acting on the Hilbert space $\mathcal{H}^{(\text{x})}$, we will invoke the completeness relation found on the literature \citep{Sakurai2010, Cohen-Tannoudji1977} for the spatial continuous Hilbert space
 \be
   \int \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \mtxid,
 \ee
-where the $\ket{\bs{x}}$'s are the position eigenvectors and they obey
+where $\ket{\bs{x}}=\ket{x_1}^{(1,\text{x})}\otimes\ket{x_2}^{(2,\text{x})}\cdots\otimes\ket{x_N}^{(N,\text{x})}$ is the tensor product of the position eigenvectors of each particle which obey
 \be
   \braket{\bs{x}}{\bs{y}} = \delta(\bs{x}-\bs{y}),
 \ee
-where $\delta(\bs{x}-\bs{y})$ is the Dirac delta found in the literature \citep{}.
+where $\delta(\bs{x}-\bs{y})$ is the Dirac delta found in the literature \citep{Sakurai2010, Cohen-Tannoudji1977}.
 
 To see how our notation works, let us write the position operator $\hat{\bs{X}}$ in that basis.
-It is known that $\hat{\bs{X}}$ acting on $\ket{\bs{x}}$ will give $\bs{x}\ket{\bs{x}}$ \cite{}.
+It is known that $\hat{\bs{X}}$ acting on $\ket{\bs{x}}$ will give $\bs{x}\ket{\bs{x}}$ \cite{Sakurai2010, Cohen-Tannoudji1977}.
 Hence,
 \be
   \hat{\bs{X}} = \hat{\bs{X}}\mtxid = \hat{\bs{X}} \int \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \int \hat{\bs{X}} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \int \bs{x} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x}.
@@ -125,8 +125,14 @@ Using that $\braket{\bs{x}}{\bs{x}}=\delta(\bs{0})$, where $\bs{0}$ is a $N$-dim
   \rho^{(\text{x})}=\int \frac{\prob(\bs{x})}{\delta(\bs{0})} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x}.
   \label{eq:gm-thermal-state}
 \ee
+Note also that if the eigen-decomposition of the internal state is $\rho^{(\text{s})} = \sum_{\lambda} p_{\lambda}\ketbra{\lambda}{\lambda}$, then the whole state is decomposed as
+\be
+  \rho = \int\sum_{\lambda} \frac{\prob(\bs{x})}{\delta(\bs{0})} p_\lambda \ketbra{\bs{x},\lambda}{\bs{x},\lambda}\,\text{d}^N\bs{x},
+  \label{eq:gm-eigendecomposition-of-state}
+\ee
+where $\ket{\bs{x},\lambda}$ is a shorthand for $\ket{\bs{x}}^{(\text{x})}\otimes\ket{\lambda}^{(\text{s})}$, the eigenstates, where their corresponding eigenvalues are in this case $\frac{\prob(\bs{x})}{\delta(\bs{0})} p_\lambda$.
 
-We want to emphasize that our method could be easily extended to the case of Bose-Einstein condensates, or any other spatial configuration, not considered in this paper. In the case of BECs, the spatial state of the particles would be a pure state, and we would have $\rho^{(\text{x})}=(\ketbra{\Psi}{\Psi})^{\otimes N},$ where $\ket{\Psi}$ is a spatial single-particle state.
+At this point, we want to emphasize that our method could be easily extended to the case of Bose-Einstein condensates, or any other spatial configuration, not considered in this paper. In the case of BECs, the spatial state of the particles would be a pure state, and we would have $\rho^{(\text{x})}=(\ketbra{\Psi}{\Psi})^{\otimes N},$ where $\ket{\Psi}$ is a spatial single-particle state.
 
 Although in our case the parameter to be estimated is $B_1$,
 the time-evolution of the state is usually also affected by the second unknown parameter, the homogeneous field $B_0$, which means that we generally have to consider a two-parameter estimation problem.
@@ -304,7 +310,7 @@ The translation operator $U_d$ grabs the state to a new position at a distance $
 \be
   U_d = e^{-idP_x/\hbar},
 \ee
-where $P_x$ is the sum of all single-particle linear momentum operators $p_x^{(n)}$ in the $x$-direction and it only acts on the external degrees of freedom of the state, i.e., the external Hilbert space.
+where $P_x$ is the sum of all single-particle linear momentum operators $p_x^{(n)}$ in the $x$-direction and it only acts on the external degrees of freedom of the state, i.e., the external Hilbert space $\mathcal{H}^{(\text{x})}$.
 To show that the precision is unchanged, we use the Heisenberg picture on which the operators are transformed instead of the states.
 Thus, we compute the transformation of $H_1$ in the following way,
 \be
