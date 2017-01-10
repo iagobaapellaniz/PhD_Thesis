@@ -58,43 +58,84 @@ We find that even in the case of gradient magnetometry the shot-noise scaling ca
 However, in the single-ensemble scenario, the shot-noise scaling can be surpassed only if the particle positions are correlated, which is the case if the particles attract each other.
 We will go into the details in Section~\ref{sec:gm-single-cloud}.
 
-Next, we will present characteristics of our setup.
+The following sections are organized as follows. In Section~\ref{sec:gm-the-setup}, we will present the setup of the system.
+In Section~\ref{sec:gm-cramer-rao-bounds}, the metrological basic concepts used in the chapter are presented.
+In Section~\ref{sec:gm-io-chain-and-two-ensembles}, we will show the results for the chain of ions and for when two distant ensembles are considered
+In Section~\ref{sec:gm-single-cloud}, we restrict our calculations to single PI atomic ensembles and we develop some particular cases, such as the singlet spin state or the totally polarized state.
+
+\subsection{The setup}
+\label{sec:gm-the-setup}
+
+In this section, we will present characteristics of our setup.
 For simplicity, as well as following  recent experiments (e.g., Ref.~\cite{Koschorreck2011}), we will consider an ensemble of spin-$j$ particles placed in a one-dimensional setup, $x$ being the spatial coordinate.
-Furthermore, we assume that we have that we have particles that behave classically with respect to their spatial state.
-That is, they cannot be in a superposition of being in two different positions.
+Furthermore, we assume that the particles are point-like particles, which is a good approximation when the wave-packet of each particle is much smaller than the trap in which they are or the size of the trap is much smaller than the, let us say, the distance between two traps of a differential metrology device.
+We also assume that we have particles that behave classically among each other, i.e., that there is a negligible probability of been two particles in the same spot or that their wave-functions overlap.
+Hence, we can treat them as distinguishable particles for all purposes.
 On the other hand, they have internal degrees of freedom, their spin, that is quantum. This is a very good description to many of the cold gas experiments.
 
 Based on these considerations, we assume that the state is factorizable into a spatial and a spin part as
 \be
 \label{eq:gm-separated-internal-and-external}
-\rho=\rho_{\text{x}}\otimes\rho_{\text{s}},
+\rho=\rho^{(\text{x})}\otimes\rho^{(\text{s})},
 \ee
 and that the spatial part can be characterized as an incoherent mixture of point-like particles that can be written as
 \be
-  \label{eq:gm-thermal-state}
-  \rho_{\text{x}}=\int \frac{\prob(\bs{x})}{\delta(\bs{0})} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x}.
+  \rho^{(\text{x})}=\int \prob(\bs{x}) \ketbra{\varphi_{\bs{x}}}{\varphi_{\bs{x}}}\,\text{d}^N\bs{x}.
+  \label{eq:gm-pre-thermal-state}
 \ee
-where $\bs{x}=(x_1,x_2,\dots,x_N)$ is a vector of the particle coordinates, and $\prob(\bs{x})$ is the spatial PDF of the atoms.
-Note that the spatial part Eq.~\eqref{eq:gm-thermal-state} is diagonal on the position eigenbasis, where the entry $x_n$ of $\bs{x} =(x_1,\dots,x_N)$ is the coordinate of the $n^{\text{th}}$ particle, which simplifies considerably our calculations.
-Note also that we normalize the density matrix by $\delta(\bs{0})$, the $N$-dimensional Dirac delta, so to obtain $\tr(\rho_{\text{x}})=1$, where the trace of any operator $O$ in the continuous position Hilbert space is defined by $\tr(O)=\int \braopket{\bs{x}}{O}{\bs{x}}\,\text{d}^N\bs{x}$.
-During the evolution of the state, correlations might arise between the two inner and spatial parts and the product form Eq.~\eqref{eq:gm-separated-internal-and-external} might be not valid to describe the evolution of the system.
-Besides, the states of the form Eqs.~\eqref{eq:gm-separated-internal-and-external} and \eqref{eq:gm-thermal-state} are written altogether as
-\be
-  \rho = \int \sum_{\lambda} \frac{\prob(\bs{x})}{\delta(\bs{0})}p_\lambda \ket{\bs{x},\lambda}\bra{\bs{x},\lambda}\,\text{d}^N\bs{x},
-  \label{eq:gm-eigendecomposition-of-state}
-\ee
-where the internal state has is decomposed as $\rho_{\text{s}}=\sum_{\lambda}p_\lambda\ketbra{\lambda}{\lambda}$, so the eigenvalues of the whole state are $\frac{\prob(\bs{x})}{\delta(\bs{0})}p_\lambda$ and the corresponding eigenstates $\ket{\bs{x},\lambda}$.
+where $\ket{\varphi_{\bs{x}}}$ is a pure state of each particle been placed at $\bs{x}=(x_1,x_2,\dots,x_N)$, respectively.
+Each part acts on different Hilbert spaces denoted by $\mathcal{H}^{(\text{x})}$ and $\mathcal{H}^{(\text{s})}$, respectively.
+Note that we skip to write the superscript $(\text{x})$ denoting the Hilbert space at which $\ket{\varphi_{\bs{x}}}$ belongs for simplicity.
 
-We note that our method could be easily extended to the case of Bose-Einstein condensates, not considered in this paper. In that case, the spatial state of the particles would be a pure state, and we would have $\rho_{\text{x}}=(\ketbra{\Psi}{\Psi})^{\otimes N},$ where $\ket{\Psi}$ is a spatial single-particle state.
+In order to write the operators, including the state $\rho^{(\text{x})}$, acting on the Hilbert space $\mathcal{H}^{(\text{x})}$, we will invoke the completeness relation found on the literature \citep{} for the spatial continuous Hilbert space
+\be
+  \int \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \mtxid,
+\ee
+where the $\ket{\bs{x}}$'s are the position eigenvectors and they obey
+\be
+  \braket{\bs{x}}{\bs{y}} = \delta(\bs{x}-\bs{y}),
+\ee
+where $\delta(\bs{x}-\bs{y})$ is the Dirac delta found in the literature \citep{}.
+
+To see how our notation works, let us write the position operator $\hat{\bs{X}}$ in that basis.
+It is known that $\hat{\bs{X}}$ acting on $\ket{\bs{x}}$ will give $\bs{x}\ket{\bs{x}}$ \cite{}.
+Hence,
+\be
+  \hat{\bs{X}} = \hat{\bs{X}}\mtxid = \hat{\bs{X}} \int \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \int \hat{\bs{X}} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \int \bs{x} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x}.
+\ee
+We can follow similar arguments to rewrite the pure state $\ket{\varphi_{\bs{x}}}$.
+First, note also that the expectation value of the position operator for such a state is always $\bs{x}$.
+Hence, it must be proportional to $\ket{\bs{x}}$.
+On the other hand, a pure state must be normalized to one, hence, we can construct such a state by dividing the eigenvector $\ket{\bs{x}}$ by the square-root of its norm as
+\be
+  \ket{\varphi_{\bs{x}}} \equiv \frac{\ket{\bs{x}}}{\sqrt{\braket{\bs{x}}{\bs{x}}}}.
+\ee
+For illustrative purposes, we compute in this basis the expectation value of the position operator for these pure states as
+\be
+  \expect{\hat{\bs{X}}}_{\varphi_{\bs{x}}} = \braopket{\varphi_{\bs{x}}}{\int \bs{y} \ketbra{\bs{y}}{\bs{y}}\,\text{d}^N\bs{y}}{\varphi_{\bs{x}}} =
+  \int \bs{y}
+  \frac{\braket{\bs{x}}{\bs{y}}\braket{\bs{y}}{\bs{x}}}
+  {\braket{\bs{x}}{\bs{x}}} \,\text{d}^N\bs{y} =
+  \bs{x}\frac{\braket{\bs{x}}{\bs{x}}}{\braket{\bs{x}}{\bs{x}}} =
+  \bs{x},
+\ee
+where in the step before the last we have used $\braket{\bs{y}}{\bs{x}}=\delta(\bs{y}-\bs{x})$ to compute the integral.
+Using that $\braket{\bs{x}}{\bs{x}}=\delta(\bs{0})$, where $\bs{0}$ is a $N$-dimensional vector of zeros, we can rewrite the spatial state Eq.~\eqref{eq:gm-pre-thermal-state} as
+\be
+  \rho^{(\text{x})}=\int \frac{\prob(\bs{x})}{\delta(\bs{0})} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x}.
+  \label{eq:gm-thermal-state}
+\ee
+
+We want to emphasize that our method could be easily extended to the case of Bose-Einstein condensates, or any other spatial configuration, not considered in this paper. In the case of BECs, the spatial state of the particles would be a pure state, and we would have $\rho^{(\text{x})}=(\ketbra{\Psi}{\Psi})^{\otimes N},$ where $\ket{\Psi}$ is a spatial single-particle state.
 
 Although in our case the parameter to be estimated is $B_1$,
 the time-evolution of the state is usually also affected by the second unknown parameter, the homogeneous field $B_0$, which means that we generally have to consider a two-parameter estimation problem.
 The angular momentum of an individual atom is coupled to the magnetic field, yielding the following interaction term
 \be
-  h^{(n)}=\gamma B_z^{(n)} \otimes j_z^{(n)},
+  h^{(n)}=\gamma B_z^{(n,\text{x})} \otimes j_z^{(n,\text{s})},
   \label{eq:gm-single-particle-hamiltonian}
 \ee
-where the operator $B_z^{(n)}=B_0+B_1x^{(n)}$ acts on the spatial part of the Hilbert space.
+where the operator $B_z^{(n)}=B_0+B_1x^{(n)}$ acts on the spatial part of the $n^{\text{th}}$ particle Hilbert space $\mathcal{H}^{(n,\text{x})}$.
 %The
 %individual atoms will interact with the magnetic field through
 %a coupling with their angular
@@ -142,7 +183,7 @@ while the generator describing the effect of the gradient is
 \label{eq:gm-gradient-h1}
 H_1=\sum_{n=1}^N x^{(n)}j_z^{(n)}.
 \ee
-As in Eq.~(\ref{eq:gm-gradient-h1}), we will usually omit $\otimes$ for simplicity, and will use it only if it is necessary to make our explanation clearer.
+As in Eq.~(\ref{eq:gm-gradient-h1}), we will usually omit $\otimes$ and the superscripts $(\text{x})$ and $(\text{s})$ for simplicity, and will use it only if it is necessary to make our explanation clearer.
 
 Note that the operators $H_{0}$ and $H_{1}$ commute with each other.
 These two commuting dynamics are the two simplest in an atomic ensemble as they are based on collective operators not requiring an individual access to the particles.
@@ -155,10 +196,6 @@ This approach is widely adopted by the community, since its the most easy to und
 Note also that it is not necessarily true that the operators we have to measure in order to estimate $b_0$ and $b_1$ must commute with each other.
 The reason for that is that both operators to be measured act on the same single atomic ensemble.
 On the other hand, in schemes in which the gradient is calculated based on measurements in two separate atomic ensembles or different atoms in a chain, the measuring operators can always commute with each other \cite{Wasilewski2010,Eckert2006,Zhang2014}.
-
-The following sections are organized as follows. In Section~\ref{sec:gm-cramer-rao-bounds}, the basic concepts used in the paper are presented.
-In Section~\ref{sec:gm-io-chain-and-two-ensembles}, we will show the results for the chain of ions and for when two distant ensembles are considered
-In Section~\ref{sec:gm-single-cloud}, we restrict our calculations to single PI atomic ensembles and we develop some particular cases, such as the singlet spin state or the totally polarized state.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Cram\'er-Rao precision bounds}
