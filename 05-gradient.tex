@@ -97,22 +97,22 @@ where $\ket{\bs{x}}=\ket{x_1}^{(1,\text{x})}\otimes\ket{x_2}^{(2,\text{x})}\cdot
 \ee
 where $\delta(\bs{x}-\bs{y})$ is the Dirac delta found in the literature \citep{Sakurai2010, Cohen-Tannoudji1977}.
 
-To see how our notation works, let us write the position operator $\hat{\bs{X}}$ in that basis.
-It is known that $\hat{\bs{X}}$ acting on $\ket{\bs{x}}$ will give $\bs{x}\ket{\bs{x}}$ \cite{Sakurai2010, Cohen-Tannoudji1977}.
+To see how our notation works, let us write the vector of the position operators for each particle as $\hat{\bs{x}}\equiv(x^{(1)},x^{(2)},\dots,x^{(N)})$, where we used the "$\hat{}$" notation to distinguish it from the vector of position variables.
+It is known that $\hat{\bs{x}}$ acting on $\ket{\bs{x}}$ will give $\bs{x}\ket{\bs{x}}$ \cite{Sakurai2010, Cohen-Tannoudji1977}.
 Hence,
 \be
-  \hat{\bs{X}} = \hat{\bs{X}}\mtxid = \hat{\bs{X}} \int \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \int \hat{\bs{X}} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \int \bs{x} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x}.
+  \hat{\bs{x}} = \hat{\bs{x}}\mtxid = \hat{\bs{x}} \int \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \int \hat{\bs{x}} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \int \bs{x} \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x}.
 \ee
 We can follow similar arguments to rewrite the pure state $\ket{\varphi_{\bs{x}}}$.
 First, note also that the expectation value of the position operator for such a state is always $\bs{x}$.
-Hence, it must be proportional to $\ket{\bs{x}}$.
+Hence, such a state must be proportional to $\ket{\bs{x}}$.
 On the other hand, a pure state must be normalized to one, hence, we can construct such a state by dividing the eigenvector $\ket{\bs{x}}$ by the square-root of its norm as
 \be
   \ket{\varphi_{\bs{x}}} \equiv \frac{\ket{\bs{x}}}{\sqrt{\braket{\bs{x}}{\bs{x}}}}.
 \ee
 For illustrative purposes, we compute in this basis the expectation value of the position operator for these pure states as
 \be
-  \expect{\hat{\bs{X}}}_{\varphi_{\bs{x}}} = \braopket{\varphi_{\bs{x}}}{\int \bs{y} \ketbra{\bs{y}}{\bs{y}}\,\text{d}^N\bs{y}}{\varphi_{\bs{x}}} =
+  \expect{\hat{\bs{x}}}_{\varphi_{\bs{x}}} = \braopket{\varphi_{\bs{x}}}{\int \bs{y} \ketbra{\bs{y}}{\bs{y}}\,\text{d}^N\bs{y}}{\varphi_{\bs{x}}} =
   \int \bs{y}
   \frac{\braket{\bs{x}}{\bs{y}}\braket{\bs{y}}{\bs{x}}}
   {\braket{\bs{x}}{\bs{x}}} \,\text{d}^N\bs{y} =
@@ -141,7 +141,7 @@ The angular momentum of an individual atom is coupled to the magnetic field, yie
   h^{(n)}=\gamma B_z^{(n,\text{x})} \otimes j_z^{(n,\text{s})},
   \label{eq:gm-single-particle-hamiltonian}
 \ee
-where the operator $B_z^{(n)}=B_0+B_1x^{(n)}$ acts on the spatial part of the $n^{\text{th}}$ particle Hilbert space $\mathcal{H}^{(n,\text{x})}$.
+where the operator $B_z^{(n)}=B_0+B_1 x^{(n)}$ acts on the spatial part of the $n^{\text{th}}$ particle Hilbert space $\mathcal{H}^{(n,\text{x})}$.
 %The
 %individual atoms will interact with the magnetic field through
 %a coupling with their angular
@@ -152,10 +152,10 @@ where the operator $B_z^{(n)}=B_0+B_1x^{(n)}$ acts on the spatial part of the $n
 %where the magnetic field acts also as an operator because it depends on the
 %position of each particle and it is no longer a constant, $B_z^{(n)}(x^{n})=B_0+B_1
 %x^{(n)}$.
-The sum  of all one particle interactions with the magnetic field provide the total Hamiltonian
+The sum  of all single-particle interactions with the magnetic field provide the total Hamiltonian
 \be
 \label{eq:gm-Htot}
-H = \gamma \sum_{n=1}^N B_z^{(n)} \otimes j_z^{(n)},
+H = \gamma \sum_{n=1}^N B_z^{(n,\text{x})} \otimes j_z^{(n,\text{s})},
 \ee
 which will generate the time evolution of the system.
 
@@ -194,8 +194,8 @@ As in Eq.~(\ref{eq:gm-gradient-h1}), we will usually omit $\otimes$ and the supe
 Note that the operators $H_{0}$ and $H_{1}$ commute with each other.
 These two commuting dynamics are the two simplest in an atomic ensemble as they are based on collective operators not requiring an individual access to the particles.
 This is mainly because the spatial part in Eq.~\eqref{eq:gm-single-particle-hamiltonian} is represented by a single particle operator and not by a scalar depending on the position of the particle.
-The second approach, where the position of the particle is encoded in a scalar, would require to know in advance the location of the particle making the Hamiltonian $H_1$ Eq.~\eqref{eq:gm-gradient-h1} non-collective.
-This approach is widely adopted by the community, since its the most easy to understand and makes the initial calculations on gradient metrology easier \cite{}.
+The last, where the position of the particle is encoded in a scalar, would require to know in advance the location of the particles to construct the Hamiltonian $H_1$ Eq.~\eqref{eq:gm-gradient-h1}, which would yield to a non-collective Hamiltonian.
+This approach is widely adopted by the community, since its the most easy to understand and makes the initial calculations on gradient metrology easier \cite{Urizar-Lanz2015, Altenburg2016, Ng2011}.
 %The Hamiltonian $H_{0}$ describes a rotation by a homogeneous
 %magnetic field, while $H_{1}$ describes the action of a field gradient.
 
@@ -415,7 +415,7 @@ With those results the bound for the precision for states sensitive to the homog
 \end{split}
 \ee
 
-We show now that this bound is invariant under displacements of the system as it is the Eq.~(\ref{eq:gm-bound-for-insensitive-and-thermal-state}).
+To simplify our calculations later on, we show that this bound is invariant under displacements of the system as it is the Eq.~(\ref{eq:gm-bound-for-insensitive-and-thermal-state}).
 To compute this, we use the linearity of the last two arguments of $\qfif{\rho, A, B}$, Eq.~(\ref{eq:gm-qfi-linear-in-arguments}), the fact that $H_0$ remains unchanged on the Heisenberg picture, and we also use  the shifted $H_1$ operator, Eq.~(\ref{eq:gm-shifted h1 generator}).
 Hence, the translated QFI matrix elements are written as
 \begin{align}
@@ -437,7 +437,7 @@ Simple algebra shows that the bound for a displaced system is the same bound as 
 \ee
 Note that this is equal to the Eq.~\eqref{eq:gm-bound-for-b1-with-qfi-els}.
 
-This observations make the computations to compute the precision bounds in the next sections easier, since the now we can place the system arbitrarily wherever we choose.
+This observations make the computations of the precision bounds in the next sections easier, since the now we can place the system arbitrarily wherever we choose.
 It also allows us, for example, to place the origin of our coordinate system as well as the system itself where the magnetic field is null.
 So, we can write the linear magnetic field simply as $\bs{B}(x)= xB_1\bs{k}$ where $\bs{k}$ is the unitary vector pointing on the $z$-direction perpendicular to $x$- and $y$-axis.
 The discourse we have had on the preceding section has a vital importance to understand properly the our results.
@@ -535,25 +535,40 @@ We will also use an internal state such the maximal QFI is achieved so the reade
 The spatial part is described by the following probability density function, where for an even number of particles half of the particles are at one position and the rest at another, both places at a distance of $a$ from the origin
 \be
   \prob(\bs{x})=\prod_{n=1}^{N/2} \delta(x_n+ a)\prod_{n=N/2+1}^{N} \delta(x_n-a).
-  \label{eq:double-well-spatial-pdf}
+  \label{eq:gm-double-well-spatial-pdf}
 \ee
 This could be realized in a double-well trap, where the width of the wells is negligible compared to the distance of the wells.
-To distinguish the two wells we will use the labels "L" and "R" for the left and right wells respectively.
+Note that a state defined by Eq.~\eqref{eq:gm-double-well-spatial-pdf} and Eq.~\eqref{eq:gm-thermal-state} is a pure state on the position Hilbert space.
+To distinguish the two wells we will use the labels "L" and "R" for the left and right wells respectively, which is a shorthand which collects the first half of the particles and the last half into a single index, respectively.
 With this we are able to compute the single-point and two-point correlation functions as
 \begin{align}
-  \label{eq:single-point-function-double-well}
-  \int  x_n\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor\ver{-a \quad \text{if} \quad n\leq N/2,}{+a \quad \text{if} \quad n>N/2,}\right. \\
+  \int  x_n\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor
+  \begin{aligned}
+     -a \quad \text{if} \quad n\in \text{L},\\
+      a \quad \text{if} \quad n\in \text{R},
+  \end{aligned}\right.
+  \label{eq:single-point-function-double-well}\\
+  \int x_n x_m\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor
+  \begin{aligned}
+    -a^2 \quad \text{if} \quad (n,m)\in \text{(L,L) or (R,R),}\\
+     a^2 \quad \text{if} \quad (n,m)\in \text{(L,R) or (L,R).}
+  \end{aligned}
+  \right.
   \label{eq:two-point-function-double-well}
-  \int x_n x_m\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor\ver{-a^2 \quad \text{if} \quad (n,m)= \text{(L,L) or (R,R),}}{+a^2 \quad \text{if} \quad (n,m)= \text{(L,R) or (L,R).}} \right.
 \end{align}
 
-For pure states insensitive to the homogeneous magnetic field we have that the QFI is computed directly as four times the variance of the gradient Hamiltonian, $\qfif{\rho, H_1, H_1}=4\varian{H_1}$.
-So, we just choose a state that having the spatial part defined by Eq.~\eqref{eq:double-well-spatial-pdf} and it is written as
+We will try states insensitive to the homogeneous fields.
+Since the spatial part is a pure state in the position subspace, we will try pure states in the spin subspace due to the fact that the QFI is maximized by pure states as it was shown in Section~\ref{sec:bg-quantum-metrology}.
+For pure states we have that the QFI is computed directly as four times the variance of the gradient Hamiltonian, $\qfif{\rho, H_1}=4\varian{H_1}$.
+So, we just choose a spin-state that maximizes the variance of $H_1$ when the spatial part is Eq.~\eqref{eq:gm-double-well-spatial-pdf}.
+Hence, the best state in this case is
 \be
   \label{eq:best-state}
   \ket{\Psi} = \frac{1}{\sqrt{2}}(\ket{{+j}\cdots {+j}}^{(\text{L})}\ket{{-j}\cdots{-j}}^{(\text{R})}+\ket{{-j}\cdots {-j}}^{(\text{L})}\ket{{+j}\cdots{+j}}^{(\text{R})}),
 \ee
-where it can be seen as the superposition of the state fewest energy and the state with the greatest energy under the Hamiltonian $H_1$, see Figure~\ref{fig:gm-double-well}.
+where it can be seen as the superposition of the state with fewest energy and the state with greatest energy when the Hamiltonian is $H_1$, see Figure~\ref{fig:gm-double-well}.
+The state $\ket{\Psi}$ is indeed insensitive to the homogeneous field since both constituents are eigenstates of $H_0$ with the same eigenvalue.
+Moreover, the state is also maximally entangled.
 \begin{figure}[htp]
   \begin{center}
     \includegraphics[scale=1.2]{img/GM_double_well.pdf}
@@ -562,50 +577,108 @@ where it can be seen as the superposition of the state fewest energy and the sta
   \end{center}
 \end{figure}
 
-
-The state $\ket{\Psi}$ is indeed insensitive to the homogeneous field since both constituents are eigenstates of $H_0$ with the same eigenvalue.
-So we have that
+We compute first the $\qfif{\rho^{(\text{s})},j_z^{(n)},j_z^{(m)}}$ for $\ket{\Psi}$ as
+\be
+  \qfif{\ket{\Psi},j_z^{(n)},j_z^{(m)}}=\lcor
+  \begin{split}
+     4j^2 & \quad &\text{if} \quad (n,m)\in\text{(L,L) or (R,R)},\\
+    -4j^2 & \quad &\text{if} \quad (n,m)\in\text{(L,R) or (R,L)}.
+  \end{split}
+  \right.
+\ee
+Now, if we separate the terms of the sum in Eq.~\eqref{eq:gm-bound-for-insensitive-and-thermal-state} into two groups, such that one sum is for indexes $(n,m)\in\text{(L,L) or (R,R)}$, and the other is for indexes $(n,m)\in\text{(L,R) or (R,L)}$, we can compute the bound for the best state for the two ensemble case as
 \be
 \begin{split}
-  \varinv{b_1}|_{\max} &= \sum_{n,m}^N (-1)^{n+m} a^2 \qfif{\ket{\psi}, j_z^{(n)}, j_z^{(m)}}\\
-  &= a^2\sum_{n,m}^N (-1)^{n+m} 4 (-1)^{n+m} j^2\\
-  &= 4 a^2 j^2 N^2,
+  \varian{b_1}_{\text{bs}}|_{\max} &=
+  \sum_{\ver{(n,m)\in}{ \text{(L,L) or (R,R)}}} a^2 4j^2 + \sum_{\ver{(n,m)\in}{ \text{(L,R) or (R,L)}}} -a^2 (-4j^2)\\
+  &= 4 a^2 N^2j^2.
 \end{split}
 \ee
-where we have used the definition for pure states of QFI, $4(\expect{j_z^{(n)}j_z^{(m)}}-\expect{j_z^{(n)}}\expect{j_z^{(m)}})$.
 
-On the other hand if we compute now the standard deviation as we did before for the case of the chain, Eqs.~(\ref{eq:gm-mean}-\ref{eq:gm-variance-chain}), we have that in this case $\mu=0$ and the standard deviation
+On the other hand if we compute now the standard deviation Eq.~\eqref{eq:gm-variance}, as we did before for the case of the chain Eq.~\eqref{eq:gm-variance-chain},
+we have that in this case $\mu=0$ and the standard deviation for the spatial state at hand is
 \be
-  \sigma_{\text{dw}}^2 = \int d^N\bs{x}\prob(\bs{x})=a^2,
+  \sigma_{\text{te}}^2 = a^2,
+  \label{eq:gm-variance-two-ensembles}
 \ee
-with which the proof follows.
-Before concluding the proof we want to show another more usual approach to the same problem.
+with which
+\be
+  \varian{b_1}_{\text{bs}}|_{\max} = 4 \sigma_{\text{te}}^2 N^2j^2.
+\ee
+Before concluding, we want to show another more usual approach to the same problem.
 
-It is as follows, given that the QFI is convex on states and having already fixed the external spatial state to be Equation~(\ref{eq:gm-double-well-spatial-pdf}), the inner state that maximises the QFI is the one that maximises $(\Delta H_1)^2$.
-In this case, taking into account the particle locations and that we have zero magnetic field at the origin,
+It is as follows. Knowing that the QFI is convex in the state and considering the spatial state to be Eq.~\eqref{eq:gm-double-well-spatial-pdf}, we reduce our problem to the internal subspace in which state that maximizes the QFI is the one that maximizes $(\Delta H_1)^2$.
+In this case, taking into account the particle locations are given and that we have zero magnetic field at the origin, we obtain
 \be
-  H_{1,\text{eff}} = b_1a(\mtxid_{\text{od}}\otimes J_{z,\text{ev}}-J_{z,\text{od}}\otimes \mtxid_{\text{ev}}),
+  H_{1,\text{eff}}^{(\text{s})} = a(\mtxid^{(\text{L})}\otimes J_{z}^{(\text{R})}-J_{z}^{(\text{L})}\otimes \mtxid^{(\text{R})}),
+  \label{eq:gm-effective-hamiltonian-double-well}
 \ee
-where we write the effective Hamiltonian that the particles feel and "od" and "ev" stand for odd and even particle index respectively.
-From here it is easy to show that the state maximising such variance is the following,
-\be
-  ,
-\ee
-which is equivalent to the state in Equation~(\ref{eq:gm-best-state}).
-This proofs that we have use the right state, and with this we can compute the QFI as in the literature as $\qfif{\ket{\psi}, H_1} = 4(\Delta H_1)^2 = 4a^2j^2N^2$.
-With this we finally conclude the proof.
+where we write the effective Hamiltonian that the particles on the left and right feel.
+This proves that we have used the right state, since it maximizes the variance $\varian{H_{1,\text{eff}}^{(\text{s})}}$, and with this we can compute the QFI as it can be found in the literature \cite{Landini2014}.
 
-The maximally entangled internal state that maximized the QFI too is
+\subsubsubsection{States separable into $\ket{\psi}^{({\rm L})}\otimes\ket{\psi}^{({\rm R})}$}
+
+Now that we have already introduced the reader to the case of the two ensembles, we take the opportunity to show some more important results for states of the form of $\ket{\psi}^{(\text{L})} \otimes \ket{\psi}^{(\text{R})}$ \cite{Landini2014}.
+These states can reach the Heisenberg limit, while they are easier to realize experimentally than states in which the particles on the left and particles on the right are entangled with each other.
+For such states we only have to compute the QFI for $H_{1,\text{eff}}$ Eq.~\eqref{eq:gm-effective-hamiltonian-double-well} such that
 \be
-  \label{eq:gm-best-state}
-  \ket{\psi}=\tfrac{1}{\sqrt{2}}(\ket{0101\cdots01}+\ket{1010\cdots10}).
+  \qfif{\ket{\psi}^{(\text{L})}\otimes\ket{\psi}^{(\text{R})},a( \mtxid^{(\text{L})}\otimes J_{z}^{(\text{R})}-J_{z}^{(\text{R})}\otimes \mtxid^{(\text{L})})}=2a^2\qfif{\ket{\Psi},J_z},
 \ee
-Notice that this is a coherent state of all particles on the left "up" and all on the right "down" plus all on the left "down" and all on the right "up".
-We will choose without loosing of generality the particles to be spin-$j$ particles.
-For this state insensitive to the homogeneous field and in the double-well spatial configuration, Eq.~(\ref{eq:gm-double-well-spatial-pdf}), the maximal achievable precision is
+where we used the general rule Eq.~\eqref{eq:bg-qfi-additive-for-tensor-product} and that any scalar multiplying the second argument of the QFI can be extracted outside the function squared were used.
+Note that
+\begin{multline}
+\label{eq:separability-on-two-ensembles}
+F[\varrho_1^{(L)} \varrho_2^{(R)}, A^{(L)} \mtxid^{(R)}+\mtxid^{(L)} A^{(R)},  B^{(L)} \mtxid^{(R)}+\mtxid^{(L)} B^{(R)}]\\ = F[\varrho_{\rm L}, A,B] + F[\varrho_{\rm R}, A, B].
+\end{multline}
+
+We analyze first how the bound would look like for states sensitive to the homogeneous field, and then for states insensitive to it.
+Note that the single point correlation function for "L" and "R" particles is $a$ and $-a$ respectively and the two point correlation function is $a^2$ for both. Thus, in the case of computing the bound for the states sensitive to the homogeneous fields, we have that $F_{01}^{(\text{L})} = -F_{01}^{(\text{R})}$ whereas the other two matrix elements we have to compute are equal for both subspaces "L" and "R".
+The precision bound for states sensitive to the homogeneous fields is obtained as
 \be
-  (\Delta b_1)^{-2}|_{\max} = 4 \sigma_{\text{dw}}^2 j^2N^2
+\begin{split}
+\label{eq:bound-for-separated-two-ensembles}
+(\Delta b_1)^{-2}\leq&\, F_{11}+\frac{(F_{01})^2}{F_{00}}\\
+ =&\,F_{11}^{(\text{L})}+F_{11}^{(\text{R})}+\frac{(F_{01}^{(\text{L})}+F_{01}^{(\text{R})})^2}{F_{00}^{(\text{L})}+F_{00}^{(\text{R})}}\\
+ =&\,2F_{00}^{(\text{L})} +\frac{(F_{01}^{(\text{L})}-F_{01}^{(\text{R})})^2}{2F_{00}^{(\text{L})}}\\
+ =&\,2F_{11}^{(\text{L})}\\
+ =&\, 2 a^2 F[\varrho^{(L)}, J_z^{(L)}],
+\end{split}
 \ee
+where we use in the first line the identity~(\ref{eq:separability-on-two-ensembles}) and in the last line we extract the common factor $a^2$ and we use the linearity on the arguments the QFI.
+% WHAT IS THIS?: has to obtain $F[\varrho^{(L)}, J_z^{(L)}]$.
+Note that this is the same precision bound we will obtain for states insensitive to the homogeneous fields.
+The reader may notice that this bound relates how good the state on the "L" or "R" subsystem is in sensing the homogeneous field with the precision achievable for the gradient parameter.
+This is reasonable because the state in "L" is not interacting neither correlated with "L".
+Hence, after the homogeneous field is estimated for "L" and "R" independently,
+the gradient can also be estimated as the difference between the two estimates.
+
+In the literature one can find several states that can be used to measure homogeneous fields, such as
+Greenberger-Horne-Zeilinger (GHZ) states \cite{GHZ}, unpolarized Dicke states, and spin-squeezed states.
+Note that if $\ket{\Psi}$ is separable, then based in Eq.~\eqref{eq:separability-on-two-ensembles} we have
+\be F[\ket{\Psi_{\rm sep}^{(\rm L)}}\otimes\ket{\Psi_{\rm sep}^{(\rm R)}},J_z^{(L)} \mtxid^{(R)}+\mtxid^{(L)} J_z^{(R)}]\le 4Nj^2,\ee
+since for separable states  $F[\ket{\Psi^{(L)}},J_z]\le 4N_{\rm L}j^2,$ where the bound is tight \cite{PS07}.
+In Table~\ref{tab:result-states-two-ensembles}, we summarized the precision bounds for states of type $\ket{\psi}^{(\text{L})}\otimes \ket{\psi}^{(\text{R})}$ for the two-ensemble case.
+
+\begin{table}
+\begin{tabular}{|l|c|c|}
+\hline
+State & $F[\varrho,J_z]$ on "L" & $(\Delta b_1)^{-2}\leq$ \\
+\hline
+$\ket{Nj/2}_{x}\otimes \ket{Nj/2}_{x} $ & $2N_{\text{L}}j$ & $4a^2Nj$ \\
+\hline
+%$ \ket{\text{SpSq}}\otimes\ket{\text{SpSq}}$ &  & \\
+%\hline
+$\ghz \otimes \ghz$ & $N_{\text{L}}^2$ & $a^2N^2/2 $\\
+\hline
+$\ket{\text{D}_{N/2}^{N/4}}\otimes \ket{\text{D}_{N/2}^{N/4}}$ & $2N_{\text{L}}j(N_{\text{L}}j+1)$ & $a^2Nj(Nj+2)$\\
+  \hline
+$\ket{\Psi_{\rm sep}} \otimes \ket{\Psi_{\rm sep}}$ & $\le 4N_{\rm L}j^2$ on "L" & $\le 8a^2Nj^2$ \\
+\hline
+\end{tabular}
+\caption{Precision for differential magnetometry for various product quantum states in two ensembles spatially separated from each other. We also give the precision of the estimation of the homogeneous magnetic field in one of the ensembles (second column).
+}
+\label{tab:result-states-two-ensembles}
+\end{table}
 
 In this section we have shown to the reader how one should handle the spatial width of the system for classifying it for gradient metrology as well as a state-of-the-art system on which the Heisenberg limit is achieved. Moreover, we have sown how to use the tools developed on previous section to compute simple bounds. In the next section we will focus on single cold-atoms ensembles since the play an important role on todays quantum technology and experiments and many groups are trying to realize them whit great success but with few theoretical support from our point of view.
 
