@@ -21,3 +21,4 @@ ppr/*
 *.bib.bak
 *.bib.sav
 main.pdf
+*temp.pdf
