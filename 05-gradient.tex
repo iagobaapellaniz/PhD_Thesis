@@ -253,8 +253,8 @@ when the operators $A$ and $B$ commute.
 This form leads to simpler arguments in our derivations through the following sections.
 For pure states it simplifies also to
 \be
-  \label{eq:gm-QFI_pure}
   \qfif{\ket{\psi},A,B}=4\left(\expect{AB}_{\psi}-\expect{A}_{\psi}\expect{B}_{\psi}\right).
+  \label{eq:gm-QFI_pure}
 \ee
 Note that we recover $\qfif{\rho,A,A}=4(\Delta A)_\rho^2$ as can be found in the Eq.~\eqref{eq:bg-rewrite-qfi} for single-parameter estimation with pure states \cite{Paris2009,Toth2013}.
 Another important feature of the function Eq.~(\ref{eq:gm-FAB}) is that it is convex on the states.
@@ -262,8 +262,14 @@ This property is written as follows
 \be
   \qfif{q\rho_1{+}(1{-}p)\rho_2}\leqslant
   p\qfif{\rho_1}{+}(1{-}p)\qfif{\rho_2},
+  \label{eq:gm-FAB-convex}
 \ee
 where we omit in writing the last two arguments for simplicity.
+
+[TODO: Add additive under tensor product property].
+\be
+  \label{eq:gm-FAB-additive-under-tensor}
+\ee
 
 In the following subsections we show the general form for the precision bounds for states insensitive to the homogeneous fields and for states sensitive to them. We also show that both bounds are invariant under spatial translation of the system which makes the computing for particular cases much easier.
 
@@ -499,7 +505,7 @@ With this, we can now write the precision bound for a chain of atoms when the in
 \label{eq:gm-result-for-chain-without-sigma}
 \ee
 
-Despite that Equation~(\ref{eq:gm-result-for-chain-without-sigma}) is a third order function of the particle number $N$ and that it seems to overcome the ultimate scaling HS, on should notice that the length of the chain increases as we introduce more particles into the system.
+Despite that Equation~(\ref{eq:gm-result-for-chain-without-sigma}) is a third order function of the particle number $N$ and that it seems to overcome the ultimate scaling HS, on should note that the length of the chain increases as we introduce more particles into the system.
 As we discussed before, one must normalize the effective size of the system to avoid false positives.
 
 In our case we decide to use on all cases the standard deviation of the averaged particle position as the standard length measure of the system.
@@ -620,37 +626,35 @@ This proves that we have used the right state, since it maximizes the variance $
 
 Now that we have already introduced the reader to the case of the two ensembles, we take the opportunity to show some more important results for states of the form of $\ket{\psi}^{(\text{L})} \otimes \ket{\psi}^{(\text{R})}$ \cite{Landini2014}.
 These states can reach the Heisenberg limit, while they are easier to realize experimentally than states in which the particles on the left and particles on the right are entangled with each other.
+
+First, we will compute the bound for states insensitive to the homogeneous field.
 For such states we only have to compute the QFI for $H_{1,\text{eff}}$ Eq.~\eqref{eq:gm-effective-hamiltonian-double-well} such that
 \be
-  \qfif{\ket{\psi}^{(\text{L})}\otimes\ket{\psi}^{(\text{R})},a( \mtxid^{(\text{L})}\otimes J_{z}^{(\text{R})}-J_{z}^{(\text{R})}\otimes \mtxid^{(\text{L})})}=2a^2\qfif{\ket{\Psi},J_z},
+  \varinv{b_1}|_{\max} = \qfif{\ket{\psi}^{(\text{L})}\otimes\ket{\psi}^{(\text{R})},a( \mtxid^{(\text{L})}\otimes J_{z}^{(\text{R})}-J_{z}^{(\text{R})}\otimes \mtxid^{(\text{L})})}= 2a^2\qfif{\ket{\Psi}^{(\text{L})},J_z^{(\text{L})}},
 \ee
-where we used the general rule Eq.~\eqref{eq:bg-qfi-additive-for-tensor-product} and that any scalar multiplying the second argument of the QFI can be extracted outside the function squared were used.
-Note that
-\begin{multline}
-\label{eq:separability-on-two-ensembles}
-F[\varrho_1^{(L)} \varrho_2^{(R)}, A^{(L)} \mtxid^{(R)}+\mtxid^{(L)} A^{(R)},  B^{(L)} \mtxid^{(R)}+\mtxid^{(L)} B^{(R)}]\\ = F[\varrho_{\rm L}, A,B] + F[\varrho_{\rm R}, A, B].
-\end{multline}
+where we used the general rule Eq.~\eqref{eq:bg-qfi-additive-for-tensor-product} and that any scalar multiplying the second argument of the QFI can be extracted outside the function squared.
 
-We analyze first how the bound would look like for states sensitive to the homogeneous field, and then for states insensitive to it.
-Note that the single point correlation function for "L" and "R" particles is $a$ and $-a$ respectively and the two point correlation function is $a^2$ for both. Thus, in the case of computing the bound for the states sensitive to the homogeneous fields, we have that $F_{01}^{(\text{L})} = -F_{01}^{(\text{R})}$ whereas the other two matrix elements we have to compute are equal for both subspaces "L" and "R".
+Now, we analyze how the bound would look like for states sensitive to the homogeneous field.
+Note that the single point correlation function for particles at "(L)" and "(R)" is $a$ and $-a$ respectively, and the two point correlation function is $a^2$ for both. Thus, in the case of computing the bound for the states sensitive to the homogeneous fields, we have that $F_{01}^{(\text{L})} = -F_{01}^{(\text{R})}$, which we used the superscript to indicate in this case over which subspace is computed the QFI matrix element, whereas the other two matrix elements we have to compute are equal for both subspaces "(L)" and "(R)".
 The precision bound for states sensitive to the homogeneous fields is obtained as
 \be
 \begin{split}
-\label{eq:bound-for-separated-two-ensembles}
-(\Delta b_1)^{-2}\leq&\, F_{11}+\frac{(F_{01})^2}{F_{00}}\\
- =&\,F_{11}^{(\text{L})}+F_{11}^{(\text{R})}+\frac{(F_{01}^{(\text{L})}+F_{01}^{(\text{R})})^2}{F_{00}^{(\text{L})}+F_{00}^{(\text{R})}}\\
- =&\,2F_{00}^{(\text{L})} +\frac{(F_{01}^{(\text{L})}-F_{01}^{(\text{R})})^2}{2F_{00}^{(\text{L})}}\\
- =&\,2F_{11}^{(\text{L})}\\
- =&\, 2 a^2 F[\varrho^{(L)}, J_z^{(L)}],
+\varinv{b_1} \leqslant &  F_{11}+\frac{(F_{01})^2}{F_{00}}\\
+ =& F_{11}^{(\text{L})}+F_{11}^{(\text{R})} +\frac{(F_{01}^{(\text{L})}+F_{01}^{(\text{R})})^2} {F_{00}^{(\text{L})}+F_{00}^{(\text{R})}}\\
+ =& 2F_{11}^{(\text{L})} +\frac{(F_{01}^{(\text{L})}-F_{01}^{(\text{L})})^2} {2F_{00}^{(\text{L})}}\\
+ =& 2F_{11}^{(\text{L})}\\
+ =& 2 a^2 F[\rho^{(L)}, J_z^{(L)}],
 \end{split}
+\label{eq:bound-for-separated-two-ensembles}
 \ee
-where we use in the first line the identity~(\ref{eq:separability-on-two-ensembles}) and in the last line we extract the common factor $a^2$ and we use the linearity on the arguments the QFI.
-% WHAT IS THIS?: has to obtain $F[\varrho^{(L)}, J_z^{(L)}]$.
+where we use in the first line the identities for additions under tensor products Eqs.~\eqref{eq:bg-qfi-additive-for-tensor-product} and \eqref{eq:gm-FAB-additive-under-tensor}, and in the last line we extract the common factor $a^2$ and we use the linearity on the arguments the QFI.
 Note that this is the same precision bound we will obtain for states insensitive to the homogeneous fields.
-The reader may notice that this bound relates how good the state on the "L" or "R" subsystem is in sensing the homogeneous field with the precision achievable for the gradient parameter.
-This is reasonable because the state in "L" is not interacting neither correlated with "L".
-Hence, after the homogeneous field is estimated for "L" and "R" independently,
-the gradient can also be estimated as the difference between the two estimates.
+The reader may note that this bound relates how good the state on the "(L)" or "(R)" subsystem is in sensing the homogeneous field with the precision achievable for the gradient parameter.
+This is reasonable because the state in "(L)" is not interacting neither correlated with "(R)".
+Hence, after the homogeneous field is estimated for "(L)" and "(R)" independently,
+the gradient can also be estimated as the difference between the two estimates divided by the square distance $a^2$.
+
+[CONTINUE HERE]
 
 In the literature one can find several states that can be used to measure homogeneous fields, such as
 Greenberger-Horne-Zeilinger (GHZ) states \cite{GHZ}, unpolarized Dicke states, and spin-squeezed states.
@@ -762,7 +766,7 @@ An interesting property of the covariance of this type is that it is a value bou
   \frac{-\sigma^2}{N-1}\leqslant \eta\leqslant \sigma^2.
 \ee
 So it cannot contribute for a better scaling on the precision than since it scales as much as $\sigma^2$ with the particle number.
-Notice that the lower bound scales worse.
+note that the lower bound scales worse.
 
 First of all we show an important property of states insensitive to the homogeneous field and we do so using the fact that the QFI for the homogeneous field generator, i.e, $J_z$, on those states is zero, $\qfif{\rho,J_z}=0$.
 The identity follows,
@@ -793,11 +797,11 @@ insensitive to homogeneous field with the following quantity
 \ee
 The bound in Eq.~\eqref{eq:gm-precision bound for single-cloud systems IH}
 can be saturated by an optimal measurement.
-Nevertheless, it is worth to notice that it cannot surpass the
+Nevertheless, it is worth to note that it cannot surpass the
 shot-noise scaling, $\sim N$, because $\qfi[\rho_{\text{s}},j_z^{(n)}]$, the QFI for the single-particle operator $j_z^{(n)}$,
 cannot be larger than $j^2$.
 
-First of all, notice that the second term appearing on Equation~(\ref{eq:gm-bound-for-sensitive-and-thermal-state}) is proportional to the single-point average $\int d^N\bs{x}\prob(\bs{x})x_n$ which by definition is the same for any $x_n$ and by decision is chosen to be zero, since we placed the system at the origin.
+First of all, note that the second term appearing on Equation~(\ref{eq:gm-bound-for-sensitive-and-thermal-state}) is proportional to the single-point average $\int d^N\bs{x}\prob(\bs{x})x_n$ which by definition is the same for any $x_n$ and by decision is chosen to be zero, since we placed the system at the origin.
 So, we only have to compute the first term of the Equation~(\ref{eq:gm-bound-for-sensitive-and-thermal-state}),
 \be
 \begin{split}
@@ -1054,7 +1058,7 @@ The totally polarised state can easily be prepared experimentally.
 It has already been used for gradient magnetometry with a single atomic ensemble \cite{Koschorreck2011,Vengalattore2007}.
 For the gradient measurement as for the measurement of the homogeneous field, the polarisation must be perpendicular to the field we want to measure in order to take advantage of the interaction between the particles and the field.
 Here we chose as before the totally polarized state along the $y$-axis which is written as $\ket{j}_y^{\otimes N}$.
-Notice that this state is a state sensitive to the homogeneous field, hence, we must use the Equation~(\ref{eq:gm-precision bound for single-cloud systems SH}) to compute the bound.
+note that this state is a state sensitive to the homogeneous field, hence, we must use the Equation~(\ref{eq:gm-precision bound for single-cloud systems SH}) to compute the bound.
 
 For the pure product states we have that $\qfif{\ket{\psi}, A} = 4(\Delta A)^2$.
 Together with,
@@ -1114,7 +1118,7 @@ From the definition of the variance,
 Hence, We try a state that approaches to zero its polarisation on the $z$-direction and maximises \expect{(j_z^{(n)})^2}.
 We have that  $\ket{\psi}=(\ket{+j}+\ket{-j})/\sqrt{2}$ is ideal for this.
 The inner state for all particles is just the product state $\rho_{\text{s}} =\ket{\psi}\bra{\psi}^{\otimes N}$.
-Notice that this state is permutationally invariant, hence it is a tight bound for what can be achieved with PI separable states.
+note that this state is permutationally invariant, hence it is a tight bound for what can be achieved with PI separable states.
 The variance of a single particle operator is $(\Delta j_z^{(n)})^2=j^2$ so the proof holds.
 
 After this discussion we make the following observation. The best achievable precision for separable states is written as
@@ -1131,10 +1135,10 @@ Note that the bound for the singlet state, even if it is entangled, is above the
 Nevertheless, when the singlet state is used effect of the homogeneous magnetic field has not to be compensated since it is insensitive to it and thus the bound can be saturated with an optimal estimator for the gradient field.
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\subsubsubsection{The unpolarised Dicke states $\ket{Nj, 0}$ and $\ket{Nj, 0}_x$}
+\subsubsubsection{The unpolarized Dicke states $\ket{Nj, 0}$ and $\ket{Nj, 0}_x$}
 %%%%%%%%%%%%%%%%%%%%%%%
 
-Unpolarised Dicke states play an important role in quantum opticsand quantum information science.
+unpolarized Dicke states play an important role in quantum opticsand quantum information science.
 The Dicke state $\ket{Nj,0}_l$ with a maximal $\langle J_x^2+J_y^2+J_z^2 \rangle$ and $\langle J_l\rangle=0$ for any $l\in x,y,z$ is particularly interesting due to its entanglement properties and its metrological usefulness.
 This state has been created in photonic experiments \cite{Kiesel2007,Wieczorek2009,Chiuri2012} and in cold atoms \cite{Luecke2011,Hamley2012}, while a Dicke state with $\langle J_z\rangle>0$ has been created with cold trapped ions \cite{haeffner2005}.
 
