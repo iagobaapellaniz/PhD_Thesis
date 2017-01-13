@@ -1,31 +1,30 @@
 \renewcommand\thesubsection{\Alph{subsection}}
 \numberwithin{equation}{subsection}
+\numberwithin{figure}{subsection}
 \section*{Appendices}
 \addcontentsline{toc}{section}{Appendices}
 
 \subsection{Discussion on angular momentum subspaces for different spins}
 \label{app:angular-subspaces}
 
-As we mentioned in the Section~\ref{sec:bg-the-quantu-state}, when dealing with many particle systems their Hilbert spaces are represented by tensor product of the individuals.
+As we mentioned in the Section~\ref{sec:bg-the-quantu-state}, when dealing with many particle systems, the Hilbert space is represented by tensor product of the subspaces with a fixed spin.
 So, the final dimension is the product of all single-particle dimensions which lead to an exponentially large Hilbert space.
 In order to simplify many of the computations we work with, it is worth to note that some interesting structures arise from this kind of tensor product construction.
 
-Let us name some basic assumptions with which the problem of adding angular momentum subspaces is even further simplified.
-First of all, the single particle Hilbert space must be discrete and finite, so we have that it can be represented by $d$-level system or qudit, where $d$ is the dimension of the single-particle system.
-When $d$ equals to two, we have the well known 2-level system or qubit.
-We assume as well, that all the particles have the same dimension.
+Let us name some basic assumptions with which the problem of adding angular momentum subspaces is simplified even further.
+First of all, the single particle Hilbert space must be discrete and finite, hence it can be represented by a $d$-level system or qudit, where $d$ is the dimension of the single-particle system.
+When $d$ equals two, we have the well known 2-level system or qubit.
 The basis of such systems is composed by $d$ different eigenstates of the spin operator $j_z^{(n)}$, where $n$ denotes the Hilbert space in which the operator is defined.
 We also assume that all parties have the same dimension $d$, so the total dimension is $d^N$.
-The spin-number $j$ is defined as $j=(d-1)/2$.
+The spin $j$ is defined as $j:=(d-1)/2$.
 It is usual to use the single-particle angular momentum projector operator in the $z$-direction to completely characterize the basis
 \be
   j_z^{(n)}\ket{m} = m \ket{m},
 \ee
 where $m = -j,-j+1,\dots,+j-1,+j$ and this way the necessary $d$ different pure states are defined.
 
-In quantum information, the two eigenstates $\ket{-1/2}$ and $\ket{+1/2}$ of 2-level systems, or qubits, are usually identified with $\ket{0}$ and $\ket{1}$ respectively, since the qubit case is the most studied case on which the dichotomized representation of classic \emph{bit}s, ones and zeros, is directly related with.
-It is also usual to make use of a more simplified notation $\ket{-1/2} \equiv \ket{-}$ and $\ket{+1/2}\equiv=\ket{+}$ for this particular case.
-Besides, one can map directly the $m=-j,-j+1,\dots,+j-1,+j$ to $\tilde{m}=0,1,\dots,d-1$, where $\tilde{m}$ is normally used in the quantum information framework, whereas the $m$ gives directly the eigenvalue of the state when $j_z^{(n)}$ is applied.
+In quantum information, the two eigenstates $\ket{-1/2}$ and $\ket{+1/2}$ of the 2-level systems, or qubits, are usually identified with $\ket{0}$ and $\ket{1}$ respectively, since the qubit case is the most studied case on which the dichotomized representation of classical \emph{bit}s, ones and zeros, is directly related with.
+For qudits, particles whit $d$ levels, one can map directly the $m=-j,-j+1,\dots,+j-1,+j$ to $\tilde{m}=0,1,\dots,d-1$ in a similar way as for qubits, where $\tilde{m}$ is usual label used in the quantum information framework, whereas the $m$ gives directly the eigenvalue of the state when $j_z^{(n)}$ is applied.
 
 A first approach to write a concise eigenbasis for the whole Hilbert space is to multiply by tensor product all the eigenstates of each single party.
 This way, and permuting all the states from right to left, we construct a well defined basis as
@@ -43,7 +42,7 @@ This way, and permuting all the states from right to left, we construct a well d
 \ee
 where we have used the notation $\ket{m_1,m_2,\dots,m_{N-1},m_N}\equiv \ket{m_1}\otimes\ket{m_2}\dots\otimes\ket{m_N}$.
 This basis is yet an eigenbasis of $J_z = \sum_{n} j_z^{(n)}$.
-On the other hand, it is not a eigenbasis of the total angular momentum $\bs{J}^2 = J_x^2+J_y^2+J_z^2$, neither all the eigenstates are permutationally invariant, which is useful for dealing with symmetric subspaces.
+On the other hand, it is not an eigenbasis of the total angular momentum $\bs{J}^2 = J_x^2+J_y^2+J_z^2$, neither all the eigenstates are permutationally invariant, which is useful for dealing with symmetric subspaces.
 
 We will explain shortly how to write a basis in which all members are eigenstates of the total angular momentum $\bs{J}^2$ as well as of the $J_z$ operator.
 This is a usual procedure when adding angular momentum operators, see Ref.~\cite{Cohen-Tannoudji1977, Sakurai2010} for more details.
@@ -57,7 +56,7 @@ We use the following notation for the maximal eigenvalue of the $\bs{J}^2$ opera
 since it appears many times throughout the thesis.
 Then, we use orthogonal states and we keep doing this until we have all the subspaces characterized.
 
-Hence, the eigenstates are characterized with only three simple numbers $\ket{J,M,D}$ instead of Eq.~\eqref{eq:app-eigenbasis-tensor-product},
+Hence, the eigenstates are characterized with only three simple numbers $\ket{J,M,D}$ instead of Eq.~\eqref{eq:app-eigenbasis-tensor-product}.
 First of all, we have the total angular momentum number $J$, where $J=0,1,\dots,Nj$ for this particular case in which we are adding together $N$ spin-$j$ particles (we also assume that if the spin number $j$ equals we have even number of particles for simplicity), and defined the eigenvalue of the $\bs{J}$ operator as $J(J+1)$.
 Then, we have the quantum number of the angular momentum projection into the $z$-direction, $M=-J,-J+1,\dots,+J-1,+J$, which corresponds to the eigenvalue of the $J_z$ operator.
 And finally, the degeneracy number of the $J$ subspaces, $D=1,2,\dots,D_J$, that is always one for the $J=Nj$ subspace and for the rest it depends in general in the number of particles as well as in the spin-number $j$.
@@ -65,26 +64,27 @@ And finally, the degeneracy number of the $J$ subspaces, $D=1,2,\dots,D_J$, that
 We now show the definition of some of the most used states throughout this thesis.
 For the spin-$\frac{1}{2}$ particles, i.e., qubits, several states appear.
 For instance, the symmetric states, i.e., the states that interchanging any pair of particles remain the same, are all confined into the subspace where $J=\frac{N}{2}$ is maximal.
-They can be constructed taking $n$ particles in the $\ket{-1/2}$ or $\ket{0}$ state and $N-n$ in the $\ket{+1/2}$ or $\ket{1}$ state and making them symmetric in the following way
+They can be constructed taking $n$ particles in the $\ket{-1/2}$ or $\ket{0}$ state, depending on the framework, and $N-n$ in the $\ket{+1/2}$ or $\ket{1}$ state and symmetrizing them as
 \be
-  \label{eq:ap-maximal-angular-momentum-expansion-qubits}
-  \ket{J=N/2, M} \equiv \binom{N}{N/2+M}^{-1/2}\sum_k \mathcal{P}_k(\ket{0}^{\otimes N/2-M}\otimes\ket{1}^{\otimes{N/2+M}})
+  \label{eq:ap-symmetric-states-qubits}
+  \ket{J=N/2, M} \equiv \binom{N}{N/2+M}^{-1/2}\sum_k \mathcal{P}_k(\ket{0}^{\otimes n}\otimes\ket{1}^{\otimes{N-n}}),
 \ee
-where the sum is over all possible different permutations of the state denoted by $\mathcal{P}_k$.
-Note that the Dicke states, called like this after R. H. Dicke use them to explain the coherent superradiance effect \cite{Dicke1954}, or the two-mode Fock states for a constant particle number (note also that we have two modes, the two level of each particle, and that the whole state is symmetric), are equivalent to the states in Eq.~\eqref{eq:ap-maximal-angular-momentum-expansion-qubits}.
-Therefore apart from Eq.~\eqref{eq:ap-maximal-angular-momentum-expansion-qubits}, we use the following notation for these states
+where the sum is over all possible different permutations of the state denoted by $\mathcal{P}_k$ and $M=N/2-n$.
+Note that the Dicke states, are named after R. H. Dicke, who used them to explain the coherent superradiance effect \cite{Dicke1954}.
+If we consider two modes corresponding to the two states, then Eq.~\eqref{eq:ap-symmetric-states-qubits} is equivalent to the twin Fock state for a constant particle number.
+Therefore apart from Eq.~\eqref{eq:ap-symmetric-states-qubits}, we use the following notation for these states
 \be
-  \ket{\dicke{N, n}} \equiv \ket{J=N/2, M=N/2-n},
+  \ket{\dicke{N, n}} \equiv \ket{J=N/2, M=N/2-n}=\binom{N}{N-n}^{-1/2}\sum_k \mathcal{P}_k(\ket{0}^{\otimes n}\otimes\ket{1}^{\otimes{N-n}}),
   \label{eq:app-definition-of-dicke-states}
 \ee
-where where $n$ gives the number of particles that are in $\ket{-1/2}$ or .
+where $n$ gives the number of particles that are in $\ket{0}$.
 One particularly interesting case of these states is the unpolarized Dicke state
 \be
   \ket{\dicke{N}}\equiv \ket{\dicke{N,\frac{N}{2}}},
 \ee
-where because it appears many times in this thesis, we skip writing the second subscript for simplicity.
+since it appears many times in this thesis, we skip writing the second subscript for simplicity.
 
-Finally, we present another state before the conclusion of this appendix.
+Finally, we present another interesting state.
 It is the permutationally invariant singlet state for spin-$\frac{1}{2}$ particles.
 This is a uniquely defined state that can be constructed in several different ways.
 One can start by the product state of pairwise singlets $\ket{\Psi^{-}} = \frac{1}{\sqrt{2}}(\ket{01}-{10})$ and later impose the permutational invariance for the density matrix.
@@ -104,11 +104,12 @@ where $\beta$ is the inverse of the Boltzman constant $k_\text{B}$ times the tem
 \label{app:proof-of-4th-y-moment-pure-dicke}
 
 To compute the Eq.~\eqref{eq:vd-4y-moment-pure-dicke}, we start by the expectation value of $\bs{J}^4$ for the pure Dicke state $\ket{\dicke{N}}$.
-In one hand we have that it is simply equal to square $\expect{\bs{J}^2}$
+On the one hand, we have that it is simply equal to square $\expect{\bs{J}^2}$
 \be
   \expect{\bs{J}^4} = \lpar\frac{N(N+2)}{4}\rpar^2.
+  \label{eq:ap-total-angular-4th-moment-expectation}
 \ee
-On the other hand this must be equal to
+On the other hand Eq.~\eqref{eq:ap-total-angular-4th-moment-expectation} must be equal to
 \be
   \expect{(J_y^2+J_z^2+J_x^2)\bs{J}^2} = \expect{J_y^4} + \expect{J_z^4} + \expect{\{J_y^2,J_z^2\}},
 \ee
@@ -125,12 +126,13 @@ Now we focus on computing $\expect{J_y^2J_z^2}$.
 {Simplification of $\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2}$}
 \label{app:simplification-of-4th-moments}
 
-The expectation value appearing on Eq.~\eqref{eq:vd-result-before-simp} which we want to simplify has 6 different terms, all with two $J_x$ and another two $J_y$,
+The expectation value appearing in Eq.~\eqref{eq:vd-result-before-simp} which we want to simplify has 6 different terms, all with two $J_x$ and another two $J_y$,
 \be
   \expect{J_x^2J_y^2} + \expect{J_xJ_yJ_xJ_y} + \expect{J_xJ_y^2J_x}
   + \expect{J_yJ_x^2J_y} + \expect{J_yJ_xJ_yJ_x} + \expect{J_y^2J_x^2}.
 \ee
-From all those terms the third is somehow referent, since the pure unpolarized Dicke state used as reference is align with the $x$-axis, so $J_x\ket{\dicke{N,N/2}}_x=0$.
+From all those terms, the third is somehow different, since the pure unpolarized Dicke state used as reference in Section~\ref{sec:vd} is aligned with the $x$-axis.
+So we have $J_x\ket{\dicke{N,N/2}}_x=0$ in both sides of the expectation value $\expect{J_xJ_y^2J_x}$.
 
 We use the commutation relations of the angular momentum operators $[J_k,J_l]=\epsilon_{klm} iJ_m$, where $\epsilon_{klm}$ is the Levi-Civita symbol, to rearrange all operators,
 \begin{subequations}
@@ -149,7 +151,7 @@ We use the commutation relations of the angular momentum operators $[J_k,J_l]=\e
   \label{eq:ap-simplification-6}
 \end{align}
 \end{subequations}
-One may note that with those relations is enough to see that we have six $\expect{J_xJ_y^2J_x}$, for instance, Equation~\eqref{eq:ap-simplification-1} is $i\expect{J_xJ_zJ_y}$ plus Equation~\eqref{eq:ap-simplification-2} which at the same time is $i\expect{J_xJ_yJ_z}$ plus Equation~\eqref{eq:ap-simplification-3}.
+One may note that with those relations is enough to see that we have six $\expect{J_xJ_y^2J_x}$, for instance, Eq.~\eqref{eq:ap-simplification-1} is $i\expect{J_xJ_zJ_y}$ plus Eq.~\eqref{eq:ap-simplification-2}, which at the same time is $i\expect{J_xJ_yJ_z}$ plus Eq.~\eqref{eq:ap-simplification-3}.
 So each equation has at the end one $\expect{J_xJ_y^2J_x}$ plus or minus some expectation value of the product of three operators.
 
 For the three terms operators and again using the commutation relations we can further simplify this expression. Trying to get one $\expect{J_xJ_yJ_z}$ on each term, we obtain the following,
@@ -161,19 +163,19 @@ For the three terms operators and again using the commutation relations we can f
   \label{eq:ap-last-term-2} \\
   i\expect{J_yJ_xJ_z} & = \expect{J_z^2}+i\expect{J_xJ_yJ_z},
   \label{eq:ap-simplification-3} \\
-  -i\expect{J_yJ_zJ_x} & = \expect{J_y^2} - \expect{J_z} - i\expect{J_xJ_yJ_z} \\
+  -i\expect{J_yJ_zJ_x} & = \expect{J_y^2} - \expect{J_z} - i\expect{J_xJ_yJ_z}, \\
 \begin{split}
   -3i\expect{J_zJ_yJ_x} & = -3\expect{J_x^2} - 3i \expect{J_yJ_zJ_x} \\
-  & = -3\expect{J_x^2} + 3 \expect{J_y^2} - 3i\expect{J_yJ_xJ_z} \\,
+  & = -3\expect{J_x^2} + 3 \expect{J_y^2} - 3i\expect{J_yJ_xJ_z} \\
   & = -3\expect{J_x^2} + 3 \expect{J_y^2} - 3\expect{J_z^2}
    - 3i \expect{J_xJ_yJ_z}.
   \label{eq:ap-simplification-4}
 \end{split}
 \end{align}
 \end{subequations}
-Now if we sum it all, note that the all 3 operators terms simplify, and if we take into account $6\expect{J_xJ_y^2J_x}$ the resulting expression is the following,
+Now if we sum it all, note that the all three operator terms simplify, and if we take into account $6\expect{J_xJ_y^2J_x}$ the resulting expression is the following,
 \be
-   4\expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2} + 6\expect{J_xJ_y^2J_x}
+   4\expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2} + 6\expect{J_xJ_y^2J_x}.
 \ee
 
 \subsection{Calculation of $|\braopket{\dicke{N,m}}{_z}{\dicke{N,N/2}}_x|^2$}
@@ -188,7 +190,7 @@ Hello this is the appendix to write about ...
 \subsection{Husimi Q-representation and the Bloch sphere}
 \label{app:husimi-representation}
 
-To represent states with angular momentum bigger than $J=\frac{1}{2}$ is convinient to use the so-called Husimi $Q$-representation \cite{} on the Bloch-sphere.
+To graphically represent states with angular momentum bigger than $J=\frac{1}{2}$, it is convenient to use the so-called Husimi $Q$-representation on the Bloch-sphere.
 In fact it is straightforward to represent in a 3D-sphere all the possible states as it is done for qubits.
 
 The Husimi $Q$-representation must be normalized to 1.
@@ -198,7 +200,7 @@ Hence,
   \int Q_\rho(\Omega)\,\text{d}\Omega = 1,
 \ee
 where $\Omega$ represents the solid angle of the sphere, i.e., the function is a function of $\varphi$ and $\theta$, the azimuth angle and the polar angle respectivelly, and $\text{d}\Omega= \sin(\theta)\text{d}\varphi\text{d}\theta$.
-We will use it to describe states belonging to the symmetric subspace or for states belonging to the maximum angular momentum.
+We will use it to describe states belonging to the symmetric subspace or for states belonging to the maximum angular momentum subspace.
 Therefore, the $Q_\rho(\Omega)$ function will be proportional to the fidelities of totally polarized states that point to different directions represented by $\Omega$.
 
 In the case of many qubits such totally polarized states can be written as
@@ -210,27 +212,28 @@ An alternative way to obtain such totally polarized states $\ket{\Omega}$ is to 
 Hence,
 \be
   \begin{split}
-    \ket{\Omega} & = e^{-i\varphi J_z} e^{-i\theta J_y} \ket{11\dots 1}\\
-    J_{\Omega}\ket{\Omega} & = \frac{N}{2} \ket{\Omega}
+    \ket{\Omega} & = e^{-i\varphi J_z} e^{-i\theta J_y} \ket{11\dots 1},\\
+    J_{\Omega}\ket{\Omega} & = \frac{N}{2} \ket{\Omega}.
   \end{split}
 \ee
-We write the quasi-probability $Q(\Omega)$ proportional to the fidelity with respect to $\ket{\Omega}$ of the state
+We write the quasi-probability $Q(\Omega)$ proportional to the fidelity with respect to $\ket{\Omega}$ of the state as
 \be
   Q_\rho(\Omega)\propto \tr(\rho \ketbra{\Omega}{\Omega}).
 \ee
-The normalization constant comes from Eq.~\eqref{eq:ap2-husimi-integral-to-one}, where a prove state such as the totally mixed state on the symmetric subspace can be used for which $\tr(\frac{\mtxid}{N+1} \ketbra{\Omega}{\Omega})=\frac{1}{N+1}$.
-Integrating the Eq.~\eqref{eq:ap2-husimi-integral-to-one} we obtain the proportionality factor and it is shown in the following equation
+The normalization constant comes from Eq.~\eqref{eq:ap2-husimi-integral-to-one}.
+To obtain is the totally mixed state in the symmetric subspace can be used for which $\tr(\frac{\mtxid}{N+1} \ketbra{\Omega}{\Omega})=\frac{1}{N+1}$.
+Integrating Eq.~\eqref{eq:ap2-husimi-integral-to-one} we obtain the proportionality factor shown in the following equation
 \be
   Q_\rho(\Omega)=\frac{1}{4\pi(N+1)}\tr(\rho \ketbra{\Omega}{\Omega}),
 \ee
 which must be true for $N$ qubits in the symmetric subspace.
-Similar definitions could be acompleased for different subspaces or even for different spin number of the constituents.
+Similar definitions could be accomplished for different subspaces or even for different spin number of the constituents.
 
 \subsection{Legendre transform}
 \label{app:legendre-transform}
 
-The Legendre transform of a convex function, say $f:x \rightarrow f(x)$, is defined as the maximum distance between the function the line $rx$ and $f(x)$ at same $x$.
-In can be written as follows,
+The Legendre transform of a convex function $f(x)$, is defined as the maximum distance between the line $y=rx$ and the function $f(x)$ for any $x$.
+It can be written as follows,
 \be
   \hat{f}(r):=\max_{x}\{rx-f(x)\},
 \ee
@@ -252,9 +255,9 @@ One fully recovers the
 
 Let us develop the example shown in the Figure~\ref{fig:lt-geometric-legendre}, where the function is $f(x)=x^2-1.9x-0.3$.
 In this case the problem is well defined on the complete real axis.
-Now, one has to find the maximum of $g(r,x)=rx-f(x)$ for all $\forall r$.
-This maximum is easily obtained in this particular case with usual techniques.
-On has to solve for x the following equation $\partial_x g(r,x) = 0$. Thus, the maximum is at $x_{\text{opt}} = \frac{r+1.9}{2}$ and hence, the Legendre transform is the following,
+Now, one has to find the maximum of $g(r,x)=rx-f(x)$ for all $r$.
+The maximum is easily obtained in this particular case with usual techniques.
+On has to solve for x the following equation $\partial_x g(r,x) = 0$. Thus, the maximum is at $x_{\text{opt}} = \frac{r+1.9}{2}$ and hence, the Legendre transform is
 \be
   \hat{f}(r) = \frac{r^2}{4}+0.95r+1.2025.
 \ee
@@ -266,7 +269,9 @@ If one applies again the transformation the resulting function is again the orig
 \subsection{Calculation of the QFI matrix elements}
 \label{app:matrix-elements-of-QFI}
 
-Starting first for states insensitive to the homogeneous fields and later on for states sensitive to it, we must compute the matrix elements of the quantum Fisher information defined for the generators $H_0$ and $H_1$.
+We start with states insensitive to the homogeneous fields.
+Later, we will discuss states sensitive to it.
+Next, we must compute the matrix elements of the quantum Fisher information defined for the generators $H_0$ and $H_1$.
 We use the functional defined in Eq.~\eqref{eq:gm-FAB} to compute the matrix elements.
 We also use thermal states with respect to the spatial degrees of freedom Eq.~\eqref{eq:gm-eigendecomposition-of-state}, since it is one of the most common situations in the experiments.
 
@@ -309,7 +314,7 @@ Using the definition of the Dirac delta inside one of the integrals we have that
 where we used the Eq.~\eqref{eq:gm-simplify-h1-matrix-els} for the simplification of the matrix elements of $H_1$, where in the third line we used on of the Dirac deltas to eliminate $\bs{y}$ from the equation, and where in the fourth line we toke the $2$ factor in front, the sum over $\lambda$ and $\nu$ and the matrix elements of $j_z^{(n)}$ and $j_z^{(m)}$ and we reconstructed $\qfif{\rho_{\text{s}},j_z^{(n)},j_z^{(m)}}$ using its definition Eq.~\eqref{eq:gm-FAB}.
 We finally reordered all the terms in order to group what it has to be integrated together between "$\int$" and "$\text{d}^N\bs{x}$", which in this case represents a two-point correlation function of $x_n$ and $x_m$ over the PDF $\prob(\bs{x})$.
 
-We now similarly do for $\mathbfcal{F}_{01}$ and $\mathbfcal{F}_{00}$.
+We carry out a similar calculation for $\mathbfcal{F}_{01}$ and $\mathbfcal{F}_{00}$.
 We use again a state of the form Eq.~\eqref{eq:gm-eigendecomposition-of-state} to compute these matrix elements of the QFI.
 We also use the simplified expression for the matrix elements of $H_0$ for this case Eq.~\eqref{eq:gm-simplify-h0-matrix-els}.
 For $\mathbfcal{F}_{01}$, the computation looks like
@@ -354,7 +359,8 @@ Which follows from the definition of Eq.~\eqref{eq:gm-FAB}
 \end{split}
 \label{eq:app-computing-f01}
 \ee
-where we used the same arguments as when computing Eq.~\eqref{eq:app-computing-f11}, and we use the linearity on the second and third arguments of the functional Eq.~\eqref{eq:gm-FAB} in the last line to remove the one of the summation indexes.
+where we used the same arguments as when computing Eq.~\eqref{eq:app-computing-f11}.
+We also use the linearity on the second and third arguments of the functional Eq.~\eqref{eq:gm-FAB} in the last line to remove the one of the summation indexes.
 Note that the main difference with respect to $\mathbfcal{F}_{11}$ is that in this case the integral represents a single-point average instead of a two-point correlation function.
 Finally, for the matrix element $\mathbfcal{F}_{00}$ we have that
 \be
