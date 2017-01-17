@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="68.726067mm"
-   height="24.805561mm"
-   viewBox="0 0 243.51757 87.893724"
+   width="65.625183mm"
+   height="18.784832mm"
+   viewBox="0 0 232.53019 66.560431"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -448,9 +448,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.8885198"
-     inkscape:cx="94.987527"
-     inkscape:cy="38.023638"
+     inkscape:zoom="3.2125857"
+     inkscape:cx="73.781876"
+     inkscape:cy="23.850418"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -462,7 +462,7 @@
      fit-margin-top="0"
      fit-margin-left="7"
      fit-margin-right="7"
-     fit-margin-bottom="4"
+     fit-margin-bottom="0"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -474,8 +474,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid9423"
-       originx="24.018103"
-       originy="12.546656" />
+       originx="24.018112"
+       originy="-1.6265647" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -493,13 +493,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-118.72432,-145.49204)">
-    <path
-       style="opacity:1;fill:#d8d8d8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 157.4387,145.49204 c 65.00001,10 115.00002,10 180.00003,0 l 0,60 c -65.00001,-10 -115.00002,-10 -180.00003,0 z"
-       id="rect8892"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
+     transform="translate(-118.72431,-152.65211)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.08100021;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker6109)"
        d="m 152.64053,210.05064 0,-20.0311"

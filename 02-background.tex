@@ -651,16 +651,18 @@ We will also briefly discuss the question whether inter-particle entanglement is
 Let us first examine the upper bounds on the QFI for general quantum states and for separable states.
 Due to the Cram\'er-Rao bound Eq.~\eqref{eq:bg-quantum-cr-bound}, these are also bounds for the sensitivity of the phase estimation.
 Entanglement has been recognized as an advantage for several metrological tasks (see, e.g., Refs. \cite{Sorensen2001, Boixo2008}).
-For a general relationship for linear interferometers, we ca take advantage of the properties of the quantum Fisher information discussed above.
+For a general relationship for linear interferometers, we can take advantage of the properties of the quantum Fisher information discussed before.
 Since for pure states the quantum Fisher information equals four times the variance, for pure product states we can have at most
 \be
-  \qfif{\rho,J_z} = 4\varian{J_z} = 4 \sum_{n=1}^N \varian{j_z^{(n)}} \leqslant N.
+  \qfif{\rho,J_z} = 4\varian{J_z} = 4 \sum_{n=1}^N \varian{j_z^{(n)}} \leqslant 4Nj^2,
 \ee
+where $j$ is the spin of the particles.
+Note that for spin-$\frac{1}{2}$ we recover the usual threshold one can find for instance in Ref.~\cite{Giovannetti2006}.
 For the second equality, we used the fact that for a product state the variance of a collective observable is the sum of the single-particle variances.
 Due to the convexity of the QFI, this upper bound is still valid for all separable states of the form Eq.~\eqref{eq:bg-separable-state-definition} and we obtain \cite{Pezze2009}
 \be
   \label{eq:bg-shot-noise-limit}
-  \qfif{\rho, J_z} \leqslant N,
+  \qfif{\rho, J_z} \leqslant 4Nj^2,
 \ee
 a bound for not entangled states.
 All states violating Eq.~\eqref{eq:bg-shot-noise-limit} are entangled.
@@ -670,7 +672,7 @@ The maximum achievable precision for general states, called the Heisenberg limit
 Therefore, similarly we have
 \be
   \label{eq:bg-heisenberg-limit}
-  \qfif{\rho, J_z} = 4 \varian{J_z}\leqslant N^2,
+  \qfif{\rho, J_z} = 4 \varian{J_z}\leqslant 4N^2j^2,
 \ee
 which is a valid bound still for mixed states.
 Note that such a bound has the Heisenberg scaling Eq.~\eqref{eq:bg-heisenberg-scaling}.
