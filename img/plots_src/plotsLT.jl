@@ -180,7 +180,7 @@ function plotLT_legendre()
   xlabel(L"$x$", fontsize=L_FSIZE)
   ylabel(L"$y$", fontsize=L_FSIZE)
 
-  savefig("pdf/LT_legendre.pdf", bbox_inches="tight")
+  savefig("pdf/AP_legendre.pdf", bbox_inches="tight")
 end
 
 function plotLT_edgeDiff()

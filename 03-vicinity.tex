@@ -52,7 +52,7 @@ On the other hand, we can use the error propagation formula Eq.~\eqref{eq:bg-err
 As one can see in Figure~\ref{fig:vd-secuence-evo}, a pure Dicke state of 16 qubits, initially an eigenstate of the $J_x$ operator, is rotated around the $z$-axis.
 \begin{figure}[htp]
   \centering
-  \includegraphics[scale=.65]{img/plots/VD_evolution_of_dicke.pdf}
+  \includegraphics[scale=.65]{img/VD_evolution_of_dicke.pdf}
   \caption[Sequence of Dicke state evolution]{Sequence of the evolution of an unpolarized Dicke state of 16 qubits for $\theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Husimi quasi-probabilistic distribution of the state, and below PDF of the $J_x$ positive-operator valued measure (POVM) for each step of the sequence}
   \label{fig:vd-secuence-evo}
 \end{figure}
@@ -209,8 +209,8 @@ For that, we considered the range $\theta \in [-\pi,\pi]$ and we have computed t
 We can conclude saying that our formula Eq.~\eqref{eq:vd-precision-as-theta} reproduces exactly the evolution of the error propagation formula, Eq.~\eqref{eq:vd-error-propagation}.
 \begin{figure}[htp]
   \centering
-  \igwithlabel{(a)}{scale=.65}{img/plots/VD_simulation.pdf}
-  \igwithlabel{(b)}{scale=.65}{img/plots/VD_parity_simulation.pdf}
+  \igwithlabel{(a)}{scale=.65}{img/VD_simulation.pdf}
+  \igwithlabel{(b)}{scale=.65}{img/VD_parity_simulation.pdf}
   \caption[(a) Evolution of $\varinv{\theta}/N$. (b) Evolution of the expectation values]{(a) Evolution of the precision $\varinv{\theta}/N$ for 6 qubits based on the simulation of the system $\ket{\text{GS}}$ and its expectation values.
   The agreement with the Eq.~\eqref{eq:vd-precision-as-theta} is shown in the inset plot where the square of the difference between two approaches are plotted, the analytically obtained result and the simulation.
   The difference is more or less two orders of magnitude below the actual value for the relevant points, which is mainly because of computing the derivative near the points on which the value of the expectation value $\expect{J_x^2}$ and the value of the $\varian{J_x^2}$ are both close to zero.
@@ -281,8 +281,8 @@ Our bound is close to the QFI when the state is well polarized.
 It also coincides with the bound in the $\lambda\rightarrow 0^{+}$ limit, when the ground state is close to the unpolarized Dicke state.
 \begin{figure}[htp]
   \centering
-  \igwithlabel{(a)}{scale=.65}{img/plots/VD_against_spsq.pdf}
-  \igwithlabel{(b)}{scale=.65}{img/plots/VD_against_therm.pdf}
+  \igwithlabel{(a)}{scale=.65}{img/VD_against_spsq.pdf}
+  \igwithlabel{(b)}{scale=.65}{img/VD_against_therm.pdf}
   \caption[Bound against known QFIs for different states.]{Comparison between our formula for the precision and the QFI for different states. (a) Comparison for ground states of $H_\lambda$. (b) Comparison with gaussian mixture of Dicke states.}
   \label{fig:vd-comparing-the-bounds}
 \end{figure}
@@ -428,7 +428,7 @@ Assuming an error of a standard deviation, Eq.~\eqref{eq:vd-precision-for-experi
 Next we plot the value for the precision substituting directly the experimental data into Eq.~\eqref{eq:vd-precision-as-theta}, see Figure~\ref{fig:vd-precision-theta-experiment}.
 \begin{figure}[htp]
   \centering
-  \includegraphics[scale=.65]{img/plots/VD_precision_theta.pdf}
+  \includegraphics[scale=.65]{img/VD_precision_theta.pdf}
   \caption[Evolution of the precision for $\theta$.]{(solid) The precision as a function of the parameter $\theta$ given by Eq.~\eqref{eq:vd-precision-as-theta} varies through the evolution.
   Note that for the initial moment the precision is zero.
   (dashed) We highlight where the precision reaches its maximum at $\theta \approx 0.0057$.
@@ -462,8 +462,8 @@ So in this case we use $\beta=3$ assuming that the distribution function has a G
 
 \begin{figure}[htp]
   \centering
-  \igwithlabel{(a)}{scale=.65}{img/plots/VD_exper_contour.pdf}
-  \igwithlabel{(b)}{scale=.65}{img/plots/VD_exper_slice.pdf}
+  \igwithlabel{(a)}{scale=.65}{img/VD_exper_contour.pdf}
+  \igwithlabel{(b)}{scale=.65}{img/VD_exper_slice.pdf}
   \caption[(a) Precision bound as a function of $\expect{J_y^2}$ and $\expect{J_x^2}$. (b) Precision bound for constant $\expect{J_y^2}$.]{  (a) Precision bound as a function of $\expect{J_y^2}$ and $\expect{J_x^2}$.
   The expectation value $\expect{J_y^2}$ is normalized with $J_{\max}$ or equivalently with $\mathcal{J}_{N/2}$.
   (solid) Different boundaries for metrologically useful entanglement depths are shown with solid lines.

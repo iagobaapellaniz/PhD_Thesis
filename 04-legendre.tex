@@ -269,8 +269,8 @@ Moreover, the bound is zero for $F_{\ghz}\leqslant 1/2$.
 This is consistent with the fact that for the product states $\rho=\ket{111\dots11}$ or $\rho=\ket{000\dots00}$ we have $F_{\ghz}=1/2$, while $\mathcal{F}_{\text{Q}}[\rho,J_z]=0$.
 \begin{figure}[htp]
   \centering
-  \igwithlabel{(a)}{scale=.65}{img/plots/LT_fidGHZ.pdf}
-  \igwithlabel{(b)}{scale=.65}{img/plots/LT_fidDicke.pdf}
+  \igwithlabel{(a)}{scale=.65}{img/LT_fidGHZ.pdf}
+  \igwithlabel{(b)}{scale=.65}{img/LT_fidDicke.pdf}
   \caption[Lower bound for fidelities. (a) $F_{\text{GHZ}}$. (b) $F_{\text{Dicke}}$.]{(a) Analytical solution of the bound $\bound{\mathcal{F}}$ for different values of the fidelity with respect to the GHZ state.
   (b) Numerical results for the minimum quantum Fisher information as a function of the fidelity with respect of unpolarized Dicke states perpendicular to the magnetic field, $|\text{D}_N^0\rangle$.
   (blue-line) For systems with 4 particles and (red-dashed) for system with 8 particles. One may note that when the fidelity is at its maximum the bound approaches to 0.5 as it is the quantum Fisher information for large particle number.}
@@ -384,7 +384,7 @@ Finally, the completely mixed state rests on the line W.
 It cannot be used for metrology, hence $\qfif{\rho,J_z}=0$.
 \begin{figure}[htp]
   \centering
-  \includegraphics[scale=.65]{img/plots/LT_spsq2d_4.pdf}
+  \includegraphics[scale=.65]{img/LT_spsq2d_4.pdf}
   \caption[Solution for 4 particle on the paramenter region for spin-squeezed states.]{We show as a function of the expectation value, $\expect{J_y}$, and the variance in the perpendicular direction, $\varian{J_x}$, the minimum sensitivity for a 4-qubit system.
   (hatched) The physically forbidden region is indicated. (M,T,S,D) Those points indicate where the mixed state (M), the state totally polarized (T), the singlet state (S) and the unpolarized Dicke state (D) would be located. (W) Any of the states from the completely mixed state of the symmetric subspace to the singlet state is in this line. For instance, one can  find the completely mixed state of the whole Hilbert space sitting in that line. (dashed) Shot-noise threshold. Below this line non-classical sensitivities can be achieved.}
   \label{fig:lt-spsq2d-4}
@@ -399,7 +399,7 @@ For points at the boundary, the difference is somewhat larger, but still small, 
 We compute the difference between the Eq~\eqref{eq:bg-pezze-bound} and our bound for different number of particles and for states at the boundary from the state totally polarized T to the unpolarized Dicke state at D, see Figure~\ref{fig:lt-edge-diff}.
 \begin{figure}[htp]
   \centering
-  \includegraphics[scale=.65]{img/plots/LT_edge_diff.pdf}
+  \includegraphics[scale=.65]{img/LT_edge_diff.pdf}
   \caption[Boundary difference of optimal bound versus Pezz\'e-Smerzi bound.]{Difference between the bound of Pezze-Smerzi and the optimal bound for the quantum Fisher information normalized by the value of the optimal bound itself for the bosonic ground states of $H=J_x^2-\lambda J_y$ for $\forall \lambda \in [0,\infty)$.
   From dark to lighter colors (line, point, dash-point, dashed, pointed, line), results for different particle numbers, $N=4,6,10,20,1000$ respectively.
   One can see that for large particle numbers the difference is largest when the polarization is around two thirds of the maximal polarization and that this difference is less than $2.6\%$.}
@@ -413,7 +413,7 @@ Hence for measurement values corresponding to points close to M, our method impr
 It is important from the point of view of applying our method to spin-squeezing experiments that the bound Eq.~\eqref{eq:bg-pezze-bound} can be substantially improved for $\varian{J_x}<1$, if we assume bosonic symmetry for the system, or we measure an additional quantity, such as $\expect{J_x^4}$ as shown in Figure~\ref{fig:lt-adding-jx4-to-the-bound} [TD: Ask Geza for data].
 \begin{figure}[htp]
   \centering
-  % \includegraphics[scale=.65]{img/plots/LT_edge_diff.pdf}
+  % \includegraphics[scale=.65]{img/LT_edge_diff.pdf}
   % \caption[Boundary difference of optimal bound versus Pezz\'e-Smerzi bound.]{Difference between the bound of Pezze-Smerzi and the optimal bound for the quantum Fisher information normalized by the value of the optimal bound itself for the bosonic ground states of $H=J_x^2-\lambda J_y$ for $\forall \lambda \in [0,\infty)$.
   % From dark to lighter colors (line, point, dash-point, dashed, pointed, line), results for different particle numbers, $N=4,6,10,20,1000$ respectively.
   % One can see that for large particle numbers the difference is largest when the polarization is around two thirds of the maximal polarization and that this difference is less than $2.6\%$.}
@@ -436,7 +436,7 @@ Let us demonstrate how our method works in an example for small systems.
 Figure~\ref{fig:lt-symmetric-dicke-6-bound}
 \begin{figure}[htp]
   \centering
-  \includegraphics[scale=.65]{img/plots/LT_dicke_edge.pdf}
+  \includegraphics[scale=.65]{img/LT_dicke_edge.pdf}
   \caption[6-particles optimal bound on BEC symmetry for the QFI when $\{\expect{J_x^2},\expect{J_y^2},\expect{J_z^2}\}$ are measured]{Optimal lower bound on the quantum Fisher Information for symmetric states with $\expect{J_y^2}=\expect{J_z^2}$. Even if it is metrologicaly useful for a wide range of $\expect{J_x^2}$, the numerics shows us a tiny region where the metrological gain is surpassing the shot-noise limit.}
   \label{fig:lt-symmetric-dicke-6-bound}
 \end{figure}
@@ -586,8 +586,8 @@ Based on these ideas, we compute the bound $\bound{\textnormal{sym}}$ for the qu
 The results can be seen in Figure~\ref{fig:lt-bounds-on-symmetric-spin-squeezing}.a.
 \begin{figure}[htp]
   \centering
-  \igwithlabel{(a)}{scale=.65}{img/plots/LT_spsq_scaling_1.pdf}
-  \igwithlabel{(b)}{scale=.65}{img/plots/LT_spsq_scaling_2.pdf}
+  \igwithlabel{(a)}{scale=.65}{img/LT_spsq_scaling_1.pdf}
+  \igwithlabel{(b)}{scale=.65}{img/LT_spsq_scaling_2.pdf}
   \caption[Asymptotic behavior of the bound for increasing particle number for spin-squeezing experimental data]{[TD: Change vertical label to $\bound{\textnormal{sym}}$] (Color line) Lower bound on the QFI based on $\expect{J_y}$ and $\varian{J_x}$ obtained for the symmetric subspace for different particle numbers $N'$.}
   \label{fig:lt-bounds-on-symmetric-spin-squeezing}
 \end{figure}
@@ -718,7 +718,7 @@ Based on Eq.~\eqref{eq:lt-asymptotic-limit-bound-dicke-symmetric} and assuming E
 In Figure~\ref{fig:assimpthotic-approach-to-the-bound-from-scaled-dicke},
 \begin{figure}[htp]
   \centering
-  \includegraphics[scale=.65]{img/plots/LT_dicke_7900_asymp.pdf}
+  \includegraphics[scale=.65]{img/LT_dicke_7900_asymp.pdf}
   \caption[Asymptotic behaviour of the bound for increasing size systems for Dicke like experimental data]{Secuence of the evolution of an unpolarized Dicke state of 16 qubits for $\theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Hirusi distribution of the state, and below PDF of the $J_x$ POVM for each step of the secuence}
   \label{fig:assimpthotic-approach-to-the-bound-from-scaled-dicke}
 \end{figure}
