@@ -3,7 +3,6 @@
 *.toc
 *.fdb_latexmk
 *.log
-*.synctex.gz
 *.blend1
 *.blend2
 *.fls
@@ -11,14 +10,11 @@
 *.blg
 *.xml
 *.bcf
-ppr/*
 .latex.json
 *.lof
 *.lot
-*equations.pdf
-*equations.tex
-*generate.sh
 *.bib.bak
 *.bib.sav
-main.pdf
-*temp.pdf
+*tmp.*
+ppr/*
+tmp/*
