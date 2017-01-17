@@ -7,7 +7,7 @@ jobname=equation_tmp
 # String for the equation. Change it as you want
 
 # Patch to solve relative path problems
-path2this=./img/svg_src/tex
+path2this=./img/svg_src/sa_tex
 
 # Check for file equation_tmp.tex. This is where one has to edit the standalone
 # equations to avoid the git modified complains

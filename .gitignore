@@ -17,4 +17,5 @@
 *.bib.sav
 *tmp.*
 ppr/*
-tmp/*
+*tmp/*
+aux/*
