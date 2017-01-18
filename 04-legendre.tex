@@ -175,7 +175,7 @@ There are three possible cases to consider:
   since any permutation operator $\Pi_j$ can be constructed as $\Pi_j=\prod_i S_{k_il_i}$.
   Equation~\eqref{eq:lt-permutating-ground-state} means that the state $\ket{\Psi}$ is symmetric.
   \item All $c_{kl}=-1$.
-  This means that the state is antisymmetris, however this state exists only for $N=2$ qubits.
+  This means that the state is anti-symmetric, however this state exists only for $N=2$ qubits.
   \item Not all $c_{kl}$ are identical to each other.
   In this case, there must be $k_+,l_+,k_-,k_-$ such that
   \be
@@ -205,7 +205,13 @@ Hence, if $N>2$ then only i) is possible and $\ket{\Psi}$ must be symmetric.
 \label{sec:lt-bounds-fidelity}
 
 Let us consider the case when $W$ is a projector onto a pure quantum state.
-First, we consider GHZ states \citep, hence $W$ is the projector $\ketbra{\ghz}{\ghz}$ and $\expect{W}=F_{\ghz}$, the fidelity with respect to the GHZ state.
+First, we consider GHZ states.
+Hence $W$ is the projector $\ketbra{\ghz}{\ghz}$, where
+\be
+  \ket{\ghz} = \tfrac{1}{\sqrt{2}}(\ket{0\cdots0}+\ket{1\cdots1})
+  \label{eq:lt-ghz-state}
+\ee
+for spin-$\frac{1}{2}$ particles, and $\expect{W}=F_{\ghz}$ is the fidelity with respect to the GHZ state.
 Based on knowing $F_{\ghz}$, we would like to estimate $\qfif{\rho,J_z}$\footnote{
 Not a tight lower bounds on the quantum Fisher information based on the fidelity have been presented in \cite{}.}.
 
