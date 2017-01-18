@@ -41,10 +41,10 @@ Here are the main images used by the LaTeX code.
 
 The source code to generate the images are located in `plot_src/`, `svg_src/`, `blend_src/`, and so on. Each of them containing the source for creating the different images.
 
-Inside `svg_src/` there is a special folder: `sa_tex/`. This folder contains a script `generate.sh` that works with `latexmk` to build a stand alone equation to import it to the different SVG images. Run that script, to create the `equation_tmp.tex` file you can edit later for producing the equations.
+Inside `svg_src/` there is a special folder: `tex_sae/`. This folder contains a script `generate.sh` that works with `latexmk` to build a stand alone equation to import it to the different SVG images. Run that script, to create the `equation_tmp.tex` file you can edit later for producing the equations.
 Run the script from the project folder as
 ```shell
-$ ./img/svg_src/sa_tex/generate.sh
+$ ./img/svg_src/tex_sae/generate.sh
 ```
 
 ## Styling snipets `snp/`
