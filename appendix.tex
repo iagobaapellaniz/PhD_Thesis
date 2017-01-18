@@ -28,7 +28,6 @@ For qudits, particles whit $d$ levels, one can map directly the $m=-j,-j+1,\dots
 
 A usual approach is using the tensor products of the single party basis states given as
 \be
-  \label{eq:app-eigenbasis-tensor-product}
   \begin{split}
     & \ket{-j,-j,\dots,-j,-j},\\
     & \ket{-j,-j,\dots,-j,-j+1},\\
@@ -38,6 +37,7 @@ A usual approach is using the tensor products of the single party basis states g
     & \vdots \\
     & \ket{+j,+j,\dots,+j,+j},
   \end{split}
+  \label{eq:app-eigenbasis-tensor-product}
 \ee
 as a basis for the whole Hilbert space.
 Here we have used the notation $\ket{m_1,m_2,\dots,m_{N-1},m_N}\equiv \ket{m_1}\otimes\ket{m_2}\dots\otimes\ket{m_N}$.
@@ -50,8 +50,8 @@ For that, we have the ladder $J_{\pm} := J_x \pm i J_y$ operators which increase
 Therefore, if we start from $\ket{-j,-j,\dots,-j}$, which is an eigenstate of $\bs{J}^2$ with the maximal eigenvalue $Nj(Nj+1)$, and we apply $J_+$ subsequently we obtain all the states belonging to that subspace on which $\bs{J}^2$ is maximal.
 We use the following notation for the maximal eigenvalue of the $\bs{J}^2$ operator
 \be
-  \label{eq:app-maximum-total-angular-momentum}
   \mathcal{J}_{Nj} \equiv Nj(Nj+1),
+  \label{eq:app-maximum-total-angular-momentum}
 \ee
 since it appears many times throughout the thesis.
 Then, we use orthogonal states and we keep doing this until we have all the subspaces characterized.
@@ -274,7 +274,7 @@ Later, we will discuss states sensitive to it.
 Next, we must compute the matrix elements of the quantum Fisher information defined for the generators $H_0$ and $H_1$.
 We use the functional defined in Eq.~\eqref{eq:gm-FAB} to compute the matrix elements.
 We also use thermal states with respect to the spatial degrees of freedom Eq.~\eqref{eq:gm-eigendecomposition-of-state}, since it is one of the most common situations in the experiments.
-Here we use the eigen-decomposition of the state appearing in Eq.~\eqref{eq:gm-eigendecomposition-of-state}. 
+Here we use the eigen-decomposition of the state appearing in Eq.~\eqref{eq:gm-eigendecomposition-of-state}.
 
 First of all, we compute the $\mathbfcal{F}_{11}\equiv\qfif{\rho, H_1, H_1}\equiv\qfif{\rho,H_1}$, since it is valid for states that are insensitive to the homogeneous field as well as for states that are sensitive to it.
 We have the following for the QFI
