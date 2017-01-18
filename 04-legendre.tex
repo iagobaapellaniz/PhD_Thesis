@@ -7,35 +7,35 @@
 
 and all means of discovering them are equally admissible.}
 
-\lettrine[lines=2, findent=3pt,nindent=0pt]{T}{ypically}, one has no access to the density matrix of the system is used for metrology or for other quantum information processing task.
-Moreover, for systems in which the particle number is very large, which is the case when one wants to do metrology with quantum states, the details of the density matrix cannot be known by practical reasons.
+\lettrine[lines=2, findent=3pt,nindent=0pt]{T}{ypically}, one has no access to the density matrix of the system which is used for metrology or for some other quantum information processing task.
+Moreover, for systems in which the particle number is very large, which is the case when one wants to do metrology with quantum states, the details of the density matrix cannot be known due to practical reasons.
 Since the quantum Fisher information is based on the complete knowledge of the density matrix, methods to avoid the complete tomography must be developed as we have shown a practical case in the previous chapter.
 In this chapter, we obtain a general procedure to get an optimal bound for the quantum Fisher information based on as many expectation values of the initial state as one is ready to measure.
 Two main features are worth to mention again.
 First, in general this method gives us an optimal tight bound.
 Second, the bound is based on the expectation values of the initial state only, so it is not necessary to perform an evolution of the state.
-This is in contrast to other approaches one can find in the literature, our needs a significantly smaller experimental effort.
+This is in contrast to other approaches one can find in the literature, ours needs a significantly smaller experimental effort.
 
-From Eq.~\eqref{eq:bg-pezze-bound}, a lower bound of the quantum Fisher information based on expectation values of the initial state is
+From Eq.~\eqref{eq:bg-pezze-bound}, a lower bound on the quantum Fisher information based on expectation values of the initial state is
 \be
   \qfif{\rho,J_z} \geqslant \frac{\expect{J_x}^2}{\varian{J_y}}.
 \ee
 where the state is polarized along the $x$-axis \cite{Pezze2009}.
-In the previous chapter we have also shown one of these bound specifically designed for unpolarized Dicke states.
+In the previous chapter we have also shown one of these bounds specifically designed for unpolarized Dicke states \eqref{}.
 
-The metrological setup is described in Section~\ref{sec:bg-quantum-magnetometry} and consists in estimating the homogeneous magnetic field strength, in this case, which points towards the $z$-axis.
-Therefore, we will base our calculations in the quantum Fisher information $\qfif{\rho, J_z}$, where it is defined in Eqs.~\eqref{eq:eq:bg-qfi-definition-eigen-decomposition} and \eqref{eq:bg-qfi-definition-convex-roof}, see Section~\ref{sec:bg-qfi} for more information about the properties of the QFI.
+The setup is described in Section~\ref{sec:bg-quantum-magnetometry} and consists of in estimating the homogeneous magnetic field strength, in this case, which points towards the $z$-axis.
+Therefore, we will base our calculations on the quantum Fisher information $\qfif{\rho, J_z}$, defined in Eqs.~\eqref{eq:bg-qfi-definition-eigen-decomposition} and \eqref{eq:bg-qfi-definition-convex-roof}, see Section~\ref{sec:bg-qfi} for more information about the properties of the QFI.
 
-\subsection{Lower bound of a convex function given some arbitrary expectation values}
+\subsection{Lower bound on a convex function given some arbitrary expectation values}
 
 Our problem could be solved with Lagrange multipliers or Legendre transforms.
 We follow the method based on Legendre transforms, since the problem of getting a lower bound of a convex function on the states having already some expectation values of some arbitrary observables has already been studied by O. G\"uhne {\it et al.} and J. Eisert {\it et al.} in Refs.~\cite{Guehne2007, Eisert2007} respectively, mainly from the perspective of entanglement measures.
-The illustrated techniques are based on the well known Legendre transform for differentiable functions, see Appedix~\ref{app:legendre-transform} for more details.
-We first review in this section the state-of-the-art solution for this problem.
+The illustrated techniques are based on the well known Legendre transform for differentiable functions, see Appendix~\ref{app:legendre-transform} for more details.
+We first review in this section the state-of-the-art solution to this problem.
 And later on, we extend it to the quantum Fisher information.
 For simplicity in the next section, Section~\ref{sec:lt-transform-for-single-observable}, we assume that a single expectation value is given.
 An extension to the case in which more expectation values are given will follow in the Section~\ref{sec:lt-transform-for-m-observables}.
-Finally, we will summarize it with an explicit formula which will be used to compute the bounds.
+Finally, we will summarize our results with an explicit formula which will be used to compute the bounds in the most general case.
 
 \subsubsection{Estimation of a general convex function based on the expectation value of an arbitrary observable}
 \label{sec:lt-transform-for-single-observable}
@@ -45,7 +45,7 @@ When a convex function $g(\rho)$ is given together with an expectation value of 
   \label{eq:lt-lower-bound-single-parameter}
   \begin{split}
     g(\rho)\geqslant\bound{g}(w):=\,&\sup_r \{ rw - \hat{g}(rW)\}\\
-    =\,& \{\inf_{\rho}g(\rho)\,|\,w = \tr(\rho W)\}
+    =\,& \{\inf_{\rho}g(\rho)\,|\,w = \tr(\rho W)\},
   \end{split}
 \ee
 where $\hat{g}(rW)$ is the Legendre transform of $g(\rho)$ and the second equality expresses the tightness of the bound.
@@ -82,7 +82,7 @@ Note that in this context, the QFI is the convex roof of four times the variance
 \label{sec:lt-transform-for-m-observables}
 
 For some cases, it is interesting to characterize the quantum state not only with a single measurement but with several.
-For instance, we could want to use, as it is done with the spin-squeezed states the absolute polarization and the variance of one of the orthogonal components of the angular momentum to detect entanglement and metrological usefulness \cite{}.
+For instance, we might want to use, as it is done with the spin-squeezed states the absolute polarization and the variance of one of the orthogonal components of the angular momentum to detect entanglement and metrological usefulness \cite{}.
 So far, we studied the case in which a single measurement is used.
 Its extension to several expectation values is indeed straight-forward.
 We can generalize Eqs.~\eqref{eq:lt-lower-bound-single-parameter} and \eqref{eq:lt-for-convex-function-single-parameter} for several observables $\{W_i\}_{i=1}^M$ as follows \cite{Guehne2007}
@@ -119,22 +119,22 @@ which, making use of $\max\{\expect{A}\}=\lambda_{\max}[A]$ for any observable, 
   \end{split}
 \ee
 where we omitted in writing $\mtxid$ for clarity and $\lambda_{\max}[A]$ stands for the maximum eigenvalue of the operator $A$.
-At the extremum, the derivative with respect to $\mu$ must be zero, hence at the optimum $\mu=\expect{J_z}_{\text{opt}}$ which represents the expectation value $J_z$ should have considering the optimal state on Eq.~\eqref{eq:lt-legendre-of-qfi}.
+At the extremum, the derivative with respect to $\mu$ must be zero, hence at the optimum $\mu=\expect{J_z}_{\text{opt}}$ which represents the expectation value of $J_z$ should have considering the optimal state in Eq.~\eqref{eq:lt-legendre-of-qfi}.
 This also means that we have to test $\mu$ values in the interval $-N/2\leqslant\mu\leqslant N/2$ only for spin-half systems.
 
 The full optimization problem to be solved consists of Eqs.~\eqref{eq:lt-lower-bound-single-parameter} and~\eqref{eq:lt-legendre-for-qfi-simplified} substituting $g(\rho)$ by $\qfif{\rho,J_z}$,
 \be
   \bound{\mathcal{F}}(w) = \sup_r\big\{rw-\sup_{\mu}\{\lambda_{\max}[rW-4(J_z-\mu)^2]\}\big\}.
 \ee
-It is crucial that the optimization over $r$ is a concave function, since the theory tells us that $\hat{\mathcal{F}}_{\text{Q}}(rW)$ is a convex function \cite{}, even when the multi-parametric case is considered.
+It is crucial that the optimization over $r$ is a concave function, since the theory tells us that $\hat{\mathcal{F}}_{\text{Q}}(rW)$ is a convex function \cite{}, even when the multi-parameter case is considered.
 Thus the optimum can be determined easily with simple methods, e.g., the gradient method, looking for the maximum in $r$.
 Based on Eq.~\eqref{eq:lt-lower-bound-single-parameter}, we can see that even if we do not find the global optimum in $r$, we obtain a valid lower bound.
-The extension of this bound to the multi-parametric case is done using the recipie given in Eq.~\eqref{eq:lt-extension-bound-multiparameter}.
+The extension of this bound to the multi-parameter case is done using the recipe given in Eq.~\eqref{eq:lt-extension-bound-multiparameter}.
 On the other hand, the function to be optimized for $\mu$ does not have a single maximum in general.
 Moreover, not finding the optimal $\mu$ leads to an overestimating of the bound.
 Thus, a large care must be taken when optimizing over $\mu$.
 
-We stress again the generality of this findings beyond linear interferometers covered on the following sections.
+We stress again the generality of these findings beyond linear interferometers covered on the following sections.
 For nonlinear interferometers \cite{}, the phase $\theta$ must be estimated assuming unitary dynamics $U=\exp{-iG\theta}$, where $G$ is not a sum of single spin operators, hence, it is different from the angular momentum components.
 
 Next, we will demonstrate the use of our approach for several experimentally relevant situations.
@@ -143,7 +143,7 @@ In the many-particle case, often symmetric operators can be used to describe acc
 \subsection{Examples}
 \label{sec:lt-examples}
 
-In this section, we show how to obtain lower bounds based of the fidelities with respect to the GHZ state and the unpolarized Dicke state as well as with different set of powers of collective angular momentum operators, e.g., the set $\{\expect{J_y}, \expect{J_x}, \expect{J_x^2}\}$.
+In this section, we show how to obtain lower bounds based on the fidelities with respect to the GHZ state and the unpolarized Dicke state as well as with different set of powers of collective angular momentum operators, e.g., the set $\{\expect{J_y}, \expect{J_x}, \expect{J_x^2}\}$.
 
 \subsubsection{Exploiting symmetries}
 \label{sec:lt-symmetries}
@@ -350,12 +350,12 @@ one finds that the squared overlap is given by
   \end{aligned}
   \right.
 \ee
-which is maximal, in the case of even $N$, when $m=N$ or $m=0$, thus the state totally polarized along $z$-direction or its inverse respectively.
+which is maximal, in the case of even $N$, when $m=N$ or $m=0$, thus the state totally polarized along $+z$-direction or $-z$-direction respectively.
 We skip the case in which $N$ is odd.
 For detailed calculations of Eq.~\eqref{eq:lt-dicke-overlap-with-tp} see Appendix~\ref{app:calculation-dicke-overlap}.
 
 Next, we will examine the behavior of our lower bound on $\qfif{\rho,J_z}$ based on the fidelity $F_{\text{Dicke}}$ for large $N$.
-In figure~\ref{} [TD: Ask Geza for the data], the calculations up to $N=500$ present a strong evidence that for fidelity values $F_{\text{Dicke}}=0.2,0.5,0.8$ the lower bound on QFI has a $\mathcal{O}(N^2)$ scaling for increasing $N$.
+In Figure~\ref{} [TD: Ask Geza for the data], the calculations up to $N=500$ present a strong evidence that for fidelity values $F_{\text{Dicke}}=0.2,0.5,0.8$ the lower bound on QFI has a $\mathcal{O}(N^2)$ scaling for increasing $N$.
 If this is correct then reaching a fidelity larger than a certain monotonously decreasing bound for large $N$ would imply Heisenberg scaling for the bound on the quantum Fisher information.
 Note that it is difficult to present a similar numerical evidence for small values of $F_{\text{Dicke}}$ since in that case the bound for QFI is nonzero only for large $N$ due to Eq.~\eqref{eq:lt-fidelity-dicke-with-tp}.
 
@@ -507,7 +507,7 @@ Finally, for the experiment of Ref.~\cite{Zhao2004} we used the fidelity estimat
   \end{center}
   \caption[Bounds on QFI for experimental data when fidelities are measured]{Fidelity values and the corresponding bound for the QFI for several experiments with Dicke states and GHZ states.
   Bounds normalized with $N$ are shown.
-  The ones surpassing the value one, they show quantum entanglement enhanced metrological usefulness.
+  The ones surpassing the value one in the fourth column show quantum entanglement enhanced metrological usefulness.
   For Dicke states the maximum is achieved at $(N+2)/2$, i.e., $3$ for the $\ket{\dicke{4}}$ case and $4$ for the $\ket{\dicke{6}}$ case.
   For the case in which GHZ states are used the limit for the normalized bound is $N$, the particle number.}
   \label{tab:lt-results-for-fidelities}
