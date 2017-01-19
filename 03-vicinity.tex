@@ -14,8 +14,7 @@ It can be written as
 \be
    \ket{\dicke{N}}_l\equiv \ket{\dicke{N,\frac{N}{2}}}_l:= \binom{N}{N/2}^{-\frac{1}{2}}
   \sum_{k\in \sigma_\text{s}}
-  \mathcal{P}_{k} \left( \ket{1}_l^{\otimes N/2} \ket{0}_l^{\otimes N/2}
-  \right),
+  \mathcal{P}_{k} ( \ket{0}_l^{\otimes N/2} \ket{1}_l^{\otimes N/2} ),
   \label{eq:vd-unpolarized-dicke}
 \ee
 where $k$ are elements of the set of all possible unique permutations of $N$ elements of 2 kinds, $\sigma_\text{s}$, see Appendix~\ref{app:angular-subspaces} for more information about the notation used in Eq.~\eqref{eq:vd-unpolarized-dicke}.
@@ -59,7 +58,10 @@ We lead to the conclusion that one only needs to measure the second moment of th
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=.65]{img/VD_evolution_of_dicke.pdf}
-  \caption[Sequence of Dicke state evolution]{Sequence of the evolution of an unpolarized Dicke state of 16 qubits for $\theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Husimi quasi-probabilistic distribution of the state, and below PDF of the $J_x$ positive-operator valued measure (POVM) for each step of the sequence}
+  \caption[Sequence of Dicke state evolution]
+  {Sequence of the evolution of an unpolarized Dicke state of 16 qubits for $\theta=\{i\pi/6\}_{i=0}^4$.
+  (sequence-above) Bloch spheres representing the Husimi quasi-probabilistic distribution $\mathcal{Q}$ of the state, see Appendix~\ref{app:husimi-representation} for details.
+  (sequence-below) PDF of the $J_x$ positive-operator valued measure (POVM) for each step of the sequence.}
   \label{fig:vd-secuence-evo}
 \end{figure}
 
@@ -192,8 +194,7 @@ From the equations above directly follows expression for the precision of $\thet
 \label{eq:vd-result-before-simp}
 \ee
 To this calculations further computations follows mainly regarding to the following expectation value $\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2}$.
-This calculus is left for the Appendix~
-ef{app:simplification-of-4th-moments}.
+This calculus is left for the Appendix~\ref{app:simplification-of-4th-moments}.
 Finally, the expression Eq.~\eqref{eq:vd-result-before-simp} can be written as
 \be
   \varian{\theta} = \frac{\varian{J_x^2}\text{t}_\theta^{-2} + \varian{J_y^2} \text{t}_\theta^2 + 4\expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2}(1+\expect{J_y^2}) + 6\expect{J_xJ_y^2J_x}}

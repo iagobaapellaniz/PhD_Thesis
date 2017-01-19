@@ -324,26 +324,27 @@ In order to maximize the overlap with the Dicke state $\ket{\dicke{N}}_{x}$, we 
 These are the symmetric Dicke states in the $z$-basis $\ket{\dicke{N,m}}_z$.
 Then, using the following identity
 \be
-  \sum_{k=0}^q \binom{n}{k}\binom{n}{q-k}(-1)^k = \lcor
+  \sum_{k=0}^q (-1)^k \binom{n}{k}\binom{n}{q-k} = \lcor
   \begin{aligned}
     &\binom{n}{q/2}(-1)^{q/2},&& \text{for even }q,\\
     &0, && \text{for odd }q.
   \end{aligned}
   \right.
+  \label{eq:lt-binomial-identity}
 \ee
 one finds that the squared overlap is given by
 \be
-  \label{eq:lt-dicke-overlap-with-tp}
   |\braopket{\dicke{N,m}}{_z}{\dicke{N}}_x|^2 = \lcor
   \begin{aligned}
     &\frac{\binom{N/2}{m/2}^2\binom{N}{N/2}}{2^N\binom{N}{m}} ,&& \text{for even }m \text{ and }N,\\
     &0, && \text{for odd }m,
   \end{aligned}
   \right.
+  \label{eq:lt-dicke-overlap}
 \ee
 which is maximal, in the case of even $N$, when $m=N$ or $m=0$, thus the state totally polarized along $+z$-direction or $-z$-direction respectively.
 We skip the case in which $N$ is odd.
-For detailed calculations of Eq.~\eqref{eq:lt-dicke-overlap-with-tp} see Appendix~\ref{app:calculation-dicke-overlap}.
+For detailed calculations of Eq.~\eqref{eq:lt-dicke-overlap} see Appendix~\ref{app:calculation-dicke-overlap}.
 
 Next, we will examine the behavior of our lower bound on $\qfif{\rho,J_z}$ based on the fidelity $F_{\text{Dicke}}$ for large $N$.
 In Figure~\ref{} [TD: Ask Geza for the data], the calculations up to $N=500$ present a strong evidence that for fidelity values $F_{\text{Dicke}}=0.2,0.5,0.8$ the lower bound on QFI has a $\mathcal{O}(N^2)$ scaling for increasing $N$.

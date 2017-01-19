@@ -4,6 +4,8 @@
 \section*{Appendices}
 \addcontentsline{toc}{section}{Appendices}
 
+%%%%%%%%%%%%%%%%
+% NEW APPENDIX
 \subsection{Discussion on angular momentum subspaces for different spins}
 \label{app:angular-subspaces}
 
@@ -64,17 +66,17 @@ And finally, the degeneracy number of the $J$ subspaces, $D=1,2,\dots,D_J$, that
 We now show the definition of some of the most used states throughout this thesis.
 For the spin-$\frac{1}{2}$ particles, i.e., qubits, several states appear.
 For instance, the symmetric states, i.e., the states that interchanging any pair of particles remain the same, are all confined into the subspace where $J=\frac{N}{2}$ is maximal.
-They can be constructed taking $n$ particles in the $\ket{-1/2}$ or $\ket{0}$ state, depending on the framework, and $N-n$ in the $\ket{+1/2}$ or $\ket{1}$ state and symmetrizing them as
+They can be constructed taking $N-n$ particles in the $\ket{-1/2}$ or $\ket{0}$ state, depending on the framework, and $n$ in the $\ket{+1/2}$ or $\ket{1}$ state and symmetrizing them as
 \be
   \label{eq:ap-symmetric-states-qubits}
-  \ket{J=N/2, M} \equiv \binom{N}{N/2+M}^{-1/2}\sum_k \mathcal{P}_k(\ket{0}^{\otimes n}\otimes\ket{1}^{\otimes{N-n}}),
+  \ket{J=N/2, M} \equiv \binom{N}{N/2+M}^{-\frac{1}{2}} \sum_k \mathcal{P}_k(\ket{0}^{\otimes N-n}\otimes\ket{1}^{\otimes{n}}),
 \ee
-where the sum is over all possible different permutations of the state denoted by $\mathcal{P}_k$ and $M=N/2-n$.
+where the sum is over all possible different permutations of the state denoted by $\mathcal{P}_k$ and $M=N/2+n$.
 Note that the Dicke states, are named after R. H. Dicke, who used them to explain the coherent superradiance effect \cite{Dicke1954}.
 If we consider two modes corresponding to the two states, then Eq.~\eqref{eq:ap-symmetric-states-qubits} is equivalent to the twin Fock state for a constant particle number.
 Therefore apart from Eq.~\eqref{eq:ap-symmetric-states-qubits}, we use the following notation for these states
 \be
-  \ket{\dicke{N, n}} \equiv \ket{J=N/2, M=N/2-n}=\binom{N}{N-n}^{-1/2}\sum_k \mathcal{P}_k(\ket{0}^{\otimes n}\otimes\ket{1}^{\otimes{N-n}}),
+  \ket{\dicke{N, n}} \equiv \ket{J=N/2, M=N/2-n}=\binom{N}{n}^{-\frac{1}{2}} \sum_k \mathcal{P}_k(\ket{0}^{\otimes N-n}\otimes\ket{1}^{\otimes{n}}),
   \label{eq:app-definition-of-dicke-states}
 \ee
 where $n$ gives the number of particles that are in $\ket{0}$.
@@ -100,28 +102,52 @@ All these alternative constructions are collected in the following equation resp
 \ee
 where $\beta$ is the inverse of the Boltzman constant $k_\text{B}$ times the temperature $T$, and $\sigma_{\text{s}}$ is the set of all possible unique permutations, in this case $\frac{N!}{2^{N/2}(N/2)!}$.
 
-\subsection {Proof of Equation~\eqref{eq:vd-4y-moment-pure-dicke}}
-\label{app:proof-of-4th-y-moment-pure-dicke}
+%%%%%%%%%%%%%%%%
+% NEW APPENDIX
+\subsection{Husimi $\mathcal{Q}$-representation and the Bloch sphere}
+\label{app:husimi-representation}
 
-To compute the Eq.~\eqref{eq:vd-4y-moment-pure-dicke}, we start by the expectation value of $\bs{J}^4$ for the pure Dicke state $\ket{\dicke{N}}$.
-On the one hand, we have that it is simply equal to square $\expect{\bs{J}^2}$
+To graphically represent states with angular momentum larger than $J=\frac{1}{2}$, it is convenient to use the so-called Husimi $\mathcal{Q}$-representation on the Bloch-sphere.
+In fact it is straightforward to represent in a 3D-sphere all the possible states as it is done for qubits.
+
+The Husimi $\mathcal{Q}$-representation must be normalized to 1.
+Hence,
 \be
-  \expect{\bs{J}^4} = \lpar\frac{N(N+2)}{4}\rpar^2.
-  \label{eq:ap-total-angular-4th-moment-expectation}
+  \label{eq:ap2-husimi-integral-to-one}
+  \int \mathcal{Q}_\rho(\Omega)\,\text{d}\Omega = 1,
 \ee
-On the other hand Eq.~\eqref{eq:ap-total-angular-4th-moment-expectation} must be equal to
+where $\Omega$ represents the solid angle of the sphere, i.e., the function is a function of $\varphi$ and $\theta$, the azimuth angle and the polar angle respectivelly, and $\text{d}\Omega= \sin(\theta)\text{d}\varphi\text{d}\theta$.
+We will use it to describe states belonging to the symmetric subspace or for states belonging to the maximum angular momentum subspace.
+Therefore, the $\mathcal{Q}_\rho(\Omega)$ function will be proportional to the fidelities of totally polarized states that point to different directions represented by $\Omega$.
+
+In the case of many qubits such totally polarized states can be written as
 \be
-  \expect{(J_y^2+J_z^2+J_x^2)\bs{J}^2} = \expect{J_y^4} + \expect{J_z^4} + \expect{\{J_y^2,J_z^2\}},
+  \ket{N/2,N/2}_{\Omega} \equiv \ket{\Omega} := \ket{1}_{\Omega}\otimes \ket{1}_{\Omega}\otimes \ket{1}_{\Omega}\otimes \dots\ket{1}_{\Omega},
 \ee
-where we omitted the terms that contain $J_x^2$ since we obtain zero from them.
-Next, due to the rotational symmetry along the $x$-axis, we can swap the index $y$ and $z$ inside each expectation value to obtain
+where can be reformulated as the eigenstate with the maximum eigenvalue for $J_{\Omega}=\cos(\varphi)\sin(\theta) J_x + \sin(\varphi)\sin(\theta)\, J_y + \cos(\theta) J_z$ operator.
+An alternative way to obtain such totally polarized states $\ket{\Omega}$ is to rotate a totally polarized state along the $z$-direction by $\theta$ angle along the $y$-axis and then applying a rotation of $\varphi$ angle along the $z$-axis.
+Hence,
 \be
-  \expect{J_y^4}+\expect{J_y^2 J_z^2}=\frac{1}{2}\lpar\frac{N(N+2)}{4}\rpar^2.
+  \begin{split}
+    \ket{\Omega} & = e^{-i\varphi J_z} e^{-i\theta J_y} \ket{11\dots 1},\\
+    J_{\Omega}\ket{\Omega} & = \frac{N}{2} \ket{\Omega}.
+  \end{split}
 \ee
+We write the quasi-probability $\mathcal{Q}(\Omega)$ proportional to the fidelity with respect to $\ket{\Omega}$ of the state as
+\be
+  \mathcal{Q}_\rho(\Omega)\propto \tr(\rho \ketbra{\Omega}{\Omega}).
+\ee
+The normalization constant comes from Eq.~\eqref{eq:ap2-husimi-integral-to-one}.
+To obtain is the totally mixed state in the symmetric subspace can be used for which $\tr(\frac{\mtxid}{N+1} \ketbra{\Omega}{\Omega})=\frac{1}{N+1}$.
+Integrating Eq.~\eqref{eq:ap2-husimi-integral-to-one} we obtain the proportionality factor shown in the following equation
+\be
+  Q_\rho(\Omega)=\frac{1}{4\pi(N+1)}\tr(\rho \ketbra{\Omega}{\Omega}),
+\ee
+which must be true for $N$ qubits in the symmetric subspace.
+Similar definitions could be accomplished for different subspaces or even for different spin number of the constituents.
 
-Now we focus on computing $\expect{J_y^2J_z^2}$.
-
-
+%%%%%%%%%%%%%%%%
+% NEW APPENDIX
 \subsection[Simplification of the Equation~\eqref{eq:vd-result-before-simp}]
 {Simplification of $\expect{\{J_x^2,J_y^2\}+\{J_x,J_y\}^2}$}
 \label{app:simplification-of-4th-moments}
@@ -178,57 +204,49 @@ Now if we sum it all, note that the all three operator terms simplify, and if we
    4\expect{J_y^2} - 3 \expect{J_z^2} - 2\expect{J_x^2} + 6\expect{J_xJ_y^2J_x}.
 \ee
 
-\subsection{Calculation of $|\braopket{\dicke{N,m}}{_z}{\dicke{N,N/2}}_x|^2$}
-\label{app:calculation-dicke-overlap}
 
-The Dicke state is defined in Eq:~\eqref{}, for more details on algular momentu subspaces see Appendix~\ref{app:angular-momentum-subspaces}
-Hello this is the appendix to write about ...
-
+%%%%%%%%%%%%%%%%
+% NEW APPENDIX
 \subsection{Spin-squeezing Hamiltonian}
 \label{app:spin-squeezing-hamiltonian}
 
-\subsection{Husimi Q-representation and the Bloch sphere}
-\label{app:husimi-representation}
+We discuss here the most relevant aspects for the understanding of this thesis of the ground states of the spin-squeezing Hamiltonian \cite{Sorensen2001a}.
+The spin-squeezing Hamiltonian is defined in this context by
+\be
+  H_{\lambda} = \pm J_x^2 + \lambda J_y,
+  \label{eq:app-spsq-h}
+\ee
+where $\lambda$ is a real number.
 
-To graphically represent states with angular momentum larger than $J=\frac{1}{2}$, it is convenient to use the so-called Husimi $Q$-representation on the Bloch-sphere.
-In fact it is straightforward to represent in a 3D-sphere all the possible states as it is done for qubits.
+Since $H$ is permutationally invariant, if the ground state $\ket{\text{GS}_{\lambda}^{\pm}}$ is non-degenerate, then $\ket{\text{GS}_{\lambda}^{\pm}}$ is a symmetric state.
+We can prove that by using the permutation operator $\Pi$ which permutes any two particles when acting on the state as
+\be
+\begin{split}
+  [H_\lambda, \Pi] \ket{\text{GS}_{\lambda}^{\pm}} &= (H_\lambda \Pi - \Pi H_\lambda ) \ket{\text{GS}_{\lambda}^{\pm}}, \\
+  &= H_\lambda \Pi \ket{\text{GS}_{\lambda}^{\pm}} - \Pi E_{0,\lambda}, \ket{\text{GS}_{\lambda}^{\pm}} \\
+  &= (H_\lambda - E_{0,\lambda})\Pi\ket{\text{GS}_{\lambda}^{\pm}},
+  \label{eq:app-commutator-spsq-h}
+\end{split}
+\ee
+where $E_{0,\lambda}$ is eigenvalue of the state $\ket{\text{GS}_{\lambda}^{\pm}}$.
+Eq.~\eqref{eq:app-commutator-spsq-h} must be zero since $H_\lambda$ is PI and we have that $[H_\lambda, \Pi]=0$.
+Hence, $\Pi\ket{\text{GS}_{\lambda}^{\pm}}$ must be an eigenstate of $H_{\lambda}$ with eigenvalue $E_{0,\lambda}$.
+It turns out that, $\Pi\ket{\text{GS}_{\lambda}^{\pm}}$ and $\ket{\text{GS}_{\lambda}^{\pm}}$ must be the same state for any permutation $\Pi$.
+Hence, the ground states of $H_\lambda$ must be symmetric if they are non-degenerate.
 
-The Husimi $Q$-representation must be normalized to 1.
-Hence,
+We have to show now, that for a given expectation value of $\expect{J_y}$ of the ground state $\ket{\text{GS}_{\lambda}^{\pm}}$, these states are the ones that maximize or minimize $\expect{J^2}$ which depends on the sign of $J_x^2$ in Eq.~\eqref{eq:app-spsq-h}.
+Hence, using the linearity of the expectation values, we have that for any state
 \be
-  \label{eq:ap2-husimi-integral-to-one}
-  \int Q_\rho(\Omega)\,\text{d}\Omega = 1,
+\begin{split}
+  \expect{H_\lambda} &= \pm \expect{J_x^2} + \lambda \expect{J_y},\\
+  \expect{J_x^2} &= \mp \expect{H_\lambda} \pm \lambda \expect{J_y}.
+\end{split}
 \ee
-where $\Omega$ represents the solid angle of the sphere, i.e., the function is a function of $\varphi$ and $\theta$, the azimuth angle and the polar angle respectivelly, and $\text{d}\Omega= \sin(\theta)\text{d}\varphi\text{d}\theta$.
-We will use it to describe states belonging to the symmetric subspace or for states belonging to the maximum angular momentum subspace.
-Therefore, the $Q_\rho(\Omega)$ function will be proportional to the fidelities of totally polarized states that point to different directions represented by $\Omega$.
+Then for a particular $\expect{J_y}$, if we want to maximize or minimize the value of $\expect{J_x^2}$, then we have to maximize or minimize $\mp\expect{H_{\lambda}}$, which by definition is done by the ground states $\ket{\text{GS}_{\lambda}^{\pm}}$.
+Hence, these states sit at the boundary of the set of the expectation values $(\expect{J_x^2},\expect{J_y})$, which appears in Figure~\ref{fig:lt-spsq2d-4}.
 
-In the case of many qubits such totally polarized states can be written as
-\be
-  \ket{N/2,N/2}_{\Omega} \equiv \ket{\Omega} := \ket{1}_{\Omega}\otimes \ket{1}_{\Omega}\otimes \ket{1}_{\Omega}\otimes \dots\ket{1}_{\Omega},
-\ee
-where can be reformulated as the eigenstate with the maximum eigenvalue for $J_{\Omega}=\cos(\varphi)\sin(\theta) J_x + \sin(\varphi)\sin(\theta)\, J_y + \cos(\theta) J_z$ operator.
-An alternative way to obtain such totally polarized states $\ket{\Omega}$ is to rotate a totally polarized state along the $z$-direction by $\theta$ angle along the $y$-axis and then applying a rotation of $\varphi$ angle along the $z$-axis.
-Hence,
-\be
-  \begin{split}
-    \ket{\Omega} & = e^{-i\varphi J_z} e^{-i\theta J_y} \ket{11\dots 1},\\
-    J_{\Omega}\ket{\Omega} & = \frac{N}{2} \ket{\Omega}.
-  \end{split}
-\ee
-We write the quasi-probability $Q(\Omega)$ proportional to the fidelity with respect to $\ket{\Omega}$ of the state as
-\be
-  Q_\rho(\Omega)\propto \tr(\rho \ketbra{\Omega}{\Omega}).
-\ee
-The normalization constant comes from Eq.~\eqref{eq:ap2-husimi-integral-to-one}.
-To obtain is the totally mixed state in the symmetric subspace can be used for which $\tr(\frac{\mtxid}{N+1} \ketbra{\Omega}{\Omega})=\frac{1}{N+1}$.
-Integrating Eq.~\eqref{eq:ap2-husimi-integral-to-one} we obtain the proportionality factor shown in the following equation
-\be
-  Q_\rho(\Omega)=\frac{1}{4\pi(N+1)}\tr(\rho \ketbra{\Omega}{\Omega}),
-\ee
-which must be true for $N$ qubits in the symmetric subspace.
-Similar definitions could be accomplished for different subspaces or even for different spin number of the constituents.
-
+%%%%%%%%%%%%%%%%
+% NEW APPENDIX
 \subsection{Legendre transform}
 \label{app:legendre-transform}
 
@@ -243,7 +261,7 @@ A geometric representation of the transform is given on the Figure~\ref{fig:lt-g
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=.65]{img/AP_legendre.pdf}
-  \caption[Graphical representation of the Legendre trasnform.]{Graphical representation of the Legendre transform. (blue-line) Convex function, $f(x)=x^2-1.9x-0.3$, to be transformed. (red-dashed) Constant slope line passing by the coordinate system origin, $rx$. The Legendre transform is the maximal difference between $rx$ and $f(x)$ at the same $x$. In this case, the vertical distance between $a$ and $b$.}
+  \caption[Graphical representation of the Legendre transform.]{Graphical representation of the Legendre transform. (blue-line) Convex function, $f(x)=x^2-1.9x-0.3$, to be transformed. (red-dashed) Constant slope line passing by the coordinate system origin, $rx$. The Legendre transform is the maximal difference between $rx$ and $f(x)$ at the same $x$. In this case, the vertical distance between $a$ and $b$.}
   \label{fig:lt-geometric-legendre}
 \end{figure}
 
@@ -263,9 +281,106 @@ On has to solve for x the following equation $\partial_x g(r,x) = 0$. Thus, the 
 \ee
 If one applies again the transformation the resulting function is again the original one.
 
-\subsection{Binomial identities}
-\label{app:binomial-identities}
+%%%%%%%%%%%%%%%%
+% NEW APPENDIX
+\subsection{Calculation of $|\braopket{\dicke{N,m}}{_z}{\dicke{N,N/2}}_x|^2$}
+\label{app:calculation-dicke-overlap}
 
+The Dicke state $\ket{\dicke{N,m}}_l$ are defined in Eq.~\eqref{eq:app-definition-of-dicke-states}, see Appendix~\ref{app:angular-subspaces} for more details about Dicke states.
+The basic constituents of the Dicke states are $\ket{0}_l^{(n)}$'s and $\ket{1}_l^{(n)}$'s for the different subspaces $(1),(2),\dots,(N)$ denoting to which particle the state belongs.
+
+A useful property of $\ket{0}_l^{(n)}$'s and $\ket{1}_l^{(n)}$'s is their scalar products, which are zero between different particle subsystems and for equal $l$ they form an orthonormal basis, i.e., $\braket{a}{b}=\delta_{a,b}$.
+The rest of the possibilities are listed as
+\be
+  \braopket{0}{_z}{1}_x = \braopket{1}{_z}{0}_x = \braopket{1}{_z}{1}_x = \braopket{1}{_z}{0}_y = \braopket{1}{_z}{1}_y = \frac{1}{\sqrt{2}},
+  \label{eq:app-single-scalar-prod-xyz-j2-trivial}
+\ee
+and
+\be
+  \braopket{0}{_z}{0}_x = \frac{-1}{\sqrt{2}}, \quad
+  \braopket{0}{_z}{0}_y = \frac{-i}{\sqrt{2}}, \quad
+  \braopket{0}{_z}{1}_y = \frac{+i}{\sqrt{2}},
+  \label{eq:app-single-scalar-prod-xyz-j2-special}
+\ee
+and all their complex conjugates.
+On the other hand using the tensor product properties we have that
+\be
+  \braket{a_1,a_2,\dots,a_N}{b_1,b_2,\dots,b_N} = \braket{a_1}{b_1} \braket{a_2}{b_2}\dots \braket{a_N,b_N}.
+\ee
+
+For the overlapping of the different Dicke states, in this case for different $m$'s of $|\braopket{\dicke{N,m}}{_z}{\dicke{N,N/2}}_x|^2$, we have first that
+\be
+  \braopket{\dicke{N,m}}{_z}{\dicke{N,N/2}}_x =
+  \binom{N}{m}^{-\frac{1}{2}}\binom{N}{N/2}^{-\frac{1}{2}}
+  \sum_{k,k'\in \sigma_s}
+  \mathcal{P}_k ( \bra{0}_z^{\otimes N-m}\bra{1}_z^{\otimes m} ) \,
+  \mathcal{P}_{k'} ( \ket{0}_x^{\otimes N/2}\ket{1}_x^{\otimes N/2} ),
+\ee
+where $\mathcal{P}_k$ denotes one of the unique permutations of its argument.
+
+From Eqs.~\eqref{eq:app-single-scalar-prod-xyz-j2-trivial} and \eqref{eq:app-single-scalar-prod-xyz-j2-special}, we see that all of the scalar products will be $\frac{1}{\sqrt{2}}$ except some of them whenever $\braopket{0}{_z}{0}_x$ appears.
+This way, we can take out $(\frac{1}{\sqrt{2}})^N$ out of the sum, and use new states such that $\brawopketw{0}{_z}{0}{_x}=-1$ and $\brawopketw{0}{_z}{1}{_x}=\brawopketw{1}{_z}{0}{_x}=\brawopketw{1}{_z}{1}{_x}=+1$.
+Moreover, note that for each permutation on $k'$, $k$ already permutes all of the possible pairings.
+We can drop that sum then and substitute it by a constant which is all the possible distinguishable permutations of $N$ objects when $N/2$ are of one kind and $N/2$ of another, which turns to be $\binom{N}{N/2}$.
+
+This is what we get
+\be
+  \braopket{\dicke{N,m}}{_z}{\dicke{N,N/2}}_x =
+  \frac{\binom{N}{m}^{-\frac{1}{2}}\binom{N}{N/2}^{\frac{1}{2}}}{\sqrt{2^N}}
+  \sum_{k\in \sigma_s}
+  \mathcal{P}_k ( \braw{0}_z^{\otimes N-m}\braw{1}_z^{\otimes m} ) \,
+  \ketw{0}_x^{\otimes N/2}\ketw{1}_x^{\otimes N/2}.
+  \label{eq:app-dicke-overlap-primitive}
+\ee
+The terms in the sum are either $+1$ or $-1$.
+At this point, we have to solve this by using notions in permutation sets.
+We have to assign $-1$ to the term in the sum whenever there are an odd number of $\braw{0}_z$'s in the first half particles of $\mathcal{P}_k (\braw{0}_z^{\otimes N-m}\braw{1}_z^{\otimes m})$.
+
+For $0\leqslant m\leqslant N/2$, we can start having all the zeros in the first half of the particles, which are $\binom{N/2}{m}$ different possibilities with the same sign.
+Then, sending one $\braw{0}$'s to the last half of the particle numbers, we have $\binom{N/2}{m-1}\binom{N/2}{1}$ possibilities where the sign of the terms flipped.
+We have to do so until there are no more $\braw{0}$'s left in the first half of the particle numbers, which clearly returns $+1$ for the summing term.
+For the sum then, this yields to
+\be
+  \sum_{k\in \sigma_s}
+  \mathcal{P}_k ( \braw{0}_z^{\otimes N-m}\braw{1}_z^{\otimes m} ) \,
+  \ketw{0}_x^{\otimes N/2}\ketw{1}_x^{\otimes N/2} = \sum_{i=0}^m (-1)^{i} \binom{N/2}{m-i}\binom{N/2}{i}.
+  \label{eq:app-sum-of-dicke-overlap-m-small}
+\ee
+The key point now is to note that for $N/2 < m \leqslant N$ we can swap all the $\braw{0}_z$'s with $\braw{1}_z$'s, which yields to the same combinations, but where we have to count the number of $\braw{1}_z$'s in the first half to determine the sign.
+Hence, the following holds,
+\be
+  \sum_{k\in \sigma_s}
+  \mathcal{P}_k ( \braw{0}_z^{\otimes N-m}\braw{1}_z^{\otimes m} ) \,
+  \ketw{0}_x^{\otimes N/2}\ketw{1}_x^{\otimes N/2} = \sum_{i=0}^{N-m} (-1)^{N/2-i} \binom{N/2}{N-m-i}\binom{N/2}{i}.
+\ee
+Note that if $N/2$ is even, then both equations are equal, whereas if $N/2$ is odd, then one is the negative of the other.
+Since we are interested on the square of $\braopket{\dicke{N,m}}{_z}{\dicke{N,N/2}}_x$, we can compute it for $0\leqslant m \leqslant N/2$ at the same time we obtain the results for $N/2<m\leqslant N$.
+This is represented by
+\be
+  |\braopket{\dicke{N,m}}{_z}{\dicke{N,N/2}}_x|^2 = |\braopket{\dicke{N,(N-m)}}{_z}{\dicke{N,N/2}}_x|^2.
+\ee
+
+Finally, using the binomial identity of Eq.~\eqref{eq:lt-binomial-identity} we have that Eq.~\eqref{eq:app-sum-of-dicke-overlap-m-small} yields
+\be
+\begin{split}
+  \sum_{i=0}^m (-1)^{i} \binom{N/2}{m-i}\binom{N/2}{i} = \lcor
+  \begin{aligned}
+    &\binom{N/2}{m/2}(-1)^{m/2}&& \text{for even }m,\\
+    &0 && \text{for odd }m.
+  \end{aligned}
+  \right.\\
+\end{split}
+\ee
+Hence, for even $m$ the overlapping coefficient is
+\be
+  |\braopket{\dicke{N,m}}{_z}{\dicke{N,N/2}}_x|^2 = \frac{\binom{N/2}{m/2}^2\binom{N}{N/2}}{2^N\binom{N}{m}}.
+  \label{eq:app-dicke-overlap}
+\ee
+If we substitute $m$ by $N-1$, using some binomial identities the formula remains the same, hence, the Eq.~\eqref{eq:app-dicke-overlap} is valid for any $m$.
+Note that it also coincides with Eq.~\eqref{eq:lt-dicke-overlap}.
+
+%%%%%%%%%%%%%%%%
+% NEW APPENDIX
 \subsection{Calculation of the QFI matrix elements}
 \label{app:matrix-elements-of-QFI}
 

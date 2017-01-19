@@ -135,9 +135,14 @@
 \DeclareMathOperator{\cov}{cov}
 
 \newcommand{\ket}[1]{\ensuremath{\vert{#1}\rangle}}
+\newcommand{\ketw}[1]{\ensuremath{\vert{\widetilde{#1}}\rangle}}
 \newcommand{\bra}[1]{\ensuremath{\langle{#1}\vert}}
+\newcommand{\braw}[1]{\ensuremath{\langle{\widetilde{#1}}\vert}}
 \newcommand{\braket}[2]{\ensuremath{\langle{#1}\vert{#2}\rangle}}
-\newcommand{\braopket}[3]{\ensuremath{\langle{#1}\vert{#2}\vert{#3}\rangle}}
+\newcommand{\braopket}[3]{\ensuremath{\bra{#1}{#2}\ket{#3}}}
+\newcommand{\brawopket}[3]{\ensuremath{\braw{#1}{#2}\ket{#3}}}
+\newcommand{\braopketw}[3]{\ensuremath{\bra{#1}{#2}\ketw{#3}}}
+\newcommand{\brawopketw}[3]{\ensuremath{\braw{#1}{#2}\ketw{#3}}}
 \newcommand{\ketbra}[2]{\ensuremath{\vert{#1}\rangle{\!}\langle{#2}\vert}}
 \newcommand{\ketopbra}[3]{\ensuremath{\vert{#1}\rangle{#2}\langle{#3}\vert}}
 \newcommand{\expect}[1]{\ensuremath{\langle{#1}\rangle}}
