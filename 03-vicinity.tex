@@ -49,19 +49,19 @@ The use of unpolarized states for magnetometry has been shown useful in Eq.~\eqr
 While the quantum Fisher information would give us directly the performance of the state, we typically cannot compute it because a complete knowledge of the state would be necessary, see Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}.
 On the other hand, we can use the error propagation formula Eq.~\eqref{eq:bg-error-propagation-formula} to obtain a bound on the achievable precision which at the same time bounds the QFI.
 
-As one can see in Figure~\ref{fig:vd-secuence-evo}, a pure Dicke state of 16 qubits, initially an eigenstate of the $J_x$ operator, is rotated around the $z$-axis.
-\begin{figure}[htp]
-  \centering
-  \includegraphics[scale=.65]{img/VD_evolution_of_dicke.pdf}
-  \caption[Sequence of Dicke state evolution]{Sequence of the evolution of an unpolarized Dicke state of 16 qubits for $\theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Husimi quasi-probabilistic distribution of the state, and below PDF of the $J_x$ positive-operator valued measure (POVM) for each step of the sequence}
-  \label{fig:vd-secuence-evo}
-\end{figure}
+As one can see in Figure~\ref{fig:vd-secuence-evo}, a pure unpolarized Dicke state $\ket{\dicke{N}}_x$ of 16 qubits, an eigenstate of the $J_x$ operator, is rotated around the $z$-axis.
 The state is unpolarized so the expectation value of any component of the total angular momentum remains zero.
 It turns out that measuring the evolution of the second moment of $J_x$ allows the estimation of rotation angle $\theta$, and therefore, the magnetic field.
 The expectation value $\expect{J_x^2}$ is initially zero for a pure unpolarized Dicke state, and it increases rapidly as it can be seen in the Figure~\ref{fig:vd-secuence-evo}.
 Another observation is that for $\theta=\pi/2$ the value of $\expect{J_x^2}$ will be at its maximum proportional to $\expect{\bs{J}^2}$ or equivalently to $\mathcal{J}_{N/2}$, see Eq.~\eqref{eq:app-maximum-total-angular-momentum}.
 Hence, the change in the second moment over the phase shift must be in this case proportional to $N^2$.
 We lead to the conclusion that one only needs to measure the second moment of the collective spin $J_x$ to achieve Heisenberg scaling for the estimation.
+\begin{figure}[htp]
+  \centering
+  \includegraphics[scale=.65]{img/VD_evolution_of_dicke.pdf}
+  \caption[Sequence of Dicke state evolution]{Sequence of the evolution of an unpolarized Dicke state of 16 qubits for $\theta=\{i\pi/6\}_{i=0}^4$. Bloch spheres representing the Husimi quasi-probabilistic distribution of the state, and below PDF of the $J_x$ positive-operator valued measure (POVM) for each step of the sequence}
+  \label{fig:vd-secuence-evo}
+\end{figure}
 
 In certain situations, it is better to use Eq.~\eqref{eq:bg-error-propagation-formula} rather than Eq.~\eqref{eq:bg-quantum-cr-bound} for calculating the achievable precision, since it gives the precision for a particular operator to be measured in an experimental setup.
 This is reasonable, since in a typical experiment, only a restricted set of operators can be measured.
@@ -121,12 +121,11 @@ The square of $J_x$ in the Heisenberg picture is written as
 \ee
 Hence, due to the first constraint of Eq.~\eqref{eq:vd-even-f-constraint} and Eq.~\eqref{eq:vd-evolution-of-jx2}, we require that
 \be
-  \expect{\{J_x,J_y\}} = 0,
+  \expect{\{J_x,J_y\}} = 0.
   \label{eq:vd-init-2nd-constraint}
 \ee
-where $\{\, ,\,\}$ stands for the anticommutator.
-Apart for been simpler to compute the Eq.~\eqref{eq:vd-init-2nd-constraint} is based also on initial expectation values of the state.
-We will see that as we said before this is easily guarantied for most important cases.
+Eq.~\eqref{eq:vd-init-2nd-constraint} is based on expectation values of the initial state state.
+The condition Eq.~\eqref{eq:vd-init-2nd-constraint} is fulfilled in a typical experiment.
 
 As we have done with the expectation value of the square of $J_x$, now we  do the same for $J_x^4$.
 This way one will be able to distinguish which other expectation value of combination of operators must vanish in order to have Eq.~\eqref{eq:vd-even-f-constraint} guarantied.
@@ -213,7 +212,7 @@ We can conclude saying that our formula Eq.~\eqref{eq:vd-precision-as-theta} rep
   \igwithlabel{(b)}{scale=.65}{img/VD_parity_simulation.pdf}
   \caption[(a) Evolution of $\varinv{\theta}/N$. (b) Evolution of the expectation values]{(a) Evolution of the precision $\varinv{\theta}/N$ for 6 qubits based on the simulation of the system $\ket{\text{GS}}$ and its expectation values.
   The agreement with the Eq.~\eqref{eq:vd-precision-as-theta} is shown in the inset plot where the square of the difference between two approaches are plotted, the analytically obtained result and the simulation.
-  The difference is more or less two orders of magnitude below the actual value for the relevant points, which is mainly because of computing the derivative near the points on which the value of the expectation value $\expect{J_x^2}$ and the value of the $\varian{J_x^2}$ are both close to zero.
+  The difference is more or less two orders of magnitude below the actual value for the relevant points, which is mainly because of computing the derivative near the points at which the expectation value $\expect{J_x^2}$ and the $\varian{J_x^2}$ are both close to zero.
   (b) With the system at hand, we verified the parity with respect to $\theta$ of the expectation values of the second and the fourth moment, so to fulfill the constraint Eq.~\eqref{eq:vd-even-f-constraint}.}
   \label{fig:vd-evolution-of-precision}
 \end{figure}
@@ -325,7 +324,7 @@ or equivalently
 \ee
 which implies that for even $m$, and specially for $m=2,4$, the expectation values are an even function of $\theta$, and that for odd $m$ the expectation values are odd functions of $\theta$, which proves the Eq.~\eqref{eq:vd-even-f-constraint} for the present case.
 
-On the other hand for the thermal state $\rho_T$, we have that its eigenstates are simultaneously eigenstates of $J_x$, and hence the state invariant under rotations around the $x$-axis.
+On the other hand, the eigenstates of the thermal state $\rho_T$ are simultaneously eigenstates of $J_x$, and hence the state invariant under rotations around the $x$-axis.
 Which still holds for the entire state, since it is a statistical mixture of states invariant under rotations around the $x$-axis.
 Moreover, it is also invariant for the case in which the state is rotated around the $x$-axis by $\pi$ angle.
 Hence, we have for the evolved expectation values of $J_x^m$ that
