@@ -391,7 +391,7 @@ There is a single remaining term in the expression for the achievable precision 
 \end{split}
 \label{eq:vd-simplification-of-last-4th-moment}
 \ee
-where the last inequality is due to that for all states $\expect{\bs{J}^2}\leqslant \mathcal{J}_N/2$, see Eq.~\eqref{eq:app-maximum-total-angular-momentum}, while symmetric states saturate the inequality in Eq.~\eqref{eq:vd-simplification-of-last-4th-moment}.
+where the last inequality is due to that for all states $\expect{\bs{J}^2}\leqslant \mathcal{J}_{N/2}$, see Eq.~\eqref{eq:app-maximum-total-angular-momentum}, while symmetric states saturate the inequality in Eq.~\eqref{eq:vd-simplification-of-last-4th-moment}.
 Note that obtaining $\expect{J_xJ_z^2J_x}$ can be hard experimentally.
 In any case, this simplification can only make our estimation of the precision worse while for symmetric states the equality holds.
 Hence, the lower bound for the achievable precision can be written as
@@ -472,24 +472,31 @@ From these considerations we are able to write a second bound with fewer expecta
 \ee
 We have used this formula to compute the bound for the optimal precision with the measured data shown on Eq.~\eqref{eq:vd-experimental-values}, $(\Delta \theta)^{-2}_{\text{opt}} \geqslant 2.9N$, see Figure~\ref{fig:vd-experimental}.
 It turns out that even this way, 3-particle metrologically useful entanglement is detected.
-Figure~\ref{fig:vd-experimental}-(a) shows the two-dimensional plot which is obtained based on these considerations.
-The regions with various levels of multipartite entanglement ca clearly be identified.
-The ideal Dicke state corresponds to the bottom-right corner.
-In Figure~\ref{fig:vd-experimental}-(b), the cross section of the two-dimensional plot is shown.
 \begin{figure}[htp]
   \centering
   \igwithlabel{(a)}{scale=.65}{img/VD_exper_contour.pdf}
   \igwithlabel{(b)}{scale=.65}{img/VD_exper_slice.pdf}
   \caption[(a) Precision bound for $\expect{J_y^2}$ and $\expect{J_x^2}$. (b) Slice in constant $\expect{J_y^2}$.]{
   (a) Precision bound as a function of $\expect{J_y^2}$ and $\expect{J_x^2}$.
-  The expectation value $\expect{J_y^2}$ is normalized with $J_{\max}$ or equivalently with $\mathcal{J}_{N/2}$.
-  (solid) Different boundaries for metrologically useful entanglement depths are shown with solid lines.
-  (cross) and (blue-ellipse) Those elements stand for the point corresponding to the experimental data and the region with one $\sigma$ confidence, respectively.
-  (dashed) This corresponds to the constant $\expect{J_y^2}$ cross section plotted next.
+  The expectation value $\expect{J_y^2}$ is normalized with $\mathcal{J}_{N/2}$.
+  (solid) Different boundaries for metrologically useful entanglement depths.
+  (cross) Experimental data.
+  (blue-ellipse) Region with one $\sigma$ confidence from the experimental data.
+  (vertical-dashed) Constant $\expect{J_y^2}$ cross section plotted in (b).
   (b) Constant $\expect{J_y^2}$ cross section for the precision bound.
   (solid) Precision bound based on the Eq.~\eqref{eq:vd-precision-bound-for-second-moments}.
   One can see that decreasing further the uncertainty in $\expect{J_x^2}$ can improve the bound significantly.
-  (white-point) Experimental data with the corresponding errors.
-  Even if the point is slightly below the 4-particle entanglement level, we can say that with only two second moments, we characterize the state in such a way that it does not differ very much from the original prediction when fourth moments were also included and 4-particle entanglement was witnessed for the system.}
+  (white-point) Experimental data with the corresponding errors bars.
+  (gray-area) Shot-noise limit.
+  The point is slightly below the 4-particle entanglement level.}
   \label{fig:vd-experimental}
 \end{figure}
+
+In Figure~\ref{fig:vd-experimental}-(a), we show the two-dimensional plot which is obtained based on these considerations.
+The regions with various levels of multipartite entanglement ca clearly be identified.
+The ideal Dicke state corresponds to the bottom-right corner, where $\expect{J_x^2}=0$ and $\expect{J_y^2}$ is largest.
+In Figure~\ref{fig:vd-experimental}-(b), the cross section of the two-dimensional plot is shown.
+
+Summarizing, we have shown that characterizing the metrological usefulness of noisy Dicke states can be done using few experimental data.
+Furthermore, the precision bound is computed with the expectation values of the second and fourth moments of the angular momentum in the directions perpendicular to the magnetic field.
+We have shown some simplifying techniques which reduce the experimental efforts needed to characterize the state. 
