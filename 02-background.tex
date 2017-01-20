@@ -195,7 +195,7 @@ Hence, using the Schwartz inequality we can write
   \text{V}[\hat{a}] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \geqslant \frac{1}{\int \lcua\partial_a\big(\ln \prob (\bs{x}|\bs{a}) \big)\rcua^2 \prob (\bs{x}|\bs{a})\,\text{d}^N\bs{x}},
 \ee
 which is also known as the Cram\'er-Rao bound or the Fisher inequality.
-The denominator in the right hand-side is called generally the Fisher information (FI) or simply information.
+The denominator in the right hand-side is called generally the Fisher information or simply information.
 
 With this review of the most interesting properties of "classical" metrology, from the point of view of this thesis, we conclude this section.
 In the next section, we will discuss some properties of the quantum mechanics and then we will follow with another section which presents the basis of quantum metrology.
@@ -250,13 +250,14 @@ where superscript indexes between parenthesis go from 1 to $N$ and denote to whi
 For instance a separable state like Eq.~\eqref{eq:bg-separable-state-definition} is 1-producible as well as $N$-producible.
 If a state cannot be written as $k$-producible, then it must be $(k+1)$-entangled.
 This defines the entanglement depth, see Figure~\ref{fig:bg-separability-k-producibility-circle}.
+Later on, these concepts of entanglement and entanglement depth will arise naturally on the metrological framework \cite{Toth2014}.
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=1.2]{img/BG_separability_k_producibility_circle.pdf}
-  \caption[Diagram for $k$-producibility sets]{$k$-producible set of states contains $k-1$-producible states. Based on the Eq.~\eqref{eq:bg-k-producible-estate}, one can argue that a state that cannot be written as $k$-producible must be $k+1$-entangled or equivalently has $k+1$ entanglement depth. A separable state can always be written as 1-producible which on the other hand is its original definition.}
+  \caption[Diagram for $k$-producibility sets]{
+  $k$-producible set of states contains $k-1$-producible states. Based on the Eq.~\eqref{eq:bg-k-producible-estate}, one can argue that a state that cannot be written as $k$-producible must be $k+1$-entangled or equivalently has $k+1$ entanglement depth. A separable state can always be written as 1-producible which on the other hand is its original definition.}
   \label{fig:bg-separability-k-producibility-circle}
 \end{figure}
-Later on, these concepts of entanglement and entanglement depth will arise naturally on the metrological framework \cite{Toth2014}.
 
 \subsubsection{Angular momentum operators on multiparticle systems}
 \label{sec:bg-angular-momentum-operators}
@@ -341,7 +342,8 @@ Figure~\ref{fig:bg-preparation-encoding-estimation} illustrates the main steps o
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=1.2]{img/BG_preparation_encoding_estimation.pdf}
-  \caption[The estimation process in quantum metrology]{Sequence of the different steps for the basics of the estimation process in quantum metrology. First, an input state $\rho$ enters the region in which the unknown parameter $\theta$ is imprinted in it, for the most general case, represented with $\Lambda_{\theta}$. The state with the encoded parameter $\theta$ is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
+  \caption[The estimation process in quantum metrology]{
+  Sequence of the different steps for the basics of the estimation process in quantum metrology. First, an input state $\rho$ enters the region in which the unknown parameter $\theta$ is imprinted in it, for the most general case, represented with $\Lambda_{\theta}$. The state with the encoded parameter $\theta$ is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
   \label{fig:bg-preparation-encoding-estimation}
 \end{figure}
 
@@ -356,22 +358,22 @@ Very general derivations lead to, at best,
   \varian{\theta}\sim \frac{1}{N}
 \ee
 for non-entangled particles.
-The equation above is called \emph{shot-noise} or standard scaling (SNS), the term originating from the shot-noise in electronic circuits, which is due to the discrete nature of the electric charge.
+The equation above is called \emph{shot-noise} or standard scaling, the term originating from the shot-noise in electronic circuits, which is due to the discrete nature of the electric charge.
 On the other hand, quantum entanglement makes it possible to reach
 \be
   \label{eq:bg-heisenberg-scaling}
   \varian{\theta}\sim \frac{1}{N^2}
 \ee
-which is called the \emph{Heisenberg} scaling (HS).
+which is called the \emph{Heisenberg} scaling.
 Note that if the Hamiltonian of the dynamics has interaction terms, then these bounds can be surpassed \cite{Luis2004, Napolitano2011, Boixo2007, Braun2011, Roy2008, Choi2008, Rey2007}.
 
 It is time to mention that the above calculations have been carried out for an ideal situation.
-When an uncorrelated noise is present in the system, it turns out that for large enough particle number the scaling becomes a SNS \cite{Demkowicz-Dobrzanski2012}.
+When an uncorrelated noise is present in the system, it turns out that for large enough particle number the scaling becomes shot-noise scaling. \cite{Demkowicz-Dobrzanski2012}.
 The possible survival of a better scaling under correlated noise, under particular circumstances, or depending on some interpretation of the metrological task, is at the center of attention currently.
 All these are strongly connected to the question of whether strong multipartite entanglement can survive in a noisy environment.
 
 Finally, note that often, instead of $\varian{\theta}$ one calculates its inverse, which is large for high precision.
-It scales as $\varinv{\theta}\sim N$ for SNS and as $\varinv{\theta}\sim N^2$ for the HS.
+It scales as $\varinv{\theta}\sim N$ for shot-noise scaling and as $\varinv{\theta}\sim N^2$ for the Heisenberg scaling.
 
 \subsubsection{Quantum magnetometry}
 \label{sec:bg-quantum-magnetometry}
@@ -438,7 +440,8 @@ Figure~\ref{fig:bg-expect-m-evo} helps to interpret the quantities appearing in 
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=1.2]{img/BG_expect_m_evo.pdf}
-  \caption[Graphical explanation of the error-propagation formula]{(Blue solid) Functional relation between the expectation value $\expect{M}$ and the estimator of the wanted parameter $\hat\theta$.
+  \caption[Error-propagation formula]{
+  (Blue solid) Functional relation between the expectation value $\expect{M}$ and the estimator of the wanted parameter $\hat\theta$.
   (Green dashed) One to one correspondence when the estimator $\hat{\theta}$ is based on $\expect{M}$. (Red dotted) Obtaining the error of the estimate is based on Eq.~\eqref{eq:bg-error-propagation-formula}.
   The slope of the curve at that point, denoted with $\tan\alpha$, directly relates the uncertainty $\sigma_M$ on the measured quantity $\expect{M}$ and the error on the estimation $\sigma_\theta$.}
   \label{fig:bg-expect-m-evo}
@@ -511,7 +514,7 @@ Due to decreasing $\varian{J_x}$, our state fulfills
   \varian{J_x}<\frac{1}{2}|\expect{J_y}|,
 \ee
 where the main spin points along the $y$-axis and for totally polarized states $\varian{J_x}=\frac{1}{2}|\expect{J_y}|$ hold.
-Such states are called \emph{spin-squeezed} states \cite{Kitagawa1993, Wineland1994, Sorensen2001, Ma2011} and they can in principal overcome the SNS.
+Such states are called \emph{spin-squeezed} states \cite{Kitagawa1993, Wineland1994, Sorensen2001, Ma2011} and they can in principal overcome the shot-noise scaling.
 
 Next, we can ask, what the best possible phase estimation precision is for the metrological task considered in this section.
 For that, we have to use the following inequality based on general principles of angular momentum theory
@@ -671,9 +674,9 @@ Due to the convexity of the QFI, this upper bound is still valid for all separab
 \ee
 a bound for not entangled states.
 All states violating Eq.~\eqref{eq:bg-shot-noise-limit} are entangled.
-The entangled states make it possible to surpass this bound, the shot-noise limit (SNL), and some might be more useful than separable states for the metrological tasks at hand.
+The entangled states make it possible to surpass this bound, the shot-noise limit, and some might be more useful than separable states for the metrological tasks at hand.
 
-The maximum achievable precision for general states, called the Heisenberg limit (HL), can be obtained evaluating the Eqs.~\eqref{eq:bg-qfi-definition-eigen-decomposition} or \eqref{eq:bg-qfi-definition-convex-roof} for pure states only.
+The maximum achievable precision for general states, called the Heisenberg limit, can be obtained evaluating the Eqs.~\eqref{eq:bg-qfi-definition-eigen-decomposition} or \eqref{eq:bg-qfi-definition-convex-roof} for pure states only.
 Therefore, similarly we have
 \be
   \label{eq:bg-heisenberg-limit}
@@ -684,9 +687,9 @@ Note that such a bound has the Heisenberg scaling Eq.~\eqref{eq:bg-heisenberg-sc
 Note that our derivation is very simple, and does not require any information about what operator we measure to estimate $\theta$.
 Equation~\eqref{eq:bg-shot-noise-limit} has been used already to detect entanglement based on the metrological performance of the quantum states in Refs.~\cite{Krischek2011, Luecke2011}.
 
-At this point one might ask if all entangled states can provide a sensitivity larger than the SNL.
+At this point one might ask if all entangled states can provide a sensitivity larger than theshot-noise limit.
 This would show that entanglement is equivalent to metrological usefulness.
-Concerning linear interferometers, it has been proven that not all entangled states violate the SNL Eq.~\eqref{eq:bg-shot-noise-limit}., even allowing local unitary transformations.
+Concerning linear interferometers, it has been proven that not all entangled states violate theshot-noise limit Eq.~\eqref{eq:bg-shot-noise-limit}, even allowing local unitary transformations.
 Thus not all entangled states are useful for phase estimation \cite{Hyllus2010}.
 It has been shown that there are even highly entangled pure states that are not useful.
 Hence, the presence of entanglement seems to be rather a necessary but not sufficient condition.

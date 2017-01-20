@@ -1,0 +1,26 @@
+# Labels
+
+\\label\{[-:A-z]*\}
+\\label\{eq:([-A-z]*)\}
+\\label\{fig:([-A-z]*)\}
+\\label\{sec:([-A-z]*)\}
+\\label\{tab:([-A-z]*)\}
+\\label\{tab:([-A-z]*)\}
+
+\\label\{[-:A-z]*(<SEARCH>)[-:A-z]*\}
+
+# Abbreviations
+
+[A-Z]{2,}
+
+# References
+
+# Equation references
+
+# Citations
+
+# Sections
+
+# Subsections
+
+# Subsubsections

@@ -39,7 +39,7 @@ However, in the case of a linear arranged particle ensemble only the derivative 
 
 We will determine the precision bounds for the estimation of the magnetic field gradient $B_1$ based on the quantum Fisher information \cite{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008}.
 In this context the Heisenberg and shot-noise scaling are defined as usual.
-The achievable precision in terms of the number of particles scales as $\varinv{\theta}\sim N$ and $\varinv{\theta}\sim N^2$ for SNS and HS respectively.
+The achievable precision in terms of the number of particles scales as $\varinv{\theta}\sim N$ and $\varinv{\theta}\sim N^2$ for shot-noise scaling and Heisenberg scaling respectively.
 We will show that with spin chains or two ensembles at different positions the Heisenberg scaling is possible.
 Concerning the case of a single ensemble, we will show the following.
 Since in such systems the atoms cannot be be individually addressed, we will assume that the quantum state is permutationally invariant.
@@ -60,7 +60,7 @@ We will go into the details in Section~\ref{sec:gm-single-cloud}.
 The chapter is organized as follows. In Section~\ref{sec:gm-the-setup}, we will present the setup of the system.
 In Section~\ref{sec:gm-cramer-rao-bounds}, the metrological basic concepts used in the chapter are presented.
 In Section~\ref{sec:gm-io-chain-and-two-ensembles}, we will show the results for the chain of ions and for when two distant ensembles are considered
-In Section~\ref{sec:gm-single-cloud}, we restrict our calculations to single PI atomic ensembles and we develop some particular cases, such as the singlet spin state or the totally polarized state.
+In Section~\ref{sec:gm-single-cloud}, we restrict our calculations to single permutationally invariant atomic ensembles and we develop some particular cases, such as the singlet spin state or the totally polarized state.
 
 \subsection{The setup}
 \label{sec:gm-the-setup}
@@ -445,7 +445,8 @@ We have that for that matter the probability density function describing the sys
   \begin{center}
     \igwithlabel{(a)}{scale=1.2}{img/GM_evolution_chain_initial.pdf}
     \igwithlabel{(b)}{scale=1.2}{img/GM_evolution_chain_final.pdf}
-    \caption[1-D chain of atoms polarized along $y$-axis under a gradient magnetic field]{(blue-circles) A system of $N$-atoms of spin-$j$ trapped in a chain configuration.
+    \caption[1-D chain of atoms polarized along $y$-axis under a gradient magnetic field]{
+    (blue-circles) A system of $N$-atoms of spin-$j$ trapped in a chain configuration.
     (green-area) Magnetic field gradient.
     Note that the field is pointing outwards of the figures.
     (red-arrows) Spins of the particles initially all aligned.
@@ -482,8 +483,8 @@ With this, we can now write the precision bound for a chain of atoms when the in
 \label{eq:gm-result-for-chain-without-sigma}
 \ee
 
-Despite that Eq.~(\ref{eq:gm-result-for-chain-without-sigma}) is a third order function of the particle number $N$ and that it seems to overcome the ultimate scaling HS, note that the length of the chain increases as we introduce more particles into the system.
-Hence, we have to normalize the bound with the effective size of the system, such that separable states would scale as SNS.
+Despite that Eq.~(\ref{eq:gm-result-for-chain-without-sigma}) is a third order function of the particle number $N$ and that it seems to overcome the ultimate scaling Heisenberg scaling, note that the length of the chain increases as we introduce more particles into the system.
+Hence, we have to normalize the bound with the effective size of the system, such that separable states would scale as shot-noise scaling.
 This restores the ultimate threshold of the precision to $\sim N^2$ as usual.
 
 In this section, we will use the standard deviation of the averaged particle position as the standard length measure of the system.
@@ -561,7 +562,8 @@ Moreover, the state is also maximally entangled.
 \begin{figure}[htp]
   \begin{center}
     \includegraphics[scale=1.2]{img/GM_double_well.pdf}
-    \caption[Best entangled state for the spatial two-ensembles]{(blue-circle) Atoms located at (L) or (R).
+    \caption[Best entangled state for the spatial two-ensembles]{
+    (blue-circle) Atoms located at (L) or (R).
     (red-arrow) Spin state of each of the atoms.
     (green-area) Linear magnetic field $B_z$.
     Note that the $z$-axis is to represent the direction of the spins.
@@ -656,7 +658,7 @@ Note that if $\ket{\Psi}$ is separable, then based in Eq.~\eqref{eq:bg-shot-nois
   \label{eq:gm-snl-two-ensembles}
 \ee
 Note that each of the ensembles has half of the total particle number $N$.
-Eq.~\eqref{eq:gm-snl-two-ensembles} can be seen as the SNL when two ensembles are used for gradient metrology.
+Eq.~\eqref{eq:gm-snl-two-ensembles} can be seen as the shot-noise limit when two ensembles are used for gradient metrology.
 In Table~\ref{tab:result-states-two-ensembles}, we summarized the precision bounds for states of type $\ket{\Psi}^{(\text{L})}\otimes \ket{\Psi}^{(\text{R})}$ for the two-ensemble case.
 \begin{table}
   \begin{center}
@@ -678,7 +680,7 @@ In Table~\ref{tab:result-states-two-ensembles}, we summarized the precision boun
   \end{center}
 \caption{(first column) The complete state as a tensor product of the state in (L) and the state in (R). Note that for the GHZ state and the unpolarized Dicke state, the spin is $j=\frac{1}{2}$.
 The last state $\ket{\Psi}$ is the best separable state for the estimation of the homogeneous field.
-Hence, the bound for $\ket{\Psi}$ coincides with the SNL for gradient metrology with two ensembles.
+Hence, the bound for $\ket{\Psi}$ coincides with the shot-noise limit for gradient metrology with two ensembles.
 (second column) Precision of the estimation of the homogeneous magnetic field in one of the ensembles.
 (third column) From the second column and based on Eqs.~\eqref{eq:gm-bound-insensitive-twoens-simplified} and \eqref{eq:gm-bound-sensitive-twoens-simplified}, we compute the precision for differential magnetometry for various product quantum states in two ensembles spatially separated from each other by a distance $a$.
 Note that all states are sensitive to the homogeneous field so the saturability of of the bound is not ensured.
@@ -708,12 +710,13 @@ in Fig.~\ref{fig:gm-single-ensemble-in-gradient}.
 In the last part of this section, we calculate precision bounds for the
 gradient estimation for some important multi-particle quantum states,
 for instance, Dicke states or GHZ states.
-Note that all these states are PI, since we
-assume that a PI procedure prepared the states.
+Note that all these states are permutationally invariant, since we
+assume that a permutationally invariant procedure prepared the states.
 \begin{figure}[htp]
   \begin{center}
   \includegraphics[scale=1.2]{img/GM_single_cloud.pdf}
-  \caption[Single atomic ensemble for gradient magnetometry]{(blue-point) Atomic ensemble with their spins (red-arrow) pointing randomly in any direction coupled with a linear magnetic field $B_z$ (green).
+  \caption[Single atomic ensemble for gradient magnetometry]{
+  (blue-point) Atomic ensemble with their spins (red-arrow) pointing randomly in any direction coupled with a linear magnetic field $B_z$ (green).
   The spatial state $\rho^{(\text{x})}$ is assumed to be permutationally invariant.
   The ensemble is centered around the place at which the magnetic field is zero due to the invariance of the precision bound under translations of the system.}
   \label{fig:gm-single-ensemble-in-gradient}
@@ -727,10 +730,10 @@ assume that a PI procedure prepared the states.
 In an atomic ensemble of very many atoms, typically
 the atoms cannot be individually addressed.
 This can be taken into account, if we consider
-quantum states that are PI.
+quantum states that are permutationally invariant.
 Hence, we will consider states for which both the internal state $\rho^{(\text{s})}$ and the probability distribution function
 $\prob(\bs{x})$, appearing in Eq.~(\ref{eq:gm-thermal-state}),
-are PI.
+are permutationally invariant.
 The permutational invariance of $\prob(\bs{x})$ implies that
 \be
   \label{eq:pi-for-pdf}
@@ -805,7 +808,7 @@ the precision of estimating the gradient is bounded from above as
 \ee
 The second term on the right-hand side of Eq.~\eqref{eq:gm-bound-sensitive-sinens} is new in the sense that it did not appear in the bound for states insensitive to homogeneous fields.
 Note that the bound in Eq.~(\ref{eq:gm-bound-sensitive-sinens}) is not necessarily saturable if the optimal measurements to estimate the gradient parameter and the homogeneous parameter do not commute with each other.
-Note also that even if the first term cannot overcome the SNS, in the second term the covariance is multiplied by QFI for estimating the homogeneous field and therefore this concrete term can make the bound, for extremely correlated particle positions, to scale as HS.
+Note also that even if the first term cannot overcome the shot-noise scaling, in the second term the covariance is multiplied by QFI for estimating the homogeneous field and therefore this concrete term can make the bound, for extremely correlated particle positions, to scale as Heisenberg scaling.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Precision bounds for different spin-states}
@@ -828,7 +831,7 @@ The summary for different states can be found in the Table~\ref{tab:compare all 
     \hline
     States & $\varinv{b_1}$ \\
     \hline
-    PI singlet states & $ |_{\max} = (\sigma^2-\eta) \frac{4Nj(j+1)}{3}$ \\
+    permutationally invariant singlet states & $ |_{\max} = (\sigma^2-\eta) \frac{4Nj(j+1)}{3}$ \\
     \hline
     $\ket{+j}_{y}^{\otimes N}$ & $\leqslant \sigma^2 2Nj$ \\
     \hline
@@ -850,7 +853,7 @@ the "$|_{\max}=$" subscript is used instead of an inequality.}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\subsubsubsection{Singlet states}
+\subsubsubsection{Permutationally invariant singlet states}
 %%%%%%%%%%%%%%%%%%%%%%%
 
 We consider now the singlet state, which is invariant under the influence
@@ -859,9 +862,9 @@ So, we have to compute the formula for the bound of the precision Eq.~(\ref{eq:g
 A pure singlet state is an eigenstate of the collective $J_z$ and $J^2$
 operators, with an eigenvalue zero in both cases.
 There are many different singlet states for an ensemble of $N$
-spin-$j$ particles, which some of them are PI.
+spin-$j$ particles, which some of them are permutationally invariant.
 Surprisingly the precision bound we compute is the same
-for any PI singlet.
+for any permutationally invariant singlet.
 Atomic ensembles in a singlet state have been experimentally
 created with cold gases \cite{Toth2010, Behbood2014}.
 
@@ -878,7 +881,7 @@ where $\sum_D \lambda_D=1$.
 In its complete form the eigenvalues of the spin density matrix are $\lambda_{J,M_z,D}=\delta_{0,J}\lambda_D$.
 
 Looking at Eq.~\eqref{eq:gm-bound-insensitive-sinens},
-we must compute the QFI for the one-particle operator $j_z^{(n)}$ in order to compute the precision bound for PI singlet states.
+we must compute the QFI for the one-particle operator $j_z^{(n)}$ in order to compute the precision bound for permutationally invariant singlet states.
 For that purpose we use the fact that when $j_z^{(n)}$ acts on a singlet state, it produces a state outside of the singlet subspace.
 This can be proved by noting that
 \be
@@ -943,7 +946,7 @@ To conclude, singlet states are insensitive to homogeneous magnetic fields, henc
 This implies that there is an optimal operator that saturates the precision bound given by Eq.~\eqref{eq:gm-precision-singlet}.
 However, it is usually very hard to find this optimal measurement,
 although a formal procedure for this exists \cite{Paris2009, Ragy2016}.
-In Ref. \cite{Urizar-Lanz2013}, a particular set-up for determining the magnetic gradient with PI singlet states was suggested by the measurement of the $J_x^2$ collective operator.
+In Ref. \cite{Urizar-Lanz2013}, a particular set-up for determining the magnetic gradient with permutationally invariant singlet states was suggested by the measurement of the $J_x^2$ collective operator.
 For this scenario the precision is given by the error propagation formula as
 \be
 \label{eq:gm- Jx2_acc}
@@ -1008,15 +1011,16 @@ Hence, We try a state that approaches to zero its polarization on the $z$-direct
 We have that  $\ket{\Psi}=(\ket{+j}+\ket{-j})/\sqrt{2}$ is ideal for this, for any $j$.
 Hence, we write the entire internal state as $\rho^{(\text{s})} =(\ketbra{\Psi}{\Psi})^{\otimes N}$.
 This state gives $(\Delta j_z^{(n)})^2=j^2$ which can be used in Eq.~\eqref{eq:gm-f11-thermal} after multiplying by four.
-Note that this state is permutationally invariant, hence we have finished the search for the best separable PI state.
+Note that this state is permutationally invariant, hence we have finished the search for the best separable permutationally invariant state.
 Moreover, the state is sensitive to the homogeneous field.
 
 Finally, the best achievable precision for separable states is written as
 \be
-  \varinv{b_1}_{\text{SNL}} \leqslant  \sigma^2 4N j^2,
+  \varinv{b_1}_{\text{SNL}} \leqslant  \sigma^2 4 N j^2,
   \label{eq:gm-best_separable}
 \ee
-where the state itself is sensitive to homogeneous fields.
+where the state itself is sensitive to homogeneous fields and the shot-noise limit is achieved.
+Note that in the two ensembles case $\sigma^2_{\text{te}}=a^2$ which tells us that both bounds Eqs. \eqref{eq:gm-snl-two-ensembles} and \eqref{eq:gm-best_separable} are equal.
 This bound coincides with the totally polarized state studied before when the spin number $j=\frac{1}{2}$.
 
 In the following we try to find a better precision bound making use of the presumably better entangled states.
@@ -1038,7 +1042,7 @@ Moreover it is very useful for homogeneous magnetometry as it has been shown in 
 Here we consider large particle numbers, to make the results simpler.
 
 Since both Dicke states are pure, and following the procedure we used in previous sections, we have that to compute all the $\qfif{\rho^{(s)},j_z^{(n)}}=4(\expect{j_z^{(n)}j_z^{(m)}}-\expect{j_z^{(n)}}\expect{j_z^{(m)}})$ and $\qfif{\rho^{(s)},J_z}$ appearing in Eqs.~\eqref{eq:gm-bound-insensitive-sinens} and \eqref{eq:gm-bound-sensitive-sinens}.
-Since both states are unpolarized and PI, we have that $\expect{J_z}=0$ and $\expect{j_z^{(n)}}=0$ for both cases
+Since both states are unpolarized and permutationally invariant, we have that $\expect{J_z}=0$ and $\expect{j_z^{(n)}}=0$ for both cases
 Therefore, we only need to compute the second moments to compute the needed variances.
 
 To distinguish between the to cases, $\ket{\dicke{N}}$ and $\ket{\dicke{N}}_x$, we will denote their expectation values by $\expect{\cdot}_{\dicke{}}$ and $\expect{\cdot}_{\dicke{},x}$, respectively.
@@ -1083,7 +1087,7 @@ Substituting Eqs.~\eqref{eq:gm-expect-jz2-both-dicke} and \eqref{eq:gm-expect-jz
     \label{eq:gm-bound-dicke-sensitive}
   \end{align}
 \end{subequations}
-where Eq.~\eqref{eq:gm-bound-dicke-sensitive} shows in principal a HS behavior in the second term, whenever the particles are very correlated among each other in the position subspace.
+where Eq.~\eqref{eq:gm-bound-dicke-sensitive} shows in principal a Heisenberg scaling behavior in the second term, whenever the particles are very correlated among each other in the position subspace.
 This is due to the metrological enhancement for the sensing of the homogeneous field.
 In the next section, we will see another example of a state useful for homogeneous field estimation that is also useful for gradient magnetometry.
 
