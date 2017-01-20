@@ -7,7 +7,7 @@
 
 \lettrine[lines=2, findent=3pt, nindent=0pt]{I}{n} this chapter, one of the most fundamental two-parameter estimation tasks in magnetometry is considered, namely gradient magnetometry.
 We will add the gradient of the magnetic field as the second parameter beside the constant (homogeneous) part of the field.
-While most works in magnetometry with a single ensemble focus only on the determination of the strength and direction of magnetic field, certain measurement schemes for the gradient have already been proposed and tested experimentally.
+While most works in magnetometry with a single ensemble focus only on the determination of the strength and direction of the magnetic field, certain measurement schemes for the gradient have already been proposed and tested experimentally.
 We study gradient magnetometry with an ensemble of atoms described by a very general probability distribution function for the position of the atoms, and considering atoms with an arbitrary spin.
 Some schemes use an imaging of the ensemble with a high spatial resolution, however, they do not count as single-ensemble methods in the sense we use this expression in our paper, since in this case not only collective observables are measured  \cite{Vengalattore2007,Zhou2010,Koschorreck2011}.
 There is a method based on collective measurements of the spin length of a fully polarized ensemble \cite{Behbood2013}.
@@ -15,7 +15,7 @@ Finally, there is a scheme where they use as a trial state a many-body singlet s
 
 We calculate precision bounds for estimating the gradient of the magnetic field based on the quantum Fisher information.
 For quantum states that are invariant under the homogeneous magnetic field, a single parameter estimation is sufficient.
-In contrast to this, for states that are sensitive to the homogeneous fields, a two-parameter estimation problem must be solved to obtain the gradient parameter, since the homogeneous field must be also taken into account.
+In contrast to this, for states that are sensitive to the homogeneous fields, a two-parameter estimation problem must be solved to obtain the gradient parameter, since the homogeneous field must also be taken into account.
 We use our method to calculate precision bounds for gradient estimation with a chain of atoms and even with two spatially separated atomic ensembles which feel different magnetic fields.
 As we said, we also consider a single atomic ensemble with an arbitrary density profile, in which atoms cannot be addressed individually, which is a very relevant case for experiments.
 Our model can take into account even correlations between particle positions.
@@ -39,7 +39,7 @@ However, in the case of a linear arranged particle ensemble only the derivative 
 
 We will determine the precision bounds for the estimation of the magnetic field gradient $B_1$ based on the quantum Fisher information \cite{Paris2009,Braunstein1994,Holevo1982,Helstrom1976,Petz2002,Petz2008}.
 In this context the Heisenberg and shot-noise scaling are defined as usual.
-The achievable precision in terms of the number of particles scale as $\varinv{\theta}\sim N$ and $\varinv{\theta}\sim N^2$ for SNS and HS respectively.
+The achievable precision in terms of the number of particles scales as $\varinv{\theta}\sim N$ and $\varinv{\theta}\sim N^2$ for SNS and HS respectively.
 We will show that with spin chains or two ensembles at different positions the Heisenberg scaling is possible.
 Concerning the case of a single ensemble, we will show the following.
 Since in such systems the atoms cannot be be individually addressed, we will assume that the quantum state is permutationally invariant.
@@ -57,7 +57,7 @@ We find that even in the case of gradient magnetometry the shot-noise scaling ca
 However, in the single-ensemble scenario, the shot-noise scaling can be surpassed only if the particle positions are correlated, which is the case if the particles attract each other.
 We will go into the details in Section~\ref{sec:gm-single-cloud}.
 
-The following sections are organized as follows. In Section~\ref{sec:gm-the-setup}, we will present the setup of the system.
+The chapter is organized as follows. In Section~\ref{sec:gm-the-setup}, we will present the setup of the system.
 In Section~\ref{sec:gm-cramer-rao-bounds}, the metrological basic concepts used in the chapter are presented.
 In Section~\ref{sec:gm-io-chain-and-two-ensembles}, we will show the results for the chain of ions and for when two distant ensembles are considered
 In Section~\ref{sec:gm-single-cloud}, we restrict our calculations to single PI atomic ensembles and we develop some particular cases, such as the singlet spin state or the totally polarized state.
@@ -65,12 +65,11 @@ In Section~\ref{sec:gm-single-cloud}, we restrict our calculations to single PI 
 \subsection{The setup}
 \label{sec:gm-the-setup}
 
-In this section, we will present characteristics of our setup.
-For simplicity, as well as following  recent experiments (e.g., Ref.~\cite{Koschorreck2011}), we will consider an ensemble of spin-$j$ particles placed in a one-dimensional setup, $x$ being the spatial coordinate.
-Furthermore, we assume that the particles are point-like particles, which is a good approximation when the wave-packet of each particle is much smaller than the trap in which they are or the size of the trap is much smaller than the, let us say, the distance between two traps of a differential metrology device.
-We also assume that we have particles that behave classically among each other, i.e., that there is a negligible probability of been two particles in the same spot or that their wave-functions overlap.
-Hence, we can treat them as distinguishable particles for all purposes.
-On the other hand, they have internal degrees of freedom, their spin, that is quantum. This is a very good description to many of the cold gas experiments.
+In this section, we will present the characteristics of our setup.
+For simplicity, as well as following  recent experiments (e.g., Ref.~\cite{Koschorreck2011}), we will consider an ensemble of spin-$j$ particles placed in a one-dimensional trap or a chain.
+Furthermore, we will assume that the particles are point-like and distinguishable.
+On the other hand, we assume that the particles have a spin, which is a quantum degree of freedom.
+Such a model is used typically to describe experiments with cold atomic ensembles.
 
 Based on these considerations, we assume that the state is factorizable into a spatial and a spin part as
 \be
@@ -84,9 +83,9 @@ and that the spatial part can be characterized as an incoherent mixture of point
 \ee
 where $\ket{\varphi_{\bs{x}}}$ is a pure state of each particle been placed at $\bs{x}=(x_1,x_2,\dots,x_N)$, respectively.
 Each part of the state acts on different Hilbert spaces denoted by $\mathcal{H}^{(\text{x})}$ and $\mathcal{H}^{(\text{s})}$, respectively.
-Note that we skip to write the superscript $(\text{x})$, denoting the Hilbert space at which $\ket{\varphi_{\bs{x}}}$ belongs, for simplicity.
+Note that we skip to write the superscript $(\text{x})$, denoting the Hilbert space to which $\ket{\varphi_{\bs{x}}}$ belongs, for simplicity.
 
-In order to write the operators, including the state $\rho^{(\text{x})}$, acting on the Hilbert space $\mathcal{H}^{(\text{x})}$, we will invoke the completeness relation found on the literature \citep{Sakurai2010, Cohen-Tannoudji1977} for the spatial continuous Hilbert space
+In order to write the operators, including the state $\rho^{(\text{x})}$, acting on the Hilbert space $\mathcal{H}^{(\text{x})}$, we will invoke the completeness relation found in the literature \citep{Sakurai2010, Cohen-Tannoudji1977} for the spatial continuous Hilbert space
 \be
   \int \ketbra{\bs{x}}{\bs{x}}\,\text{d}^N\bs{x} = \mtxid,
 \ee
@@ -96,7 +95,7 @@ where $\ket{\bs{x}}=\ket{x_1}^{(1,\text{x})}\otimes\ket{x_2}^{(2,\text{x})}\cdot
 \ee
 where $\delta(\bs{x}-\bs{y})$ is the Dirac delta found in the literature \citep{Sakurai2010, Cohen-Tannoudji1977}.
 
-To see how our notation works, let us write the vector of the position operators for each particle as $\hat{\bs{x}}\equiv(x^{(1)},x^{(2)},\dots,x^{(N)})$, where we used the "$\hat{}$" notation to distinguish it from the vector of position variables.
+To see how our notation works, let us write the vector of the position operators for each particle as $\hat{\bs{x}}\equiv(x^{(1)},x^{(2)},\dots,x^{(N)})$, where we used the $\hat{\cdot}$ notation on top of $\bs{x}$ to distinguish it from the vector of position variables.
 It is known that $\hat{\bs{x}}$ acting on $\ket{\bs{x}}$ will give $\bs{x}\ket{\bs{x}}$ \cite{Sakurai2010, Cohen-Tannoudji1977}.
 Hence,
 \be
@@ -188,7 +187,7 @@ Then, we discuss the case of quantum states sensitive to homogeneous fields, whi
 We show that the precision bound obtained does not change under spatial translation, which is one of the main tools to derive our bounds.
 For the two-parameter estimation task, we will introduce the two-parameter Cram\'er-Rao bound and the corresponding two-parameter QFI matrix, and we adapt those expressions to our problem.
 
-For clarity we present our main tools in subsequent paragraphs before going into details.
+For clarity, we present our main tools in subsequent paragraphs before going into details.
 Here we define a functional very similar to the QFI Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}.
 This expression will be used along this chapter and it will be useful for the transition to the multi-parameter problem, i.e, it is equivalent to the QFI for the single parameter estimation problem but still it gives the chance to switch to the multi-parameter case easily.
 The function is defined as follows.
@@ -225,7 +224,7 @@ This form leads to simpler arguments in our derivations through the following se
 
 For pure states it simplifies also to
 \be
-  \qfif{\ket{\psi},A,B}=4\left(\expect{AB}_{\psi}-\expect{A}_{\psi}\expect{B}_{\psi}\right),
+  \qfif{\ket{\psi},A,B}=4\left(\expect{AB}_{\psi}-\expect{A}_{\psi}\expect{B}_{\psi}\right).
   \label{eq:gm-FAB-pure}
 \ee
 Note that we recover $\qfif{\rho,A,A}=4(\Delta A)_\rho^2$ as can be found in the Eq.~\eqref{eq:bg-rewrite-qfi} for single-parameter estimation with pure states \cite{Paris2009,Toth2013}.
@@ -332,10 +331,15 @@ The homogeneous field will rotate all the spins in the same way,
 while the field gradient rotates the spins
 differently depending on the position of the particles.
 Now, instead to the Cram\'er-Rao bound Eq.~\eqref{eq:gm-one parameter precision bound},
-we have a matrix inequality \cite{Paris2009}.
+we have a matrix inequality \cite{Paris2009}
+\be
+  \text{Cov}(b_0,b_1) \geqslant \mathbfcal{F}^{-1},
+  \label{eq:gm-matrix-inequality}
+\ee
+where $\text{Cov}(b_0,b_1)$ is the covariance matrix for $b_0$ and $b_1$.
 
-For the matrix inequality, we have the inverse of QFI matrix $\mathbfcal{F}$ on one hand, which depends on $\rho$ and the two generators $H_0$ and $H_1$, and the covariance matrix on the other hand.
-In this section, we are only interested on the variance of the gradient parameter, $\varian{b_1}$.
+For the matrix inequality Eq.~\eqref{eq:gm-matrix-inequality}, we have the inverse of QFI matrix $\mathbfcal{F}$ on one hand, which depends on $\rho$ and the two generators $H_0$ and $H_1$, and the covariance matrix on the other hand.
+In this section, we are only interested in the variance of the gradient parameter, $\varian{b_1}$.
 Since we have to compute the inverse of the QFI matrix and then look at the element corresponding to the $\varian{b_1}$, the determinant of $\mathbfcal{F}$ cannot be zero.
 $H_0$ and $H_1$ are Hermitian operators and commute with each other.
 For unitary dynamics of the type Eq.~\eqref{eq:gm-whole-unitary-b_i-encoded}, the QFI matrix elements are computed as $\mathbfcal{F}_{ij}\equiv \qfif{\rho, H_i, H_j},$ following the definition of Eq.~\eqref{eq:gm-FAB}.
@@ -426,11 +430,11 @@ The discourse we have had on the preceding section has a vital importance to und
 
 Despite the generality of the tools we developed in Section~\ref{sec:gm-cramer-rao-bounds}, it is always useful to start with simple but concise examples.
 For this, we choose two state-of-the-art systems for the external state $\rho^{(\text{x})}$ which we know that behave well for estimating the gradient parameter.
-We will study the chain of atoms, where the atoms are placed one-by-one in a $1$-dimensional grid of constant separation of $a$, and the two-ensembles of atoms, where half of the atoms are in $x=-a$ and the rest in $x=+a$.
+We will study the chain of atoms, where the atoms are placed one-by-one in a $1$-dimensional lattice with a constant separation $a$, and the two-ensembles of atoms, where half of the atoms are in $x=-a$ and the rest in $x=+a$.
 
 \subsubsection{Distinguishable atoms in a 1D lattice}
 
-As we have said, the first spatial state will be given by $N$ particles all placed equidistantly from each other on a one-dimensional spin chain, i.e., a chain of atoms in a $1$-dimensional lattice
+As we have said, the first spatial state will be given by $N$ particles all placed equidistantly from each other in a one-dimensional spin chain, i.e., a chain of atoms in a $1$-dimensional lattice
 \cite{Altenburg2016},
 see Figure~\ref{fig:ionchain-evolution}.
 We have that for that matter the probability density function describing the system is
@@ -453,7 +457,7 @@ We have that for that matter the probability density function describing the sys
   \end{center}
 \end{figure}
 
-With this at hand we compute the single point averages and the two point averages corresponding to the ion-chain.
+With this at hand we compute the single-point averages and the two-point averages corresponding to the ion-chain.
 For the single-point average, one of the integrals appearing in Eq.~\eqref{eq:gm-bound-for-sensitive-and-thermal-state}, we have that
 \be
   \int  x_n\prob(\bs{x})\,\text{d}^N\bs{x} = na,
@@ -464,11 +468,11 @@ and for the two-point correlation, which appears in Eqs.~\eqref{eq:gm-bound-for-
 \ee
 
 On the other hand, we use first a totally polarized state in the $y$-direction for the internal degrees of freedom, $\rho^{(\text{s})}=(\ketopbra{+j}{_y}{+j}_y)^{\otimes N}$ appeared in Eq.~\eqref{eq:bg-totally-polarized}.
-This state is a state sensitive to the homogeneous field, so using that the state is pure and separable
+This state is sensitive to the homogeneous field, so using that the state is pure and separable
 \be
   \qfif{\ket{+j}_y^{\otimes}, j_z^{(n)},j_z^{(m)}}=4(\expect{j_z^{(n)},j_z^{(m)}}-\expect{j_z^{(n)}}\expect{j_z^{(m)}})=2j\delta_{n,m}.
 \ee
-Since this function is linear in the second and third arguments, $\qfif{\ket{+j}_y^{\otimes}, j_z^{(n)},J_z}=2j$ and $\qfif{\ket{+j}_y^{\otimes}, J_z}=2jN$.
+Since this function is linear in the second and third arguments, we have that $\qfif{\ket{+j}_y^{\otimes}, j_z^{(n)},J_z}=2j$ and $\qfif{\ket{+j}_y^{\otimes}, J_z}=2jN$.
 With this, we can now write the precision bound for a chain of atoms when the internal state is totally polarized along the $y$-axis as
 \be
 \begin{split}
@@ -482,17 +486,19 @@ Despite that Eq.~(\ref{eq:gm-result-for-chain-without-sigma}) is a third order f
 Hence, we have to normalize the bound with the effective size of the system, such that separable states would scale as SNS.
 This restores the ultimate threshold of the precision to $\sim N^2$ as usual.
 
-In our case we decide to use in all cases the standard deviation of the averaged particle position as the standard length measure of the system.
+In this section, we will use the standard deviation of the averaged particle position as the standard length measure of the system.
 We also include in our next definitions the averaged correlation of two different particle positions, since it will appear in the following sections and for completeness.
 They are computed as
-\begin{align}
-  \mu &= \int \frac{\sum_{n=1}^N x_n}{N} \prob(\bs{x}) \, \text{d}^N\bs{x},
-  \label{eq:gm-mean} \\
-  \sigma^2 &= \int \frac{\sum_{n=1}^N x_n^2}{N} \prob(\bs{x}) \, \text{d}^N\bs{x}  - \mu^2,
-  \label{eq:gm-variance} \\
-  \eta & =  \int \frac{\sum_{n\neq m} x_n x_m}{N(N-1)}\prob(\bs{x}) \, \text{d}^N\bs{x} - \mu^2
-  \label{eq:gm-correlation}
-\end{align}
+\begin{subequations}
+  \begin{align}
+    \mu &= \int \frac{\sum_{n=1}^N x_n}{N} \prob(\bs{x}) \, \text{d}^N\bs{x},
+    \label{eq:gm-mean} \\
+    \sigma^2 &= \int \frac{\sum_{n=1}^N x_n^2}{N} \prob(\bs{x}) \, \text{d}^N\bs{x}  - \mu^2,
+    \label{eq:gm-variance} \\
+    \eta & =  \int \frac{\sum_{n\neq m} x_n x_m}{N(N-1)}\prob(\bs{x}) \, \text{d}^N\bs{x} - \mu^2,
+    \label{eq:gm-correlation}
+  \end{align}
+\end{subequations}
 where $\mu$ denotes the averaged position of the particles, $\sigma^2$ the variance of position of the particles and $\eta$ the position correlation between different particles.
 So, the system effective width for the chain of atoms, computed by the variance Eq.~\eqref{eq:gm-variance}, is given as
 \be
@@ -501,7 +507,7 @@ So, the system effective width for the chain of atoms, computed by the variance 
 \ee
 It turns out that Eq.~\eqref{eq:gm-variance-chain} exactly coincides with one of the factors we have in Eq.~\eqref{eq:gm-result-for-chain-without-sigma}.
 Substituting this into the Eq.~\eqref{eq:gm-result-for-chain-without-sigma} we have that,
-for ion-chains where their constituents are separated by a constant distance and where the spin-state $\rho^{(\text{s})}$ is the totally polarized state along the $y$-direction, the precision bound is given by
+for ion-chains where the particles are separated by a constant distance and where the spin-state $\rho^{(\text{s})}$ is the totally polarized state along the $y$-direction, the precision bound is given by
 \be
   \varinv{b_1}_{\text{ch,tp}} \leqslant \sigma_{\text{ch}}^2 2jN,
 \ee
@@ -509,7 +515,7 @@ in terms of $\sigma_{\text{ch}}$, the spin of each particle $j$ and the particle
 
 \subsubsection{Differential magnetometry with two ensembles}
 
-We now turn our attention to a state which is constituted by two distinguishable ensembles of atoms.
+We now turn our attention to the case of two distinguishable ensembles of atoms.
 Two ensembles of spin-$j$ atoms spatially separated from each other have been realized in cold gases (e.g., Ref.~\cite{Julsgaard2001}), and can be used for differential interferometry \cite{Eckert2006, Landini2014}.
 We will also use an internal state such the maximal QFI is achieved so the reader gets familiar with our approach and sees how the best state to measure the gradient parameter looks like in our framework.
 
@@ -519,24 +525,26 @@ The spatial part is described by the following probability density function, whe
   \label{eq:gm-double-well-spatial-pdf}
 \ee
 This could be realized in a double-well trap, where the width of the wells is negligible compared to the distance of the wells.
-Note that a state defined by Eq.~\eqref{eq:gm-double-well-spatial-pdf} and Eq.~\eqref{eq:gm-thermal-state} is a pure state on the position Hilbert space.
+Note that a state defined by Eq.~\eqref{eq:gm-double-well-spatial-pdf} and Eq.~\eqref{eq:gm-thermal-state} is a pure state in the position Hilbert space.
 To distinguish the two wells we will use the labels "L" and "R" for the left and right wells respectively, which is a shorthand which collects the first half of the particles and the last half into a single index, respectively.
 With this we are able to compute the single-point and two-point correlation functions as
-\begin{align}
-  \int  x_n\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor
-  \begin{aligned}
-    & {-a} && \text{if }  n\in \text{L},\\
-    &  a   && \text{if }  n\in \text{R},
-  \end{aligned}\right.
-  \label{eq:single-point-function-double-well}\\
-  \int x_n x_m\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor
-  \begin{aligned}
-    &{-a^2} && \text{if } (n,m)\in \text{(L,L) or (R,R),}\\
-    & a^2   && \text{if } (n,m)\in \text{(L,R) or (L,R).}
-  \end{aligned}
-  \right.
-  \label{eq:two-point-function-double-well}
-\end{align}
+\begin{subequations}
+  \begin{align}
+    \int  x_n\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor
+    \begin{aligned}
+      & {-a} && \text{if }  n\in \text{L},\\
+      &  a   && \text{if }  n\in \text{R},
+    \end{aligned}\right.
+    \label{eq:single-point-function-double-well}\\
+    \int x_n x_m\prob(\bs{x})\,\text{d}^N\bs{x} &= \lcor
+    \begin{aligned}
+      &{-a^2} && \text{if } (n,m)\in \text{(L,L) or (R,R),}\\
+      & a^2   && \text{if } (n,m)\in \text{(L,R) or (L,R).}
+    \end{aligned}
+    \right.
+    \label{eq:two-point-function-double-well}
+  \end{align}
+\end{subequations}
 
 We will try states insensitive to the homogeneous fields.
 Since the spatial part is a pure state in the position subspace, we will try pure states in the spin subspace due to the fact that the QFI is maximized by pure states as it was shown in Section~\ref{sec:bg-quantum-metrology}.
@@ -544,11 +552,11 @@ For pure states we have that the QFI is computed directly as four times the vari
 So, we just choose a spin-state that maximizes the variance of $H_1$ when the spatial part is Eq.~\eqref{eq:gm-double-well-spatial-pdf}.
 Hence, the best state in this case is
 \be
-  \label{eq:best-state}
   \ket{\Psi} = \frac{1}{\sqrt{2}}(\ket{{+j}\cdots {+j}}^{(\text{L})}\ket{{-j}\cdots{-j}}^{(\text{R})}+\ket{{-j}\cdots {-j}}^{(\text{L})}\ket{{+j}\cdots{+j}}^{(\text{R})}),
+  \label{eq:best-state}
 \ee
-where it can be seen as the superposition of the state with fewest energy and the state with greatest energy when the Hamiltonian is $H_1$, see Figure~\ref{fig:gm-double-well}.
-The state $\ket{\Psi}$ is indeed insensitive to the homogeneous field since both constituents are eigenstates of $H_0$ with the same eigenvalue.
+where it can be seen as the superposition of the state with the smallest energy and the state with the greatest energy when the Hamiltonian is $H_1$, see Figure~\ref{fig:gm-double-well}.
+The state $\ket{\Psi}$ is indeed insensitive to the homogeneous field since both states of the superposition in Eq.~\eqref{eq:best-state} are eigenstates of $H_0$ with the same eigenvalue.
 Moreover, the state is also maximally entangled.
 \begin{figure}[htp]
   \begin{center}
@@ -572,7 +580,7 @@ We compute first the $\qfif{\rho^{(\text{s})},j_z^{(n)},j_z^{(m)}}$ for $\ket{\P
   \end{aligned}
   \right.
 \ee
-Now, if we separate the terms of the sum in Eq.~\eqref{eq:gm-bound-for-insensitive-and-thermal-state} into two groups, such that one sum is for indexes $(n,m)\in\text{(L,L) or (R,R)}$, and the other is for indexes $(n,m)\in\text{(L,R) or (R,L)}$, we can compute the bound for the best state for the two ensemble case as
+Now, if we separate the terms of the sum in Eq.~\eqref{eq:gm-bound-for-insensitive-and-thermal-state} into two groups, such that one of the sums is for indexes $(n,m)\in\text{(L,L) or (R,R)}$, and the other is for indexes $(n,m)\in\text{(L,R) or (R,L)}$, we can compute the bound for the best state for the two ensemble case as
 \be
 \begin{split}
   \varian{b_1}|_{\max} &=
@@ -596,7 +604,7 @@ For a general $\sigma^2$, the Eq.~\eqref{eq:gm-hl-twoens} can be seen as the Hei
 Note that the state is insensitive to the Homogeneous field, hence this bound is saturable by some measurement, and that the state $\ket{\Psi}$ maximizes the variance of $H_1$ for any given $\sigma^2$.
 Before concluding, we want to show another more usual approach to the same problem.
 
-Knowing that the QFI is convex in the state and considering the spatial state to be Eq.~\eqref{eq:gm-double-well-spatial-pdf}, we reduce our problem to the internal subspace in which state that maximizes the QFI is the one that maximizes $(\Delta H_1)^2$.
+Knowing that the QFI is convex in the state and considering the spatial state to be Eq.~\eqref{eq:gm-double-well-spatial-pdf}, we reduce our problem to the internal subspace in which the state that maximizes the QFI is the one that maximizes $(\Delta H_1)^2$.
 In this case, taking into account the particle locations are given and that we have zero magnetic field at the origin, we obtain
 \be
   H_{1,\text{eff}}^{(\text{s})} = a(\mtxid^{(\text{L})}\otimes J_{z}^{(\text{R})}-J_{z}^{(\text{L})}\otimes \mtxid^{(\text{R})}),
@@ -619,7 +627,7 @@ For such states we only have to compute the QFI for $H_{1,\text{eff}}$ Eq.~\eqre
 where we used the general rule Eq.~\eqref{eq:bg-qfi-additive-for-tensor-product} and that any scalar multiplying the second argument of the QFI can be extracted outside the function squared.
 
 Now, we analyze how the bound would look like for states sensitive to the homogeneous field.
-Note that the single point correlation function for particles at "(L)" and "(R)" is $a$ and $-a$ respectively, and the two point correlation function is $a^2$ for both. Thus, in the case of computing the bound for the states sensitive to the homogeneous fields, we have that $F_{01}^{(\text{L})} = -F_{01}^{(\text{R})}$, which we used the superscript to indicate in this case over which subspace is computed the QFI matrix element, whereas the other two matrix elements we have to compute are equal for both subspaces "(L)" and "(R)".
+Note that the single-point correlation function for particles at "(L)" and "(R)" is $a$ and $-a$ respectively, and the two-point correlation function is $a^2$ for both. Thus, in the case of computing the bound for the states sensitive to the homogeneous fields, we have that $F_{01}^{(\text{L})} = -F_{01}^{(\text{R})}$, which we used the superscript to indicate in this case over which subspace is computed the QFI matrix element, whereas the other two matrix elements we have to compute are equal for both subspaces "(L)" and "(R)".
 The precision bound for states sensitive to the homogeneous fields is obtained as
 \be
 \begin{split}
@@ -633,12 +641,12 @@ The precision bound for states sensitive to the homogeneous fields is obtained a
 \ee
 where we use in the first line the identities for additions under tensor products Eqs.~\eqref{eq:bg-qfi-additive-for-tensor-product} and \eqref{eq:gm-FAB-additive-under-tensor}, and in the last line we extract the common factor $a^2$ and we use the linearity on the arguments the QFI.
 Note that this is the same precision bound we will obtain for states insensitive to the homogeneous fields.
-The reader may note that this bound relates how good the state on the "(L)" or "(R)" subsystem is in sensing the homogeneous field with the precision achievable for the gradient parameter.
+Note that this bound relates how good the state on the "(L)" or "(R)" subsystem is in sensing the homogeneous field with the precision achievable for the gradient parameter.
 This is reasonable because the state in "(L)" is not interacting neither correlated with "(R)".
 Hence, after the homogeneous field is estimated for "(L)" and "(R)" independently,
 the gradient can also be estimated as the difference between the two estimates divided by the square distance $a^2$.
 
-In the literature one can find several states that can be used to measure homogeneous field, such as the GHZ states \cite{Greenberger1989}, unpolarized Dicke states, and spin-squeezed states.
+In the literature one can find several states that can be used to measure a homogeneous field, such as the GHZ states \cite{Greenberger1989}, unpolarized Dicke states, and spin-squeezed states.
 Note that if $\ket{\Psi}$ is separable, then based in Eq.~\eqref{eq:bg-shot-noise-limit} and for any of the two bounds Eqs.~\eqref{eq:gm-bound-insensitive-twoens-simplified} and \eqref{eq:gm-bound-sensitive-twoens-simplified}, we have
 \be
   \qfif{\ket{\Psi}_{\text{sep}}^{(\text{L})}\ket{\Psi}_{\text{sep}}^{(\text{R})},\,a(J_z^{(\text{L})} \mtxid^{(\text{R})}-\mtxid^{(\text{L})} J_z^{(\text{R})})}
@@ -679,7 +687,9 @@ This is the reason we use "$\leqslant$" instead of "$|_{\max}$".
 \label{tab:result-states-two-ensembles}
 \end{table}
 
-In this section we have shown to the reader how one should handle the spatial width of the system for classifying it for gradient metrology as well as a state-of-the-art system in which the Heisenberg limit is achieved. Moreover, we have sown how to use the tools developed on previous section to compute simple bounds. In the next section we will focus on single cold-atoms ensembles since the play an important role on todays quantum technology and experiments and many groups are trying to realize them whit great success but with few theoretical support from our point of view.
+In this section we have shown to the reader how one should handle the spatial width of the system for classifying it for gradient metrology as well as a state-of-the-art system in which the Heisenberg limit is achieved.
+Moreover, we have shown how to use the tools developed in the previous section to compute simple bounds.
+In the next section we will focus on single cold-atom ensembles since they play an important role in quantum technology, and many groups are trying to realize them whit great success but with few theoretical support.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Magnetometry with a single atomic ensemble}
@@ -705,7 +715,7 @@ assume that a PI procedure prepared the states.
   \includegraphics[scale=1.2]{img/GM_single_cloud.pdf}
   \caption[Single atomic ensemble for gradient magnetometry]{(blue-point) Atomic ensemble with their spins (red-arrow) pointing randomly in any direction coupled with a linear magnetic field $B_z$ (green).
   The spatial state $\rho^{(\text{x})}$ is assumed to be permutationally invariant.
-  The ensemble is centered around the place at which the magnetic field is null due to the invariance of the precision bound under translations of the system.}
+  The ensemble is centered around the place at which the magnetic field is zero due to the invariance of the precision bound under translations of the system.}
   \label{fig:gm-single-ensemble-in-gradient}
   \end{center}
 \end{figure}
@@ -766,7 +776,7 @@ From the definition of the QFI for states insensitive to the homogeneous field, 
   &=\sum_{n=1}^N \sigma^2 \qfif{\rho,j_z^{(n)}} + \sum_{n\neq m}^N \eta \qfif{\rho,j_z^{(n)},j_z^{(m)}}.
 \end{split}
 \ee
-Together with Equation~\eqref{eq:gm-qfi-identity-insensitive} we write the precision bound for states insensitive to the homogeneous fields as
+Together with Eq.~\eqref{eq:gm-qfi-identity-insensitive} we write the precision bound for states insensitive to the homogeneous fields as
 \be
 (\Delta b_1)^{-2}|_{\max} = (\sigma^2-\eta) \sum_{n=1}^{N} \qfif{\rho^{(\text{s})},j_z^{(n)}}.
 \label{eq:gm-bound-insensitive-sinens}
@@ -795,7 +805,7 @@ the precision of estimating the gradient is bounded from above as
 \ee
 The second term on the right-hand side of Eq.~\eqref{eq:gm-bound-sensitive-sinens} is new in the sense that it did not appear in the bound for states insensitive to homogeneous fields.
 Note that the bound in Eq.~(\ref{eq:gm-bound-sensitive-sinens}) is not necessarily saturable if the optimal measurements to estimate the gradient parameter and the homogeneous parameter do not commute with each other.
-Note that even if the first term cannot overcome the SNS, in the second term the covariance is multiplied by QFI for estimating the homogeneous field and therefore this concrete term can make the bound, for extremely correlated particle positions, to scale as HS.
+Note also that even if the first term cannot overcome the SNS, in the second term the covariance is multiplied by QFI for estimating the homogeneous field and therefore this concrete term can make the bound, for extremely correlated particle positions, to scale as HS.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Precision bounds for different spin-states}
@@ -835,7 +845,7 @@ The summary for different states can be found in the Table~\ref{tab:compare all 
 \caption[Bounds on the precision for different internal states for gradient magnetometry.]{Precision bounds for  differential magnetometry for various quantum states.
 For the definition of the states, see the text.
 If the bound are proved to be saturable then
-the \"max\" subscript is used instead of an inequality.}
+the "$|_{\max}=$" subscript is used instead of an inequality.}
 \label{tab:compare all the states}
 \end{table}
 
@@ -949,7 +959,7 @@ The totally polarized state can easily be prepared experimentally.
 It has already been used for gradient magnetometry with a single atomic ensemble \cite{Koschorreck2011,Vengalattore2007}.
 For the gradient measurement as for the measurement of the homogeneous field, the polarization must be perpendicular to the field we would like to measure in order to take advantage of the interaction between the particles and the field.
 Here we chose as before the totally polarized state along the $y$-axis which is written as $\ket{j}_y^{\otimes N}$.
-Note that this state is a state sensitive to the homogeneous field, hence, we must use the Eq.~(\ref{eq:gm-bound-sensitive-sinens}) to compute the bound.
+Note that this state is sensitive to the homogeneous field, hence, we must use the Eq.~(\ref{eq:gm-bound-sensitive-sinens}) to compute the bound.
 
 For the pure states we have that $\qfif{\ket{\psi}, A} = 4(\Delta A)^2$.
 Together with,
@@ -980,11 +990,11 @@ It will turn out that for $j>\frac{1}{2},$ it is possible
 to achieve a precision higher than with the fully polarized state.
 One has to take into account that if the state is insensitive to the homogeneous field the bound can be saturated for sure, and if the state is sensitive to homogeneous fields, it would depend on the measurements compatibility and on the system as we discussed before.
 From another point of view and instead of using the Eqs.~\eqref{eq:gm-bound-insensitive-sinens} and \eqref{eq:gm-bound-sensitive-sinens}, what we have is that the bound is the same $\qfif{\rho, H_1}$ for both cases.
-Note that we can place the system at the point in which the magnetic field is null without changing the result.
+Note that we can place the system at the point in which the magnetic field is zero without changing the result.
 Thus, it is easy to argue that the precision bound itself is a convex function on the states.
 Moreover, it is also a convex function of the states when the external state $\rho^{(\text{x})}$ is fixed and only the internal $\rho^{(\text{s})}$ is considered.
 
-In the single ensemble configuration, Eq.~\eqref{eq:gm-f11-thermal} must be computed only, where the two point correlation function returns $\sigma^2$ or $\eta$ based on Eq.~\eqref{eq:gm-two-point-correlation-sinens}.
+In the single ensemble configuration, Eq.~\eqref{eq:gm-f11-thermal} must be computed only, where the two-point correlation function returns $\sigma^2$ or $\eta$ based on Eq.~\eqref{eq:gm-two-point-correlation-sinens}.
 On the other hand, for pure states we have that $\qfif{\rho^{(\text{s})}, j_z^{(n)}, j_z^{(m)}}$ is four times the correlation $\expect{j_z^{(n)}j_z^{(m)}}-\expect{j_z^{(n)}}\expect{j_z^{(m)}}$.
 If the state is a product state, then we have  $\expect{j_z^{(n)}j_z^{(m)}}-\expect{j_z^{(n)}}\expect{j_z^{(m)}}=0$ for all $n\neq m$.
 Hence, $\eta$ does not play any role in the precision.
@@ -1009,9 +1019,9 @@ Finally, the best achievable precision for separable states is written as
 where the state itself is sensitive to homogeneous fields.
 This bound coincides with the totally polarized state studied before when the spin number $j=\frac{1}{2}$.
 
-In the following we try to find a better precision bound making use of presumably better entangled states.
+In the following we try to find a better precision bound making use of the presumably better entangled states.
 Note that the bound for the singlet state, even if it is entangled, is above the bound for the totally polarized state but below of the bound defined for the best separable state.
-Nevertheless, when the singlet state is used effect of the homogeneous magnetic field has not to be compensated since it is insensitive to it and thus the bound can be saturated with an optimal estimator for the gradient field.
+Nevertheless, when the singlet state is used the effect of the homogeneous magnetic field has not to be compensated since the state is insensitive to it and thus the bound can be saturated with an optimal estimator for the gradient field.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsubsubsection{The unpolarized Dicke states $\ket{\dicke{N}}_z$ and $\ket{\dicke{N}}_x$}
@@ -1021,13 +1031,14 @@ Unpolarized Dicke states play an important role in quantum optics and quantum in
 The unpolarized Dicke state $\ket{\dicke{N}}_l$ with a maximal $\expect{J_x^2+J_y^2+J_z^2}=\mathcal{J}_{N/2}$, defined in Eq.~\eqref{eq:app-maximum-total-angular-momentum}, and $\langle J_l\rangle=0$ for any $l\in x,y,z$ is particularly interesting due to its entanglement properties and its metrological usefulness.
 This state has been created in photonic experiments \cite{Kiesel2007,Wieczorek2009,Chiuri2012} and in cold atoms \cite{Luecke2011,Hamley2012}, while a Dicke state with $\langle J_z\rangle>0$ has been created with cold trapped ions \cite{haeffner2005}.
 
-The Dicke state $\ket{\dicke{N}}$, the subscript when omitted stands for $z$,  is an eigenstate of $J_z$ so insensitive to homogeneous magnetic field pointing into the $z$-direction, thus the precision can be saturated by some measurement.
-Whereas, The Dicke state $\ket{\dicke{N}}_x$ is sensitive to the homogeneous field.
+The Dicke state $\ket{\dicke{N}}_z$ is an eigenstate of $J_z$ so insensitive to homogeneous magnetic field pointing into the $z$-direction, thus the precision can be saturated by some measurement.
+In the following, $\ket{\dicke{N}}_z$ without the subscript $z$ refers to $\ket{\dicke{N}}_z$.
+On the other hand, the Dicke state $\ket{\dicke{N}}_x$ is sensitive to the homogeneous field.
 Moreover it is very useful for homogeneous magnetometry as it has been shown in Ref.~\cite{Holland1993}.
 Here we consider large particle numbers, to make the results simpler.
 
 Since both Dicke states are pure, and following the procedure we used in previous sections, we have that to compute all the $\qfif{\rho^{(s)},j_z^{(n)}}=4(\expect{j_z^{(n)}j_z^{(m)}}-\expect{j_z^{(n)}}\expect{j_z^{(m)}})$ and $\qfif{\rho^{(s)},J_z}$ appearing in Eqs.~\eqref{eq:gm-bound-insensitive-sinens} and \eqref{eq:gm-bound-sensitive-sinens}.
-Since both states are unpolarized and PI, we have that $\expect{J_z}=0$ $\expect{j_z^{(n)}}=0$ for both cases
+Since both states are unpolarized and PI, we have that $\expect{J_z}=0$ and $\expect{j_z^{(n)}}=0$ for both cases
 Therefore, we only need to compute the second moments to compute the needed variances.
 
 To distinguish between the to cases, $\ket{\dicke{N}}$ and $\ket{\dicke{N}}_x$, we will denote their expectation values by $\expect{\cdot}_{\dicke{}}$ and $\expect{\cdot}_{\dicke{},x}$, respectively.
@@ -1038,8 +1049,8 @@ First of all, from the definition of the Dicke states we have that
   \label{eq:gm-square-total-angular-momentum-dicke}
 \ee
 for both cases.
-We have that $\expect{J_l^2}=0$ for $\ket{\dicke{N}}_l$.
-The remaining of the second moments of Eq.~\eqref{eq:gm-square-total-angular-momentum-dicke} are equal among each other due to the rotational invariance of the states in the $l$-axis.
+Moreover, $\expect{J_l^2}=0$ holds for $\ket{\dicke{N}}_l$.
+The other two second moments of Eq.~\eqref{eq:gm-square-total-angular-momentum-dicke} are equal to the invariance of the states under rotations around the $l$-axis.
 Hence, we can write that
 \begin{subequations}
   \begin{align}
@@ -1048,11 +1059,12 @@ Hence, we can write that
   \end{align}
   \label{eq:gm-expect-jz2-both-dicke}
 \end{subequations}
-Invoking the rotational symmetry again, note that the single particle total spin operator is
+For the single spin components
 \be
   \expect{(j_x^{(n)})^2+(j_y^{(n)})^2+(j_z^{(n)})^2}=\mathcal{J}_{1/2}
 \ee
-and that $\expect{J_l^2}=\sum_{n,m}^N \expect{j_l^{(n)}j_l^{(m)}}$, we arrive at
+holds.
+Invoking the rotational symmetry again and that $\expect{J_l^2}=\sum_{n,m}^N \expect{j_l^{(n)}j_l^{(m)}}$, we arrive at
 \begin{subequations}
   \begin{align}
     \expect{(j_z^{(n)})^2}_{\dicke{}}   &= \frac{1}{4},\\
@@ -1073,7 +1085,7 @@ Substituting Eqs.~\eqref{eq:gm-expect-jz2-both-dicke} and \eqref{eq:gm-expect-jz
 \end{subequations}
 where Eq.~\eqref{eq:gm-bound-dicke-sensitive} shows in principal a HS behavior in the second term, whenever the particles are very correlated among each other in the position subspace.
 This is due to the metrological enhancement for the sensing of the homogeneous field.
-In the next section, we will see another example of a state useful for homogeneous field estimation that is useful for gradient magnetometry.
+In the next section, we will see another example of a state useful for homogeneous field estimation that is also useful for gradient magnetometry.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsubsubsection{The GHZ state}
@@ -1085,14 +1097,14 @@ They have been created experimentally in photonic systems \cite{Pan2000,Yao2012,
 We invoke the definition of the GHZ states Eq.~\eqref{eq:lt-ghz-state} as
 \be
   \ket{\ghz} = \tfrac{1}{\sqrt{2}}(\ket{0\cdots0}+\ket{1\cdots1}).
+  \label{eq:gm-ghz-state}
 \ee
 where $\ket{0}$ and $\ket{1}$ stands for particles with eigenvalue $-1/2$ and $+1/2$ respectively for the one-particle $j_z^{(n)}$ operator.
-This state is very sensitive to the homogeneous field.
+The state Eq.~\eqref{eq:gm-ghz-state} is very sensitive to the homogeneous field.
 
-In order to calculate this bound explicitly, let us recall that for pure states the QFI is simplified to $\qfif{\rho,A}=4\varian{A}$ Eq.~\eqref{eq:bg-qfi-for-pure-states}.
-Following the Eq.~\eqref{eq:gm-bound-sensitive-sinens}, for the GHZ state the expectation value of $j_z^{(n)}$ and
-$J_z$ is equal to zero, and $\expect{(j_z^{(n)})^2}=\frac{1}{4}$ and $\expect{J_z^2}
-= \frac{N^2}{4}$, which give the variances of $j_z^{(n)}$ and $J_z$ respectively.
+In order to calculate the bound explicitly, let us recall that for pure states the QFI is simplified to $\qfif{\rho,A}=4\varian{A}$ Eq.~\eqref{eq:bg-qfi-for-pure-states}.
+Following the Eq.~\eqref{eq:gm-bound-sensitive-sinens}, for the GHZ state the expectation values of $j_z^{(n)}$ and $J_z$ are equal to zero, and $\expect{(j_z^{(n)})^2}=\frac{1}{4}$ and $\expect{J_z^2} = \frac{N^2}{4}$.
+Hence, the variances of $j_z^{(n)}$ and $J_z$ can be computed.
 Finally, we obtain the precision bound for gradient magnetometry for the GHZ state as
 \be
 \label{eq:gm-precision bound for ghz}
