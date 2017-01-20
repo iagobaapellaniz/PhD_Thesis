@@ -37,7 +37,7 @@ For simplicity in the next section, Section~\ref{sec:lt-transform-for-single-obs
 An extension to the case in which more expectation values are given will follow in the Section~\ref{sec:lt-transform-for-m-observables}.
 Finally, we will summarize our results with an explicit formula which will be used to compute the bounds in the most general case.
 
-\subsubsection{Estimation of a general convex function based on the expectation value of an arbitrary observable}
+\subsubsection{Lower bound based on a single observable}
 \label{sec:lt-transform-for-single-observable}
 
 When a convex function $g(\rho)$ is given together with an expectation value of some operator $w=\tr(\rho W)$, a tight lower bound, $\bound{g}(w)$, can be obtained as \cite{Rockafellar1996, Guehne2007, Eisert2007}
@@ -92,7 +92,7 @@ We can generalize Eqs.~\eqref{eq:lt-lower-bound-single-parameter} and \eqref{eq:
 \ee
 where $\bs{ab} =\sum_{k=1}^M a_kb_k$, the usual notation for scalar products of two vectors.
 
-\subsubsection{Explicit form of the expression to be optimized}
+\subsubsection[Lower bound on the QFI]{Lower bound on the quantum Fisher information}
 
 After we have shown how to find a lower bound for a general convex function of the state based on its expectation values and how to simplify that method for the case in which the function is defined as a convex roof, now we are in the position to achieve the main goal of this chapter.
 First of all, we note that for the quantum Fisher Information the inner maximization, the Legendre transform, is obtained optimizing a function quadratic in expectation values,
@@ -138,15 +138,7 @@ Thus, a large care must be taken when optimizing over $\mu$.
 We stress again the generality of these findings beyond linear interferometers covered on the following sections.
 For nonlinear interferometers \cite{Luis2004, Boixo2007, Choi2008, Roy2008, Napolitano2011, Hall2012}, the phase $\theta$ must be estimated assuming unitary dynamics $U=\exp{-iG\theta}$, where $G$ is not a sum of single spin operators, hence, it is different from the angular momentum components.
 
-Next, we will demonstrate the use of our approach for several experimentally relevant situations.
-In the many-particle case, often symmetric operators can be used to describe accurately the system, which makes it possible to carry out calculations for thousand of particles, as will be presented later in this chapter.
-
-\subsection{Examples}
-\label{sec:lt-examples}
-
-In this section, we show how to obtain lower bounds based on the fidelities with respect to the GHZ state and the unpolarized Dicke state as well as with different set of powers of collective angular momentum operators, e.g., the set $\{\expect{J_y}, \expect{J_x}, \expect{J_x^2}\}$.
-
-\subsubsection{Exploiting symmetries}
+\subsubsection{Exploiting the symmetries}
 \label{sec:lt-symmetries}
 
 When making calculations for quantum systems with an increasing number of qubits, we soon run into difficulties when computing the largest eigenvalue of Eq.~\eqref{eq:lt-legendre-for-qfi-simplified}.
@@ -160,7 +152,7 @@ Finally, it is important to note that if the operators $W_k$ are permutationally
 The resulting maximal eigenvalue is the maximal eigenvalue when the whole Hilbert space is taken into account for the maximization.
 Hence, the lower bound obtained in the symmetric subspace is valid even for the general case.
 
-We follow presenting the proof of the recently mentioned observation for completeness.
+For completeness, we follow presenting the proof of the recently mentioned observation.
 Let us denote the ground state of a permutationally invariant Hamiltonian by $\ket{\Psi}$
 This is at the same time the $T=0$ thermal ground state, hence it must be a permutationally invariant pure state.
 For such states $S_{kl}\ketbra{\Psi}{\Psi}S_{kl}=\ketbra{\Psi}{\Psi}$, where $S_{kl}$ is the swap operator exchanging qubits $k$ and $l$.
@@ -199,8 +191,15 @@ There are three possible cases to consider:
   Thus, $\ket{\Psi}$ is not a non-degenerate ground state.
   The proof works in an analogous way for the only nontrivial case $k_+=k_-$, when $S_{k_+,k_-}=\mtxid$.
 \end{enumerate}
-
 Hence, if $N>2$ then only i) is possible and $\ket{\Psi}$ must be symmetric.
+
+Next, we will demonstrate the use of our approach for several experimentally relevant situations.
+In the many-particle case, often symmetric operators can be used to describe accurately the system, which makes it possible to carry out calculations for thousand of particles, as will be presented later in this chapter.
+
+\subsection{Examples}
+\label{sec:lt-examples}
+
+In this section, we show how to obtain lower bounds based on the fidelities with respect to the GHZ state and the unpolarized Dicke state as well as with different set of powers of collective angular momentum operators, e.g., the set $\{\expect{J_y}, \expect{J_x}, \expect{J_x^2}\}$.
 
 \subsubsection{Fidelity measurements}
 \label{sec:lt-bounds-fidelity}
@@ -251,9 +250,9 @@ Due to this, the problem can be simplified to the following equation
   \sup_{\mu}\{\lambda_{\max}[r\ketbra{\ghz}{\ghz}-4(J_z-\mu)^2]\}:= & \max\{0,\sup_{\mu}(\lambda_{+})\}\\
   = & \lcor
   \begin{aligned}
-    &0, && \text{if } r<0,\\
+    &0, && \text{ if } r<0,\\
     &\frac{r}{2}+\frac{r^2}{16N^2} && \text{if } 0\leqslant r\leqslant 4N^2,\\
-    &-N^2+r, && \text{if }r>4N^2,
+    &-N^2+r && \text{if }r>4N^2,
   \end{aligned}
   \right.
   \end{split}
@@ -265,8 +264,8 @@ This way we arrive at the solution for the lower bound of the QFI base on the fi
 \be
   \bound{\mathcal{F}}(F_{\ghz}) = \lcor
   \begin{aligned}
-    & N^2(1-F_{\ghz})^2, && \text{if } F_{\ghz} < 1/2, \\
-    & 0, && \text{if } F_{\ghz}\leqslant1/2.
+    & N^2(1-F_{\ghz})^2 && \text{if } F_{\ghz} < 1/2, \\
+    & 0 && \text{if } F_{\ghz}\leqslant 1/2.
   \end{aligned}
   \right.
 \ee
@@ -326,8 +325,8 @@ Then, using the following identity
 \be
   \sum_{k=0}^q (-1)^k \binom{n}{k}\binom{n}{q-k} = \lcor
   \begin{aligned}
-    &\binom{n}{q/2}(-1)^{q/2},&& \text{for even }q,\\
-    &0, && \text{for odd }q.
+    &\binom{n}{q/2}(-1)^{q/2} && \text{for even }q,\\
+    &0  && \text{for odd }q,
   \end{aligned}
   \right.
   \label{eq:lt-binomial-identity}
@@ -336,13 +335,13 @@ one finds that the squared overlap is given by
 \be
   |\braopket{\dicke{N,m}}{_z}{\dicke{N}}_x|^2 = \lcor
   \begin{aligned}
-    &\frac{\binom{N/2}{m/2}^2\binom{N}{N/2}}{2^N\binom{N}{m}} ,&& \text{for even }m \text{ and }N,\\
-    &0, && \text{for odd }m,
+    &\frac{\binom{N/2}{m/2}^2\binom{N}{N/2}}{2^N\binom{N}{m}} && \text{for even }m,\\
+    &0 && \text{for odd }m,
   \end{aligned}
   \right.
   \label{eq:lt-dicke-overlap}
 \ee
-which is maximal, in the case of even $N$, when $m=N$ or $m=0$, thus the state totally polarized along $+z$-direction or $-z$-direction respectively.
+which is maximal in the case of even $N$ when $m=N$ or $m=0$, the state totally polarized along the $+z$-direction or along the $-z$-direction respectively.
 We skip the case in which $N$ is odd.
 For detailed calculations of Eq.~\eqref{eq:lt-dicke-overlap} see Appendix~\ref{app:calculation-dicke-overlap}.
 
@@ -734,7 +733,7 @@ It is instructive to compare the value of Eq.~\eqref{eq:lt-result-experimental-d
 Such result implies $\qfif{\rho,J_z}/N\geqslant3.3$ which is somewhat bigger than our recent result as we did not use the knowledge of the fourth moments, only the second moments.
 The closeness of the two results is a strong argument for the correctness of our calculations.
 
-\subsection{Scaling for $\qfif{\rho,J_z}$ with $N$}
+\subsection{Scaling of $\qfif{\rho,J_z}$ with $N$}
 
 Recent important works examine the scaling of the quantum Fisher information with the particle number for metrology under the presence of decoherence \cite{Escher2011, Demkowicz-Dobrzanski2012}.
 They consider the QFI defined now for the non-unitary, noisy evolution.

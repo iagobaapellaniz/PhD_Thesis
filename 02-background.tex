@@ -20,11 +20,11 @@ Said this, entanglement is also at the center of the theory of quantum metrology
 Throughout the thesis we will focus mainly on the achievable precision for different systems and schemes.
 
 On the other hand, another very important field of science must be mentioned.
-We are talking about statistics, without which many descriptions of the actual and past physical findings would lack the rigorous interpretation needed.
+We are talking about statistics, without which many descriptions of the actual and past physical findings would lack of the rigorous interpretation needed.
 It basically helps to analyze raw data to make it readable from the human perspective.
 
 This chapter is organized as follows.
-In Section~\ref{sec:bg-statistics-and-stimation}, we introduce the basic concepts of statistics and estimation theory at the same time we go deeper in the concepts invoked in this thesis.
+In Section~\ref{sec:bg-statistics-and-stimation}, we introduce the basic concepts of statistics and estimation theory, focusing on what is necessary for the understanding of this thesis.
 In Section~\ref{sec:bg-quantum-mechanics-for-metrology}, we present the necessary tools of quantum mechanics used throughout the text.
 Finally in Section~\ref{sec:bg-quantum-metrology}, we arrive at the main set of tools used in the quantum metrology framework and by extension in the present work.
 
@@ -34,51 +34,56 @@ Finally in Section~\ref{sec:bg-quantum-metrology}, we arrive at the main set of 
 In this section, we will enumerate the basic concepts of statistics as well as the estimation process.
 As we said, the main mathematical tools used by metrology belong to statistics.
 Moreover, we are especially interested in estimation theory which shows how to properly estimate some quantity based on some data sample.
-The data can be from a set of different heights of a, let us say, basketball team, to the outcomes of a coin toss, or even the wavelength of photons coming out of some radioactive sample.
-The aim of this section is to give the reader sufficient material to follow this thesis and make it comprehensible since the beginning\footnote{
-For a more detailed material, see Refs.~\cite{Riley2006, Barlow1989}}.
+The data can be of any kind.
+For instance, the data sample might be a set of the heights of a basketball team, or the outcomes of coin tosses, or even the wavelengths of photons coming out of some radioactive sample.
+The aim of this section is to give the reader sufficient material to follow this thesis\footnote{
+For a more detailed introduction to statistics, see Refs.~\cite{Riley2006, Barlow1989}}.
 
 \subsubsection{Probability, data samples, average and variance}
 
 The probability indicates the relative chance of an event to happen.
-For instance, if there is a box with ten red balls and five blue balls, considering that the balls of the same color are indistinguishable and that we extract one randomly, we have $\frac{5}{10+5}=\frac{1}{3}$ of probability to obtain a blue ball and $\frac{2}{3}$ to obtain a red ball.
-The reader may note many properties a probability should have, such as that the probability of any event to happen is always given by a number in between zero and one.
+For instance, if there is a box with 10 red balls and 5 blue balls and assuming we extract on of them randomly, the probability of obtaining a blue ball is given by $\frac{n_{\text{blue}}}{n_{\text{total}}}=\frac{5}{10+5}=\frac{1}{3}$.
+In the same way, the probability of obtaining a red ball is $\frac{n_{\text{blue}}}{n_{\text{total}}}=\frac{2}{3}$.
+Note that some properties of the probabilities arise from simple example.
+First, the probability of any event to happen is always given by a number in between zero and one.
+Second, the sum of the probabilities of all possible events, in this case either blue or red, sum up to one.
 
-When someone has a data sample at hand, it might come from diverse sources and might be represented using multiple forms such as numbers or words (for instance, a table of names of people).
-The first thing one tries to accomplish is to analyze the data to extract the relevant properties from it.
-A data sample always come from a population sample, i.e., the data sample might not be complete (one could lose some in the process, or the population might be huge in comparison with what one can handle), or might carry some error (a measuring device always has an error when estimating a continuous magnitude, e.g., the height of people), or both at the same time.
-Hence, the data sample comes attached with a probability for each data element.
-In the subsequent paragraphs, we will describe these relations between the data samples and probabilities and we will enumerate the most useful properties and formulas.
+With a data sample at hand, we face the task of analyzing the data to extract the relevant properties from it.
+We assume that the data sample always comes from a population sample which represents all the available data before the measurements.
+In general, the data sample might not be complete in the most general case (one could lose some data on the measuring process, or the population might be so large that we can only measure a small portion of it).
+The measurement itself might induce some error in the data too (a measuring device always has an error when estimating a continuous magnitude, e.g., the height of people).
+Hence, the data sample inherits a probability number for each of its data elements.
+In the subsequent paragraphs, we will describe these relations between the data sample and the corresponding probabilities, and we will enumerate the most useful properties and formulas.
 
 First of all, we will explain our notation which follows mainly the one used in Ref.~\cite{Riley2006}.
-A probability function gives the probability of an event $x$ to happen when measuring some random variable $X$, and it is denoted by $\prob(X=x)$.
-Second, due to the random nature of the measurements, the $N$ elements of a data sample are considered outputs of $N$ different random variables with their corresponding $N$ values $\{X_i=x_i\}_{i=1}^N$, or $\bs{X}=\bs{x}$ for short.
+The outcome of magnitude we would like to measure from the data population is called a random variable.
+First, when measuring some random variable $X$, a probability distribution function (PDF) gives the probability of $x$ to come out of the measurement and it is denoted by $\prob(X{=}x)$.
+Second, due to the random nature of the measurement, the $N$ elements of a data sample are considered outputs of $N$ different random variables with their corresponding $N$ values as $\{X_i{=}x_i\}_{i=1}^N$, or $\bs{X}{=}\bs{x}$ for short.
 The joint probability of those random variables is in general not separable.
 This is due to the fact that the data sample elements could depend on the rest of outcomes or some other more complex relation that makes the most general case to be not separable from the probabilistic point of view.
-Therefore we define the probability distribution function (PDF) as an $N$ variable function
+Therefore we define the PDF of the data sample as an $N$-variable function
 \be
-  \prob(\bs{X}=\bs{x}) \equiv \prob(X_1=x_1,X_2=x_2,\dots,X_N=x_N).
+  \prob(\bs{X}{=}\bs{x}) \equiv \prob(X_1{=}x_1,X_2{=}x_2,\dots,X_N{=}x_N).
 \ee
 In the case of separable probabilities, this is written as
 \be
   \label{eq:bg-separable-likelyhood}
-  \prob(\bs{X}=\bs{x}) = \prod_{i=1}^N\prob(X_i=x_i)
+  \prob(\bs{X}{=}\bs{x}) = \prod_{i=1}^N\prob(X_i{=}x_i)
 \ee
 which is the case in many relevant situations.
 
 When some indirect property of the system is defined as a function that depends on the measured random variables, the result is also a new random variable with another assigned PDF.
 For example, we measure the position of a body at some moment.
 If the system was at rest at the origin when $t=0$ and assuming that the acceleration is constant, then from the measured final position one could infer the value of the acceleration by using $A=2X/t^2$, where $X$ denotes the final position at instant $t$ and $A$ the acceleration.
-If $X$ is a random variable, which is the general case when measuring the position of some physical system, then the probability assigned for $A$ is computed by
+If $X$ is a random variable, which is the general case when measuring the position of some physical system, then the probability assigned to $A$ is computed by
 \be
-  \prob(A=a) = \left.\frac{\text{d}X}{\text{d}A}\right|_{A=a}\prob(X=x)=\frac{2}{t^2}\prob(X=x).
+  \prob(A{=}a) = \left.\frac{\text{d}X}{\text{d}A}\right|_{A=a}\prob(X{=}x)=\frac{2}{t^2}\prob(X{=}x).
 \ee
-In general, for the multiple random variable, we must require the following identity
+In general, for multiple random variable, we require the following identity
 \be
-  |\prob(\bs{X}=\bs{x})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N|=|\prob(\bs{Y}=\bs{y})\,\text{d}y_1\text{d}y_2\dots\text{d}y_N|,
+  |\prob(\bs{X}{=}\bs{x})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N|=|\prob(\bs{Y}{=}\bs{y})\,\text{d}y_1\text{d}y_2\dots\text{d}y_N|,
 \ee
-for any set of random variables.
-This leads to some interesting formulas we will discuss later.
+which leads to some interesting formulas we will discuss later.
 
 We now stick to the simplest case in which the data is a collection of values of the same random variable describing the same physical one-dimensional data population.
 Moreover, if the probabilities are independent from each other, the PDF takes the form of Eq.~\eqref{eq:bg-separable-likelyhood}.
@@ -110,15 +115,13 @@ For completeness, here are expressed the two definitions for the mean value over
 \be
   \label{eq:bg-expectation-value-of-any}
   \text{E}[g(\bs{X})] = \lcor
-  \begin{split}
-    &\int g(\bs{x}) \prob(\bs{X}=\bs{x})\,\text{d}^N \bs{x},\\
-    &\sum_{i,j,\dots} g(\bs{x}) \prob(\bs{X}=\bs{x}).
-  \end{split}
+  \begin{aligned}
+    &\int g(\bs{x}) \prob(\bs{X}{=}\bs{x})\,\text{d}^N \bs{x},\\
+    &\sum_{i,j,\dots} g(\bs{x}) \prob(\bs{X}{=}\bs{x}).
+  \end{aligned}
   \right.
 \ee
 At this point, one more straight forward definition needs our attention, the variance of a function $g(X)$ over the data population is denoted by $\text{V}[g(X)] \equiv \text{E}[g(X)^2] - \text{E}[g(X)]^2$.
-
-\subsubsection{Frecuentist vs. bayesian approach}
 
 \subsubsection{Estimators and Fisher information}
 \label{sec:bg-estimators}
@@ -127,7 +130,7 @@ Let us suppose that the data sample has encoded some desired parameters $\bs{a}\
 The underlying probability, in general also unknown, may be conditioned by the real values of the parameters $\bs{a}$.
 The probability of the data sample is therefore written as
 \be
-  \prob(\bs{X}=\bs{x}|\bs{a}),
+  \prob(\bs{X}{=}\bs{x}|\bs{a}),
 \ee
 where "$|\bs{a}$" indicates its dependency on these parameters.
 At this point, note that an estimate of one of the desired parameters must be based on the data sample elements.
@@ -136,7 +139,7 @@ Hence as mentioned before, an estimator of $a$, one of the unknown parameters, i
 \be
   \prob(\hat{a}|\bs{a})\,\text{d}\hat{a} = \prob(\bs{x}|\bs{a})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N.
 \ee
-For short, we have omitted writing "$\bs{X}=$", thus the conditional joint probability of $N$ random variables $\bs{X}$ is written simply as $\prob(\bs{x}|\bs{a})$.
+For short, we have omitted writing "$\bs{X}{=}$", thus the conditional joint probability of $N$ random variables $\bs{X}$ is written simply as $\prob(\bs{x}|\bs{a})$.
 
 As we said, an estimator is defined to be a function of the data sample.
 For example, one of such estimators is the estimator of the mean value of the population, in general unknown.
@@ -203,7 +206,7 @@ Moreover, if one studies fields connected to experiments or some short of physic
 On the other hand, exotic features such as entanglement arise from quantum mechanics, which is directly connected with the probabilistic notions explained before.
 The present section is intended to describe quantum systems from the point of view of metrology.
 
-\subsubsection{The quantum state, multiparticle state, entanglement}
+\subsubsection{The quantum state, multiparticle state and entanglement}
 \label{sec:bg-the-quantu-state}
 
 A formal mathematical description of the quantum state is given next.
@@ -253,7 +256,7 @@ This defines the entanglement depth, see Figure~\ref{fig:bg-separability-k-produ
 \end{figure}
 Later on, these concepts of entanglement and entanglement depth will arise naturally on the metrological framework \cite{Toth2014}.
 
-\subsubsection{Angular momentum operators for multipartite systems}
+\subsubsection{Angular momentum operators on multiparticle systems}
 \label{sec:bg-angular-momentum-operators}
 
 Besides those concepts, we present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
@@ -323,7 +326,7 @@ We summarize important recent advances in quantum metrology.
 Simple metrological setups allow for encoding some desired parameter into the state of the system, thus from the readout of the final state one could infer it.
 The basic ideas of quantum metrology emerge when one applies the notions of estimation theory to the intrinsic probabilistic nature of quantum mechanics.
 Merging the probabilistic features of quantum mechanics and the estimation theory is not trivial.
-Nevertheless, with the initial pioneering works of C. W. Helstrom, W. K. Wootters, and S. L. Braunstein and C. M. Caves, in 1969, 1981 and 1992-1994 respectively \cite{Helstrom1969, Wootters1981, Braunstein1992, Braunstein1994}, until the works of V. Giovannetti et al, and M. G. Paris, roughly two decades later \cite{Giovannetti2004, Paris2009}, the foundations of quantum metrology were stabilized.
+Nevertheless, with the initial pioneering works of C. W. Helstrom, W. K. Wootters, and S. L. Braunstein and C. M. Caves, in 1969, 1981 and 1992-1994 respectively \cite{Helstrom1969, Wootters1981, Braunstein1992, Braunstein1994}, until the works of V. Giovannetti {\it et al}, and M. G. Paris, roughly two decades later \cite{Giovannetti2004, Paris2009}, the foundations of quantum metrology were stabilized.
 % TD: important citations needed here!!
 Later, advanced works in quantum metrology appeared \cite{Hyllus2010, Hyllus2012, Hyllus2010a, Kolodynski2010, Kolodynski2013}
 together with experimental realizations \cite{Behbood2013, Koschorreck2011, Luecke2011} which raised the interest in this topic.
@@ -420,7 +423,7 @@ where $\bs{n}=(n_x,n_y,n_z)$ is a unit vector describing the direction of the co
 Let us present one of the basic approaches to calculate the metrological precision of a quantum setup.
 In order to estimate the phase-shift $\theta$ we measure the expectation value of a Hermitian operator, which we will denote by $M$ in the following.
 If the evolution time is a constant then estimating $\theta$ is equivalent to estimating the magnetic field strength $B$ in Eq.~\eqref{eq:bg-hamiltonian-homogeneous-field}.
-The precision of the estimation can be characterized with the error propagation formula as
+The precision of the estimation can be characterized with the error propagation formula (EPF) as
 \be
   \label{eq:bg-error-propagation-formula}
   \varian{\theta} = \frac{\varian{M}}{|\partial_\theta\expect{M}|^2},
