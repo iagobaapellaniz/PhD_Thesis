@@ -85,25 +85,27 @@ In general, for multiple random variable, we require the following identity
 \ee
 which leads to some interesting formulas we will discuss later.
 
-We now stick to the simplest case in which the data is a collection of values of the same random variable describing the same physical one-dimensional data population.
-Moreover, if the probabilities are independent from each other, the PDF takes the form of Eq.~\eqref{eq:bg-separable-likelyhood}.
-Some definitions reasonable to mention in this thesis arise for those kind of data samples: the average, variance, moments and central moments.
-The arithmetic average (there are other types of average one can find in the textbooks) is computed by
+We now stick to the simplest case in which the data consists of a collection of values describing the same physical one-dimensional data population.
+We assume that all the outcomes are independent between each other.
+Hence, the PDF is of the form of Eq.~\eqref{eq:bg-separable-likelyhood}.
+Some definitions, useful to mention in this thesis, arise for these kind of data samples: the average, variance, and the statistical moments and central moments.
+The arithmetic average (there are other types of average one can find in the literature) is computed as
 \be
-  \overline{x}=\frac{1}{N}\sum x_i.
+  \overline{x}=\frac{1}{N}\sum_{i=1}^N x_i.
 \ee
-The variance is related to the spread of the data and computed by
+The variance, which is related to the spread of the data, is computed as
 \be
-  \sigma^2=\frac{1}{N}\sum (x_i-\overline{x})^2,
+  \sigma^2=\frac{1}{N}\sum_{i=1}^N (x_i-\overline{x})^2,
 \ee
 where $\sigma$ is the standard deviation.
-Different moments are computed by $\overline{x^r}=\frac{1}{N}\sum x_i^r$ while central moments, i.e., statistical moments that are invariant under the translation of the system, are of the form of $c_r=\frac{1}{N}\sum (x_i-\overline{x})^r$.
+Different statistical moments are computed by $\overline{x^r}=\frac{1}{N}\sum x_i^r$, while central moments, i.e., statistical moments that are invariant under a global translation of the parameter space, are of the form of $c_r=\frac{1}{N}\sum (x_i-\overline{x})^r$.
 Note that the variance is the second central moment of the data samples.
-For completeness, when each element of the data consists of more than a single number, e.g., $(x_i,y_i)$ where $x_i$ could be the velocity and $y_i$ the acceleration in a experiment to estimate the friction caused by a fluid, the co-variance between two data kinds is obtained by
+For completeness, when each element of the data consists of more than a single magnitude the co-variance between two magnitudes is obtained as
 \be
-  V_{X,Y} = \frac{1}{N}\sum_{i=1}^N (x_i-\overline{x})(y_i-\overline{y}).
+  V_{X,Y} = \frac{1}{N}\sum_{i=1}^N (x_i-\overline{x})(y_i-\overline{y}),
 \ee
-Note that we grouped the elements of the data sample into pairs while kept distinctions between both kinds $X$ and $Y$.
+where it represents how both magnitudes influence each other.
+As an example, we have the two magnitudes measured simultaneously $(v_i,a_i)$, where $v_i$ is the velocity and $a_i$ the acceleration of a body, in a experiment to estimate the friction coefficient of the air.
 
 We will try to keep this distinction between data sample and data population as clear as possible.
 The data population is represented in most cases by the probability distribution function.
