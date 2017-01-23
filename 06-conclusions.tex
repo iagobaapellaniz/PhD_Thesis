@@ -2,4 +2,33 @@
 {Conclusions}
 \input{snp/singleLineWaterMark.tex}
 
-\lettrine[lines=2, findent=3pt, nindent=0pt]{I}{n} this thesis we have 
+\lettrine[lines=2, findent=3pt, nindent=0pt]{I}{n} this thesis we have presented some aspects of quantum metrology from three different perspectives.
+Besides the introductory part, Chapters~\ref{sec:in} and \ref{sec:bg}, in Chapters~\ref{sec:vd}, \ref{sec:lt} and \ref{sec:gm}, our main results can be found.
+In Chapter~\ref{sec:vd}, we have developed the theory of quantum metrology for metrology with noisy Dicke states.
+In Chapter~\ref{sec:lt}, we have presented a method for witnessing the QFI with expectation values of some general observables.
+Finally in Chapter~\ref{sec:gm}, we have computed precision bounds for gradient magnetometry.
+
+The reader may notice that we have stressed the importance of bounding the quantum Fisher information based on some expectation values of some observables of the initial state.
+As one can find in Chapters~\ref{sec:vd} and \ref{sec:lt}, we have pursued this idea.
+It turns out that to compute the quantum Fisher information is not a trivial task and there is not measurement scheme to obtain it from the initial state apart from a complete tomography, which is a very demanding task for large system sizes.
+Hence, some shortcuts to compute the bound of the QFI are necessary.
+
+In Chapter~\ref{sec:vd}, we computed the precision bound for noisy unpolarized Dicke states based on some initial expectation values.
+Moreover, we first reduced the number of expectation values needed to four.
+More explicitly, we have to measure only the second and the fourth moments of the $y$-component and the $x$-component of the collective angular momentum in order to estimate the metrological usefulness of the system.
+In practice, the fourth-order moments can also be well approximated by the second-order moments.
+We note that after completing our calculations, we have recently became aware of a related work by Haine {\it et al} \cite{Haine2015}, which is based on the preliminary work in Ref.~\cite{Szigeti2014}.
+
+In Chapter~\ref{sec:lt}, we developed a method based on the Legendre transform.
+Based on this method, we are able to obtain a tight lower bound on the quantum Fisher information as a function of a set of expectation values of the initial state.
+Furthermore, We tested our approach on extensive experimental data on photonic and cold gas experiments, and demonstrated that it works even for the case of thousands particles.
+In the future, it would be interesting to use our method to test the optimality of various recent formulas giving a lower bound on the quantum Fisher information \cite{Zhang2014, Oudot2015}, as well as to improve the lower bounds for spin-squeezed states and Dicke states allowing for the measurement of more observables than the ones used in this publication.
+
+On the other hand, in Chapter~\ref{sec:gm}, we have investigated the precision limits for measuring the gradient of a magnetic field with atomic ensembles arranged in different geometries and initialized in different states.
+In particular, we studied spin-chain configurations as well as the case of two atomic ensembles localized at two different positions, and also the experimentally relevant set-up of a single atomic ensemble with an arbitrary density profile of the atoms was considered.
+We discussed the usefulness of various quantum states for measuring the field strength and the gradient.
+Some quantum states, such as singlet states, are insensitive to the homogeneous field.
+Using these states, it is possible to estimate the gradient and saturate be Cramér-Rao bound, while for states that are sensitive to the homogeneous magnetic field, compatible measurements are needed for this task.
+For spin chains and the two-ensemble case, the precision of the estimation of the gradient can reach the Heisenberg limit.
+For the single ensemble case, only if strong correlation between the particles is allowed can the shot-noise limit be surpassed and even the Heisenberg limit be achieved.
+However, even if the Heisenberg limit is not reached, single-ensemble methods can have a huge practical advantage compared to methods based on two or more atomic ensembles, since using a single ensemble makes the experiment simpler and can also result in a better spatial resolution.
