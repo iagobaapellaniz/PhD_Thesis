@@ -11,3 +11,4 @@ pdfjam --paper a4paper out/main.pdf '-' --outfile out/a4-main.pdf
 
 # Create an a4 main output without cover for final printing.
 pdfjam --paper letterpaper out/main.pdf '-' --outfile out/nc-main.pdf
+cp img/0-whole-cover.pdf out/0-whole-cover.pdf

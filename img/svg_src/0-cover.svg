@@ -91,11 +91,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.57832032"
-     inkscape:cx="386.39933"
-     inkscape:cy="409.54245"
+     inkscape:zoom="1.3513998"
+     inkscape:cx="380.95899"
+     inkscape:cy="646.33396"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g6378"
      showgrid="true"
      units="in"
      inkscape:snap-page="true"
@@ -142,14 +142,14 @@
      id="layer1"
      transform="translate(0,-62.362205)">
     <rect
-       style="opacity:1;fill:#363a5a;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
+       style="opacity:1;fill:#505678;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
        id="rect6169"
        width="765"
        height="990"
        x="0"
        y="62.362206" />
     <ellipse
-       style="opacity:1;fill:#2d8081;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
+       style="opacity:1;fill:#316e6f;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
        id="path6171"
        clip-path="url(#clipPath6179)"
        cx="592.85712"
@@ -164,7 +164,7 @@
        cx="592.85712"
        clip-path="url(#clipPath6179)"
        id="ellipse6185"
-       style="opacity:1;fill:#305049;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
+       style="opacity:1;fill:#3d635a;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
        transform="translate(0,-1.0107424e-6)" />
     <g
        id="g6378"
@@ -204,7 +204,7 @@
              height="20"
              width="120"
              id="rect6202"
-             style="opacity:1;fill:#202020;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1" />
+             style="opacity:0.8;fill:#202020;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1" />
           <rect
              y="1422.3622"
              x="-100"
@@ -214,7 +214,7 @@
              style="opacity:1;fill:#cbcbcb;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1" />
         </g>
         <rect
-           style="opacity:1;fill:#202020;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
+           style="opacity:0.8;fill:#202020;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
            id="rect6217"
            width="7.7142854"
            height="30.857141"
@@ -223,9 +223,11 @@
            transform="matrix(0.70710678,0.70710678,0.70710678,-0.70710678,0,0)" />
         <g
            transform="matrix(-1,0,0,1,342.50003,-408.95942)"
-           id="g6242">
+           id="g6242"
+           style="opacity:0.8">
           <g
-             id="g6266">
+             id="g6266"
+             style="">
             <rect
                y="1412.3622"
                x="-100"
@@ -342,7 +344,7 @@
          inkscape:connector-curvature="0"
          id="path6346"
          d="m 647.99603,740.64892 34.13313,16.71331 -34.13313,16.71327"
-         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#202020;stroke-width:5.50915003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#202020;stroke-width:5.50915003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.8" />
       <g
          transform="translate(0.30665048,-1.9428009)"
          id="g6360">
@@ -386,7 +388,7 @@
         </g>
       </g>
       <path
-         style="fill:none;fill-rule:evenodd;stroke:#202020;stroke-width:5.50915003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-rule:evenodd;stroke:#202020;stroke-width:5.50915003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.8"
          d="M 645.86687,920.6489 680,937.36221 645.86687,954.07548"
          id="path6369"
          inkscape:connector-curvature="0" />
@@ -429,7 +431,7 @@
            id="flowSpan4213"> METROLOGICAL PRECISION</flowSpan></flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4225"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:250%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dcb413;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:250%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        transform="translate(-130.78295,89.046361)"><flowRegion
          id="flowRegion4227"><rect
            id="rect4229"
@@ -437,10 +439,10 @@
            height="176.7767"
            x="243.44676"
            y="32.375393"
-           style="line-height:250%;fill:#dcb413;fill-opacity:1;" /></flowRegion><flowPara
+           style="line-height:250%;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1;" /></flowRegion><flowPara
          id="flowPara4231"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:100%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;">University of the Basque Country</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:250%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:100%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1;">University of the Basque Country</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:250%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1;"
          id="flowPara4233">PhD Thesis - 2016</flowPara></flowRoot>    <flowRoot
        transform="translate(-1.74324,572.97136)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:120.00000477%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dcb413;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
