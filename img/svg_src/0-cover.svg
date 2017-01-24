@@ -91,11 +91,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3513998"
-     inkscape:cx="380.95899"
-     inkscape:cy="646.33396"
+     inkscape:zoom="0.7894766"
+     inkscape:cx="378.22143"
+     inkscape:cy="545.001"
      inkscape:document-units="px"
-     inkscape:current-layer="g6378"
+     inkscape:current-layer="layer1"
      showgrid="true"
      units="in"
      inkscape:snap-page="true"
@@ -149,7 +149,7 @@
        x="0"
        y="62.362206" />
     <ellipse
-       style="opacity:1;fill:#316e6f;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
+       style="opacity:1;fill:#316e6f;fill-opacity:1;stroke:#404040;stroke-width:4;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
        id="path6171"
        clip-path="url(#clipPath6179)"
        cx="592.85712"
@@ -164,7 +164,7 @@
        cx="592.85712"
        clip-path="url(#clipPath6179)"
        id="ellipse6185"
-       style="opacity:1;fill:#3d635a;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
+       style="opacity:1;fill:#3d635a;fill-opacity:1;stroke:#404040;stroke-width:4;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:19.60000038;stroke-opacity:1"
        transform="translate(0,-1.0107424e-6)" />
     <g
        id="g6378"
@@ -414,7 +414,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4201"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dcb413;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
        transform="matrix(1.0609233,0,0,1.405178,-27.4222,264.44315)"><flowRegion
          id="flowRegion4203"><rect
            id="rect4205"
@@ -422,12 +422,12 @@
            height="256.62927"
            x="48.48732"
            y="0"
-           style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;fill:#dcb413;fill-opacity:1;" /></flowRegion><flowPara
+           style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1;" /></flowRegion><flowPara
          id="flowPara4207"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.75px;line-height:100%;font-family:'Cormorant Upright';-inkscape-font-specification:'Cormorant Upright';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#bca033;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"><flowSpan
-           style="letter-spacing:-0.80985183px;fill:#dcb413;fill-opacity:1;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.75px;line-height:100%;font-family:'Cormorant Upright';-inkscape-font-specification:'Cormorant Upright';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"><flowSpan
+           style="letter-spacing:-0.80985183px;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1;"
            id="flowSpan4214">LOWER BOUNDS ON QUANTUM</flowSpan><flowSpan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.75px;line-height:100%;font-family:'Cormorant Upright';-inkscape-font-specification:'Cormorant Upright';letter-spacing:-0.03374383px;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;fill:#dcb413;fill-opacity:1;"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.75px;line-height:100%;font-family:'Cormorant Upright';-inkscape-font-specification:'Cormorant Upright';letter-spacing:-0.03374383px;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1;"
            id="flowSpan4213"> METROLOGICAL PRECISION</flowSpan></flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4225"
