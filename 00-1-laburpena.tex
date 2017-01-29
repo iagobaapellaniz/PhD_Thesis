@@ -1,0 +1,137 @@
+\section*{Laburpena}
+\label{sec:la}
+
+% EUSKARAZKO HIZTEGIA
+%%%%%%%%%%%%%%%%%%%%%
+% Quantum -> kuantiko; kuantu- (hitz-elkarteetan)
+% Estimation -> kalkulu, balioespen, balioztapen; zenbatespen
+% Average -> batezbesteko
+% Expectation value -> Itxarotako balio
+
+\lettrine[lines=2, findent=3pt,nindent=0pt]{L}{an} honek metrologia kuantikoaren baitan egindako hainbat ikerketa biltzen ditu.
+Zientzia eta Teknologia Kuantikoko masterra bukatu ondoren eta azkeneko lau urte hauetan Prof. Géza Tóth irakaslearen lan-taldean egindako ikerketa lanak batzen ditut ain zuzen.
+Tesi honetan agertzen ez diren beste hainbat lan plazaratu ditugu baita ere.
+Orainarte ni autore bezala agertzen naizen artikuluen lista tesi honen \pageref{sec:pu}. orrialdean topa daiteke.
+
+Tesi honetan agertzen diren ikerketa lanak gauzatzeko ezin bestekoak izan dira kolaborazio internazionalak.
+Izandako elkarlanen artean Alemaniako Siegen hiriko unibertsitatean dagoen Otfried Gühnek zuzentzen duen TQO taldea da bat.
+Beste kolaborazio garrantsitsu bat Italiako Florentzian dagoen unibertsitateko Augusto Smerzik zuzentzen duen QSTAR taldea izan da.
+Azkenik, Alemaniako Hannover hiriko unibertsitateko Carsten Klemptek zuzentzen duen ikerkutza talde experimental batekin izandako elkarlan emankorra aipagarria da baita ere.
+
+\ref{sec:in}.~kapituluan teknologia kuantikoak eta metrologia kuantikoak duten garrantzia azpimarratzen dut.
+Teknologia kuantikoa prozesu kuantikoez baliatzen bait da klasikoki egin ezin diren hainbat helburu lortzeko.
+Adibide giza, ordenagailu kuantikoek hainbat posibilidade aldi berean aztertzeko izango luketen gaitasuna, edota simulazio kuantikoek modelu konplexu ezberdinak simulatzeko duten gaitasuna azpimagarri dira nire ustez.
+
+Oraingoan, beste motatako teknologi kuantikoak alde batera utzita, metrologia kuantikoak zenbatetsi nahi diren parametroen errorea txikiagotzeko aukera ematen du metrologia klasikoarekin alderatuz gero.
+Klasikoki diseinatutako aparailu batek $N$ proba egin ondoren errorea $\sqrt{N}$ aldiz txikitzea lortzen duen bitartean, metrologia kuantikoa erabiliz errorea $N$ aldiz txikitu daitekeela aski ezaguna da \cite{Giovannetti2004, Paris2009}.
+Muga gaindiezin hauei deritze "shot-noise scaling" aparatu klasikoen kasurako eta "Heisenber scaling" egoera kuantiko orokor batek gainditzerik ez duenarentzako.
+
+Esaguna da baita ere elkarlotura kuantikoak, mekanika kuantikoaren propietatea eta klasikoki azalpenik ez duenak, zenbatespenean duen garrantsia.
+Elkarlotura kuantikoa zenbatespena hobetzeko ezinbestekoa da, aldiz, elkarlotura kuantiko mota guztiak ez dute balio errorea txikitzeko.
+Elkarlotura kuantikoak eta metrologia kuantikoak duten erlazioaren azterketa hurrengo erreferentzietan topa daiteke \cite{Pezze2009, Louchet-Chauvet2010, Appel2009, Riedel2010, Gross2010, Luecke2011, Strobel2014, Hyllus2010}.
+
+Honi guztiari gehitu behar zaio azken urteotan metrologia kuantikoak piztu duen arreta.
+Kuantikak hobetutako metrologia erabiltzen da, adibidez, erloju atomikoetan \cite{Louchet-Chauvet2010, Borregaard2013, Kessler2014a}, zehaztasuneko haundiko magnetometrian \cite{Wasilewski2010, Eckert2006, Wildermuth2006, Wolfgramm2010, Koschorreck2011, Vengalattore2007, Zhou2010} edota uhin grabitazionalen detektagailuetan \cite{Schnabel2010, TheLIGOScientificCollaboration2011, Demkowicz-Dobrzanski2013}.
+
+\ref{sec:bg}.~kapituluan metrologia kuantikoaren sarrera giza uler daiteke.
+Bertan estatistikan oinarritutako hainbat kontzeptu azaltzen dira.
+Estatistika, datuetatik ondorio ulerkorrak ateratzeko erabiltzen den zientzia matematikoa da.
+Adibidez, datu lagin baten batabestekoa kalkulatzeko erabiltzen den prozedura,
+edota datu lagin baten bariantza kalkulatzeko erabilitako formulak, azaltzen dira kapitulu honetan.
+Datu lagin batek zenbatetsi nahi den parametroari buruzko informazioa izan ahal du bere baitan.
+Adibidez bezala, pilota bat bostgarren pisutik jaurtitzerakoan lurra jotzeraino igarotako denbora neurtu da hainbat aldiz.
+Denbora ezberdin guzti hauek erabiliz, bostgarren pisuraino dagoen altuera kalkula daiteke grabitateak pilotarengan duen eragina aldez aurretik esaguna denean.
+
+Estatistikaren baitan kokatzen da datu lagin batetik zenbatespena egiterakoan sahietsezina den errorearen muga klasikoaren kalkulua.
+Muga hau Fisher informazioan, laginaren probabilitate distribuzio funtzioak eta zenbatetsi nahi den parametroaren aldaketaren arteko korrelazioa neurtzen duen kantitatean, oinarrituta dago.
+
+Kontzeptu hauek aurkeztu ondoren, mekanika kuantikoko hainbat tresnen sarrera bat dator.
+Tresna eta definizio hauek tesi hau hobeto ulertzeko eta aurrerago erabiltzen direlako azaltzen dira tesiaren hasierako kapitulu honetan.
+Egoera kuantikoaren definizio eta propietateak azaltzen dira, baita operadore kuantikoenak ere.
+Egoera koantikoa matrize baten bitartez irudika daiteke gehienetan.
+Matrize honen karratuarekin egoera kuantiko bera lortzen bada, egoera purua dela esaten da.
+Egoera kuantiko nahasiak aldiz, egoera puruen nahasketa baten bitartez adieraz daitezke.
+Deskonposizio horien artean, egoera puruak beraien artean ortogonalak izatearena aurkitzen da.
+Egoera kuantiko bat beraz, deskonposizio ortogonal baten bitartez adieraz daiteke baita ere $\rho\equiv\sum_\lambda p_\lambda \ketbra{\lambda}{\lambda}$, non $p_\lambda$ probabilitate bat eta $\ket{\lambda}$ egoera puru bat adierazten duten.
+Partikula multxo baten egoera koantikoan, aurreko propietateez gain, beste propietate interesante batzuk agertzen dira.
+Elkarlotura kuantikoa, adibidez, partikula multxoetan definitzen da.
+Multxo osoaren egoera kuantikoa banakorra ez denean elkarlotuta daudela esaten da.
+
+Tesi honetako operadore erabilienak momentu angeluarraren osagaiak dira, bai partikula bakarraren momentu angeluarrarenak baita partikula guztien momentu angeluar kolektiboarenak ere.
+Momentu angeluarraren operadore hauek garrantzia haundia daukate magnetometrian.
+Partikula bakarraren spin operadoreak ere momentu angeluar operadoreak dira, eta spin operadoreen bitartez deskribatzen da partikulek eremu magnetikoekin daukaten interakzioa.
+Onarrizkotzat hartu daitekeen partikula bakoitzaren spin zenbakia gehienetan $\frac{1}{2}$ da.
+Honi deitzen zaio \emph{qubit} kuantikoa.
+
+Bestalde, momentu angeluarraren operadoreak osagai ortogonalez osatuta daudenez, base berri bat sortzen dute.
+Base honetan hainbat egoera kuantiko berezi topa daitezke, esaterako, Dicke egoera simetrikoak, edota singletea.
+Egoera hauek aztertzerakoan ikusten da magnetometrian edota beste teknologia kuantikoetan duten erabilgarritasuna.
+
+Estatistikaren zenbatespen metodologia eta mekanika kuantikoa batzean, metrologia kuantikoaz hitzegiten gaude.
+Metrologia kuantikoan zenbatespen prozesuaren errorearen mugak aztertzen dira askotan, eta tesi honetan ikertutakoarekin muga hauen bilaketan aurrera pausu garrantsitsuak ematen dira.
+Muga hauen bilaketan Fisher informazio kuantikoa da erabiltzen den tresnarik esanguratsuena.
+Zenbatespena egiteko erabiltzen den egoera kunatikoan eta interakzioak sortzen duen egoeraren eboluzioan oinarrituta dago Fisher informazio kuantikoa.
+Beraz, ezinbestekoa da hasierako egoera kuantikoa ezagutzea Fisher informazio kuantikoa kalkulatzeko.
+Hurrengo paragrafoetan azaltzen dira, aldez aurretik egoera kuantikoa zein den jakin gabe, muga hauek bilatzeko garatu ditugun tresnak.
+
+\ref{sec:vd}.~kapituloan beraz, lehenbiziko ikerketa lana aurkezten dut: Polarizatu gabeko Dicke egoeratik hurbil dauden egoera kuantiko nahasiek metrologian duten erabilgarritasuna.
+Egoera kuantiko puruak gauzatzea oso zaila da praktikoki, eta egoera nahasiak lortzen dira gehienbat laborategietan.
+Arrazoi honegatik, kapitulo honetan egoera nahasi hauek metrologian duten erabilgarritasunaren arabera sailkatzeko balio duen teknika bat aztertzen da.
+
+Egoera ez polarizatuak egoera polarizatuak baino erabilgarriagoak izan daitezke magnetometrian.
+Egoera polarizatuak erabiltzerakoan aldiz, eremu magnetikoaren magnitudea neurtzea nahiko zuzena da.
+Egoerak denbora tarte batean eremu magnetikoarenpean polarizazioan jasandako  rotazioa neurtzen da eta aldaketa honetatik eremu magnetikoaren zenbatespena egiten da.
+Bestalde, egoera ez polarizatuak ezin dute teknika hau erabilitzen, nahiz eta Fisher informazio koantikoa kalkuratzerakoan magnetometriarako erabilgarriagoak direla argi dagoela ikusi.
+
+Hau dela eta, Dicke egoera ez polarizatuek duten beste propietate bat erabiltzen da, polarizazioaren zakabanaketa.
+Propietate hau polarizazioaren neurketetan lortzen den datuen zakabanaketa da.
+Ain zuzen, datuen zakabanaketa hau Heisenbergen zihurgabetasun printzipioarekin lotuta dago.
+Zakabanaketa hau txikia izatetik $N^2$-ko proportzioetara heltzen den magnitude bat da Dicke egoera ez polarizatuetan, beraz $N^2$-ko proportzioetako aldaketa neurtuko da.
+Polarizazioan oinarritutako zenbatespenak $N$-ko proportzioetara heltzen diren bitartean, zakabanaketan oinarritutakoak zenbatespenak "Heisenberg scaling" muga fisikotik hurbilago daude, ikusi \pageref{fig:in-magnetometry-totally-polarized}. orrian dagoen \ref{fig:in-magnetometry-totally-polarized}.~irudia.
+Polarizazioa gezi gorriak ematen duen bitartean, zihurgabetazun zirkulu urdinak ematen du.
+
+Guzti honetan oinarruturik, polarizazioaren zakabanaketaren aldaketa neurtzerakoan eremu magnetikoaren zenbatespena egin ahal da.
+Erroreen hedapenaren formula aplikatuz, zenbatespenean gertatuko den errorea kalkulatzen dugu \ref{sec:vd}.~kapituluan.
+Errore hau hasierako egoeraren funtzio bezala idatzi ondoren, lau operadore hasierako egoeran duten itxarotako balioak neurtuz kalkula daiteke.
+Lau balore hauek neurtzearekin batera zenbatespenaren errorea kalkulatuko dugu.
+Errore hau Fisher informazio kuantikoaren gainetik egon arren, egoerak zailkatzen laguntzen du baita ere.
+Gainera, lau operadoereen neurketa partikula askodun egoeraren tomografia egitea baino askoz errazagoa da experimentalki.
+Kapituloa bukatutzat emateko, errorearen formulan oinarrituta, are gehiago sinplifikatzen dugu formula hau, oraingoan operadore biren itxarotako balioan oinarretzen den beste ekuazio alternatibo batera, honek dakarren abaintaila experimentala azpimarratuz.
+
+\ref{sec:lt}.~kapituloan, Fisher informazio kuantikoaren mugak aztertzen ditugu egoera kuantiko baten operadore ezberdinek daukaten itxarotako balioen funtzio bezala.
+Arazo berdinari egiten zaio aurre kapitulu honetan.
+Praktikoki egoera kuantikoa zehatz-mehatz jakitea ezinezkoa denez, eta are gutxiago partikula askodun sistemetan, Fisher informazio kuantikoa mugatzerakoan behagarriek egoera kuantikoan duten itxarotako balioetan oinarritzen gara.
+
+Oraingoan aldiz, problema honi beste enfoke batez aztertzeari ekiten diogu.
+Legendreren transformazioan oinarritutako elkarloturaren neurketak egiteko metodo baten oinarrituta \cite{Guehne2007}, Fisher informazio kuantikoaren doitutako mugak topatzera heltzen gara.
+
+Honen ondoren, kapituloan zehar, ainbat adibide garatzen dira.
+Metodo honek edozein behagarri hartu eta beraren itxarotako balioa duten egoera kuantiko guztien artean Fisher informazio kuantiko baxuenekoa aukeratzea ahalbidetzen du.
+Metodo honek era berean hartu ditzazke ainbat behagarri bat bakarra beharrean.
+Beraz, ainbat behagarri sorta hartu eta beraien itxarotao balioak aldez aurretik dakizkigula, metodoak emandako Fisher informazio kuantikoaren muga ezberdinak aztertzen ditugu.
+
+Azkenik, gure metodoa partikula askotako egoeretara nola luzatu aztertzen dugu adibide konkretu batzuei jarraituz.
+Baita datu experimental errealak aplikatu ere.
+Datu hauek \cite{Luecke2014} eta \cite{Gross2010}~erreferentziei jarraituz lortu ditugu.
+
+Tesi honetan aurkezten dudan azkenengo ikerketa lana \ref{sec:gm}~kapituluan topa daiteke: Eremu magnetikoaren gradientearen zenbatespen mugak atomo multzoak erabiltzerakoan.
+Eremu magnetikoaren gradientea eremu magnetikoaren espazioan duen aldaketa adierazten du.
+Aurreko kapituloetan ez bezala, honetan Fisher informazio kuantikoa kalkulatzen da.
+
+Eremu magnetikoa beraz parametro birekin zehaztuko litzateke, eremu magnetikoaren parte homogeneoa eta gradientea.
+Beraz, parametro bat baino gehiago zenbatetsi behar ditugu.
+Parametro bat baino gehigagoko metrologia kuantikoko onarrizko problematzat hartu daiteke eremu magnetikoaren gradientearen zenbatespena.  
+
+Eremua magnetikoaren gradientea kalkulatzeko ezinbestekoa da egoera kuantikoak espazioan daukan izaera aztertzea, hau da, egoera kuantikoak espazioa nola betetzen duen jakitea.
+Egoera kuantikoaren espazioaren partea partikula puntualez osatuta egoera batera sinplikatzen dugu nahiz eta gure emaitzak bestelako kasuetara ere egokitzen den.
+
+Adibidez, lehenengo kasuan atomo bana ilaran espazioko puntu ezberdinetan jartzen dira.
+Atomo ezberdinek eremu magnetiko intentzitate ezberdinak zumatuko dute.
+Spin egoeraren arabera beraz, Fisher informazio ezberdinak kalkulatuko ditugu.
+Bigarren kasuan atomo guztiak espazioko bi puntu ezberdinetan kokatuta daude, atomoen erdia puntu batean eta beste erdia bestean.
+Kasu honetan topa daiteke spin egoera bat eremu magnetikoaren zenbatespenerako onena dena, Heisenbergen printzipioez mugatutako zenbatespena lortzen duena.
+
+Azkenengo kasuan, atomoak era desordenatu batean zakabanatuta daude.
+Expermentu askotan topa daitekeen egoera da hau, atomoak barrunbe batean daudelarik.
+
+Spin egoera ezberdinak aztertzen ditugu kasu bakoeitzean beraien Fisher informazioa, zenbatespenean duten muga teorikoa.
