@@ -11,16 +11,15 @@ Metrology studies several aspects of the estimation process, for example, which 
 Metrology also covers all intermediate processes, from the design aspects of a precise measuring device, to the most basic mathematical concepts that arise from the formulation of the different problems, which lead at the end to a more complete picture of what metrology is.
 
 Historically, with the discovery of quantum theory and the subsequent development of quantum mechanics, new opportunities emerged for advances in metrology in the early decades of the twentieth century.
-Later in the last decades of the twentieth century, together with the arrival of concepts like \emph{qubit} and \emph{quantum cryptography}, quantum theory embraced the so-called quantum information theory, which merges the notions of theory of information and computer science with quantum mechanics.
-Pushed by the developments of quantum technologies, quantum information attracted much attention from the scientific community.
-Moreover, those emerging fields rapidly became into very interesting interdisciplinary playgrounds of science with many scientists as well as resources involved.
+Later with the arrival of concepts like \emph{qubit} and \emph{quantum cryptography}, quantum theory embraced the so-called quantum information theory, which merges the notions of theory of information and computer science with quantum mechanics.
+Enhanced by initial developments of quantum technologies, quantum information attracted much attention from the scientific community.
+Moreover, those emerging fields rapidly became into a very interesting interdisciplinary playground of science with many scientists as well as resources involved.
 
-At this point, we want to mention that the role of entanglement, an exclusive feature of quantum mechanics which cannot be described using classical probabilistic theories, is essential in this context.
-Said this, entanglement is also at the center of the theory of quantum metrology.
-Throughout the thesis we will focus mainly on the achievable precision for different systems and schemes.
+Focusing on quantum metrology, the role of entanglement, an exclusive feature of quantum mechanics which cannot be described using classical probabilistic theories, is essential.
+Entanglement is also at the center of quantum metrology, and it connects quantum metrology with concepts like local realism or quantum teleportation.
+Nevertheless, throughout the thesis we will focus mainly on the achievable precision for different systems and schemes.
 
-On the other hand, another very important field of science must be mentioned.
-We are talking about statistics, without which many descriptions of the actual and past physical findings would lack of the rigorous interpretation needed.
+On the other hand, we will also present some important tools and concepts of statistic, without which many descriptions of the actual and past physical findings would lack of the rigorous interpretation needed.
 It basically helps to analyze raw data to make it readable from the human perspective.
 
 This chapter is organized as follows.
@@ -32,54 +31,53 @@ Finally in Section~\ref{sec:bg-quantum-metrology}, we arrive at the main set of 
 \label{sec:bg-statistics-and-stimation}
 
 In this section, we will enumerate the basic concepts of statistics as well as the estimation process.
-As we said, the main mathematical tools used by metrology belong to statistics.
+As we have said, the main mathematical tools used by metrology belong to statistics.
 Moreover, we are especially interested in estimation theory which shows how to properly estimate some quantity based on some data sample.
 The data can be of any kind.
-For instance, the data sample might be a set of the heights of a basketball team, or the outcomes of coin tosses, or even the wavelengths of photons coming out of some radioactive sample.
-The aim of this section is to give the reader sufficient material to follow this thesis\footnote{
+For instance, the data sample might be a set of the heights of members of a basketball team, or the outcomes of coin tosses, or even the wavelengths of photons coming out of some radioactive sample\footnote{
 For a more detailed introduction to statistics, see Refs.~\cite{Riley2006, Barlow1989}}.
 
 \subsubsection{Probability, data samples, average and variance}
 
 The probability indicates the relative chance of an event to happen.
 For instance, if there is a box with 10 red balls and 5 blue balls and assuming we extract on of them randomly, the probability of obtaining a blue ball is given by $\frac{n_{\text{blue}}}{n_{\text{total}}}=\frac{5}{10+5}=\frac{1}{3}$.
-In the same way, the probability of obtaining a red ball is $\frac{n_{\text{blue}}}{n_{\text{total}}}=\frac{2}{3}$.
-Note that some properties of the probabilities arise from simple example.
-First, the probability of any event to happen is always given by a number in between zero and one.
-Second, the sum of the probabilities of all possible events, in this case either blue or red, sum up to one.
+In the same way, the probability of obtaining a red ball is $\frac{n_{\text{red}}}{n_{\text{total}}}=\frac{2}{3}$.
+Note that some properties of the probabilities arise from this simple example.
+First, the probability of any event is always given by a number in between zero and one.
+Second, the sum of the probabilities of all possible events, in this case either to extract a blue ball or a red ball, sum up to one.
 
-With a data sample at hand, we face the task of analyzing the data to extract the relevant properties from it.
+Once we have a data sample, we normally face the task of analyzing the data to extract the relevant properties from it.
 We assume that the data sample always comes from a population sample which represents all the available data before the measurements.
-In general, the data sample might not be complete in the most general case (one could lose some data on the measuring process, or the population might be so large that we can only measure a small portion of it).
-The measurement itself might induce some error in the data too (a measuring device always has an error when estimating a continuous magnitude, e.g., the height of people).
+Hence, the data sample might not be complete in the most general case (one could lose some data in the measurement, or the data population might be so large that we can only obtain part of it).
+The measurement itself might also induce some error to the data (measuring a continuous variable is always error prone, e.g., the height of people).
 Hence, the data sample inherits a probability number for each of its data elements.
-In the subsequent paragraphs, we will describe these relations between the data sample and the corresponding probabilities, and we will enumerate the most useful properties and formulas.
+In the subsequent paragraphs, we will describe these relations between the data sample and the corresponding probabilities, and we will enumerate the most useful properties and formulas\footnote{The notation used in this section follows mainly the one used in Ref.~\cite{Riley2006}.}.
 
-First of all, we will explain our notation which follows mainly the one used in Ref.~\cite{Riley2006}.
-The outcome of magnitude we would like to measure from the data population is called a random variable.
-First, when measuring some random variable $X$, a probability distribution function (PDF) gives the probability of $x$ to come out of the measurement and it is denoted by $\prob(X{=}x)$.
-Second, due to the random nature of the measurement, the $N$ elements of a data sample are considered outputs of $N$ different random variables with their corresponding $N$ values as $\{X_i{=}x_i\}_{i=1}^N$, or $\bs{X}{=}\bs{x}$ for short.
+The magnitude we would like to measure from the data population is called a random variable.
+When measuring some random variable $X$, a probability distribution function (PDF) gives the probability of $x$ to be the outcome of the measurement and it is denoted by $\prob(X{=}x)$.
+Second, due to the random nature of the measurement, the $N$ elements of a data sample are considered outputs of $N$ different random variables with their corresponding values denoted by $\{X_i{=}x_i\}_{i=1}^N$, or $\bs{X}{=}\bs{x}$ for short.
 The joint probability of those random variables is in general not separable.
-This is due to the fact that the data sample elements could depend on the rest of outcomes or some other more complex relation that makes the most general case to be not separable from the probabilistic point of view.
-Therefore we define the PDF of the data sample as an $N$-variable function
+This is due to the fact that the data sample elements could depend on the rest of outcomes or some other more complex relation that makes the most general case to be non-separable from the probabilistic point of view.
+The PDF of the data sample is an $N$-variable function denoted by
 \be
   \prob(\bs{X}{=}\bs{x}) \equiv \prob(X_1{=}x_1,X_2{=}x_2,\dots,X_N{=}x_N).
+  \label{eq:bg-n-variable-prob}
 \ee
-In the case of separable probabilities, this is written as
+In the case of separable probabilities, Eq.~\eqref{eq:bg-n-variable-prob} is written as
 \be
+  \prob(\bs{X}{=}\bs{x}) = \prod_{i=1}^N\prob(X_i{=}x_i),
   \label{eq:bg-separable-likelyhood}
-  \prob(\bs{X}{=}\bs{x}) = \prod_{i=1}^N\prob(X_i{=}x_i)
 \ee
 which is the case in many relevant situations.
 
-When some indirect property of the system is defined as a function that depends on the measured random variables, the result is also a new random variable with another assigned PDF.
+When some indirect property of the system is defined as a function of the measured random variables, the result is also a new random variable with another assigned PDF.
 For example, we measure the position of a body at some moment.
 If the system was at rest at the origin when $t=0$ and assuming that the acceleration is constant, then from the measured final position one could infer the value of the acceleration by using $A=2X/t^2$, where $X$ denotes the final position at instant $t$ and $A$ the acceleration.
-If $X$ is a random variable, which is the general case when measuring the position of some physical system, then the probability assigned to $A$ is computed by
+If $X$ is a random variable, which is the general case when measuring the position of some physical system, then the probability assigned to the random variable $A$ is computed by
 \be
   \prob(A{=}a) = \left.\frac{\text{d}X}{\text{d}A}\right|_{A=a}\prob(X{=}x)=\frac{2}{t^2}\prob(X{=}x).
 \ee
-In general, for multiple random variable, we require the following identity
+In general, for multiple random variables, we must require the following identity
 \be
   |\prob(\bs{X}{=}\bs{x})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N|=|\prob(\bs{Y}{=}\bs{y})\,\text{d}y_1\text{d}y_2\dots\text{d}y_N|,
 \ee
@@ -88,8 +86,8 @@ which leads to some interesting formulas we will discuss later.
 We now stick to the simplest case in which the data consists of a collection of values describing the same physical one-dimensional data population.
 We assume that all the outcomes are independent between each other.
 Hence, the PDF is of the form of Eq.~\eqref{eq:bg-separable-likelyhood}.
-Some definitions, useful to mention in this thesis, arise for these kind of data samples: the average, variance, and the statistical moments and central moments.
-The arithmetic average (there are other types of average one can find in the literature) is computed as
+Some definitions, useful to mention in this thesis, arise for these kind of data samples: namely the average, variance, and the statistical moments and central moments.
+The arithmetic average (there are other types of averages one can find in the literature) is computed as
 \be
   \overline{x}=\frac{1}{N}\sum_{i=1}^N x_i.
 \ee
@@ -99,21 +97,20 @@ The variance, which is related to the spread of the data, is computed as
 \ee
 where $\sigma$ is the standard deviation.
 Different statistical moments are computed by $\overline{x^r}=\frac{1}{N}\sum x_i^r$, while central moments, i.e., statistical moments that are invariant under a global translation of the parameter space, are of the form of $c_r=\frac{1}{N}\sum (x_i-\overline{x})^r$.
-Note that the variance is the second central moment of the data samples.
+Note that the variance is equivalent to the second central moment.
+
 For completeness, when each element of the data consists of more than a single magnitude the co-variance between two magnitudes is obtained as
 \be
   V_{X,Y} = \frac{1}{N}\sum_{i=1}^N (x_i-\overline{x})(y_i-\overline{y}),
 \ee
 where it represents how both magnitudes influence each other.
-As an example, we have the two magnitudes measured simultaneously $(v_i,a_i)$, where $v_i$ is the velocity and $a_i$ the acceleration of a body, in a experiment to estimate the friction coefficient of the air.
+As an example, we could measure two magnitudes simultaneously $(v_i,a_i)$, where $v_i$ is the velocity and $a_i$ the acceleration of a body, in a experiment to estimate the friction coefficient of the air.
 
-We will try to keep this distinction between data sample and data population as clear as possible.
 The data population is represented in most cases by the probability distribution function.
-In general, the mean values of any function $g(x)$ over the data sample are denoted with a bar over a lowercase variable, e.g., $\overline{x^r}$ for the $r$-th moment over the data sample or $\overline{g(x)}$ for the average of $g(x)$ itself.
-On the other hand, the mean values of any function applied to the data population $g(X)$ is denoted following some textbooks by $\text{E}[g(X)]$, e.g., the $r$-th moment over the data population is $\text{E}[X^r]$.
-One clearly may distinguish two cases when we talk about data populations.
-While the data sample is always consist of discrete data elements, the data population can be represented by a PDF for discrete values or it can be represented by a PDF for values that can take any real number.
-For completeness, here are expressed the two definitions for the mean value over the data population, i.e., represented by a PDF, of a function $g(\bs{X})$ by
+While the mean values over the data sample of any function $g(x)$ are denoted with a bar, e.g., $\overline{x^r}$ for the $r$-th moment over the data sample or $\overline{g(x)}$ for the average of $g(x)$ itself, the mean values over the data population of any function $g(X)$ are denoted by $\text{E}[g(X)]$, e.g., the $r$-th moment over the data population is $\text{E}[X^r]$.
+The data sample always consist of discrete data elements.
+On the other hand, the data population can be represented by a PDF for discrete values or by a PDF for continuous values.
+For completeness, here are expressed the two definitions for the mean value over the data population of a function $g(\bs{X})$ as
 \be
   \label{eq:bg-expectation-value-of-any}
   \text{E}[g(\bs{X})] = \lcor
@@ -123,89 +120,89 @@ For completeness, here are expressed the two definitions for the mean value over
   \end{aligned}
   \right.
 \ee
-At this point, one more straight forward definition needs our attention, the variance of a function $g(X)$ over the data population is denoted by $\text{V}[g(X)] \equiv \text{E}[g(X)^2] - \text{E}[g(X)]^2$.
+I also write the variance of $g(X)$ over the data population as $\text{V}[g(X)] \equiv \text{E}[g(X)^2] - \text{E}[g(X)]^2$.
 
 \subsubsection{Estimators and Fisher information}
 \label{sec:bg-estimators}
 
-Let us suppose that the data sample has encoded some desired parameters $\bs{a}\equiv(a_1,a_2,\dots)$.
-The underlying probability, in general also unknown, may be conditioned by the real values of the parameters $\bs{a}$.
-The probability of the data sample is therefore written as
+Let us suppose that the data sample has encoded some wanted parameters $\bs{a}\equiv(a_1,a_2,\dots)$.
+Therefore, the underlying probability, in general also unknown, might be conditioned by the real values of the parameters $\bs{a}$.
+The probability of the data sample is written as
 \be
   \prob(\bs{X}{=}\bs{x}|\bs{a}),
 \ee
 where "$|\bs{a}$" indicates its dependency on these parameters.
-At this point, note that an estimate of one of the desired parameters must be based on the data sample elements.
+Note that an estimate of one of the parameters must be based on the data sample elements.
 A function of this type is called the \emph{estimator} and it is connected with the PDF of the data population.
-Hence as mentioned before, an estimator of $a$, one of the unknown parameters, is denoted by $\hat{a}$ and the PDF associated to it is computed from the PDF of the data population as
+Hence as mentioned before, the estimator of $a$, one of the unknown parameters, is denoted by $\hat{a}$ and the underlying PDF associated to it is computed from the PDF of the data population as
 \be
   \prob(\hat{a}|\bs{a})\,\text{d}\hat{a} = \prob(\bs{x}|\bs{a})\,\text{d}x_1\text{d}x_2\dots\text{d}x_N.
 \ee
-For short, we have omitted writing "$\bs{X}{=}$", thus the conditional joint probability of $N$ random variables $\bs{X}$ is written simply as $\prob(\bs{x}|\bs{a})$.
+For short, we have omitted writing "$\bs{X}{=}$".
+The conditional joint probability of $N$ random variables $\bs{X}$ is written simply as $\prob(\bs{x}|\bs{a})$ then.
 
-As we said, an estimator is defined to be a function of the data sample.
-For example, one of such estimators is the estimator of the mean value of the population, in general unknown.
+An estimator is a function of the data sample.
+For example, one of such estimators can be the estimator of the mean value of the data population, which is in general unknown.
 The mean value of the data population, which in general we do not have access to, is denoted usually by $\mu$.
 Note that $\mu$ is in general different from the mean value of the data sample $\overline{x}$.
 A valid estimator for the mean value $\mu$ would be the mean itself of the data sample, i.e., $\hat{\mu}=\overline{x}$.
 
 An important notion of an estimator is its \emph{efficiency}.
 The smaller the variance of the estimator the more efficient it is.
-Remember than an estimator is considered a random variable so it must have a variance when our knowledge about the population is incomplete, i.e., when we estimate it from the data sample.
+Remember than an estimator is considered a random variable so it must have a variance when our knowledge about the population is incomplete.
 
-Focusing into what it is more interesting for of this thesis, an estimator of any kind has a theoretical lower bound for its variance.
-For the proof of the previous statement, which we will compute for continuous random variables without losing of generality, we start with the normalization formula of a given PDF
+Focusing now onto what it is more interesting for this thesis, an estimator of any kind has a theoretical lower bound for its variance.
+For the proof of the previous statement, which we will compute for continuous random variables without loss of generality, we start with the normalization formula of any given PDF
 \be
   \int \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = 1.
 \ee
-Next, we compute the partial derivative over $a$, one of any of the unknown parameters, such that
+Next, we compute the partial derivative over $a$ such that
 \be
   \label{eq:bg-expectation-value-of-logarithm}
-  \int \partial_a\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = \int \partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x} = 0,
+  \int {\partial_a}\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = \int \partial_a\big[\ln  \prob(\bs{x}|\bs{a})\big] \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x} = 0,
 \ee
 where for the second equality we used the identity for logarithmic derivatives.
 From Eq.~\eqref{eq:bg-expectation-value-of-any}, it turns out that the Eq.~\eqref{eq:bg-expectation-value-of-logarithm} is the expectation value of $\partial_a(\ln\prob)$.
-Finally, if we have an \emph{unbiased} estimator, i.e., an estimator for which the expectation value $\text{E}[\hat{a}]$ coincides with true value $a$ of the unknown parameter, the partial differentiation of $\text{E}[\hat{a}]$ over $a$ must be equal to one.
+Finally, if we have an \emph{unbiased} estimator, i.e., an estimator for which the expectation value $\text{E}[\hat{a}]$ coincides with true value $a$, the partial differentiation of $\text{E}[\hat{a}]$ over $a$ must be equal to one.
 Therefore, we apply similar identities as in Eq.~\eqref{eq:bg-expectation-value-of-logarithm} to arrive at
 \be
   \label{eq:bg-expectation-of-estimator-derivated}
   \begin{split}
     \partial_a\text{E}[\hat{a}] &= \partial_a a
     = \partial_a \int \hat{a} \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \\
-    &=  \int \hat{a} \partial_a\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} =  \int \hat{a} \partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x} = 1,
+    &=  \int \hat{a} \, \partial_a\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} =  \int \hat{a} \, \partial_a\big[\ln  \prob(\bs{x}|\bs{a})\big] \prob(\bs{x}|\bs{a}) \,\text{d}^N\bs{x} = 1,
   \end{split}
 \ee
 where we have used the definition of the expectation value for continuous variables Eq.~\eqref{eq:bg-expectation-value-of-any} and we use the fact that the estimator is not a function of the parameter $a$.
 
 At this point, we invoke the Schwartz inequality for two real multidimensional functions $g(\bs{x})$ and $h(\bs{x})$ such that $(\int g h \,\text{d}^N\bs{x})^2\leqslant (\int g^2 \,\text{d}^N\bs{x}) (\int h^2 \,\text{d}^N\bs{x})$.
-With this, we can follow step by step the following recipe to obtain a lower bound for the variance of a general estimator.
-First the definition of the variance over the data population looks like
+With this, we can obtain a lower bound for the variance of a general estimator.
+First the definition of the variance over the data population of $\hat{a}$ looks like
 \be
   V[\hat{a}] = E[(\hat{a}-a)^2] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x},
 \ee
-remember that the estimator is assumed to be unbiased.
-Second, subtracting $a$ times Eq.~\eqref{eq:bg-expectation-value-of-logarithm} to Eq.~\eqref{eq:bg-expectation-of-estimator-derivated} the following holds,
+for unbiased estimators.
+Second, since $a$ is not a function of $\bs{x}$, subtracting $a$ times Eq.~\eqref{eq:bg-expectation-value-of-logarithm} to Eq.~\eqref{eq:bg-expectation-of-estimator-derivated} we have that
 \be
-  \int (\hat{a}-a)\partial_a\big(\ln  \prob(\bs{x}|\bs{a})\big) \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = 1
+  \int (\hat{a}-a)\,\partial_a\big[\ln  \prob(\bs{x}|\bs{a})\big] \prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} = 1.
 \ee
-because $a$ is not a function of $\bs{x}$.
 Hence, using the Schwartz inequality we can write
 \be
   \label{eq:bg-classical-cr-bound-and-fi}
-  \text{V}[\hat{a}] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \geqslant \frac{1}{\int \lcua\partial_a\big(\ln \prob (\bs{x}|\bs{a}) \big)\rcua^2 \prob (\bs{x}|\bs{a})\,\text{d}^N\bs{x}},
+  \text{V}[\hat{a}] = \int (\hat{a} - a)^2\prob(\bs{x}|\bs{a})\,\text{d}^N\bs{x} \geqslant \frac{1}{\int \lpar\partial_a\big[\ln \prob (\bs{x}|\bs{a}) \big]\rpar^2 \prob (\bs{x}|\bs{a})\,\text{d}^N\bs{x}},
 \ee
 which is also known as the Cram\'er-Rao bound or the Fisher inequality.
 The denominator in the right hand-side is called generally the Fisher information or simply information.
 
 With this review of the most interesting properties of "classical" metrology, from the point of view of this thesis, we conclude this section.
-In the next section, we will discuss some properties of the quantum mechanics and then we will follow with another section which presents the basis of quantum metrology.
+In the next section, we will discuss some properties of quantum mechanics and then we will follow with another section which presents the basics of quantum metrology.
 
 \subsection{Quantum mechanics from metrology perspective}
 \label{sec:bg-quantum-mechanics-for-metrology}
 
 The ubiquitous probabilistic nature of quantum mechanics makes us to work with probabilities on a regular basis.
 Moreover, if one studies fields connected to experiments or some short of physical realizations, this probabilistic nature of quantum mechanics becomes even more visible.
-On the other hand, exotic features such as entanglement arise from quantum mechanics, which is directly connected with the probabilistic notions explained before.
+On the other hand, exotic features such as entanglement arise from quantum mechanics, which are directly connected with the probabilistic properties of quantum system.
 The present section is intended to describe quantum systems from the point of view of metrology.
 
 \subsubsection{The quantum state, multiparticle state and entanglement}
@@ -214,113 +211,115 @@ The present section is intended to describe quantum systems from the point of vi
 A formal mathematical description of the quantum state is given next.
 This also allows us to introduce some notation used throughout the thesis.
 A \emph{state} in quantum mechanics lives in a Hilbert space, $\mathcal{H}$.
-The state, $\rho$, has the following properties:
+The state $\rho$ has the following properties:
 \begin{enumerate}
   \item
   It is Hermitian, so it is invariant under the complex transposition, $\rho=\rho^\dagger$ and all its eigenvalues are real.
   \item Its trace is equal to one, $\tr(\rho)=1$.
-  \item It is positive semi-definite, i.e, all its eigenvalues are bigger or equal to zero, $\rho=\sum_{\lambda}p_\lambda \Pi_\lambda$ where $p_\lambda\geqslant 0$ and $\Pi_\lambda\equiv\ketbra{\lambda}{\lambda}$ is the projector of the eigenstate $\ket{\lambda}$, a vector state satisfying the following eigenvalue equation $\rho\ket{\lambda}=p_{lambda}\ket{\lambda}$.
+  \item It is positive semi-definite, i.e, all its eigenvalues are bigger or equal to zero, $\rho=\sum_{\lambda}p_\lambda \Pi_\lambda$ where $p_\lambda\geqslant 0$ and $\Pi_\lambda\equiv\ketbra{\lambda}{\lambda}$ is the projector of the eigenstate $\ket{\lambda}$, a vector state satisfying the following eigenvalue equation $\rho\ket{\lambda}=p_{\lambda}\ket{\lambda}$.
   From (ii), it follows that $\sum_\lambda p_\lambda = 1$.
   \item If all $p_\lambda$ are zero except one, the state is called a pure state and is equivalent to the projector of such eigenstate $\rho=\Pi_\lambda=\ketbra{\lambda}{\lambda}$.
-  \item Using the properties (iii) and (iV), it follows that the quantum states form a convex set where the extreme must be pure states.
-  \item An expectation value of an observable $\mathcal{O}$ is computed as $\expect{\mathcal{O}}=\tr(\mathcal{O}\rho)$.
-  To make a connection with the previous section, the state represents the so-called data population, hence using the notation in Sec.~\ref{sec:bg-statistics-and-stimation},  $\expect{\mathcal{O}}\equiv\text{E}[\mathcal{O}]$.
+  \item Using the properties (iii) and (iv), it follows that the quantum states form a convex set, where the extreme must be composed of pure states.
+  \item An expectation value of an observable $A$ is computed as $\expect{A}=\tr(A\rho)$.
+  To make a connection with the previous section, the state might represent the so-called data population. Hence, using the notation in Sec.~\ref{sec:bg-statistics-and-stimation}, the following equivalence holds, $\expect{\mathcal{O}}\equiv\text{E}[\mathcal{O}]$.
 \end{enumerate}
 
 The composite system of $N$ different parties live in the Hilbert space $\mathcal{H} = \mathcal{H}^{(1)}\otimes\mathcal{H}^{(2)}\otimes\cdots\otimes\mathcal{H}^{(N)}$ or $\mathcal{H} = \bigotimes_{i=1}^N\mathcal{H}^{(i)}$ for short, where $\otimes$ stands for tensor product.
 For instance, this composite Hilbert space could be used to represent a many-particle system, in this case $N$ particles.
 A \emph{separable} state in this Hilbert space can be written as
 \be
-  \label{eq:bg-separable-state-definition}
   \rho_{\text{sep}} = \sum_{i}p_i\rho_i^{(1)}\otimes\rho_i^{(2)}\otimes\cdots\otimes\rho_i^{(N)},
+  \label{eq:bg-separable-state-definition}
 \ee
 where $p_i$ are convex weights that add up to one and are equal to or bigger than zero.
-If a state cannot be written like Eq.~\eqref{eq:bg-separable-state-definition}, the state is said to be \emph{entangled}.
-We mention it as a formal description of the entanglement \cite{Guehne2009, Luis2004}.
+If a state cannot be written like Eq.~\eqref{eq:bg-separable-state-definition}, the state is \emph{entangled}.
+Note that Eq.~\eqref{eq:bg-separable-state-definition} is a formal description of the separable states, for more details see Refs.~\cite{Guehne2009, Luis2004}.
 One may note at this moment, that relaxing the requirements of Eq.~\eqref{eq:bg-separable-state-definition}, one can lead to different classifications of the states.
 Concepts like genuine multipartite entanglement, $k$-producible states, or entanglement depth, among others, arose from weaker constraints than Eq.~\eqref{eq:bg-separable-state-definition} \cite{Guehne2009, Luis2004}.
 
 It is important to describe one of such classifications in order to characterize the different levels or multipartite entanglement followed in this work.
-We call a state $k$-producible, if it \emph{can} be written as a mixture of the tensor product of different multipartite states with at most $k$ parties in each,
+We call a state $k$-producible, if it can be written as a mixture of the tensor product of different multipartite states with at most $k$ parties in each,
 \be
   \label{eq:bg-k-producible-estate}
   \rho_{k\text{-pro}} = \sum_i p_i\rho^{(\alpha,\dots,\beta)}_i \otimes \rho^{(\gamma,\dots,\delta)}_i\otimes \dots,
 \ee
 where superscript indexes between parenthesis go from 1 to $N$ and denote to which parties belong to the state, and where each index appears once in each sum element.
-For instance a separable state like Eq.~\eqref{eq:bg-separable-state-definition} is 1-producible as well as $N$-producible.
-If a state cannot be written as $k$-producible, then it must be $(k+1)$-entangled.
+For instance, a separable state like Eq.~\eqref{eq:bg-separable-state-definition} is 1-producible.
+If a state cannot be written as $k$-producible, then it must be $(k{+}1)$-entangled.
 This defines the entanglement depth, see Figure~\ref{fig:bg-separability-k-producibility-circle}.
 Later on, these concepts of entanglement and entanglement depth will arise naturally on the metrological framework \cite{Toth2014}.
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=1.2]{img/BG_separability_k_producibility_circle.pdf}
-  \caption[Diagram for $k$-producibility sets]{
-  $k$-producible set of states contains $k-1$-producible states. Based on the Eq.~\eqref{eq:bg-k-producible-estate}, one can argue that a state that cannot be written as $k$-producible must be $k+1$-entangled or equivalently has $k+1$ entanglement depth. A separable state can always be written as 1-producible which on the other hand is its original definition.}
+  \caption[Diagram for $k$-producible sets]{
+  Hierarchic sets for $k$-producible states, were $k$-producible set contains $(k{-}1)$-producible states.
+  Based on the Eq.~\eqref{eq:bg-k-producible-estate}, one can see that a state that cannot be written as $k$-producible must be $(k{+}1)$-entangled or equivalently it must have $k{+}1$ entanglement depth.
+  A separable state can always be written as 1-producible state by definition.}
   \label{fig:bg-separability-k-producibility-circle}
 \end{figure}
 
 \subsubsection{Angular momentum operators on multiparticle systems}
 \label{sec:bg-angular-momentum-operators}
 
-Besides those concepts, we present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
+We now present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
 Again these definitions allow us to introduce much of the notation used on this book.
-For a single party with discrete $d$ levels, and therefore with a spin $j=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
+For a single particle with $d$ discrete levels, and therefore with spin $j=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
 \be
   j_l^{(n)}\ket{m}_l^{(n)} = m \ket{m}_l^{(n)}
 \ee
-for $m=-j,\dots,+j$, where $l=x,y,z$.
-It is usual to omit the subscript of $\ket{m}_l^{(n)}$ when $l=z$ because it is the preferred direction for many authors and the superscript ($n$) can also be omitted when the single-particle states are given in an ordered form to build a multiparticle state, i.e., $\ket{\psi} = \ket{m_1}\ket{m_2}\dots\ket{m_n}$ where we also omitted writing the tensor product operator $\otimes$ in between single-particle states.
-In many cases, it is also usual to merge all into a single ket state $\ket{\psi}=\ket{m_1 m_2 \dots m_N}$ for simplicity\footnote{
+for $m=-j,\dots,+j$ and where $l=x,y,z$.
+It is usual to omit the subscript of $\ket{m}_l^{(n)}$ when $l=z$ because it is the preferred direction for many authors and the superscript ($n$) can also be omitted in some cases, e.g., $\ket{\psi} = \ket{m_1}\otimes\ket{m_2}\otimes\dots\otimes\ket{m_N}$.
+In many cases, it is also usual to merge all single particle states into a single ket such that $\ket{\psi}=\ket{m_1, m_2,\dots, m_N}$\footnote{
 This notation is normally used in many-body quantum mechanics, see Refs.~\cite{Cohen-Tannoudji1977, Sakurai2010}.}.
 
-The square of the total angular momentum, $\bs{j}^2=j_x^2+j_y^2+j_z^2$, for a single party $(n)$ acts on any state simply as
+The square of the total angular momentum, $\bs{j}^2=j_x^2+j_y^2+j_z^2$, for a single party $(n)$ acts on any state $\rho$ simply as
 \be
   (\bs{j}^2)^{(n)}\rho=j_n(j_n+1)\rho,
 \ee
-where state must be defined in a Hilbert space containing $\mathcal{H}^{(n)}$, the Hilbert space of $n^{\text{th}}$ particle and where $j_n$ is the spin number of such a particle.
+where the Hilbert space where $\rho$ is defined must contain $\mathcal{H}^{(n)}$ and where $j_n$ is the spin number of such a particle.
 Note that in order to distinguish the spin number $j_n$ and the operators $j_l^{(n)}$ we may use the fact that the operators are attached to a Hilbert space with a superscript or even we can use a "hatted" notation to denote which of them is an operator like $\hat{j_l}$ and which is not.
 
-The collective angular momentum projection operators $J_l$ are defined as the sum of their respective single-party spin operators $j_l^{(n)}$ such that they are extended to the remaining of the Hilbert spaces by tensor products of the identity operators defined for the rest of subspaces,
+The collective angular momentum projection operators $J_l$ are defined as the sum of their respective single-party spin operators $j_l^{(n)}$ such that they are extended to the remaining of the Hilbert spaces by tensor products of the identity operators defined in the rest of subspaces,
 \be
   \label{eq:bg-total-angular-momentum-progection-operators}
   J_l = \sum_{i=1}^N \mtxid^{(1,\dots, i-1)} \otimes j_l^{(i)} \otimes \mtxid^{(i+1,\dots,N)} \equiv \sum_{i=1}^N j_l^{(i)},
 \ee
-where $\mtxid$ stand for the identity operator and the last formula is the most used since it is easy to note that the single-party operator must be extended in order to sum the correctly.
+where $\mtxid$ stand for the identity operator and where in the last equality the identity operators are omitted for simplicity.
 On the other hand, note that the squares of the different projections of total angular momentum are not equal to the sum of the square angular momentum projections of each of the parties.
-Thus we obtain that
+The square angular momentum components are
 \be
-  J_l^2 = \sum_{i,j}^N j_l^{(i)} j_l^{(j)} = \sum_{i=1}^N (j_l^2)^{(i)}+\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)}.
+  J_l^2 = \sum_{i,j}^N j_l^{(i)} j_l^{(j)} = \sum_{i=1}^N (j_l^2)^{(i)}+\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)},
 \ee
-Therefore, neither square of the total angular momentum is the sum of the square of all single-party angular momenta but
+for $l=x,y,z$.
+Therefore, neither the square of the total angular momentum is the sum of the square of all single party angular momenta but
 \be
   \bs{J}^2 = \sum_{i}^N \bs{j}^{(i)} + \sum_{l=x,y,z}\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)},
 \ee
-where we separated the sum into two parts, the first one corresponds to the sum of all single party angular momentum projections squared and the second corresponds to the product of angular momentum projection operators of two distinct subsystems summed for all $l=x,y,z$.
+where we separated the sum into two parts, the first one corresponds to the sum of all single party square angular momentum and the second corresponds to the product of angular momentum projection operators of two distinct parties summed for all $l=x,y,z$.
 Many more combinations of these single-party operators may arise in different contexts.
-In the Appendix~\ref{app:angular-subspaces}, we discuss in more detail the different structures that arise from adding the angular momentum operators, e.g., the symmetric subspace or the singlet subspace.
+In the Appendix~\ref{app:angular-subspaces}, we discuss in more detail the different structures that arise from adding the angular momentum operators for different parties, e.g., the symmetric subspace or the singlet subspace.
 
 \subsubsection{Dynamics of quantum systems}
 
 The most basic evolution of the state is represented by unitary evolution operators denoted by $U$ and those are the only ones appearing throughout the thesis.
-On the other hand, there are other types of dynamics involving particle loss, entropy changes in the system and open quantum systems in general.
+On the other hand, there are other types of dynamics involving particle losses, entropy changes in the system and open quantum systems in general.
 These transformations are governed by master-equations such as the Lindblad equation \cite{Lindblad1976, Nielsen2000, Breuer2002}.
 
 For the understanding of this thesis it is enough to present the unitary evolution operators.
-We also restrict ourselves to the case in which the evolution is constant in time, so are in general the Hamiltonians of the metrological setups.
-The unitary evolution operators is defined as
+We also restrict ourselves to the case in which the generator $G$ is constant, so are in general the Hamiltonians of the metrological setups.
+The unitary evolution operator is defined as
 \be
   U = \exp(-i \alpha G)=\sum_{n=0}^{\infty} \frac{(-i \alpha G)^n}{n!},
 \ee
-where we use the matrix exponentiation in the last equality, $G$ represents a Hermitian operator usually called generator and $\alpha$ is the amount of change.
+for the amount of change $\alpha$ and where we use the matrix exponentiation in the last equality.
 When a constant Hamiltonian $H$ acts on an initial state $\rho$, the state evolves in time as
 \be
-  \rho(t) = U\rho U^{\dagger} = e^{-i\frac{tH}{\hbar}} \rho e^{+i\frac{tH}{\hbar}}.
+  \rho(t) = U\rho U^{\dagger} = e^{-itH/\hbar} \rho e^{+itH/\hbar}.
 \ee
 Note that all information we can extract from the system comes in the form of expectation values of different operators at different times, $\expect{A}(t) = \tr(A\rho(t))$.
 When the state evolves in time but the operators are constant the picture of the system is called the Schrodinger-picture.
 Using the cyclic property of the trace, $\tr(ABC) = \tr(CBA)$, the Heisenberg-picture, a dual interpretation of the same physical system in which the state remains the same while the operators evolve in time, emerges.
-It is well known that the operators in this picture evolve as $A(t) = U^{\dagger} A U$, where $A$ is the initial operator.
-One can check different textbooks of quantum mechanics, just to mention some see Refs.~\cite{Cohen-Tannoudji1977, Sakurai2010}.
+It is well known that the operators in this picture evolve as $A(t) = U^{\dagger} A U$, where $A$ is the initial operator, see Refs.~\cite{Cohen-Tannoudji1977, Sakurai2010}.
 
 \subsection{Quantum metrology}
 \label{sec:bg-quantum-metrology}
