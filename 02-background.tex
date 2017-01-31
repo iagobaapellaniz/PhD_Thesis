@@ -263,17 +263,17 @@ Later on, these concepts of entanglement and entanglement depth will arise natur
 
 We now present a set of operators that will appear many times in all chapters, namely the angular momentum operators.
 Again these definitions allow us to introduce much of the notation used on this book.
-For a single particle with $d$ discrete levels, and therefore with spin $j=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
+For a single-particle with $d$ discrete levels, and therefore with spin $j=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
 \be
   j_l^{(n)}\ket{m}_l^{(n)} = m \ket{m}_l^{(n)}
   \label{eq:bg-single-particle-am-components}
 \ee
 for $m=-j,\dots,+j$ and where $l=x,y,z$.
 It is usual to omit the subscript of $\ket{m}_l^{(n)}$ when $l=z$ because it is the preferred direction for many authors and the superscript ($n$) can also be omitted in some cases, e.g., $\ket{\psi} = \ket{m_1}\otimes\ket{m_2}\otimes\dots\otimes\ket{m_N}$.
-In many cases, it is also usual to merge all single particle states into a single ket such that $\ket{\psi}=\ket{m_1, m_2,\dots, m_N}$\footnote{
+In many cases, it is also usual to merge all single-particle states into a single ket such that $\ket{\psi}=\ket{m_1, m_2,\dots, m_N}$\footnote{
 This notation is normally used in many-body quantum mechanics, see Refs.~\cite{Cohen-Tannoudji1977, Sakurai2010}.}.
 
-The square of the total angular momentum, $\bs{j}^2=j_x^2+j_y^2+j_z^2$, for a single party $(n)$ acts on any state $\rho$ simply as
+The square of the total angular momentum, $\bs{j}^2=j_x^2+j_y^2+j_z^2$, for a single-party $(n)$ acts on any state $\rho$ simply as
 \be
   (\bs{j}^2)^{(n)}\rho=j_n(j_n+1)\rho,
 \ee
@@ -292,11 +292,11 @@ The square angular momentum components are
   J_l^2 = \sum_{i,j}^N j_l^{(i)} j_l^{(j)} = \sum_{i=1}^N (j_l^2)^{(i)}+\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)},
 \ee
 for $l=x,y,z$.
-Therefore, neither the square of the total angular momentum is the sum of the square of all single party angular momenta but
+Therefore, neither the square of the total angular momentum is the sum of the square of all single-party angular momenta but
 \be
   \bs{J}^2 = \sum_{i}^N \bs{j}^{(i)} + \sum_{l=x,y,z}\sum_{i\neq j}^N j_l^{(i)} j_l^{(j)},
 \ee
-where we separated the sum into two parts, the first one corresponds to the sum of all single party square angular momentum and the second corresponds to the product of angular momentum projection operators of two distinct parties summed for all $l=x,y,z$.
+where we separated the sum into two parts, the first one corresponds to the sum of all single-party square angular momentum and the second corresponds to the product of angular momentum projection operators of two distinct parties summed for all $l=x,y,z$.
 Many more combinations of these single-party operators may arise in different contexts.
 In the Appendix~\ref{app:angular-subspaces}, we discuss in more detail the different structures that arise from adding the angular momentum operators for different parties, e.g., the symmetric subspace or the singlet subspace.
 
@@ -397,7 +397,7 @@ Now in the simplest case we will choose the magnetic field to be pointing in the
 This way one does not need to determine the direction of the magnetic field.
 
 The magnetic moment of the system is proportional to the total angular momentum, $\bs{\mu}=-\mu_\text{B} g_{\text{s}}\hbar \bs{J}$, where $\mu_{\text{B}}$ and $g_{\text{s}}$ are the Bohr magneton and the anomalous gyromagnetic factor respectively, and where we multiply it by the Plank reduced constant $\hbar$.
-Note that throughout all the thesis we use the angular momentum components derived from the single particle angular momentum components Eq.~\eqref{eq:bg-single-particle-am-components}, which were defined with $\hbar{=}1$ for simplicity.
+Note that throughout all the thesis we use the angular momentum components derived from the single-particle angular momentum components Eq.~\eqref{eq:bg-single-particle-am-components}, which were defined with $\hbar{=}1$ for simplicity.
 Hence, one can rewrite the interaction Hamiltonian as
 \be
   \label{eq:bg-hamiltonian-homogeneous-field}
@@ -509,7 +509,7 @@ A way of improving the precision is considering that the variances of the angula
 \be
   \varian{J_x}\varian{J_z} \geqslant \frac{1}{4}|\expect{J_y}|^2.
 \ee
-Decreasing the variance $\varian{J_x}$ to obtain a better precision, our state fulfills
+When decreasing the variance $\varian{J_x}$ to obtain a better precision, our state fulfills
 \be
   \varian{J_x}<\frac{1}{2}|\expect{J_y}|,
 \ee
@@ -527,18 +527,18 @@ Together with the identity connecting the second moments, variances and expectat
 \be
   \varian{J_l} + \expect{J_l}^2 = \expect{J_l^2},
 \ee
-Eq.~\eqref{eq:bg-total-angular-momentum-saturability} leads to a bound on the uncertainty in the anti-squeezed direction, in this case $z$-direction, for the variance
+Eq.~\eqref{eq:bg-total-angular-momentum-saturability} leads to a bound on the uncertainty for the angular momentum component in the anti-squeezed direction, in this case the $z$-direction, as
 \be
   \varian{J_z} \leqslant \frac{N(N+2)}{4} - \expect{J_y}^2 = \frac{N}{2} + \frac{N^2}{4}\lpar 1 - \frac{\expect{J_y}^2}{J_{\max}^2}\rpar,
 \ee
-where $J_{\max}$ is the maximum value a angular momentum component can take, i.e., $N/2$.
+where $J_{\max}$ is the maximum value an angular momentum component can take, i.e., $N/2$.
 This leads to a bound in the precision when measuring $\expect{J_x}$ as
 \be
   \label{eq:bg-unpolarize-states-are-better}
   \varinv{\theta} = \frac{\expect{J_y}^2}{\varian{J_x}}\leqslant 4\varian{J_z}\leqslant 2N + N^2\lpar 1 - \frac{\expect{J_y}^2}{j_{\max}}\rpar,
 \ee
-which indicates that the precision is limited for almost completely polarized states to the shot-noise scaling.
-The bound above is not optimal, as for the fully polarized state we would expect $N$ and we obtain $2N$.
+which indicates that the precision is limited for almost completely polarized states to the shot-noise scaling and that less polarized states can overcome the shot-noise limit.
+The bound above is not optimal, as for the fully polarized states we would expect $N$ and we obtain $2N$.
 
 \subsubsection{The quantum Fisher information}
 \label{sec:bg-qfi}
@@ -546,13 +546,13 @@ The bound above is not optimal, as for the fully polarized state we would expect
 In this section, we review the theoretical background of the Fisher information, the Cram\'er-Rao bound and we introduce the quantum Fisher information.
 
 First of all, we have already shown the Fisher information and the Cram\'er-Rao bound in the Section~\ref{sec:bg-estimators}.
-The formula Eq.~\eqref{eq:bg-classical-cr-bound-and-fi} tells us that if we measure an operator, say $M$, and we know its probability distribution function $\prob(\expect{M}|\theta)$, we can bound the achievable precision.
+The formula Eq.~\eqref{eq:bg-classical-cr-bound-and-fi} tells us that if we measure an operator, say $M$, and we know its probability distribution function $\prob(\expect{M}=m|\theta)$, we can bound the achievable precision.
 In quantum mechanics the PDF of a state $\rho_\theta$ when measuring the operator $M$ is given by
 \be
   \prob(m|\theta) = \tr({\Pi_{m}\rho_\theta}),
 \ee
 where $\Pi_{m}$ are the projector operators or the eigenstates on which $M$ is expanded, $M = \sum m \Pi_m$.
-Following arguments found on Refs.~\cite{Giovannetti2004, Paris2009}, one can arrive at a universal bound valid for any kind of measurements.
+Following arguments found on Refs.~\cite{Giovannetti2004, Paris2009}, one can arrive at a universal bound valid for any measurement.
 This bound is called the quantum Cram\'er-Rao bound given as
 \be
   \label{eq:bg-quantum-cr-bound}
@@ -560,35 +560,36 @@ This bound is called the quantum Cram\'er-Rao bound given as
 \ee
 where $\qfif{\rho, J_Z}$ denotes the quantum Fisher information for the initial state $\rho$ and the unitary evolution generated by $J_z$.
 In principle, it might be difficult to find the operator that leads to the best estimation precision just by trying several operators.
-Fortunately, the Eq.~\eqref{eq:bg-quantum-cr-bound} gives us that upper bound that is valid for any choice on the measurement \cite{Helstrom1976, Holevo1982}.
+Fortunately, the theory tells us that the bound Eq.~\eqref{eq:bg-quantum-cr-bound} can be saturated \cite{Helstrom1976, Holevo1982}.
 
 As a direct consequence, based on Eq.~\eqref{eq:bg-error-propagation-formula} for any given $M$, we have that
 \be
   \qfif{\rho,J_z} \geqslant \frac{|\partial_{\theta}\expect{M}|^2}{\varian{M}}
 \ee
-is an upper bound for concrete bounds based on the measurement scheme.
-For example, when the rotation of the system is estimated by measuring $\expect{J_x}$ the quantum Fisher information is bounded from below by \cite{Pezze2009}
+is an upper bound for the precision obtained by measuring $\expect{M}$.
+For example, when the rotation of the system is estimated by measuring $\expect{J_x}$, based on the Eq.~\eqref{eq:bg-error-propagation-measuring-jx-computed} the quantum Fisher information is bounded from below by \cite{Pezze2009}
 \be
   \label{eq:bg-pezze-bound}
-  \qfif{\rho,J_z} \geqslant \frac{\expect{J_y}^2}{\varian{J_x}},
+  \qfif{\rho,J_z} \geqslant \frac{\expect{J_y}^2}{\varian{J_x}}.
 \ee
-as it is directly infer from Eq.~\eqref{eq:bg-error-propagation-measuring-jx-computed}.
 
 The quantum Fisher information can be computed by closed formulas such as
 \begin{align}
   \label{eq:bg-qfi-definition-eigen-decomposition}
   \qfif{\rho,J_z} &= 2\sum_{\lambda,\nu} \frac{(p_\lambda-p_\nu)^2}{p_\lambda+p_\nu} |\braopket{\lambda}{J_z}{\nu}|^2, \\
   \label{eq:bg-qfi-definition-convex-roof}
-  \qfif{\rho,J_z} &= \inf_{p_k,\psi_{k}} 4 \sum_{k}p_k \varian{J_z}_{\psi_k},
+  \qfif{\rho,J_z} &= \inf_{p_k,\ket{\psi_{k}}} 4 \sum_{k}p_k \varian{J_z}_{\ket{\psi_k}},
 \end{align}
-for the case of unitary evolution Eq.~\eqref{eq:bg-unitary-homogeneous-field} and where the state can be decomposed in its eigenbasis as $\rho=\sum_{\lambda}p_\lambda\ket{\lambda}$ in the first case, or where it is any arbitrary convex decomposition like $\rho=\sum_k p_k \ketbra{\psi_k}{\psi_k}$, used the later in the second case.
-The first one is based on the eigen-decomposition of the state whereas the second is the convex-roof of $4\varian{J_z}$ \cite{Paris2009, Toth2013, Yu2013}.
+for the case of unitary evolution Eq.~\eqref{eq:bg-unitary-homogeneous-field}.
+In the Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}, the state is decomposed in its eigenbasis as $\rho=\sum_{\lambda}p_\lambda\ketbra{\lambda}{\lambda}$.
+On the other hand, in the Eq.~\eqref{eq:bg-qfi-definition-convex-roof}, the state is arbitrarily decomposed as $\rho=\sum_k p_k \ketbra{\psi_k}{\psi_k}$.
+Hence, the first equation is based on the eigen-decomposition of the state whereas the second is the convex-roof of $4\varian{J_z}$ \cite{Paris2009, Toth2013, Yu2013}.
 Both formulas yield to the same expression for pure states
 \be
   \label{eq:bg-qfi-for-pure-states}
-  \qfif{\ket{\psi}, J_z} = 4\varian{J_z},
+  \qfif{\ket{\psi}, J_z} = 4\varian{J_z}.
 \ee
-since the convex-roof over a pure state is computed on the state itself, and using first the identity $(a-b)^2 = (a+b)^2 - 4 ab$ and second that $p_\lambda = \delta_{\lambda,1}$ (we choose the pure state to be $\ket{1}$ without loss of generality) in Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition} we arrive at the result
+Using the identity $(a-b)^2 = (a+b)^2 - 4 ab$ and that $p_\lambda = \delta_{\lambda,1}$ (we choose the pure state to be $\ket{1}$ without loss of generality) in Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}, we arrive at the result
 \be
   \begin{split}
     \qfif{\ket{\psi},J_z} &= 2\sum_{\lambda, \nu} \lpar p_\lambda + p_\nu - \frac{4p_\lambda p_\nu}{p_\lambda+p_\nu} \rpar|\braopket{\lambda}{J_z}{\nu}|^2\\
@@ -597,20 +598,25 @@ since the convex-roof over a pure state is computed on the state itself, and usi
   \end{split}
   \label{eq:bg-rewrite-qfi}
 \ee
-Some interesting properties of the quantum Fisher information emerge from these expressions:
+From the Eq.~\eqref{eq:bg-qfi-definition-convex-roof}, we also obtain the same result since the convex-roof over a pure state must be computed in the state itself.
+
+Some interesting properties of the quantum Fisher information emerge from these expressions and we summarize them in the following list:
 \begin{enumerate}
   \item The QFI is convex on states, as it is directly shown in Eq.~\eqref{eq:bg-qfi-definition-convex-roof} while it can be proven if one starts from Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition},
   \be
     \qfif{p\rho_1+(1-p)\rho_2, J_z}\leqslant p\qfif{\rho_1, J_z}+(1-p)\qfif{\rho_2, J_z}.
   \ee
-  \item Recently, it has been shown due to Eq.~\eqref{eq:bg-qfi-definition-convex-roof}, that the quantum Fisher information is the largest convex function that fulfills (i) \cite{Toth2013, Yu2013}.
-  \item For pure states $\qfif{\ket{\psi}, J_z} = 4\varian{J_z}$, as it has been already mentioned.
-  \item For all states, the QFI is smaller or equal to four times the variance in all cases,\be \qfif{\rho,J_z} \leqslant 4\varian{J_z}_\rho.\ee.
+  \item Recently, it has been shown due to Eq.~\eqref{eq:bg-qfi-definition-convex-roof}, that the quantum Fisher information is the largest convex function that fulfills Eq.~\eqref{eq:bg-qfi-for-pure-states} \cite{Toth2013, Yu2013}.
+  \item For pure states $\qfif{\ket{\psi}, J_z} = 4\varian{J_z}$, as it has been already shown.
+  \item For all states, the QFI is smaller or equal to four times the variance \be
+    \qfif{\rho,J_z} \leqslant 4\varian{J_z}_\rho.
+  \ee
 \end{enumerate}
-The main relation between the quantum Fisher information and the variance, which analogously to Eq.~\eqref{eq:bg-qfi-definition-convex-roof} can be proven that it is the concave-roof of the variance \cite{Toth2013}, can be summarized as follows.
-For any decomposition $\{p_k, \ket{\Psi_k}\}$ of a state $\rho$ we have
+It can be proven that the variance is the smallest concave-roof of the variance itself \cite{Toth2013}.
+Hence, the main relation between the quantum Fisher information and the variance can be summarized as follows.
+For any decomposition $\{p_k, \ket{\psi_k}\}$ of a state $\rho$ we have
 \be
-  \frac{1}{4}\qfif{\rho,J_z}\leqslant \sum_{k}p_k \varian{J_z}_{\Psi_k}\leqslant \varian{J_z}_{\Psi_k},
+  \frac{1}{4}\qfif{\rho,J_z}\leqslant \sum_{k}p_k \varian{J_z}_{\ket{\psi_k}}\leqslant \varian{J_z}_{\rho},
 \ee
 where the upper bound and the lower bound are both tight in the sense that there are decompositions that saturate the first inequality, and there are others that saturate the second one.
 
@@ -618,7 +624,7 @@ After the discussion relating the quantum Fisher information to the variance, an
 In this case, we substitute the generator of the phase shift $J_z$ by some more general Hermitian operators.
 From Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}, we can obtain directly the following identities:
 \begin{enumerate}
-  \item The formula Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition} does not depend on the diagonal elements of the generator on the eigenbasis of the state.
+  \item The formula Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition} does not depend on the diagonal elements of the generator written in the eigenbasis of the state.
   Hence,
   \be
     \qfif{\rho, A} = \qfif{\rho, A+D},
@@ -634,12 +640,12 @@ From Eq.~\eqref{eq:bg-qfi-definition-eigen-decomposition}, we can obtain directl
     \qfif{\rho^{(1)}\otimes \rho^{(2)}, A^{(1)}\otimes \mtxid^{(2)}+\mtxid^{(1)}\otimes A^{(2)}} = \qfif{\rho^{(1)},A^{(1)}}+ \qfif{\rho^{(2)},A^{(2)}}.
     \label{eq:bg-qfi-additive-for-tensor-product}
   \ee
-  For $N$-fold tensor product of the system, we obtain an $N$-fold increase in the quantum Fisher information
+  For $N$-fold tensor product of the system, we obtain an $N$-fold increase in the quantum Fisher information as
   \be
     \qfif{\rho^{\otimes N},\textstyle\sum_{n=1}^{N}A^{(n)}}=N\qfif{\rho, A},
   \ee
-  for all $A^{(n)}= A$.
-  \item The quantum Fisher information is additive under a direct sum too \cite{Liu2014}
+  where $A^{(n)}\equiv A$ for all $n$.
+  \item The quantum Fisher information is additive under a direct sum \cite{Liu2014}
   \be
     \qfif{\bigoplus_{k}p_k \rho_k,\bigoplus_{k} A_k} = \sum_{k}p_k\qfif{\rho_k,A_k},
   \ee
@@ -682,26 +688,26 @@ Therefore, similarly we have
   \label{eq:bg-heisenberg-limit}
   \qfif{\rho, J_z} = 4 \varian{J_z}\leqslant 4N^2j^2,
 \ee
-which is a valid bound still for mixed states.
+which is a valid bound still for mixed states due to the convexity of the QFI.
 Note that such a bound has the Heisenberg scaling Eq.~\eqref{eq:bg-heisenberg-scaling}.
 Note that our derivation is very simple, and does not require any information about what operator we measure to estimate $\theta$.
 Equation~\eqref{eq:bg-shot-noise-limit} has been used already to detect entanglement based on the metrological performance of the quantum states in Refs.~\cite{Krischek2011, Luecke2011}.
 
-At this point one might ask if all entangled states can provide a sensitivity larger than theshot-noise limit.
+At this point one might ask whether all entangled states can provide a sensitivity larger than the shot-noise limit.
 This would show that entanglement is equivalent to metrological usefulness.
-Concerning linear interferometers, it has been proven that not all entangled states violate theshot-noise limit Eq.~\eqref{eq:bg-shot-noise-limit}, even allowing local unitary transformations.
+Concerning linear interferometers, it has been proven that not all entangled states violate the shot-noise limit Eq.~\eqref{eq:bg-shot-noise-limit}, even allowing local unitary transformations.
 Thus not all entangled states are useful for phase estimation \cite{Hyllus2010}.
-It has been shown that there are even highly entangled pure states that are not useful.
+It has been shown that there are even highly entangled pure states which are not useful.
 Hence, the presence of entanglement seems to be rather a necessary but not sufficient condition.
 
-The quantum Fisher information can be used to define a entanglement parameter that characterizes the metrological usefulness as
+The quantum Fisher information can be used to define a entanglement parameter that characterizes the metrological usefulness by
 \be
   \chi = \frac{\qfif{\rho, J_z}}{N},
   \label{eq:bg-entanglement-criterion-qfi}
 \ee
 which is one or less for separable states and where it can take at most the value of $N$ as is deduced from Eq.~\eqref{eq:bg-heisenberg-limit}.
 
-On the other hand, for $k$-producible states the QFI is bounded from above, similarly as we did in Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:bg-heisenberg-limit}, by \cite{Hyllus2012, Toth2012}
+On the other hand, for $k$-producible states the QFI is bounded from above, similarly as we did in Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:bg-heisenberg-limit}, as \cite{Hyllus2012, Toth2012}
 \be
   \begin{split}
     \chi &\stackrel{\phantom{k\ll N}}{\leqslant} \frac{sk^2 + (N-sk)^2}{N},\\
@@ -722,8 +728,8 @@ Simple calculations show that
   \label{eq:bg-average-qfi}
   \underset{\bs{n}}{\text{avg}}\,\qfif{\rho, J_{\bs{n}}} \equiv  \int_{\bs{n}=(\coss{\varphi}\sins{\vartheta},\sins{\varphi}\sins{\vartheta},\coss{\vartheta})} \qfif{\rho,J_{\bs{n}}}\sin(\vartheta)\,\text{d}\varphi\text{d}{}\vartheta = \frac{1}{3}\sum_{l=x,y,z} \qfif{\rho,J_l},
 \ee
-where we used the spherical coordinates, where $\varphi$ and $\vartheta$ are the azimuthal and polar angles respectively, for the definition of the averaged QFI and the Eq.~\eqref{eq:bg-total-angular-momentum-projector-arbitrary-direction} for $J_{\bs{n}}$.
-Therefore, bounds similar to Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:bg-heisenberg-limit} for separable and general states can be obtained for the average quantum Fisher information,
+where we used the spherical coordinates such that $\varphi$ and $\vartheta$ are the azimuthal and polar angles respectively.
+Therefore, bounds similar to Eqs.~\eqref{eq:bg-shot-noise-limit} and \eqref{eq:bg-heisenberg-limit} for separable and general states can be obtained for the average quantum Fisher information as
 \begin{align}
   \underset{\bs{n}}{\text{avg}}\,\qfif{\rho, J_{\bs{n}}} &\leqslant \frac{2}{3}N, \\
   \underset{\bs{n}}{\text{avg}}\,\qfif{\rho, J_{\bs{n}}} &\leqslant \frac{1}{3}N(N+2).
