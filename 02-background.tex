@@ -266,6 +266,7 @@ Again these definitions allow us to introduce much of the notation used on this 
 For a single particle with $d$ discrete levels, and therefore with spin $j=(d-1)/2$, the eigenvalue equation for the angular momentum projection operators are
 \be
   j_l^{(n)}\ket{m}_l^{(n)} = m \ket{m}_l^{(n)}
+  \label{eq:bg-single-particle-am-components}
 \ee
 for $m=-j,\dots,+j$ and where $l=x,y,z$.
 It is usual to omit the subscript of $\ket{m}_l^{(n)}$ when $l=z$ because it is the preferred direction for many authors and the superscript ($n$) can also be omitted in some cases, e.g., $\ket{\psi} = \ket{m_1}\otimes\ket{m_2}\otimes\dots\otimes\ket{m_N}$.
@@ -324,33 +325,34 @@ It is well known that the operators in this picture evolve as $A(t) = U^{\dagger
 \subsection{Quantum metrology}
 \label{sec:bg-quantum-metrology}
 
-We summarize important recent advances in quantum metrology.
-Simple metrological setups allow for encoding some desired parameter into the state of the system, thus from the readout of the final state one could infer it.
+In this section, we summarize important recent advances in quantum metrology.
+Simple metrological setups allow for encoding some wanted parameter into the quantum state.
+Then, from the readout of the final state one could in principal estimate this parameter.
 The basic ideas of quantum metrology emerge when one applies the notions of estimation theory to the intrinsic probabilistic nature of quantum mechanics.
 Merging the probabilistic features of quantum mechanics and the estimation theory is not trivial.
 Nevertheless, with the initial pioneering works of C. W. Helstrom, W. K. Wootters, and S. L. Braunstein and C. M. Caves, in 1969, 1981 and 1992-1994 respectively \cite{Helstrom1969, Wootters1981, Braunstein1992, Braunstein1994}, until the works of V. Giovannetti {\it et al}, and M. G. Paris, roughly two decades later \cite{Giovannetti2004, Paris2009}, the foundations of quantum metrology were stabilized.
 % TD: important citations needed here!!
 Later, advanced works in quantum metrology appeared \cite{Hyllus2010, Hyllus2012, Hyllus2010a, Kolodynski2010, Kolodynski2013}
-together with experimental realizations \cite{Behbood2013, Koschorreck2011, Luecke2011} which raised the interest in this topic.
-In this section, we will highlight the most important aspects of this field and with this we will conclude this chapter for presenting the background theory in which stands the work developed by the authors.
+together with experimental realizations \cite{Behbood2013, Koschorreck2011, Luecke2011}, which raised the interest in this topic.
+In this section, we will highlight the most important aspects of this field and with this we will conclude this introductory chapter.
 
 The most basic scheme for a metrological setup in the present context is the following.
 First, a state $\rho$ is prepared followed by a general evolution represented by a mapping $\Lambda_{\theta}$ in which the unknown parameter $\theta$ is imprinted into the state.
-Finally, the outgoing state is characterized by some measured quantity $\expect{M}$, which allows to infer the value of the parameter $\theta$.
+Finally, the outgoing state is characterized by some measured quantity $\expect{M}$, which allows us to infer the value of the parameter $\theta$.
 Figure~\ref{fig:bg-preparation-encoding-estimation} illustrates the main steps of quantum metrology.
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=1.2]{img/BG_preparation_encoding_estimation.pdf}
   \caption[The estimation process in quantum metrology]{
-  Sequence of the different steps for the basics of the estimation process in quantum metrology. First, an input state $\rho$ enters the region in which the unknown parameter $\theta$ is imprinted in it, for the most general case, represented with $\Lambda_{\theta}$. The state with the encoded parameter $\theta$ is measured and $\theta$ must be inferred from the measured quantity $\expect{M}$.}
+  Sequence of the different steps of the estimation process in quantum metrology. First, an input state $\rho$ enters the region in which the unknown parameter $\theta$ is imprinted on it, which is represented with $\Lambda_{\theta}$ for the most general case. The encoded parameter $\theta$ is  inferred from the measured quantity $\expect{M}$ over the final state $\rho_{\theta}$.}
   \label{fig:bg-preparation-encoding-estimation}
 \end{figure}
 
-In the many-particle case, most of the metrology experiments have been done in systems with simple Hamiltonians that do not contain interaction terms.
+In the many-particle case, most of the metrology experiments have been done for systems with simple Hamiltonians that do not contain interaction terms.
 Such Hamiltonians cannot create entanglement between the particles.
 A typical situation is that we rotate our many particle state by some angle and we want to estimate the rotation angle $\theta$.
 It has been shown that particles exhibiting quantum correlations, or more precisely, quantum entanglement \cite{Guehne2009, Luis2004}, provide a higher precision than an ensemble with non-entangled particles.
-The most important question is how the achievable precision of the angle estimation $\varian{\theta}$ scales with the number of particles.
+The most important question is how the achievable precision of the angle estimation $\varian{\theta}$ scales with the number of particles $N$.
 Very general derivations lead to, at best,
 \be
   \label{eq:bg-shot-noise-scaling}
@@ -367,7 +369,7 @@ which is called the \emph{Heisenberg} scaling.
 Note that if the Hamiltonian of the dynamics has interaction terms, then these bounds can be surpassed \cite{Luis2004, Napolitano2011, Boixo2007, Braun2011, Roy2008, Choi2008, Rey2007}.
 
 It is time to mention that the above calculations have been carried out for an ideal situation.
-When an uncorrelated noise is present in the system, it turns out that for large enough particle number the scaling becomes shot-noise scaling. \cite{Demkowicz-Dobrzanski2012}.
+When an uncorrelated noise is present in the system, it turns out that for large enough particle number the scaling becomes shot-noise scaling \cite{Demkowicz-Dobrzanski2012}.
 The possible survival of a better scaling under correlated noise, under particular circumstances, or depending on some interpretation of the metrological task, is at the center of attention currently.
 All these are strongly connected to the question of whether strong multipartite entanglement can survive in a noisy environment.
 
@@ -383,36 +385,34 @@ In the Chapter~\ref{sec:gm}, we will show a different situation in which the mag
 With the aim of estimating the strength of the magnetic field, a state is used in order to interact with it, coupling the magnetic moment of the state and the external magnetic field.
 Finally, measuring how the state has changed one could in principle infer on the strength of the magnetic field.
 
-In general, we will say that the magnetic moments of the states come exclusively from the spin angular momentum, neglecting any possible contribution from the orbital angular momentum.
+In general, we will say that the magnetic moment of the state comes exclusively from the spin angular momentum, neglecting any possible contribution from the orbital angular momentum.
 This way the physics is simpler.
 This is justified in the sense that most of the recent experiments in this context have been carried out with ion-traps, Bose-Einstein condensates (BEC) or at most cold atomic ensembles, which have indeed a negligible orbital angular momentum.
 
 Beside this considerations, the interaction Hamiltonian can be written as
 \be
-  H = - \bs{\mu} \cdot \bs{B}
+  H = - \bs{\mu} \cdot \bs{B}.
 \ee
-up to some constant factor.
-Now in the simplest case we will choose the magnetic field to be pointing to some fixed direction, for instance, the $z$-direction.
-So the magnetic field vector can be written as ${B}=B\bs{k}$, where $\bs{k}$ is the unitary vector pointing to the $z$-direction.
-This way the estimation problem is much simpler, since one does not need to determine the direction of the magnetic field.
+Now in the simplest case we will choose the magnetic field to be pointing in the $z$-direction as ${B}=B\bs{k}$, where $\bs{k}$ is the unitary vector pointing to the $z$-direction.
+This way one does not need to determine the direction of the magnetic field.
 
-The magnetic moment of the system is proportional to the spin angular momentum, $\bs{\mu}=-\mu_\text{B} g_{\text{s}}\hbar^{-1} \bs{J}$, where $\mu_{\text{B}}$ and $g_{\text{s}}$ are the Bohr magneton and anomalous gyromagnetic factor respectively.
-Finally, one can rewrite the interaction Hamiltonian as
+The magnetic moment of the system is proportional to the total angular momentum, $\bs{\mu}=-\mu_\text{B} g_{\text{s}}\hbar \bs{J}$, where $\mu_{\text{B}}$ and $g_{\text{s}}$ are the Bohr magneton and the anomalous gyromagnetic factor respectively, and where we multiply it by the Plank reduced constant $\hbar$.
+Note that throughout all the thesis we use the angular momentum components derived from the single particle angular momentum components Eq.~\eqref{eq:bg-single-particle-am-components}, which were defined with $\hbar{=}1$ for simplicity.
+Hence, one can rewrite the interaction Hamiltonian as
 \be
   \label{eq:bg-hamiltonian-homogeneous-field}
-  H = \gamma B J_z,
+  H = \gamma B J_z.
 \ee
-where $\gamma = \mu_\text{B} g_{\text{s}}\hbar^{-1}$ and we have used the fact that $\bs{J}\cdot\bs{k}=J_z$.
+where $\gamma = \mu_\text{B} g_{\text{s}}\hbar$ and we have used that $\bs{J}\cdot\bs{k}=J_z$.
 Finally, the unitary operator leading the evolution of the system can be written as
 \be
   \label{eq:bg-unitary-homogeneous-field}
   U = \exp(-i\theta J_z),
 \ee
-where the magnetic field strength is encoded into the phase-shift $\theta=-\mu_\text{B} g_\text{s} t B/\hbar$.
-Here $\mu_\text{B}$ stands for the Bohr magneton and $g_\text{s}$ for the giro-magnetic constant for the spin angular momentum, and $t$ is the evolution time.
+where the magnetic field strength is encoded into the phase-shift $\theta=-\mu_\text{B} g_\text{s} t B$ and $t$ is the evolution time.
 
-We have to mention as well that for large particle ensembles, typically only collective quantities can be measured in order to characterize the state on different phases of the metrological sequence, see Figure~\ref{fig:bg-preparation-encoding-estimation}.
-Such collective quantities are in this case the angular momentum components defined in Eq.~\eqref{eq:bg-total-angular-momentum-progection-operators} and their combinations.
+We have to mention that for large particle ensembles, typically only collective quantities can be measured in order to characterize the state in different phases of the metrological sequence, see Figure~\ref{fig:bg-preparation-encoding-estimation}.
+Such collective quantities are in this case the total angular momentum components defined in Eq.~\eqref{eq:bg-total-angular-momentum-progection-operators} and their combinations.
 More concretely, we can measure the expectation values of any direction
 \be
   \label{eq:bg-total-angular-momentum-projector-arbitrary-direction}
@@ -425,14 +425,15 @@ where $\bs{n}=(n_x,n_y,n_z)$ is a unit vector describing the direction of the co
 
 Let us present one of the basic approaches to calculate the metrological precision of a quantum setup.
 In order to estimate the phase-shift $\theta$ we measure the expectation value of a Hermitian operator, which we will denote by $M$ in the following.
-If the evolution time is a constant then estimating $\theta$ is equivalent to estimating the magnetic field strength $B$ in Eq.~\eqref{eq:bg-hamiltonian-homogeneous-field}.
-The precision of the estimation can be characterized with the error propagation formula (EPF) as
+If the evolution time is a constant, then estimating $\theta$ is equivalent to estimating the magnetic field strength $B$ appearing in Eq.~\eqref{eq:bg-hamiltonian-homogeneous-field}.
+The precision of the estimation can be characterized with the error propagation formula as
 \be
   \label{eq:bg-error-propagation-formula}
   \varian{\theta} = \frac{\varian{M}}{|\partial_\theta\expect{M}|^2},
 \ee
-where $\expect{M}$ is the expectation value of the operator $M$, and we used the assumption that $\expect{M}$ is a random variable and that it has a PDF that can relate $\prob(\expect{M}|\theta)$ with a PDF as a function of the estimator $\prob(\hat{\theta}|\theta)$, see the Section~\ref{sec:bg-estimators}, and for a recent review discussing this approach in detail, see Ref.~\cite{Kolodynski2010}.
-Thus, the precision of the estimate depends on how sensitive $\expect{M}$ is to the change of $\theta$, and also on how large the variance of $M$ is.
+where $\expect{M}$ is the expectation value of the operator $M$.
+We used that $\expect{M}$ is a random variable with probability $\prob(\expect{M}=m|\theta)$ for the outcomes of the measurements, see the Section~\ref{sec:bg-estimators}.
+For a recent review discussing this approach in detail, see Ref.~\cite{Kolodynski2010}.
 Based on the formula Eq.~\eqref{eq:bg-error-propagation-formula}, one can see that the larger the slope $|\partial_\theta \expect{M}|$, the higher the precision.
 On the other hand, the larger the variance $\varian{M}$, the lower the precision.
 Figure~\ref{fig:bg-expect-m-evo} helps to interpret the quantities appearing in Eq.~\eqref{eq:bg-error-propagation-formula}.
@@ -446,19 +447,19 @@ Figure~\ref{fig:bg-expect-m-evo} helps to interpret the quantities appearing in 
   \label{fig:bg-expect-m-evo}
 \end{figure}
 
-We focus on multi-partite systems of spin-$\frac{1}{2}$ particles, widely known in the field as qubits, for homogeneous magnetometry in order to simplify the discussion.
-For this, let us start with an almost polarized state.
-We present the state totally polarized along the $l$-direction as
+We focus on multi-partite systems of spin-$\frac{1}{2}$ particles, widely known as qubits.
+Let us start with an almost polarized state.
+The state totally polarized along the $l$-direction is written as
 \be
   \ket{+j}_l^{\otimes N}\equiv \ket{+j}_l^{(1)}\ket{+j}_l^{(2)}\cdots\ket{+j}_l^{(N)},
   \label{eq:bg-totally-polarized}
 \ee
-since it plays a very important role in quantum metrology when $l=y$. It is almost all the times one of the states that reaches the shot-noise scaling Eq.~\eqref{eq:bg-shot-noise-scaling} and saturates the shot-noise limit, which will appear later in this section.
-In this case, the spin-vector of the ensemble, originally pointing into the $y$-direction, will be rotated.
+For $l=y$, the state Eq.~\eqref{eq:bg-totally-polarized} is almost all the times one of the states that saturates the shot-noise limit, which will be defined later in this section.
+In the present case, the spin-vector of the ensemble, originally pointing into the $y$-direction, will be rotated.
 The rotation after the evolution is used to estimate the strength of the magnetic field.
-A way to measure the rotation suffered by the system is to measure the expectation value $\expect{J_x}$, which is zero at the beginning.
+A way to measure the rotation of the system is to measure the expectation value $\expect{J_x}$, which is zero at the beginning.
 
-For small angles of $\theta$ and using the Eq.~\eqref{eq:bg-error-propagation-formula} after substituting $M$ by $J_x$, we arrive at
+For small angles of $\theta$ and using the Eq.~\eqref{eq:bg-error-propagation-formula} after substituting $M$ by $J_x$, we have that
 \be
   \label{eq:bg-error-propagation-measuring-jx}
   \varinv{\theta} = \frac{|\partial_\theta \expect{J_x}|^2}{\varian{J_x}},
@@ -470,52 +471,52 @@ To compute them we use the Heisenberg picture of the operator $J_x$, that after 
 \be
   J_x(\theta) = U^{i\theta J_z} J_x U^{-i\theta J_z} = \coss{\theta}J_x -  \sins{\theta} J_y,
 \ee
-where we also introduced a notation for trigonometric functions since they will appear many times in this work, $\coss{x} \rightarrow \cos(x)$, $ \sins{x}\rightarrow\sin(x)$ and $\tans{x}\rightarrow\tan(x)$.
-Thus, the square of $J_x$ is simply
+where we introduce a notation for trigonometric functions such that $\coss{x} \rightarrow \cos(x)$, $ \sins{x}\rightarrow\sin(x)$ and $\tans{x}\rightarrow\tan(x)$.
+The square of $J_x$ is simply
 \be
   J_x^2(\theta) = \coss{\theta}^2J_x^2 -2 \coss{\theta}\sins{\theta}\{J_x,J_y\}+  \sins{\theta}^2 J_y^2,
 \ee
-where $\{A,B\}=AB+BA$ is the anti-commutator, since the operators may not commute in general and in this particular case it is not an exception.
-Finally we compute the derivative with respect to $\theta$ of $\expect{J_x}$ as
+where $\{A,B\}=AB+BA$ is the anti-commutator.
+We also compute the derivative with respect to $\theta$ of $\expect{J_x}$ as
 \be
-  \partial_{\theta}\expect{J_x}(\theta)=\partial_{\theta}\coss{\theta}\expect{J_x} - \partial_{\theta}\sins{\theta}\expect{J_y} = -\sins{\theta}\expect{J_x}-\coss{\theta}\expect{J_y},
+  \partial_{\theta}\expect{J_x}(\theta)=\partial_{\theta}\coss{\theta}\expect{J_x} - \partial_{\theta}\sins{\theta}\expect{J_y} = -\sins{\theta}\expect{J_x}-\coss{\theta}\expect{J_y}.
 \ee
-where we used the linearity of the trace to compute the expectation value and the linearity of the derivative.
 
-Hence, assuming that we are in the small angle limit to compute the Eq.~\eqref{eq:bg-error-propagation-measuring-jx}, we may take the terms proportional to $\sin(\theta)$ as zero.
-Therefore, when we measure $\expect{J_x}$ to estimate the angle $\theta$, the precision of the estimation is given by
+Hence, assuming that we are in the small angle limit we can neglect the terms proportional to $\sin(\theta)$ when computing the Eq.~\eqref{eq:bg-error-propagation-measuring-jx}.
+Finally, the precision of the estimation is given by
 \be
   \label{eq:bg-error-propagation-measuring-jx-computed}
-  \varinv{\theta} = \frac{|\coss{\theta}\expect{J_y}|^2}{\coss{\theta}^2\expect{J_x^2} - (\coss{\theta}\expect{J_x})^2} = \frac{\expect{J_y}^2}{\varian{J_x}}.
+  \varinv{\theta} = \frac{|\coss{\theta}\expect{J_y}|^2}{\coss{\theta}^2\expect{J_x^2} - (\coss{\theta}\expect{J_x})^2} = \frac{\expect{J_y}^2}{\varian{J_x}},
 \ee
+when we measure $\expect{J_x}$ to estimate the angle $\theta$.
 
 For the state totally polarized along the $y$-axis, the initial expectation values $\expect{J_x}$, $\expect{J_x^2}$ and $\expect{J_y}$ needed to compute the precision are
-\be
-  \begin{split}
+\begin{subequations}
+  \begin{align}
     \expect{J_x}_{\text{tp}}  & = 0,\\
     \expect{J_x^2}_{\text{tp}}  & = \tfrac{N}{4},\\
     \expect{J_y}_{\text{tp}}  & = \tfrac{N}{2}.
-  \end{split}
-\ee
+  \end{align}
+\end{subequations}
 Thus, we obtain a precision that scales linearly with $N$,
 \be
   \varinv{\theta}_{\text{tp}} = \frac{N^2/4}{N/4} = N.
 \ee
 Note that the totally polarized state Eq.~\eqref{eq:bg-totally-polarized} is a separable pure state with all particles pointing into the $y$-direction.
-We obtained the shot-noise scaling, even with very simple, qualitative arguments
+Hence, we obtained the shot-noise scaling, even with very simple qualitative arguments
 
-A way of improving the precision is considering that the variances of the angular momentum components are bounded by the Heisenberg uncertainty relation \cite{Kitagawa1993}
+A way of improving the precision is considering that the variances of the angular momentum components are bounded by the Heisenberg uncertainty relation as \cite{Kitagawa1993}
 \be
-  \varian{J_x}\varian{J_z} \geqslant \frac{1}{4}|\expect{J_y}|.
+  \varian{J_x}\varian{J_z} \geqslant \frac{1}{4}|\expect{J_y}|^2.
 \ee
-Due to decreasing $\varian{J_x}$, our state fulfills
+Decreasing the variance $\varian{J_x}$ to obtain a better precision, our state fulfills
 \be
   \varian{J_x}<\frac{1}{2}|\expect{J_y}|,
 \ee
-where the main spin points along the $y$-axis and for totally polarized states $\varian{J_x}=\frac{1}{2}|\expect{J_y}|$ hold.
+where the main spin points along the $y$-axis and where we would obtain $\varian{J_x}=\frac{1}{2}|\expect{J_y}|$ for totally polarized states.
 Such states are called \emph{spin-squeezed} states \cite{Kitagawa1993, Wineland1994, Sorensen2001, Ma2011} and they can in principal overcome the shot-noise scaling.
 
-Next, we can ask, what the best possible phase estimation precision is for the metrological task considered in this section.
+Next, we can ask, what is the best possible phase estimation precision is for the metrological task considered in this section.
 For that, we have to use the following inequality based on general principles of angular momentum theory
 \be
   \label{eq:bg-total-angular-momentum-saturability}
