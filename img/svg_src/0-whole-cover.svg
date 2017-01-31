@@ -173,9 +173,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.65224336"
-     inkscape:cx="870.94585"
-     inkscape:cy="456.95229"
+     inkscape:zoom="1.0777302"
+     inkscape:cx="277.33719"
+     inkscape:cy="605.41245"
      inkscape:document-units="px"
      inkscape:current-layer="g4278"
      showgrid="true"
@@ -416,7 +416,7 @@
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:end;letter-spacing:-1.19000006px;text-anchor:end;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
            id="flowPara4309"><flowSpan
    style="text-align:justify;text-anchor:start"
-   id="flowSpan4311">which is better understood using some exclusive properties of quantum physics such as entanglement. In this thesis we characterize the metrological usefulnes of the initial states used for metrology based only in few expectation values. This way we avoid the tomography of the state in principal needed to compute the quantum Fisher information. We also study some of the most basic setups for multi-parametric estimation. We compute the precisions of the estimation of the gradient of the magnetic field when the state is sensitive to a collective unitary phase-shift. This approach leads to some interesting bounds even when a single ensemble of atoms is used to measure the gradient of a magnetic fiel</flowSpan>d.</flowPara></flowRoot>      <flowRoot
+   id="flowSpan4311">which is better understood using some exclusive properties of quantum physics such as entanglement. In this thesis we characterize the metrological usefulnes of states used for metrology based only on few expectation values. This way we avoid the full tomography of the state in principal needed to compute the quantum Fisher information. We also study some of the most basic setups for multi-parametric estimation. We compute the precision of the estimation of the gradient of the magnetic field when the state is sensitive to a collective unitary phase-shift. This approach leads to some interesting bounds even when a single ensemble of atoms is used to measure the gradient of a magnetic fiel</flowSpan>d.</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4313"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:250%;font-family:sans-serif;text-align:justify;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -429,7 +429,7 @@
              y="32.375393"
              style="line-height:250%;text-align:justify;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:justify;letter-spacing:-1.19000006px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
-           id="flowPara4407">Metrologia kuantikoa, tekologia kuantikoaren baitan, ulergarri izateko mekanika koantikoan agertzen diren fenomenoekin lotu beharra daukagu, esaterako elkarlotura koantikoarekin. Tesi honetan metrologian erabilgarri diren egoera kuantikoak beraien itxarotako balioekin sailkatzen ditugu, tomografia osoa egitea ekidituz. Esperimentuetan tomografia egitea oso garezti irtetzen denez, aurrera pausu garrantzitsua da azaltzen dugun lan hau. Parametro bakarra zenbatetsi beharrean, momentu batzutan beste hainbat parametro zenbatetsi behar dira problemaren arabera, adibidez, eremu magnetikoaren gradientea zenbatetsi nahi denean.  Fisher informazio </flowPara><flowPara
+           id="flowPara4407">Metrologia kuantikoa, teknologia kuantikoaren baitan, ulergarri izateko mekanika kuantikoan agertzen diren fenomenoekin lotu beharra daukagu, esaterako elkarlotura kuantikoarekin. Tesi honetan metrologian erabilgarri diren egoera kuantikoak beraien itxarotako balioekin sailkatzen ditugu, tomografia osoa egitea ekidinez. Esperimentuetan tomografia osoa egitea oso garesti irteten denez, aurrera pausu garrantzitsua da azaltzen dugun lan hau. Parametro bakarra zenbatetsi beharrean, batzuetan beste hainbat parametro zenbatetsi behar dira problemaren arabera, adibidez, eremu magnetikoaren gradientea zenbatetsi nahi denean.  Fisher informazio </flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:justify;letter-spacing:-1.19000006px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
            id="flowPara4419">kuantikoa erabiliz, atomo multzo bakarra </flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:justify;letter-spacing:-1.19000006px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
