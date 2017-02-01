@@ -91,9 +91,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7894766"
-     inkscape:cx="378.22143"
-     inkscape:cy="545.001"
+     inkscape:zoom="0.65224336"
+     inkscape:cx="286.42287"
+     inkscape:cy="522.00345"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -441,29 +441,9 @@
            y="32.375393"
            style="line-height:250%;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1;" /></flowRegion><flowPara
          id="flowPara4231"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:100%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1;">University of the Basque Country</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:250%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1;"
-         id="flowPara4233">PhD Thesis - 2016</flowPara></flowRoot>    <flowRoot
-       transform="translate(-1.74324,572.97136)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:120.00000477%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dcb413;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       id="flowRoot4239"
-       xml:space="preserve"><flowRegion
-         id="flowRegion4241"><rect
-           style="line-height:120.00000477%;fill:#dcb413;fill-opacity:1;"
-           y="1.1723722"
-           x="288.98764"
-           height="247.37605"
-           width="420.95798"
-           id="rect4243"
-           ry="0" /></flowRegion><flowPara
-         style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1;"
-         id="flowPara4245">Author:</flowPara><flowPara
-         id="flowPara4247"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1;">Iagoba Apellaniz</flowPara><flowPara
-         style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:220.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1;"
-         id="flowPara4249">Director:</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1;"
-         id="flowPara4251">Géza Tóth</flowPara></flowRoot>    <g
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:100%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1">University of the Basque Country</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:250%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
+         id="flowPara4233">PhD Thesis - 2016</flowPara></flowRoot>    <g
        id="g4508"
        style="opacity:1"
        transform="translate(-86.0754,-49.827436)">
@@ -528,5 +508,27 @@
            x="-37.142883"
            y="247.3622" /></text>
     </g>
-  </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4239-3"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:120.00000477%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dcb413;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-3.6269367,530.75164)"><flowRegion
+         id="flowRegion4241-6"><rect
+           ry="0"
+           id="rect4243-7"
+           width="420.95798"
+           height="247.37605"
+           x="288.98764"
+           y="1.1723722"
+           style="line-height:120.00000477%;fill:#dcb413;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara4249-5"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Bold';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1">Iagoba Apellaniz</flowPara><flowPara
+         style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-size:17.5px;line-height:400%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1"
+         id="flowPara4308">Supervised<flowSpan
+   style="line-height:100%"
+   id="flowSpan4312"> by</flowSpan></flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:250%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1"
+         id="flowPara4302"><flowSpan
+   style="line-height:100%"
+   id="flowSpan4318">Prof. Géza T</flowSpan>óth</flowPara></flowRoot>  </g>
 </svg>
