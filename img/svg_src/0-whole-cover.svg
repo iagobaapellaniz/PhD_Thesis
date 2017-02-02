@@ -173,9 +173,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0777302"
-     inkscape:cx="277.33719"
-     inkscape:cy="605.41245"
+     inkscape:zoom="0.89039038"
+     inkscape:cx="1243.7771"
+     inkscape:cy="559.75864"
      inkscape:document-units="px"
      inkscape:current-layer="g4278"
      showgrid="true"
@@ -396,7 +396,7 @@
         </g>
       </g>
       <flowRoot
-         transform="translate(-174.82661,563.05214)"
+         transform="matrix(0.8,0,0,0.8,-70.022461,642.69423)"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:250%;font-family:sans-serif;text-align:justify;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          id="flowRoot5049"
          xml:space="preserve"><flowRegion
@@ -420,7 +420,7 @@
          xml:space="preserve"
          id="flowRoot4313"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:250%;font-family:sans-serif;text-align:justify;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         transform="translate(-174.82661,143.05214)"><flowRegion
+         transform="matrix(0.8,0,0,0.8,-69.367676,212.29422)"><flowRegion
            id="flowRegion4315"><rect
              id="rect4317"
              width="642.90289"
@@ -436,7 +436,7 @@
            id="flowPara4405">erabiltzeak kuantikak bultzada </flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:justify;letter-spacing:-1.19000006px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
            id="flowPara4431">baduela frogatzen dugu. </flowPara></flowRoot>      <flowRoot
-         transform="matrix(0.9993677,0,0,1.5849095,-173.47878,36.422312)"
+         transform="matrix(1.2532436,0,0,2.3074936,-324.86232,36.17248)"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:250%;font-family:sans-serif;text-align:justify;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          id="flowRoot4349"
          xml:space="preserve"><flowRegion
@@ -448,10 +448,10 @@
              width="642.90289"
              id="rect4353" /></flowRegion><flowPara
            id="flowPara4355"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:83.99999738%;font-family:'Cormorant Upright';-inkscape-font-specification:'Cormorant Upright Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1">AZPI MUGAK METROLOGIA KOANTIKOAREN </flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:94.99999881%;font-family:'Cormorant Upright';-inkscape-font-specification:'Cormorant Upright Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1">AZPI MUGAK METROLOGIA KOANTIKOAREN </flowPara><flowPara
            id="flowPara4357"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:83.99999738%;font-family:'Cormorant Upright';-inkscape-font-specification:'Cormorant Upright Light';text-align:center;letter-spacing:1.90999997px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1">ZENBATESPENEN ZEHAZTASUNEAN</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:83.99999738%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:justify;letter-spacing:-1.19000006px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:94.99999881%;font-family:'Cormorant Upright';-inkscape-font-specification:'Cormorant Upright Light';text-align:center;letter-spacing:1.90999997px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1">ZENBATESPENEN ZEHAZTASUNEAN</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22.5px;line-height:94.99999881%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:justify;letter-spacing:-1.19000006px;text-anchor:start;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
            id="flowPara4365" /></flowRoot>    </g>
     <text
        xml:space="preserve"
@@ -776,14 +776,14 @@
              height="176.7767"
              width="538.21967"
              id="rect4229" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:100%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:100%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1"
            id="flowPara4231">University of the Basque Country</flowPara><flowPara
            id="flowPara4233"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:250%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1">PhD Thesis - 2017</flowPara></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:250%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:center;letter-spacing:-1.19000006px;text-anchor:middle;fill:#dcb413;fill-opacity:1;stroke:#dcb413;stroke-opacity:1">PhD Thesis - 2017</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4239"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:120.00000477%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dcb413;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         transform="translate(853.29524,572.97138)"><flowRegion
+         transform="translate(851.41154,530.75166)"><flowRegion
            id="flowRegion4241"><rect
              ry="0"
              id="rect4243"
@@ -792,14 +792,16 @@
              x="288.98764"
              y="1.1723722"
              style="line-height:120.00000477%;fill:#dcb413;fill-opacity:1" /></flowRegion><flowPara
-           id="flowPara4245"
-           style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1">Author:</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1"
-           id="flowPara4247">Iagoba Apellaniz</flowPara><flowPara
            id="flowPara4249"
-           style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-size:25px;line-height:220.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1">Director:</flowPara><flowPara
-           id="flowPara4251"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1">Géza Tóth</flowPara></flowRoot>      <path
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;line-height:120.00000477%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Bold';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1">Iagoba Apellaniz</flowPara><flowPara
+           style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-size:17.5px;line-height:400%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC Light';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1"
+           id="flowPara4308">Supervised<flowSpan
+   style="line-height:100%"
+   id="flowSpan4312"> by</flowSpan></flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:250%;font-family:'Heiti SC';-inkscape-font-specification:'Heiti SC';text-align:end;text-anchor:end;fill:#dcb413;fill-opacity:1"
+           id="flowPara4302"><flowSpan
+   style="line-height:100%"
+   id="flowSpan4318">Prof. Géza T</flowSpan>óth</flowPara></flowRoot>      <path
          style="fill:#dcb413;fill-opacity:1"
          d="m 1493.155,195.90352 -4.35,-0.18348 -0.183,-6.3 c -0.1006,-3.465 -0.2039,-7.11 -0.2295,-8.1 -0.026,-0.99 -0.1744,-2.0025 -0.3305,-2.25 -0.2189,-0.34701 -1.1619,-0.48597 -4.1204,-0.60715 -3.7796,-0.15482 -3.8633,-0.17358 -5.6366,-1.26407 -0.99,-0.60881 -2.475,-1.62333 -3.3,-2.2545 l -1.5,-1.14758 -0.15,-4.99936 c -0.082,-2.74964 -0.285,-5.13264 -0.45,-5.29555 -0.165,-0.16291 -3.2025,-0.44978 -6.75,-0.6375 -7.1176,-0.37664 -7.5057,-0.48736 -8.4612,-2.41365 -0.4511,-0.90949 -0.5542,-3.15637 -0.8769,-19.1137 -0.2832,-14.00302 -0.285,-18.1638 -0.01,-18.44088 0.2604,-0.2604 3.5147,-0.39062 11.9543,-0.47835 10.9292,-0.1136 11.6194,-0.0892 11.9941,0.42322 0.2573,0.35189 0.3976,1.45595 0.3976,3.12907 0,1.60768 0.1418,2.77008 0.375,3.07391 0.3731,0.48612 2.2397,0.72882 9.9253,1.29048 1.8503,0.13521 3.2538,0.44086 4.65,1.01258 l 1.9997,0.81891 0.085,3.04361 c 0.082,2.90803 -10e-4,3.47339 -1.1651,7.93551 -0.3546,1.35973 -0.7191,1.40238 -4.4703,0.52302 -1.4025,-0.32877 -2.8537,-0.6679 -3.225,-0.75361 -0.5708,-0.1318 -0.675,-0.35435 -0.675,-1.44279 0,-1.70403 -0.4097,-2.17457 -2.5219,-2.89622 -2.8847,-0.98556 -3.3056,-0.86188 -4.0654,1.1946 -0.2134,0.5775 -1.2568,2.87572 -2.3187,5.10715 -2.2675,4.76485 -2.2584,5.19403 0.136,6.40737 2.2046,1.11713 3.1914,1.19551 6.3552,0.50479 1.703,-0.37179 2.9442,-0.50996 3.1081,-0.346 0.5298,0.52979 1.0974,3.80795 1.102,6.36475 l 0.01,2.58805 -1.425,0.60986 c -0.7837,0.33542 -2.2706,0.77499 -3.3042,0.97682 -1.605,0.31339 -1.9065,0.4751 -2.0653,1.10778 -0.2379,0.94786 0.1113,4.76338 0.5029,5.49512 0.3875,0.72397 1.1213,0.81885 7.9171,1.0236 3.4505,0.10397 5.8321,0.301 6.075,0.50259 0.2896,0.24037 0.3995,1.26517 0.3995,3.72532 0,1.86656 0.1291,3.73323 0.2869,4.14816 0.3352,0.88166 1.439,1.23038 4.7826,1.51089 3.4729,0.29136 3.3314,0.6336 3.3261,-8.04775 0,-5.224 -0.1096,-7.43648 -0.3838,-7.9785 -0.5327,-1.05319 -1.7875,-1.56528 -4.2448,-1.73237 -1.1643,-0.0792 -2.2857,-0.2783 -2.492,-0.44252 -0.4639,-0.36938 -0.5208,-6.10253 -0.072,-7.28228 l 0.3028,-0.79624 2.6222,0.19468 c 8.2483,0.61234 13.2771,1.26703 13.5969,1.77012 0.014,0.0212 0.2029,1.85337 0.4209,4.07141 0.4554,4.63203 0.5949,4.86243 2.8122,4.64407 0.7658,-0.0754 3.4848,-0.34109 6.0423,-0.5904 2.5575,-0.24931 4.8903,-0.5274 5.1841,-0.61797 0.48,-0.14803 0.5255,-0.53394 0.45,-3.81659 l -0.084,-3.65191 -3.5949,0 -3.595,0 -0.1948,-1.35215 c -0.3575,-2.482 -0.9556,-13.12983 -0.7653,-13.62576 0.1631,-0.42518 0.7276,-0.47819 4.3188,-0.4056 l 4.1312,0.0835 0.2397,2.55 c 0.1319,1.4025 0.3413,2.955 0.4653,3.45 l 0.2256,0.9 3.0536,-0.0333 c 3.675,-0.04 3.9661,-0.21096 3.9649,-2.32847 0,-3.75152 -1.0568,-9.47949 -1.834,-9.95983 -0.6298,-0.38924 -5.3844,-1.40172 -8.3283,-1.77349 -1.9114,-0.24137 -3.2145,-0.54985 -3.3754,-0.79905 -0.1443,-0.22325 -0.2283,-2.0259 -0.1868,-4.0059 l 0.075,-3.6 8.7421,-0.0795 8.7421,-0.0795 2.3579,2.40381 2.3579,2.4038 5.55,0.76026 c 4.7806,0.65486 5.6254,0.85 6.0941,1.40759 0.511,0.60789 0.5385,1.46589 0.45,14.08238 -0.1085,15.48191 0.2173,14.00986 -3.4005,15.36319 -2.5225,0.94357 -3.1506,0.96185 -6.3876,0.18583 -3.0959,-0.74219 -3.3981,-0.74168 -4.868,0.008 l -1.188,0.6061 0,2.54675 c 0,2.45218 -0.051,2.6404 -1.3634,5.06825 -0.7498,1.38682 -1.5261,2.65166 -1.725,2.81076 -0.1989,0.15909 -5.1359,0.56339 -10.9711,0.89845 l -10.6095,0.6092 -1.1655,1.13808 -1.1655,1.13809 0,7.99724 c 0,9.10876 -0.1142,10.38806 -1.0294,11.53584 l -0.6573,0.82437 -8.9817,0.0689 c -4.9399,0.0379 -10.9391,-0.0137 -13.3316,-0.11461 z"
          id="path4398"
